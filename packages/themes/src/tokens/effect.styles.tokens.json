@@ -1,0 +1,89 @@
+{
+  "Elevations": {
+    "100": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.100.x-100}",
+          "offsetY": "{Elevations.100.y-100}",
+          "blur": "{Elevations.100.blur-100}",
+          "spread": "{Elevations.100.spread-100}",
+          "color": "{Elevations.100.shadow-100}"
+        }
+      ]
+    },
+    "200": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.200.x-200}",
+          "offsetY": "{Elevations.200.y-200}",
+          "blur": "{Elevations.200.blur-200}",
+          "spread": "{Elevations.200.spread-200}",
+          "color": "{Elevations.200.shadow-200}"
+        }
+      ]
+    },
+    "300": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.300.x-300}",
+          "offsetY": "{Elevations.300.y-300}",
+          "blur": "{Elevations.300.blur-300}",
+          "spread": "{Elevations.300.spread-300}",
+          "color": "{Elevations.300.shadow-300}"
+        }
+      ]
+    },
+    "400": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.400.x-400}",
+          "offsetY": "{Elevations.400.y-400}",
+          "blur": "{Elevations.400.blur-400}",
+          "spread": "{Elevations.400.spread-400}",
+          "color": "{Elevations.400.shadow-400}"
+        }
+      ]
+    },
+    "500": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.500.x-500}",
+          "offsetY": "{Elevations.500.y-500}",
+          "blur": "{Elevations.500.blur-500}",
+          "spread": "{Elevations.500.spread-500}",
+          "color": "{Elevations.500.shadow-500}"
+        }
+      ]
+    },
+    "600": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.600.x-600}",
+          "offsetY": "{Elevations.600.y-600}",
+          "blur": "{Elevations.600.blur-600}",
+          "spread": "{Elevations.600.spread-600}",
+          "color": "{Elevations.600.shadow-elevations-600}"
+        }
+      ]
+    },
+    "inset": {
+      "$type": "shadow",
+      "$value": [
+        {
+          "offsetX": "{Elevations.inset.x-0}",
+          "offsetY": "{Elevations.inset.y-0}",
+          "blur": "{Elevations.inset.blur-0}",
+          "spread": "{Elevations.inset.spread-0}",
+          "color": "{Elevations.inset.shadow-0}",
+          "inset": true
+        }
+      ]
+    }
+  }
+}

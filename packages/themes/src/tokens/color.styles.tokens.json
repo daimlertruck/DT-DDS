@@ -1,0 +1,23 @@
+{
+  "Skeleton-gradient": {
+    "$type": "gradient",
+    "$value": {
+      "type": "linear",
+      "angle": 90,
+      "stops": [
+        {
+          "color": "#dedede00",
+          "position": 0
+        },
+        {
+          "color": "#ffffff29",
+          "position": 0.55
+        },
+        {
+          "color": "#dedede00",
+          "position": 1
+        }
+      ]
+    }
+  }
+}

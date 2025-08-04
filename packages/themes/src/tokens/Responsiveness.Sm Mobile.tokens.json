@@ -1,0 +1,30 @@
+{
+  "Viewport": {
+    "web-width-default": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.width-default-MQ1}"
+    },
+    "web-width-min": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.width-min-MQ1}"
+    },
+    "web-width-max": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.width-max-MQ1}"
+    }
+  },
+  "Grid_elements": {
+    "grid-columns": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.columns-MQ1}"
+    },
+    "grid-margin": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.margin-MQ1}"
+    },
+    "grid-gutter": {
+      "$type": "dimension",
+      "$value": "{Grid.MQ1.gutter-MQ1}"
+    }
+  }
+}
