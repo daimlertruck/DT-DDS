@@ -1,0 +1,88 @@
+{
+  "Grids": {
+    "MQ1": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ1.gutter-MQ1}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ1.margin-MQ1}"
+        }
+      ]
+    },
+    "MQ2": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ2.gutter-MQ2}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ2.margin-MQ2}"
+        }
+      ]
+    },
+    "MQ3": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ3.gutter-MQ3}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ3.margin-MQ3}"
+        }
+      ]
+    },
+    "MQ4": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ4.gutter-MQ4}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ4.margin-MQ4}"
+        }
+      ]
+    },
+    "MQ5": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ5.gutter-MQ5}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ5.margin-MQ5}"
+        }
+      ]
+    },
+    "MQ6": {
+      "$type": "grid",
+      "$value": [
+        {
+          "pattern": "columns",
+          "visible": true,
+          "alignment": "stretch",
+          "color": "#ff00001a",
+          "gutterSize": "{Grid.MQ6.gutter-MQ6}",
+          "count": "{Grid elements.grid-columns}",
+          "offset": "{Grid.MQ6.margin-MQ6}"
+        }
+      ]
+    }
+  }
+}

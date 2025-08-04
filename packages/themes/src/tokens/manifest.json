@@ -1,0 +1,56 @@
+{
+  "name": "Design Tokens",
+  "collections": {
+    "Semantic Daimler Truck": {
+      "modes": {
+        "Default theme": [
+          "Semantic Daimler Truck.Default theme.tokens.json"
+        ]
+      }
+    },
+    "Primitives": {
+      "modes": {
+        "Value": [
+          "Primitives.Value.tokens.json"
+        ]
+      }
+    },
+    "Themes": {
+      "modes": {
+        "Daimler Truck": [
+          "Themes.Daimler Truck.tokens.json"
+        ]
+      }
+    },
+    "Responsiveness": {
+      "modes": {
+        "XL Desktop": [
+          "Responsiveness.XL Desktop.tokens.json"
+        ],
+        "Lg Desktop": [
+          "Responsiveness.Lg Desktop.tokens.json"
+        ],
+        "Md Tablet": [
+          "Responsiveness.Md Tablet.tokens.json"
+        ],
+        "Sm Mobile": [
+          "Responsiveness.Sm Mobile.tokens.json"
+        ]
+      }
+    }
+  },
+  "styles": {
+    "text": [
+      "text.styles.tokens.json"
+    ],
+    "effect": [
+      "effect.styles.tokens.json"
+    ],
+    "color": [
+      "color.styles.tokens.json"
+    ],
+    "grid": [
+      "grid.styles.tokens.json"
+    ]
+  }
+}
