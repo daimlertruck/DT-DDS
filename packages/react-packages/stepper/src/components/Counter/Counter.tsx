@@ -1,4 +1,5 @@
-import { BaseProps, Colors } from '@dt-dds/react-core';
+import { BaseProps } from '@dt-dds/react-core';
+import { Colors } from '@dt-dds/themes';
 
 import { CounterStyled } from './Counter.styled';
 

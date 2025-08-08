@@ -52,7 +52,7 @@ export function formatTypographyStyle(
 ): string {
   const weight = fontWeight === 'Bold' ? '700' : '400';
   const decoration = textDecoration
-    ? `; text-decoration: ${textDecoration}`
+    ? `; text-decoration: ${textDecoration};`
     : '';
 
   return `font-family: ${fontFamily}; font-size: ${fontSize}; font-weight: ${weight}; letter-spacing: ${letterSpacing}; line-height: ${lineHeight}${decoration}`;

@@ -22,6 +22,7 @@
   "dependencies": {
     "@dt-dds/react-button": "1.0.0-beta.39",
     "@dt-dds/react-core": "1.0.0-beta.41",
+    "@dt-dds/themes": "1.0.0-beta.1",
     "react-hot-toast": "^2.3.0"
   },
   "devDependencies": {

@@ -16,16 +16,4 @@ export { getTextStyles } from './utils/typography';
 export { getContextualColor } from './utils/getContextualColor';
 export { hexToRgba } from './utils/hexToRgba';
 
-// Theme generation utilities (for internal use)
-export {
-  generateColors,
-  generatePalette,
-  generateSpacing,
-  generateRadius,
-  generateShadows,
-  generateShape,
-  generateBreakpoints,
-  generateTypography,
-  generateIcons,
-  generateAnimations,
-} from './utils/theme-generator';
+// Theme generation utilities are for internal use only and not exported

@@ -1,5 +1,6 @@
-import { withProviders, theme } from '@dt-dds/react-core';
+import { withProviders } from '@dt-dds/react-core';
 import { Link } from '@dt-dds/react-link';
+import { daimlertruckTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render } from '@testing-library/react';
 
 import { Message } from './Message';

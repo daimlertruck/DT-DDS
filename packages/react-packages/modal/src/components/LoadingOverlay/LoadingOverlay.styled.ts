@@ -1,4 +1,4 @@
-import { hexToRgba } from '@dt-dds/react-core';
+import { hexToRgba } from '@dt-dds/themes';
 import styled from '@emotion/styled';
 
 export const ModalLoadingOverlayStyled = styled.div`

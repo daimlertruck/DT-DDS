@@ -23,7 +23,7 @@ jobs:
   build-storybook:
     runs-on: ubuntu-latest
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
       cancel-in-progress: true
     if: "!contains(github.event.head_commit.message, 'release:')"
     steps:
@@ -34,6 +34,9 @@ jobs:
         uses: './.github/actions/yarn-node-install'
         with:
           CACHE_FILE_NAME: 'global'
+
+      - name: Build dependencies
+        run: yarn run turbo build --filter='./packages/*'
 
       - name: Build Storybook
         run: |

@@ -1,2 +1,2 @@
 export { theme as greenlaneTheme } from './greenlane';
-export { truckAPITheme } from './truckApi';
+export { theme as truckAPITheme } from './truckApi';

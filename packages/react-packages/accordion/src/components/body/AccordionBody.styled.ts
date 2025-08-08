@@ -6,7 +6,7 @@ interface BodyStyledProps {
 
 export const BodyStyled = styled.div<BodyStyledProps>`
   ${({ theme, isOpenState }) => `
-    ${theme.fontStyles.body1};
+    ${theme.fontStyles.bodyLgRegular};
     display: grid;
     grid-template-rows: ${isOpenState ? '1fr' : '0fr'};
     transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-in-out;

@@ -1,4 +1,4 @@
-import { defaultTheme, FontFace, CustomTheme as Theme } from '@dt-ui/themes';
+import { defaultTheme, FontFace, CustomTheme as Theme } from '@dt-dds/themes';
 import { ThemeProvider, Global } from '@emotion/react';
 import React from 'react';
 

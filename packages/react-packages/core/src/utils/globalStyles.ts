@@ -1,4 +1,4 @@
-import { CustomTheme as Theme } from '@dt-ui/themes';
+import { CustomTheme as Theme } from '@dt-dds/themes';
 import { css } from '@emotion/react';
 import emotionNormalize from 'emotion-normalize';
 
