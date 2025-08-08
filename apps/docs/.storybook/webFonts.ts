@@ -1,7 +1,7 @@
 /* woff2 - Chrome 26+, Opera 23+, Firefox 39+ */
 /* woff  - Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 
-import type { FontFace } from '@dt-dds/react-core';
+import type { FontFace } from '@dt-dds/themes';
 
 export const webFonts: FontFace[] = [
   /* roboto-regular - latin */

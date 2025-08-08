@@ -1,4 +1,4 @@
-import { defaultTheme } from '@dt-ui/themes';
+import { defaultTheme } from '@dt-dds/themes';
 
 import { Provider } from '../components';
 

@@ -1,4 +1,4 @@
-import { Theme } from '@dt-dds/react-core';
+import { CustomTheme as Theme } from '@dt-dds/themes';
 
 import { TagColor, TagVariant } from '../constants';
 

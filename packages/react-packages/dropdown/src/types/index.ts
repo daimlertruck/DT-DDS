@@ -1,4 +1,3 @@
-import { Theme as CustomTheme } from '@dt-dds/react-core';
 export type DropdownOptionValue = {
   text?: string;
   value: string;

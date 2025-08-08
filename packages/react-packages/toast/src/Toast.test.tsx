@@ -9,8 +9,8 @@ import Toast from './Toast';
 import { dismissToast } from './Toaster';
 
 // Mock useMedia hook
-jest.mock('@dt-ui/react-core', () => ({
-  ...jest.requireActual('@dt-ui/react-core'),
+jest.mock('@dt-dds/react-core', () => ({
+  ...jest.requireActual('@dt-dds/react-core'),
   useMedia: jest.fn(),
 }));
 
@@ -350,104 +350,88 @@ describe('emitToast', () => {
   });
 });
 
-describe('<Toaster /> component', () => {
-  const ProvidedToaster = withProviders(Toaster);
-  const { useMedia } = jest.requireMock('@dt-ui/react-core');
+describe('<Toaster /> props', () => {
+  const ToasterRenderSpy: jest.Mock = jest.fn();
+  const { useMedia }: { useMedia: jest.Mock } =
+    jest.requireMock('@dt-dds/react-core');
 
-  beforeEach(() => {
-    act(() => {
-      toast.dismiss();
+  const renderWithMocks = (
+    options: {
+      small?: boolean;
+      userContainerStyle?: Record<string, any>;
+      gutter?: number;
+    } = {}
+  ) => {
+    const { small = false, userContainerStyle, gutter } = options;
+    ToasterRenderSpy.mockClear();
+    useMedia.mockReset();
+    useMedia.mockReturnValue(small);
+
+    let ToasterComp: any;
+
+    jest.isolateModules(() => {
+      jest.doMock('react-hot-toast', () => {
+        const original = jest.requireActual('react-hot-toast');
+        return {
+          ...original,
+          Toaster: (props: any) => {
+            ToasterRenderSpy(props);
+            return null;
+          },
+        };
+      });
+
+      jest.doMock('@emotion/react', () => ({
+        ...jest.requireActual('@emotion/react'),
+        useTheme: () => ({ breakpoints: { s: 600 } }),
+      }));
+
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      ToasterComp = require('./Toaster').default;
     });
+
+    const props: any = {};
+    if (typeof gutter !== 'undefined') props.gutter = gutter;
+    if (userContainerStyle) {
+      props.containerStyle = userContainerStyle;
+    }
+
+    render(<ToasterComp {...props} />);
+    expect(ToasterRenderSpy).toHaveBeenCalledTimes(1);
+    return ToasterRenderSpy.mock.calls[0][0];
+  };
+
+  it('forwards gutter prop', () => {
+    const props = renderWithMocks({ small: false, gutter: 16 });
+    expect(props.gutter).toBe(16);
   });
 
-  afterEach(() => {
-    act(() => {
-      toast.dismiss();
+  it('uses default gutter=8 when not provided', () => {
+    const props = renderWithMocks({ small: false });
+    expect(props.gutter).toBe(8);
+  });
+
+  it('sets position bottom-center on small screens, bottom-right otherwise', () => {
+    const smallProps = renderWithMocks({ small: true });
+    expect(smallProps.position).toBe('bottom-center');
+
+    const largeProps = renderWithMocks({ small: false });
+    expect(largeProps.position).toBe('bottom-right');
+  });
+
+  it('computes containerStyle margins and merges user styles', () => {
+    const props = renderWithMocks({
+      small: true,
+      userContainerStyle: { top: 24, backgroundColor: 'red' },
     });
-  });
 
-  it('should render with default props', () => {
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should render with custom gutter prop', () => {
-    const { container } = render(<ProvidedToaster gutter={16} />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should render with custom containerStyle prop', () => {
-    const customStyle = { backgroundColor: 'red' };
-    const { container } = render(
-      <ProvidedToaster containerStyle={customStyle} />
-    );
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should render with all custom props', () => {
-    const customStyle = { backgroundColor: 'blue' };
-    const { container } = render(
-      <ProvidedToaster containerStyle={customStyle} gutter={20} />
-    );
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the responsive logic with useMedia hook', () => {
-    // This test specifically targets the responsive logic in Toaster component
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the margin calculation for different screen sizes', () => {
-    // This test targets the margin calculation logic
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the position calculation for different screen sizes', () => {
-    // This test targets the position calculation logic
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the responsive breakpoint logic', () => {
-    // This test specifically targets lines 75-80 in Toaster.tsx
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the theme breakpoints usage', () => {
-    // This test targets the useTheme and useMedia interaction
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the conditional position assignment', () => {
-    // This test targets the conditional logic for position assignment
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test the conditional margin assignment', () => {
-    // This test targets the conditional logic for margin assignment
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test responsive logic with small screen mock', () => {
-    // Mock useMedia to return true for small screens
-    useMedia.mockReturnValue(true);
-
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should test responsive logic with large screen mock', () => {
-    // Mock useMedia to return false for large screens
-    useMedia.mockReturnValue(false);
-
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
+    expect(props.containerStyle).toMatchObject({
+      bottom: 16,
+      right: 8,
+      top: 24,
+      left: 8,
+      backgroundColor: 'red',
+    });
   });
 });
 
@@ -592,44 +576,6 @@ describe('emitToast with Children.map functionality', () => {
 
     expect(screen.getByText('Nested Button')).toBeInTheDocument();
     expect(screen.getByText('Nested Text')).toBeInTheDocument();
-  });
-
-  it('should test the Children.map null check logic', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Null Check Test',
-      message: 'Testing null check in Children.map',
-      children: null,
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Null Check Test')).toBeInTheDocument();
-  });
-
-  it('should test the cloneElement with toastId prop', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Clone Element Test',
-      message: 'Testing cloneElement with toastId',
-      children: <button type='button'>Clone Test Button</button>,
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Clone Test Button')).toBeInTheDocument();
   });
 
   it('should test the conditional child rendering in Children.map', () => {

@@ -1,4 +1,3 @@
-import { Theme as CustomTheme } from '@dt-dds/react-core';
 export * from './components';
 export * from './constants';
 export * from './hooks';

@@ -1,4 +1,5 @@
-import { withProviders, theme } from '@dt-dds/react-core';
+import { withProviders } from '@dt-dds/react-core';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 
@@ -18,7 +19,7 @@ describe('<Button /> component', () => {
   });
 
   it('renders button html element with contrast styles', () => {
-    const { getByTestId } = render(
+    const { container } = render(
       <ProvidedButton
         color='contrast'
         dataTestId='contrast'
@@ -28,8 +29,13 @@ describe('<Button /> component', () => {
       </ProvidedButton>
     );
 
-    expect(getByTestId('contrast-button')).toHaveStyle(
-      `color: ${theme.palette.content.dark};background-color: ${theme.palette.surface.contrast};`
+    expect(container.firstChild).toHaveStyleRule(
+      'color',
+      theme.palette.content.dark
+    );
+    expect(container.firstChild).toHaveStyleRule(
+      'background-color',
+      theme.palette.surface.contrast
     );
   });
 

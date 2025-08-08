@@ -56,7 +56,7 @@
     "@dt-dds/react-toggle": "1.0.0-beta.20",
     "@dt-dds/react-tooltip": "1.0.0-beta.49",
     "@dt-dds/react-typography": "1.0.0-beta.32",
-    "@dt-dds/themes": "0.1.0-beta.1",
+    "@dt-dds/themes": "1.0.0-beta.1",
     "@emotion/server": "^11.4.0",
     "emotion-normalize": "^11.0.1"
   },

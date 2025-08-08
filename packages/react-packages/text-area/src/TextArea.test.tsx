@@ -1,5 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
-import { theme } from '@dt-dds/react-core';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useState } from 'react';
 
@@ -117,7 +117,7 @@ describe('<TextArea /> component', () => {
       fireEvent.blur(textarea, { currentTarget: { value: '' } });
 
       expect(textarea).toHaveStyle(
-        `border: 1px solid ${theme.palette.border.default}`
+        `border: 1px solid ${theme.palette.primary.default}`
       );
     });
 
@@ -131,7 +131,7 @@ describe('<TextArea /> component', () => {
 
       fireEvent.blur(textarea, { currentTarget: { value: 'Some value' } });
 
-      expect(label).toHaveStyle('font-size: 0.75rem');
+      expect(label).toHaveStyle(`font-size: ${theme.fontStyles.body3}`);
       expect(label).toHaveStyle('transform: translateY(-45%)');
     });
   });

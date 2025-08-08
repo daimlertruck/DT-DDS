@@ -1,4 +1,4 @@
-import { CustomTheme as Theme, defaultTheme } from '@dt-ui/themes';
+import { CustomTheme as Theme, defaultTheme } from '@dt-dds/themes';
 
 import { colors, palette } from './palette';
 import { fontFamily, fontStyles } from './typography';

@@ -1,5 +1,5 @@
 import '@emotion/react';
-import { Theme as CustomTheme } from '@dt-dds/react-core';
+import { CustomTheme } from '@dt-dds/themes';
 // Core styles
 export * from './core';
 
@@ -49,6 +49,7 @@ export * from '@dt-dds/react-pagination';
 export * from '@dt-dds/react-icon-button';
 export * from '@dt-dds/react-link';
 export * from '@dt-dds/themes';
+export { defaultTheme as theme } from '@dt-dds/themes';
 
 declare module '@emotion/react' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface

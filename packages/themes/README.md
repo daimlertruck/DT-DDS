@@ -1,8 +1,8 @@
-# @dt-ui/themes
+# @dt-dds/themes
 
-DT-UI Design System Themes Package
+DT-DDS Themes Package
 
-This package contains the theme system for the DT-UI design system, including:
+This package contains the themes system for DT-DDS, including:
 
 - Theme definitions and types
 - Theme generation utilities
@@ -12,7 +12,7 @@ This package contains the theme system for the DT-UI design system, including:
 ## Installation
 
 ```bash
-yarn add @dt-ui/themes
+yarn add @dt-dds/themes
 ```
 
 ## Usage
@@ -20,7 +20,6 @@ yarn add @dt-ui/themes
 ```typescript
 import { daimlerTruckTheme } from '@dt-ui/themes';
 
-// Use the daimlerTruckTheme theme
 const theme: CustomTheme = daimlerTruckTheme;
 ```
 
@@ -59,10 +58,10 @@ Includes a GitHub Actions workflow (`.github/workflows/theme-generation.yml`) th
 #### How it works:
 
 1. **Trigger**: The workflow runs when a PR is opened, updated, or reopened and contains changes to:
-   - `packages/react-packages/core/src/tokens/**/*.json`
-   - `packages/react-packages/core/src/utils/theme-generator/**/*`
-   - `packages/react-packages/core/src/types/theme.ts`
-   - `packages/react-packages/core/package.json`
+   - `packages/themes/src/tokens/**/*.json`
+   - `packages/themes/src/utils/theme-generator/**/*`
+   - `packages/themes/src/types/theme.ts`
+   - `packages/themes/package.json`
 
 2. **Process**:
    - Checks out the PR branch

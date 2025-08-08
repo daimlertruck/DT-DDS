@@ -1,4 +1,5 @@
-import { BACKDROP_Z_INDEX, hexToRgba } from '@dt-dds/react-core';
+import { BACKDROP_Z_INDEX } from '@dt-dds/react-core';
+import { hexToRgba } from '@dt-dds/themes';
 import styled from '@emotion/styled';
 
 import { BackdropType } from './constants';

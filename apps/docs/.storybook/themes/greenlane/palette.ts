@@ -1,4 +1,4 @@
-import { CustomTheme, defaultTheme } from '@dt-ui/themes';
+import { CustomTheme, defaultTheme } from '@dt-dds/themes';
 
 const { colors: defaultColors, palette: defaultPalette } = defaultTheme;
 

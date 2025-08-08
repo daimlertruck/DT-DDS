@@ -1,6 +1,4 @@
-import { CustomTheme, defaultTheme } from '@dt-ui/themes';
-import { theme } from '@dt-dds/react-core';
-import { defaultTheme } from '@dt-ui/themes';
+import { defaultTheme } from '@dt-dds/themes';
 
 const { shape: defaultShape, radius } = defaultTheme;
 

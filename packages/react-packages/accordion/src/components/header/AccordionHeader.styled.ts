@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const HeaderStyled = styled.header`
   ${({ theme }) => `
-    ${theme.fontStyles.h6};
+    ${theme.fontStyles.h6Bold};
     display: flex;
     align-items: center;
     justify-content: space-between;
