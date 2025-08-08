@@ -1,4 +1,4 @@
-import { Theme, theme as defaultTheme } from '@dt-dds/react';
+import { CustomTheme as Theme, defaultTheme } from '@dt-ui/themes';
 
 import { colors, palette } from './palette';
 import { fontFamily, fontStyles } from './typography';

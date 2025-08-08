@@ -1,7 +1,6 @@
+import { CustomTheme as Theme } from '@dt-ui/themes';
 import { css } from '@emotion/react';
 import emotionNormalize from 'emotion-normalize';
-
-import { CustomTheme as Theme } from '../types';
 
 // Pass theme as argument
 export const globalStyles = (theme: Theme) => css`

@@ -32,9 +32,9 @@ assignees: ''
 
 ## Environment
 
-- __Package version(s)__: <!-- here -->
-- __Operating System__: <!-- here -->
-- __Browser name and version__: <!-- here -->
+- **Package version(s)**: <!-- here -->
+- **Operating System**: <!-- here -->
+- **Browser name and version**: <!-- here -->
 
 ## Possible solution
 

@@ -1,6 +1,6 @@
-import { Theme, theme } from '@dt-dds/react';
+import { CustomTheme, defaultTheme } from '@dt-ui/themes';
 
-const { colors: defaultColors, palette: defaultPalette } = theme;
+const { colors: defaultColors, palette: defaultPalette } = defaultTheme;
 
 export const colors = {
   ...defaultColors,
@@ -31,7 +31,7 @@ export const colors = {
   darkGreen_100: '#09170F',
 };
 
-export const palette: Theme['palette'] = {
+export const palette: CustomTheme['palette'] = {
   ...defaultPalette,
   accent: {
     default: colors.goGreen,
@@ -44,6 +44,5 @@ export const palette: Theme['palette'] = {
     light: colors.darkGreen_30,
     medium: colors.darkGreen_60,
     dark: colors.darkGreen_80,
-    contrast: defaultColors.white,
   },
 };

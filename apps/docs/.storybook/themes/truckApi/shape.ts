@@ -1,8 +1,9 @@
+import { CustomTheme, defaultTheme } from '@dt-ui/themes';
 import { Theme, theme as defaultTheme } from '@dt-dds/react';
 
 const { shape: defaultShape, radius } = defaultTheme;
 
-export const shape: Theme['shape'] = {
+export const shape: CustomTheme['shape'] = {
   ...defaultShape,
   button: radius['none'],
   checkbox: radius['6xs'],

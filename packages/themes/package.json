@@ -1,8 +1,8 @@
 {
-  "name": "@dt-ui/themes",
+  "name": "@dt-dds/themes",
   "version": "0.1.0-beta.1",
   "license": "MIT",
-  "description": "DT-UI Design System Themes",
+  "description": "DT-DDS Design System Themes",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
