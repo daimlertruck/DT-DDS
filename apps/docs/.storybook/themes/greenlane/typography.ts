@@ -1,4 +1,6 @@
+import { CustomTheme, defaultTheme } from '@dt-ui/themes';
 import { getTextStyles, theme } from '@dt-dds/react';
+import { getTextStyles, defaultTheme as theme } from '@dt-ui/react';
 
 export const fontFamily = {
   default:

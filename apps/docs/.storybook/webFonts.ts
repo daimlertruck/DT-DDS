@@ -67,7 +67,7 @@ export const webFonts: FontFace[] = [
       src: "url(/fonts/poppins/poppins-bold.woff) format('woff'), url(/fonts/poppins/poppins-bold.woff2) format('woff2')",
     },
   },
-  /* daimler-cs regular */
+  /* daimler-cs PRO regular */
   {
     '@font-face': {
       fontFamily: 'DaimlerCSPro',
@@ -76,7 +76,7 @@ export const webFonts: FontFace[] = [
       src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Regular.otf) format('opentype')",
     },
   },
-  /* daimler-cs bold */
+  /* daimler-cs PRO bold */
   {
     '@font-face': {
       fontFamily: 'DaimlerCSPro',
@@ -85,13 +85,29 @@ export const webFonts: FontFace[] = [
       src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Bold.otf) format('opentype')",
     },
   },
-  /* daimler-cs italic */
+  /* daimler-cs PRO italic */
   {
     '@font-face': {
       fontFamily: 'DaimlerCSPro',
       fontStyle: 'italic',
       fontWeight: 400,
       src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Italic.otf) format('opentype')",
+    },
+  },
+  {
+    '@font-face': {
+      fontFamily: 'Daimler CS',
+      fontStyle: 'normal',
+      fontWeight: 350,
+      src: "url(/fonts/daimler-cs/DaimlerCS-Regular.woff) format('woff'), url(/fonts/daimler-cs/DaimlerCS-Regular.woff2) format('woff2')",
+    },
+  },
+  {
+    '@font-face': {
+      fontFamily: 'Daimler CS',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      src: "url(/fonts/daimler-cs/DaimlerCS-Bold.woff) format('woff'), url(/fonts/daimler-cs/DaimlerCS-Bold.woff2) format('woff2')",
     },
   },
 ];

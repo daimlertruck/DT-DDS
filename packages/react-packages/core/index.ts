@@ -1,4 +1,4 @@
-import { CustomTheme } from './src/types';
+import { Theme as CustomTheme } from '@dt-dds/react-core';
 
 export * from './src';
 

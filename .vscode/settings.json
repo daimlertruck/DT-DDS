@@ -3,6 +3,7 @@
   "css.lint.unknownAtRules": "ignore",
   "css.validate": true,
   "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },

@@ -15,7 +15,7 @@ inputs:
   NODE_VERSION:
     description: The node version to be installed
     required: false
-    default: '20'
+    default: '22'
   NPM_TOKEN:
     description: NPM token for publishing to npmjs.org
     required: false

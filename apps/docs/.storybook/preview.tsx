@@ -49,6 +49,7 @@ const preview: Preview = {
     },
     docs: {
       theme: themes.light,
+      fontBase: 'Daimler CS',
     },
   },
 

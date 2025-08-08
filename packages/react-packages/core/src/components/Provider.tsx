@@ -1,8 +1,8 @@
+import { defaultTheme, FontFace, CustomTheme as Theme } from '@dt-ui/themes';
 import { ThemeProvider, Global } from '@emotion/react';
 import React from 'react';
 
-import { theme as defaultTheme, globalStyles } from '../themes';
-import { FontFace, CustomTheme as Theme } from '../types';
+import { globalStyles } from '../utils/globalStyles';
 
 type ThemeProviderType = {
   theme?: Theme;
