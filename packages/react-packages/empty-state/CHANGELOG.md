@@ -1,5 +1,22 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.60
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.40
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-typography@1.0.0-beta.33
+
 ## 1.0.0-beta.59
 
 ### Patch Changes

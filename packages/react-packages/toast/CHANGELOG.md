@@ -1,5 +1,22 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.57
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.40
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/themes@1.0.0-beta.2
+
 ## 1.0.0-beta.56
 
 ### Patch Changes

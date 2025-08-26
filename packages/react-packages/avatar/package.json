@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-avatar",
-  "version": "1.0.0-beta.50",
+  "version": "1.0.0-beta.51",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,8 +20,8 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.41",
-    "@dt-dds/react-tooltip": "1.0.0-beta.49"
+    "@dt-dds/react-core": "1.0.0-beta.42",
+    "@dt-dds/react-tooltip": "1.0.0-beta.50"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

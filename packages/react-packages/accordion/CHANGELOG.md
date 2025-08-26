@@ -1,5 +1,22 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.42
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-divider@1.0.0-beta.41
+  - @dt-dds/react-icon@1.0.0-beta.43
+
 ## 1.0.0-beta.41
 
 ### Major Changes

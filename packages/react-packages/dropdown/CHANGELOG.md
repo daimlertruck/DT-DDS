@@ -1,5 +1,26 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.32
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-icon@1.0.0-beta.43
+  - @dt-dds/react-icon-button@1.0.0-beta.10
+  - @dt-dds/react-typography@1.0.0-beta.33
+  - @dt-dds/themes@1.0.0-beta.2
+
 ## 1.0.0-beta.31
 
 ### Patch Changes

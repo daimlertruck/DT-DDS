@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-select",
-  "version": "1.0.0-beta.46",
+  "version": "1.0.0-beta.47",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,14 +20,14 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-checkbox": "1.0.0-beta.40",
-    "@dt-dds/react-core": "1.0.0-beta.41",
-    "@dt-dds/react-icon": "1.0.0-beta.42",
-    "@dt-dds/react-icon-button": "1.0.0-beta.9",
-    "@dt-dds/react-label-field": "1.0.0-beta.37",
-    "@dt-dds/react-tooltip": "1.0.0-beta.49",
-    "@dt-dds/react-typography": "1.0.0-beta.32",
-    "@dt-dds/themes": "1.0.0-beta.1",
+    "@dt-dds/react-checkbox": "1.0.0-beta.41",
+    "@dt-dds/react-core": "1.0.0-beta.42",
+    "@dt-dds/react-icon": "1.0.0-beta.43",
+    "@dt-dds/react-icon-button": "1.0.0-beta.10",
+    "@dt-dds/react-label-field": "1.0.0-beta.38",
+    "@dt-dds/react-tooltip": "1.0.0-beta.50",
+    "@dt-dds/react-typography": "1.0.0-beta.33",
+    "@dt-dds/themes": "1.0.0-beta.2",
     "downshift": "^9.0.4"
   },
   "devDependencies": {

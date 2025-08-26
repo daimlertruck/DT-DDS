@@ -1,5 +1,20 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.41
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+
 ## 1.0.0-beta.40
 
 ### Major Changes

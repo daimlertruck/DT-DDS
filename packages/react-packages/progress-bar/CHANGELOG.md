@@ -1,5 +1,21 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.36
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.43
+  - @dt-dds/react-typography@1.0.0-beta.33
+
 ## 1.0.0-beta.35
 
 ### Major Changes

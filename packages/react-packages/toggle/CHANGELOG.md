@@ -1,5 +1,21 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.21
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-typography@1.0.0-beta.33
+
 ## 1.0.0-beta.20
 
 ### Major Changes

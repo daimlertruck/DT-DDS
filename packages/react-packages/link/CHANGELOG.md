@@ -1,5 +1,22 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.17
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.40
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-icon@1.0.0-beta.43
+
 ## 1.0.0-beta.16
 
 ### Patch Changes

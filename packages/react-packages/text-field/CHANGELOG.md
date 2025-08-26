@@ -1,5 +1,25 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.50
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-icon@1.0.0-beta.43
+  - @dt-dds/react-icon-button@1.0.0-beta.10
+  - @dt-dds/react-label-field@1.0.0-beta.38
+  - @dt-dds/react-spinner@1.0.0-beta.45
+  - @dt-dds/react-typography@1.0.0-beta.33
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

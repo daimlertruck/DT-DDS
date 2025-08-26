@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-text-field",
-  "version": "1.0.0-beta.49",
+  "version": "1.0.0-beta.50",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,12 +20,12 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.41",
-    "@dt-dds/react-spinner": "1.0.0-beta.44",
-    "@dt-dds/react-label-field": "1.0.0-beta.37",
-    "@dt-dds/react-typography": "1.0.0-beta.32",
-    "@dt-dds/react-icon-button": "1.0.0-beta.9",
-    "@dt-dds/react-icon": "1.0.0-beta.42"
+    "@dt-dds/react-core": "1.0.0-beta.42",
+    "@dt-dds/react-spinner": "1.0.0-beta.45",
+    "@dt-dds/react-label-field": "1.0.0-beta.38",
+    "@dt-dds/react-typography": "1.0.0-beta.33",
+    "@dt-dds/react-icon-button": "1.0.0-beta.10",
+    "@dt-dds/react-icon": "1.0.0-beta.43"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

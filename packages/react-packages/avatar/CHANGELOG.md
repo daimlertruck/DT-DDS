@@ -1,5 +1,21 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.51
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-tooltip@1.0.0-beta.50
+
 ## 1.0.0-beta.50
 
 ### Major Changes

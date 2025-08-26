@@ -1,5 +1,22 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.27
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.42
+
 ## 1.0.0-beta.26
 
 ### Patch Changes

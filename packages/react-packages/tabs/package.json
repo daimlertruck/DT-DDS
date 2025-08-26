@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-tabs",
-  "version": "1.0.0-beta.39",
+  "version": "1.0.0-beta.40",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,10 +20,10 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.41",
-    "@dt-dds/react-icon": "1.0.0-beta.42",
-    "@dt-dds/react-icon-button": "1.0.0-beta.9",
-    "@dt-dds/react-box": "1.0.0-beta.10"
+    "@dt-dds/react-core": "1.0.0-beta.42",
+    "@dt-dds/react-icon": "1.0.0-beta.43",
+    "@dt-dds/react-icon-button": "1.0.0-beta.10",
+    "@dt-dds/react-box": "1.0.0-beta.11"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

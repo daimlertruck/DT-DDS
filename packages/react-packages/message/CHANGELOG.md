@@ -1,5 +1,23 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.56
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+  - @dt-dds/react-link@1.0.0-beta.17
+  - @dt-dds/react-typography@1.0.0-beta.33
+  - @dt-dds/themes@1.0.0-beta.2
+
 ## 1.0.0-beta.55
 
 ### Patch Changes

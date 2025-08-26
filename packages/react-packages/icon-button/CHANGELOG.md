@@ -1,5 +1,20 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.10
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+
 ## 1.0.0-beta.9
 
 ### Major Changes

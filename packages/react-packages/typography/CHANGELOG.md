@@ -1,5 +1,20 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.33
+
+### Minor Changes
+
+- feat: add new themes package
+
+### Patch Changes
+
+- chore: update imports and deps
+- chore: rebase with main branch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.42
+
 ## 1.0.0-beta.32
 
 ### Major Changes
