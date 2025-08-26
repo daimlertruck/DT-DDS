@@ -1,0 +1,8 @@
+import{j as e}from"./jsx-runtime-DMAvRu52.js";import{S as u,a as r}from"./Step-BF2aIMUw.js";import"./index-Dl6G-zuu.js";import"./emotion-styled.browser.esm-Dv69Fly8.js";import"./Icon-87Ryblgq.js";import"./Typography-DII2gFDQ.js";import"./index-CL4Xg4Pf.js";const c=({children:s,dataTestId:o,orientation:t})=>{const i=o??"default";return e.jsx(u,{"data-testid":`${i}-stepper`,orientation:t,children:s})},h={Vertical:"vertical",Horizontal:"horizontal"},v={title:"Data Display/Stepper",component:c,argTypes:{currentStep:{control:{type:"number",min:1}},orientation:{options:h,control:{type:"radio"}},completed:{control:{type:"array"}},options:{control:{type:"array"}}},render:({currentStep:s,orientation:o,options:t,completed:i})=>e.jsxs(c,{orientation:o,children:[t.map((l,a)=>e.jsxs(r,{isActive:s===a+1,isCompleted:i.includes(a+1),children:[e.jsx(r.Counter,{children:a+1}),e.jsx(r.Label,{children:l})]},l)),e.jsxs(r,{isDisabled:!0,children:[e.jsx(r.Counter,{children:t.length+1}),e.jsx(r.Label,{children:"Disabled"})]},t.length),e.jsxs(r,{isError:!0,children:[e.jsx(r.Counter,{children:t.length+2}),e.jsx(r.Label,{children:"Error"})]},t.length+1),e.jsxs(r,{isActive:!0,isError:!0,children:[e.jsx(r.Counter,{children:t.length+3}),e.jsx(r.Label,{children:"Active Error"})]},t.length+2)]})},n={args:{currentStep:1,completed:[3],orientation:"vertical",options:["Step 1","Step 2","Step 3"]}};var p,d,m;n.parameters={...n.parameters,docs:{...(p=n.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    currentStep: 1,
+    completed: [3],
+    orientation: 'vertical',
+    options: ['Step 1', 'Step 2', 'Step 3']
+  }
+}`,...(m=(d=n.parameters)==null?void 0:d.docs)==null?void 0:m.source}}};const D=["Default"];export{n as Default,D as __namedExportsOrder,v as default};

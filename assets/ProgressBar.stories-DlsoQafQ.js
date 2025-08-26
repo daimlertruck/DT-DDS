@@ -1,0 +1,10 @@
+import{j as e}from"./jsx-runtime-DMAvRu52.js";import{I as d}from"./Icon-87Ryblgq.js";import{T as S}from"./Typography-DII2gFDQ.js";import{P as b,a as B,b as v,c as _,d as I,e as T,f as p}from"./ProgressBar.styled-CHFZAUI5.js";import{d as A}from"./emotion-styled.browser.esm-Dv69Fly8.js";import"./index-Dl6G-zuu.js";import"./index-CL4Xg4Pf.js";const m=0,u=100,f=({state:r,value:y,label:a,helperText:n,size:j="small",info:t="none"})=>{const l=Math.min(Math.max(y,m),u),i=A();return e.jsxs(b,{children:[a?e.jsx(S,{color:"content.default",fontStyles:"body2Bold",children:a}):null,e.jsxs(B,{children:[e.jsx(v,{"aria-label":a,"aria-valuemax":u,"aria-valuemin":m,"aria-valuenow":l,role:"progressbar",children:e.jsx(_,{progress:l,size:j,state:r})}),P()]}),n?e.jsx(I,{state:r,children:n}):null]});function P(){if(t==="none")return;const c={success:e.jsx(d,{code:"check_circle",color:i.palette.success.default,size:"s"}),error:e.jsx(d,{code:"error",color:i.palette.error.default,size:"s"})};let s=e.jsx(T,{state:r,children:`${l}%`});return r!=="active"&&(t==="icon"&&(s=e.jsx(p,{children:c[r]})),t==="both"&&(s=e.jsxs(e.Fragment,{children:[s,e.jsx(p,{children:c[r]})]}))),s}},k={title:"Data Display/ProgressBar",component:f,argTypes:{size:{options:["small","large"],defaultValue:"small",control:{type:"radio"}},state:{options:["active","success","error"],defaultValue:"active",control:{type:"radio"}},info:{options:["none","text","icon","both"],defaultValue:"none",control:{type:"radio"}}},render:({...r})=>e.jsx("div",{style:{width:"250px"},children:e.jsx(f,{...r})})},o={args:{size:"small",state:"active",value:40,label:"Progress bar label",helperText:"Additional Info",info:"both"}};var x,g,h;o.parameters={...o.parameters,docs:{...(x=o.parameters)==null?void 0:x.docs,source:{originalSource:`{
+  args: {
+    size: 'small',
+    state: 'active',
+    value: 40,
+    label: 'Progress bar label',
+    helperText: 'Additional Info',
+    info: 'both'
+  }
+}`,...(h=(g=o.parameters)==null?void 0:g.docs)==null?void 0:h.source}}};const w=["Default"];export{o as Default,w as __namedExportsOrder,k as default};

@@ -1,0 +1,14 @@
+import{j as e}from"./jsx-runtime-DMAvRu52.js";import{L as M}from"./LabelField-BZE-ajg7.js";import{T as E}from"./Typography-DII2gFDQ.js";import{r as s}from"./index-Dl6G-zuu.js";import{T as V,C as _,a as W,b as $,c as G}from"./TextArea.styled-Ct-dD6LH.js";import"./emotion-styled.browser.esm-Dv69Fly8.js";import"./index-CL4Xg4Pf.js";const T=({label:o,dataTestId:i,name:c,value:n,style:v,variant:F="outlined",backgroundFill:h="default",maxLength:d,enableResize:D=!1,disabled:u=!1,required:x=!1,hasError:L=!1,message:R="",onChange:y=()=>{},...a})=>{const[I,A]=s.useState(0),[O,f]=s.useState(!1),[q,m]=s.useState(""),[w,p]=s.useState(!1);s.useEffect(()=>{n?(m(n),f(!0),A(n.length),p(!1)):m("")},[n]);const z=t=>{m(t.target.value),p(!1),A(t.target.value.length),y&&y(t)},B=t=>{f(!0),a.onFocus&&a.onFocus(t)},k=t=>{t.currentTarget.value.trim().length===0&&(f(!1),x&&p(!0)),a.onBlur&&a.onBlur(t)},g=i??`${o.replaceAll(" ","-").toLocaleLowerCase()}-textarea`,H=u?"content.light":"content.medium",r=L||w,b=R;return e.jsxs(V,{children:[e.jsx(M,{hasError:r,htmlFor:g,isActive:O,isDisabled:u,isRequired:x,style:{zIndex:1},children:o}),e.jsx(_,{backgroundFill:h,"data-testid":"textarea-container",hasError:r,variant:F,children:e.jsx(W,{backgroundFill:h,"data-error":r,disabled:u,enableResize:D,id:g,maxLength:d,name:c,style:v,value:q,...a,onBlur:k,onChange:z,onFocus:B})}),e.jsxs($,{children:[b?e.jsx(G,{children:e.jsx(E,{color:r?"error.default":H,element:"span",fontStyles:"body3",children:b})}):null,d?e.jsxs(E,{color:"content.medium",element:"span",fontStyles:"body2",id:g,style:{marginLeft:"auto"},children:[I," / ",d]}):null]})]})},Z={title:"Data Display/TextArea",component:T,argTypes:{onChange:{options:[!0,void 0],control:{type:"radio",labels:{true:"Has onChange",undefined:"Does not have onChange"}}},maxLength:{control:{type:"number",min:1}},variant:{options:{outlined:"outlined",bottomLine:"bottomLine"},control:{type:"select"}},backgroundFill:{options:{default:"default",contrast:"contrast",light:"light"},control:{type:"select"}}},render:({onChange:o,...i})=>e.jsx(T,{...i,...o&&{onChange:c=>console.log("data changed: ",c)}})},l={args:{label:"Awesome TextArea",value:"",variant:"outlined",backgroundFill:"default",required:!1,message:"Additional info",onChange:void 0,enableResize:!1,hasError:!1,disabled:!1}};var C,S,j;l.parameters={...l.parameters,docs:{...(C=l.parameters)==null?void 0:C.docs,source:{originalSource:`{
+  args: {
+    label: 'Awesome TextArea',
+    value: '',
+    variant: 'outlined',
+    backgroundFill: 'default',
+    required: false,
+    message: 'Additional info',
+    onChange: undefined,
+    enableResize: false,
+    hasError: false,
+    disabled: false
+  }
+}`,...(j=(S=l.parameters)==null?void 0:S.docs)==null?void 0:j.source}}};const ee=["Default"];export{l as Default,ee as __namedExportsOrder,Z as default};
