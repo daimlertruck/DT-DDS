@@ -165,10 +165,18 @@ jobs:
     needs: [publish]
     if: always() && needs.publish.result == 'success'
     steps:
+      - name: Generate CI_BOT Token
+        id: ci-bot-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.CI_BOT_ID }}
+          private-key: ${{ secrets.CI_BOT_PRIVATE_KEY }}
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: ${{ github.ref }}
+          token: ${{ steps.ci-bot-token.outputs.token }}
 
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
@@ -186,6 +194,4 @@ jobs:
           git config --global user.name ${{ env.GIT_FAKE_USER }}
           git add README.md
           git diff --staged --quiet || git commit -m "docs: update pkgs list in README [skip ci]"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git push origin ${{ github.ref }}
