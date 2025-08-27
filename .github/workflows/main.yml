@@ -20,7 +20,7 @@ concurrency:
 jobs:
   check-fixups:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release:')"
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release:')"
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release:')"
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
     needs: lint
     steps:
       - name: Checkout repository
@@ -74,7 +74,7 @@ jobs:
 
   blackduck-scan:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release:')"
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
     timeout-minutes: 30
     needs: tests
     env:
@@ -89,8 +89,6 @@ jobs:
         uses: './.github/actions/yarn-node-install'
         with:
           CACHE_FILE_NAME: 'global'
-          TBLX_NPM_ARTIFACT_TOKEN: $TBLX_NPM_ARTIFACT_TOKEN
-          TBLX_NPM_ARTIFACT_USERNAME: $TBLX_NPM_ARTIFACT_USERNAME
 
       - name: Set up Java 11
         uses: actions/setup-java@v3
@@ -155,10 +153,51 @@ jobs:
           detect_args: '--logging.level.detect=DEBUG --detect.blackduck.rapid.compare.mode=ALL --detect.project.version.phase=RELEASED  --detect.project.version.distribution=OPENSOURCE --detect.yarn.dependency.types.excluded=NON_PRODUCTION'
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
+  sonarqube-scan:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    needs: tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+        with:
+          CACHE_FILE_NAME: 'global'
+
+      - name: Prepare SonarQube Scan
+        run: |
+          echo "sonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}" > sonar-project.properties
+          echo "sonar.projectName=${{ secrets.SONAR_PROJECT_NAME }}" >> sonar-project.properties
+          echo "sonar.sources=packages" >> sonar-project.properties
+          echo "sonar.exclusions=**/node_modules/**,**/dist/**,**/jest-coverage/**,**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx" >> sonar-project.properties
+          echo "sonar.test.inclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx" >> sonar-project.properties
+          echo "sonar.coverage.exclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/node_modules/**" >> sonar-project.properties
+          echo "sonar.typescript.lcov.reportPaths=**/jest-coverage/lcov.info" >> sonar-project.properties
+          echo "sonar.log.level=DEBUG" >> sonar-project.properties
+          echo "SonarQube Configuration:"
+          cat sonar-project.properties
+
+      - name: Run SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
+
+      - name: Run SonarQube Quality Gate check
+        uses: sonarsource/sonarqube-quality-gate-action@v1
+        timeout-minutes: 10
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
+
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'release:')"
-    needs: blackduck-scan
+    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    needs: [blackduck-scan, sonarqube-scan]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -172,7 +211,7 @@ jobs:
         run: yarn run turbo build --filter='./packages/*'
 
   generate-version-tag:
-    needs: [check-fixups, lint, tests, blackduck-scan, build]
+    needs: [check-fixups, lint, tests, blackduck-scan, sonarqube-scan, build]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'release:')
     steps:
