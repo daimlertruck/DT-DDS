@@ -188,11 +188,38 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
 
       - name: Run SonarQube Quality Gate check
-        uses: sonarsource/sonarqube-quality-gate-action@v1
-        timeout-minutes: 10
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
+        run: |
+          echo "Waiting for SonarQube analysis to complete..."
+          sleep 30
+
+          gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
+            "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}")
+          gate_status=$(echo "$gate_response" | jq -r '.projectStatus.status')
+
+          echo "Quality Gate Status: $gate_status"
+
+          if [ "$gate_status" != "OK" ]; then
+            echo ""
+            echo "❌ Quality Gate Failed: $gate_status"
+            echo "======================================"
+            
+            echo "Quality Gate Conditions:"
+            echo "$gate_response" | jq -r '.projectStatus.conditions[] | "  \(.metricKey): \(.status) (\(.actualValue)/\(.errorThreshold))"'
+            
+            echo ""
+            echo "Issues causing the failure:"
+            echo "============================"
+            
+            curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
+              "${{ secrets.SONAR_URL }}/api/issues/search?componentKeys=${{ secrets.SONAR_PROJECT_KEY }}&severities=BLOCKER,CRITICAL,MAJOR" \
+              | jq -r '.issues[] | "\(.severity): \(.message) [\(.component):\(.line)]"' \
+              | head -20
+            
+            exit 1
+          else
+            echo "✅ Quality Gate Passed!"
+            echo "   No new issues introduced in this analysis."
+          fi
 
   build:
     runs-on: ubuntu-latest
