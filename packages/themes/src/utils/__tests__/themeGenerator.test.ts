@@ -1,6 +1,7 @@
 import { toKebabCase, extractThemeName } from '../theme-generator/fileUtils';
 import { formatObject, fontWeightToNumber } from '../theme-generator/formatter';
 import { generateColors } from '../theme-generator/generators/colors';
+import { generateComponents } from '../theme-generator/generators/components';
 import { generateRadius } from '../theme-generator/generators/radius';
 import { generateSpacing } from '../theme-generator/generators/spacing';
 import { resolveTokenReference } from '../theme-generator/tokenUtils';
@@ -188,6 +189,64 @@ describe('Theme Generator', () => {
         expect(result).toContain('export const radius');
         expect(result).toContain("none: '0px'");
         expect(result).toContain("'6xs': '2px'");
+      });
+    });
+
+    describe('generateComponents', () => {
+      const mockComponentTokens = {
+        Accordion: {
+          'surface-accordion-bg-true-default': {
+            $type: 'color',
+            $value: '#fafafa',
+          },
+          'surface-accordion-bg-true-hover': {
+            $type: 'color',
+            $value: '#f3f3f5',
+          },
+        },
+        Button: {
+          Primary: {
+            'surface-button-primary-solid-default': {
+              $type: 'color',
+              $value: '#000000',
+            },
+            'content-button-primary-solid-default': {
+              $type: 'color',
+              $value: '#ffffff',
+            },
+          },
+        },
+      };
+
+      it('should generate components from tokens', () => {
+        const result = generateComponents(mockComponentTokens);
+        expect(result).toContain('export const components = {');
+        expect(result).toContain('accordion: {');
+        expect(result).toContain('button: {');
+      });
+
+      it('should convert kebab-case keys to camelCase', () => {
+        const result = generateComponents(mockComponentTokens);
+        expect(result).toContain('surfaceAccordionBgTrueDefault');
+        expect(result).toContain('surfaceButtonPrimarySolidDefault');
+      });
+
+      it('should handle nested component structures', () => {
+        const result = generateComponents(mockComponentTokens);
+        expect(result).toContain('primary: {');
+        expect(result).toContain('surfaceButtonPrimarySolidDefault');
+      });
+
+      it('should handle direct hex values', () => {
+        const result = generateComponents(mockComponentTokens);
+        expect(result).toContain('#000000');
+        expect(result).toContain('#ffffff');
+      });
+
+      it('should process direct values correctly', () => {
+        const result = generateComponents(mockComponentTokens);
+        expect(result).toContain('#fafafa');
+        expect(result).toContain('#f3f3f5');
       });
     });
   });

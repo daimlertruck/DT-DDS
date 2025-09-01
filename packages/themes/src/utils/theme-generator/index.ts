@@ -7,6 +7,7 @@ import { findThemeFiles, processThemeTokens, writeFile } from './fileUtils';
 import { generateAnimations } from './generators/animations';
 import { generateBreakpoints } from './generators/breakpoints';
 import { generateColors, generatePalette } from './generators/colors';
+import { generateComponents } from './generators/components';
 import { generateIcons } from './generators/icons';
 import { generateRadius } from './generators/radius';
 import { generateShadows } from './generators/shadows';
@@ -29,6 +30,7 @@ function generateIndex(): string {
 import { animations } from './animations';
 import { breakpoints } from './breakpoints';
 import { colors } from './colors';
+import { components } from './components';
 import { palette } from './palette';
 import { radius } from './radius';
 import { shadows } from './shadows';
@@ -40,6 +42,7 @@ import { iconSizes } from './icons';
 export const theme: CustomTheme = {
   animations,
   breakpoints,
+  components,
   palette,
   colors,
   radius,
@@ -122,6 +125,7 @@ function generateThemeForName(
     // Generate all theme files
     const files = [
       { name: 'colors.ts', content: generateColors(tokens) },
+      { name: 'components.ts', content: generateComponents(tokens) },
       { name: 'palette.ts', content: generatePalette(tokens, themeName) },
       { name: 'spacing.ts', content: generateSpacing(tokens, themeName) },
       { name: 'radius.ts', content: generateRadius(tokens, themeName) },
@@ -256,6 +260,7 @@ export function generateThemes(): void {
 export {
   generateThemeForName,
   generateColors,
+  generateComponents,
   generatePalette,
   generateSpacing,
   generateRadius,

@@ -238,6 +238,19 @@ export type CustomTheme = {
     xlarge: string;
   };
   icons?: 'outlined' | 'rounded';
+  components?: {
+    [componentName: string]: {
+      [tokenKey: string]:
+        | string
+        | {
+            [nestedKey: string]:
+              | string
+              | {
+                  [deepNestedKey: string]: string;
+                };
+          };
+    };
+  };
 };
 
 export type Colors = keyof Pick<

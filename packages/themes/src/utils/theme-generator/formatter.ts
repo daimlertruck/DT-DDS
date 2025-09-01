@@ -2,7 +2,7 @@
  * Formats an object to a string representation
  * without unnecessary quotes
  */
-export function formatObject(obj: any, indent = 2): string {
+export function formatObject(obj: Record<string, unknown>, indent = 2): string {
   const spaces = ' '.repeat(indent);
   const lines: string[] = [];
 
@@ -22,7 +22,10 @@ export function formatObject(obj: any, indent = 2): string {
       const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
         ? key
         : `'${key}'`;
-      const formattedValue = formatObject(value, indent + 2);
+      const formattedValue = formatObject(
+        value as Record<string, unknown>,
+        indent + 2
+      );
       lines.push(`${spaces}${formattedKey}: ${formattedValue},`);
     } else {
       const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
