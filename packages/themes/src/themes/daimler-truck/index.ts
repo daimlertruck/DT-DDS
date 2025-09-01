@@ -3,6 +3,7 @@ import { CustomTheme } from '../../types';
 import { animations } from './animations';
 import { breakpoints } from './breakpoints';
 import { colors } from './colors';
+import { components } from './components';
 import { iconSizes } from './icons';
 import { palette } from './palette';
 import { radius } from './radius';
@@ -14,6 +15,7 @@ import { fontFamily, fontStyles, responsiveFontStyles } from './typography';
 export const theme: CustomTheme = {
   animations,
   breakpoints,
+  components,
   palette,
   colors,
   radius,

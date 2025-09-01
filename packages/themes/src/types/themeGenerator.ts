@@ -35,3 +35,48 @@ export interface ValidationResult {
   missingCategories: string[];
   totalMissing: number;
 }
+
+export interface TokenReference {
+  category: string;
+  subcategory?: string;
+  property?: string;
+}
+
+export interface ResolvedToken {
+  value: string;
+  isResolved: boolean;
+}
+
+export interface TokenResolutionContext {
+  semanticTokens: TokenFile;
+  primitiveTokens: TokenFile;
+}
+
+export interface ComponentTokenValue {
+  $type: string;
+  $value: string;
+  $description?: string;
+}
+
+export interface ComponentTokens {
+  [key: string]: ComponentTokenValue | ComponentTokens;
+}
+
+export interface ProcessedComponentTokens {
+  [key: string]: string | ProcessedComponentTokens;
+}
+
+export interface ComponentGenerationResult {
+  components: ProcessedComponentTokens;
+  code: string;
+}
+
+export type TokenProcessor<T> = (
+  tokens: T,
+  context: TokenResolutionContext
+) => T;
+export type TokenResolver = (
+  reference: string,
+  context: TokenResolutionContext
+) => ResolvedToken;
+export type TokenTransformer<T, U> = (input: T) => U;

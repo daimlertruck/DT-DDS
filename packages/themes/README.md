@@ -181,6 +181,10 @@ This will:
 
 - `Fonts.*` (daimlerTruck-primary, truckAPI-primary, dtCompanion-primary, [brand]-secondary)
 
+### Component Tokens
+
+Component-specific tokens that are generated from the `Themes.*.tokens.json` files.
+
 ## File Structure
 
 ```
@@ -191,19 +195,20 @@ src/
 │   ├── Themes.*.tokens.json
 │   └── Semantic *.Default theme.tokens.json
 ├── themes/
-│   ├── default/
-│   │   ├── colors.ts
-│   │   ├── palette.ts
-│   │   ├── spacing.ts
-│   │   ├── radius.ts
-│   │   ├── shadows.ts
-│   │   ├── shape.ts
-│   │   ├── breakpoints.ts
-│   │   ├── typography.ts
-│   │   ├── icons.ts
-│   │   ├── animations.ts
-│   │   └── index.ts
-│   └── [generated-themes]/
+│   ├── [generated-theme]/
+│      ├── colors.ts
+│      ├── palette.ts
+│      ├── spacing.ts
+│      ├── radius.ts
+│      ├── shadows.ts
+│      ├── shape.ts
+│      ├── breakpoints.ts
+│      ├── typography.ts
+│      ├── icons.ts
+│      ├── animations.ts
+│      ├── components.ts
+│      └── index.ts
+│
 └── utils/
     └── theme-generator/
         ├── tokenUtils.ts
@@ -219,7 +224,8 @@ src/
         │   ├── breakpoints.ts
         │   ├── typography.ts
         │   ├── icons.ts
-        │   └── animations.ts
+        │   ├── animations.ts
+        │   └── components.ts
         ├── index.ts
         └── runner.ts
 ```
@@ -245,10 +251,21 @@ The system includes comprehensive validation:
 When modifying the theme generation system:
 
 1. Update the appropriate generator in `src/utils/theme-generator/generators/`
-2. Update the `CustomTheme` type in `src/types/theme.ts`
+   - For component tokens, modify `components.ts` generator
+   - For other tokens, update the relevant generator (colors.ts, spacing.ts, etc.)
+2. Update the `CustomTheme` type in `src/types/theme.ts` if adding new token categories
 3. Update the default theme files if needed
 4. Run `yarn build:theme` to test changes
-5. Update this documentation
+5. Run `yarn test` to ensure all tests pass
+6. Update this documentation
+
+### Adding New Components
+
+To add support for new components:
+
+1. Add the component key to the `COMPONENT_KEYS` array in `src/utils/theme-generator/generators/components.ts`
+2. Ensure the component tokens exist in the `Themes.*.tokens.json` files
+3. Run `yarn build:theme` to generate the updated components
 
 ## &copy; License
 
