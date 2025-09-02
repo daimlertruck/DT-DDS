@@ -72,6 +72,67 @@ jobs:
       - name: Run Tests
         run: yarn test
 
+      - name: Consolidate Coverage Reports
+        run: |
+          echo "Consolidating coverage reports for SonarQube..."
+          echo "================================================="
+
+          # Create consolidated coverage directory
+          mkdir -p sonar-coverage
+
+          # Find all lcov.info files
+          echo "1. Finding coverage reports..."
+          coverage_files=$(find packages -name "lcov.info" -type f)
+          echo "Found coverage files:"
+          echo "$coverage_files"
+
+          if [ -z "$coverage_files" ]; then
+              echo "No coverage files found!"
+              exit 1
+          fi
+
+          # Consolidate all lcov.info files into one with corrected paths
+          echo ""
+          echo "2. Consolidating coverage reports with absolute paths..."
+          consolidated_file="sonar-coverage/lcov.info"
+
+          # Process each file and fix paths
+          for file in $coverage_files; do
+              if [ -f "$file" ] && [ -s "$file" ]; then
+                  echo "Processing $file"
+                  # Get the package directory (e.g., packages/react-packages/tabs from packages/react-packages/tabs/jest-coverage/lcov.info)
+                  package_dir=$(dirname $(dirname $file))
+                  echo "  Package directory: $package_dir"
+                  # Process the lcov file and update paths to be relative to project root
+                  sed "s|^SF:src/|SF:$package_dir/src/|g; s|^SF:dist/|SF:$package_dir/dist/|g; s|^SF:lib/|SF:$package_dir/lib/|g; s|^SF:build/|SF:$package_dir/build/|g" "$file" >> "$consolidated_file"
+              fi
+          done
+
+          echo "Consolidated coverage report created: $consolidated_file"
+
+          # Show summary
+          echo ""
+          echo "3. Coverage report summary:"
+          if [ -f "$consolidated_file" ]; then
+              lines=$(wc -l < "$consolidated_file")
+              echo "Total lines in consolidated report: $lines"
+              
+              # Show first few lines
+              echo "First 10 lines:"
+              head -10 "$consolidated_file"
+          else
+              echo "Consolidated file not created!"
+              exit 1
+          fi
+
+          echo "Coverage consolidation completed!"
+
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sonar-coverage
+          path: sonar-coverage/**
+
   blackduck-scan:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.head_commit.message, 'release:') }}
@@ -168,21 +229,38 @@ jobs:
         with:
           CACHE_FILE_NAME: 'global'
 
+      - name: Download Coverage Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: sonar-coverage
+          path: sonar-coverage
+
       - name: Prepare SonarQube Scan
         run: |
           echo "sonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}" > sonar-project.properties
           echo "sonar.projectName=${{ secrets.SONAR_PROJECT_NAME }}" >> sonar-project.properties
           echo "sonar.sources=packages" >> sonar-project.properties
-          echo "sonar.exclusions=**/node_modules/**,**/dist/**,**/jest-coverage/**,**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx" >> sonar-project.properties
+          echo "sonar.exclusions=**/node_modules/**,**/dist/**,**/jest-coverage/**,**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,**/*.md,**/*.mdx,**/*.json,**/*.yml,**/*.yaml,**/*.config.js,**/*.config.ts,**/*.config.json,**/babel.config.js,**/jest.config.ts,**/tsconfig.json,**/tsup.config.ts,**/prettier.config.js,**/commitlint.config.js,**/turbo.json,**/yarn.lock,**/package-lock.json,**/pnpm-lock.yaml,**/*.lock,**/LICENSE.md,**/README.md,**/CHANGELOG.md,**/CONTRIBUTING.md,**/CODE_OF_CONDUCT.md,**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.svg,**/*.ico,**/*.woff,**/*.woff2,**/*.ttf,**/*.otf,**/*.eot,packages/themes/src/tokens/**" >> sonar-project.properties
           echo "sonar.test.inclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx" >> sonar-project.properties
-          echo "sonar.coverage.exclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/node_modules/**" >> sonar-project.properties
-          echo "sonar.typescript.lcov.reportPaths=**/jest-coverage/lcov.info" >> sonar-project.properties
+          echo "sonar.coverage.exclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/node_modules/**,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,packages/themes/src/tokens/**" >> sonar-project.properties
+          echo "sonar.typescript.lcov.reportPaths=sonar-coverage/lcov.info" >> sonar-project.properties
+          echo "sonar.javascript.lcov.reportPaths=sonar-coverage/lcov.info" >> sonar-project.properties
           echo "sonar.log.level=DEBUG" >> sonar-project.properties
+
+          # Configure PR or branch analysis for New Code metrics
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "sonar.pullrequest.key=${{ github.event.pull_request.number }}" >> sonar-project.properties
+            echo "sonar.pullrequest.branch=${{ github.head_ref }}" >> sonar-project.properties
+            echo "sonar.pullrequest.base=${{ github.base_ref }}" >> sonar-project.properties
+          else
+            echo "sonar.branch.name=${{ github.ref_name }}" >> sonar-project.properties
+            echo "sonar.newCode.referenceBranch=main" >> sonar-project.properties
+          fi
           echo "SonarQube Configuration:"
           cat sonar-project.properties
 
       - name: Run SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v5
+        uses: sonarsource/sonarqube-scan-action@v5.3.1
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
@@ -192,21 +270,26 @@ jobs:
           echo "Waiting for SonarQube analysis to complete..."
           sleep 30
 
-          gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
-            "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}")
+          # Query gate for PRs or branches accordingly
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
+              "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}&pullRequest=${{ github.event.pull_request.number }}")
+          else
+            gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
+              "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}&branch=${{ github.ref_name }}")
+          fi
           gate_status=$(echo "$gate_response" | jq -r '.projectStatus.status')
 
           echo "Quality Gate Status: $gate_status"
 
           if [ "$gate_status" != "OK" ]; then
             echo ""
-            echo "❌ Quality Gate Failed: $gate_status"
+            echo "Quality Gate Failed: $gate_status"
             echo "======================================"
             
             echo "Quality Gate Conditions:"
             echo "$gate_response" | jq -r '.projectStatus.conditions[] | "  \(.metricKey): \(.status) (\(.actualValue)/\(.errorThreshold))"'
             
-            echo ""
             echo "Issues causing the failure:"
             echo "============================"
             
@@ -217,8 +300,8 @@ jobs:
             
             exit 1
           else
-            echo "✅ Quality Gate Passed!"
-            echo "   No new issues introduced in this analysis."
+            echo "Quality Gate Passed!"
+            echo "No new issues introduced in this analysis."
           fi
 
   build:

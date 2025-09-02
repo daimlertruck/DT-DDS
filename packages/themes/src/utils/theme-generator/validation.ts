@@ -6,6 +6,100 @@ import {
 import { getContextualColorValue } from './tokenUtils';
 
 /**
+ * Gets the category token mappings for validation
+ */
+function getCategoryTokenMappings() {
+  return {
+    Surface: [
+      'surface-default',
+      'surface-light',
+      'surface-medium',
+      'surface-dark',
+      'surface-contrast',
+    ],
+    Content: [
+      'content-default',
+      'content-light',
+      'content-medium',
+      'content-dark',
+      'content-contrast',
+    ],
+    Border: [
+      'border-default',
+      'border-light',
+      'border-medium',
+      'border-dark',
+      'border-contrast',
+    ],
+    Primary: [
+      'primary-default',
+      'primary-light',
+      'primary-medium',
+      'primary-dark',
+    ],
+    Secondary: [
+      'secondary-default',
+      'secondary-light',
+      'secondary-medium',
+      'secondary-dark',
+    ],
+    Accent: ['accent-default', 'accent-light', 'accent-medium', 'accent-dark'],
+    Informative: ['info-default', 'info-light', 'info-medium', 'info-dark'],
+    Success: [
+      'success-default',
+      'success-light',
+      'success-medium',
+      'success-dark',
+    ],
+    Warning: [
+      'warning-default',
+      'warning-light',
+      'warning-medium',
+      'warning-dark',
+    ],
+    Error: ['error-default', 'error-light', 'error-medium', 'error-dark'],
+  };
+}
+
+/**
+ * Validates a single category
+ */
+function validateCategory(
+  category: string,
+  requiredTokenNames: string[],
+  contextualColors: NestedTokenCategory,
+  missingTokens: string[],
+  missingCategories: string[]
+): void {
+  const categoryTokens = contextualColors[category];
+  if (!categoryTokens) {
+    missingCategories.push(category);
+    console.log(`   ❌ Missing entire category: ${category}`);
+    return;
+  }
+
+  console.log(`   ✅ Found category: ${category}`);
+
+  // Check each token in the category
+  for (const tokenName of requiredTokenNames) {
+    const value = getContextualColorValue(
+      contextualColors,
+      category,
+      tokenName
+    );
+    if (value) {
+      const displayName = tokenName.split('-').pop() || tokenName;
+      console.log(`   ✅ Found token: ${category}.${displayName} = ${value}`);
+    } else {
+      const displayName = tokenName.split('-').pop() || tokenName;
+      const tokenPath = `${category}.${displayName}`;
+      missingTokens.push(tokenPath);
+      console.log(`   ❌ Missing token: ${tokenPath}`);
+    }
+  }
+}
+
+/**
  * Validates theme completeness by checking all required tokens
  */
 export function validateThemeCompleteness(
@@ -27,95 +121,18 @@ export function validateThemeCompleteness(
       `   Available categories: ${Object.keys(contextualColors).join(', ')}`
     );
 
-    // Define required categories and their token mappings
-    const categoryTokenMappings = {
-      Surface: [
-        'surface-default',
-        'surface-light',
-        'surface-medium',
-        'surface-dark',
-        'surface-contrast',
-      ],
-      Content: [
-        'content-default',
-        'content-light',
-        'content-medium',
-        'content-dark',
-        'content-contrast',
-      ],
-      Border: [
-        'border-default',
-        'border-light',
-        'border-medium',
-        'border-dark',
-        'border-contrast',
-      ],
-      Primary: [
-        'primary-default',
-        'primary-light',
-        'primary-medium',
-        'primary-dark',
-      ],
-      Secondary: [
-        'secondary-default',
-        'secondary-light',
-        'secondary-medium',
-        'secondary-dark',
-      ],
-      Accent: [
-        'accent-default',
-        'accent-light',
-        'accent-medium',
-        'accent-dark',
-      ],
-      Informative: ['info-default', 'info-light', 'info-medium', 'info-dark'],
-      Success: [
-        'success-default',
-        'success-light',
-        'success-medium',
-        'success-dark',
-      ],
-      Warning: [
-        'warning-default',
-        'warning-light',
-        'warning-medium',
-        'warning-dark',
-      ],
-      Error: ['error-default', 'error-light', 'error-medium', 'error-dark'],
-    };
+    const categoryTokenMappings = getCategoryTokenMappings();
 
     for (const [category, requiredTokenNames] of Object.entries(
       categoryTokenMappings
     )) {
-      const categoryTokens = contextualColors[category];
-      if (!categoryTokens) {
-        missingCategories.push(category);
-        console.log(`   ❌ Missing entire category: ${category}`);
-        continue;
-      }
-
-      console.log(`   ✅ Found category: ${category}`);
-
-      // Check each token in the category
-      for (const tokenName of requiredTokenNames) {
-        const value = getContextualColorValue(
-          contextualColors,
-          category,
-          tokenName
-        );
-        if (value) {
-          // Extract the display name (e.g., "default" from "surface-default")
-          const displayName = tokenName.split('-').pop() || tokenName;
-          console.log(
-            `   ✅ Found token: ${category}.${displayName} = ${value}`
-          );
-        } else {
-          const displayName = tokenName.split('-').pop() || tokenName;
-          const tokenPath = `${category}.${displayName}`;
-          missingTokens.push(tokenPath);
-          console.log(`   ❌ Missing token: ${tokenPath}`);
-        }
-      }
+      validateCategory(
+        category,
+        requiredTokenNames,
+        contextualColors,
+        missingTokens,
+        missingCategories
+      );
     }
   }
 

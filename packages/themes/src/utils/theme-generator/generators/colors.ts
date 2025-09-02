@@ -49,18 +49,10 @@ export const colors: Theme['colors'] = ${formatObject(colors)} as const;
 }
 
 /**
- * Generates palette.ts file content
+ * Gets the category mappings for palette generation
  */
-export function generatePalette(tokens: TokenFile, themeName: string): string {
-  const contextualColors = tokens.Contextual_colors as any;
-  if (!contextualColors) {
-    throw new Error(`Missing Contextual_colors for theme '${themeName}'`);
-  }
-
-  const palette: any = {};
-
-  // Define palette categories with their correct token name mappings
-  const categoryMappings = {
+function getCategoryMappings() {
+  return {
     Surface: {
       default: 'surface-default',
       light: 'surface-light',
@@ -125,40 +117,68 @@ export function generatePalette(tokens: TokenFile, themeName: string): string {
       dark: 'error-dark',
     },
   };
+}
+
+/**
+ * Resolves a token value if it exists
+ */
+function resolveTokenValue(tokens: TokenFile, tokenValue: string): string {
+  return tokenValue ? resolveTokenReference(tokens, tokenValue) : '';
+}
+
+/**
+ * Processes a single category for palette generation
+ */
+function processCategory(
+  category: string,
+  mappings: any,
+  categoryTokens: any,
+  tokens: TokenFile
+): any {
+  const result: any = {
+    default: resolveTokenValue(
+      tokens,
+      categoryTokens[mappings.default]?.$value
+    ),
+    light: resolveTokenValue(tokens, categoryTokens[mappings.light]?.$value),
+    medium: resolveTokenValue(tokens, categoryTokens[mappings.medium]?.$value),
+    dark: resolveTokenValue(tokens, categoryTokens[mappings.dark]?.$value),
+  };
+
+  // Add contrast for surface, content, and border
+  if (['Surface', 'Content', 'Border'].includes(category)) {
+    const contrastMapping = mappings as typeof mappings & { contrast: string };
+    result.contrast = resolveTokenValue(
+      tokens,
+      categoryTokens[contrastMapping.contrast]?.$value
+    );
+  }
+
+  return result;
+}
+
+/**
+ * Generates palette.ts file content
+ */
+export function generatePalette(tokens: TokenFile, themeName: string): string {
+  const contextualColors = tokens.Contextual_colors as any;
+  if (!contextualColors) {
+    throw new Error(`Missing Contextual_colors for theme '${themeName}'`);
+  }
+
+  const palette: any = {};
+  const categoryMappings = getCategoryMappings();
 
   for (const [category, mappings] of Object.entries(categoryMappings)) {
     const categoryTokens = contextualColors[category];
     if (!categoryTokens) continue;
 
-    palette[category.toLowerCase()] = {
-      default: categoryTokens[mappings.default]?.$value
-        ? resolveTokenReference(tokens, categoryTokens[mappings.default].$value)
-        : '',
-      light: categoryTokens[mappings.light]?.$value
-        ? resolveTokenReference(tokens, categoryTokens[mappings.light].$value)
-        : '',
-      medium: categoryTokens[mappings.medium]?.$value
-        ? resolveTokenReference(tokens, categoryTokens[mappings.medium].$value)
-        : '',
-      dark: categoryTokens[mappings.dark]?.$value
-        ? resolveTokenReference(tokens, categoryTokens[mappings.dark].$value)
-        : '',
-    };
-
-    // Add contrast for surface, content, and border
-    if (['Surface', 'Content', 'Border'].includes(category)) {
-      const contrastMapping = mappings as typeof mappings & {
-        contrast: string;
-      };
-      palette[category.toLowerCase()].contrast = categoryTokens[
-        contrastMapping.contrast
-      ]?.$value
-        ? resolveTokenReference(
-            tokens,
-            categoryTokens[contrastMapping.contrast].$value
-          )
-        : '';
-    }
+    palette[category.toLowerCase()] = processCategory(
+      category,
+      mappings,
+      categoryTokens,
+      tokens
+    );
   }
 
   return `import { CustomTheme as Theme } from '../../types';

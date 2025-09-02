@@ -25,6 +25,7 @@ const config: Config = {
     'constants',
     '.stories.tsx',
     'dist',
+    'tokens',
   ],
   collectCoverage: true,
   coverageThreshold: {
