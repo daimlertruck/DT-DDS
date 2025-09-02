@@ -247,14 +247,13 @@ jobs:
           echo "sonar.javascript.lcov.reportPaths=sonar-coverage/lcov.info" >> sonar-project.properties
           echo "sonar.log.level=DEBUG" >> sonar-project.properties
 
-          # Configure PR or branch analysis for New Code metrics
+          # Configure PR or main branch analysis
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             echo "sonar.pullrequest.key=${{ github.event.pull_request.number }}" >> sonar-project.properties
             echo "sonar.pullrequest.branch=${{ github.head_ref }}" >> sonar-project.properties
             echo "sonar.pullrequest.base=${{ github.base_ref }}" >> sonar-project.properties
           else
-            echo "sonar.branch.name=${{ github.ref_name }}" >> sonar-project.properties
-            echo "sonar.newCode.referenceBranch=main" >> sonar-project.properties
+            echo "sonar.branch.name=main" >> sonar-project.properties
           fi
           echo "SonarQube Configuration:"
           cat sonar-project.properties
@@ -270,13 +269,13 @@ jobs:
           echo "Waiting for SonarQube analysis to complete..."
           sleep 30
 
-          # Query gate for PRs or branches accordingly
+          # Query gate for PRs or main branch
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
               "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}&pullRequest=${{ github.event.pull_request.number }}")
           else
             gate_response=$(curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
-              "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}&branch=${{ github.ref_name }}")
+              "${{ secrets.SONAR_URL }}/api/qualitygates/project_status?projectKey=${{ secrets.SONAR_PROJECT_KEY }}")
           fi
           gate_status=$(echo "$gate_response" | jq -r '.projectStatus.status')
 
