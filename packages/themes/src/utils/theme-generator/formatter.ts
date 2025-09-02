@@ -7,30 +7,21 @@ export function formatObject(obj: Record<string, unknown>, indent = 2): string {
   const lines: string[] = [];
 
   for (const [key, value] of Object.entries(obj)) {
+    const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
+      ? key
+      : `'${key}'`;
+
     if (typeof value === 'string') {
-      // Don't quote valid identifiers
-      const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
-        ? key
-        : `'${key}'`;
       lines.push(`${spaces}${formattedKey}: '${value}',`);
     } else if (typeof value === 'number') {
-      const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
-        ? key
-        : `'${key}'`;
       lines.push(`${spaces}${formattedKey}: ${value},`);
     } else if (typeof value === 'object' && value !== null) {
-      const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
-        ? key
-        : `'${key}'`;
       const formattedValue = formatObject(
         value as Record<string, unknown>,
         indent + 2
       );
       lines.push(`${spaces}${formattedKey}: ${formattedValue},`);
     } else {
-      const formattedKey = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/.test(key)
-        ? key
-        : `'${key}'`;
       lines.push(`${spaces}${formattedKey}: ${value},`);
     }
   }

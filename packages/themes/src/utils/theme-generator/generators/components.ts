@@ -157,7 +157,7 @@ function isDirectValue(value: string): boolean {
 
 function toCamelCase(str: string): string {
   return str
-    .replace(/[\[\]]/g, '')
+    .replace(/[[\]]/g, '')
     .replace(/[-_\s:]+(.)?/g, (_, chr) => (chr ? chr.toUpperCase() : ''))
     .replace(/^(.)/, (_, chr) => chr.toLowerCase());
 }

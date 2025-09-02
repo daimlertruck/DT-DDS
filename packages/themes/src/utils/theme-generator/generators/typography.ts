@@ -17,7 +17,7 @@ export function generateTypography(
 
   function getTypographyValue(category: string, styleName: string): string {
     const categoryTokens = typographyTokens[category];
-    if (!categoryTokens || !categoryTokens[styleName]) {
+    if (!categoryTokens?.[styleName]) {
       console.warn(`⚠️  Missing typography style: ${category}.${styleName}`);
       return 'inherit';
     }
