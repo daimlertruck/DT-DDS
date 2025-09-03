@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-DMAvRu52.js";import{B as x}from"./index-DSuwS0lG.js";import{r as d}from"./index-Dl6G-zuu.js";import{R as f,a as g}from"./Radio.styled-DERzcdnJ.js";import"./emotion-styled.browser.esm-Dv69Fly8.js";const j=({children:r,onChange:o,dataTestId:t,direction:s="row",name:n})=>{const i=d.useMemo(()=>d.Children.map(r,a=>a&&d.cloneElement(a,{...a.props,onChange:o,name:n})),[r,o,n]);return e.jsx(x,{"data-testid":t??"radio-group",style:{flexDirection:s,gap:12},children:i})},c=({onChange:r,label:o,isDefaultChecked:t,isDisabled:s,name:n="radio-group-name",value:i})=>{const a=`${i}-id`;return e.jsxs(x,{style:{flexDirection:"row",gap:8,cursor:s?"not-allowed":"pointer"},children:[e.jsx(f,{defaultChecked:t,disabled:s,id:a,name:n,onChange:r,type:"radio",value:i}),e.jsx(g,{htmlFor:a,children:o})]})},D=["column","row"],C={component:c,title:"Data Display/Radio",argTypes:{direction:{options:D,control:{type:"select"}}},render:({direction:r,name:o,isDisabled:t})=>e.jsxs(j,{direction:r,name:"radio-group",onChange:()=>null,children:[e.jsx(c,{isDisabled:t,label:"Label 1",value:"1"}),e.jsx(c,{isDefaultChecked:!0,label:o,value:"2"})]})},l={args:{direction:"row",name:"Label 2",isDisabled:!1}};var p,m,u;l.parameters={...l.parameters,docs:{...(p=l.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    direction: 'row',
+    name: 'Label 2',
+    isDisabled: false
+  }
+}`,...(u=(m=l.parameters)==null?void 0:m.docs)==null?void 0:u.source}}};const E=["Default"];export{l as Default,E as __namedExportsOrder,C as default};
