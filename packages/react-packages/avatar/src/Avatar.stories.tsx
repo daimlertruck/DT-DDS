@@ -18,6 +18,9 @@ const meta: Meta<typeof Avatar> = {
       options: Object.values(AvatarSize).filter((x) => typeof x === 'string'),
       control: { type: 'inline-radio' },
     },
+    hasTooltip: {
+      control: { type: 'boolean' },
+    },
   },
 };
 
@@ -29,6 +32,7 @@ export const Default: StoryObj<typeof Avatar> = {
     title: 'User Name',
     type: AvatarType.Primary,
     size: AvatarSize.Medium,
+    hasTooltip: true,
   },
 };
 
@@ -38,5 +42,6 @@ export const WithProfileImage: StoryObj<typeof Avatar> = {
     type: AvatarType.Profile,
     size: AvatarSize.Large,
     imageSrc: avatarExampleImage,
+    hasTooltip: true,
   },
 };
