@@ -34,3 +34,4 @@ This component can contain upto two simple characters by passing a string in pro
 | `imageSrc`       | `string`           | -       | Optional profile image path (will only work with "Profile" type)    |
 | `dataTestId`     | `string`           | avatar  | Avatar test identifier                                              |
 | `customInitials` | `string`           | -       | Custom initials will replace avatar name acronym, limited to 2 char |
+| `hasTooltip`     | `boolean`.         | `true`  | Enables or disables the avatar tooltip.                             |

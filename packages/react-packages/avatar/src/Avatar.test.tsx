@@ -1,6 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
-import { render, screen, within } from '@testing-library/react';
-import React from 'react';
+import { render, screen, within, fireEvent } from '@testing-library/react';
 
 import Avatar from './Avatar';
 import { AvatarType, AvatarSize } from './constants';
@@ -137,5 +136,38 @@ describe('<Avatar /> component', () => {
     expect(
       within(screen.getByTestId('avatar')).getByText('AB')
     ).toBeInTheDocument();
+  });
+
+  it('renders avatar with tooltip by default', () => {
+    render(
+      <ProvidedAvatar
+        size={AvatarSize.Medium}
+        title='User Name'
+        type={AvatarType.Primary}
+      />
+    );
+
+    const avatarElement = screen.getByTestId('avatar');
+    fireEvent.mouseEnter(avatarElement);
+
+    const tooltipContainer = screen.getByTestId('tooltip-container');
+    expect(tooltipContainer).toBeInTheDocument();
+  });
+
+  it('does not render a tooltip when hasTooltip is false', () => {
+    render(
+      <ProvidedAvatar
+        hasTooltip={false}
+        size={AvatarSize.Medium}
+        title='User Name'
+        type={AvatarType.Primary}
+      />
+    );
+
+    const avatarElement = screen.getByTestId('avatar');
+    fireEvent.mouseEnter(avatarElement);
+
+    const tooltipContainer = screen.queryByTestId('tooltip-container');
+    expect(tooltipContainer).not.toBeInTheDocument();
   });
 });

@@ -1,5 +1,5 @@
 import { Tooltip } from '@dt-dds/react-tooltip';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { AvatarThumbnail } from '../../../dt-dds-react/core';
 
@@ -12,6 +12,7 @@ export interface AvatarProps extends AvatarStyledProps {
   imageSrc?: string;
   dataTestId?: string;
   customInitials?: string;
+  hasTooltip?: boolean;
 }
 
 const Avatar = ({
@@ -21,6 +22,7 @@ const Avatar = ({
   imageSrc = '',
   dataTestId,
   customInitials,
+  hasTooltip = true,
 }: AvatarProps) => {
   const [showThumbnail, setShowThumbnail] = useState(false);
 
@@ -28,15 +30,15 @@ const Avatar = ({
     setShowThumbnail(true);
   };
 
-  const renderProfileImage = () =>
-    showThumbnail ? (
-      <AvatarThumbnail />
-    ) : (
-      <img alt={title} onError={handleImageError} src={imageSrc} />
-    );
+  const renderProfileImage = () => {
+    if (showThumbnail) {
+      return <AvatarThumbnail />;
+    }
+    return <img alt={title} onError={handleImageError} src={imageSrc} />;
+  };
 
-  return (
-    <Tooltip>
+  const renderAvatarContent = () => {
+    return (
       <AvatarStyled
         data-testid={dataTestId ?? 'avatar'}
         size={size}
@@ -52,8 +54,16 @@ const Avatar = ({
           </div>
         )}
       </AvatarStyled>
+    );
+  };
+
+  return hasTooltip ? (
+    <Tooltip>
+      {renderAvatarContent()}
       <Tooltip.Content>{title}</Tooltip.Content>
     </Tooltip>
+  ) : (
+    renderAvatarContent()
   );
 };
 
