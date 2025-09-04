@@ -1,4 +1,4 @@
-import { CustomTheme, defaultTheme } from '@dt-dds/themes';
+import { CustomTheme, defaultTheme } from '@dt-dds/react';
 
 const { colors: defaultColors, palette: defaultPalette } = defaultTheme;
 

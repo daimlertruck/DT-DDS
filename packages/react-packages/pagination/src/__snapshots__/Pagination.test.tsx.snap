@@ -48,7 +48,7 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 14px;
   line-height: 18.76px;
@@ -66,11 +66,11 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   border-radius: 3px;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   border-bottom: 2px solid #000000;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-weight: 400;
   font-size: 14px;
   line-height: 18.76px;
@@ -80,14 +80,14 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   color: #292929;
 }
 
-.emotion-10 {
+.emotion-8 {
   background-color: transparent;
   color: #000000;
   border: none;
   cursor: pointer;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,7 +114,7 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
       title="Go to previous page"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="#292929"
         data-testid="icon"
       >
@@ -122,19 +122,19 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
       </i>
     </button>
     <input
-      class="emotion-6 emotion-7"
+      class="emotion-5 emotion-6"
       data-testid="pagination-input"
       value="1"
     />
     <p
-      class="emotion-8 emotion-9"
+      class="emotion-7"
       color="grey_90"
       data-testid="typography"
     >
       of
        
       <button
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         data-testid="pagination-last-page"
         title="Go to last page"
       >
@@ -142,12 +142,12 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
       </button>
     </p>
     <button
-      class="emotion-12 emotion-3"
+      class="emotion-10 emotion-3"
       data-testid="pagination-next-item"
       title="Go to next page"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="#292929"
         data-testid="icon"
       >

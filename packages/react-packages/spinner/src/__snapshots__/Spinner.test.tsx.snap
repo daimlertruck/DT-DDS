@@ -31,7 +31,7 @@ exports[`<Spinner /> component should render the default options correctly 1`] =
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 42px;
   height: 42px;
   border: 4px solid #FFFFFF;
@@ -43,11 +43,11 @@ exports[`<Spinner /> component should render the default options correctly 1`] =
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
   </div>
 </div>
@@ -132,7 +132,7 @@ exports[`<Spinner /> component should render the sizes correctly should render t
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 58px;
   height: 58px;
   border: 4px solid #FFFFFF;
@@ -144,11 +144,11 @@ exports[`<Spinner /> component should render the sizes correctly should render t
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
   </div>
 </div>
@@ -217,7 +217,7 @@ exports[`<Spinner /> component should render the sizes correctly should render t
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 50px;
   height: 50px;
   border: 4px solid #FFFFFF;
@@ -229,11 +229,11 @@ exports[`<Spinner /> component should render the sizes correctly should render t
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
   </div>
 </div>
@@ -286,7 +286,7 @@ exports[`<Spinner /> component should render the sizes correctly should render t
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 28px;
   height: 28px;
   border: 4px solid #FFFFFF;
@@ -298,11 +298,11 @@ exports[`<Spinner /> component should render the sizes correctly should render t
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
   </div>
 </div>
@@ -403,7 +403,7 @@ exports[`<Spinner /> component should render the small size correctly when the p
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 42px;
   height: 42px;
   border: 4px solid #838383;
@@ -415,11 +415,11 @@ exports[`<Spinner /> component should render the small size correctly when the p
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
   </div>
 </div>
@@ -520,7 +520,7 @@ exports[`<Spinner /> component should render the text helper when prop is provid
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 42px;
   height: 42px;
   border: 4px solid #FFFFFF;
@@ -530,7 +530,7 @@ exports[`<Spinner /> component should render the text helper when prop is provid
   animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -542,14 +542,14 @@ exports[`<Spinner /> component should render the text helper when prop is provid
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     data-testid="spinner"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     />
     <p
-      class="emotion-4 emotion-5"
+      class="emotion-3"
       color="content.default"
       data-testid="typography"
       style="margin-top: 12px;"

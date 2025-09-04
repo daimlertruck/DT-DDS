@@ -53,7 +53,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   color: #292929;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -63,7 +63,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   color: #292929;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,7 +77,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   align-items: center;
 }
 
-.emotion-10 {
+.emotion-7 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -96,7 +96,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-12 {
+.emotion-8 {
   background: #FFFFFF;
   border: 1px solid #DEDEDE;
   border-radius: 0px;
@@ -110,7 +110,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   overflow: auto;
 }
 
-.emotion-14 {
+.emotion-10 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -124,12 +124,12 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   overflow-x: hidden;
 }
 
-.emotion-14:hover {
+.emotion-10:hover {
   background: #DEDEDE;
   cursor: pointer;
 }
 
-.emotion-18 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -142,7 +142,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   margin-top: 4px;
 }
 
-.emotion-20 {
+.emotion-16 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -168,14 +168,14 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
           style="overflow: hidden;"
         >
           <p
-            class="emotion-4 emotion-5"
+            class="emotion-4"
             color="content.default"
             data-testid="typography"
           >
             Label
           </p>
           <p
-            class="emotion-6 emotion-5"
+            class="emotion-5"
             color="content.default"
             data-testid="typography"
             style="text-overflow: ellipsis; overflow: hidden;"
@@ -184,11 +184,11 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
           </p>
         </div>
         <div
-          class="emotion-8 emotion-9"
+          class="emotion-6"
           style="flex-direction: row; gap: 0.5rem;"
         >
           <i
-            class="emotion-10 emotion-11"
+            class="emotion-7"
             color="#292929"
             data-testid="icon"
           >
@@ -197,18 +197,18 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
         </div>
       </button>
       <ul
-        class="emotion-12 emotion-13"
+        class="emotion-8 emotion-9"
         data-testid="dropdown-select-menu"
       >
         <li
-          class="emotion-14 emotion-15"
+          class="emotion-10 emotion-11"
           data-testid="dropdown-option-1"
           role="option"
         >
           Option 1
         </li>
         <li
-          class="emotion-14 emotion-15"
+          class="emotion-10 emotion-11"
           data-testid="dropdown-option-2"
           role="option"
         >
@@ -216,11 +216,11 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
         </li>
       </ul>
       <div
-        class="emotion-18 emotion-19"
+        class="emotion-14 emotion-15"
         data-testid="dropdown-text"
       >
         <span
-          class="emotion-20 emotion-5"
+          class="emotion-16"
           color="content.medium"
           data-testid="typography"
         >

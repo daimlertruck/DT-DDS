@@ -39,7 +39,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   z-index: 9;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: fixed;
   z-index: 10;
   left: 50%;
@@ -66,7 +66,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 }
 
 @media only screen and (min-width: 768px) {
-  .emotion-2 {
+  .emotion-1 {
     width: 650px;
     height: auto;
     -webkit-box-pack: normal;
@@ -76,7 +76,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   }
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -91,20 +91,20 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 }
 
 @media only screen and (min-width: 600px) {
-  .emotion-4 {
+  .emotion-3 {
     padding-top: 32px;
   }
 }
 
-.emotion-4 button {
+.emotion-3 button {
   color: #292929;
 }
 
-.emotion-4 svg {
+.emotion-3 svg {
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,7 +118,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   align-items: center;
 }
 
-.emotion-8 {
+.emotion-6 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -129,13 +129,13 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 }
 
 @media only screen and (min-width:1024px) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-10 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -149,21 +149,21 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   cursor: pointer;
 }
 
-.emotion-10 i {
+.emotion-7 i {
   font-size: 24px;
   color: #292929;
 }
 
-.emotion-10:not(:disabled)>i:hover,
-.emotion-10:not(:disabled)>i:active {
+.emotion-7:not(:disabled)>i:hover,
+.emotion-7:not(:disabled)>i:active {
   color: #00677F;
 }
 
-.emotion-10:focus-visible {
+.emotion-7:focus-visible {
   outline: 2px solid #000000;
 }
 
-.emotion-12 {
+.emotion-8 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -182,21 +182,21 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   font-feature-settings: 'liga';
 }
 
-.emotion-14 {
+.emotion-9 {
   padding: 24px;
   overflow-y: auto;
   position: relative;
 }
 
 @media only screen and (max-width: 600px) {
-  .emotion-14 {
+  .emotion-9 {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
   }
 }
 
-.emotion-16 {
+.emotion-11 {
   position: absolute;
   inset: 0;
   background-color: rgba(250,250,250,0.8);
@@ -214,7 +214,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   justify-content: center;
 }
 
-.emotion-20 {
+.emotion-14 {
   width: 58px;
   height: 58px;
   border: 4px solid #FFFFFF;
@@ -225,35 +225,35 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 }
 
 <div
-  class="emotion-0 emotion-1"
+  class="emotion-0"
   data-testid="modal-overlay"
   type="dark"
 >
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-1 emotion-2"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="modal-header"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-5"
         style="justify-content: space-between; flex-direction: row;"
       >
         <h4
-          class="emotion-8 emotion-9"
+          class="emotion-6"
           color="content.dark"
           data-testid="typography"
         >
           Title
         </h4>
         <button
-          class="emotion-10 emotion-11"
+          class="emotion-7"
           color="accent"
           data-testid="close-button"
         >
           <i
-            class="emotion-12 emotion-13"
+            class="emotion-8"
             color="#292929"
             data-testid="icon"
           >
@@ -263,17 +263,17 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
       </div>
     </div>
     <div
-      class="emotion-14 emotion-15"
+      class="emotion-9 emotion-10"
     >
       <div
-        class="emotion-16 emotion-17"
+        class="emotion-11 emotion-12"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-5"
           data-testid="spinner"
         >
           <div
-            class="emotion-20 emotion-21"
+            class="emotion-14"
           />
         </div>
       </div>
@@ -306,7 +306,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   z-index: 9;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: fixed;
   z-index: 10;
   left: 50%;
@@ -333,7 +333,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 }
 
 @media only screen and (min-width: 768px) {
-  .emotion-2 {
+  .emotion-1 {
     width: 650px;
     height: auto;
     -webkit-box-pack: normal;
@@ -343,7 +343,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   }
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,20 +358,20 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 }
 
 @media only screen and (min-width: 600px) {
-  .emotion-4 {
+  .emotion-3 {
     padding-top: 32px;
   }
 }
 
-.emotion-4 button {
+.emotion-3 button {
   color: #292929;
 }
 
-.emotion-4 svg {
+.emotion-3 svg {
   cursor: pointer;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -385,7 +385,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   align-items: center;
 }
 
-.emotion-8 {
+.emotion-6 {
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -396,13 +396,13 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 }
 
 @media only screen and (min-width:1024px) {
-  .emotion-8 {
+  .emotion-6 {
     font-size: 1.5rem;
     line-height: 1.75rem;
   }
 }
 
-.emotion-10 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -416,21 +416,21 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-10 i {
+.emotion-7 i {
   font-size: 24px;
   color: #292929;
 }
 
-.emotion-10:not(:disabled)>i:hover,
-.emotion-10:not(:disabled)>i:active {
+.emotion-7:not(:disabled)>i:hover,
+.emotion-7:not(:disabled)>i:active {
   color: #00677F;
 }
 
-.emotion-10:focus-visible {
+.emotion-7:focus-visible {
   outline: 2px solid #000000;
 }
 
-.emotion-12 {
+.emotion-8 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -449,7 +449,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-14 {
+.emotion-9 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -459,21 +459,21 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   color: #292929;
 }
 
-.emotion-16 {
+.emotion-10 {
   padding: 24px;
   overflow-y: auto;
   position: relative;
 }
 
 @media only screen and (max-width: 600px) {
-  .emotion-16 {
+  .emotion-10 {
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
   }
 }
 
-.emotion-18 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -494,14 +494,14 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 }
 
 @media only screen and (max-width: 600px) {
-  .emotion-18 {
+  .emotion-12 {
     -webkit-flex-direction: column-reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
 }
 
-.emotion-20 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -534,37 +534,37 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   background-color: transparent;
 }
 
-.emotion-20:hover {
+.emotion-14:hover {
   color: #454545;
   border-color: #454545;
   background-color: #C1C1C1;
 }
 
-.emotion-20:active {
+.emotion-14:active {
   color: #454545;
   border-color: #454545;
   background-color: #C1C1C1;
 }
 
-.emotion-20:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
   color: #C1C1C1;
   border-color: #C1C1C1;
   background-color: transparent;
 }
 
-.emotion-20:focus-visible {
+.emotion-14:focus-visible {
   outline: 3px solid #131313;
   outline-offset: 1px;
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-20 {
+  .emotion-14 {
     width: 100%;
   }
 }
 
-.emotion-22 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -597,58 +597,58 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   background-color: #000000;
 }
 
-.emotion-22:hover {
+.emotion-15:hover {
   color: #FFFFFF;
   background-color: #454545;
 }
 
-.emotion-22:disabled {
+.emotion-15:disabled {
   cursor: not-allowed;
   color: #FFFFFF;
   background-color: #DEDEDE;
 }
 
-.emotion-22:focus-visible {
+.emotion-15:focus-visible {
   outline: 3px solid #131313;
   outline-offset: 1px;
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-22 {
+  .emotion-15 {
     width: 100%;
   }
 }
 
 <div
-  class="emotion-0 emotion-1"
+  class="emotion-0"
   data-testid="modal-overlay"
   type="dark"
 >
   <div
-    class="emotion-2 emotion-3"
+    class="emotion-1 emotion-2"
   >
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="modal-header"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-5"
         style="justify-content: space-between; flex-direction: row;"
       >
         <h4
-          class="emotion-8 emotion-9"
+          class="emotion-6"
           color="content.dark"
           data-testid="typography"
         >
           Title
         </h4>
         <button
-          class="emotion-10 emotion-11"
+          class="emotion-7"
           color="accent"
           data-testid="close-button"
         >
           <i
-            class="emotion-12 emotion-13"
+            class="emotion-8"
             color="#292929"
             data-testid="icon"
           >
@@ -657,7 +657,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
         </button>
       </div>
       <h5
-        class="emotion-14 emotion-9"
+        class="emotion-9"
         color="content.default"
         data-testid="typography"
       >
@@ -665,15 +665,15 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
       </h5>
     </div>
     <div
-      class="emotion-16 emotion-17"
+      class="emotion-10 emotion-11"
     >
       Some text here
     </div>
     <div
-      class="emotion-18 emotion-19"
+      class="emotion-12 emotion-13"
     >
       <button
-        class="emotion-20 emotion-21"
+        class="emotion-14"
         color="secondary"
         data-testid="cancel-button"
         type="button"
@@ -681,7 +681,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
         Cancel
       </button>
       <button
-        class="emotion-22 emotion-21"
+        class="emotion-15"
         color="primary"
         data-testid="action-button"
         type="button"

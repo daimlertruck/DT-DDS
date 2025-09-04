@@ -46,7 +46,7 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: #F3F3F5;
   position: relative;
   padding: 25px 0px 0px 10px;
@@ -55,17 +55,17 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   border: 1px solid #DEDEDE;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-width: 1px;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #000000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -81,7 +81,7 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   padding-right: 10px;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,7 +108,7 @@ exports[`<TextArea /> component renders disabled input 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       disabled=""
       for="my-disabled-input-textarea"
@@ -117,18 +117,18 @@ exports[`<TextArea /> component renders disabled input 1`] = `
       My disabled input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="textarea-container"
     >
       <textarea
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         disabled=""
         id="my-disabled-input-textarea"
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     />
   </div>
 </div>
@@ -180,7 +180,7 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: #F3F3F5;
   position: relative;
   padding: 25px 0px 0px 10px;
@@ -189,17 +189,17 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   border: 1px solid #DEDEDE;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-width: 1px;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #000000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -215,7 +215,7 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   padding-right: 10px;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -242,7 +242,7 @@ exports[`<TextArea /> component renders input with an value 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-with-prefilled-value-textarea"
       style="z-index: 1;"
@@ -250,11 +250,11 @@ exports[`<TextArea /> component renders input with an value 1`] = `
       My Input with prefilled value
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="textarea-container"
     >
       <textarea
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         id="my-input-with-prefilled-value-textarea"
       >
@@ -262,7 +262,7 @@ exports[`<TextArea /> component renders input with an value 1`] = `
       </textarea>
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     />
   </div>
 </div>
@@ -314,7 +314,7 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: #FAFAFA;
   position: relative;
   padding: 25px 0px 0px 10px;
@@ -323,17 +323,17 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
   border: 1px solid #DEDEDE;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-width: 1px;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #000000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -349,7 +349,7 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
   padding-right: 10px;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -376,7 +376,7 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-textarea"
       style="z-index: 1;"
@@ -384,17 +384,17 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="textarea-container"
     >
       <textarea
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         id="my-input-textarea"
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     />
   </div>
 </div>
@@ -446,7 +446,7 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: #F3F3F5;
   position: relative;
   padding: 25px 0px 0px 10px;
@@ -455,17 +455,17 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
   border: 1px solid #DEDEDE;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-width: 1px;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #000000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -481,7 +481,7 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
   padding-right: 10px;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -508,7 +508,7 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-textarea"
       style="z-index: 1;"
@@ -516,17 +516,17 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="textarea-container"
     >
       <textarea
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         id="my-input-textarea"
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     />
   </div>
 </div>
@@ -578,7 +578,7 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   background-color: #F3F3F5;
   position: relative;
   padding: 25px 0px 0px 10px;
@@ -587,17 +587,17 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
   border-bottom: 1px solid #DEDEDE;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-width: 0 0 1px;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-bottom: 1px solid #000000;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -613,7 +613,7 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
   padding-right: 10px;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -640,7 +640,7 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-textarea"
       style="z-index: 1;"
@@ -648,17 +648,17 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="textarea-container"
     >
       <textarea
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         id="my-input-textarea"
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     />
   </div>
 </div>

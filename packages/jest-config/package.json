@@ -1,7 +1,7 @@
 {
   "name": "jest-config",
   "version": "0.0.0",
-  "main": "jest.config.ts",
+  "main": "jest.config.js",
   "license": "MIT",
   "private": true,
   "devDependencies": {

@@ -89,7 +89,7 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
   width: fit-content;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,12 +114,12 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-6"
           data-testid="tooltip-container"
           style="overflow: hidden;"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-7 emotion-8"
           >
             <svg
               fill="none"
@@ -163,12 +163,12 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-6"
           data-testid="tooltip-container"
           style="overflow: hidden;"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-7 emotion-8"
           >
             <a
               href="/"
@@ -196,12 +196,12 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-6"
           data-testid="tooltip-container"
           style="overflow: hidden;"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-7 emotion-8"
           >
             <a
               href="/"
@@ -229,12 +229,12 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
         class="emotion-4 emotion-5"
       >
         <div
-          class="emotion-6 emotion-7"
+          class="emotion-6"
           data-testid="tooltip-container"
           style="overflow: hidden;"
         >
           <div
-            class="emotion-8 emotion-9"
+            class="emotion-7 emotion-8"
           >
             <a
               href="/"

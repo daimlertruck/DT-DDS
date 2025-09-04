@@ -240,21 +240,13 @@ jobs:
           echo "sonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}" > sonar-project.properties
           echo "sonar.projectName=${{ secrets.SONAR_PROJECT_NAME }}" >> sonar-project.properties
           echo "sonar.sources=packages" >> sonar-project.properties
-          echo "sonar.exclusions=**/node_modules/**,**/dist/**,**/jest-coverage/**,**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,**/*.md,**/*.mdx,**/*.json,**/*.yml,**/*.yaml,**/*.config.js,**/*.config.ts,**/*.config.json,**/babel.config.js,**/jest.config.ts,**/tsconfig.json,**/tsup.config.ts,**/prettier.config.js,**/commitlint.config.js,**/turbo.json,**/yarn.lock,**/package-lock.json,**/pnpm-lock.yaml,**/*.lock,**/LICENSE.md,**/README.md,**/CHANGELOG.md,**/CONTRIBUTING.md,**/CODE_OF_CONDUCT.md,**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.svg,**/*.ico,**/*.woff,**/*.woff2,**/*.ttf,**/*.otf,**/*.eot,packages/themes/src/tokens/**" >> sonar-project.properties
+          echo "sonar.exclusions=**/node_modules/**,**/dist/**,**/jest-coverage/**,**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,**/*.md,**/*.mdx,**/*.json,**/*.yml,**/*.yaml,**/*.config.js,**/*.config.ts,**/*.config.json,**/babel.config.js,**/jest.config.ts,**/tsconfig.json,**/tsup.config.ts,**/prettier.config.js,**/commitlint.config.js,**/turbo.json,**/yarn.lock,**/package-lock.json,**/pnpm-lock.yaml,**/*.lock,**/LICENSE.md,**/README.md,**/CHANGELOG.md,**/CONTRIBUTING.md,**/CODE_OF_CONDUCT.md,**/*.png,**/*.jpg,**/*.jpeg,**/*.gif,**/*.svg,**/*.ico,**/*.woff,**/*.woff2,**/*.ttf,**/*.otf,**/*.eot,packages/themes/src/tokens/**,packages/icons/**" >> sonar-project.properties
           echo "sonar.test.inclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx" >> sonar-project.properties
-          echo "sonar.coverage.exclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/node_modules/**,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,packages/themes/src/tokens/**" >> sonar-project.properties
+          echo "sonar.coverage.exclusions=**/*.test.ts,**/*.test.tsx,**/*.spec.ts,**/*.spec.tsx,**/node_modules/**,**/*.tokens.json,**/tokens/**,**/static/**,**/storybook-static/**,packages/themes/src/tokens/**,packages/icons/**, packages/changeset-conventional-commits/**" >> sonar-project.properties
           echo "sonar.typescript.lcov.reportPaths=sonar-coverage/lcov.info" >> sonar-project.properties
           echo "sonar.javascript.lcov.reportPaths=sonar-coverage/lcov.info" >> sonar-project.properties
           echo "sonar.log.level=DEBUG" >> sonar-project.properties
 
-          # Configure PR or main branch analysis
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "sonar.pullrequest.key=${{ github.event.pull_request.number }}" >> sonar-project.properties
-            echo "sonar.pullrequest.branch=${{ github.head_ref }}" >> sonar-project.properties
-            echo "sonar.pullrequest.base=${{ github.base_ref }}" >> sonar-project.properties
-          else
-            echo "sonar.branch.name=main" >> sonar-project.properties
-          fi
           echo "SonarQube Configuration:"
           cat sonar-project.properties
 

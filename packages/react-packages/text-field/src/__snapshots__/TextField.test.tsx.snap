@@ -61,7 +61,7 @@ exports[`<TextField /> component renders disabled input 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,83 +84,83 @@ exports[`<TextField /> component renders disabled input 1`] = `
   border: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -174,27 +174,27 @@ exports[`<TextField /> component renders disabled input 1`] = `
   padding: 24px 0 8px 0;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
@@ -203,7 +203,7 @@ exports[`<TextField /> component renders disabled input 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       disabled=""
       for="my-disabled-input"
@@ -211,11 +211,11 @@ exports[`<TextField /> component renders disabled input 1`] = `
       My disabled input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         data-testid="input-field"
         disabled=""
@@ -295,7 +295,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -318,83 +318,83 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   border: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -402,7 +402,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   cursor: default;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -421,7 +421,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   font-feature-settings: 'liga';
 }
 
-.emotion-10 {
+.emotion-8 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -435,31 +435,31 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   padding: 24px 0 8px 0;
 }
 
-.emotion-10 input:-webkit-autofill,
-.emotion-10 input:-webkit-autofill:hover,
-.emotion-10 input:-webkit-autofill:focus,
-.emotion-10 input:-webkit-autofill:active {
+.emotion-8 input:-webkit-autofill,
+.emotion-8 input:-webkit-autofill:hover,
+.emotion-8 input:-webkit-autofill:focus,
+.emotion-8 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-8::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-8:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-10::placeholder {
+.emotion-8::placeholder {
   color: transparent;
 }
 
-.emotion-12 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -472,22 +472,22 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input"
     >
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <div
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-testid="extra-preffix"
       >
         <i
-          class="emotion-8 emotion-9"
+          class="emotion-7"
           color="#292929"
           data-testid="icon"
         >
@@ -495,7 +495,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
         </i>
       </div>
       <input
-        class="emotion-10 emotion-11"
+        class="emotion-8 emotion-9"
         data-error="false"
         data-testid="input-field"
         id="my-input"
@@ -504,11 +504,11 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
         value=""
       />
       <div
-        class="emotion-12 emotion-13"
+        class="emotion-10 emotion-11"
         data-testid="extra-suffix"
       >
         <i
-          class="emotion-8 emotion-9"
+          class="emotion-7"
           color="#292929"
           data-testid="icon"
         >
@@ -581,7 +581,7 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -604,83 +604,83 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   border: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -694,27 +694,27 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   padding: 24px 0 8px 0;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
@@ -723,18 +723,18 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input"
     >
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         data-testid="input-field"
         id="my-input"
@@ -808,7 +808,7 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -831,83 +831,83 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   border-bottom: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border-bottom: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -921,27 +921,27 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   padding: 24px 0 8px 0;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
@@ -950,18 +950,18 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input"
     >
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         data-testid="input-field"
         id="my-input"
@@ -1020,7 +1020,7 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   cursor: inherit;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1043,83 +1043,83 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   border: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: #A3A3A3;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: #A3A3A3;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -1132,27 +1132,27 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   background-color: inherit;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: #838383;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: #838383;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: #838383;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: #838383;
 }
 
@@ -1161,18 +1161,18 @@ exports[`<TextField /> component renders input without floating label 1`] = `
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input"
     >
       My input
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         data-testid="input-field"
         id="my-input"
@@ -1246,7 +1246,7 @@ exports[`<TextField /> component should render the TextField with error styles a
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1269,83 +1269,83 @@ exports[`<TextField /> component should render the TextField with error styles a
   border: 1px solid #A00000;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #A00000;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -1359,35 +1359,35 @@ exports[`<TextField /> component should render the TextField with error styles a
   padding: 24px 0 8px 0;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
-.emotion-8 {
+.emotion-7 {
   padding-left: 16px;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1402,18 +1402,18 @@ exports[`<TextField /> component should render the TextField with error styles a
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-with-error-message"
     >
       My Input with Error Message
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="true"
         data-testid="input-field"
         id="my-input-with-error-message"
@@ -1423,10 +1423,10 @@ exports[`<TextField /> component should render the TextField with error styles a
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     >
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9"
         color="error.default"
         data-testid="typography"
       >
@@ -1498,7 +1498,7 @@ exports[`<TextField /> component should render the TextField with info message 1
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1521,83 +1521,83 @@ exports[`<TextField /> component should render the TextField with info message 1
   border: 1px solid #C1C1C1;
 }
 
-.emotion-4:focus-within,
-.emotion-4:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   border: 1px solid #131313;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:focus-within:has(input[readonly]:not([disabled])),
+.emotion-3:hover:has(input[readonly]:not([disabled])) {
   background-color: #F3F3F5;
   color: #838383;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
+.emotion-3:focus-within:has(input[disabled]),
+.emotion-3:hover:has(input[disabled]),
+.emotion-3:focus-within:has(input[disabled])>*,
+.emotion-3:hover:has(input[disabled])>* {
   color: #A3A3A3;
   background-color: #FAFAFA;
   border-color: #DEDEDE;
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
+.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:focus-within:has(input[disabled]) input::placeholder,
+.emotion-3:hover:has(input[disabled]) input::placeholder,
+.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
+.emotion-3:hover:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -1611,35 +1611,35 @@ exports[`<TextField /> component should render the TextField with info message 1
   padding: 24px 0 8px 0;
 }
 
-.emotion-6 input:-webkit-autofill,
-.emotion-6 input:-webkit-autofill:hover,
-.emotion-6 input:-webkit-autofill:focus,
-.emotion-6 input:-webkit-autofill:active {
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
-.emotion-8 {
+.emotion-7 {
   padding-left: 16px;
 }
 
-.emotion-10 {
+.emotion-9 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1654,18 +1654,18 @@ exports[`<TextField /> component should render the TextField with info message 1
     class="emotion-0 emotion-1"
   >
     <label
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="label-field"
       for="my-input-with-info-message"
     >
       My Input with info message
     </label>
     <div
-      class="emotion-4 emotion-5"
+      class="emotion-3 emotion-4"
       data-testid="input-wrapper"
     >
       <input
-        class="emotion-6 emotion-7"
+        class="emotion-5 emotion-6"
         data-error="false"
         data-testid="input-field"
         id="my-input-with-info-message"
@@ -1675,10 +1675,10 @@ exports[`<TextField /> component should render the TextField with info message 1
       />
     </div>
     <div
-      class="emotion-8 emotion-9"
+      class="emotion-7 emotion-8"
     >
       <span
-        class="emotion-10 emotion-11"
+        class="emotion-9"
         color="content.medium"
         data-testid="typography"
       >

@@ -25,7 +25,8 @@
     "@dt-dds/react-label-field": "1.0.0-beta.38",
     "@dt-dds/react-typography": "1.0.0-beta.33",
     "@dt-dds/react-icon-button": "1.0.0-beta.10",
-    "@dt-dds/react-icon": "1.0.0-beta.43"
+    "@dt-dds/react-icon": "1.0.0-beta.43",
+    "@dt-dds/themes": "1.0.0-beta.2"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

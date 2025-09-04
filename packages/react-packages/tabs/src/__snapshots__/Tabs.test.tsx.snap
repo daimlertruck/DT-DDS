@@ -15,7 +15,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,21 +29,21 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   cursor: pointer;
 }
 
-.emotion-2 i {
+.emotion-1 i {
   font-size: 24px;
   color: #292929;
 }
 
-.emotion-2:not(:disabled)>i:hover,
-.emotion-2:not(:disabled)>i:active {
+.emotion-1:not(:disabled)>i:hover,
+.emotion-1:not(:disabled)>i:active {
   color: #00677F;
 }
 
-.emotion-2:focus-visible {
+.emotion-1:focus-visible {
   outline: 2px solid #000000;
 }
 
-.emotion-4 {
+.emotion-2 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -62,7 +62,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   font-feature-settings: 'liga';
 }
 
-.emotion-6 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -74,7 +74,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-5 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -98,7 +98,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   gap: 8px;
 }
 
-.emotion-10 {
+.emotion-7 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -122,11 +122,11 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   gap: 8px;
 }
 
-.emotion-10:hover {
+.emotion-7:hover {
   background-color: #CCE3EB;
 }
 
-.emotion-16 {
+.emotion-12 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -152,15 +152,15 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     style="flex-direction: row;"
   >
     <button
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-testid="icon-button"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         color="#292929"
         data-testid="left-arrow"
         style="display: none;"
@@ -169,12 +169,12 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
       </i>
     </button>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-3 emotion-4"
       data-testid="tabs"
       role="tablist"
     >
       <button
-        class="emotion-8 emotion-9"
+        class="emotion-5 emotion-6"
         data-testid="tab-item-0"
         role="tab"
         tabindex="0"
@@ -182,7 +182,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
         Tab 1
       </button>
       <button
-        class="emotion-10 emotion-9"
+        class="emotion-7 emotion-6"
         data-testid="tab-item-1"
         role="tab"
         tabindex="-1"
@@ -190,13 +190,13 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
         Tab 2
       </button>
       <button
-        class="emotion-10 emotion-9"
+        class="emotion-7 emotion-6"
         data-testid="tab-item-2"
         role="tab"
         tabindex="-1"
       >
         <i
-          class="emotion-4 emotion-5"
+          class="emotion-2"
           color="#292929"
           data-testid="icon"
         >
@@ -205,7 +205,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
         Tab 3
       </button>
       <button
-        class="emotion-16 emotion-9"
+        class="emotion-12 emotion-6"
         data-testid="tab-item-3"
         disabled=""
         role="tab"
@@ -215,11 +215,11 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
       </button>
     </div>
     <button
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-testid="icon-button"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         color="#292929"
         data-testid="right-arrow"
         style="display: none;"
@@ -246,7 +246,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -260,21 +260,21 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   cursor: pointer;
 }
 
-.emotion-2 i {
+.emotion-1 i {
   font-size: 24px;
   color: #292929;
 }
 
-.emotion-2:not(:disabled)>i:hover,
-.emotion-2:not(:disabled)>i:active {
+.emotion-1:not(:disabled)>i:hover,
+.emotion-1:not(:disabled)>i:active {
   color: #00677F;
 }
 
-.emotion-2:focus-visible {
+.emotion-1:focus-visible {
   outline: 2px solid #000000;
 }
 
-.emotion-4 {
+.emotion-2 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -293,7 +293,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   font-feature-settings: 'liga';
 }
 
-.emotion-6 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -306,7 +306,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   margin-bottom: -1px;
 }
 
-.emotion-8 {
+.emotion-5 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -331,7 +331,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   gap: 8px;
 }
 
-.emotion-10 {
+.emotion-7 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -355,11 +355,11 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   gap: 8px;
 }
 
-.emotion-10:hover {
+.emotion-7:hover {
   background-color: #CCE3EB;
 }
 
-.emotion-16 {
+.emotion-12 {
   border: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -385,15 +385,15 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
     style="flex-direction: row; border-bottom: 1px solid #DEDEDE;"
   >
     <button
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-testid="icon-button"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         color="#292929"
         data-testid="left-arrow"
         style="display: none;"
@@ -402,12 +402,12 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
       </i>
     </button>
     <div
-      class="emotion-6 emotion-7"
+      class="emotion-3 emotion-4"
       data-testid="tabs"
       role="tablist"
     >
       <button
-        class="emotion-8 emotion-9"
+        class="emotion-5 emotion-6"
         data-testid="tab-item-0"
         role="tab"
         tabindex="0"
@@ -415,7 +415,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
         Tab 1
       </button>
       <button
-        class="emotion-10 emotion-9"
+        class="emotion-7 emotion-6"
         data-testid="tab-item-1"
         role="tab"
         tabindex="-1"
@@ -423,13 +423,13 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
         Tab 2
       </button>
       <button
-        class="emotion-10 emotion-9"
+        class="emotion-7 emotion-6"
         data-testid="tab-item-2"
         role="tab"
         tabindex="-1"
       >
         <i
-          class="emotion-4 emotion-5"
+          class="emotion-2"
           color="#292929"
           data-testid="icon"
         >
@@ -438,7 +438,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
         Tab 3
       </button>
       <button
-        class="emotion-16 emotion-9"
+        class="emotion-12 emotion-6"
         data-testid="tab-item-3"
         disabled=""
         role="tab"
@@ -448,11 +448,11 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
       </button>
     </div>
     <button
-      class="emotion-2 emotion-3"
+      class="emotion-1"
       data-testid="icon-button"
     >
       <i
-        class="emotion-4 emotion-5"
+        class="emotion-2"
         color="#292929"
         data-testid="right-arrow"
         style="display: none;"

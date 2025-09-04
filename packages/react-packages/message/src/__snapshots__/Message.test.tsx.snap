@@ -48,7 +48,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #131313;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -58,7 +58,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #292929;
 }
 
-.emotion-8 {
+.emotion-6 {
   color: #292929;
   border: 0;
   cursor: pointer;
@@ -69,7 +69,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: flex;
 }
 
-.emotion-8:hover {
+.emotion-6:hover {
   background-color: #FFFFFF;
 }
 
@@ -83,14 +83,14 @@ exports[`<Message /> component should render a Message with title & description,
       class="emotion-2 emotion-3"
     >
       <h2
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-6 emotion-5"
+        class="emotion-5"
         color="content.default"
         data-testid="typography"
       >
@@ -98,7 +98,7 @@ exports[`<Message /> component should render a Message with title & description,
       </p>
     </div>
     <button
-      class="emotion-8 emotion-9"
+      class="emotion-6 emotion-7"
     >
       <svg
         fill="none"
@@ -174,7 +174,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #131313;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -184,7 +184,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #292929;
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #292929;
   border: 0;
   cursor: pointer;
@@ -195,7 +195,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: flex;
 }
 
-.emotion-10:hover {
+.emotion-8:hover {
   background-color: #FFFFFF;
 }
 
@@ -232,14 +232,14 @@ exports[`<Message /> component should render a Message with title & description,
       class="emotion-4 emotion-5"
     >
       <h2
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-8 emotion-7"
+        class="emotion-7"
         color="content.default"
         data-testid="typography"
       >
@@ -247,7 +247,7 @@ exports[`<Message /> component should render a Message with title & description,
       </p>
     </div>
     <button
-      class="emotion-10 emotion-11"
+      class="emotion-8 emotion-9"
     >
       <svg
         fill="none"
@@ -323,7 +323,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #131313;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -333,7 +333,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #292929;
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #292929;
   border: 0;
   cursor: pointer;
@@ -344,7 +344,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: flex;
 }
 
-.emotion-10:hover {
+.emotion-8:hover {
   background-color: #FFFFFF;
 }
 
@@ -375,14 +375,14 @@ exports[`<Message /> component should render a Message with title & description,
       class="emotion-4 emotion-5"
     >
       <h2
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-8 emotion-7"
+        class="emotion-7"
         color="content.default"
         data-testid="typography"
       >
@@ -390,7 +390,7 @@ exports[`<Message /> component should render a Message with title & description,
       </p>
     </div>
     <button
-      class="emotion-10 emotion-11"
+      class="emotion-8 emotion-9"
     >
       <svg
         fill="none"
@@ -466,7 +466,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #131313;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -476,7 +476,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #292929;
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #292929;
   border: 0;
   cursor: pointer;
@@ -487,7 +487,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: flex;
 }
 
-.emotion-10:hover {
+.emotion-8:hover {
   background-color: #FFFFFF;
 }
 
@@ -518,14 +518,14 @@ exports[`<Message /> component should render a Message with title & description,
       class="emotion-4 emotion-5"
     >
       <h2
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-8 emotion-7"
+        class="emotion-7"
         color="content.default"
         data-testid="typography"
       >
@@ -533,7 +533,7 @@ exports[`<Message /> component should render a Message with title & description,
       </p>
     </div>
     <button
-      class="emotion-10 emotion-11"
+      class="emotion-8 emotion-9"
     >
       <svg
         fill="none"
@@ -609,7 +609,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #131313;
 }
 
-.emotion-8 {
+.emotion-7 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -619,7 +619,7 @@ exports[`<Message /> component should render a Message with title & description,
   color: #292929;
 }
 
-.emotion-10 {
+.emotion-8 {
   color: #292929;
   border: 0;
   cursor: pointer;
@@ -630,7 +630,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: flex;
 }
 
-.emotion-10:hover {
+.emotion-8:hover {
   background-color: #FFFFFF;
 }
 
@@ -661,14 +661,14 @@ exports[`<Message /> component should render a Message with title & description,
       class="emotion-4 emotion-5"
     >
       <h2
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-8 emotion-7"
+        class="emotion-7"
         color="content.default"
         data-testid="typography"
       >
@@ -676,7 +676,7 @@ exports[`<Message /> component should render a Message with title & description,
       </p>
     </div>
     <button
-      class="emotion-10 emotion-11"
+      class="emotion-8 emotion-9"
     >
       <svg
         fill="none"
