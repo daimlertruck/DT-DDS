@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Box /> component should render a span html element with the given content 1`] = `
+exports[`<Box /> component should render with default div element and children 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,7 +16,7 @@ exports[`<Box /> component should render a span html element with the given cont
 }
 
 <div>
-  <span
+  <div
     class="emotion-0 emotion-1"
   >
     <p>
@@ -25,6 +25,6 @@ exports[`<Box /> component should render a span html element with the given cont
     <p>
       More Content
     </p>
-  </span>
+  </div>
 </div>
 `;

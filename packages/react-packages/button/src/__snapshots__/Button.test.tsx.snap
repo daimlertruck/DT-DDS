@@ -177,7 +177,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
   align-items: center;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 14px;
   height: 14px;
   border: 2px solid #FFFFFF;
@@ -197,11 +197,11 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
   >
     Button loading
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="spinner"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-3"
       />
     </div>
   </button>
@@ -294,7 +294,7 @@ exports[`<Button /> component when loading is true renders a spinner light theme
   align-items: center;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 14px;
   height: 14px;
   border: 2px solid #838383;
@@ -314,11 +314,11 @@ exports[`<Button /> component when loading is true renders a spinner light theme
   >
     Button loading
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="spinner"
     >
       <div
-        class="emotion-4 emotion-5"
+        class="emotion-3"
       />
     </div>
   </button>

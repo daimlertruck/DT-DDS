@@ -13,6 +13,17 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'prettier', 'import'],
+  ignorePatterns: [
+    'dist/**',
+    'node_modules/**',
+    'jest-coverage/**',
+    'coverage/**',
+    '*.config.js',
+    '*.config.ts',
+    'build/**',
+    '.next/**',
+    '.turbo/**',
+  ],
   rules: {
     'eol-last': [2, 'always'],
     semi: [2, 'always'],

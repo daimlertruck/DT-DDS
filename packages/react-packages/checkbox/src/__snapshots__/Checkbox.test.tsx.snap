@@ -84,7 +84,7 @@ exports[`<CheckBox /> component renders checkbox checked 1`] = `
         type="checkbox"
       />
       <i
-        class="emotion-6 emotion-7"
+        class="emotion-6"
         color="#FFFFFF"
         data-testid="icon"
       >

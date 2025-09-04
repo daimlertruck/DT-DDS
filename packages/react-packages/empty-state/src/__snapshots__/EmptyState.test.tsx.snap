@@ -75,7 +75,7 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -95,14 +95,14 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
       data-testid="empty-state-content"
     >
       <h2
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-6 emotion-5"
+        class="emotion-5"
         color="content.default"
         data-testid="typography"
       >
@@ -188,7 +188,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -198,7 +198,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   color: #292929;
 }
 
-.emotion-8 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,24 +231,24 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   background-color: #000000;
 }
 
-.emotion-8:hover {
+.emotion-6:hover {
   color: #FFFFFF;
   background-color: #454545;
 }
 
-.emotion-8:disabled {
+.emotion-6:disabled {
   cursor: not-allowed;
   color: #FFFFFF;
   background-color: #DEDEDE;
 }
 
-.emotion-8:focus-visible {
+.emotion-6:focus-visible {
   outline: 3px solid #131313;
   outline-offset: 1px;
 }
 
 @media only screen and (max-width: 480px) {
-  .emotion-8 {
+  .emotion-6 {
     width: 100%;
   }
 }
@@ -263,14 +263,14 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
       data-testid="empty-state-content"
     >
       <h2
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-6 emotion-5"
+        class="emotion-5"
         color="content.default"
         data-testid="typography"
       >
@@ -278,7 +278,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
       </p>
     </div>
     <button
-      class="emotion-8 emotion-9"
+      class="emotion-6"
       color="primary"
       data-testid="undefined-button"
       type="button"
@@ -364,7 +364,7 @@ exports[`<EmptyState /> component should render Empty State with image 1`] = `
   }
 }
 
-.emotion-6 {
+.emotion-5 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -555,14 +555,14 @@ exports[`<EmptyState /> component should render Empty State with image 1`] = `
       data-testid="empty-state-content"
     >
       <h2
-        class="emotion-4 emotion-5"
+        class="emotion-4"
         color="content.dark"
         data-testid="typography"
       >
         Title here
       </h2>
       <p
-        class="emotion-6 emotion-5"
+        class="emotion-5"
         color="content.default"
         data-testid="typography"
       >

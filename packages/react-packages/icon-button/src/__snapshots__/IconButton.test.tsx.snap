@@ -54,7 +54,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
     data-testid="icon-button"
   >
     <i
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       color="#292929"
       data-testid="icon"
     >
@@ -119,7 +119,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
     disabled=""
   >
     <i
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       color="#292929"
       data-testid="icon"
     >
@@ -183,7 +183,7 @@ exports[`<IconButton /> component should have style if variant is default and is
     data-testid="icon-button"
   >
     <i
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       color="#292929"
       data-testid="icon"
     >
@@ -248,7 +248,7 @@ exports[`<IconButton /> component should have style if variant is default and is
     disabled=""
   >
     <i
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       color="#292929"
       data-testid="icon"
     >

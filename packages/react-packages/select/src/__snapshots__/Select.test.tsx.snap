@@ -99,14 +99,14 @@ exports[`<Select /> component should render Select 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -125,7 +125,7 @@ exports[`<Select /> component should render Select 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-14 {
+.emotion-12 {
   list-style-type: none;
   position: absolute;
   z-index: 3;
@@ -140,7 +140,7 @@ exports[`<Select /> component should render Select 1`] = `
   box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -162,21 +162,21 @@ exports[`<Select /> component should render Select 1`] = `
   text-transform: none;
 }
 
-.emotion-16:hover,
-.emotion-16:focus-within {
+.emotion-14:hover,
+.emotion-14:focus-within {
   background-color: #DEDEDE;
 }
 
-.emotion-16[aria-disabled="true"] {
+.emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
   color: #A3A3A3;
 }
 
-.emotion-16[aria-disabled="true"]:hover {
+.emotion-14[aria-disabled="true"]:hover {
   background-color: #FFFFFF;
 }
 
-.emotion-18 {
+.emotion-16 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -189,11 +189,11 @@ exports[`<Select /> component should render Select 1`] = `
   text-transform: none;
 }
 
-.emotion-36 {
+.emotion-34 {
   padding-left: 16px;
 }
 
-.emotion-38 {
+.emotion-36 {
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -227,7 +227,7 @@ exports[`<Select /> component should render Select 1`] = `
           class="emotion-6 emotion-7"
         >
           <label
-            class="emotion-8 emotion-9"
+            class="emotion-8"
             data-testid="label-field"
             for="downshift-:r0:-toggle-button"
             id="downshift-:r0:-label"
@@ -236,10 +236,10 @@ exports[`<Select /> component should render Select 1`] = `
           </label>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-9 emotion-10"
         >
           <i
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             color="#292929"
             data-testid="icon"
           >
@@ -251,19 +251,19 @@ exports[`<Select /> component should render Select 1`] = `
     <ul
       aria-labelledby="downshift-:r0:-label"
       aria-multiselectable="false"
-      class="emotion-14 emotion-15"
+      class="emotion-12 emotion-13"
       id="downshift-:r0:-menu"
       role="listbox"
     >
       <li
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="downshift-:r0:-item-0"
         role="option"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         >
           Option 1
         </div>
@@ -271,12 +271,12 @@ exports[`<Select /> component should render Select 1`] = `
       <li
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="downshift-:r0:-item-1"
         role="option"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         >
           Option 2
         </div>
@@ -284,12 +284,12 @@ exports[`<Select /> component should render Select 1`] = `
       <li
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="downshift-:r0:-item-2"
         role="option"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         >
           A text message to see how big labels will be handled
         </div>
@@ -297,12 +297,12 @@ exports[`<Select /> component should render Select 1`] = `
       <li
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="downshift-:r0:-item-3"
         role="option"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         >
           Option 3
         </div>
@@ -310,22 +310,22 @@ exports[`<Select /> component should render Select 1`] = `
       <li
         aria-disabled="false"
         aria-selected="false"
-        class="emotion-16 emotion-17"
+        class="emotion-14 emotion-15"
         id="downshift-:r0:-item-4"
         role="option"
       >
         <div
-          class="emotion-18 emotion-19"
+          class="emotion-16 emotion-17"
         >
           Option 4
         </div>
       </li>
     </ul>
     <div
-      class="emotion-36 emotion-37"
+      class="emotion-34 emotion-35"
     >
       <span
-        class="emotion-38 emotion-39"
+        class="emotion-36"
         color="content.light"
         data-testid="typography"
       >
@@ -435,14 +435,14 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -461,7 +461,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-14 {
+.emotion-12 {
   list-style-type: none;
   position: absolute;
   z-index: 3;
@@ -500,7 +500,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
           class="emotion-6 emotion-7"
         >
           <label
-            class="emotion-8 emotion-9"
+            class="emotion-8"
             data-testid="label-field"
             for="downshift-:r4:-toggle-button"
             id="downshift-:r4:-label"
@@ -509,10 +509,10 @@ exports[`<Select /> component should render Select as multi select 1`] = `
           </label>
         </div>
         <div
-          class="emotion-10 emotion-11"
+          class="emotion-9 emotion-10"
         >
           <i
-            class="emotion-12 emotion-13"
+            class="emotion-11"
             color="#292929"
             data-testid="icon"
           >
@@ -524,7 +524,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
     <ul
       aria-labelledby="downshift-:r4:-label"
       aria-multiselectable="true"
-      class="emotion-14 emotion-15"
+      class="emotion-12 emotion-13"
       id="downshift-:r4:-menu"
       role="listbox"
     />

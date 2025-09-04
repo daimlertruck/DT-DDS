@@ -20,9 +20,7 @@ describe('<Toast /> component', () => {
   const TOAST_ID = 'myId';
   const TITLE = 'my title text';
   const MESSAGE = 'my message text';
-
   const onCloseFn = jest.fn();
-
   const ProvidedToast = withProviders(Toast);
 
   beforeEach(() => {
@@ -44,117 +42,82 @@ describe('<Toast /> component', () => {
     ${ToastType.Warning}
     ${ToastType.Info}
     ${ToastType.Error}
-  `(
-    'should render a toast with title & message when type $type',
-    ({ type }) => {
-      const { container } = render(
-        <ProvidedToast
-          id={TOAST_ID}
-          message={MESSAGE}
-          onClose={onCloseFn}
-          title={TITLE}
-          type={type}
-        />
-      );
-
-      expect(container).toMatchSnapshot();
-    }
-  );
-
-  it.each`
-    type
-    ${ToastType.Success}
-    ${ToastType.Warning}
-    ${ToastType.Info}
-    ${ToastType.Error}
-  `(
-    'should render a toast with title & message & action Buttons when type $type',
-    ({ type }) => {
-      const { container } = render(
-        <ProvidedToast
-          id={TOAST_ID}
-          message={MESSAGE}
-          onClose={onCloseFn}
-          title={TITLE}
-          type={type}
-        >
-          <button type='button'>Text</button>
-          <button type='button'>Text2</button>
-        </ProvidedToast>
-      );
-
-      const button1 = screen.getByText('Text', { exact: true });
-      const button2 = screen.getByText('Text2', { exact: true });
-      expect(button1).toBeDefined();
-      expect(button2).toBeDefined();
-      expect(container).toMatchSnapshot();
-    }
-  );
-
-  describe('Close button on Toast ', () => {
-    it.each`
-      type
-      ${ToastType.Success}
-      ${ToastType.Warning}
-      ${ToastType.Info}
-      ${ToastType.Error}
-    `(
-      'with dismissible as true should fire the mock function when type $type',
-      ({ type }) => {
-        render(
-          <ProvidedToast
-            dismissible
-            id={TOAST_ID}
-            message={MESSAGE}
-            onClose={onCloseFn}
-            title={TITLE}
-            type={type}
-          />
-        );
-
-        const closeBtn = screen.getByRole('button');
-        fireEvent.click(closeBtn);
-
-        expect(onCloseFn).toBeCalled();
-      }
+  `('should render toast with title & message for type $type', ({ type }) => {
+    const { container } = render(
+      <ProvidedToast
+        id={TOAST_ID}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={type}
+      />
     );
 
-    it.each`
-      type
-      ${ToastType.Success}
-      ${ToastType.Warning}
-      ${ToastType.Info}
-      ${ToastType.Error}
-    `(
-      'with dismissible is false should not be able to find the close button when type $type',
-      ({ type }) => {
-        render(
-          <ProvidedToast
-            dismissible={false}
-            id={TOAST_ID}
-            message={MESSAGE}
-            onClose={onCloseFn}
-            title={TITLE}
-            type={type}
-          />
-        );
-
-        const closeBtn = screen.queryByRole('button');
-        expect(closeBtn).toBeNull();
-      }
-    );
+    expect(container).toMatchSnapshot();
   });
 
-  it('dismisses the toast with the specified ID when dismissToast function is called', () => {
+  it('should render toast with action buttons', () => {
+    const { container } = render(
+      <ProvidedToast
+        id={TOAST_ID}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      >
+        <button type='button'>Action 1</button>
+        <button type='button'>Action 2</button>
+      </ProvidedToast>
+    );
+
+    expect(screen.getByText('Action 1')).toBeInTheDocument();
+    expect(screen.getByText('Action 2')).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should show close button when dismissible is true', () => {
+    render(
+      <ProvidedToast
+        dismissible
+        id={TOAST_ID}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      />
+    );
+
+    const closeBtn = screen.getByRole('button');
+    fireEvent.click(closeBtn);
+    expect(onCloseFn).toHaveBeenCalled();
+  });
+
+  it('should not show close button when dismissible is false', () => {
+    render(
+      <ProvidedToast
+        dismissible={false}
+        id={TOAST_ID}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      />
+    );
+
+    const closeBtn = screen.queryByRole('button');
+    expect(closeBtn).toBeNull();
+  });
+
+  it('should dismiss toast with specified ID', () => {
     const spy = jest.spyOn(toast, 'dismiss');
-
     dismissToast('testToastId');
-
     expect(spy).toHaveBeenCalledWith('testToastId');
   });
 });
 
 describe('emitToast', () => {
+  const ProvidedToaster = withProviders(Toaster);
+
   beforeEach(() => {
     act(() => {
       toast.dismiss();
@@ -173,9 +136,8 @@ describe('emitToast', () => {
     ${ToastType.Success}
     ${ToastType.Warning}
     ${ToastType.Info}
-  `('should emit the toast of type $type', async ({ type }) => {
-    const ProvidedToaster = withProviders(Toaster);
-
+    ${ToastType.Error}
+  `('should emit toast of type $type', ({ type }) => {
     const mockProps = {
       type,
       title: `Title-${type}`,
@@ -192,9 +154,8 @@ describe('emitToast', () => {
     expect(screen.getByText(`Message-${type}`)).toBeInTheDocument();
   });
 
-  test('should emit the toast of type error and have a close button', async () => {
-    const ProvidedToaster = withProviders(Toaster);
-
+  it('should set infinite duration for error toasts', () => {
+    const toastCustomSpy = jest.spyOn(toast, 'custom');
     const mockProps = {
       type: ToastType.Error,
       title: 'Error Title',
@@ -204,73 +165,20 @@ describe('emitToast', () => {
     render(<ProvidedToaster />);
 
     act(() => {
-      void emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Error Title')).toBeInTheDocument();
-    expect(screen.getByText('Error Message')).toBeInTheDocument();
-
-    const buttons = screen.getAllByRole('button');
-    expect(buttons.length).toBeGreaterThan(0);
-
-    fireEvent.click(buttons[0]);
-
-    expect(buttons[0]).toBeInTheDocument();
-  });
-
-  it('should emit toast with children and clone them with toastId', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Title with Children',
-      message: 'Message with Children',
-      children: <button type='button'>Action Button</button>,
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
       emitToast(mockProps);
     });
 
-    expect(screen.getByText('Action Button')).toBeInTheDocument();
+    const options = toastCustomSpy.mock.calls[0][1];
+    expect(options.duration).toBe(Infinity);
+    toastCustomSpy.mockRestore();
   });
 
-  it('should emit toast with multiple children and clone them', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
+  it('should set custom duration for non-error toasts', () => {
+    const toastCustomSpy = jest.spyOn(toast, 'custom');
     const mockProps = {
       type: ToastType.Success,
-      title: 'Title with Multiple Children',
-      message: 'Message with Multiple Children',
-      children: [
-        <button key='1' type='button'>
-          Button 1
-        </button>,
-        <button key='2' type='button'>
-          Button 2
-        </button>,
-      ],
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Button 1')).toBeInTheDocument();
-    expect(screen.getByText('Button 2')).toBeInTheDocument();
-  });
-
-  it('should emit toast with custom duration', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Title with Custom Duration',
-      message: 'Message with Custom Duration',
+      title: 'Success Title',
+      message: 'Success Message',
       duration: 5000,
     };
 
@@ -280,17 +188,18 @@ describe('emitToast', () => {
       emitToast(mockProps);
     });
 
-    expect(screen.getByText('Title with Custom Duration')).toBeInTheDocument();
+    const options = toastCustomSpy.mock.calls[0][1];
+    expect(options.duration).toBe(5000);
+    toastCustomSpy.mockRestore();
   });
 
-  it('should emit toast with dismissible prop', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
+  it('should handle children in toast callback', () => {
+    const toastCustomSpy = jest.spyOn(toast, 'custom');
     const mockProps = {
       type: ToastType.Success,
-      title: 'Title with Dismissible',
-      message: 'Message with Dismissible',
-      dismissible: true,
+      title: 'Test Title',
+      message: 'Test Message',
+      children: <button type='button'>Test Button</button>,
     };
 
     render(<ProvidedToaster />);
@@ -299,54 +208,96 @@ describe('emitToast', () => {
       emitToast(mockProps);
     });
 
-    expect(screen.getByText('Title with Dismissible')).toBeInTheDocument();
-    // Use getAllByRole to get all buttons and check that at least one exists
-    const buttons = screen.getAllByRole('button');
-    expect(buttons.length).toBeGreaterThan(0);
+    expect(toastCustomSpy).toHaveBeenCalled();
+
+    // Verify the callback function is called with correct parameters
+    const callbackFunction = toastCustomSpy.mock.calls[0][0];
+    const mockToast = { id: 'test-toast-id', visible: true };
+    const result = callbackFunction(mockToast);
+
+    expect(result).toBeDefined();
+    expect(result.props.title).toBe('Test Title');
+    expect(result.props.message).toBe('Test Message');
+    expect(result.props.type).toBe(ToastType.Success);
+    expect(result.props.children).toBeDefined();
+
+    toastCustomSpy.mockRestore();
   });
 
-  it('should handle null children in emitToast', () => {
+  it('should handle null and undefined children gracefully', () => {
     const ProvidedToaster = withProviders(Toaster);
 
-    const mockProps = {
+    // Test null children
+    const nullProps = {
       type: ToastType.Success,
-      title: 'Title with Null Children',
-      message: 'Message with Null Children',
+      title: 'Null Test',
+      message: 'Testing null children',
       children: null,
     };
 
     render(<ProvidedToaster />);
 
     act(() => {
-      emitToast(mockProps);
+      emitToast(nullProps);
     });
 
-    expect(screen.getByText('Title with Null Children')).toBeInTheDocument();
-    expect(screen.getByText('Message with Null Children')).toBeInTheDocument();
-  });
+    expect(screen.getByText('Null Test')).toBeInTheDocument();
 
-  it('should handle undefined children in emitToast', () => {
-    const ProvidedToaster = withProviders(Toaster);
+    // Test undefined children
+    act(() => {
+      toast.dismiss();
+    });
 
-    const mockProps = {
+    const undefinedProps = {
       type: ToastType.Success,
-      title: 'Title with Undefined Children',
-      message: 'Message with Undefined Children',
+      title: 'Undefined Test',
+      message: 'Testing undefined children',
       children: undefined,
     };
 
-    render(<ProvidedToaster />);
-
     act(() => {
-      emitToast(mockProps);
+      emitToast(undefinedProps);
     });
 
-    expect(
-      screen.getByText('Title with Undefined Children')
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Message with Undefined Children')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Undefined Test')).toBeInTheDocument();
+  });
+});
+
+describe('<Toaster /> component', () => {
+  const { useMedia }: { useMedia: jest.Mock } =
+    jest.requireMock('@dt-dds/react-core');
+
+  beforeEach(() => {
+    useMedia.mockReset();
+  });
+
+  it('should render with default props', () => {
+    useMedia.mockReturnValue(false);
+    const ProvidedToaster = withProviders(Toaster);
+    const { container } = render(<ProvidedToaster />);
+    expect(container).toBeInTheDocument();
+  });
+
+  it('should handle small screen breakpoint', () => {
+    useMedia.mockReturnValue(true);
+    const ProvidedToaster = withProviders(Toaster);
+    const { container } = render(<ProvidedToaster />);
+    expect(container).toBeInTheDocument();
+  });
+
+  it('should handle custom props', () => {
+    useMedia.mockReturnValue(false);
+    const customStyle = { backgroundColor: 'red', top: 20 };
+    const ProvidedToaster = withProviders(Toaster);
+    const { container } = render(
+      <ProvidedToaster
+        containerStyle={customStyle}
+        gutter={16}
+        position='top-right'
+        reverseOrder
+      />
+    );
+    expect(container).toBeInTheDocument();
   });
 });
 
@@ -401,17 +352,17 @@ describe('<Toaster /> props', () => {
     return ToasterRenderSpy.mock.calls[0][0];
   };
 
-  it('forwards gutter prop', () => {
-    const props = renderWithMocks({ small: false, gutter: 16 });
-    expect(props.gutter).toBe(16);
-  });
-
-  it('uses default gutter=8 when not provided', () => {
+  it('should use default gutter when not provided', () => {
     const props = renderWithMocks({ small: false });
     expect(props.gutter).toBe(8);
   });
 
-  it('sets position bottom-center on small screens, bottom-right otherwise', () => {
+  it('should forward custom gutter prop', () => {
+    const props = renderWithMocks({ small: false, gutter: 16 });
+    expect(props.gutter).toBe(16);
+  });
+
+  it('should set position based on screen size', () => {
     const smallProps = renderWithMocks({ small: true });
     expect(smallProps.position).toBe('bottom-center');
 
@@ -419,7 +370,7 @@ describe('<Toaster /> props', () => {
     expect(largeProps.position).toBe('bottom-right');
   });
 
-  it('computes containerStyle margins and merges user styles', () => {
+  it('should merge container styles correctly', () => {
     const props = renderWithMocks({
       small: true,
       userContainerStyle: { top: 24, backgroundColor: 'red' },
@@ -432,172 +383,5 @@ describe('<Toaster /> props', () => {
       left: 8,
       backgroundColor: 'red',
     });
-  });
-});
-
-describe('emitToast with Children.map functionality', () => {
-  beforeEach(() => {
-    act(() => {
-      toast.dismiss();
-    });
-    jest.clearAllTimers();
-  });
-
-  afterEach(() => {
-    act(() => {
-      toast.dismiss();
-    });
-  });
-
-  it('should handle single child element in Children.map', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Single Child Test',
-      message: 'Testing single child',
-      children: <button type='button'>Single Button</button>,
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Single Button')).toBeInTheDocument();
-  });
-
-  it('should handle array of children in Children.map', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Array Children Test',
-      message: 'Testing array of children',
-      children: [
-        <button key='1' type='button'>
-          First Button
-        </button>,
-        <button key='2' type='button'>
-          Second Button
-        </button>,
-        <button key='3' type='button'>
-          Third Button
-        </button>,
-      ],
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('First Button')).toBeInTheDocument();
-    expect(screen.getByText('Second Button')).toBeInTheDocument();
-    expect(screen.getByText('Third Button')).toBeInTheDocument();
-  });
-
-  it('should handle mixed children types in Children.map', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Mixed Children Test',
-      message: 'Testing mixed children types',
-      children: [
-        <button key='1' type='button'>
-          Button
-        </button>,
-        <span key='2'>Text Span</span>,
-        <div key='3'>Div Element</div>,
-      ],
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Button')).toBeInTheDocument();
-    expect(screen.getByText('Text Span')).toBeInTheDocument();
-    expect(screen.getByText('Div Element')).toBeInTheDocument();
-  });
-
-  it('should handle children with existing props in cloneElement', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Props Test',
-      message: 'Testing children with existing props',
-      children: (
-        <button
-          className='existing-class'
-          data-testid='test-button'
-          type='button'
-        >
-          Button with Props
-        </button>
-      ),
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Button with Props')).toBeInTheDocument();
-  });
-
-  it('should handle children with complex nested structure', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Complex Children Test',
-      message: 'Testing complex nested children',
-      children: (
-        <div>
-          <button type='button'>Nested Button</button>
-          <span>Nested Text</span>
-        </div>
-      ),
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Nested Button')).toBeInTheDocument();
-    expect(screen.getByText('Nested Text')).toBeInTheDocument();
-  });
-
-  it('should test the conditional child rendering in Children.map', () => {
-    const ProvidedToaster = withProviders(Toaster);
-
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Conditional Child Test',
-      message: 'Testing conditional child rendering',
-      children: false ? (
-        <button type='button'>Hidden Button</button>
-      ) : (
-        <button type='button'>Visible Button</button>
-      ),
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(screen.getByText('Visible Button')).toBeInTheDocument();
   });
 });

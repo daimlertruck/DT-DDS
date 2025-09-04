@@ -26,7 +26,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   width: fit-content;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
@@ -50,34 +50,34 @@ exports[`SegmentedControl renders without errors 1`] = `
   padding: 4px 4px;
 }
 
-.emotion-4:not(:disabled):hover {
+.emotion-3:not(:disabled):hover {
   background-color: #DEDEDE;
   color: #292929;
 }
 
-.emotion-4:not(:disabled):hover i {
+.emotion-3:not(:disabled):hover i {
   color: #131313;
 }
 
-.emotion-4:not(:disabled)[aria-pressed="true"] {
+.emotion-3:not(:disabled)[aria-pressed="true"] {
   background-color: #000000;
   color: #FFFFFF;
 }
 
-.emotion-4:not(:disabled)[aria-pressed="true"] i {
+.emotion-3:not(:disabled)[aria-pressed="true"] i {
   color: #FFFFFF;
 }
 
-.emotion-4:disabled {
+.emotion-3:disabled {
   color: #A3A3A3;
   cursor: not-allowed;
 }
 
-.emotion-4:disabled i {
+.emotion-3:disabled i {
   color: #A3A3A3;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -103,17 +103,17 @@ exports[`SegmentedControl renders without errors 1`] = `
     role="group"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="tooltip-container"
     >
       <button
         aria-label="List"
         aria-pressed="false"
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
         type="button"
       >
         <i
-          class="emotion-6 emotion-7"
+          class="emotion-5"
           color="#292929"
           data-testid="icon"
         >
@@ -122,17 +122,17 @@ exports[`SegmentedControl renders without errors 1`] = `
       </button>
     </div>
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       data-testid="tooltip-container"
     >
       <button
         aria-label="Gallery"
         aria-pressed="true"
-        class="emotion-4 emotion-5"
+        class="emotion-3 emotion-4"
         type="button"
       >
         <i
-          class="emotion-6 emotion-7"
+          class="emotion-5"
           color="#292929"
           data-testid="icon"
         >

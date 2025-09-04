@@ -207,7 +207,7 @@ exports[`<Link /> component Should render an html link element with Icon 1`] = `
       Redirect To
     </span>
     <i
-      class="emotion-2 emotion-3"
+      class="emotion-2"
       color="inherit"
       data-testid="icon"
     >
