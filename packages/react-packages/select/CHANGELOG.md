@@ -1,5 +1,29 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.48
+
+### Minor Changes
+
+- feat: add components generator
+
+### Patch Changes
+
+- chore: fix test coverage configuration
+- chore: increase themes test coverage
+- chore: fix sonarqube issues
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-checkbox@1.0.0-beta.42
+  - @dt-dds/react-core@1.0.0-beta.43
+  - @dt-dds/react-icon@1.0.0-beta.44
+  - @dt-dds/react-icon-button@1.0.0-beta.11
+  - @dt-dds/react-label-field@1.0.0-beta.39
+  - @dt-dds/react-tooltip@1.0.0-beta.51
+  - @dt-dds/react-typography@1.0.0-beta.34
+  - @dt-dds/themes@1.0.0-beta.3
+
 ## 1.0.0-beta.47
 
 ### Minor Changes

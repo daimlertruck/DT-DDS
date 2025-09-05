@@ -1,5 +1,25 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.28
+
+### Minor Changes
+
+- feat: add components generator
+
+### Patch Changes
+
+- chore: fix test coverage configuration
+- chore: increase themes test coverage
+- chore: fix sonarqube issues
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.43
+  - @dt-dds/themes@1.0.0-beta.3
+
 ## 1.0.0-beta.27
 
 ### Minor Changes

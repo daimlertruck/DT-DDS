@@ -1,5 +1,12 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.12
+
+### Patch Changes
+
+- chore: fix test coverage configuration
+- 223664b: fix pkg publish by bumping version after npmjs.org unpublish
+
 ## 1.0.0-beta.11
 
 ### Patch Changes
