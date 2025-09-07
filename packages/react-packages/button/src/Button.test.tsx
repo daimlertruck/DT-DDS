@@ -107,7 +107,7 @@ describe('<Button /> component', () => {
     );
 
     expect(container.firstChild).toHaveStyleRule('width', '100%', {
-      media: '(max-width: 480px)',
+      media: `(max-width: ${theme.breakpoints.mq3}px)`,
     });
   });
 });
