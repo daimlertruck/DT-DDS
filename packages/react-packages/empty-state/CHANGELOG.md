@@ -1,5 +1,13 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.62
+
+### Patch Changes
+
+- fix: button-responsiveness
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.42
+
 ## 1.0.0-beta.61
 
 ### Minor Changes

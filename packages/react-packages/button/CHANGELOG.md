@@ -1,5 +1,12 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.42
+
+### Patch Changes
+
+- fix: button-responsiveness
+  - @dt-dds/react-spinner@1.0.0-beta.47
+
 ## 1.0.0-beta.41
 
 ### Minor Changes

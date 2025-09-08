@@ -1,5 +1,13 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.19
+
+### Patch Changes
+
+- fix: button-responsiveness
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.42
+
 ## 1.0.0-beta.18
 
 ### Minor Changes

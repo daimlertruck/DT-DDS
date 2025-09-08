@@ -1,5 +1,13 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.59
+
+### Patch Changes
+
+- fix: button-responsiveness
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.42
+
 ## 1.0.0-beta.58
 
 ### Minor Changes

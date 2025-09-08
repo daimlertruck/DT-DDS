@@ -1,5 +1,13 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- fix: button-responsiveness
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.19
+
 ## 1.0.0-beta.57
 
 ### Minor Changes
