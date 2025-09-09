@@ -1,5 +1,5 @@
 import { codes } from '@dt-dds/icons';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { Link, LinkProps } from '.';
 
@@ -22,8 +22,13 @@ const meta: Meta<LinkProps> = {
       defaultValue: { summary: false },
       description: 'Sets the link disabled',
     },
+    color: {
+      options: ['accent', 'secondary'],
+      control: { type: 'select' },
+      description: 'Sets the link color',
+    },
     variant: {
-      options: ['primary', 'secondary'],
+      options: ['standalone', 'inline'],
       control: { type: 'select' },
       description: 'Sets the link variant',
     },
@@ -47,6 +52,7 @@ export const Default: StoryObj<LinkProps> = {
     target: '_blank',
     size: 'medium',
     isDisabled: false,
-    variant: 'primary',
+    color: 'accent',
+    variant: 'standalone',
   },
 };

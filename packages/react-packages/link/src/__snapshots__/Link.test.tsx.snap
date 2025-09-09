@@ -1,51 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Link /> component Should render a disabled html link element 1`] = `
+exports[`<Link /> component should render a html link element with the correct title 1`] = `
 .emotion-0 {
-  color: #000000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  color: #DEDEDE;
-  cursor: not-allowed;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-}
-
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-}
-
-<div>
-  <a
-    class="emotion-0 emotion-1"
-    data-testid="link"
-    disabled=""
-  >
-    <span>
-      Redirect To
-    </span>
-  </a>
-</div>
-`;
-
-exports[`<Link /> component Should render a html link element with the correct title 1`] = `
-.emotion-0 {
-  color: #000000;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+  color: #00677F;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -63,13 +20,23 @@ exports[`<Link /> component Should render a html link element with the correct t
   text-transform: none;
 }
 
-.emotion-0:hover>span {
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:has(span):hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:has(span):hover span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
 .emotion-0:active {
-  color: #454545;
+  color: #003041;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -84,18 +51,14 @@ exports[`<Link /> component Should render a html link element with the correct t
     data-testid="link"
     href="/"
   >
-    <span>
-      Redirect To
-    </span>
+    Redirect To
   </a>
 </div>
 `;
 
-exports[`<Link /> component Should render an html link element as secondary 1`] = `
+exports[`<Link /> component should render an html link element as secondary 1`] = `
 .emotion-0 {
   color: #454545;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -113,7 +76,17 @@ exports[`<Link /> component Should render an html link element as secondary 1`] 
   text-transform: none;
 }
 
-.emotion-0:hover>span {
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-0:has(span):hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:has(span):hover span {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
@@ -131,88 +104,11 @@ exports[`<Link /> component Should render an html link element as secondary 1`] 
 <div>
   <a
     class="emotion-0 emotion-1"
+    color="secondary"
     data-testid="link"
     href="/"
   >
-    <span>
-      Redirect To
-    </span>
-  </a>
-</div>
-`;
-
-exports[`<Link /> component Should render an html link element with Icon 1`] = `
-.emotion-0 {
-  color: #454545;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 4px;
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-}
-
-.emotion-0:hover>span {
-  -webkit-text-decoration: underline;
-  text-decoration: underline;
-}
-
-.emotion-0:active {
-  color: #131313;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-}
-
-.emotion-2 {
-  font-family: DTUI-icons-outlined;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  font-variation-settings: 'FILL' 0;
-  color: inherit;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-}
-
-<div>
-  <a
-    class="emotion-0 emotion-1"
-    data-testid="link"
-    href="/"
-  >
-    <span>
-      Redirect To
-    </span>
-    <i
-      class="emotion-2"
-      color="inherit"
-      data-testid="icon"
-    >
-      10k
-    </i>
+    Redirect To
   </a>
 </div>
 `;
