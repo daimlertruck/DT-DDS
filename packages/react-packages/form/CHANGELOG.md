@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.30
+
+### Patch Changes
+
+- test: fix form test
+
 ## 1.0.0-beta.29
 
 ### Minor Changes

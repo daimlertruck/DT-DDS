@@ -1,5 +1,15 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.20
+
+### Minor Changes
+
+- feat: add link variant
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.43
+
 ## 1.0.0-beta.19
 
 ### Patch Changes
