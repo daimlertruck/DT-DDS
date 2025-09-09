@@ -1,0 +1,1 @@
+import{r as o}from"./index-Dl6G-zuu.js";const u=({ref:e,handler:n})=>{o.useEffect(()=>{const t=r=>{!e.current||e.current.contains(r.target)||n()};return e.current&&document.addEventListener("mousedown",t),()=>document.removeEventListener("mousedown",t)})};export{u};
