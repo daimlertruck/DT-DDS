@@ -5,16 +5,17 @@ import { forwardRef } from 'react';
 
 import { LinkStyled } from './Link.styled';
 
-import { iconSize, LinkSize, LinkVariant } from '.';
+import { iconSize, LinkSize, LinkColor, LinkVariant } from '.';
 
 export interface LinkProps
   extends BaseProps,
     React.AnchorHTMLAttributes<HTMLAnchorElement> {
   isDisabled?: boolean;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   size?: LinkSize;
-  variant?: LinkVariant;
+  color?: LinkColor;
   icon?: Code;
+  variant?: LinkVariant;
 }
 
 export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
@@ -29,12 +30,14 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       href,
       style,
       icon,
+      color,
       ...rest
     },
     ref
   ) => {
     return (
       <LinkStyled
+        color={color}
         data-testid={dataTestId ?? 'link'}
         disabled={isDisabled}
         ref={ref}
@@ -44,10 +47,14 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         {...(!isDisabled && { href, onClick })}
         {...rest}
       >
-        <span>{children}</span>
-        {icon ? (
-          <Icon code={icon} color='inherit' size={iconSize[size]} />
-        ) : null}
+        {variant === 'inline' || !icon ? (
+          children
+        ) : (
+          <>
+            <span>{children}</span>
+            <Icon code={icon} color='inherit' size={iconSize[size]} />
+          </>
+        )}
       </LinkStyled>
     );
   }
