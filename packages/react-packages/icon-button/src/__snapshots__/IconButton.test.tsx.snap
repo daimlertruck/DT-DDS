@@ -17,12 +17,12 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0 i {
   font-size: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #73AEC2;
+  color: #73aec2;
 }
 
 .emotion-0:focus-visible {
@@ -86,7 +86,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #73AEC2;
+  color: #73aec2;
 }
 
 .emotion-0:focus-visible {
@@ -151,7 +151,7 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #00677F;
+  color: #00677f;
 }
 
 .emotion-0:focus-visible {
@@ -210,12 +210,12 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0 i {
   font-size: 24px;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #00677F;
+  color: #00677f;
 }
 
 .emotion-0:focus-visible {

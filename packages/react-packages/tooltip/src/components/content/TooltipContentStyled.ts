@@ -17,13 +17,13 @@ interface TooltipContentStyledProps {
 
 export const TooltipContentStyled = styled.div<TooltipContentStyledProps>`
   ${({ theme, direction, top, left, background }) => `
-    ${theme.fontStyles.body3};
+    ${theme.fontStyles.bodySmRegular};
     width: max-content;
-    max-width: calc(200px + 2 * ${theme.spacing['4xs']});
+    max-width: calc(200px + 2 * ${theme.spacing.spacing_30});
     overflow-wrap: break-word;
-    padding: ${theme.spacing['4xs']};
+    padding: ${theme.spacing.spacing_30};
     background-color: ${theme.palette.secondary.dark};
-    box-shadow: ${theme.shadows.s};
+    box-shadow: ${theme.shadows.elevation_200};
     color: ${theme.palette.content.contrast};
     border-radius: ${theme.shape.tooltip};
     text-align: left;

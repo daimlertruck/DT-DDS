@@ -5,14 +5,14 @@ export const HeaderStyled = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 ${theme.spacing.xs} ${theme.spacing['2xs']};
+    padding: 0 ${theme.spacing.spacing_60} ${theme.spacing.spacing_50};
 
     &:has(+.hasScroll) {
-      box-shadow: ${theme.shadows.xs};
+      box-shadow: ${theme.shadows.elevation_100};
     }
 
-    @media only screen and (min-width: ${theme.breakpoints.s}px) {
-      padding: 0 ${theme.spacing.s} ${theme.spacing['2xs']};
+    @media only screen and (min-width: ${theme.breakpoints.mq2}px) {
+      padding: 0 ${theme.spacing.spacing_80} ${theme.spacing.spacing_50};
     }
   `}
 `;

@@ -131,7 +131,7 @@ describe('<TextArea /> component', () => {
 
       fireEvent.blur(textarea, { currentTarget: { value: 'Some value' } });
 
-      expect(label).toHaveStyle(`font-size: ${theme.fontStyles.body3}`);
+      expect(label).toHaveStyle(`font-size: ${theme.fontStyles.bodySmRegular}`);
       expect(label).toHaveStyle('transform: translateY(-45%)');
     });
   });

@@ -36,7 +36,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 
 .emotion-1:not(:disabled)>i:hover,
 .emotion-1:not(:disabled)>i:active {
-  color: #00677F;
+  color: #00677f;
 }
 
 .emotion-1:focus-visible {
@@ -84,15 +84,16 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #FFFFFF;
-  color: #00677F;
-  padding: 12px 32px;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #00677f;
+  padding: 12px 40px;
   cursor: default;
   white-space: nowrap;
   gap: 8px;
@@ -108,22 +109,23 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background-color: transparent;
-  color: #00677F;
-  padding: 12px 32px;
+  color: #00677f;
+  padding: 12px 40px;
   cursor: pointer;
   white-space: nowrap;
   gap: 8px;
 }
 
 .emotion-7:hover {
-  background-color: #CCE3EB;
+  background-color: #cce3eb;
 }
 
 .emotion-12 {
@@ -136,15 +138,16 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background-color: transparent;
-  color: #A3A3A3;
-  padding: 12px 32px;
+  color: #a3a3a3;
+  padding: 12px 40px;
   cursor: not-allowed;
   white-space: nowrap;
   gap: 8px;
@@ -267,7 +270,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 
 .emotion-1:not(:disabled)>i:hover,
 .emotion-1:not(:disabled)>i:active {
-  color: #00677F;
+  color: #00677f;
 }
 
 .emotion-1:focus-visible {
@@ -316,16 +319,17 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background-color: transparent;
-  border-bottom: 2px solid #00677F;
-  color: #00677F;
-  padding: 12px 32px;
+  border-bottom: 2px solid #00677f;
+  color: #00677f;
+  padding: 12px 40px;
   cursor: default;
   white-space: nowrap;
   gap: 8px;
@@ -341,22 +345,23 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background-color: transparent;
-  color: #00677F;
-  padding: 12px 32px;
+  color: #00677f;
+  padding: 12px 40px;
   cursor: pointer;
   white-space: nowrap;
   gap: 8px;
 }
 
 .emotion-7:hover {
-  background-color: #CCE3EB;
+  background-color: #cce3eb;
 }
 
 .emotion-12 {
@@ -369,15 +374,16 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   background-color: transparent;
-  color: #A3A3A3;
-  padding: 12px 32px;
+  color: #a3a3a3;
+  padding: 12px 40px;
   cursor: not-allowed;
   white-space: nowrap;
   gap: 8px;
@@ -386,7 +392,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 <div>
   <div
     class="emotion-0"
-    style="flex-direction: row; border-bottom: 1px solid #DEDEDE;"
+    style="flex-direction: row; border-bottom: 1px solid #dedede;"
   >
     <button
       class="emotion-1"

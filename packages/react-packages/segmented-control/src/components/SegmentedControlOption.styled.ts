@@ -4,18 +4,18 @@ export const SegmentedControlOptionStyled = styled.button<{
   showLabel: boolean;
 }>`
   ${({ theme, showLabel }) => `
-    ${theme.fontStyles.body2};
+    ${theme.fontStyles.bodyMdRegular};
 
     display: flex;
     align-items: center;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
     cursor: pointer;
     background-color: ${theme.palette.surface.contrast};
     color: ${theme.palette.content.default};
     border: none;
     border-radius: ${theme.shape.button};
-    padding: ${theme.spacing['5xs']} ${
-    theme.spacing[showLabel ? '3xs' : '5xs']
+    padding: ${theme.spacing.spacing_20} ${
+    theme.spacing[showLabel ? 'spacing_40' : 'spacing_20']
   };
 
     &:not(:disabled):hover {

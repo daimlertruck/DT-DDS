@@ -8,12 +8,12 @@ export const FormStyled = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  row-gap: ${({ theme }) => theme.spacing.medium};
+  row-gap: ${({ theme }) => theme.spacing.spacing_60};
 `;
 
 export const GroupStyled = styled.div`
   ${({ theme }) => `
-    row-gap: ${theme.spacing.xmedium};
+    row-gap: ${theme.spacing.spacing_50};
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -31,7 +31,7 @@ export const LabelStyled = styled.div`
 export const GroupItemsStyled = styled.div<GroupItemsStyledProps>`
   ${({ theme, disabled }) => `
     display: flex;
-    gap: ${theme.spacing.xmedium};
+    gap: ${theme.spacing.spacing_50};
     justify-content: stretch;
     align-items: start;
     flex-direction: column;

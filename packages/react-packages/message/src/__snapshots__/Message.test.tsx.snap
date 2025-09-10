@@ -3,7 +3,7 @@
 exports[`<Message /> component should render a Message with title & description, when type default 1`] = `
 .emotion-0 {
   padding: 12px 16px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@ exports[`<Message /> component should render a Message with title & description,
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #DEDEDE;
+  border: 1px dashed #dedede;
   width: 100%;
   height: 100%;
   gap: 8px;
@@ -39,22 +39,24 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-4 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -70,7 +72,7 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-6:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 <div>
@@ -120,7 +122,7 @@ exports[`<Message /> component should render a Message with title & description,
 exports[`<Message /> component should render a Message with title & description, when type error 1`] = `
 .emotion-0 {
   padding: 12px 16px;
-  background-color: #FFCBC0;
+  background-color: #ffcbc0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -134,7 +136,7 @@ exports[`<Message /> component should render a Message with title & description,
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #A00000;
+  border: 1px dashed #a00000;
   width: 100%;
   height: 100%;
   gap: 8px;
@@ -146,7 +148,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #A00000;
+  color: #a00000;
 }
 
 .emotion-4 {
@@ -165,22 +167,24 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-6 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -196,7 +200,7 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-8:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 <div>
@@ -210,7 +214,7 @@ exports[`<Message /> component should render a Message with title & description,
       type="error"
     >
       <svg
-        color="#A00000"
+        color="#a00000"
         data-testid="message-icon"
         fill="none"
         height="16px"
@@ -269,7 +273,7 @@ exports[`<Message /> component should render a Message with title & description,
 exports[`<Message /> component should render a Message with title & description, when type informative 1`] = `
 .emotion-0 {
   padding: 12px 16px;
-  background-color: #E8F4FF;
+  background-color: #e8f4ff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -283,7 +287,7 @@ exports[`<Message /> component should render a Message with title & description,
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #008DFC;
+  border: 1px dashed #008dfc;
   width: 100%;
   height: 100%;
   gap: 8px;
@@ -295,7 +299,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #008DFC;
+  color: #008dfc;
 }
 
 .emotion-4 {
@@ -314,22 +318,24 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-6 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -345,7 +351,7 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-8:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 <div>
@@ -412,7 +418,7 @@ exports[`<Message /> component should render a Message with title & description,
 exports[`<Message /> component should render a Message with title & description, when type success 1`] = `
 .emotion-0 {
   padding: 12px 16px;
-  background-color: #EFF5EB;
+  background-color: #eff5eb;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -426,7 +432,7 @@ exports[`<Message /> component should render a Message with title & description,
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #6EA046;
+  border: 1px dashed #6ea046;
   width: 100%;
   height: 100%;
   gap: 8px;
@@ -438,7 +444,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #6EA046;
+  color: #6ea046;
 }
 
 .emotion-4 {
@@ -457,22 +463,24 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-6 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -488,7 +496,7 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-8:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 <div>
@@ -555,7 +563,7 @@ exports[`<Message /> component should render a Message with title & description,
 exports[`<Message /> component should render a Message with title & description, when type warning 1`] = `
 .emotion-0 {
   padding: 12px 16px;
-  background-color: #FBF1E7;
+  background-color: #fbf1e7;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -569,7 +577,7 @@ exports[`<Message /> component should render a Message with title & description,
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #E69123;
+  border: 1px dashed #e69123;
   width: 100%;
   height: 100%;
   gap: 8px;
@@ -581,7 +589,7 @@ exports[`<Message /> component should render a Message with title & description,
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #E69123;
+  color: #e69123;
 }
 
 .emotion-4 {
@@ -600,22 +608,24 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-6 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -631,7 +641,7 @@ exports[`<Message /> component should render a Message with title & description,
 }
 
 .emotion-8:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 <div>

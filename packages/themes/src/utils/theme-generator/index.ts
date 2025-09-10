@@ -67,17 +67,17 @@ function generateThemeExports(themeNames: string[]): string {
   const exports = themeNames
     .map(
       (themeName) =>
-        `export { default as ${themeName.replace(
-          /-/g,
-          ''
-        )}Theme } from './${themeName}';`
+        `export { default as ${
+          themeName === 'daimler-truck'
+            ? 'default'
+            : themeName.replace(/-/g, '')
+        }Theme } from './${themeName}';
+
+        `
     )
     .join('\n');
 
-  return `${exports}
-
-export * from './default';
-`;
+  return exports;
 }
 
 /**

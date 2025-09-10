@@ -9,17 +9,18 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-0:hover {
-  background-color: #F3F3F5;
-  box-shadow: 0px 1px 2px 0px rgba(16, 20, 40, 0.05);
+  background-color: #f3f3f5;
+  box-shadow: 0px 1px 2px 0px #1018280d;
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,12 +66,13 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: grid;
   grid-template-rows: 0fr;
   -webkit-transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;
@@ -125,22 +127,23 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 .emotion-0 {
   position: relative;
   width: 100%;
-  background-color: #FAFAFA;
-  border-bottom: 1px solid #DEDEDE;
+  background-color: #fafafa;
+  border-bottom: 1px solid #dedede;
 }
 
 .emotion-0:hover {
-  background-color: #F3F3F5;
-  box-shadow: 0px 1px 2px 0px rgba(16, 20, 40, 0.05);
+  background-color: #f3f3f5;
+  box-shadow: 0px 1px 2px 0px #1018280d;
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,12 +189,13 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: grid;
   grid-template-rows: 0fr;
   -webkit-transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;

@@ -2,12 +2,13 @@
 
 exports[`<Breadcrumb /> component renders nav element with the correct breadcrumb items 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #454545;
   overflow: hidden;
 }
@@ -37,18 +38,19 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
 }
 
 .emotion-4:not(:last-child) {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #00677F;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #00677f;
   cursor: pointer;
 }
 
 .emotion-4:not(:last-child) svg {
-  color: #00677F;
+  color: #00677f;
 }
 
 .emotion-4:not(:last-child) * {

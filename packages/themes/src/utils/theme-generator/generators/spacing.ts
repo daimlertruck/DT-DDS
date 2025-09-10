@@ -33,7 +33,15 @@ export function generateSpacing(tokens: TokenFile, themeName: string): string {
 
   validateRequiredTokens(themeName, spacingTokens, requiredSpacingTokens);
 
-  const spacing: any = {
+  const spacing = {
+    ...Object.fromEntries(
+      Object.keys(spacingTokens).map((tokenKey: string) => [
+        tokenKey.replace(/-/g, '_'),
+        getTokenValue(spacingTokens, tokenKey),
+      ])
+    ),
+
+    // Legacy (keeping for backward compatibility)
     none: getTokenValue(spacingTokens, 'spacing-0'),
     '6xs': getTokenValue(spacingTokens, 'spacing-10'),
     '5xs': getTokenValue(spacingTokens, 'spacing-20'),
@@ -49,7 +57,6 @@ export function generateSpacing(tokens: TokenFile, themeName: string): string {
     '3xl': getTokenValue(spacingTokens, 'spacing-300'),
     '4xl': getTokenValue(spacingTokens, 'spacing-400'),
     '5xl': getTokenValue(spacingTokens, 'spacing-500'),
-    // Legacy
     xxxsmall: getTokenValue(spacingTokens, 'spacing-10'),
     xxsmall: getTokenValue(spacingTokens, 'spacing-20'),
     xsmall: getTokenValue(spacingTokens, 'spacing-30'),

@@ -32,7 +32,7 @@ export const AccordionStyled = styled.div<AccordionStyledProps>`
         : `
           &:hover {
             background-color: ${theme.palette.surface.default};
-            box-shadow: ${theme.shadows.xs};
+            box-shadow: ${theme.shadows.elevation_100};
           }
         `
     }

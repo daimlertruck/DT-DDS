@@ -2,12 +2,13 @@
 
 exports[`<Tooltip /> component renders a tooltip with the direction as bottom and background as full 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -15,8 +16,8 @@ exports[`<Tooltip /> component renders a tooltip with the direction as bottom an
   overflow-wrap: break-word;
   padding: 8px;
   background-color: #131313;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
-  color: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px #1018281a;
+  color: #ffffff;
   border-radius: 0px;
   text-align: left;
   white-space: initial;
@@ -56,12 +57,13 @@ exports[`<Tooltip /> component renders a tooltip with the direction as bottom an
 
 exports[`<Tooltip /> component renders a tooltip with the direction as left and background as opacity 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -69,8 +71,8 @@ exports[`<Tooltip /> component renders a tooltip with the direction as left and 
   overflow-wrap: break-word;
   padding: 8px;
   background-color: #131313;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
-  color: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px #1018281a;
+  color: #ffffff;
   border-radius: 0px;
   text-align: left;
   white-space: initial;
@@ -111,12 +113,13 @@ exports[`<Tooltip /> component renders a tooltip with the direction as left and 
 
 exports[`<Tooltip /> component renders a tooltip with the direction as right and background as opacity 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -124,8 +127,8 @@ exports[`<Tooltip /> component renders a tooltip with the direction as right and
   overflow-wrap: break-word;
   padding: 8px;
   background-color: #131313;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
-  color: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px #1018281a;
+  color: #ffffff;
   border-radius: 0px;
   text-align: left;
   white-space: initial;
@@ -166,12 +169,13 @@ exports[`<Tooltip /> component renders a tooltip with the direction as right and
 
 exports[`<Tooltip /> component renders a tooltip with the direction as top and background as full 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -179,8 +183,8 @@ exports[`<Tooltip /> component renders a tooltip with the direction as top and b
   overflow-wrap: break-word;
   padding: 8px;
   background-color: #131313;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
-  color: #FFFFFF;
+  box-shadow: 0px 1px 3px 0px #1018281a;
+  color: #ffffff;
   border-radius: 0px;
   text-align: left;
   white-space: initial;

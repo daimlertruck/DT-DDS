@@ -39,7 +39,7 @@ export const RadioInputStyled = styled.input`
 
 export const RadioLabelStyled = styled.label`
   ${({ theme }) => `
-    ${theme.fontStyles.p};
+    ${theme.fontStyles.bodyMdRegular};
     color: ${theme.palette.content.default};
     cursor: inherit;
   `}

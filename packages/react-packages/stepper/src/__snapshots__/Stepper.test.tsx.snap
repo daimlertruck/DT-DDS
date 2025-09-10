@@ -13,7 +13,7 @@ exports[`<Stepper /> component render default Stepper should render with correct
   list-style: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: undefinedpx) {
   .emotion-0 {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;

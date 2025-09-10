@@ -127,7 +127,7 @@ describe('<TextField /> component', () => {
 
     fireEvent.focus(input);
 
-    expect(label).toHaveStyle('font-size: 0.75rem');
+    expect(label).toHaveStyle('font-size: 12px');
     expect(label).toHaveStyle('transform: translateY(-45%)');
     expect(input).toHaveStyle('outline: 0;');
     expect(inputWrapper).toHaveStyle('border-width: 1px;');
@@ -170,7 +170,7 @@ describe('<TextField /> component', () => {
 
       fireEvent.blur(input, { currentTarget: { value: 'Some value' } });
 
-      expect(label).toHaveStyle('font-size: 0.75rem');
+      expect(label).toHaveStyle('font-size: 12px');
       expect(label).toHaveStyle('transform: translateY(-45%)');
     });
   });

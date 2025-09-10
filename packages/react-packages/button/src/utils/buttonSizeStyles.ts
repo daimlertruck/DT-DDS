@@ -9,21 +9,27 @@ export const buttonSizeStyles = (
 ) =>
   ({
     large: `
-      ${theme.fontStyles.button1}
+      ${theme.fontStyles.buttonLg}
       padding: ${
-        isOutline ? `calc(${theme.spacing['2xs']} - 2px)` : theme.spacing['2xs']
+        isOutline
+          ? `calc(${theme.spacing.spacing_50} - 2px)`
+          : theme.spacing.spacing_50
       }  ${theme.spacing.s};
     `,
     medium: `
-      ${theme.fontStyles.button2}
+      ${theme.fontStyles.buttonMd}
       padding: ${
-        isOutline ? `calc(${theme.spacing['3xs']} - 2px)` : theme.spacing['3xs']
+        isOutline
+          ? `calc(${theme.spacing.spacing_40} - 2px)`
+          : theme.spacing.spacing_40
       } ${theme.spacing.xs};
     `,
     small: `
-      ${theme.fontStyles.button3}
+      ${theme.fontStyles.buttonSm}
       padding: ${
-        isOutline ? `calc(${theme.spacing['4xs']} - 2px)` : theme.spacing['4xs']
-      } ${theme.spacing['2xs']};
+        isOutline
+          ? `calc(${theme.spacing.spacing_30} - 2px)`
+          : theme.spacing.spacing_30
+      } ${theme.spacing.spacing_50};
     `,
   }[size]);

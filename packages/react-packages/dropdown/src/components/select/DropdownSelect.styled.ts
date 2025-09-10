@@ -33,8 +33,8 @@ export const SelectDropdownStyled = styled.button<SelectDropdownStyledProps>`
 
     return `
       background: ${theme.palette.surface.contrast};
-      padding: ${theme.spacing.xsmall} ${
-      hasBorder ? theme.spacing.xmedium : '0'
+      padding: ${theme.spacing.spacing_30} ${
+      hasBorder ? theme.spacing.spacing_50 : '0'
     };
       position: relative;
       display: flex;

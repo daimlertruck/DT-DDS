@@ -12,8 +12,8 @@ export const BodyStyled = styled.div<BodyStyledProps>`
     transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-in-out;
     color: ${theme.palette.content.dark};
     
-    padding: 0 ${theme.spacing['2xs']} ${
-    isOpenState ? theme.spacing['2xs'] : 0
+    padding: 0 ${theme.spacing.spacing_50} ${
+    isOpenState ? theme.spacing.spacing_50 : 0
   };
       
     & > div {

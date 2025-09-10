@@ -10,7 +10,7 @@ const TOGGLE_RADIUS = 20;
 export const ToggleWrapperStyled = styled.div<ToggleWrapperStyledProps>`
   ${({ theme, hasLabel }) => `
     display: flex;
-    gap: ${hasLabel ? theme.spacing['5xs'] : theme.spacing.none};
+    gap: ${hasLabel ? theme.spacing.spacing_20 : theme.spacing.spacing_0};
     border-radius: ${TOGGLE_RADIUS}px;
     align-items: center;
     width: fit-content;
@@ -70,7 +70,7 @@ export const ToggleCheckBoxStyled = styled.input`
     }
 
     & ~ span {
-      ${theme.fontStyles.body2};
+      ${theme.fontStyles.bodyMdRegular};
       cursor: ${disabled ? 'not-allowed' : 'pointer'};
       color: ${
         disabled ? theme.palette.content.light : theme.palette.content.default

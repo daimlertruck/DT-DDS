@@ -23,7 +23,7 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: none;
   border-radius: 3px;
   cursor: default;
@@ -49,20 +49,14 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18.76px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
   text-align: center;
   padding: 6px 8px;
   margin: 0px;
   width: 50px;
   height: 32px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #292929;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 3px;
 }
 
@@ -71,12 +65,13 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 10px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18.76px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -96,7 +91,7 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: none;
   border-radius: 3px;
   cursor: pointer;

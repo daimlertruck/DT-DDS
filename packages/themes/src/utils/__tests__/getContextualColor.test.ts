@@ -1,4 +1,4 @@
-import { theme as defaultTheme } from '../../themes';
+import { defaultTheme } from '../../themes';
 import { getContextualColor } from '../getContextualColor';
 
 describe('getContextualColor', () => {

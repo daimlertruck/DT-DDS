@@ -242,7 +242,7 @@ export const TextField = ({
           <Typography
             color={showError ? 'error.default' : messageColor}
             element='span'
-            fontStyles='body3'
+            fontStyles='bodySmRegular'
           >
             {message}
           </Typography>

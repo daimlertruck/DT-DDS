@@ -73,7 +73,7 @@ export const emitToast = ({
 
 const Toaster = ({ gutter = 8, ...props }: ToasterProviderProps) => {
   const theme = useTheme();
-  const small = useMedia(`(max-width: ${theme.breakpoints.s}px)`);
+  const small = useMedia(`(max-width: ${theme.breakpoints.mq2}px)`);
   const position = small ? smallPosition : defaultPosition;
   const margin = small ? 8 : 16;
 

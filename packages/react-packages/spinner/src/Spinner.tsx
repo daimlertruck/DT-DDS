@@ -19,11 +19,11 @@ const spinnerTextColor: Record<SpinnerColorScheme, PaletteKeys> = {
 };
 
 const spinnerTextSize: Record<SpinnerSize, keyof Theme['fontStyles']> = {
-  'extra-small': 'body4',
-  small: 'body4',
-  medium: 'body3',
-  large: 'body3',
-  'extra-large': 'body2',
+  'extra-small': 'bodyXsRegular',
+  small: 'bodyXsRegular',
+  medium: 'bodySmRegular',
+  large: 'bodySmRegular',
+  'extra-large': 'bodyMdRegular',
 };
 
 export const Spinner = ({
@@ -41,7 +41,7 @@ export const Spinner = ({
         <Typography
           color={spinnerTextColor[colorScheme]}
           fontStyles={spinnerTextSize[size]}
-          style={{ marginTop: theme.spacing['3xs'] }}
+          style={{ marginTop: theme.spacing.spacing_40 }}
         >
           {loadingText}
         </Typography>

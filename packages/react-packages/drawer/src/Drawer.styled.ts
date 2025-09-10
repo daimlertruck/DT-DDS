@@ -48,11 +48,11 @@ export const DrawerStyled = styled.div<DrawerBaseProps>`
     transition: transform ${theme.animations.emphasizedDecelerate.duration}
       ${theme.animations.emphasizedDecelerate.timingFunction};
 
-    @media only screen and (min-width: ${theme.breakpoints.s}px) {
+    @media only screen and (min-width: ${theme.breakpoints.mq2}px) {
       width: 500px;
-      border-radius: ${theme.radius['3xs']} ${theme.radius.none}
-        ${theme.radius.none} ${theme.radius['3xs']};
-      box-shadow: ${theme.shadows.s};
+      border-radius: ${theme.radius.radius_40} ${theme.radius.radius_0}
+        ${theme.radius.radius_0} ${theme.radius.radius_40};
+      box-shadow: ${theme.shadows.elevation_200};
       padding: ${theme.spacing.s} 0;
     }
   `}

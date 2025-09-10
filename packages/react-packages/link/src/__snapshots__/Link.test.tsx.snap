@@ -2,7 +2,7 @@
 
 exports[`<Link /> component should render a html link element with the correct title 1`] = `
 .emotion-0 {
-  color: #00677F;
+  color: #00677f;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -12,12 +12,13 @@ exports[`<Link /> component should render a html link element with the correct t
   -ms-flex-align: center;
   align-items: center;
   gap: 4px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0:hover {
@@ -68,12 +69,13 @@ exports[`<Link /> component should render an html link element as secondary 1`] 
   -ms-flex-align: center;
   align-items: center;
   gap: 4px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0:hover {

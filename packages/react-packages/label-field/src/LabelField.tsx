@@ -37,7 +37,11 @@ export const LabelField = ({
     >
       {children}
       {isRequired ? (
-        <Typography color='error.default' element='span' fontStyles='body3'>
+        <Typography
+          color='error.default'
+          element='span'
+          fontStyles='bodySmRegular'
+        >
           *
         </Typography>
       ) : null}

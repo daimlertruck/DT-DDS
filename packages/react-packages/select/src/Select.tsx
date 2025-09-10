@@ -302,7 +302,7 @@ const Select = ({
             <Typography
               color={hasError ? 'error.default' : 'content.light'}
               element='span'
-              fontStyles='body3'
+              fontStyles='bodySmRegular'
             >
               {helperMessage}
             </Typography>

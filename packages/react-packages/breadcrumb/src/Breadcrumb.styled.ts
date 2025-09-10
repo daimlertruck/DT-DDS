@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const BreadcrumbStyled = styled.nav`
   ${({ theme }) => `
-    ${theme.fontStyles.body2}
+    ${theme.fontStyles.bodyMdRegular}
     color: ${theme.palette.secondary.default};
     overflow: hidden;
   `}
@@ -16,7 +16,7 @@ export const ListStyled = styled.ul`
   display: flex;
   align-items: center;
   white-space: nowrap;
-  gap: ${({ theme }) => theme.spacing['4xs']};
+  gap: ${({ theme }) => theme.spacing.spacing_30};
 `;
 
 export const ItemStyled = styled.li`
@@ -24,7 +24,7 @@ export const ItemStyled = styled.li`
     display: flex;
 
     &:not(:last-child) {
-      ${theme.fontStyles.link2}
+      ${theme.fontStyles.linkMdRegular}
       color: ${theme.palette.accent.default};
       cursor: pointer;
 
@@ -65,6 +65,6 @@ export const ItemContainerStyled = styled.div`
   ${({ theme }) => `
     display: flex;
     align-items: center;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
   `}
 `;

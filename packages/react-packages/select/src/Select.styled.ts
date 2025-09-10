@@ -47,12 +47,12 @@ export const SelectMenuStyled = styled.ul<{ isOpen: boolean }>`
   overflow: auto;
 
   ${({ isOpen, theme }) => `
-    margin-top:${theme.spacing['5xs']};
-    padding:  ${theme.spacing['2xs']} ${theme.spacing.none};
+    margin-top:${theme.spacing.spacing_20};
+    padding:  ${theme.spacing.spacing_50} ${theme.spacing.spacing_0};
     background-color: ${theme.palette.surface.contrast};
     display: ${isOpen ? 'block' : 'none'};
     border-radius: ${theme.shape.formField};
-    box-shadow: ${theme.shadows.s};
+    box-shadow: ${theme.shadows.elevation_200};
   `}
 `;
 
@@ -69,7 +69,7 @@ export const SelectValueStyled = styled.div`
   white-space: nowrap;
 
   ${({ theme }) => `
-    ${theme.fontStyles.body2}
+    ${theme.fontStyles.bodyMdRegular}
     color: ${theme.palette.content.default};
   `}
 `;
@@ -90,12 +90,12 @@ export const SelectContainerStyled = styled.div<SelectContainerStyledProps>`
     variant = 'outlined',
     fill = 'default',
   }) => `
-    ${theme.fontStyles.body2}
+    ${theme.fontStyles.bodyMdRegular}
     color: ${
       disabled ? theme.palette.content.light : theme.palette.content.default
     };
-    padding: ${theme.spacing['4xs']} ${theme.spacing['3xs']};
-    gap: ${theme.spacing['4xs']} ;
+    padding: ${theme.spacing.spacing_30} ${theme.spacing.spacing_40};
+    gap: ${theme.spacing.spacing_30} ;
     background-color: ${getThemedBackgroundFill(fill, theme)};
     border-radius: ${theme.shape.formField};
     cursor: ${disabled ? 'not-allowed' : 'pointer'};
@@ -122,6 +122,6 @@ export const SelectActionContainerStyled = styled.div`
 
 export const HelperSelectFieldMessageStyled = styled.div`
   ${({ theme }) => `
-    padding-left: ${theme.spacing['2xs']};
+    padding-left: ${theme.spacing.spacing_50};
   `}
 `;

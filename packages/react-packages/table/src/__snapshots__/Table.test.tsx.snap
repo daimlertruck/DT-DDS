@@ -15,9 +15,9 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-row;
   border-radius: 0px;
   box-shadow: none;
-  padding: 0;
+  padding: 0px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   cursor: auto;
 }
 
@@ -25,68 +25,72 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   text-align: left;
   color: #131313;
   padding: 0 16px 16px;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 0px;
   right: unset;
   position: -webkit-sticky;
   position: sticky;
   z-index: 2;
-  background: #FFFFFF;
-  box-shadow: 1px 0 0 0 #F3F3F5;
+  background: #ffffff;
+  box-shadow: 1px 0 0 0 #f3f3f5;
 }
 
 .emotion-8 {
   text-align: left;
   color: #131313;
   padding: 0 16px 16px;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-10 {
   text-align: left;
   color: #131313;
   padding: 0 16px 16px;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: unset;
   right: 0px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 2;
-  background: #FFFFFF;
-  box-shadow: -1px 0 0 0 #F3F3F5;
+  background: #ffffff;
+  box-shadow: -1px 0 0 0 #f3f3f5;
 }
 
 .emotion-12 {
   text-align: left;
   color: #131313;
   padding: 0 16px 16px;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: unset;
   right: 0px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 2;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: unset;
 }
 
@@ -95,16 +99,16 @@ exports[`<Table /> component renders a Basic Table 1`] = `
 }
 
 .emotion-14 tr:hover td {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .emotion-16 {
   display: table-row;
   border-radius: 0px;
   box-shadow: none;
-  padding: 0;
+  padding: 0px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   cursor: pointer;
 }
 
@@ -112,23 +116,24 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #F3F3F5;
+  border-top: 1px solid #f3f3f5;
   padding: 16px;
   text-align: left;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 0px;
   right: unset;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
-  background: #FFFFFF;
-  box-shadow: 1px 0 0 0 #F3F3F5;
+  background: #ffffff;
+  box-shadow: 1px 0 0 0 #f3f3f5;
 }
 
 .emotion-18:first-of-type {
@@ -140,16 +145,17 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #F3F3F5;
+  border-top: 1px solid #f3f3f5;
   padding: 16px;
   text-align: left;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-20:first-of-type {
@@ -161,23 +167,24 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #F3F3F5;
+  border-top: 1px solid #f3f3f5;
   padding: 16px;
   text-align: left;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: unset;
   right: 0px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
-  background: #FFFFFF;
-  box-shadow: -1px 0 0 0 #F3F3F5;
+  background: #ffffff;
+  box-shadow: -1px 0 0 0 #f3f3f5;
 }
 
 .emotion-22:first-of-type {
@@ -189,22 +196,23 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #F3F3F5;
+  border-top: 1px solid #f3f3f5;
   padding: 16px;
   text-align: left;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: unset;
   right: 0px;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: unset;
 }
 
@@ -387,9 +395,9 @@ exports[`<Table /> component renders a Basic Table without fixed columns 1`] = `
   display: table-row;
   border-radius: 0px;
   box-shadow: none;
-  padding: 0;
+  padding: 0px;
   width: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   cursor: auto;
 }
 
@@ -397,12 +405,13 @@ exports[`<Table /> component renders a Basic Table without fixed columns 1`] = `
   text-align: left;
   color: #131313;
   padding: 0 16px 16px;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-14 {
@@ -410,23 +419,24 @@ exports[`<Table /> component renders a Basic Table without fixed columns 1`] = `
 }
 
 .emotion-14 tr:hover td {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .emotion-18 {
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #F3F3F5;
+  border-top: 1px solid #f3f3f5;
   padding: 16px;
   text-align: left;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-18:first-of-type {

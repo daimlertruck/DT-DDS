@@ -2,14 +2,15 @@
 
 exports[`<Step /> component <Step.Counter /> component renders StepCounter with props correctly 1`] = `
 .emotion-0 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -28,16 +29,17 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   background-color: #000000;
   border: 2px solid #000000;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #000000;
 }
 
@@ -52,7 +54,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
       class="emotion-2"
       color="primary.default"
       data-testid="typography"
-      style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+      style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
     >
       1
     </span>
@@ -62,14 +64,15 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
 
 exports[`<Step /> component <Step.Counter /> component renders StepCounter with props correctly 2`] = `
 .emotion-0 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -100,7 +103,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #FAFAFA;
+  color: #fafafa;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -116,7 +119,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   >
     <i
       class="emotion-2"
-      color="#FAFAFA"
+      color="#fafafa"
       data-testid="icon"
     >
       check
@@ -127,14 +130,15 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
 
 exports[`<Step /> component <Step.Counter /> component renders StepCounter with props correctly 3`] = `
 .emotion-0 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -151,19 +155,20 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   height: 24px;
   border-radius: 50%;
   background-color: #292929;
-  border: 2px solid #A3A3A3;
-  color: #A3A3A3;
-  background-color: #FFFFFF;
+  border: 2px solid #a3a3a3;
+  color: #a3a3a3;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
 }
 
 <div>
@@ -177,7 +182,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
       class="emotion-2"
       color="content.light"
       data-testid="typography"
-      style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+      style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
     >
       1
     </span>
@@ -187,14 +192,15 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
 
 exports[`<Step /> component <Step.Counter /> component renders StepCounter with props correctly 4`] = `
 .emotion-0 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -210,20 +216,21 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #A00000;
-  border: 2px solid #A00000;
-  color: #A00000;
-  background-color: #FFFFFF;
+  background-color: #a00000;
+  border: 2px solid #a00000;
+  color: #a00000;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 <div>
@@ -237,7 +244,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
       class="emotion-2"
       color="error.default"
       data-testid="typography"
-      style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+      style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
     >
       1
     </span>
@@ -247,14 +254,15 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
 
 exports[`<Step /> component <Step.Counter /> component renders StepCounter with props correctly 5`] = `
 .emotion-0 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -270,20 +278,21 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #A00000;
-  border: 2px solid #A00000;
-  color: #A00000;
-  background-color: #FFFFFF;
+  background-color: #a00000;
+  border: 2px solid #a00000;
+  color: #a00000;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 <div>
@@ -297,7 +306,7 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
       class="emotion-2"
       color="error.default"
       data-testid="typography"
-      style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+      style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
     >
       1
     </span>
@@ -307,12 +316,6 @@ exports[`<Step /> component <Step.Counter /> component renders StepCounter with 
 
 exports[`<Step /> component <Step.Label /> component renders StepCounter with props correctly 1`] = `
 .emotion-0 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
   color: #000000;
 }
 
@@ -328,12 +331,6 @@ exports[`<Step /> component <Step.Label /> component renders StepCounter with pr
 
 exports[`<Step /> component <Step.Label /> component renders StepCounter with props correctly 2`] = `
 .emotion-0 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
   color: #000000;
 }
 
@@ -349,13 +346,7 @@ exports[`<Step /> component <Step.Label /> component renders StepCounter with pr
 
 exports[`<Step /> component <Step.Label /> component renders StepCounter with props correctly 3`] = `
 .emotion-0 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 <div>
@@ -370,13 +361,7 @@ exports[`<Step /> component <Step.Label /> component renders StepCounter with pr
 
 exports[`<Step /> component <Step.Label /> component renders StepCounter with props correctly 4`] = `
 .emotion-0 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  color: #a00000;
 }
 
 <div>
@@ -391,13 +376,7 @@ exports[`<Step /> component <Step.Label /> component renders StepCounter with pr
 
 exports[`<Step /> component <Step.Label /> component renders StepCounter with props correctly 5`] = `
 .emotion-0 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  color: #a00000;
 }
 
 <div>
@@ -424,14 +403,15 @@ exports[`<Step /> component render Step renders Step with props correctly 1`] = 
 }
 
 .emotion-2 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -450,26 +430,21 @@ exports[`<Step /> component render Step renders Step with props correctly 1`] = 
   background-color: #000000;
   border: 2px solid #000000;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-4 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #000000;
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
   color: #000000;
 }
 
@@ -487,7 +462,7 @@ exports[`<Step /> component render Step renders Step with props correctly 1`] = 
         class="emotion-4"
         color="primary.default"
         data-testid="typography"
-        style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+        style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
       >
         1
       </span>
@@ -516,14 +491,15 @@ exports[`<Step /> component render Step renders Step with props correctly 2`] = 
 }
 
 .emotion-2 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -554,7 +530,7 @@ exports[`<Step /> component render Step renders Step with props correctly 2`] = 
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #FAFAFA;
+  color: #fafafa;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -562,12 +538,6 @@ exports[`<Step /> component render Step renders Step with props correctly 2`] = 
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
   color: #000000;
 }
 
@@ -583,7 +553,7 @@ exports[`<Step /> component render Step renders Step with props correctly 2`] = 
     >
       <i
         class="emotion-4"
-        color="#FAFAFA"
+        color="#fafafa"
         data-testid="icon"
       >
         check
@@ -613,14 +583,15 @@ exports[`<Step /> component render Step renders Step with props correctly 3`] = 
 }
 
 .emotion-2 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -637,29 +608,24 @@ exports[`<Step /> component render Step renders Step with props correctly 3`] = 
   height: 24px;
   border-radius: 50%;
   background-color: #292929;
-  border: 2px solid #A3A3A3;
-  color: #A3A3A3;
-  background-color: #FFFFFF;
+  border: 2px solid #a3a3a3;
+  color: #a3a3a3;
+  background-color: #ffffff;
 }
 
 .emotion-4 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 <div>
@@ -676,7 +642,7 @@ exports[`<Step /> component render Step renders Step with props correctly 3`] = 
         class="emotion-4"
         color="content.light"
         data-testid="typography"
-        style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+        style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
       >
         1
       </span>
@@ -705,14 +671,15 @@ exports[`<Step /> component render Step renders Step with props correctly 4`] = 
 }
 
 .emotion-2 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -728,30 +695,25 @@ exports[`<Step /> component render Step renders Step with props correctly 4`] = 
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #A00000;
-  border: 2px solid #A00000;
-  color: #A00000;
-  background-color: #FFFFFF;
+  background-color: #a00000;
+  border: 2px solid #a00000;
+  color: #a00000;
+  background-color: #ffffff;
 }
 
 .emotion-4 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  color: #a00000;
 }
 
 <div>
@@ -768,7 +730,7 @@ exports[`<Step /> component render Step renders Step with props correctly 4`] = 
         class="emotion-4"
         color="error.default"
         data-testid="typography"
-        style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+        style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
       >
         1
       </span>
@@ -797,14 +759,15 @@ exports[`<Step /> component render Step renders Step with props correctly 5`] = 
 }
 
 .emotion-2 {
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 13.4px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #FFFFFF;
-  border: 0;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -820,30 +783,25 @@ exports[`<Step /> component render Step renders Step with props correctly 5`] = 
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #A00000;
-  border: 2px solid #A00000;
-  color: #A00000;
-  background-color: #FFFFFF;
+  background-color: #a00000;
+  border: 2px solid #a00000;
+  color: #a00000;
+  background-color: #ffffff;
 }
 
 .emotion-4 {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16.08px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 .emotion-5 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21.44px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  color: #a00000;
 }
 
 <div>
@@ -860,7 +818,7 @@ exports[`<Step /> component render Step renders Step with props correctly 5`] = 
         class="emotion-4"
         color="error.default"
         data-testid="typography"
-        style="font-weight: 700; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
+        style="width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;"
       >
         1
       </span>

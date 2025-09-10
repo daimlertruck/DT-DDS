@@ -18,9 +18,9 @@ export const FooterStyled = styled.div<FooterProps>`
       border-top: ${
         hasBorder ? `1px solid ${theme.palette.border.default}` : 'none'
       };
-      gap: ${theme.spacing['3xs']};
+      gap: ${theme.spacing.spacing_40};
       padding: ${theme.spacing.xs};
-      @media only screen and (max-width: ${theme.breakpoints.s}px) {
+      @media only screen and (max-width: ${theme.breakpoints.mq32}px) {
         flex-direction: column-reverse;
       }
   `}

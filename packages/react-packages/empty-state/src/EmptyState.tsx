@@ -28,7 +28,7 @@ EmptyState.Content = ({
       <Typography color='content.dark' element='h2' fontStyles='h4'>
         {title}
       </Typography>
-      <Typography color='content.default' fontStyles='body1'>
+      <Typography color='content.default' fontStyles='bodyLgRegular'>
         {description}
       </Typography>
     </EmptyStateContentStyled>

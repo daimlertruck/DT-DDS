@@ -16,8 +16,8 @@ exports[`<Radio /> component renders Radio group with Radio 1 checked and Radio 
 }
 
 .emotion-2 {
-  background: #FFFFFF;
-  border: 1px solid #DEDEDE;
+  background: #ffffff;
+  border: 1px solid #dedede;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -33,7 +33,7 @@ exports[`<Radio /> component renders Radio group with Radio 1 checked and Radio 
 }
 
 .emotion-2:disabled+label {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-2:checked {
@@ -54,12 +54,13 @@ exports[`<Radio /> component renders Radio group with Radio 1 checked and Radio 
 }
 
 .emotion-4 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24.12px;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   cursor: inherit;
 }

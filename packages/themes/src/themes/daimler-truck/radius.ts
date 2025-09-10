@@ -1,6 +1,21 @@
 import { CustomTheme as Theme } from '../../types';
 
 export const radius: Theme['radius'] = {
+  radius_0: '0px',
+  radius_10: '2px',
+  radius_20: '4px',
+  radius_30: '8px',
+  radius_40: '12px',
+  radius_50: '16px',
+  radius_60: '24px',
+  radius_70: '32px',
+  radius_80: '40px',
+  radius_90: '48px',
+  radius_100: '56px',
+  radius_200: '64px',
+  radius_300: '80px',
+  radius_400: '96px',
+  radius_500: '100px',
   none: '0px',
   '6xs': '2px',
   '5xs': '4px',

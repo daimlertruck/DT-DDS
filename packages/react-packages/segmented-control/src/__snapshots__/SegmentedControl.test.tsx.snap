@@ -11,7 +11,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 4px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
   border-radius: 0px;
 }
 
@@ -27,12 +27,13 @@ exports[`SegmentedControl renders without errors 1`] = `
 }
 
 .emotion-3 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,7 +44,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   align-items: center;
   gap: 4px;
   cursor: pointer;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #292929;
   border: none;
   border-radius: 0px;
@@ -51,7 +52,7 @@ exports[`SegmentedControl renders without errors 1`] = `
 }
 
 .emotion-3:not(:disabled):hover {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   color: #292929;
 }
 
@@ -61,20 +62,20 @@ exports[`SegmentedControl renders without errors 1`] = `
 
 .emotion-3:not(:disabled)[aria-pressed="true"] {
   background-color: #000000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .emotion-3:not(:disabled)[aria-pressed="true"] i {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .emotion-3:disabled {
-  color: #A3A3A3;
+  color: #a3a3a3;
   cursor: not-allowed;
 }
 
 .emotion-3:disabled i {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-5 {

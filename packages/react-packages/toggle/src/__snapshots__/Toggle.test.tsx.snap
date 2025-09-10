@@ -30,12 +30,12 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
 }
 
 .emotion-2+label {
-  background: #DEDEDE;
+  background: #dedede;
   cursor: pointer;
 }
 
 .emotion-2:checked+label {
-  background: #00677F;
+  background: #00677f;
 }
 
 .emotion-2:checked+label::after {
@@ -46,12 +46,13 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
 }
 
 .emotion-2~span {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #292929;
   -webkit-user-select: none;
@@ -77,7 +78,7 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   margin: 2px;
@@ -135,12 +136,12 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
 }
 
 .emotion-2+label {
-  background: #F3F3F5;
+  background: #f3f3f5;
   cursor: not-allowed;
 }
 
 .emotion-2:checked+label {
-  background: #CCE3EB;
+  background: #cce3eb;
 }
 
 .emotion-2:checked+label::after {
@@ -151,14 +152,15 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
 }
 
 .emotion-2~span {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: not-allowed;
-  color: #A3A3A3;
+  color: #a3a3a3;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -182,7 +184,7 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   margin: 2px;
@@ -241,12 +243,12 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
 }
 
 .emotion-2+label {
-  background: #F3F3F5;
+  background: #f3f3f5;
   cursor: not-allowed;
 }
 
 .emotion-2:checked+label {
-  background: #CCE3EB;
+  background: #cce3eb;
 }
 
 .emotion-2:checked+label::after {
@@ -257,14 +259,15 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
 }
 
 .emotion-2~span {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: not-allowed;
-  color: #A3A3A3;
+  color: #a3a3a3;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -288,7 +291,7 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   margin: 2px;
@@ -322,7 +325,7 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 0;
+  gap: 0px;
   border-radius: 20px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -346,12 +349,12 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
 }
 
 .emotion-2+label {
-  background: #DEDEDE;
+  background: #dedede;
   cursor: pointer;
 }
 
 .emotion-2:checked+label {
-  background: #00677F;
+  background: #00677f;
 }
 
 .emotion-2:checked+label::after {
@@ -362,12 +365,13 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
 }
 
 .emotion-2~span {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   cursor: pointer;
   color: #292929;
   -webkit-user-select: none;
@@ -393,7 +397,7 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   margin: 2px;

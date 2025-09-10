@@ -37,16 +37,17 @@ exports[`<Select /> component should render Select 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   padding: 8px 12px;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   border-radius: 0px;
   cursor: pointer;
   border-width: 1px;
@@ -74,20 +75,22 @@ exports[`<Select /> component should render Select 1`] = `
 }
 
 .emotion-8 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -133,11 +136,11 @@ exports[`<Select /> component should render Select 1`] = `
   max-height: 180px;
   overflow: auto;
   margin-top: 4px;
-  padding: 16px 0;
-  background-color: #FFFFFF;
+  padding: 16px 0px;
+  background-color: #ffffff;
   display: block;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-14 {
@@ -152,28 +155,29 @@ exports[`<Select /> component should render Select 1`] = `
   align-items: center;
   padding: 8px 16px;
   gap: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #292929;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-14:hover,
 .emotion-14:focus-within {
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-14[aria-disabled="true"]:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-16 {
@@ -181,12 +185,13 @@ exports[`<Select /> component should render Select 1`] = `
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-34 {
@@ -194,13 +199,14 @@ exports[`<Select /> component should render Select 1`] = `
 }
 
 .emotion-36 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
 }
 
 <div>
@@ -373,20 +379,21 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   padding: 8px 12px;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   border-radius: 0px;
   cursor: pointer;
   border-width: 1px;
-  border-color: #C1C1C1;
+  border-color: #c1c1c1;
   border-style: solid;
 }
 
@@ -410,20 +417,22 @@ exports[`<Select /> component should render Select as multi select 1`] = `
 }
 
 .emotion-8 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -469,11 +478,11 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   max-height: 180px;
   overflow: auto;
   margin-top: 4px;
-  padding: 16px 0;
-  background-color: #FFFFFF;
+  padding: 16px 0px;
+  background-color: #ffffff;
   display: none;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 <div>

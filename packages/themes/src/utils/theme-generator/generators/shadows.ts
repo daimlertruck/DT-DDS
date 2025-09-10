@@ -12,11 +12,6 @@ export function generateShadows(tokens: TokenFile, themeName: string): string {
     throw new Error(`Missing Elevations for theme '${themeName}'`);
   }
 
-  console.log(`🔍 Validating shadows for theme '${themeName}'...`);
-  console.log(
-    `   Available elevation tokens: ${Object.keys(elevations).join(', ')}`
-  );
-
   function getShadowValue(elevationKey: string): string {
     const elevation = elevations[elevationKey];
     if (!elevation) {
@@ -56,8 +51,16 @@ export function generateShadows(tokens: TokenFile, themeName: string): string {
     return `${x} ${y} ${blur} ${spread} ${shadow}`;
   }
 
-  const shadows: any = {
+  const shadows = {
+    ...Object.fromEntries(
+      Object.keys(elevations).map((key: string) => [
+        `elevation_${key}`,
+        getShadowValue(key),
+      ])
+    ),
+
     none: 'none',
+    // Legacy (keeping for backward compatibility)
     0: getShadowValue('100'),
     '0.5': getShadowValue('100'),
     1: getShadowValue('200'),

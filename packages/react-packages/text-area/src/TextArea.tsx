@@ -146,7 +146,7 @@ export const TextArea = ({
             <Typography
               color={showError ? 'error.default' : messageColor}
               element='span'
-              fontStyles='body3'
+              fontStyles='bodySmRegular'
             >
               {message}
             </Typography>
@@ -156,7 +156,7 @@ export const TextArea = ({
           <Typography
             color='content.medium'
             element='span'
-            fontStyles='body2'
+            fontStyles='bodyMdRegular'
             id={testId}
             style={{ marginLeft: 'auto' }}
           >

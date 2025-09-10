@@ -27,13 +27,13 @@ export const CellStyled = styled.td<CellStyledProps>`
     min-width: ${COLUMN_MIN_WIDTH}px;
     word-break: break-word;
     border-top: 1px solid ${theme.palette.border.light};
-    padding: ${theme.spacing['2xs']};
+    padding: ${theme.spacing.spacing_50};
     text-align: ${textAlign};
     color: ${theme.palette.content.default};
-    ${theme.fontStyles.body2};
+    ${theme.fontStyles.bodyMdRegular};
 
     &:first-of-type {
-      padding-top: ${theme.spacing['2xs']};
+      padding-top: ${theme.spacing.spacing_50};
       border-bottom: none;
     }
 

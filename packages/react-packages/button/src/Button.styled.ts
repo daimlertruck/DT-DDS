@@ -23,7 +23,7 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   border: 2px solid transparent;
 
   ${({ theme, variant, color, size }) => `
-    gap: ${theme.spacing['4xs']};
+    gap: ${theme.spacing.spacing_30};
     border-radius: ${theme.shape.button}; 
     ${buttonSizeStyles(size, theme, variant === 'outlined')};
     ${buttonVariantStyles(variant, theme, color)}

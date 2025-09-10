@@ -71,9 +71,8 @@ const StepCounter = ({
         <Typography
           color={color === 'disabled' ? 'content.light' : `${color}.default`}
           element='span'
-          fontStyles='pXXSmall'
+          fontStyles='bodyXsBold'
           style={{
-            fontWeight: 700,
             width: 24,
             height: 24,
             display: 'flex',

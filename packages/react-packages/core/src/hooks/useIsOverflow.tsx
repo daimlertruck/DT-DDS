@@ -7,7 +7,7 @@ import useMedia from './useMedia';
 export const useIsOverflow = <T extends HTMLElement>() => {
   const childrenRef = useRef<T>(null);
   const theme = useTheme();
-  const isDesktop = useMedia(`(min-width: ${theme.breakpoints.m}px)`);
+  const isDesktop = useMedia(`(min-width: ${theme.breakpoints.mq3}px)`);
   const [overflow, setOverflow] = useState<boolean>(false);
 
   const truncateResize = useCallback(() => {

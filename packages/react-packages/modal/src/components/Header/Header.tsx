@@ -38,7 +38,11 @@ export const ModalHeader = ({
         </IconButton>
       </Box>
       {subTitle ? (
-        <Typography color='content.default' element='h5' fontStyles='body1'>
+        <Typography
+          color='content.default'
+          element='h5'
+          fontStyles='bodyLgRegular'
+        >
           {subTitle}
         </Typography>
       ) : null}

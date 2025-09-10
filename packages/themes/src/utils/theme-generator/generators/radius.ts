@@ -33,7 +33,15 @@ export function generateRadius(tokens: TokenFile, themeName: string): string {
 
   validateRequiredTokens(themeName, radiusTokens, requiredRadiusTokens);
 
-  const radius: any = {
+  const radius = {
+    ...Object.fromEntries(
+      Object.keys(radiusTokens).map((tokenKey: string) => [
+        tokenKey.replace(/-/g, '_'),
+        getTokenValue(radiusTokens, tokenKey),
+      ])
+    ),
+
+    // Legacy (keeping for backward compatibility)
     none: getTokenValue(radiusTokens, 'radius-0'),
     '6xs': getTokenValue(radiusTokens, 'radius-10'),
     '5xs': getTokenValue(radiusTokens, 'radius-20'),

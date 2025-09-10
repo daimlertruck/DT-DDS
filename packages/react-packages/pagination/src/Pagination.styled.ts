@@ -37,7 +37,7 @@ export const ArrowStyled = styled.button<ArrowStyledProps>`
 
 export const InputStyled = styled.input<InputStyledProps>`
   ${({ theme, hasError }) => `
-    ${theme.fontStyles.pXSmall};
+    ${theme.fontStyles.bodyMdRegularXSmall};
     text-align: center;
     padding: 6px 8px;
     margin: 0px;

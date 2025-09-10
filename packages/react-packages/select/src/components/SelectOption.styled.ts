@@ -15,8 +15,11 @@ export const SelectOptionStyled = styled.li<SelectOptionProps>`
   ${({ theme, isMulti, isHighlighted }) => `
     cursor:pointer;
     align-items: center;
-    ${!isMulti && `padding: ${theme.spacing['4xs']} ${theme.spacing['2xs']}`};
-    gap: ${isMulti ? theme.spacing['4xs'] : theme.spacing['5xs']};
+    ${
+      !isMulti &&
+      `padding: ${theme.spacing.spacing_30} ${theme.spacing.spacing_50}`
+    };
+    gap: ${isMulti ? theme.spacing.spacing_30 : theme.spacing.spacing_20};
     background-color: ${
       isHighlighted && !isMulti
         ? theme.palette.primary.light
@@ -24,10 +27,13 @@ export const SelectOptionStyled = styled.li<SelectOptionProps>`
     };
 
     color: ${theme.palette.content.default};
-    ${theme.fontStyles.body2}
+    ${theme.fontStyles.bodyMdRegular}
 
     & > label {
-      ${isMulti && `padding: ${theme.spacing['4xs']} ${theme.spacing['2xs']}`};
+      ${
+        isMulti &&
+        `padding: ${theme.spacing.spacing_30} ${theme.spacing.spacing_50}`
+      };
     }
     
     &:hover,&:focus-within {
@@ -51,6 +57,6 @@ export const SelectOptionContentStyled = styled.div<SelectOptionContentProps>`
   width: 100%;
 
   ${({ theme, isSelected }) => `
-    ${theme.fontStyles[isSelected ? 'body2Bold' : 'body2']};
+    ${theme.fontStyles[isSelected ? 'bodyMdBold' : 'bodyMdRegular']};
   `}
 `;

@@ -33,7 +33,7 @@ export const TextAreaWrapper = styled.div`
 `;
 
 export const TextAreaMessageStyled = styled.div`
-  ${({ theme }) => `padding-left: ${theme.spacing['2xs']}`};
+  ${({ theme }) => `padding-left: ${theme.spacing.spacing_50}`};
 `;
 
 export const TextAreaMessages = styled.div`
@@ -47,7 +47,7 @@ export const TextAreaMessages = styled.div`
 
 export const TextAreaStyled = styled.textarea<TextAreaStyledProps>`
   ${({ theme, enableResize = false, backgroundFill }) => `
-    ${theme.fontStyles.body1}
+    ${theme.fontStyles.bodyLgRegular}
 
     background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
 

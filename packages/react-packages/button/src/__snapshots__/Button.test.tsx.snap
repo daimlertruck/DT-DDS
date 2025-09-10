@@ -22,27 +22,28 @@ exports[`<Button /> component renders button html element with the correct title
   border: 2px solid transparent;
   gap: 8px;
   border-radius: 0px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   padding: 12px 24px;
   border: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
 }
 
 .emotion-0:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #454545;
 }
 
 .emotion-0:disabled {
   cursor: not-allowed;
-  color: #FFFFFF;
-  background-color: #DEDEDE;
+  color: #ffffff;
+  background-color: #dedede;
 }
 
 .emotion-0:focus-visible {
@@ -122,12 +123,13 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
   border: 2px solid transparent;
   gap: 8px;
   border-radius: 0px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   padding: calc(12px - 2px) 24px;
   color: #000000;
   border-color: #000000;
@@ -137,7 +139,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 .emotion-0:hover {
   color: #000000;
   border-color: #000000;
-  background-color: #DEDEDE;
+  background-color: #dedede;
 }
 
 .emotion-0:active {
@@ -147,8 +149,8 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 
 .emotion-0:disabled {
   cursor: not-allowed;
-  color: #DEDEDE;
-  border-color: #DEDEDE;
+  color: #dedede;
+  border-color: #dedede;
   background-color: transparent;
 }
 
@@ -180,7 +182,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 .emotion-3 {
   width: 14px;
   height: 14px;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   border-top: 2px solid #000000;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
@@ -246,27 +248,28 @@ exports[`<Button /> component when loading is true renders a spinner light theme
   border: 2px solid transparent;
   gap: 8px;
   border-radius: 0px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   padding: 12px 24px;
   border: 0;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #000000;
 }
 
 .emotion-0:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #454545;
 }
 
 .emotion-0:disabled {
   cursor: not-allowed;
-  color: #FFFFFF;
-  background-color: #DEDEDE;
+  color: #ffffff;
+  background-color: #dedede;
 }
 
 .emotion-0:focus-visible {
@@ -297,9 +300,9 @@ exports[`<Button /> component when loading is true renders a spinner light theme
 .emotion-3 {
   width: 14px;
   height: 14px;
-  border: 2px solid #838383;
+  border: 2px solid #636363;
   border-radius: 50%;
-  border-top: 2px solid #FFFFFF;
+  border-top: 2px solid #ffffff;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
   animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
 }
