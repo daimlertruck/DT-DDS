@@ -1,6 +1,21 @@
 import { CustomTheme as Theme } from '../../types';
 
 export const spacing: Theme['spacing'] = {
+  spacing_0: '0px',
+  spacing_10: '2px',
+  spacing_20: '4px',
+  spacing_30: '8px',
+  spacing_40: '12px',
+  spacing_50: '16px',
+  spacing_60: '24px',
+  spacing_70: '32px',
+  spacing_80: '40px',
+  spacing_90: '48px',
+  spacing_100: '56px',
+  spacing_200: '64px',
+  spacing_300: '80px',
+  spacing_400: '96px',
+  spacing_500: '128px',
   none: '0px',
   '6xs': '2px',
   '5xs': '4px',

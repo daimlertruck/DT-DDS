@@ -21,7 +21,7 @@ export const DropdownDetail = ({
       <Typography
         color={hasError ? 'error.default' : messageColor}
         element='span'
-        fontStyles='body3'
+        fontStyles='bodySmRegular'
       >
         {children}
       </Typography>

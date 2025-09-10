@@ -26,7 +26,9 @@ const labelColorState = (
 };
 
 const floatingLabel = (isActive: boolean, theme: Theme) => {
-  return `${isActive ? theme.fontStyles.body3 : theme.fontStyles.body2}
+  return `${
+    isActive ? theme.fontStyles.bodySmRegular : theme.fontStyles.bodyMdRegular
+  }
 
   left: 12px;
   top: 16px;
@@ -39,7 +41,7 @@ const floatingLabel = (isActive: boolean, theme: Theme) => {
 
 export const LabelFieldStyled = styled.label<LabelFieldProps>`
   ${({ theme, isActive, isFloating, disabled, hasError }) => `
-   ${theme.fontStyles.body2Bold};
+   ${theme.fontStyles.bodyMdBold};
 
     color: ${labelColorState(disabled!, hasError!, isFloating!, theme)};
     cursor: inherit;

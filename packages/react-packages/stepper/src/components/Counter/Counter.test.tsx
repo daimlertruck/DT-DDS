@@ -16,7 +16,7 @@ describe('<Counter /> component', () => {
 
     const counterEl = screen.getByTestId('counter');
 
-    expect(counterEl).toHaveStyleRule('color', '#FFFFFF');
+    expect(counterEl).toHaveStyleRule('color', '#ffffff');
     expect(counterEl).toHaveStyleRule('background-color', '#292929');
   });
 
@@ -38,8 +38,8 @@ describe('<Counter /> component', () => {
 
   it.each`
     outlined | expectedBorder         | expectedBackgroundColor
-    ${true}  | ${'2px solid #008DFC'} | ${'#FFFFFF'}
-    ${false} | ${'0'}                 | ${'#008DFC'}
+    ${true}  | ${'2px solid #008dfc'} | ${'#ffffff'}
+    ${false} | ${'0px'}               | ${'#008dfc'}
   `(
     'should have border and background equals to $expectedBorder, $expectedBackgroundColor when outlined is $outlined ',
     ({
@@ -65,8 +65,8 @@ describe('<Counter /> component', () => {
 
   it.each`
     color            | expectedColor
-    ${'disabled'}    | ${'#A3A3A3'}
-    ${'informative'} | ${'#008DFC'}
+    ${'disabled'}    | ${'#a3a3a3'}
+    ${'informative'} | ${'#008dfc'}
   `(
     'should have border and color equals to $expectedColor when color is $color and outlined is true ',
     ({

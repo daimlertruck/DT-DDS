@@ -18,7 +18,7 @@ export const AvatarStyled = styled.div<AvatarStyledProps>`
         justify-content: center;
         font-weight: 700;
         text-transform: uppercase;
-        border-radius: ${theme.radius.full};
+        border-radius: ${theme.radius.radius_500};
         cursor: pointer;
       }
     `;

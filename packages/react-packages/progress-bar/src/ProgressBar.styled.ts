@@ -49,7 +49,7 @@ export const ProgressBarFieldStyled = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
     min-width: 48px;
   `}
 `;
@@ -59,7 +59,7 @@ export const ProgressBarWrapperStyled = styled.div`
     display: grid;
     grid-template-columns: minmax(48px, 1fr) 28px 16px;
     align-items: center;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
     width: 100%;
     height: 16px;
   `}
@@ -71,9 +71,9 @@ export const ProgressBarStyled = styled.div<StyledProgressBarProps>`
     height: ${progressBarHeights[size]};
     background-color: ${progressBarColors(theme)[state].background};
     transition: width 0.2s ease-in-out;
-    border-radius: ${theme.radius.none} ${theme.shape.progressbar} ${
+    border-radius: ${theme.radius.radius_0} ${theme.shape.progressbar} ${
     theme.shape.progressbar
-  } ${theme.radius.none}; 
+  } ${theme.radius.radius_0}; 
   `};
 `;
 
@@ -87,14 +87,14 @@ export const ProgressBarTrackStyled = styled.div`
 `;
 export const ProgressBarHelperTextStyled = styled.p<StyledProgressBarTextProps>`
   ${({ theme, state }) => `
-    ${theme.fontStyles.body3}
+    ${theme.fontStyles.bodySmRegular}
     color: ${progressBarColors(theme)[state].helper};
   `};
 `;
 
 export const ProgressBarPercentageTextStyled = styled.div<StyledProgressBarTextProps>`
   ${({ theme, state }) => `
-    ${theme.fontStyles.body3}
+    ${theme.fontStyles.bodySmRegular}
     text-align: center;
     color: ${progressBarColors(theme)[state].percentage};
   `};

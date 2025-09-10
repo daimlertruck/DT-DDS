@@ -15,9 +15,9 @@ export const HeaderStyled = styled.div<HeaderProps>`
     border-bottom: ${
       hasBorder ? `1px solid ${theme.palette.border.default}` : 'none'
     };
-    gap: ${theme.spacing['4xs']};
+    gap: ${theme.spacing.spacing_30};
 
-    @media only screen and (min-width: ${theme.breakpoints.s}px) {
+    @media only screen and (min-width: ${theme.breakpoints.mq32}px) {
       padding-top: ${theme.spacing.s};
     }
 

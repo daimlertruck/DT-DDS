@@ -9,9 +9,9 @@ export interface CounterStyledProps {
 
 export const CounterStyled = styled.span<CounterStyledProps>`
   ${({ theme, color, outlined, isLarge }) => `
-    ${theme.fontStyles.tag}
+    ${theme.fontStyles.bodySmRegular}
     color: ${theme.palette.content.contrast};
-    border: ${theme.spacing.none};
+    border: ${theme.spacing.spacing_0};
     align-items: center;
     justify-content: center;
     display: flex;

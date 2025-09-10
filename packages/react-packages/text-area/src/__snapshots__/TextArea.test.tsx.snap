@@ -21,20 +21,22 @@ exports[`<TextArea /> component renders disabled input 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -47,12 +49,12 @@ exports[`<TextArea /> component renders disabled input 1`] = `
 }
 
 .emotion-3 {
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   position: relative;
   padding: 25px 0px 0px 10px;
   width: 100%;
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 
 .emotion-3:focus-within,
@@ -66,13 +68,14 @@ exports[`<TextArea /> component renders disabled input 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #F3F3F5;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f3f3f5;
   border-style: none;
   width: 100%;
   color: #131313;
@@ -155,20 +158,22 @@ exports[`<TextArea /> component renders input with an value 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -181,12 +186,12 @@ exports[`<TextArea /> component renders input with an value 1`] = `
 }
 
 .emotion-3 {
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   position: relative;
   padding: 25px 0px 0px 10px;
   width: 100%;
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 
 .emotion-3:focus-within,
@@ -200,13 +205,14 @@ exports[`<TextArea /> component renders input with an value 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #F3F3F5;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f3f3f5;
   border-style: none;
   width: 100%;
   color: #131313;
@@ -289,20 +295,22 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -315,12 +323,12 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
 }
 
 .emotion-3 {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   position: relative;
   padding: 25px 0px 0px 10px;
   width: 100%;
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 
 .emotion-3:focus-within,
@@ -334,13 +342,14 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #FAFAFA;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #fafafa;
   border-style: none;
   width: 100%;
   color: #131313;
@@ -421,20 +430,22 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -447,12 +458,12 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
 }
 
 .emotion-3 {
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   position: relative;
   padding: 25px 0px 0px 10px;
   width: 100%;
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
+  border: 1px solid #dedede;
 }
 
 .emotion-3:focus-within,
@@ -466,13 +477,14 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #F3F3F5;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f3f3f5;
   border-style: none;
   width: 100%;
   color: #131313;
@@ -553,20 +565,22 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -579,12 +593,12 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-3 {
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   position: relative;
   padding: 25px 0px 0px 10px;
   width: 100%;
   border-radius: 0px 0px 0 0;
-  border-bottom: 1px solid #DEDEDE;
+  border-bottom: 1px solid #dedede;
 }
 
 .emotion-3:focus-within,
@@ -598,13 +612,14 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 16px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  background-color: #F3F3F5;
+  letter-spacing: 0px;
+  line-height: 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #f3f3f5;
   border-style: none;
   width: 100%;
   color: #131313;

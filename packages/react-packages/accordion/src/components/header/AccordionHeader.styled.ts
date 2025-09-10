@@ -6,8 +6,8 @@ export const HeaderStyled = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: ${theme.spacing['4xs']};
-    padding: ${theme.spacing['2xs']};
+    gap: ${theme.spacing.spacing_30};
+    padding: ${theme.spacing.spacing_50};
     cursor: pointer;
     user-select: none;
     color: ${theme.palette.surface.dark};

@@ -63,7 +63,7 @@ export const tagVariantColors = ({
 
   return {
     solid: {
-      border: theme.spacing.none,
+      border: theme.spacing.spacing_0,
       color: theme.palette.content.contrast,
       backgroundColor: colors?.bgColor,
       ...(hasHover && {

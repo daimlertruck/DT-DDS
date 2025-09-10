@@ -25,7 +25,7 @@ export const TextFieldStyled = styled.div<{
   ${({ theme, isFloatingLabel = true, hasPrefix = false }) => `
     display: flex;
     flex-direction: column;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
     width: 100%;
     position: relative;
     
@@ -72,7 +72,7 @@ export const TextFieldStyled = styled.div<{
 
 export const InputFieldStyled = styled.input<InputFieldStyledProps>`
   ${({ theme, isFloatingLabel, isSearchType }) => `
-    ${theme.fontStyles.body2}
+    ${theme.fontStyles.bodyMdRegular}
     border: 0;
     outline: 0;
     width: 100%;
@@ -93,7 +93,7 @@ export const InputFieldStyled = styled.input<InputFieldStyledProps>`
 
     padding: ${
       isFloatingLabel && !isSearchType
-        ? `${theme.spacing.xs} 0 ${theme.spacing['4xs']} 0`
+        ? `${theme.spacing.xs} 0 ${theme.spacing.spacing_30} 0`
         : ''
     };
 
@@ -142,7 +142,7 @@ export const InputExtraSuffixStyled = styled.div<{ isClickable?: boolean }>`
 `;
 
 export const TextFieldMessageStyled = styled.div`
-  padding-left: ${({ theme }) => theme.spacing['2xs']};
+  padding-left: ${({ theme }) => theme.spacing.spacing_50};
 `;
 
 export const ResetInputIconStyled = styled.div`
@@ -174,10 +174,10 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     width: 100%;
     height: 54px;
     color: ${theme.palette.content.default};
-    gap: ${theme.spacing['4xs']};
+    gap: ${theme.spacing.spacing_30};
     background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
     
-    padding-inline: ${theme.spacing['3xs']};
+    padding-inline: ${theme.spacing.spacing_40};
 
     ${
       variant === 'outlined'

@@ -2,14 +2,14 @@
 
 exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 .emotion-0 {
-  margin: 0;
+  margin: 0px;
   display: inline-block;
   position: relative;
   width: 100%;
 }
 
 .emotion-2 {
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 8px 16px;
   position: relative;
   display: -webkit-box;
@@ -28,7 +28,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   height: 53px;
   cursor: pointer;
   outline: none;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   border-width: 1px;
   border-color: #131313;
   border-style: solid;
@@ -44,22 +44,24 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-4 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -97,12 +99,12 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-8 {
-  background: #FFFFFF;
-  border: 1px solid #DEDEDE;
+  background: #ffffff;
+  border: 1px solid #dedede;
   border-radius: 0px;
   width: 100%;
-  padding: 16px 0;
-  margin: 4px 0;
+  padding: 16px 0px;
+  margin: 4px 0px;
   position: absolute;
   right: 0;
   z-index: 3;
@@ -111,12 +113,13 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-10 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   list-style: none;
   padding: 8px 16px;
@@ -125,7 +128,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-10:hover {
-  background: #DEDEDE;
+  background: #dedede;
   cursor: pointer;
 }
 
@@ -143,13 +146,14 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-16 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
 }
 
 <div>

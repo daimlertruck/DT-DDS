@@ -1,3 +1,1 @@
-export { default as daimlertruckTheme } from './daimler-truck';
-
-export * from './default';
+export { default as defaultTheme } from './daimler-truck';

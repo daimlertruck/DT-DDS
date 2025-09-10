@@ -102,14 +102,14 @@ export const DropdownSelect = ({
         <div style={{ overflow: 'hidden' }}>
           <Typography
             color={disabled ? 'content.light' : 'content.default'}
-            fontStyles='body3'
+            fontStyles='bodySmRegular'
           >
             {label}
             {isRequired ? (
               <Typography
                 color='error.default'
                 element='span'
-                fontStyles='body3'
+                fontStyles='bodySmRegular'
               >
                 *
               </Typography>
@@ -117,7 +117,7 @@ export const DropdownSelect = ({
           </Typography>
           <Typography
             color={disabled ? 'content.light' : 'content.default'}
-            fontStyles='body2'
+            fontStyles='bodyMdRegular'
             style={{ textOverflow: 'ellipsis', overflow: 'hidden' }}
           >
             {!state.value ? 'Select an option' : state.text}

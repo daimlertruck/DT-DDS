@@ -27,17 +27,17 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-2 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-2:has(input[disabled]) i,
 .emotion-2:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-2:has(input[readonly]:not(input[disabled])) label,
 .emotion-2:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-2 input[type="search"]::-webkit-search-decoration,
@@ -48,20 +48,22 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-3 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -90,10 +92,10 @@ exports[`<Form /> component renders simple form 1`] = `
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-4:focus-within,
@@ -103,17 +105,17 @@ exports[`<Form /> component renders simple form 1`] = `
 
 .emotion-4:focus-within:has(input[readonly]:not([disabled])),
 .emotion-4:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-4:focus-within:has(input[disabled]),
 .emotion-4:hover:has(input[disabled]),
 .emotion-4:focus-within:has(input[disabled])>*,
 .emotion-4:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -173,12 +175,13 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -338,17 +341,17 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-6 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-6:has(input[disabled]) i,
 .emotion-6:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-6 input[type="search"]::-webkit-search-decoration,
@@ -359,20 +362,22 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -401,10 +406,10 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-8:focus-within,
@@ -414,17 +419,17 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 
 .emotion-8:focus-within:has(input[readonly]:not([disabled])),
 .emotion-8:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-8:focus-within:has(input[disabled]),
 .emotion-8:hover:has(input[disabled]),
 .emotion-8:focus-within:has(input[disabled])>*,
 .emotion-8:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -484,12 +489,13 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-9 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -631,17 +637,17 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-6 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-6:has(input[disabled]) i,
 .emotion-6:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-6 input[type="search"]::-webkit-search-decoration,
@@ -652,20 +658,22 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-7 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -694,10 +702,10 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-8:focus-within,
@@ -707,17 +715,17 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 
 .emotion-8:focus-within:has(input[readonly]:not([disabled])),
 .emotion-8:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-8:focus-within:has(input[disabled]),
 .emotion-8:hover:has(input[disabled]),
 .emotion-8:focus-within:has(input[disabled])>*,
 .emotion-8:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -777,12 +785,13 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-9 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -924,12 +933,13 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-6 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #000000;
 }
 
@@ -974,17 +984,17 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-9 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-9:has(input[disabled]) i,
 .emotion-9:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-9:has(input[readonly]:not(input[disabled])) label,
 .emotion-9:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-9 input[type="search"]::-webkit-search-decoration,
@@ -995,20 +1005,22 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-10 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -1037,10 +1049,10 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-11:focus-within,
@@ -1050,17 +1062,17 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 
 .emotion-11:focus-within:has(input[readonly]:not([disabled])),
 .emotion-11:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-11:focus-within:has(input[disabled]),
 .emotion-11:hover:has(input[disabled]),
 .emotion-11:focus-within:has(input[disabled])>*,
 .emotion-11:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -1120,12 +1132,13 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;

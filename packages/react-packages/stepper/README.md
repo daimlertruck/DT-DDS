@@ -2,7 +2,7 @@
 
 Steppers convey progress through steps. These steps can be numbered or not. However, they are sequential.
 
-By default, for screens smaller than our `theme.breakpoints.md` the stepper orientation is always vertical.
+By default, for screens smaller than our `theme.breakpoints.mq3d` the stepper orientation is always vertical.
 
 ## Stepper Usage
 

@@ -21,8 +21,8 @@ export const ColumnHeaderStyled = styled.th<ColumnHeaderStyled>`
   }) => `
     text-align: ${textAlign};
     color: ${theme.palette.content.dark};
-    padding: 0 ${theme.spacing['2xs']} ${theme.spacing['2xs']};
-    ${theme.fontStyles.button3};
+    padding: 0 ${theme.spacing.spacing_50} ${theme.spacing.spacing_50};
+    ${theme.fontStyles.buttonSm};
 
     ${
       (fixed || fixedEnd) &&

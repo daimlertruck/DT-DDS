@@ -8,8 +8,11 @@ export type {
 export type { FontFace } from './types/fontFace';
 
 // Theme exports
-export { theme as defaultTheme } from './themes/default';
-export { daimlertruckTheme } from './themes/index';
+export { defaultTheme } from './themes';
+
+// Offers Backward compatibility
+export type { CustomTheme as Theme } from './types/theme';
+export { defaultTheme as theme } from './themes';
 
 // Theme utilities
 export { getTextStyles } from './utils/typography';

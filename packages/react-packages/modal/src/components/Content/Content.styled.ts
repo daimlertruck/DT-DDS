@@ -6,7 +6,7 @@ export const ContentStyled = styled.div`
     overflow-y: auto;
     position: relative;
 
-    @media only screen and (max-width: ${theme.breakpoints.s}px) {
+    @media only screen and (max-width: ${theme.breakpoints.mq32}px) {
       flex: 1;
       }
     `}

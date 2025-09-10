@@ -67,7 +67,7 @@ export const Message = ({
 
 Message.Title = ({ children }: BaseProps) => {
   return (
-    <Typography color='content.dark' element='h2' fontStyles='body2Bold'>
+    <Typography color='content.dark' element='h2' fontStyles='bodyMdBold'>
       {children}
     </Typography>
   );
@@ -75,7 +75,7 @@ Message.Title = ({ children }: BaseProps) => {
 
 Message.Description = ({ children }: BaseProps) => {
   return (
-    <Typography color='content.default' fontStyles='body3'>
+    <Typography color='content.default' fontStyles='bodySmRegular'>
       {children}
     </Typography>
   );

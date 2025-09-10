@@ -154,9 +154,10 @@ describe('<Drawer /> component', () => {
     mockIntersectionObserve(false);
 
     expect(screen.getByTestId('drawer-body')).toHaveClass('hasScroll');
+    console.log('***** box-shadow: ', theme.shadows.elevation_100);
     expect(screen.getByTestId('drawer-header')).toHaveStyleRule(
       'box-shadow',
-      theme.shadows.xs,
+      theme.shadows.elevation_100,
       { target: ':has(+.hasScroll)' }
     );
   });

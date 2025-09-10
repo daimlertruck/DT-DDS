@@ -52,7 +52,7 @@ describe('<Typography /> component', () => {
     expect(h1Element).toBeInTheDocument();
   });
 
-  it('should use body1 as fallback fontStyles when element is not in theme', () => {
+  it('should use bodyLgRegular as fallback fontStyles when element is not in theme', () => {
     const { container } = render(
       <ProvidedTypography element='span'>Span text</ProvidedTypography>
     );
@@ -63,7 +63,7 @@ describe('<Typography /> component', () => {
 
   it('should use provided fontStyles over element-based fontStyles', () => {
     const { container } = render(
-      <ProvidedTypography element='h1' fontStyles='body2'>
+      <ProvidedTypography element='h1' fontStyles='bodyMdRegular'>
         Custom font text
       </ProvidedTypography>
     );

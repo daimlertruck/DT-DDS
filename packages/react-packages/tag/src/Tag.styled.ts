@@ -33,8 +33,8 @@ export const TagStyled = styled.div<TagStyledProps>(
     textTransform: 'uppercase',
     alignItems: 'center',
     maxWidth: 'max-content',
-    gap: theme.spacing['5xs'],
-    borderRadius: theme.radius[border === 'rounded' ? 's' : 'none'],
+    gap: theme.spacing.spacing_20,
+    borderRadius: theme.radius[border === 'rounded' ? 'radius_70' : 'radius_0'],
     width: '150px',
 
     ['> :first-child']: {

@@ -13,7 +13,7 @@ export const TabItemStyled = styled.button<TabItemStyledProps>`
   align-items: center;
 
   ${({ theme, active, disabled, variant }) => `
-    ${active ? theme.fontStyles.body2Bold : theme.fontStyles.body2}
+    ${active ? theme.fontStyles.bodyMdBold : theme.fontStyles.bodyMdRegular}
     ${
       variant === 'default'
         ? `
@@ -33,10 +33,10 @@ export const TabItemStyled = styled.button<TabItemStyledProps>`
     color: ${
       disabled ? theme.palette.content.light : theme.palette.accent.default
     };
-    padding: ${theme.spacing['3xs']} ${theme.spacing.s};
+    padding: ${theme.spacing.spacing_40} ${theme.spacing.s};
     cursor: ${active ? 'default' : disabled ? 'not-allowed' : 'pointer'};
     white-space: nowrap;
-    gap: ${theme.spacing['4xs']};
+    gap: ${theme.spacing.spacing_30};
     
     ${
       !active &&

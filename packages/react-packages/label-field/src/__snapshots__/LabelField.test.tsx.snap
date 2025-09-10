@@ -2,20 +2,22 @@
 
 exports[`<LabelField /> component it renders a disabled label field 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -44,20 +46,22 @@ exports[`<LabelField /> component it renders a disabled label field 1`] = `
 
 exports[`<LabelField /> component it renders a label field as required 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -70,13 +74,14 @@ exports[`<LabelField /> component it renders a label field as required 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 <div>
@@ -102,20 +107,22 @@ exports[`<LabelField /> component it renders a label field as required 1`] = `
 
 exports[`<LabelField /> component when the LabelField is active it should render a small font-size and -45º translation 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -143,20 +150,22 @@ exports[`<LabelField /> component when the LabelField is active it should render
 
 exports[`<LabelField /> component when the LabelField is inactive it should render a bigger font-size and 0 translation 1`] = `
 .emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;

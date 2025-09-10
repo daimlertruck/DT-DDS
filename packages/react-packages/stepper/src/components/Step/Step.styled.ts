@@ -13,7 +13,7 @@ interface LabelStyledProps {
 
 export const LabelStyled = styled.span<LabelStyledProps>`
   ${({ theme, color }) => `
-    ${theme.fontStyles.pSmall};
+    ${theme.fontStyles.bodyMdRegularSmall};
     color: ${
       color === 'disabled'
         ? theme.palette.content.light

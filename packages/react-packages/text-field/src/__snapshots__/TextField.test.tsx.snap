@@ -15,17 +15,17 @@ exports[`<TextField /> component renders disabled input 1`] = `
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -36,20 +36,22 @@ exports[`<TextField /> component renders disabled input 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A3A3A3;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a3a3a3;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -78,10 +80,10 @@ exports[`<TextField /> component renders disabled input 1`] = `
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -91,17 +93,17 @@ exports[`<TextField /> component renders disabled input 1`] = `
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -161,12 +163,13 @@ exports[`<TextField /> component renders disabled input 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -249,17 +252,17 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -270,20 +273,22 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -312,10 +317,10 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -325,17 +330,17 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -422,12 +427,13 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 }
 
 .emotion-8 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -535,17 +541,17 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -556,20 +562,22 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -598,10 +606,10 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -611,17 +619,17 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -681,12 +689,13 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -762,17 +771,17 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -783,20 +792,22 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -825,10 +836,10 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px 0px 0 0;
-  border-bottom: 1px solid #C1C1C1;
+  border-bottom: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -838,17 +849,17 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -908,12 +919,13 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -989,12 +1001,12 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
@@ -1010,12 +1022,13 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   cursor: inherit;
 }
@@ -1037,10 +1050,10 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -1050,82 +1063,83 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
 .emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-3:focus-within:has(input[disabled]) input::placeholder,
 .emotion-3:hover:has(input[disabled]) input::placeholder,
 .emotion-3:focus-within:has(input[disabled])>* input::placeholder,
 .emotion-3:hover:has(input[disabled])>* input::placeholder {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -1141,19 +1155,19 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-5::-webkit-input-placeholder {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-5::-moz-placeholder {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-5:-ms-input-placeholder {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-5::placeholder {
-  color: #838383;
+  color: #636363;
 }
 
 <div>
@@ -1200,17 +1214,17 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -1221,20 +1235,22 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -1263,30 +1279,30 @@ exports[`<TextField /> component should render the TextField with error styles a
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #A00000;
+  border: 1px solid #a00000;
 }
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #A00000;
+  border: 1px solid #a00000;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -1346,12 +1362,13 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -1388,13 +1405,14 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-9 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #A00000;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a00000;
 }
 
 <div>
@@ -1452,17 +1470,17 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-0 i {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #838383;
+  color: #636363;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -1473,20 +1491,22 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
   cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   left: 12px;
   top: 16px;
   position: absolute;
@@ -1515,10 +1535,10 @@ exports[`<TextField /> component should render the TextField with info message 1
   height: 54px;
   color: #292929;
   gap: 8px;
-  background-color: #F3F3F5;
+  background-color: #f3f3f5;
   padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #C1C1C1;
+  border: 1px solid #c1c1c1;
 }
 
 .emotion-3:focus-within,
@@ -1528,17 +1548,17 @@ exports[`<TextField /> component should render the TextField with info message 1
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
 .emotion-3:hover:has(input[readonly]:not([disabled])) {
-  background-color: #F3F3F5;
-  color: #838383;
+  background-color: #f3f3f5;
+  color: #636363;
 }
 
 .emotion-3:focus-within:has(input[disabled]),
 .emotion-3:hover:has(input[disabled]),
 .emotion-3:focus-within:has(input[disabled])>*,
 .emotion-3:hover:has(input[disabled])>* {
-  color: #A3A3A3;
-  background-color: #FAFAFA;
-  border-color: #DEDEDE;
+  color: #a3a3a3;
+  background-color: #fafafa;
+  border-color: #dedede;
   cursor: not-allowed;
 }
 
@@ -1598,12 +1618,13 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   border: 0;
   outline: 0;
   width: 100%;
@@ -1640,13 +1661,14 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-9 {
+  font-family: Daimler CS;
+  font-size: 12px;
   font-weight: 400;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
-  color: #838383;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #636363;
 }
 
 <div>

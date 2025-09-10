@@ -29,11 +29,11 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 1;
   color: #292929;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -48,8 +48,8 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #6EA046;
-  color: #FFFFFF;
+  background-color: #6ea046;
+  color: #ffffff;
 }
 
 .emotion-4 {
@@ -69,12 +69,13 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
 }
 
 .emotion-8 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -93,16 +94,17 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
 }
 
 .emotion-10:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   overflow: hidden;
   word-break: break-word;
@@ -234,11 +236,11 @@ exports[`<Toast /> component should render toast with title & message for type e
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 1;
   color: #292929;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -253,8 +255,8 @@ exports[`<Toast /> component should render toast with title & message for type e
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #A00000;
-  color: #FFFFFF;
+  background-color: #a00000;
+  color: #ffffff;
 }
 
 .emotion-4 {
@@ -274,12 +276,13 @@ exports[`<Toast /> component should render toast with title & message for type e
 }
 
 .emotion-8 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -298,16 +301,17 @@ exports[`<Toast /> component should render toast with title & message for type e
 }
 
 .emotion-10:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   overflow: hidden;
   word-break: break-word;
@@ -428,11 +432,11 @@ exports[`<Toast /> component should render toast with title & message for type i
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 1;
   color: #292929;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -447,8 +451,8 @@ exports[`<Toast /> component should render toast with title & message for type i
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #008DFC;
-  color: #FFFFFF;
+  background-color: #008dfc;
+  color: #ffffff;
 }
 
 .emotion-4 {
@@ -468,12 +472,13 @@ exports[`<Toast /> component should render toast with title & message for type i
 }
 
 .emotion-8 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -492,16 +497,17 @@ exports[`<Toast /> component should render toast with title & message for type i
 }
 
 .emotion-10:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   overflow: hidden;
   word-break: break-word;
@@ -621,11 +627,11 @@ exports[`<Toast /> component should render toast with title & message for type s
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 1;
   color: #292929;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -640,8 +646,8 @@ exports[`<Toast /> component should render toast with title & message for type s
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #6EA046;
-  color: #FFFFFF;
+  background-color: #6ea046;
+  color: #ffffff;
 }
 
 .emotion-4 {
@@ -661,12 +667,13 @@ exports[`<Toast /> component should render toast with title & message for type s
 }
 
 .emotion-8 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -685,16 +692,17 @@ exports[`<Toast /> component should render toast with title & message for type s
 }
 
 .emotion-10:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   overflow: hidden;
   word-break: break-word;
@@ -815,11 +823,11 @@ exports[`<Toast /> component should render toast with title & message for type w
   -webkit-transition: all 0.75s ease-in-out;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   opacity: 1;
   color: #292929;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px rgba(16, 20, 40, 0.1);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -834,8 +842,8 @@ exports[`<Toast /> component should render toast with title & message for type w
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #E69123;
-  color: #FFFFFF;
+  background-color: #e69123;
+  color: #ffffff;
 }
 
 .emotion-4 {
@@ -855,12 +863,13 @@ exports[`<Toast /> component should render toast with title & message for type w
 }
 
 .emotion-8 {
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 24px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #131313;
   margin-bottom: 4px;
   text-transform: capitalize;
@@ -879,16 +888,17 @@ exports[`<Toast /> component should render toast with title & message for type w
 }
 
 .emotion-10:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .emotion-12 {
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
   overflow: hidden;
   word-break: break-word;

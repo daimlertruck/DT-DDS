@@ -70,8 +70,8 @@ export const CheckboxLabelStyled = styled.span<CheckboxLabelStyledProps>`
   width: 100%;
 
   ${({ theme, isDisabled }) => `
-    padding-left: ${theme.spacing['4xs']};
-    ${theme.fontStyles.body2};
+    padding-left: ${theme.spacing.spacing_30};
+    ${theme.fontStyles.bodyMdRegular};
     color: ${
       isDisabled ? theme.palette.content.light : theme.palette.content.default
     };

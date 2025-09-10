@@ -2,8 +2,8 @@
 
 exports[`<Card /> component renders div html element with the correct items 1`] = `
 .emotion-0 {
-  margin: 0;
-  background-color: #FFFFFF;
+  margin: 0px;
+  background-color: #ffffff;
   width: 100%;
   max-width: 530px;
   height: 100%;
@@ -30,7 +30,7 @@ exports[`<Card /> component renders div html element with the correct items 1`] 
 }
 
 .emotion-0:hover {
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0px #1018281a;
 }
 
 .emotion-2 {
@@ -43,12 +43,13 @@ exports[`<Card /> component renders div html element with the correct items 1`] 
 }
 
 .emotion-4 {
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  font-family: Daimler CS;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 28px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 

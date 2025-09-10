@@ -25,7 +25,7 @@ export const useCollapsedBreadcrumb = (children: ReactNode) => {
   const breadcrumbRef = useRef<HTMLElement>(null);
   const breadcrumbListRef = useRef<HTMLUListElement>(null);
   const theme = useTheme();
-  const isDesktop = useMedia(`(min-width: ${theme.breakpoints.m}px)`);
+  const isDesktop = useMedia(`(min-width: ${theme.breakpoints.mq3}px)`);
   const [visibleChildren, setVisibleChildren] = useState<ReactNode>(children);
 
   const breadcrumbResize = useCallback(() => {

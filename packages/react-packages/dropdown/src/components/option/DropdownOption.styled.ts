@@ -7,10 +7,10 @@ interface DropdownOptionStyledProps {
 
 export const DropdownOptionStyled = styled.li<DropdownOptionStyledProps>`
   ${({ theme, disabled, isSelected }) => `
-    ${theme.fontStyles[isSelected ? 'body2Bold' : 'body2']};
+    ${theme.fontStyles[isSelected ? 'bodyMdBold' : 'bodyMdRegular']};
     color: ${theme.palette.content.default};
     list-style: none;
-    padding: ${theme.spacing['4xs']} ${theme.spacing['2xs']};
+    padding: ${theme.spacing.spacing_30} ${theme.spacing.spacing_50};
     text-overflow: ellipsis;
     overflow-x: hidden;
 

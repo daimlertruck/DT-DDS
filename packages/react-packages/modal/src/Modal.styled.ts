@@ -16,7 +16,7 @@ export const ModalStyled = styled.div`
   ${({ theme }) => `
       background-color: ${theme.palette.surface.contrast};
       border-radius: ${theme.shape.modal};
-      box-shadow: ${theme.shadows.s};
+      box-shadow: ${theme.shadows.elevation_200};
 
       @media only screen and (min-width: ${theme.breakpoints.mq3}px)  {
         width: 650px;

@@ -17,27 +17,27 @@ export const LinkStyled = styled.a<LinkStyledProps>`
     color: ${theme.palette[linkColor].default};
     display: inline-flex;
     align-items: center;
-    gap: ${theme.spacing['5xs']};
+    gap: ${theme.spacing.spacing_20};
 
 
     ${
       size == 'large' &&
       `
-        ${theme.fontStyles.body1Bold}
+        ${theme.fontStyles.bodyLgBold}
       `
     };
 
     ${
       size == 'medium' &&
       `
-        ${theme.fontStyles.body2Bold}
+        ${theme.fontStyles.bodyMdBold}
       `
     };
 
     ${
       size == 'small' &&
       `
-        ${theme.fontStyles.body3Bold}
+        ${theme.fontStyles.bodySmBold}
       `
     };
 

@@ -9,7 +9,7 @@ exports[`<Tag /> component should render the tag with variant outlined, color se
   height: 18px;
   border: 1px solid #454545;
   color: #454545;
-  background-color: #C1C1C1;
+  background-color: #c1c1c1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -70,9 +70,9 @@ exports[`<Tag /> component should render the tag with variant solid, color error
   line-height: 1rem;
   padding: 8px 12px;
   height: 32px;
-  border: 0;
-  color: #FFFFFF;
-  background-color: #FFCBC0;
+  border: 0px;
+  color: #ffffff;
+  background-color: #ffcbc0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,9 +164,9 @@ exports[`<Tag /> component should render the tag with variant solid, color infor
   line-height: 1rem;
   padding: 8px 12px;
   height: 32px;
-  border: 0;
-  color: #FFFFFF;
-  background-color: #008DFC;
+  border: 0px;
+  color: #ffffff;
+  background-color: #008dfc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,8 +190,8 @@ exports[`<Tag /> component should render the tag with variant solid, color infor
 }
 
 .emotion-0:hover {
-  background-color: #0060CB;
-  color: #FFFFFF;
+  background-color: #0060cb;
+  color: #ffffff;
 }
 
 .emotion-0>:first-child {
@@ -225,9 +225,9 @@ exports[`<Tag /> component should render the tag with variant solid, color prima
   line-height: 1rem;
   padding: 8px 12px;
   height: 32px;
-  border: 0;
-  color: #FFFFFF;
-  background-color: #00677F;
+  border: 0px;
+  color: #ffffff;
+  background-color: #00677f;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -276,9 +276,9 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
   line-height: 1rem;
   padding: 8px 12px;
   height: 32px;
-  border: 0;
-  color: #FFFFFF;
-  background-color: #E69123;
+  border: 0px;
+  color: #ffffff;
+  background-color: #e69123;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,8 +301,8 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
 }
 
 .emotion-0:hover {
-  background-color: #BB6F00;
-  color: #FFFFFF;
+  background-color: #bb6f00;
+  color: #ffffff;
 }
 
 .emotion-0>:first-child {

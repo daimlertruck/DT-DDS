@@ -17,7 +17,7 @@ exports[`<Avatar /> component renders span html element with the correct content
   height: 24px;
   font-size: 10px;
   line-height: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .emotion-1>* {
@@ -37,7 +37,7 @@ exports[`<Avatar /> component renders span html element with the correct content
   justify-content: center;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 100%;
+  border-radius: 100px;
   cursor: pointer;
 }
 

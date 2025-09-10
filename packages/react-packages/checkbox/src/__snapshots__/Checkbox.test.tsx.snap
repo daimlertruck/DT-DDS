@@ -17,7 +17,7 @@ exports[`<CheckBox /> component renders checkbox checked 1`] = `
 .emotion-0>div {
   border-radius: 0px;
   border: none;
-  background-color: #00677F;
+  background-color: #00677f;
 }
 
 .emotion-2 {
@@ -63,7 +63,7 @@ exports[`<CheckBox /> component renders checkbox checked 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #FFFFFF;
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -85,7 +85,7 @@ exports[`<CheckBox /> component renders checkbox checked 1`] = `
       />
       <i
         class="emotion-6"
-        color="#FFFFFF"
+        color="#ffffff"
         data-testid="icon"
       >
         check
@@ -111,8 +111,8 @@ exports[`<CheckBox /> component renders checkbox disabled 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
-  background-color: #FFFFFF;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
 }
 
 .emotion-2 {
@@ -180,12 +180,12 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
-  background-color: #FFFFFF;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
 }
 
 .emotion-0:hover>div {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   border: 1px solid #000000;
 }
 
@@ -230,12 +230,13 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
   overflow: hidden;
   width: 100%;
   padding-left: 8px;
+  font-family: Daimler CS;
+  font-size: 14px;
   font-weight: 400;
-  font-size: 0.875rem;
-  line-height: 1rem;
-  letter-spacing: normal;
-  margin: 0;
-  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #292929;
 }
 
@@ -277,12 +278,12 @@ exports[`<CheckBox /> component renders checkbox without label 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #DEDEDE;
-  background-color: #FFFFFF;
+  border: 1px solid #dedede;
+  background-color: #ffffff;
 }
 
 .emotion-0:hover>div {
-  background-color: #DEDEDE;
+  background-color: #dedede;
   border: 1px solid #000000;
 }
 

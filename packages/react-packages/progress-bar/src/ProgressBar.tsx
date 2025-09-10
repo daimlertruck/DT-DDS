@@ -40,7 +40,7 @@ export const ProgressBar = ({
   return (
     <ProgressBarFieldStyled>
       {label ? (
-        <Typography color='content.default' fontStyles='body2Bold'>
+        <Typography color='content.default' fontStyles='bodyMdBold'>
           {label}
         </Typography>
       ) : null}
