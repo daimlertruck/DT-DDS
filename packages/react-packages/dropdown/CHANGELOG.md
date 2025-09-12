@@ -1,5 +1,19 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.36
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.44
+  - @dt-dds/react-icon@1.0.0-beta.45
+  - @dt-dds/react-icon-button@1.0.0-beta.12
+  - @dt-dds/react-typography@1.0.0-beta.35
+  - @dt-dds/themes@1.0.0-beta.4
+  - @dt-dds/react-box@1.0.0-beta.15
+
 ## 1.0.0-beta.35
 
 ### Patch Changes

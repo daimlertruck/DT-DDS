@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.37
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.44
+  - @dt-dds/react-text-field@1.0.0-beta.54
+  - @dt-dds/themes@1.0.0-beta.4
+
 ## 1.0.0-beta.36
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.44
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.44
+  - @dt-dds/react-icon@1.0.0-beta.45
+  - @dt-dds/react-icon-button@1.0.0-beta.12
+  - @dt-dds/react-spinner@1.0.0-beta.49
+  - @dt-dds/react-typography@1.0.0-beta.35
+  - @dt-dds/themes@1.0.0-beta.4
+  - @dt-dds/react-backdrop@1.0.0-beta.46
+
 ## 1.0.0-beta.43
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.32
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.44
+  - @dt-dds/react-icon@1.0.0-beta.45
+  - @dt-dds/react-tooltip@1.0.0-beta.52
+  - @dt-dds/themes@1.0.0-beta.4
+
 ## 1.0.0-beta.31
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.4
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+
 ## 1.0.0-beta.3
 
 ### Minor Changes

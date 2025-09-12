@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.44
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.4
+
 ## 1.0.0-beta.43
 
 ### Minor Changes

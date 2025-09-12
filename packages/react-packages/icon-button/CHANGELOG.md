@@ -1,5 +1,14 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.12
+
+### Patch Changes
+
+- refactor(themes): consolidate theme structure
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.44
+  - @dt-dds/themes@1.0.0-beta.4
+
 ## 1.0.0-beta.11
 
 ### Minor Changes
