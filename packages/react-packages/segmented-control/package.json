@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-segmented-control",
-  "version": "1.0.0-beta.32",
+  "version": "1.0.0-beta.33",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,10 +20,10 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.44",
-    "@dt-dds/react-icon": "1.0.0-beta.45",
-    "@dt-dds/react-tooltip": "1.0.0-beta.52",
-    "@dt-dds/themes": "1.0.0-beta.4"
+    "@dt-dds/react-core": "1.0.0-beta.45",
+    "@dt-dds/react-icon": "1.0.0-beta.46",
+    "@dt-dds/react-tooltip": "1.0.0-beta.53",
+    "@dt-dds/themes": "1.0.0-beta.5"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

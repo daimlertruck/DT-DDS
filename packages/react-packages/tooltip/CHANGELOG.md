@@ -1,5 +1,15 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.53
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/react-icon-button@1.0.0-beta.13
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.52
 
 ### Patch Changes

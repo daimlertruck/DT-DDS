@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-radio",
-  "version": "1.0.0-beta.31",
+  "version": "1.0.0-beta.32",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,9 +20,9 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.44",
-    "@dt-dds/react-box": "1.0.0-beta.15",
-    "@dt-dds/themes": "1.0.0-beta.4"
+    "@dt-dds/react-core": "1.0.0-beta.45",
+    "@dt-dds/react-box": "1.0.0-beta.16",
+    "@dt-dds/themes": "1.0.0-beta.5"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

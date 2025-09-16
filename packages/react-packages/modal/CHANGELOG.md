@@ -1,5 +1,19 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+  - @dt-dds/react-backdrop@1.0.0-beta.47
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/react-icon@1.0.0-beta.46
+  - @dt-dds/react-icon-button@1.0.0-beta.13
+  - @dt-dds/react-spinner@1.0.0-beta.50
+  - @dt-dds/react-typography@1.0.0-beta.36
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.44
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.25
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/react-icon@1.0.0-beta.46
+  - @dt-dds/react-typography@1.0.0-beta.36
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.24
 
 ### Patch Changes

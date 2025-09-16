@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/react-spinner@1.0.0-beta.50
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.44
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.46
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.45
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- chore(dependencies): upgrade builders versions
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.45
+  - @dt-dds/react-typography@1.0.0-beta.36
+  - @dt-dds/themes@1.0.0-beta.5
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

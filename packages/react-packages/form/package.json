@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-form",
-  "version": "1.0.0-beta.31",
+  "version": "1.0.0-beta.32",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,17 +20,17 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.44",
-    "@dt-dds/react-tooltip": "1.0.0-beta.52",
-    "@dt-dds/react-typography": "1.0.0-beta.35",
-    "@dt-dds/themes": "1.0.0-beta.4"
+    "@dt-dds/react-core": "1.0.0-beta.45",
+    "@dt-dds/react-tooltip": "1.0.0-beta.53",
+    "@dt-dds/react-typography": "1.0.0-beta.36",
+    "@dt-dds/themes": "1.0.0-beta.5"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.23.3",
-    "@dt-dds/react-text-field": "1.0.0-beta.54",
+    "@dt-dds/react-text-field": "1.0.0-beta.55",
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/css": "^11.7.1",
     "@emotion/jest": "^11.10.0",
