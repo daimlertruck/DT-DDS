@@ -8,10 +8,10 @@
 }
 
 @font-face {
-  font-family: 'DTUI-icons-rounded';
+  font-family: 'DTUI-icons-sharp';
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url('./fonts/MaterialSymbolsRounded.woff2') format('woff2'),
-    url('./fonts/MaterialSymbolsRounded.ttf') format('truetype');;
+  src: url('./fonts/MaterialSymbolsSharp.woff2') format('woff2'),
+    url('./fonts/MaterialSymbolsSharp.ttf') format('truetype');
 }

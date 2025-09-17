@@ -58,7 +58,7 @@ You can learn more on how to customize the usage of the fonts in [Material Symbo
 In DT-DDS, we are currently supporting two font-family keys:
 
 - **DTUI-icons-outlined**
-- **DTUI-icons-rounded**
+- **DTUI-icons-sharp**
 
 ## Stack
 

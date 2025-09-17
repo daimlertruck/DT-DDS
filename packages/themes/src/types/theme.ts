@@ -266,7 +266,7 @@ export type CustomTheme = {
     large: string;
     xlarge: string;
   };
-  icons?: 'outlined' | 'rounded';
+  icons?: 'outlined' | 'sharp';
   components?: {
     [componentName: string]: {
       [tokenKey: string]:
