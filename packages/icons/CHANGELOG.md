@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.5
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
 ## 1.0.0-beta.4
 
 ### Major Changes

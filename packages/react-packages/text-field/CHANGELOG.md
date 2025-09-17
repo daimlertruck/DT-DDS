@@ -1,5 +1,22 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.56
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.6
+  - @dt-dds/react-icon@1.0.0-beta.47
+  - @dt-dds/react-core@1.0.0-beta.46
+  - @dt-dds/react-icon-button@1.0.0-beta.14
+  - @dt-dds/react-label-field@1.0.0-beta.42
+  - @dt-dds/react-spinner@1.0.0-beta.51
+  - @dt-dds/react-typography@1.0.0-beta.37
+
 ## 1.0.0-beta.55
 
 ### Patch Changes

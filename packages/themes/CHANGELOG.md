@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.6
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
 ## 1.0.0-beta.5
 
 ### Patch Changes

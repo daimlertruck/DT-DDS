@@ -1,5 +1,18 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.5
+  - @dt-dds/themes@1.0.0-beta.6
+  - @dt-dds/react-core@1.0.0-beta.46
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

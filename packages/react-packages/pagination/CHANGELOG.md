@@ -1,5 +1,19 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.26
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.6
+  - @dt-dds/react-icon@1.0.0-beta.47
+  - @dt-dds/react-core@1.0.0-beta.46
+  - @dt-dds/react-typography@1.0.0-beta.37
+
 ## 1.0.0-beta.25
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.45
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.6
+  - @dt-dds/react-icon@1.0.0-beta.47
+  - @dt-dds/react-core@1.0.0-beta.46
+
 ## 1.0.0-beta.44
 
 ### Patch Changes

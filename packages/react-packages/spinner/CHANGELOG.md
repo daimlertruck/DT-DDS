@@ -1,5 +1,20 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.51
+
+### Minor Changes
+
+- feat: replace rounded with sharp icons
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.6
+  - @dt-dds/react-core@1.0.0-beta.46
+  - @dt-dds/react-typography@1.0.0-beta.37
+  - @dt-dds/react-box@1.0.0-beta.17
+
 ## 1.0.0-beta.50
 
 ### Patch Changes
