@@ -9,4 +9,5 @@ export const theme: Theme = {
   fontStyles,
   palette,
   shape,
+  icons: 'sharp',
 };
