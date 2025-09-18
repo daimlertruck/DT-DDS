@@ -1,5 +1,15 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-button@1.0.0-beta.47
+  - @dt-dds/react-core@1.0.0-beta.47
+
 ## 1.0.0-beta.63
 
 ### Minor Changes

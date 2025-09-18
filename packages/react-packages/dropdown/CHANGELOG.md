@@ -1,5 +1,19 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.39
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-icon@1.0.0-beta.48
+  - @dt-dds/react-icon-button@1.0.0-beta.15
+  - @dt-dds/react-typography@1.0.0-beta.38
+  - @dt-dds/react-box@1.0.0-beta.18
+
 ## 1.0.0-beta.38
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.7
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+
 ## 1.0.0-beta.6
 
 ### Minor Changes

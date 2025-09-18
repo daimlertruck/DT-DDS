@@ -1,5 +1,15 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.26
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.25
 
 ### Minor Changes

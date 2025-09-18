@@ -1,5 +1,16 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.27
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-icon@1.0.0-beta.48
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.26
 
 ### Minor Changes

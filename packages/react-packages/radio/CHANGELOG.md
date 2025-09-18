@@ -1,5 +1,16 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.34
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-box@1.0.0-beta.18
+
 ## 1.0.0-beta.33
 
 ### Minor Changes

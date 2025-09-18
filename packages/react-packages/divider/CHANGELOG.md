@@ -1,5 +1,14 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.46
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+
 ## 1.0.0-beta.45
 
 ### Minor Changes

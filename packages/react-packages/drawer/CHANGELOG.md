@@ -1,5 +1,16 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.53
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-icon-button@1.0.0-beta.15
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.52
 
 ### Minor Changes

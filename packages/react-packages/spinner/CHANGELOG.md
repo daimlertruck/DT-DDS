@@ -1,5 +1,17 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.52
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-typography@1.0.0-beta.38
+  - @dt-dds/react-box@1.0.0-beta.18
+
 ## 1.0.0-beta.51
 
 ### Minor Changes

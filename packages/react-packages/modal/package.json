@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-modal",
-  "version": "1.0.0-beta.46",
+  "version": "1.0.0-beta.47",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,13 +20,13 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-backdrop": "1.0.0-beta.48",
-    "@dt-dds/react-core": "1.0.0-beta.46",
-    "@dt-dds/react-icon": "1.0.0-beta.47",
-    "@dt-dds/react-icon-button": "1.0.0-beta.14",
-    "@dt-dds/react-spinner": "1.0.0-beta.51",
-    "@dt-dds/react-typography": "1.0.0-beta.37",
-    "@dt-dds/themes": "1.0.0-beta.6"
+    "@dt-dds/react-backdrop": "1.0.0-beta.49",
+    "@dt-dds/react-core": "1.0.0-beta.47",
+    "@dt-dds/react-icon": "1.0.0-beta.48",
+    "@dt-dds/react-icon-button": "1.0.0-beta.15",
+    "@dt-dds/react-spinner": "1.0.0-beta.52",
+    "@dt-dds/react-typography": "1.0.0-beta.38",
+    "@dt-dds/themes": "1.0.0-beta.7"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

@@ -1,5 +1,16 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.63
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-link@1.0.0-beta.24
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.62
 
 ### Minor Changes

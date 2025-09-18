@@ -1,5 +1,15 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.41
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-icon@1.0.0-beta.48
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.40
 
 ### Minor Changes

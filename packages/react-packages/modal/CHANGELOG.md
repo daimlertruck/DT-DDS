@@ -1,5 +1,19 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.47
+
+### Patch Changes
+
+- chore(dependencies): fix moderate vulnerability
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.7
+  - @dt-dds/react-backdrop@1.0.0-beta.49
+  - @dt-dds/react-core@1.0.0-beta.47
+  - @dt-dds/react-icon@1.0.0-beta.48
+  - @dt-dds/react-icon-button@1.0.0-beta.15
+  - @dt-dds/react-spinner@1.0.0-beta.52
+  - @dt-dds/react-typography@1.0.0-beta.38
+
 ## 1.0.0-beta.46
 
 ### Minor Changes
