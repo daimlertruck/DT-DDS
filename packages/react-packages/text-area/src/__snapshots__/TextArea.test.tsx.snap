@@ -55,10 +55,6 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   width: 100%;
   border-radius: 0px;
   border: 1px solid #dedede;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
   border-width: 1px;
 }
 
@@ -192,10 +188,6 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   width: 100%;
   border-radius: 0px;
   border: 1px solid #dedede;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
   border-width: 1px;
 }
 
@@ -329,10 +321,6 @@ exports[`<TextArea /> component renders input with light background fill 1`] = `
   width: 100%;
   border-radius: 0px;
   border: 1px solid #dedede;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
   border-width: 1px;
 }
 
@@ -464,10 +452,6 @@ exports[`<TextArea /> component renders input with resize option 1`] = `
   width: 100%;
   border-radius: 0px;
   border: 1px solid #dedede;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
   border-width: 1px;
 }
 
@@ -599,10 +583,6 @@ exports[`<TextArea /> component renders input with variant baseLine 1`] = `
   width: 100%;
   border-radius: 0px 0px 0 0;
   border-bottom: 1px solid #dedede;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
   border-width: 0 0 1px;
 }
 
