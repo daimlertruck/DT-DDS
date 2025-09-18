@@ -117,7 +117,7 @@ describe('<TextArea /> component', () => {
       fireEvent.blur(textarea, { currentTarget: { value: '' } });
 
       expect(textarea).toHaveStyle(
-        `border: 1px solid ${theme.palette.primary.default}`
+        `border: 1px solid ${theme.palette.border.default}`
       );
     });
 

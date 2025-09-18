@@ -80,7 +80,10 @@ export const ContainerStyled = styled.div<ContainerStyledProps>`
                 ? theme.palette.error.default
                 : theme.palette.border.default
             };
-            &:focus-within, &:hover { { border: 1px solid ${borderColor}};
+            &:focus-within, 
+            &:hover { 
+              border: 1px solid ${borderColor};
+            }
           `
         : `border-radius: ${theme.shape.formField} ${theme.shape.formField} 0 0;
             border-bottom: 1px solid ${
@@ -88,7 +91,10 @@ export const ContainerStyled = styled.div<ContainerStyledProps>`
                 ? theme.palette.error.default
                 : theme.palette.border.default
             };
-            &:focus-within, &:hover { { border-bottom: 1px solid  ${borderColor}};
+            &:focus-within, 
+            &:hover { 
+              border-bottom: 1px solid  ${borderColor};
+            }
           `
     };
 
