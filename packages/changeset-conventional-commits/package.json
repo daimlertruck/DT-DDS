@@ -15,9 +15,9 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@changesets/read": "^0.5.9",
-    "@changesets/types": "^5.2.1",
-    "@changesets/write": "^0.2.3",
+    "@changesets/read": "^0.6.5",
+    "@changesets/types": "^6.1.0",
+    "@changesets/write": "^0.4.0",
     "@manypkg/get-packages": "^2.2.0"
   },
   "devDependencies": {
