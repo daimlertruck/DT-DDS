@@ -1,0 +1,7 @@
+import{j as e}from"./jsx-runtime-CB_V9I5Y.js";import"./index-DjiMWOYD.js";import"./index-CvqTz6u4.js";import{P as d}from"./Portal-DUP4U3GD.js";import{r as m}from"./index-CTjT7uj6.js";import{B as a,a as c}from"./Backdrop-Cg9W3KQd.js";import"./emotion-react.browser.esm-Bwsi5GpN.js";import"./emotion-styled.browser.esm-DBghOYGd.js";import"./index-BAMY2Nnw.js";import"./iframe-DfF-Cmfr.js";import"./index-XjDa9cP3.js";import"./z-index-Ds5QkyqS.js";const u=({...r})=>{const[o,l]=m.useState(!1),n=()=>l(!o);return e.jsxs(e.Fragment,{children:[e.jsx("button",{onClick:n,type:"button",children:"Open Backdrop"}),e.jsx(d,{isOpen:o,children:e.jsxs(c,{...r,isOpen:o,children:[e.jsx(e.Fragment,{children:r.children}),e.jsx("button",{onClick:n,type:"button",children:"Close Backdrop"})]})})]})},t={args:{isOpen:!1,type:a.Dark,children:e.jsx("div",{children:"Example content."})}},v={title:"Data Display/Backdrop",component:c,render:u,argTypes:{type:{mapping:a,options:Object.values(a).filter(r=>typeof r=="string"),control:{type:"inline-radio"}},children:{table:{disable:!0}},isOpen:{table:{disable:!0}}}};var s,p,i;t.parameters={...t.parameters,docs:{...(s=t.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {
+    isOpen: false,
+    type: BackdropType.Dark,
+    children: <div>Example content.</div>
+  }
+}`,...(i=(p=t.parameters)==null?void 0:p.docs)==null?void 0:i.source}}};const T=["Default"];export{t as Default,T as __namedExportsOrder,v as default};
