@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextArea, TextAreaProps } from './TextArea';
 
@@ -18,18 +18,15 @@ const meta: Meta<TextAreaProps> = {
     },
     maxLength: { control: { type: 'number', min: 1 } },
     variant: {
-      options: {
-        outlined: 'outlined',
-        bottomLine: 'bottomLine',
-      },
+      options: ['outlined', 'bottomLine'],
       control: { type: 'select' },
     },
     backgroundFill: {
-      options: {
-        default: 'default',
-        contrast: 'contrast',
-        light: 'light',
-      },
+      options: ['default', 'contrast', 'light'],
+      control: { type: 'select' },
+    },
+    labelVariant: {
+      options: ['default', 'floating'],
       control: { type: 'select' },
     },
   },
@@ -55,8 +52,12 @@ export const Default: StoryObj<TextAreaProps> = {
     required: false,
     message: 'Additional info',
     onChange: undefined,
-    enableResize: false,
+    enableResize: true,
     hasError: false,
     disabled: false,
+    placeholder: 'this is a placeholder',
+    hasLabel: true,
+    labelVariant: 'default',
+    readOnly: false,
   },
 };

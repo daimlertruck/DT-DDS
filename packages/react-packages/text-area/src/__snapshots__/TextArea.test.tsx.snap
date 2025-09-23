@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextArea /> component renders disabled input 1`] = `
+exports[`<TextArea /> component should render default text area 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9,18 +9,13 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  position: relative;
-  width: 100%;
-  border-style: solid;
-  border-width: 0;
-  border-color: #131313;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -28,8 +23,11 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #a3a3a3;
+  color: #292929;
   cursor: inherit;
+}
+
+.emotion-2 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -37,103 +35,68 @@ exports[`<TextArea /> component renders disabled input 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-3 {
   background-color: #f3f3f5;
-  position: relative;
-  padding: 25px 0px 0px 10px;
+  min-height: 100px;
   width: 100%;
-  border-radius: 0px;
-  border: 1px solid #dedede;
-  border-width: 1px;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  border: 1px solid #000000;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f3f3f5;
-  border-style: none;
-  width: 100%;
-  color: #131313;
-  resize: none;
   outline: none;
-  padding-right: 10px;
+  color: #292929;
+  resize: none;
+  padding: 12px;
+  border: 0;
+  margin-top: 8px;
+  border-radius: 0px;
+  border: 1px solid #c1c1c1;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  width: 100%;
+.emotion-2:focus-within,
+.emotion-2:hover:not([disabled]) {
+  border: 1px solid #008dfc;
+}
+
+.emotion-2:-moz-read-only {
+  color: #a3a3a3;
+}
+
+.emotion-2:read-only {
+  color: #a3a3a3;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  color: #a3a3a3;
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
+    style="position: relative; align-items: flex-start;"
   >
     <label
-      class="emotion-2"
+      class="emotion-1"
       data-testid="label-field"
-      disabled=""
-      for="my-disabled-input-textarea"
+      for="my-awesome-text-area-textarea"
       style="z-index: 1;"
     >
-      My disabled input
+      My awesome text area
     </label>
-    <div
-      class="emotion-3 emotion-4"
-      data-testid="textarea-container"
+    <textarea
+      class="emotion-2 emotion-3"
+      data-error="false"
+      data-testid="my-awesome-text-area-textarea"
+      id="my-awesome-text-area-textarea"
+      name="awesome-textarea"
     >
-      <textarea
-        class="emotion-5 emotion-6"
-        data-error="false"
-        disabled=""
-        id="my-disabled-input-textarea"
-      />
-    </div>
+      some value
+    </textarea>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-0"
+      style="flex-direction: row; justify-content: space-between; width: 100%; padding-inline: 12px; gap: 8px; margin-top: 4px;"
     />
   </div>
 </div>
 `;
 
-exports[`<TextArea /> component renders input with an value 1`] = `
+exports[`<TextArea /> component should render text area with floating label 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -142,18 +105,13 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  position: relative;
-  width: 100%;
-  border-style: solid;
-  border-width: 0;
-  border-color: #131313;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -181,479 +139,69 @@ exports[`<TextArea /> component renders input with an value 1`] = `
   transition: transform 150ms ease-out,font-size 150ms ease-out;
 }
 
-.emotion-3 {
-  background-color: #f3f3f5;
-  position: relative;
-  padding: 25px 0px 0px 10px;
-  width: 100%;
-  border-radius: 0px;
-  border: 1px solid #dedede;
-  border-width: 1px;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  border: 1px solid #000000;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f3f3f5;
-  border-style: none;
-  width: 100%;
-  color: #131313;
-  resize: none;
-  outline: none;
-  padding-right: 10px;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  width: 100%;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input-with-prefilled-value-textarea"
-      style="z-index: 1;"
-    >
-      My Input with prefilled value
-    </label>
-    <div
-      class="emotion-3 emotion-4"
-      data-testid="textarea-container"
-    >
-      <textarea
-        class="emotion-5 emotion-6"
-        data-error="false"
-        id="my-input-with-prefilled-value-textarea"
-      >
-        Initial Value
-      </textarea>
-    </div>
-    <div
-      class="emotion-7 emotion-8"
-    />
-  </div>
-</div>
-`;
-
-exports[`<TextArea /> component renders input with light background fill 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  position: relative;
-  width: 100%;
-  border-style: solid;
-  border-width: 0;
-  border-color: #131313;
-}
-
 .emotion-2 {
   font-family: Daimler CS;
   font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #636363;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-3 {
-  background-color: #fafafa;
-  position: relative;
-  padding: 25px 0px 0px 10px;
+  background-color: #f3f3f5;
+  min-height: 100px;
   width: 100%;
-  border-radius: 0px;
-  border: 1px solid #dedede;
-  border-width: 1px;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  border: 1px solid #000000;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #fafafa;
-  border-style: none;
-  width: 100%;
-  color: #131313;
+  outline: none;
+  color: #292929;
   resize: none;
-  outline: none;
-  padding-right: 10px;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  width: 100%;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input-textarea"
-      style="z-index: 1;"
-    >
-      My input
-    </label>
-    <div
-      class="emotion-3 emotion-4"
-      data-testid="textarea-container"
-    >
-      <textarea
-        class="emotion-5 emotion-6"
-        data-error="false"
-        id="my-input-textarea"
-      />
-    </div>
-    <div
-      class="emotion-7 emotion-8"
-    />
-  </div>
-</div>
-`;
-
-exports[`<TextArea /> component renders input with resize option 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  position: relative;
-  width: 100%;
-  border-style: solid;
-  border-width: 0;
-  border-color: #131313;
-}
-
-.emotion-2 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #636363;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-3 {
-  background-color: #f3f3f5;
-  position: relative;
-  padding: 25px 0px 0px 10px;
-  width: 100%;
+  padding: 24px 12px 12px 12px;
+  border: 0;
   border-radius: 0px;
-  border: 1px solid #dedede;
-  border-width: 1px;
+  border: 1px solid #c1c1c1;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover {
-  border: 1px solid #000000;
+.emotion-2:focus-within,
+.emotion-2:hover:not([disabled]) {
+  border: 1px solid #008dfc;
 }
 
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f3f3f5;
-  border-style: none;
-  width: 100%;
-  color: #131313;
-  resize: vertical;
-  outline: none;
-  padding-right: 10px;
+.emotion-2:-moz-read-only {
+  color: #a3a3a3;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  width: 100%;
+.emotion-2:read-only {
+  color: #a3a3a3;
+}
+
+.emotion-2:disabled {
+  cursor: not-allowed;
+  color: #a3a3a3;
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
+    style="position: relative; align-items: flex-start;"
   >
     <label
-      class="emotion-2"
+      class="emotion-1"
       data-testid="label-field"
-      for="my-input-textarea"
+      for="my-awesome-text-area-textarea"
       style="z-index: 1;"
     >
-      My input
+      My awesome text area
     </label>
-    <div
-      class="emotion-3 emotion-4"
-      data-testid="textarea-container"
+    <textarea
+      class="emotion-2 emotion-3"
+      data-error="false"
+      data-testid="my-awesome-text-area-textarea"
+      id="my-awesome-text-area-textarea"
+      name="awesome-textarea"
     >
-      <textarea
-        class="emotion-5 emotion-6"
-        data-error="false"
-        id="my-input-textarea"
-      />
-    </div>
+      some value
+    </textarea>
     <div
-      class="emotion-7 emotion-8"
-    />
-  </div>
-</div>
-`;
-
-exports[`<TextArea /> component renders input with variant baseLine 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: flex-end;
-  -webkit-box-align: flex-end;
-  -ms-flex-align: flex-end;
-  align-items: flex-end;
-  position: relative;
-  width: 100%;
-  border-style: solid;
-  border-width: 0;
-  border-color: #131313;
-}
-
-.emotion-2 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #636363;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-3 {
-  background-color: #f3f3f5;
-  position: relative;
-  padding: 25px 0px 0px 10px;
-  width: 100%;
-  border-radius: 0px 0px 0 0;
-  border-bottom: 1px solid #dedede;
-  border-width: 0 0 1px;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  border-bottom: 1px solid #000000;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 20px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  background-color: #f3f3f5;
-  border-style: none;
-  width: 100%;
-  color: #131313;
-  resize: none;
-  outline: none;
-  padding-right: 10px;
-}
-
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  width: 100%;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input-textarea"
-      style="z-index: 1;"
-    >
-      My input
-    </label>
-    <div
-      class="emotion-3 emotion-4"
-      data-testid="textarea-container"
-    >
-      <textarea
-        class="emotion-5 emotion-6"
-        data-error="false"
-        id="my-input-textarea"
-      />
-    </div>
-    <div
-      class="emotion-7 emotion-8"
+      class="emotion-0"
+      style="flex-direction: row; justify-content: space-between; width: 100%; padding-inline: 12px; gap: 8px; margin-top: 4px;"
     />
   </div>
 </div>

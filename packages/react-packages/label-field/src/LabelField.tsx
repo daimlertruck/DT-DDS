@@ -12,6 +12,7 @@ export interface LabelFieldProps
   hasError?: boolean;
   isRequired?: boolean;
   isFloating?: boolean;
+  isInputFilled?: boolean;
 }
 
 export const LabelField = ({
@@ -22,6 +23,7 @@ export const LabelField = ({
   isRequired,
   hasError = false,
   isFloating = true,
+  isInputFilled = false,
   ...rest
 }: LabelFieldProps) => {
   const testId = dataTestId ?? 'label-field';
@@ -33,10 +35,11 @@ export const LabelField = ({
       hasError={hasError}
       isActive={isActive}
       isFloating={isFloating}
+      isInputFilled={isInputFilled}
       {...rest}
     >
       {children}
-      {isRequired ? (
+      {isRequired && !isDisabled ? (
         <Typography
           color='error.default'
           element='span'

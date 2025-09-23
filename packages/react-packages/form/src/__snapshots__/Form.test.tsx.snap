@@ -58,7 +58,7 @@ exports[`<Form /> component renders simple form 1`] = `
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
@@ -372,7 +372,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
@@ -668,7 +668,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
@@ -1015,7 +1015,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
