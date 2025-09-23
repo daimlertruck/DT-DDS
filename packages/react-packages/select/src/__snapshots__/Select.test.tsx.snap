@@ -85,7 +85,7 @@ exports[`<Select /> component should render Select 1`] = `
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
@@ -427,7 +427,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   color: #636363;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;

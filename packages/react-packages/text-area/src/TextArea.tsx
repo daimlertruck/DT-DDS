@@ -1,6 +1,8 @@
+import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
 import { LabelField } from '@dt-dds/react-label-field';
 import { Typography } from '@dt-dds/react-typography';
+import { useTheme } from '@emotion/react';
 import {
   ChangeEvent,
   ComponentPropsWithoutRef,
@@ -9,14 +11,12 @@ import {
   useState,
 } from 'react';
 
-import { TextAreaVariant, TextAreaBackgroundFill } from './constants';
 import {
-  TextAreaStyled,
-  TextAreaWrapper,
-  TextAreaMessageStyled,
-  TextAreaMessages,
-  ContainerStyled,
-} from './TextArea.styled';
+  TextAreaBackgroundFill,
+  TextAreaLabelVariant,
+  TextAreaVariant,
+} from './constants';
+import { TextAreaStyled } from './TextArea.styled';
 
 export interface TextAreaProps
   extends ComponentPropsWithoutRef<'textarea'>,
@@ -30,6 +30,8 @@ export interface TextAreaProps
   backgroundFill?: TextAreaBackgroundFill;
   hasError?: boolean;
   message?: string;
+  labelVariant?: TextAreaLabelVariant;
+  hasLabel?: boolean;
 }
 
 export const TextArea = ({
@@ -38,26 +40,30 @@ export const TextArea = ({
   name,
   value,
   style,
+  onChange,
+  maxLength,
   variant = 'outlined',
   backgroundFill = 'default',
-  maxLength,
   enableResize = false,
   disabled = false,
   required = false,
   hasError = false,
+  hasLabel = true,
   message: messageProp = '',
-  onChange = () => {},
+  labelVariant = 'default',
+  placeholder,
+  readOnly,
   ...rest
 }: TextAreaProps) => {
   const [chars, setChars] = useState(0);
-  const [activeInput, setActiveInput] = useState(false);
+  const [isActive, setIsActive] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [hasRequiredError, setHasRequiredError] = useState(false);
+  const theme = useTheme();
 
   useEffect(() => {
     if (!!value) {
       setInputValue(value);
-      setActiveInput(true);
       setChars(value.length);
       setHasRequiredError(false);
     } else {
@@ -76,7 +82,7 @@ export const TextArea = ({
   };
 
   const onFocus = (event: FocusEvent<HTMLTextAreaElement>) => {
-    setActiveInput(true);
+    setIsActive(true);
 
     if (rest.onFocus) {
       rest.onFocus(event);
@@ -84,13 +90,11 @@ export const TextArea = ({
   };
 
   const onBlur = (event: FocusEvent<HTMLTextAreaElement>) => {
-    const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
-    if (isEmptyOrOnlySpaces) {
-      setActiveInput(false);
+    setIsActive(false);
 
-      if (required) {
-        setHasRequiredError(true);
-      }
+    const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
+    if (isEmptyOrOnlySpaces && required) {
+      setHasRequiredError(true);
     }
 
     if (rest.onBlur) {
@@ -101,69 +105,85 @@ export const TextArea = ({
   const testId =
     dataTestId ?? `${label.replaceAll(' ', '-').toLocaleLowerCase()}-textarea`;
 
-  const messageColor = disabled ? 'content.light' : 'content.medium';
+  const messageColor =
+    disabled || readOnly ? 'content.light' : 'content.medium';
   const showError = hasError || hasRequiredError;
   const message = messageProp;
+  const isFloatingLabel = labelVariant === 'floating';
 
   return (
-    <TextAreaWrapper>
-      <LabelField
-        hasError={showError}
-        htmlFor={testId}
-        isActive={activeInput}
-        isDisabled={disabled}
-        isRequired={required}
-        style={{ zIndex: 1 }}
-      >
-        {label}
-      </LabelField>
-      <ContainerStyled
+    <Box style={{ position: 'relative', alignItems: 'flex-start' }}>
+      {hasLabel ? (
+        <LabelField
+          hasError={showError}
+          htmlFor={testId}
+          isActive={isActive && !readOnly ? true : false}
+          isDisabled={disabled || readOnly}
+          isFloating={isFloatingLabel}
+          isInputFilled={!!chars}
+          isRequired={required}
+          style={{ zIndex: 1 }}
+        >
+          {label}
+        </LabelField>
+      ) : null}
+      <TextAreaStyled
         backgroundFill={backgroundFill}
-        data-testid='textarea-container'
+        data-error={showError}
+        data-testid={testId}
+        disabled={disabled}
+        enableResize={enableResize}
         hasError={showError}
+        hasLabel={hasLabel}
+        id={testId}
+        isFloatingLabel={isFloatingLabel}
+        maxLength={maxLength}
+        name={name}
+        readOnly={readOnly}
+        style={style}
+        value={inputValue}
         variant={variant}
-      >
-        <TextAreaStyled
-          backgroundFill={backgroundFill}
-          data-error={showError}
-          disabled={disabled}
-          enableResize={enableResize}
-          id={testId}
-          maxLength={maxLength}
-          name={name}
-          style={style}
-          value={inputValue}
-          {...rest}
-          onBlur={onBlur}
-          onChange={handleChange}
-          onFocus={onFocus}
-        />
-      </ContainerStyled>
+        {...rest}
+        onBlur={onBlur}
+        onChange={handleChange}
+        onFocus={onFocus}
+        {...((!isFloatingLabel || !hasLabel) && {
+          placeholder: placeholder,
+        })}
+      />
 
-      <TextAreaMessages>
+      <Box
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          width: '100%',
+          paddingInline: theme.spacing.spacing_40,
+          gap: theme.spacing.spacing_30,
+          marginTop: 4,
+        }}
+      >
         {message ? (
-          <TextAreaMessageStyled>
-            <Typography
-              color={showError ? 'error.default' : messageColor}
-              element='span'
-              fontStyles='bodySmRegular'
-            >
-              {message}
-            </Typography>
-          </TextAreaMessageStyled>
+          <Typography
+            color={showError ? 'error.default' : messageColor}
+            element='span'
+            fontStyles='bodySmRegular'
+          >
+            {message}
+          </Typography>
         ) : null}
         {maxLength ? (
           <Typography
-            color='content.medium'
+            color={showError ? 'error.default' : messageColor}
+            dataTestId='char-counter'
             element='span'
-            fontStyles='bodyMdRegular'
+            fontStyles='bodySmRegular'
             id={testId}
-            style={{ marginLeft: 'auto' }}
+            {...(!message && { style: { marginLeft: 'auto' } })}
           >
             {chars} / {maxLength}
           </Typography>
         ) : null}
-      </TextAreaMessages>
-    </TextAreaWrapper>
+      </Box>
+    </Box>
   );
 };

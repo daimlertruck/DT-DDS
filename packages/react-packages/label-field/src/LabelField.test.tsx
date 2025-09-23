@@ -76,4 +76,19 @@ describe('<LabelField /> component', () => {
     );
     expect(container).toMatchSnapshot();
   });
+
+  it('should render label not floating and active', () => {
+    const { getByTestId } = render(
+      <>
+        <ProvidedLabelField htmlFor={INPUT_ID} isActive isFloating={false}>
+          My Awesome Input
+        </ProvidedLabelField>
+        <input id={INPUT_ID} />
+      </>
+    );
+
+    const labelField = getByTestId('label-field');
+
+    expect(labelField).toHaveStyle('color: rgb(0, 141, 252)');
+  });
 });

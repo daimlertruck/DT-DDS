@@ -8,69 +8,40 @@ import {
 
 export interface TextAreaStyledProps {
   backgroundFill: TextAreaBackgroundFill;
-  enableResize?: boolean;
-  hasError?: boolean;
-}
-
-interface ContainerStyledProps {
+  enableResize: boolean;
   variant: TextAreaVariant;
-  backgroundFill: TextAreaBackgroundFill;
-  hasError?: boolean;
+  hasError: boolean;
+  isFloatingLabel: boolean;
+  hasLabel: boolean;
 }
-
-export const TextAreaWrapper = styled.div`
-  ${({ theme }) => `
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: relative;
-    width: 100%;
-    
-    border-style: solid;
-    border-width: 0;
-    border-color: ${theme.palette.border.dark};
-  `}
-`;
-
-export const TextAreaMessageStyled = styled.div`
-  ${({ theme }) => `padding-left: ${theme.spacing.spacing_50}`};
-`;
-
-export const TextAreaMessages = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 100%;
-`;
 
 export const TextAreaStyled = styled.textarea<TextAreaStyledProps>`
-  ${({ theme, enableResize = false, backgroundFill }) => `
-    ${theme.fontStyles.bodyLgRegular}
-
-    background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
-
-    border-style: none;
-    width: 100%;
-    color: ${theme.palette.content.dark};
-    resize: ${enableResize ? 'vertical' : 'none'};
-    outline: none;
-    padding-right: 10px;
-  `}
-`;
-
-export const ContainerStyled = styled.div<ContainerStyledProps>`
-  ${({ theme, variant, hasError = false, backgroundFill }) => {
+  ${({
+    theme,
+    enableResize,
+    backgroundFill,
+    variant,
+    hasError,
+    isFloatingLabel,
+    hasLabel,
+  }) => {
     const borderColor = hasError
       ? theme.palette.error.default
-      : theme.palette.primary.default;
+      : theme.palette.informative.default;
 
     return `
+    ${theme.fontStyles.bodyMdRegular}
+
     background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
-    position: relative;
-    padding: 25px 0px 0px 10px;
+    min-height: 100px;
     width: 100%;
+    outline: none;
+    color: ${theme.palette.content.default};
+    resize: ${enableResize ? 'vertical' : 'none'};
+    padding: ${isFloatingLabel && hasLabel ? '24px 12px 12px 12px' : '12px'};
+    border: 0;
+
+    ${!isFloatingLabel && hasLabel && 'margin-top: 8px'};
 
     ${
       variant === 'outlined'
@@ -78,10 +49,11 @@ export const ContainerStyled = styled.div<ContainerStyledProps>`
             border: 1px solid ${
               hasError
                 ? theme.palette.error.default
-                : theme.palette.border.default
+                : theme.palette.border.medium
             };
-            &:focus-within, 
-            &:hover { 
+
+            &:focus-within,
+            &:hover:not([disabled]) { 
               border: 1px solid ${borderColor};
             }
           `
@@ -89,16 +61,24 @@ export const ContainerStyled = styled.div<ContainerStyledProps>`
             border-bottom: 1px solid ${
               hasError
                 ? theme.palette.error.default
-                : theme.palette.border.default
+                : theme.palette.border.medium
             };
-            &:focus-within, 
-            &:hover { 
+           
+            &:focus-within,
+            &:hover:not([disabled]) { 
               border-bottom: 1px solid  ${borderColor};
             }
           `
     };
 
-    ${variant === 'outlined' ? 'border-width: 1px' : 'border-width: 0 0 1px'};
+    &:read-only {
+      color: ${theme.palette.content.light};
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: ${theme.palette.content.light};
+    } 
   `;
   }}
 `;

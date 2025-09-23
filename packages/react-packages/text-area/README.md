@@ -27,6 +27,8 @@ export const App = () => {
 | `backgroundFill` | `[default, contrast,light]` | `default`        | Styles the input with background color                                                    |
 | `enableResize`   | `boolean`                   | `false`          | Enables the vertical resizing                                                             |
 | `message`        | `string`                    | -                | The message to be displayed below the input field. Useful for hints or to display errors. |
+| `labelVariant`   | `[default, floating]`       | `default`        | Sets the label floating or traditional on top of the input                                |
+| `hasLabel`       | `boolean`                   | `true`           | Show/hide the label                                                                       |
 
 ## Stack
 
