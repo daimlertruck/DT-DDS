@@ -1,5 +1,15 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.42
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.49
+  - @dt-dds/react-typography@1.0.0-beta.39
+  - @dt-dds/themes@1.0.0-beta.8
+
 ## 1.0.0-beta.41
 
 ### Patch Changes

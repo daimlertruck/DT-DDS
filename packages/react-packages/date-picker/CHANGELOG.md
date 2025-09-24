@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.42
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.59
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+
 ## 1.0.0-beta.41
 
 ### Minor Changes

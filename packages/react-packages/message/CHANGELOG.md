@@ -1,5 +1,16 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.26
+  - @dt-dds/react-typography@1.0.0-beta.39
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

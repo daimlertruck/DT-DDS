@@ -1,5 +1,18 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.49
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-icon@1.0.0-beta.49
+  - @dt-dds/react-icon-button@1.0.0-beta.16
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+  - @dt-dds/react-box@1.0.0-beta.20
+
 ## 1.0.0-beta.48
 
 ### Patch Changes

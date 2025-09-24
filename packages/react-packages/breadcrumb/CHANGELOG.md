@@ -1,5 +1,16 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.49
+  - @dt-dds/react-tooltip@1.0.0-beta.56
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

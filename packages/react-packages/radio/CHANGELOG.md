@@ -1,5 +1,16 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.36
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+  - @dt-dds/react-box@1.0.0-beta.20
+
 ## 1.0.0-beta.35
 
 ### Patch Changes

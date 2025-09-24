@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.8
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+
 ## 1.0.0-beta.7
 
 ### Patch Changes

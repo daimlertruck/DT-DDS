@@ -1,5 +1,19 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.59
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.49
+  - @dt-dds/react-icon-button@1.0.0-beta.16
+  - @dt-dds/react-label-field@1.0.0-beta.45
+  - @dt-dds/react-spinner@1.0.0-beta.54
+  - @dt-dds/react-typography@1.0.0-beta.39
+  - @dt-dds/themes@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.48
+
 ## 1.0.0-beta.58
 
 ### Minor Changes

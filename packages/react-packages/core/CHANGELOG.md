@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- chore: update tokens and fix tests
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.8
+
 ## 1.0.0-beta.47
 
 ### Patch Changes
