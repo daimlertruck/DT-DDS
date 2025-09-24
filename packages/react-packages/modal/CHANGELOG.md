@@ -1,5 +1,11 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.55
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

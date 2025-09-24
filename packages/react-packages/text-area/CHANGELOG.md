@@ -1,5 +1,13 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.32
+
+### Patch Changes
+
+- refactor: change background fill default
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.21
+
 ## 1.0.0-beta.31
 
 ### Patch Changes
