@@ -19,7 +19,7 @@ exports[`<Backdrop /> component expects rendered element to match snapshot 1`] =
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: rgba(19,19,19,0.85);
+  background: rgba(29,29,29,0.85);
   z-index: 9;
 }
 
@@ -55,7 +55,7 @@ exports[`<Backdrop /> component expects rendered element with type "light" to ma
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: rgba(19,19,19,0.2);
+  background: rgba(29,29,29,0.2);
   z-index: 9;
 }
 

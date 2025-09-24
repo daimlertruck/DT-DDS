@@ -37,7 +37,7 @@ exports[`<Link /> component should render a html link element with the correct t
 }
 
 .emotion-0:active {
-  color: #003041;
+  color: #003946;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -59,7 +59,7 @@ exports[`<Link /> component should render a html link element with the correct t
 
 exports[`<Link /> component should render an html link element as secondary 1`] = `
 .emotion-0 {
-  color: #454545;
+  color: #3e3e3e;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -94,7 +94,7 @@ exports[`<Link /> component should render an html link element as secondary 1`] 
 }
 
 .emotion-0:active {
-  color: #131313;
+  color: #1d1d1d;
   -webkit-text-decoration: none;
   text-decoration: none;
 }

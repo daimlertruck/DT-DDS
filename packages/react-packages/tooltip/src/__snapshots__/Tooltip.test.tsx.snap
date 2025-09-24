@@ -15,7 +15,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as bottom an
   max-width: calc(200px + 2 * 8px);
   overflow-wrap: break-word;
   padding: 8px;
-  background-color: #131313;
+  background-color: #1d1d1d;
   box-shadow: 0px 1px 3px 0px #1018281a;
   color: #ffffff;
   border-radius: 0px;
@@ -42,7 +42,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as bottom an
   left: 50%;
   margin-left: -7px;
   border-width: 0px 7px 8px 7px;
-  border-bottom-color: #131313;
+  border-bottom-color: #1d1d1d;
 }
 
 <div
@@ -70,7 +70,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as left and 
   max-width: calc(200px + 2 * 8px);
   overflow-wrap: break-word;
   padding: 8px;
-  background-color: #131313;
+  background-color: #1d1d1d;
   box-shadow: 0px 1px 3px 0px #1018281a;
   color: #ffffff;
   border-radius: 0px;
@@ -98,7 +98,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as left and 
   left: 100%;
   margin-top: -7px;
   border-width: 7px 0px 7px 8px;
-  border-left-color: #131313;
+  border-left-color: #1d1d1d;
 }
 
 <div
@@ -126,7 +126,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as right and
   max-width: calc(200px + 2 * 8px);
   overflow-wrap: break-word;
   padding: 8px;
-  background-color: #131313;
+  background-color: #1d1d1d;
   box-shadow: 0px 1px 3px 0px #1018281a;
   color: #ffffff;
   border-radius: 0px;
@@ -154,7 +154,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as right and
   right: 100%;
   margin-top: -7px;
   border-width: 7px 8px 7px 0px;
-  border-right-color: #131313;
+  border-right-color: #1d1d1d;
 }
 
 <div
@@ -182,7 +182,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as top and b
   max-width: calc(200px + 2 * 8px);
   overflow-wrap: break-word;
   padding: 8px;
-  background-color: #131313;
+  background-color: #1d1d1d;
   box-shadow: 0px 1px 3px 0px #1018281a;
   color: #ffffff;
   border-radius: 0px;
@@ -209,7 +209,7 @@ exports[`<Tooltip /> component renders a tooltip with the direction as top and b
   left: 50%;
   margin-left: -7px;
   border-width: 8px 7px 0px 7px;
-  border-top-color: #131313;
+  border-top-color: #1d1d1d;
 }
 
 <div

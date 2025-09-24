@@ -22,7 +22,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #73aec2;
+  color: #8ab9c4;
 }
 
 .emotion-0:focus-visible {
@@ -41,7 +41,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -55,7 +55,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   >
     <i
       class="emotion-2"
-      color="#292929"
+      color="#252525"
       data-testid="icon"
     >
       edit
@@ -81,12 +81,12 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0 i {
   font-size: 24px;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-0:not(:disabled)>i:hover,
 .emotion-0:not(:disabled)>i:active {
-  color: #73aec2;
+  color: #8ab9c4;
 }
 
 .emotion-0:focus-visible {
@@ -105,7 +105,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -120,7 +120,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   >
     <i
       class="emotion-2"
-      color="#292929"
+      color="#252525"
       data-testid="icon"
     >
       edit
@@ -146,7 +146,7 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0 i {
   font-size: 24px;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-0:not(:disabled)>i:hover,
@@ -170,7 +170,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -184,7 +184,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   >
     <i
       class="emotion-2"
-      color="#292929"
+      color="#252525"
       data-testid="icon"
     >
       edit
@@ -210,7 +210,7 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0 i {
   font-size: 24px;
-  color: #a3a3a3;
+  color: #a9a9a9;
 }
 
 .emotion-0:not(:disabled)>i:hover,
@@ -234,7 +234,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -249,7 +249,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   >
     <i
       class="emotion-2"
-      color="#292929"
+      color="#252525"
       data-testid="icon"
     >
       edit

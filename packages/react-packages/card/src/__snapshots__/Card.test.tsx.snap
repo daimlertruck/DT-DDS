@@ -50,7 +50,7 @@ exports[`<Card /> component renders div html element with the correct items 1`] 
   line-height: 28px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #303030;
 }
 
 @media only screen and (min-width:1024px) {

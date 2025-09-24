@@ -9,7 +9,7 @@ exports[`<LabelField /> component it renders a disabled label field 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #a3a3a3;
+  color: #a9a9a9;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -53,7 +53,7 @@ exports[`<LabelField /> component it renders a label field as required 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -81,7 +81,7 @@ exports[`<LabelField /> component it renders a label field as required 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #a00000;
+  color: #e80000;
 }
 
 <div>
@@ -114,7 +114,7 @@ exports[`<LabelField /> component when the LabelField is active it should render
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -157,7 +157,7 @@ exports[`<LabelField /> component when the LabelField is inactive it should rend
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;

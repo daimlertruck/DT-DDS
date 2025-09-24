@@ -31,7 +31,7 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   overflow: hidden;
   background-color: #ffffff;
   opacity: 1;
-  color: #292929;
+  color: #252525;
   border-radius: 0px;
   box-shadow: 0px 1px 3px 0px #1018281a;
 }
@@ -48,7 +48,7 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #6ea046;
+  background-color: #209242;
   color: #ffffff;
 }
 
@@ -76,13 +76,13 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
 
 .emotion-10 {
-  color: #292929;
+  color: #252525;
   border: 0;
   cursor: pointer;
   background: transparent;
@@ -105,7 +105,7 @@ exports[`<Toast /> component should render toast with action buttons 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   overflow: hidden;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -238,7 +238,7 @@ exports[`<Toast /> component should render toast with title & message for type e
   overflow: hidden;
   background-color: #ffffff;
   opacity: 1;
-  color: #292929;
+  color: #252525;
   border-radius: 0px;
   box-shadow: 0px 1px 3px 0px #1018281a;
 }
@@ -255,7 +255,7 @@ exports[`<Toast /> component should render toast with title & message for type e
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #a00000;
+  background-color: #e80000;
   color: #ffffff;
 }
 
@@ -283,13 +283,13 @@ exports[`<Toast /> component should render toast with title & message for type e
   line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
 
 .emotion-10 {
-  color: #292929;
+  color: #252525;
   border: 0;
   cursor: pointer;
   background: transparent;
@@ -312,7 +312,7 @@ exports[`<Toast /> component should render toast with title & message for type e
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   overflow: hidden;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -434,7 +434,7 @@ exports[`<Toast /> component should render toast with title & message for type i
   overflow: hidden;
   background-color: #ffffff;
   opacity: 1;
-  color: #292929;
+  color: #252525;
   border-radius: 0px;
   box-shadow: 0px 1px 3px 0px #1018281a;
 }
@@ -451,7 +451,7 @@ exports[`<Toast /> component should render toast with title & message for type i
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #008dfc;
+  background-color: #00677f;
   color: #ffffff;
 }
 
@@ -479,13 +479,13 @@ exports[`<Toast /> component should render toast with title & message for type i
   line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
 
 .emotion-10 {
-  color: #292929;
+  color: #252525;
   border: 0;
   cursor: pointer;
   background: transparent;
@@ -508,7 +508,7 @@ exports[`<Toast /> component should render toast with title & message for type i
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   overflow: hidden;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -629,7 +629,7 @@ exports[`<Toast /> component should render toast with title & message for type s
   overflow: hidden;
   background-color: #ffffff;
   opacity: 1;
-  color: #292929;
+  color: #252525;
   border-radius: 0px;
   box-shadow: 0px 1px 3px 0px #1018281a;
 }
@@ -646,7 +646,7 @@ exports[`<Toast /> component should render toast with title & message for type s
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #6ea046;
+  background-color: #209242;
   color: #ffffff;
 }
 
@@ -674,13 +674,13 @@ exports[`<Toast /> component should render toast with title & message for type s
   line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
 
 .emotion-10 {
-  color: #292929;
+  color: #252525;
   border: 0;
   cursor: pointer;
   background: transparent;
@@ -703,7 +703,7 @@ exports[`<Toast /> component should render toast with title & message for type s
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   overflow: hidden;
   word-break: break-word;
   -webkit-hyphens: auto;
@@ -825,7 +825,7 @@ exports[`<Toast /> component should render toast with title & message for type w
   overflow: hidden;
   background-color: #ffffff;
   opacity: 1;
-  color: #292929;
+  color: #252525;
   border-radius: 0px;
   box-shadow: 0px 1px 3px 0px #1018281a;
 }
@@ -842,7 +842,7 @@ exports[`<Toast /> component should render toast with title & message for type w
   align-items: center;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: #e69123;
+  background-color: #fab700;
   color: #ffffff;
 }
 
@@ -870,13 +870,13 @@ exports[`<Toast /> component should render toast with title & message for type w
   line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
 
 .emotion-10 {
-  color: #292929;
+  color: #252525;
   border: 0;
   cursor: pointer;
   background: transparent;
@@ -899,7 +899,7 @@ exports[`<Toast /> component should render toast with title & message for type w
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   overflow: hidden;
   word-break: break-word;
   -webkit-hyphens: auto;

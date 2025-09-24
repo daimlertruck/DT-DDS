@@ -145,7 +145,7 @@ describe('<TextArea /> component', () => {
     );
 
     expect(getByTestId('my-input-textarea')).toHaveStyle(
-      'background-color: rgb(250, 250, 250);'
+      `background-color: ${theme.palette.surface.light}`
     );
   });
 });

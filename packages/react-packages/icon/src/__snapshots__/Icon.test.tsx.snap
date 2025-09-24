@@ -13,7 +13,7 @@ exports[`Icon component tests renders Icon component 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -23,7 +23,7 @@ exports[`Icon component tests renders Icon component 1`] = `
 <div>
   <i
     class="emotion-0 emotion-1"
-    color="#292929"
+    color="#252525"
     data-testid="icon"
   >
     warning

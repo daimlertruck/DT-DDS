@@ -31,7 +31,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 
 .emotion-1 i {
   font-size: 24px;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-1:not(:disabled)>i:hover,
@@ -55,7 +55,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -125,7 +125,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 }
 
 .emotion-7:hover {
-  background-color: #cce3eb;
+  background-color: #deeff2;
 }
 
 .emotion-12 {
@@ -146,7 +146,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: transparent;
-  color: #a3a3a3;
+  color: #a9a9a9;
   padding: 12px 40px;
   cursor: not-allowed;
   white-space: nowrap;
@@ -164,7 +164,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
     >
       <i
         class="emotion-2"
-        color="#292929"
+        color="#252525"
         data-testid="left-arrow"
         style="display: none;"
       >
@@ -200,7 +200,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
       >
         <i
           class="emotion-2"
-          color="#292929"
+          color="#252525"
           data-testid="icon"
         >
           menu
@@ -223,7 +223,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
     >
       <i
         class="emotion-2"
-        color="#292929"
+        color="#252525"
         data-testid="right-arrow"
         style="display: none;"
       >
@@ -265,7 +265,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 
 .emotion-1 i {
   font-size: 24px;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-1:not(:disabled)>i:hover,
@@ -289,7 +289,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -361,7 +361,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 }
 
 .emotion-7:hover {
-  background-color: #cce3eb;
+  background-color: #deeff2;
 }
 
 .emotion-12 {
@@ -382,7 +382,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: transparent;
-  color: #a3a3a3;
+  color: #a9a9a9;
   padding: 12px 40px;
   cursor: not-allowed;
   white-space: nowrap;
@@ -392,7 +392,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 <div>
   <div
     class="emotion-0"
-    style="flex-direction: row; border-bottom: 1px solid #dedede;"
+    style="flex-direction: row; border-bottom: 1px solid #e6e6e6;"
   >
     <button
       class="emotion-1"
@@ -400,7 +400,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
     >
       <i
         class="emotion-2"
-        color="#292929"
+        color="#252525"
         data-testid="left-arrow"
         style="display: none;"
       >
@@ -436,7 +436,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
       >
         <i
           class="emotion-2"
-          color="#292929"
+          color="#252525"
           data-testid="icon"
         >
           menu
@@ -459,7 +459,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
     >
       <i
         class="emotion-2"
-        color="#292929"
+        color="#252525"
         data-testid="right-arrow"
         style="display: none;"
       >

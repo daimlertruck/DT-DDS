@@ -37,17 +37,17 @@ exports[`<Button /> component renders button html element with the correct title
 
 .emotion-0:hover {
   color: #ffffff;
-  background-color: #454545;
+  background-color: #3e3e3e;
 }
 
 .emotion-0:disabled {
   cursor: not-allowed;
   color: #ffffff;
-  background-color: #dedede;
+  background-color: #c5c5c5;
 }
 
 .emotion-0:focus-visible {
-  outline: 3px solid #131313;
+  outline: 3px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -139,7 +139,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 .emotion-0:hover {
   color: #000000;
   border-color: #000000;
-  background-color: #dedede;
+  background-color: #c5c5c5;
 }
 
 .emotion-0:active {
@@ -149,13 +149,13 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 
 .emotion-0:disabled {
   cursor: not-allowed;
-  color: #dedede;
-  border-color: #dedede;
+  color: #c5c5c5;
+  border-color: #c5c5c5;
   background-color: transparent;
 }
 
 .emotion-0:focus-visible {
-  outline: 3px solid #131313;
+  outline: 3px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -263,17 +263,17 @@ exports[`<Button /> component when loading is true renders a spinner light theme
 
 .emotion-0:hover {
   color: #ffffff;
-  background-color: #454545;
+  background-color: #3e3e3e;
 }
 
 .emotion-0:disabled {
   cursor: not-allowed;
   color: #ffffff;
-  background-color: #dedede;
+  background-color: #c5c5c5;
 }
 
 .emotion-0:focus-visible {
-  outline: 3px solid #131313;
+  outline: 3px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -300,7 +300,7 @@ exports[`<Button /> component when loading is true renders a spinner light theme
 .emotion-3 {
   width: 14px;
   height: 14px;
-  border: 2px solid #636363;
+  border: 2px solid #3e3e3e;
   border-radius: 50%;
   border-top: 2px solid #ffffff;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;

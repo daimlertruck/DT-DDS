@@ -15,7 +15,9 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint --cache .",
-    "test": "jest"
+    "test": "jest",
+    "test:report": "open ./jest-coverage/lcov-report/index.html",
+    "test:update:snapshot": "jest -u"
   },
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.47",

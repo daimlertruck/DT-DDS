@@ -7,47 +7,47 @@
       },
       "grey-10": {
         "$type": "color",
-        "$value": "#fafafa"
+        "$value": "#f2f2f2"
       },
       "grey-20": {
         "$type": "color",
-        "$value": "#f3f3f5"
+        "$value": "#e6e6e6"
       },
       "grey-30": {
         "$type": "color",
-        "$value": "#dedede"
+        "$value": "#c5c5c5"
       },
       "grey-40": {
         "$type": "color",
-        "$value": "#c1c1c1"
+        "$value": "#a9a9a9"
       },
       "grey-50": {
         "$type": "color",
-        "$value": "#a3a3a3"
+        "$value": "#828282"
       },
       "grey-60": {
         "$type": "color",
-        "$value": "#838383"
+        "$value": "#696969"
       },
       "grey-70": {
         "$type": "color",
-        "$value": "#636363"
+        "$value": "#444444"
       },
       "grey-80": {
         "$type": "color",
-        "$value": "#454545"
+        "$value": "#3e3e3e"
       },
       "grey-90": {
         "$type": "color",
-        "$value": "#292929"
+        "$value": "#303030"
       },
       "grey-100": {
         "$type": "color",
-        "$value": "#131313"
+        "$value": "#252525"
       },
       "grey-110": {
         "$type": "color",
-        "$value": "#040404"
+        "$value": "#1d1d1d"
       },
       "grey-120": {
         "$type": "color",
@@ -57,281 +57,235 @@
     "Petrol": {
       "petrol-00": {
         "$type": "color",
-        "$value": "#00677f"
+        "$value": "#ebf4f6"
       },
       "petrol-10": {
         "$type": "color",
-        "$value": "#f7fafc"
+        "$value": "#deeff2"
       },
       "petrol-20": {
         "$type": "color",
-        "$value": "#ecf4f8"
+        "$value": "#b0d0d7"
       },
       "petrol-30": {
         "$type": "color",
-        "$value": "#cce3eb"
+        "$value": "#8ab9c4"
       },
       "petrol-40": {
         "$type": "color",
-        "$value": "#a0c9d8"
+        "$value": "#5499a9"
       },
       "petrol-50": {
         "$type": "color",
-        "$value": "#73aec2"
+        "$value": "#338599"
       },
       "petrol-60": {
         "$type": "color",
-        "$value": "#448fa6"
+        "$value": "#00677f"
       },
       "petrol-70": {
         "$type": "color",
-        "$value": "#116e86"
+        "$value": "#005e74"
       },
       "petrol-80": {
         "$type": "color",
-        "$value": "#004e64"
+        "$value": "#00495a"
       },
       "petrol-90": {
         "$type": "color",
-        "$value": "#003041"
+        "$value": "#003946"
       },
       "petrol-100": {
         "$type": "color",
-        "$value": "#001822"
+        "$value": "#002b35"
       }
     },
-    "Blue": {
-      "blue-00": {
-        "$type": "color",
-        "$value": "#008dfc"
-      },
-      "blue-10": {
-        "$type": "color",
-        "$value": "#f5faff"
-      },
-      "blue-20": {
-        "$type": "color",
-        "$value": "#e8f4ff"
-      },
-      "blue-30": {
-        "$type": "color",
-        "$value": "#c3e2ff"
-      },
-      "blue-40": {
-        "$type": "color",
-        "$value": "#8ec6ff"
-      },
-      "blue-50": {
-        "$type": "color",
-        "$value": "#57a7fe"
-      },
-      "blue-60": {
-        "$type": "color",
-        "$value": "#0884eb"
-      },
-      "blue-70": {
-        "$type": "color",
-        "$value": "#0060cb"
-      },
-      "blue-80": {
-        "$type": "color",
-        "$value": "#003fa0"
-      },
-      "blue-90": {
-        "$type": "color",
-        "$value": "#00226f"
-      },
-      "blue-100": {
-        "$type": "color",
-        "$value": "#000e40"
-      }
-    },
-    "Green": {
-      "green-00": {
-        "$type": "color",
-        "$value": "#6ea046"
-      },
-      "green-10": {
-        "$type": "color",
-        "$value": "#f8fbf6"
-      },
-      "green-20": {
-        "$type": "color",
-        "$value": "#eff5eb"
-      },
-      "green-30": {
-        "$type": "color",
-        "$value": "#d4e5c9"
-      },
-      "green-40": {
-        "$type": "color",
-        "$value": "#afcc9b"
-      },
-      "green-50": {
-        "$type": "color",
-        "$value": "#8ab26e"
-      },
-      "green-60": {
-        "$type": "color",
-        "$value": "#659340"
-      },
-      "green-70": {
-        "$type": "color",
-        "$value": "#437211"
-      },
-      "green-80": {
-        "$type": "color",
-        "$value": "#275100"
-      },
-      "green-90": {
-        "$type": "color",
-        "$value": "#123300"
-      },
-      "green-100": {
-        "$type": "color",
-        "$value": "#051900"
-      }
-    },
-    "Orange": {
-      "orange-00": {
-        "$type": "color",
-        "$value": "#e69123"
-      },
-      "orange-10": {
-        "$type": "color",
-        "$value": "#fdf9f4"
-      },
-      "orange-20": {
-        "$type": "color",
-        "$value": "#fbf1e7"
-      },
-      "orange-30": {
-        "$type": "color",
-        "$value": "#f4d9bf"
-      },
-      "orange-40": {
-        "$type": "color",
-        "$value": "#e7b787"
-      },
-      "orange-50": {
-        "$type": "color",
-        "$value": "#d5944d"
-      },
-      "orange-60": {
-        "$type": "color",
-        "$value": "#bb6f00"
-      },
-      "orange-70": {
-        "$type": "color",
-        "$value": "#9a4b00"
-      },
-      "orange-80": {
-        "$type": "color",
-        "$value": "#742d00"
-      },
-      "orange-90": {
-        "$type": "color",
-        "$value": "#4d1500"
-      },
-      "orange-100": {
-        "$type": "color",
-        "$value": "#2a0600"
-      }
-    },
-    "Red": {
-      "red-00": {
-        "$type": "color",
-        "$value": "#ff0000"
-      },
-      "red-10": {
-        "$type": "color",
-        "$value": "#fff7f5"
-      },
-      "red-20": {
-        "$type": "color",
-        "$value": "#ffece7"
-      },
-      "red-30": {
-        "$type": "color",
-        "$value": "#ffcbc0"
-      },
-      "red-40": {
-        "$type": "color",
-        "$value": "#ff9c8b"
-      },
-      "red-50": {
-        "$type": "color",
-        "$value": "#ff6654"
-      },
-      "red-60": {
-        "$type": "color",
-        "$value": "#f31810"
-      },
-      "red-70": {
-        "$type": "color",
-        "$value": "#cf0000"
-      },
-      "red-80": {
-        "$type": "color",
-        "$value": "#a00000"
-      },
-      "red-90": {
-        "$type": "color",
-        "$value": "#6d0000"
-      },
-      "red-100": {
-        "$type": "color",
-        "$value": "#3f0000"
-      }
-    }
-  },
-  "Product_colors": {
-    "Bright_yellow": {
-      "brightyellow-00": {
+    "Yellow": {
+      "yellow-00": {
         "$type": "color",
         "$value": "#ffff40"
       },
-      "brightyellow-10": {
+      "yellow-10": {
         "$type": "color",
         "$value": "#fafbf3"
       },
-      "brightyellow-20": {
+      "yellow-20": {
         "$type": "color",
         "$value": "#f3f5e2"
       },
-      "brightyellow-30": {
+      "yellow-30": {
         "$type": "color",
         "$value": "#dfe3b2"
       },
-      "brightyellow-40": {
+      "yellow-40": {
         "$type": "color",
         "$value": "#c4c96c"
       },
-      "brightyellow-50": {
+      "yellow-50": {
         "$type": "color",
         "$value": "#a8ac00"
       },
-      "brightyellow-60": {
+      "yellow-60": {
         "$type": "color",
         "$value": "#8a8b00"
       },
-      "brightyellow-70": {
+      "yellow-70": {
         "$type": "color",
         "$value": "#6b6900"
       },
-      "brightyellow-80": {
+      "yellow-80": {
         "$type": "color",
         "$value": "#4c4900"
       },
-      "brightyellow-90": {
+      "yellow-90": {
         "$type": "color",
         "$value": "#302c00"
       },
-      "brightyellow-100": {
+      "yellow-100": {
         "$type": "color",
         "$value": "#181500"
       }
     },
+    "Error": {
+      "error-00": {
+        "$type": "color",
+        "$value": "#fdf5f5"
+      },
+      "error-10": {
+        "$type": "color",
+        "$value": "#ffe6e6"
+      },
+      "error-20": {
+        "$type": "color",
+        "$value": "#ffb0b0"
+      },
+      "error-30": {
+        "$type": "color",
+        "$value": "#ff8a8a"
+      },
+      "error-40": {
+        "$type": "color",
+        "$value": "#ff5454"
+      },
+      "error-50": {
+        "$type": "color",
+        "$value": "#ff3333"
+      },
+      "error-60": {
+        "$type": "color",
+        "$value": "#ff0000"
+      },
+      "error-70": {
+        "$type": "color",
+        "$value": "#e80000"
+      },
+      "error-80": {
+        "$type": "color",
+        "$value": "#b50000"
+      },
+      "error-90": {
+        "$type": "color",
+        "$value": "#8c0000"
+      },
+      "error-100": {
+        "$type": "color",
+        "$value": "#6b0000"
+      }
+    },
+    "Warning": {
+      "warning-00": {
+        "$type": "color",
+        "$value": "#fffcf6"
+      },
+      "warning-10": {
+        "$type": "color",
+        "$value": "#fff8e6"
+      },
+      "warning-20": {
+        "$type": "color",
+        "$value": "#fde9b0"
+      },
+      "warning-30": {
+        "$type": "color",
+        "$value": "#fdde8a"
+      },
+      "warning-40": {
+        "$type": "color",
+        "$value": "#fccf54"
+      },
+      "warning-50": {
+        "$type": "color",
+        "$value": "#fbc533"
+      },
+      "warning-60": {
+        "$type": "color",
+        "$value": "#fab700"
+      },
+      "warning-70": {
+        "$type": "color",
+        "$value": "#e4a700"
+      },
+      "warning-80": {
+        "$type": "color",
+        "$value": "#b28200"
+      },
+      "warning-90": {
+        "$type": "color",
+        "$value": "#8a6500"
+      },
+      "warning-100": {
+        "$type": "color",
+        "$value": "#694d00"
+      }
+    },
+    "Success": {
+      "success-00": {
+        "$type": "color",
+        "$value": "#f7fbf7"
+      },
+      "success-10": {
+        "$type": "color",
+        "$value": "#e9f4ec"
+      },
+      "success-20": {
+        "$type": "color",
+        "$value": "#baddc4"
+      },
+      "success-30": {
+        "$type": "color",
+        "$value": "#98cda8"
+      },
+      "success-40": {
+        "$type": "color",
+        "$value": "#6ab680"
+      },
+      "success-50": {
+        "$type": "color",
+        "$value": "#4da868"
+      },
+      "success-60": {
+        "$type": "color",
+        "$value": "#209242"
+      },
+      "success-70": {
+        "$type": "color",
+        "$value": "#1d853c"
+      },
+      "success-80": {
+        "$type": "color",
+        "$value": "#17682f"
+      },
+      "success-90": {
+        "$type": "color",
+        "$value": "#125024"
+      },
+      "success-100": {
+        "$type": "color",
+        "$value": "#0d3d1c"
+      }
+    }
+  },
+  "Product_colors": {
     "True_blue": {
       "trueblue-00": {
         "$type": "color",
@@ -384,15 +338,6 @@
       "$type": "string",
       "$value": "Daimler CS",
       "$description": "Font family"
-    },
-    "truckAPI-primary": {
-      "$type": "string",
-      "$value": "Daimler CS",
-      "$description": "Font family"
-    },
-    "dtCompanion-primary": {
-      "$type": "string",
-      "$value": "Daimler CS"
     },
     "[brand]-secondary": {
       "$type": "string",

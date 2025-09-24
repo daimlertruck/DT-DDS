@@ -1,4 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { render } from '@testing-library/react';
 
 import { Typography } from './Typography';
@@ -6,10 +7,10 @@ import { Typography } from './Typography';
 describe('<Typography /> component', () => {
   const ProvidedTypography = withProviders(Typography);
 
-  it('should render a red h1 html element with the given content', () => {
+  it('should render an error_90 h1 html element with the given content', () => {
     const { container } = render(
       <ProvidedTypography
-        color='red_90'
+        color='error_90'
         dataTestId='typography-h1'
         element='h1'
         fontStyles='h4'
@@ -20,7 +21,7 @@ describe('<Typography /> component', () => {
 
     const h1Element = container.querySelector('h1');
     expect(h1Element).toBeInTheDocument();
-    expect(h1Element).toHaveStyle({ color: 'rgb(109, 0, 0)' });
+    expect(h1Element).toHaveStyle({ color: theme.colors.error_90 });
   });
 
   it('should render a p html element with the primary color', () => {
@@ -30,7 +31,7 @@ describe('<Typography /> component', () => {
 
     const pElement = container.querySelector('p');
     expect(pElement).toBeInTheDocument();
-    expect(pElement).toHaveStyle({ color: 'rgb(0, 0, 0)' });
+    expect(pElement).toHaveStyle({ color: theme.palette.primary.default });
   });
 
   it('should use default color when no color is provided', () => {

@@ -31,8 +31,8 @@ export const shape: Theme['shape'] = {
   header: '0px',
   navigationMenu: '0px',
   option: '0px',
-  kpiCard: '0px',
+  kpiCard: 'inherit',
   footer: '0px',
-  slider: '8px',
+  slider: '0px',
   skeleton: '0px',
 } as const;
