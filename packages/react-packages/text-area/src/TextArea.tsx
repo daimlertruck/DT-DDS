@@ -43,7 +43,7 @@ export const TextArea = ({
   onChange,
   maxLength,
   variant = 'outlined',
-  backgroundFill = 'default',
+  backgroundFill = 'contrast',
   enableResize = false,
   disabled = false,
   required = false,

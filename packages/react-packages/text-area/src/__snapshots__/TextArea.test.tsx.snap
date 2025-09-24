@@ -35,7 +35,7 @@ exports[`<TextArea /> component should render default text area 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   min-height: 100px;
   width: 100%;
   outline: none;
@@ -147,7 +147,7 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   min-height: 100px;
   width: 100%;
   outline: none;
