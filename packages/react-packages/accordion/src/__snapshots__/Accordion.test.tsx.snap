@@ -9,7 +9,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-0:hover {
-  background-color: #f3f3f5;
+  background-color: #e6e6e6;
   box-shadow: 0px 1px 2px 0px #1018280d;
 }
 
@@ -39,7 +39,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #131313;
+  color: #1d1d1d;
 }
 
 .emotion-2:focus-visible {
@@ -58,7 +58,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #131313;
+  color: #1d1d1d;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -77,7 +77,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   grid-template-rows: 0fr;
   -webkit-transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;
   transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 0;
 }
 
@@ -102,7 +102,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
       Header Content
       <i
         class="emotion-4"
-        color="#131313"
+        color="#1d1d1d"
         data-testid="icon"
       >
         unfold_more
@@ -127,12 +127,12 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 .emotion-0 {
   position: relative;
   width: 100%;
-  background-color: #fafafa;
-  border-bottom: 1px solid #dedede;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e6e6e6;
 }
 
 .emotion-0:hover {
-  background-color: #f3f3f5;
+  background-color: #e6e6e6;
   box-shadow: 0px 1px 2px 0px #1018280d;
 }
 
@@ -162,7 +162,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #131313;
+  color: #1d1d1d;
 }
 
 .emotion-2:focus-visible {
@@ -181,7 +181,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #131313;
+  color: #1d1d1d;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -200,7 +200,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
   grid-template-rows: 0fr;
   -webkit-transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;
   transition: grid-template-rows 0.3s ease-in-out,padding 0.3s ease-in-out;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 0;
 }
 
@@ -225,7 +225,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
       Header Content
       <i
         class="emotion-4"
-        color="#131313"
+        color="#1d1d1d"
         data-testid="icon"
       >
         unfold_more

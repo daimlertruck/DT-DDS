@@ -26,7 +26,7 @@ exports[`<Counter /> component should render a span html element with the given 
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #008dfc;
+  background-color: #00677f;
 }
 
 <div>

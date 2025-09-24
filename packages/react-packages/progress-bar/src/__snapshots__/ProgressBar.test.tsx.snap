@@ -31,7 +31,7 @@ exports[`<ProgressBar /> component should render the default options correctly 1
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -39,7 +39,7 @@ exports[`<ProgressBar /> component should render the default options correctly 1
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -99,7 +99,7 @@ exports[`<ProgressBar /> component should render the helper text when prop is pr
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -107,7 +107,7 @@ exports[`<ProgressBar /> component should render the helper text when prop is pr
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -121,7 +121,7 @@ exports[`<ProgressBar /> component should render the helper text when prop is pr
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
 }
 
 <div>
@@ -177,7 +177,7 @@ exports[`<ProgressBar /> component should render the label when prop is provided
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-3 {
@@ -194,7 +194,7 @@ exports[`<ProgressBar /> component should render the label when prop is provided
 
 .emotion-5 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -202,7 +202,7 @@ exports[`<ProgressBar /> component should render the label when prop is provided
 .emotion-7 {
   width: 40%;
   height: 4px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -270,7 +270,7 @@ exports[`<ProgressBar /> component should render the percentage 1`] = `
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -278,7 +278,7 @@ exports[`<ProgressBar /> component should render the percentage 1`] = `
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -338,7 +338,7 @@ exports[`<ProgressBar /> component should render the sizes correctly should rend
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -346,7 +346,7 @@ exports[`<ProgressBar /> component should render the sizes correctly should rend
 .emotion-6 {
   width: 40%;
   height: 8px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -406,7 +406,7 @@ exports[`<ProgressBar /> component should render the sizes correctly should rend
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -414,7 +414,7 @@ exports[`<ProgressBar /> component should render the sizes correctly should rend
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #008dfc;
+  background-color: #00677f;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -474,7 +474,7 @@ exports[`<ProgressBar /> component should render the states correctly should ren
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -482,7 +482,7 @@ exports[`<ProgressBar /> component should render the states correctly should ren
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #a00000;
+  background-color: #e80000;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -542,7 +542,7 @@ exports[`<ProgressBar /> component should render the states correctly should ren
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -550,7 +550,7 @@ exports[`<ProgressBar /> component should render the states correctly should ren
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #6ea046;
+  background-color: #209242;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -610,7 +610,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -618,7 +618,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #a00000;
+  background-color: #e80000;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -641,7 +641,7 @@ exports[`<ProgressBar /> component should render with different info prop should
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #a00000;
+  color: #e80000;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -671,7 +671,7 @@ exports[`<ProgressBar /> component should render with different info prop should
       >
         <i
           class="emotion-10"
-          color="#a00000"
+          color="#e80000"
           data-testid="icon"
         >
           error
@@ -713,7 +713,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -721,7 +721,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #a00000;
+  background-color: #e80000;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -736,7 +736,7 @@ exports[`<ProgressBar /> component should render with different info prop should
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  color: #a00000;
+  color: #e80000;
 }
 
 <div>
@@ -798,7 +798,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 
 .emotion-4 {
   width: 100%;
-  background-color: #838383;
+  background-color: #696969;
   border-radius: 0px;
   overflow: hidden;
 }
@@ -806,7 +806,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 .emotion-6 {
   width: 40%;
   height: 4px;
-  background-color: #a00000;
+  background-color: #e80000;
   -webkit-transition: width 0.2s ease-in-out;
   transition: width 0.2s ease-in-out;
   border-radius: 0px 0px 0px 0px;
@@ -821,7 +821,7 @@ exports[`<ProgressBar /> component should render with different info prop should
   -webkit-text-decoration: none;
   text-decoration: none;
   text-align: center;
-  color: #a00000;
+  color: #e80000;
 }
 
 .emotion-10 {
@@ -841,7 +841,7 @@ exports[`<ProgressBar /> component should render with different info prop should
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #a00000;
+  color: #e80000;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -876,7 +876,7 @@ exports[`<ProgressBar /> component should render with different info prop should
       >
         <i
           class="emotion-12"
-          color="#a00000"
+          color="#e80000"
           data-testid="icon"
         >
           error

@@ -48,7 +48,6 @@ export function generateShape(tokens: TokenFile, themeName: string): string {
     'shape-header',
     'shape-navigationMenu',
     'shape-option',
-    'shape-KPIcard',
     'shape-footer',
     'shape-slider',
     'shape-skeleton',

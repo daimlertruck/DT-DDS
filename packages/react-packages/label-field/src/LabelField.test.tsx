@@ -1,4 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { render } from '@testing-library/react';
 
 import { LabelField } from './LabelField';
@@ -62,7 +63,7 @@ describe('<LabelField /> component', () => {
 
     const LabelField = getByTestId('label-field');
 
-    expect(LabelField).toHaveStyle('color: rgb(160, 0, 0)');
+    expect(LabelField).toHaveStyle(`color: ${theme.palette.error.default}`);
   });
 
   it('it renders a label field as required', () => {
@@ -89,6 +90,8 @@ describe('<LabelField /> component', () => {
 
     const labelField = getByTestId('label-field');
 
-    expect(labelField).toHaveStyle('color: rgb(0, 141, 252)');
+    expect(labelField).toHaveStyle(
+      `color: ${theme.palette.informative.default}`
+    );
   });
 });

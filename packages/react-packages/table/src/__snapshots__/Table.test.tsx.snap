@@ -23,7 +23,7 @@ exports[`<Table /> component renders a Basic Table 1`] = `
 
 .emotion-6 {
   text-align: left;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 16px;
   font-family: Daimler CS;
   font-size: 12px;
@@ -38,12 +38,12 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   position: sticky;
   z-index: 2;
   background: #ffffff;
-  box-shadow: 1px 0 0 0 #f3f3f5;
+  box-shadow: 1px 0 0 0 #f2f2f2;
 }
 
 .emotion-8 {
   text-align: left;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 16px;
   font-family: Daimler CS;
   font-size: 12px;
@@ -56,7 +56,7 @@ exports[`<Table /> component renders a Basic Table 1`] = `
 
 .emotion-10 {
   text-align: left;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 16px;
   font-family: Daimler CS;
   font-size: 12px;
@@ -71,12 +71,12 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   position: sticky;
   z-index: 2;
   background: #ffffff;
-  box-shadow: -1px 0 0 0 #f3f3f5;
+  box-shadow: -1px 0 0 0 #f2f2f2;
 }
 
 .emotion-12 {
   text-align: left;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 16px;
   font-family: Daimler CS;
   font-size: 12px;
@@ -99,7 +99,7 @@ exports[`<Table /> component renders a Basic Table 1`] = `
 }
 
 .emotion-14 tr:hover td {
-  background-color: #fafafa;
+  background-color: #f2f2f2;
 }
 
 .emotion-16 {
@@ -116,10 +116,10 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid #f2f2f2;
   padding: 16px;
   text-align: left;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -133,7 +133,7 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   position: sticky;
   z-index: 1;
   background: #ffffff;
-  box-shadow: 1px 0 0 0 #f3f3f5;
+  box-shadow: 1px 0 0 0 #f2f2f2;
 }
 
 .emotion-18:first-of-type {
@@ -145,10 +145,10 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid #f2f2f2;
   padding: 16px;
   text-align: left;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -167,10 +167,10 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid #f2f2f2;
   padding: 16px;
   text-align: left;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -184,7 +184,7 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   position: sticky;
   z-index: 1;
   background: #ffffff;
-  box-shadow: -1px 0 0 0 #f3f3f5;
+  box-shadow: -1px 0 0 0 #f2f2f2;
 }
 
 .emotion-22:first-of-type {
@@ -196,10 +196,10 @@ exports[`<Table /> component renders a Basic Table 1`] = `
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid #f2f2f2;
   padding: 16px;
   text-align: left;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -403,7 +403,7 @@ exports[`<Table /> component renders a Basic Table without fixed columns 1`] = `
 
 .emotion-6 {
   text-align: left;
-  color: #131313;
+  color: #1d1d1d;
   padding: 0 16px 16px;
   font-family: Daimler CS;
   font-size: 12px;
@@ -419,17 +419,17 @@ exports[`<Table /> component renders a Basic Table without fixed columns 1`] = `
 }
 
 .emotion-14 tr:hover td {
-  background-color: #fafafa;
+  background-color: #f2f2f2;
 }
 
 .emotion-18 {
   display: table-cell;
   min-width: 110px;
   word-break: break-word;
-  border-top: 1px solid #f3f3f5;
+  border-top: 1px solid #f2f2f2;
   padding: 16px;
   text-align: left;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;

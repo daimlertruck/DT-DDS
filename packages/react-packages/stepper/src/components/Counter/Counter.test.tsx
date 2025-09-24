@@ -1,4 +1,5 @@
-import { Colors, withProviders } from '@dt-dds/react-core';
+import { withProviders } from '@dt-dds/react-core';
+import { Colors, defaultTheme as theme } from '@dt-dds/themes';
 import { render, screen } from '@testing-library/react';
 
 import { Counter } from '.';
@@ -17,7 +18,10 @@ describe('<Counter /> component', () => {
     const counterEl = screen.getByTestId('counter');
 
     expect(counterEl).toHaveStyleRule('color', '#ffffff');
-    expect(counterEl).toHaveStyleRule('background-color', '#292929');
+    expect(counterEl).toHaveStyleRule(
+      'background-color',
+      theme.palette.content.default
+    );
   });
 
   it.each`
@@ -37,9 +41,9 @@ describe('<Counter /> component', () => {
   );
 
   it.each`
-    outlined | expectedBorder         | expectedBackgroundColor
-    ${true}  | ${'2px solid #008dfc'} | ${'#ffffff'}
-    ${false} | ${'0px'}               | ${'#008dfc'}
+    outlined | expectedBorder                                      | expectedBackgroundColor
+    ${true}  | ${`2px solid ${theme.palette.informative.default}`} | ${'#ffffff'}
+    ${false} | ${'0px'}                                            | ${theme.palette.informative.default}
   `(
     'should have border and background equals to $expectedBorder, $expectedBackgroundColor when outlined is $outlined ',
     ({
@@ -65,8 +69,8 @@ describe('<Counter /> component', () => {
 
   it.each`
     color            | expectedColor
-    ${'disabled'}    | ${'#a3a3a3'}
-    ${'informative'} | ${'#008dfc'}
+    ${'disabled'}    | ${theme.palette.content.light}
+    ${'informative'} | ${theme.palette.informative.default}
   `(
     'should have border and color equals to $expectedColor when color is $color and outlined is true ',
     ({

@@ -3,7 +3,7 @@
 exports[`<Divider /> component renders divider component 1`] = `
 .emotion-0 {
   border: 0px;
-  border-top: 1px #dedede solid;
+  border-top: 1px #e6e6e6 solid;
   margin-block: 12px;
   width: 100%;
 }

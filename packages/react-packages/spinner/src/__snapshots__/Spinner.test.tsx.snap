@@ -406,7 +406,7 @@ exports[`<Spinner /> component should render the small size correctly when the p
 .emotion-1 {
   width: 42px;
   height: 42px;
-  border: 4px solid #636363;
+  border: 4px solid #3e3e3e;
   border-radius: 50%;
   border-top: 4px solid #ffffff;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
@@ -538,7 +538,7 @@ exports[`<Spinner /> component should render the text helper when prop is provid
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 <div>

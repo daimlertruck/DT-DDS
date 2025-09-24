@@ -30,7 +30,7 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
 }
 
 .emotion-2+label {
-  background: #dedede;
+  background: #c5c5c5;
   cursor: pointer;
 }
 
@@ -54,7 +54,7 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #292929;
+  color: #252525;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -136,12 +136,12 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
 }
 
 .emotion-2+label {
-  background: #f3f3f5;
+  background: #e6e6e6;
   cursor: not-allowed;
 }
 
 .emotion-2:checked+label {
-  background: #cce3eb;
+  background: #deeff2;
 }
 
 .emotion-2:checked+label::after {
@@ -160,7 +160,7 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: not-allowed;
-  color: #a3a3a3;
+  color: #a9a9a9;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -243,12 +243,12 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
 }
 
 .emotion-2+label {
-  background: #f3f3f5;
+  background: #e6e6e6;
   cursor: not-allowed;
 }
 
 .emotion-2:checked+label {
-  background: #cce3eb;
+  background: #deeff2;
 }
 
 .emotion-2:checked+label::after {
@@ -267,7 +267,7 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: not-allowed;
-  color: #a3a3a3;
+  color: #a9a9a9;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -349,7 +349,7 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
 }
 
 .emotion-2+label {
-  background: #dedede;
+  background: #c5c5c5;
   cursor: pointer;
 }
 
@@ -373,7 +373,7 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #292929;
+  color: #252525;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

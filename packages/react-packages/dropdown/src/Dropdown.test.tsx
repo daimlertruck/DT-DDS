@@ -1,4 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render, screen, within } from '@testing-library/react';
 
 import { withDropdownProvider } from './utils';
@@ -152,7 +153,7 @@ describe('<Dropdown /> component', () => {
       'typography'
     );
 
-    expect(select).toHaveStyle('border-color: #a00000;');
+    expect(select).toHaveStyle(`border-color: ${theme.palette.error.default}`);
     expect(dropdownText).toHaveAttribute('color', 'error.default');
   });
 
@@ -178,9 +179,9 @@ describe('<Dropdown /> component', () => {
 
   it.each`
     fill          | expectedBackgroundColor
-    ${'light'}    | ${'#FAFAFA'}
-    ${'contrast'} | ${'#FFFFFF'}
-    ${'default'}  | ${'#F3F3F5'}
+    ${'light'}    | ${theme.palette.surface.light}
+    ${'contrast'} | ${theme.palette.surface.contrast}
+    ${'default'}  | ${theme.palette.surface.default}
   `(
     'renders select with $fill background fill',
     ({ fill, expectedBackgroundColor }) => {

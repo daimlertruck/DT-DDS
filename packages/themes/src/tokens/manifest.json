@@ -19,6 +19,12 @@
       "modes": {
         "Daimler Truck": [
           "Themes.Daimler Truck.tokens.json"
+        ],
+        "DT-Companion": [
+          "Themes.DT-Companion.tokens.json"
+        ],
+        "TruckAPI": [
+          "Themes.TruckAPI.tokens.json"
         ]
       }
     },
@@ -35,6 +41,20 @@
         ],
         "Sm Mobile": [
           "Responsiveness.Sm Mobile.tokens.json"
+        ]
+      }
+    },
+    "Semantic TruckAPI": {
+      "modes": {
+        "Default theme": [
+          "Semantic TruckAPI.Default theme.tokens.json"
+        ]
+      }
+    },
+    "Semantic DT-Companion": {
+      "modes": {
+        "Default theme": [
+          "Semantic DT-Companion.Default theme.tokens.json"
         ]
       }
     }

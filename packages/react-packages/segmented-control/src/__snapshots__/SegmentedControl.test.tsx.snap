@@ -11,7 +11,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 4px;
-  border: 1px solid #dedede;
+  border: 1px solid #e6e6e6;
   border-radius: 0px;
 }
 
@@ -45,19 +45,19 @@ exports[`SegmentedControl renders without errors 1`] = `
   gap: 4px;
   cursor: pointer;
   background-color: #ffffff;
-  color: #292929;
+  color: #252525;
   border: none;
   border-radius: 0px;
   padding: 4px 4px;
 }
 
 .emotion-3:not(:disabled):hover {
-  background-color: #dedede;
-  color: #292929;
+  background-color: #c5c5c5;
+  color: #252525;
 }
 
 .emotion-3:not(:disabled):hover i {
-  color: #131313;
+  color: #1d1d1d;
 }
 
 .emotion-3:not(:disabled)[aria-pressed="true"] {
@@ -70,12 +70,12 @@ exports[`SegmentedControl renders without errors 1`] = `
 }
 
 .emotion-3:disabled {
-  color: #a3a3a3;
+  color: #a9a9a9;
   cursor: not-allowed;
 }
 
 .emotion-3:disabled i {
-  color: #a3a3a3;
+  color: #a9a9a9;
 }
 
 .emotion-5 {
@@ -90,7 +90,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -115,7 +115,7 @@ exports[`SegmentedControl renders without errors 1`] = `
       >
         <i
           class="emotion-5"
-          color="#292929"
+          color="#252525"
           data-testid="icon"
         >
           list
@@ -134,7 +134,7 @@ exports[`SegmentedControl renders without errors 1`] = `
       >
         <i
           class="emotion-5"
-          color="#292929"
+          color="#252525"
           data-testid="icon"
         >
           grid_view

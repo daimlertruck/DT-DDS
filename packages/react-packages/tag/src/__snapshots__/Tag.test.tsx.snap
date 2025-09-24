@@ -7,9 +7,9 @@ exports[`<Tag /> component should render the tag with variant outlined, color se
   line-height: 0.875rem;
   padding: 2px 8px;
   height: 18px;
-  border: 1px solid #454545;
-  color: #454545;
-  background-color: #c1c1c1;
+  border: 1px solid #3e3e3e;
+  color: #3e3e3e;
+  background-color: #c5c5c5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -33,9 +33,9 @@ exports[`<Tag /> component should render the tag with variant outlined, color se
 }
 
 .emotion-0:hover {
-  border-color: #131313;
-  color: #131313;
-  background-color: #838383;
+  border-color: #1d1d1d;
+  color: #1d1d1d;
+  background-color: #696969;
 }
 
 .emotion-0>:first-child {
@@ -46,7 +46,7 @@ exports[`<Tag /> component should render the tag with variant outlined, color se
 }
 
 .emotion-0:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -72,7 +72,7 @@ exports[`<Tag /> component should render the tag with variant solid, color error
   height: 32px;
   border: 0px;
   color: #ffffff;
-  background-color: #ffcbc0;
+  background-color: #ffe6e6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -103,7 +103,7 @@ exports[`<Tag /> component should render the tag with variant solid, color error
 }
 
 .emotion-0:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -120,7 +120,7 @@ exports[`<Tag /> component should render the tag with variant solid, color error
 }
 
 .emotion-2:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -166,7 +166,7 @@ exports[`<Tag /> component should render the tag with variant solid, color infor
   height: 32px;
   border: 0px;
   color: #ffffff;
-  background-color: #008dfc;
+  background-color: #00677f;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -190,7 +190,7 @@ exports[`<Tag /> component should render the tag with variant solid, color infor
 }
 
 .emotion-0:hover {
-  background-color: #0060cb;
+  background-color: #003946;
   color: #ffffff;
 }
 
@@ -202,7 +202,7 @@ exports[`<Tag /> component should render the tag with variant solid, color infor
 }
 
 .emotion-0:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -253,7 +253,7 @@ exports[`<Tag /> component should render the tag with variant solid, color prima
 }
 
 .emotion-0:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -278,7 +278,7 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
   height: 32px;
   border: 0px;
   color: #ffffff;
-  background-color: #e69123;
+  background-color: #fab700;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,7 +301,7 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
 }
 
 .emotion-0:hover {
-  background-color: #bb6f00;
+  background-color: #8a6500;
   color: #ffffff;
 }
 
@@ -313,7 +313,7 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
 }
 
 .emotion-0:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -330,7 +330,7 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
 }
 
 .emotion-2:focus-visible {
-  outline: 2px solid #131313;
+  outline: 2px solid #1d1d1d;
   outline-offset: 1px;
 }
 

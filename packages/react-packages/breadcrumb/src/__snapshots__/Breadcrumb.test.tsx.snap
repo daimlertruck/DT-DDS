@@ -9,7 +9,7 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #454545;
+  color: #3e3e3e;
   overflow: hidden;
 }
 
@@ -59,11 +59,11 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
 }
 
 .emotion-4:not(:last-child):hover {
-  color: #003041;
+  color: #003946;
 }
 
 .emotion-4:not(:last-child):hover svg {
-  color: #003041;
+  color: #003946;
 }
 
 .emotion-4 a {
@@ -71,7 +71,7 @@ exports[`<Breadcrumb /> component renders nav element with the correct breadcrum
 }
 
 .emotion-4 svg {
-  color: #454545;
+  color: #3e3e3e;
 }
 
 .emotion-4:last-child * {

@@ -1,5 +1,6 @@
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
+import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { useState } from 'react';
 
@@ -141,7 +142,9 @@ describe('<TextField /> component', () => {
 
     fireEvent.mouseOver(inputWrapper, { currentTarget: { value: '' } });
 
-    expect(inputWrapper).toHaveStyle('border: 1px solid #131313;');
+    expect(inputWrapper).toHaveStyle(
+      `border: 1px solid ${theme.palette.border.dark}`
+    );
   });
 
   describe('onBlur event', () => {

@@ -44,20 +44,20 @@ exports[`<Select /> component should render Select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   padding: 8px 12px;
   gap: 8px;
-  background-color: #f3f3f5;
+  background-color: #e6e6e6;
   border-radius: 0px;
   cursor: pointer;
   border-width: 1px;
-  border-color: #131313;
+  border-color: #1d1d1d;
   border-style: solid;
 }
 
 .emotion-4:focus,
 .emotion-4:hover {
-  border-color: #131313;
+  border-color: #1d1d1d;
 }
 
 .emotion-6 {
@@ -82,7 +82,7 @@ exports[`<Select /> component should render Select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -121,7 +121,7 @@ exports[`<Select /> component should render Select 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -156,7 +156,7 @@ exports[`<Select /> component should render Select 1`] = `
   padding: 8px 16px;
   gap: 4px;
   background-color: #ffffff;
-  color: #292929;
+  color: #252525;
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -168,12 +168,12 @@ exports[`<Select /> component should render Select 1`] = `
 
 .emotion-14:hover,
 .emotion-14:focus-within {
-  background-color: #dedede;
+  background-color: #c5c5c5;
 }
 
 .emotion-14[aria-disabled="true"] {
   cursor: not-allowed;
-  color: #a3a3a3;
+  color: #a9a9a9;
 }
 
 .emotion-14[aria-disabled="true"]:hover {
@@ -206,7 +206,7 @@ exports[`<Select /> component should render Select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #a3a3a3;
+  color: #a9a9a9;
 }
 
 <div>
@@ -246,7 +246,7 @@ exports[`<Select /> component should render Select 1`] = `
         >
           <i
             class="emotion-11"
-            color="#292929"
+            color="#252525"
             data-testid="icon"
           >
             expand_less
@@ -386,20 +386,20 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   padding: 8px 12px;
   gap: 8px;
-  background-color: #f3f3f5;
+  background-color: #e6e6e6;
   border-radius: 0px;
   cursor: pointer;
   border-width: 1px;
-  border-color: #c1c1c1;
+  border-color: #c5c5c5;
   border-style: solid;
 }
 
 .emotion-4:focus,
 .emotion-4:hover {
-  border-color: #131313;
+  border-color: #1d1d1d;
 }
 
 .emotion-6 {
@@ -424,7 +424,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -463,7 +463,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -522,7 +522,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
         >
           <i
             class="emotion-11"
-            color="#292929"
+            color="#252525"
             data-testid="icon"
           >
             expand_more

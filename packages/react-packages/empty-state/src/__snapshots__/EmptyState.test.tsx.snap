@@ -3,7 +3,7 @@
 exports[`<EmptyState /> component should render Empty State 1`] = `
 .emotion-0 {
   padding: 48px 40px;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -20,7 +20,7 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #dedede;
+  border: 1px dashed #e6e6e6;
   width: 100%;
   height: 100%;
   gap: 24px;
@@ -66,7 +66,7 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
   line-height: 28px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
 }
 
 @media only screen and (min-width:1024px) {
@@ -84,7 +84,7 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
   line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 <div>
@@ -118,7 +118,7 @@ exports[`<EmptyState /> component should render Empty State 1`] = `
 exports[`<EmptyState /> component should render Empty State with a Button 1`] = `
 .emotion-0 {
   padding: 48px 40px;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -135,7 +135,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #dedede;
+  border: 1px dashed #e6e6e6;
   width: 100%;
   height: 100%;
   gap: 24px;
@@ -181,7 +181,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   line-height: 28px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
 }
 
 @media only screen and (min-width:1024px) {
@@ -199,7 +199,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
   line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-6 {
@@ -238,17 +238,17 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
 
 .emotion-6:hover {
   color: #ffffff;
-  background-color: #454545;
+  background-color: #3e3e3e;
 }
 
 .emotion-6:disabled {
   cursor: not-allowed;
   color: #ffffff;
-  background-color: #dedede;
+  background-color: #c5c5c5;
 }
 
 .emotion-6:focus-visible {
-  outline: 3px solid #131313;
+  outline: 3px solid #1d1d1d;
   outline-offset: 1px;
 }
 
@@ -297,7 +297,7 @@ exports[`<EmptyState /> component should render Empty State with a Button 1`] = 
 exports[`<EmptyState /> component should render Empty State with image 1`] = `
 .emotion-0 {
   padding: 48px 40px;
-  background-color: #fafafa;
+  background-color: #f2f2f2;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -314,7 +314,7 @@ exports[`<EmptyState /> component should render Empty State with image 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
-  border: 1px dashed #dedede;
+  border: 1px dashed #e6e6e6;
   width: 100%;
   height: 100%;
   gap: 24px;
@@ -360,7 +360,7 @@ exports[`<EmptyState /> component should render Empty State with image 1`] = `
   line-height: 28px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #131313;
+  color: #1d1d1d;
 }
 
 @media only screen and (min-width:1024px) {
@@ -378,7 +378,7 @@ exports[`<EmptyState /> component should render Empty State with image 1`] = `
   line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 <div>

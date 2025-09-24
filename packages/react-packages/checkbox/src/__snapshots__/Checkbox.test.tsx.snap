@@ -111,7 +111,7 @@ exports[`<CheckBox /> component renders checkbox disabled 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #dedede;
+  border: 1px solid #e6e6e6;
   background-color: #ffffff;
 }
 
@@ -180,12 +180,12 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #dedede;
+  border: 1px solid #e6e6e6;
   background-color: #ffffff;
 }
 
 .emotion-0:hover>div {
-  background-color: #dedede;
+  background-color: #c5c5c5;
   border: 1px solid #000000;
 }
 
@@ -237,7 +237,7 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 <div>
@@ -278,12 +278,12 @@ exports[`<CheckBox /> component renders checkbox without label 1`] = `
 
 .emotion-0>div {
   border-radius: 0px;
-  border: 1px solid #dedede;
+  border: 1px solid #e6e6e6;
   background-color: #ffffff;
 }
 
 .emotion-0:hover>div {
-  background-color: #dedede;
+  background-color: #c5c5c5;
   border: 1px solid #000000;
 }
 

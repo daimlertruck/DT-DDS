@@ -28,15 +28,15 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   height: 53px;
   cursor: pointer;
   outline: none;
-  background-color: #f3f3f5;
+  background-color: #e6e6e6;
   border-width: 1px;
-  border-color: #131313;
+  border-color: #1d1d1d;
   border-style: solid;
 }
 
 .emotion-2:focus,
 .emotion-2:hover {
-  border-color: #131313;
+  border-color: #1d1d1d;
 }
 
 .emotion-2:disabled {
@@ -51,7 +51,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-5 {
@@ -62,7 +62,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
 }
 
 .emotion-6 {
@@ -91,7 +91,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   word-wrap: normal;
   white-space: nowrap;
   font-variation-settings: 'FILL' 0;
-  color: #292929;
+  color: #252525;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
@@ -100,7 +100,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 
 .emotion-8 {
   background: #ffffff;
-  border: 1px solid #dedede;
+  border: 1px solid #e6e6e6;
   border-radius: 0px;
   width: 100%;
   padding: 16px 0px;
@@ -120,7 +120,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #292929;
+  color: #252525;
   list-style: none;
   padding: 8px 16px;
   text-overflow: ellipsis;
@@ -128,7 +128,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
 }
 
 .emotion-10:hover {
-  background: #dedede;
+  background: #c5c5c5;
   cursor: pointer;
 }
 
@@ -153,7 +153,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #636363;
+  color: #3e3e3e;
 }
 
 <div>
@@ -193,7 +193,7 @@ exports[`<Dropdown /> component renders dropdown correctly 1`] = `
         >
           <i
             class="emotion-7"
-            color="#292929"
+            color="#252525"
             data-testid="icon"
           >
             expand_less
