@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.35
+
+### Minor Changes
+
+- feat: update text area
+
 ## 1.0.0-beta.34
 
 ### Patch Changes

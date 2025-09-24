@@ -1,5 +1,17 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.58
+
+### Minor Changes
+
+- feat: update text area
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-label-field@1.0.0-beta.44
+  - @dt-dds/react-spinner@1.0.0-beta.53
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

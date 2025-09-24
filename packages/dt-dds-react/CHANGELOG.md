@@ -1,5 +1,33 @@
 # @dt-ui/react
 
+## 1.0.0-beta.218
+
+### Minor Changes
+
+- feat: update text area
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-form@1.0.0-beta.35
+  - @dt-dds/react-label-field@1.0.0-beta.44
+  - @dt-dds/react-select@1.0.0-beta.53
+  - @dt-dds/react-text-area@1.0.0-beta.30
+  - @dt-dds/react-text-field@1.0.0-beta.58
+  - @dt-dds/react-date-picker@1.0.0-beta.41
+  - @dt-dds/react-box@1.0.0-beta.19
+  - @dt-dds/react-dropdown@1.0.0-beta.40
+  - @dt-dds/react-radio@1.0.0-beta.35
+  - @dt-dds/react-spinner@1.0.0-beta.53
+  - @dt-dds/react-tabs@1.0.0-beta.48
+  - @dt-dds/react-button@1.0.0-beta.48
+  - @dt-dds/react-modal@1.0.0-beta.48
+  - @dt-dds/react-empty-state@1.0.0-beta.68
+  - @dt-dds/react-link@1.0.0-beta.25
+  - @dt-dds/react-toast@1.0.0-beta.65
+  - @dt-dds/react-message@1.0.0-beta.64
+
 ## 1.0.0-beta.217
 
 ### Patch Changes

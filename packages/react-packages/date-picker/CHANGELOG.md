@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.41
+
+### Minor Changes
+
+- feat: update text area
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.58
+
 ## 1.0.0-beta.40
 
 ### Patch Changes

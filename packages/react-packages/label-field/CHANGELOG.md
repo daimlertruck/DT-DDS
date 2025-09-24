@@ -1,5 +1,11 @@
 # @dt-ui/react-label-field
 
+## 1.0.0-beta.44
+
+### Minor Changes
+
+- feat: update text area
+
 ## 1.0.0-beta.43
 
 ### Patch Changes
