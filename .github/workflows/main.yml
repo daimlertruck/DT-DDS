@@ -251,7 +251,7 @@ jobs:
           cat sonar-project.properties
 
       - name: Run SonarQube Scan
-        uses: sonarsource/sonarqube-scan-action@v5.3.1
+        uses: sonarsource/sonarqube-scan-action@v6.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
