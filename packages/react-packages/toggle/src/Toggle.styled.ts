@@ -10,15 +10,10 @@ const TOGGLE_RADIUS = 20;
 export const ToggleWrapperStyled = styled.div<ToggleWrapperStyledProps>`
   ${({ theme, hasLabel }) => `
     display: flex;
-    gap: ${hasLabel ? theme.spacing.spacing_20 : theme.spacing.spacing_0};
+    gap: ${hasLabel ? theme.spacing.spacing_30 : theme.spacing.spacing_0};
     border-radius: ${TOGGLE_RADIUS}px;
     align-items: center;
     width: fit-content;
-
-    :focus-visible {
-      outline: 2px solid ${theme.palette.primary.default};
-      outline-offset: 2px;
-    }
   `};
 `;
 
@@ -57,6 +52,12 @@ export const ToggleCheckBoxStyled = styled.input`
         disabled ? theme.palette.surface.default : theme.palette.surface.medium
       };
       cursor: ${disabled ? 'not-allowed' : 'pointer'};
+    }
+
+
+    &:focus-visible + label {
+      outline: 2px solid ${theme.palette.primary.default};
+      outline-offset: 1px;
     }
 
     &:checked + label {
