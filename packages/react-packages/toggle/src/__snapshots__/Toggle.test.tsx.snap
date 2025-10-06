@@ -6,7 +6,7 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   border-radius: 20px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -15,11 +15,6 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
 }
 
 .emotion-2 {
@@ -32,6 +27,11 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
 .emotion-2+label {
   background: #c5c5c5;
   cursor: pointer;
+}
+
+.emotion-2:focus-visible+label {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
 }
 
 .emotion-2:checked+label {
@@ -88,7 +88,6 @@ exports[`<Toggle /> component should render a toggle checked 1`] = `
   <div
     class="emotion-0 emotion-1"
     data-testid="toggle"
-    tabindex="0"
   >
     <input
       checked=""
@@ -112,7 +111,7 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   border-radius: 20px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -121,11 +120,6 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
 }
 
 .emotion-2 {
@@ -138,6 +132,11 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
 .emotion-2+label {
   background: #e6e6e6;
   cursor: not-allowed;
+}
+
+.emotion-2:focus-visible+label {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
 }
 
 .emotion-2:checked+label {
@@ -194,7 +193,6 @@ exports[`<Toggle /> component should render a toggle disabled and checked 1`] = 
   <div
     class="emotion-0 emotion-1"
     data-testid="toggle"
-    tabindex="-1"
   >
     <input
       checked=""
@@ -219,7 +217,7 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   border-radius: 20px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -228,11 +226,6 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-}
-
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
 }
 
 .emotion-2 {
@@ -245,6 +238,11 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
 .emotion-2+label {
   background: #e6e6e6;
   cursor: not-allowed;
+}
+
+.emotion-2:focus-visible+label {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
 }
 
 .emotion-2:checked+label {
@@ -301,7 +299,6 @@ exports[`<Toggle /> component should render a toggle disabled and not checked 1`
   <div
     class="emotion-0 emotion-1"
     data-testid="toggle"
-    tabindex="-1"
   >
     <input
       class="emotion-2 emotion-3"
@@ -336,11 +333,6 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
   width: fit-content;
 }
 
-.emotion-0:focus-visible {
-  outline: 2px solid #000000;
-  outline-offset: 2px;
-}
-
 .emotion-2 {
   opacity: 0;
   width: 0;
@@ -351,6 +343,11 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
 .emotion-2+label {
   background: #c5c5c5;
   cursor: pointer;
+}
+
+.emotion-2:focus-visible+label {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
 }
 
 .emotion-2:checked+label {
@@ -407,7 +404,6 @@ exports[`<Toggle /> component should render a toggle on default state 1`] = `
   <div
     class="emotion-0 emotion-1"
     data-testid="toggle"
-    tabindex="0"
   >
     <input
       class="emotion-2 emotion-3"

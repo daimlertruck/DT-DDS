@@ -50,7 +50,6 @@ export const Toggle = ({
       hasLabel={!!label}
       onClick={handleClick}
       onKeyDown={handleEnterClick}
-      tabIndex={isDisabled ? -1 : 0}
     >
       <ToggleCheckBoxStyled
         checked={isChecked}
