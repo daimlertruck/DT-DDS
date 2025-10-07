@@ -1,5 +1,11 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.28
+
+### Patch Changes
+
+- refactor: change focus on toggle
+
 ## 1.0.0-beta.27
 
 ### Patch Changes
