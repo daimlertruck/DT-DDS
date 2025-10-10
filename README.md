@@ -107,7 +107,7 @@ We provide a default Daimler Truck theme, available under the package `react-cor
 
 ### Prerequisites
 
-- Node.js >= v18.0.0
+- Node.js >= v22
 - Yarn
 
 ### 📓 Installation

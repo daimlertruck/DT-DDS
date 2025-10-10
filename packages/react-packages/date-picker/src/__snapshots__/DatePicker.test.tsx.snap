@@ -613,7 +613,7 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
