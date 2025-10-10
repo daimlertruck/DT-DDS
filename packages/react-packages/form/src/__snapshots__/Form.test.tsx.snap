@@ -100,7 +100,7 @@ exports[`<Form /> component renders simple form 1`] = `
 
 .emotion-4:focus-within,
 .emotion-4:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-4:focus-within:has(input[readonly]:not([disabled])),
@@ -414,7 +414,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 
 .emotion-8:focus-within,
 .emotion-8:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-8:focus-within:has(input[readonly]:not([disabled])),
@@ -710,7 +710,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 
 .emotion-8:focus-within,
 .emotion-8:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-8:focus-within:has(input[readonly]:not([disabled])),
@@ -1057,7 +1057,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 
 .emotion-11:focus-within,
 .emotion-11:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-11:focus-within:has(input[readonly]:not([disabled])),
