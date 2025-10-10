@@ -12,15 +12,19 @@ interface ToastIconStyledProps {
   type: ToastType;
 }
 
+interface ToastButtonCloseStyledProps {
+  toastType: ToastType;
+}
+
+interface ToastMessageStyledProps {
+  type: ToastType;
+}
+
 export const ToastIconStyled = styled.div<ToastIconStyledProps>`
-  height: 100%;
   display: flex;
-  align-items: center;
-  padding-left: 8px;
-  padding-right: 8px;
+  align-self: start;
   ${({ theme, type }) => `
-    background-color: ${theme.palette[type].default};  
-    color: ${theme.palette.content.contrast}
+    color: ${theme.palette[type].dark};  
 `}
 `;
 
@@ -31,42 +35,28 @@ const fadeIn = keyframes`
 
 export const ToastStyled = styled.div<ToastStyledProps>`
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   width: 360px;
   animation: ${fadeIn} 0.75s ease-in;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  ${({ theme, isVisible }) => `
-    background-color: ${theme.palette.surface.contrast};  
+  ${({ theme, isVisible, type }) => `
+    border: 1px solid ${theme.palette[type].default};
+    border-left: 6px solid ${theme.palette[type].default};
+    background-color: ${theme.palette[type].light};
     opacity: ${isVisible ? 1 : 0};
-    color: ${theme.palette.content.default};
     border-radius: ${theme.shape.toast};
-    box-shadow: ${theme.shadows.elevation_200};
+    padding: ${theme.spacing.spacing_50} ${theme.spacing.spacing_50} ${
+    theme.spacing.spacing_50
+  } ${theme.spacing.spacing_30};
+    gap: ${theme.spacing.spacing_30};
   `}
 `;
 
-export const ToastContentStyled = styled.div`
-  ${({ theme }) => `
-    height: 100%;
-    flex-grow: 1;
-    padding: ${theme.spacing.spacing_50} ${theme.spacing.spacing_50};
-  `}
-`;
-
-export const ToastTitleStyled = styled.div`
-  ${({ theme }) => `
-      ${theme.fontStyles.h6};
-      color: ${theme.palette.content.dark};
-      margin-bottom: ${theme.spacing.spacing_20};
-      text-transform: capitalize;
-  `}
-`;
-
-export const ToastMessageStyled = styled.div`
-  ${({ theme }) => `
+export const ToastMessageStyled = styled.div<ToastMessageStyledProps>`
+  ${({ theme, type }) => `
     ${theme.fontStyles.bodyMdRegular};
-    color: ${theme.palette.content.default};
+    color: ${theme.palette[type].dark};
     overflow: hidden;
     word-break: break-word;
     hyphens: auto;
@@ -76,47 +66,15 @@ export const ToastMessageStyled = styled.div`
   `}
 `;
 
-export const ToastButtonCloseStyled = styled.button`
-  ${({ theme }) => `
-    color: ${theme.palette.content.default};
+export const ToastButtonCloseStyled = styled.button<ToastButtonCloseStyledProps>`
+  ${({ theme, toastType }) => `
+    color: ${theme.palette[toastType].dark};
     border: 0;
     cursor: pointer;
     background: transparent;
     align-self: flex-start;
+    margin-left: auto;
     font-size: 0;
     line-height: 0;
-  
-    &:hover {
-      background-color: ${theme.palette.surface.contrast};
-    }
-  `}
-`;
-
-interface ToastTextContainerProps {
-  hasCloseButton: boolean;
-}
-
-export const ToastTextContainer = styled.div<ToastTextContainerProps>`
-  ${({ theme, hasCloseButton }) => `
-    display: grid;
-    ${
-      hasCloseButton
-        ? 'grid-template-columns: auto 24px;'
-        : 'grid-template-rows: auto auto;'
-    }
-    column-gap: ${theme.spacing.spacing_50};
-  `}
-`;
-
-interface ToastActionsProps {
-  hasChildren: boolean;
-}
-
-export const ToastActionsStyled = styled.div<ToastActionsProps>`
-  ${({ theme, hasChildren }) => `
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-top: ${hasChildren ? theme.spacing.spacing_20 : 0};
   `}
 `;

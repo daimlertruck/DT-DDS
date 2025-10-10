@@ -11,7 +11,7 @@ import {
 import { ToastPosition, ToastType } from './constants';
 import Toast from './Toast';
 
-const TOAST_DEFAULT_DURATION = 4000;
+const TOAST_DEFAULT_DURATION = 140000000;
 const TOAST_ERROR_DURATION = Infinity;
 const smallPosition = ToastPosition.BottomCenter;
 const defaultPosition = ToastPosition.BottomRight;
