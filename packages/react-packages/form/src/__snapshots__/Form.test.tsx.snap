@@ -99,78 +99,55 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-4:focus-within,
-.emotion-4:hover {
-  border: 1px solid #1d1d1d;
+.emotion-4:hover:not([disabled]) {
+  border: 1px solid #00677f;
 }
 
-.emotion-4:focus-within:has(input[readonly]:not([disabled])),
-.emotion-4:hover:has(input[readonly]:not([disabled])) {
+.emotion-4:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-4:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-4:focus-within:has(input[disabled]),
-.emotion-4:hover:has(input[disabled]),
-.emotion-4:focus-within:has(input[disabled])>*,
-.emotion-4:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-4:has(input[disabled]),
+.emotion-4:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-4:has(input[disabled]):hover,
+.emotion-4:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-4:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-4:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-4:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-4:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-4:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-4:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-4:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-4:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-4:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-4:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-4:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-4:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-4:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-4:focus-within:has(input[disabled]) input::placeholder,
-.emotion-4:hover:has(input[disabled]) input::placeholder,
-.emotion-4:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-4:hover:has(input[disabled])>* input::placeholder {
+.emotion-4:has(input[disabled]) input::placeholder,
+.emotion-4:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
@@ -413,78 +390,55 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-8:focus-within,
-.emotion-8:hover {
-  border: 1px solid #1d1d1d;
+.emotion-8:hover:not([disabled]) {
+  border: 1px solid #00677f;
 }
 
-.emotion-8:focus-within:has(input[readonly]:not([disabled])),
-.emotion-8:hover:has(input[readonly]:not([disabled])) {
+.emotion-8:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-8:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-8:focus-within:has(input[disabled]),
-.emotion-8:hover:has(input[disabled]),
-.emotion-8:focus-within:has(input[disabled])>*,
-.emotion-8:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-8:has(input[disabled]),
+.emotion-8:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-8:has(input[disabled]):hover,
+.emotion-8:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-8:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-8:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-8:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-8:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-8:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-8:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled]) input::placeholder,
-.emotion-8:hover:has(input[disabled]) input::placeholder,
-.emotion-8:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-8:hover:has(input[disabled])>* input::placeholder {
+.emotion-8:has(input[disabled]) input::placeholder,
+.emotion-8:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
@@ -709,78 +663,55 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-8:focus-within,
-.emotion-8:hover {
-  border: 1px solid #1d1d1d;
+.emotion-8:hover:not([disabled]) {
+  border: 1px solid #00677f;
 }
 
-.emotion-8:focus-within:has(input[readonly]:not([disabled])),
-.emotion-8:hover:has(input[readonly]:not([disabled])) {
+.emotion-8:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-8:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-8:focus-within:has(input[disabled]),
-.emotion-8:hover:has(input[disabled]),
-.emotion-8:focus-within:has(input[disabled])>*,
-.emotion-8:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-8:has(input[disabled]),
+.emotion-8:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-8:has(input[disabled]):hover,
+.emotion-8:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-8:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-8:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-8:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-8:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-8:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-8:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-8:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-8:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-8:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8:focus-within:has(input[disabled]) input::placeholder,
-.emotion-8:hover:has(input[disabled]) input::placeholder,
-.emotion-8:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-8:hover:has(input[disabled])>* input::placeholder {
+.emotion-8:has(input[disabled]) input::placeholder,
+.emotion-8:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
@@ -1056,78 +987,55 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-11:focus-within,
-.emotion-11:hover {
-  border: 1px solid #1d1d1d;
+.emotion-11:hover:not([disabled]) {
+  border: 1px solid #00677f;
 }
 
-.emotion-11:focus-within:has(input[readonly]:not([disabled])),
-.emotion-11:hover:has(input[readonly]:not([disabled])) {
+.emotion-11:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-11:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-11:focus-within:has(input[disabled]),
-.emotion-11:hover:has(input[disabled]),
-.emotion-11:focus-within:has(input[disabled])>*,
-.emotion-11:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-11:has(input[disabled]),
+.emotion-11:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-11:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-11:has(input[disabled]):hover,
+.emotion-11:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-11:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-11:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-11:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-11:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-11:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-11:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-11:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-11:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-11:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-11:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-11:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-11:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-11:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-11:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-11:focus-within:has(input[disabled]) input::placeholder,
-.emotion-11:hover:has(input[disabled]) input::placeholder,
-.emotion-11:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-11:hover:has(input[disabled])>* input::placeholder {
+.emotion-11:has(input[disabled]) input::placeholder,
+.emotion-11:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 

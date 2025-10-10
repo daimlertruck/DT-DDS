@@ -143,7 +143,7 @@ describe('<TextField /> component', () => {
     fireEvent.mouseOver(inputWrapper, { currentTarget: { value: '' } });
 
     expect(inputWrapper).toHaveStyle(
-      `border: 1px solid ${theme.palette.border.dark}`
+      `border: 1px solid ${theme.palette.accent.default}`
     );
   });
 

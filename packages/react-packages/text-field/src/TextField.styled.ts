@@ -96,7 +96,6 @@ export const InputFieldStyled = styled.input<InputFieldStyledProps>`
         ? `${theme.spacing.xs} 0 ${theme.spacing.spacing_30} 0`
         : ''
     };
-
   `}
 `;
 
@@ -142,7 +141,7 @@ export const InputExtraSuffixStyled = styled.div<{ isClickable?: boolean }>`
 `;
 
 export const TextFieldMessageStyled = styled.div`
-  padding-left: ${({ theme }) => theme.spacing.spacing_50};
+  padding-left: ${({ theme }) => theme.spacing.spacing_40};
 `;
 
 export const ResetInputIconStyled = styled.div`
@@ -164,7 +163,7 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
 
     const borderFocusColor = hasError
       ? theme.palette.error.default
-      : theme.palette.border.dark;
+      : theme.palette.informative.default;
 
     return `
     display:flex;
@@ -179,16 +178,30 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     
     padding-inline: ${theme.spacing.spacing_40};
 
+    ${!isFloatingLabel && 'margin-top: 8px'};
+
     ${
       variant === 'outlined'
         ? `border-radius: ${theme.shape.formField};
-            border: 1px solid ${borderColor};
-            &:focus-within, &:hover { { border: 1px solid ${borderFocusColor}};
-          `
+        border: 1px solid ${borderColor};
+
+        &:focus-within,
+        &:hover:not([disabled]) { 
+          border: 1px solid ${borderFocusColor};
+        }
+
+        &:hover:([disabled]) { 
+          border: 1px solid ${borderColor};
+        }
+      `
         : `border-radius: ${theme.shape.formField} ${theme.shape.formField} 0 0;
-            border-bottom: 1px solid ${borderColor};
-            &:focus-within, &:hover { { border-bottom: 1px solid  ${borderFocusColor}};
-          `
+        border-bottom: 1px solid ${borderColor};
+        
+        &:focus-within,
+        &:hover:not([disabled]) { 
+          border-bottom: 1px solid  ${borderFocusColor};
+        }
+      `
     };
 
     &:has(input[readonly]:not([disabled])) {
@@ -197,10 +210,11 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     }
 
     &:has(input[disabled]), &:has(input[disabled]) > * {
-      color: ${theme.palette.content.light};
-      background-color: ${theme.palette.surface.light};
-      border-color: ${theme.palette.border.default};
       cursor: not-allowed;
+
+      &:hover {
+        border-color: ${borderColor};
+      }
 
       input::placeholder {
         color: ${isFloatingLabel ? 'transparent' : theme.palette.content.light};

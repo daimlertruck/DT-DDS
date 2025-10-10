@@ -87,78 +87,55 @@ exports[`<DatePicker /> component onBlur event should render error message when 
 }
 
 .emotion-2:focus-within,
-.emotion-2:hover {
+.emotion-2:hover:not([disabled]) {
   border: 1px solid #e80000;
 }
 
-.emotion-2:focus-within:has(input[readonly]:not([disabled])),
-.emotion-2:hover:has(input[readonly]:not([disabled])) {
+.emotion-2:hover:([disabled]) {
+  border: 1px solid #e80000;
+}
+
+.emotion-2:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-2:focus-within:has(input[disabled]),
-.emotion-2:hover:has(input[disabled]),
-.emotion-2:focus-within:has(input[disabled])>*,
-.emotion-2:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-2:has(input[disabled]),
+.emotion-2:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-2:has(input[disabled]):hover,
+.emotion-2:has(input[disabled])>*:hover {
+  border-color: #e80000;
+}
+
+.emotion-2:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-2:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-2:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-2:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-2:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-2:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled]) input::placeholder,
-.emotion-2:hover:has(input[disabled]) input::placeholder,
-.emotion-2:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-2:hover:has(input[disabled])>* input::placeholder {
+.emotion-2:has(input[disabled]) input::placeholder,
+.emotion-2:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
@@ -202,7 +179,7 @@ exports[`<DatePicker /> component onBlur event should render error message when 
 }
 
 .emotion-4 {
-  padding-left: 16px;
+  padding-left: 12px;
 }
 
 .emotion-5 {
@@ -344,78 +321,55 @@ exports[`<DatePicker /> component onBlur event should render error message when 
 }
 
 .emotion-2:focus-within,
-.emotion-2:hover {
+.emotion-2:hover:not([disabled]) {
   border: 1px solid #e80000;
 }
 
-.emotion-2:focus-within:has(input[readonly]:not([disabled])),
-.emotion-2:hover:has(input[readonly]:not([disabled])) {
+.emotion-2:hover:([disabled]) {
+  border: 1px solid #e80000;
+}
+
+.emotion-2:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-2:focus-within:has(input[disabled]),
-.emotion-2:hover:has(input[disabled]),
-.emotion-2:focus-within:has(input[disabled])>*,
-.emotion-2:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-2:has(input[disabled]),
+.emotion-2:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-2:has(input[disabled]):hover,
+.emotion-2:has(input[disabled])>*:hover {
+  border-color: #e80000;
+}
+
+.emotion-2:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-2:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-2:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-2:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-2:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-2:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-2:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-2:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:focus-within:has(input[disabled]) input::placeholder,
-.emotion-2:hover:has(input[disabled]) input::placeholder,
-.emotion-2:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-2:hover:has(input[disabled])>* input::placeholder {
+.emotion-2:has(input[disabled]) input::placeholder,
+.emotion-2:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
@@ -459,7 +413,7 @@ exports[`<DatePicker /> component onBlur event should render error message when 
 }
 
 .emotion-4 {
-  padding-left: 16px;
+  padding-left: 12px;
 }
 
 .emotion-5 {
@@ -612,78 +566,55 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
 }
 
 .emotion-3:focus-within,
-.emotion-3:hover {
-  border: 1px solid #1d1d1d;
+.emotion-3:hover:not([disabled]) {
+  border: 1px solid #00677f;
 }
 
-.emotion-3:focus-within:has(input[readonly]:not([disabled])),
-.emotion-3:hover:has(input[readonly]:not([disabled])) {
+.emotion-3:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-3:has(input[readonly]:not([disabled])) {
   background-color: #e6e6e6;
   color: #3e3e3e;
 }
 
-.emotion-3:focus-within:has(input[disabled]),
-.emotion-3:hover:has(input[disabled]),
-.emotion-3:focus-within:has(input[disabled])>*,
-.emotion-3:hover:has(input[disabled])>* {
-  color: #a9a9a9;
-  background-color: #f2f2f2;
-  border-color: #e6e6e6;
+.emotion-3:has(input[disabled]),
+.emotion-3:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:focus-within:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:has(input[disabled]):hover,
+.emotion-3:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus-within:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus-within:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:hover:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:hover:has(input[disabled]) input::-moz-placeholder {
+.emotion-3:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:hover:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:focus-within:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3:focus-within:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-3:focus-within:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3:hover:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3:hover:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-3:hover:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3:focus-within:has(input[disabled]) input::placeholder,
-.emotion-3:hover:has(input[disabled]) input::placeholder,
-.emotion-3:focus-within:has(input[disabled])>* input::placeholder,
-.emotion-3:hover:has(input[disabled])>* input::placeholder {
+.emotion-3:has(input[disabled]) input::placeholder,
+.emotion-3:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
