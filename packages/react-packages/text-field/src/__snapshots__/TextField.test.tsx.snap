@@ -88,7 +88,7 @@ exports[`<TextField /> component renders disabled input 1`] = `
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
@@ -325,7 +325,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
@@ -614,7 +614,7 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
@@ -844,7 +844,7 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border-bottom: 1px solid #1d1d1d;
+  border-bottom: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
@@ -1052,13 +1052,14 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   gap: 8px;
   background-color: #e6e6e6;
   padding-inline: 12px;
+  margin-top: 8px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),
@@ -1543,7 +1544,7 @@ exports[`<TextField /> component should render the TextField with info message 1
 
 .emotion-3:focus-within,
 .emotion-3:hover {
-  border: 1px solid #1d1d1d;
+  border: 1px solid #00677f;
 }
 
 .emotion-3:focus-within:has(input[readonly]:not([disabled])),

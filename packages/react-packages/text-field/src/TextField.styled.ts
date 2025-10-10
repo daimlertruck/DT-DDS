@@ -164,7 +164,7 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
 
     const borderFocusColor = hasError
       ? theme.palette.error.default
-      : theme.palette.border.dark;
+      : theme.palette.accent.default;
 
     return `
     display:flex;
@@ -178,6 +178,8 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
     
     padding-inline: ${theme.spacing.spacing_40};
+
+    ${!isFloatingLabel && 'margin-top: 8px'};
 
     ${
       variant === 'outlined'
