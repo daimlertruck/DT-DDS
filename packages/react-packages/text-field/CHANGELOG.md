@@ -1,5 +1,17 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.63
+
+### Minor Changes
+
+- feat: allow adding icon to label
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-label-field@1.0.0-beta.46
+  - @dt-dds/react-spinner@1.0.0-beta.58
+
 ## 1.0.0-beta.62
 
 ### Patch Changes

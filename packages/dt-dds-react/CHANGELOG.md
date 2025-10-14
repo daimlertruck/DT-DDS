@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.223
+
+### Minor Changes
+
+- feat: allow adding icon to label
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-label-field@1.0.0-beta.46
+  - @dt-dds/react-select@1.0.0-beta.55
+  - @dt-dds/react-text-area@1.0.0-beta.35
+  - @dt-dds/react-text-field@1.0.0-beta.63
+  - @dt-dds/react-date-picker@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.24
+  - @dt-dds/react-dropdown@1.0.0-beta.45
+  - @dt-dds/react-radio@1.0.0-beta.40
+  - @dt-dds/react-spinner@1.0.0-beta.58
+  - @dt-dds/react-tabs@1.0.0-beta.53
+  - @dt-dds/react-button@1.0.0-beta.53
+  - @dt-dds/react-modal@1.0.0-beta.53
+  - @dt-dds/react-empty-state@1.0.0-beta.73
+  - @dt-dds/react-link@1.0.0-beta.30
+  - @dt-dds/react-toast@1.0.0-beta.70
+  - @dt-dds/react-message@1.0.0-beta.69
+
 ## 1.0.0-beta.222
 
 ### Patch Changes

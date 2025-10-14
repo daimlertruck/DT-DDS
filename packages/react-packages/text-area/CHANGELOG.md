@@ -1,5 +1,18 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.35
+
+### Minor Changes
+
+- feat: allow adding icon to label
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-label-field@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.24
+
 ## 1.0.0-beta.34
 
 ### Patch Changes

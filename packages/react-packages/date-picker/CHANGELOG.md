@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.46
+
+### Minor Changes
+
+- feat: allow adding icon to label
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.63
+
 ## 1.0.0-beta.45
 
 ### Patch Changes

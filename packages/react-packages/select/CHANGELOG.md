@@ -1,5 +1,16 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.55
+
+### Minor Changes
+
+- feat: allow adding icon to label
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-label-field@1.0.0-beta.46
+
 ## 1.0.0-beta.54
 
 ### Patch Changes
