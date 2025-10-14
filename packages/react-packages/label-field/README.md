@@ -35,6 +35,7 @@ The component that displays the caption for the user.
 | `isRequired`    | `boolean`       | false       | Apply required state to the label field                                                                                               |
 | `hasError`      | `boolean`       | false       | Apply error styles to the label field                                                                                                 |
 | `isInputFilled` | `boolean`       | false       | Apply styles on the floating label field                                                                                              |
+| `icon`          | `ReactNode`     | -           | Sets icon for label to provide guidance about the scope of the field.                                                                 |
 
 ## Stack
 

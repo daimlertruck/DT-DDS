@@ -1,4 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 import { defaultTheme as theme } from '@dt-dds/themes';
 import { render } from '@testing-library/react';
 
@@ -93,5 +94,22 @@ describe('<LabelField /> component', () => {
     expect(labelField).toHaveStyle(
       `color: ${theme.palette.informative.default}`
     );
+  });
+
+  it('renders with icon', () => {
+    const { getByTestId } = render(
+      <ProvidedLabelField
+        htmlFor={INPUT_ID}
+        icon={<Icon code='info' size='s' />}
+        isActive
+      >
+        My Awesome Input
+      </ProvidedLabelField>
+    );
+
+    const labelField = getByTestId('label-field');
+    expect(labelField).toHaveTextContent('My Awesome Input');
+    expect(getByTestId('icon')).toBeInTheDocument();
+    expect(getByTestId('icon')).toHaveTextContent('info');
   });
 });

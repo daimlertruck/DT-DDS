@@ -1,6 +1,7 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
-import { ComponentPropsWithoutRef } from 'react';
+import { theme } from '@dt-dds/themes';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 import { LabelFieldStyled } from './LabelField.styled';
 
@@ -13,6 +14,7 @@ export interface LabelFieldProps
   isRequired?: boolean;
   isFloating?: boolean;
   isInputFilled?: boolean;
+  icon?: ReactNode;
 }
 
 export const LabelField = ({
@@ -24,20 +26,14 @@ export const LabelField = ({
   hasError = false,
   isFloating = true,
   isInputFilled = false,
+  htmlFor,
+  icon,
   ...rest
 }: LabelFieldProps) => {
   const testId = dataTestId ?? 'label-field';
 
-  return (
-    <LabelFieldStyled
-      data-testid={testId}
-      disabled={isDisabled}
-      hasError={hasError}
-      isActive={isActive}
-      isFloating={isFloating}
-      isInputFilled={isInputFilled}
-      {...rest}
-    >
+  const labelContent = (
+    <>
       {children}
       {isRequired && !isDisabled ? (
         <Typography
@@ -48,6 +44,32 @@ export const LabelField = ({
           *
         </Typography>
       ) : null}
+      {icon ? (
+        <span
+          style={{
+            marginLeft: theme.spacing.spacing_20,
+            display: 'inline-flex',
+            verticalAlign: 'middle',
+          }}
+        >
+          {icon}
+        </span>
+      ) : null}
+    </>
+  );
+
+  return (
+    <LabelFieldStyled
+      data-testid={testId}
+      disabled={isDisabled}
+      hasError={hasError}
+      htmlFor={htmlFor}
+      isActive={isActive}
+      isFloating={isFloating}
+      isInputFilled={isInputFilled}
+      {...rest}
+    >
+      {labelContent}
     </LabelFieldStyled>
   );
 };
