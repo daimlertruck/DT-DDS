@@ -1,14 +1,13 @@
 import { useMedia } from '@dt-dds/react-core';
 import { useTheme } from '@emotion/react';
-import { Children, cloneElement, ReactElement, ReactNode } from 'react';
 import {
   toast,
+  ToasterProps as ToasterProviderProps,
   ToastOptions,
   Toaster as ToastProvider,
-  ToasterProps as ToasterProviderProps,
 } from 'react-hot-toast';
 
-import { ToastPosition, ToastType } from './constants';
+import { Action, ToastPosition, ToastType } from './constants';
 import Toast from './Toast';
 
 const TOAST_DEFAULT_DURATION = 4000;
@@ -20,7 +19,7 @@ export interface EmitToastProps extends ToastOptions {
   type: ToastType;
   title: string;
   message: string;
-  children?: ReactNode;
+  actions?: [Action] | [Action, Action];
   dismissible?: boolean;
 }
 
@@ -32,26 +31,18 @@ export const emitToast = ({
   type,
   title,
   message,
-  children,
+  actions,
   dismissible,
   ...props
 }: EmitToastProps) => {
   const duration =
     type === ToastType.Error ? TOAST_ERROR_DURATION : TOAST_DEFAULT_DURATION;
+
   toast.custom(
     (t) => {
-      const clonedChildren = Children.map(children as ReactElement, (child) => {
-        return (
-          child &&
-          cloneElement(child, {
-            toastId: t.id,
-            ...child.props,
-          })
-        );
-      });
-
       return (
         <Toast
+          actions={actions}
           dismissible={dismissible}
           id={t.id}
           isVisible={t.visible}
@@ -59,9 +50,7 @@ export const emitToast = ({
           onClose={() => toast.dismiss(t.id)}
           title={title}
           type={type}
-        >
-          {clonedChildren}
-        </Toast>
+        />
       );
     },
     {

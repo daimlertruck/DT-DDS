@@ -1,26 +1,18 @@
+import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
+import { Typography } from '@dt-dds/react-typography';
+import { useTheme } from '@emotion/react';
 
+import { Action, ToastType } from './constants';
 import {
-  InfoOutlineIcon,
-  ErrorOutlineIcon,
-  CheckCircleOutlineIcon,
-  WarningOutlineIcon,
-  CloseIcon,
-} from '../../../dt-dds-react/core';
-
-import { ToastType } from './constants';
-import {
-  ToastActionsStyled,
+  ActionButtonStyled,
   ToastButtonCloseStyled,
-  ToastContentStyled,
-  ToastIconStyled,
   ToastMessageStyled,
   ToastStyled,
-  ToastTextContainer,
-  ToastTitleStyled,
 } from './Toast.styled';
 
-export interface ToastProps extends BaseProps {
+export interface ToastProps extends Pick<BaseProps, 'dataTestId'> {
   id: string;
   type: ToastType;
   title: string;
@@ -28,17 +20,20 @@ export interface ToastProps extends BaseProps {
   onClose: () => void;
   isVisible?: boolean;
   dismissible?: boolean;
+  actions?: [Action] | [Action, Action];
 }
 
-const ToastIcons = {
-  [ToastType.Success]: CheckCircleOutlineIcon,
-  [ToastType.Error]: ErrorOutlineIcon,
-  [ToastType.Info]: InfoOutlineIcon,
-  [ToastType.Warning]: WarningOutlineIcon,
+const ToastIcons: Record<
+  ToastType,
+  'check_circle' | 'error' | 'info' | 'warning'
+> = {
+  [ToastType.Success]: 'check_circle',
+  [ToastType.Error]: 'error',
+  [ToastType.Info]: 'info',
+  [ToastType.Warning]: 'warning',
 };
 
 const Toast = ({
-  children,
   id,
   dataTestId,
   title,
@@ -47,34 +42,76 @@ const Toast = ({
   type,
   isVisible = true,
   dismissible = true,
+  actions,
 }: ToastProps) => {
-  const Icon = ToastIcons[type];
   const dataTest = dataTestId ?? `toast-${id}`;
+  const theme = useTheme();
 
   return (
     <ToastStyled
       data-testid={dataTest}
       isVisible={isVisible}
       key={id}
-      type={type}
+      toastType={type}
     >
-      <ToastIconStyled type={type}>
-        <Icon height={20} width={20} />
-      </ToastIconStyled>
-      <ToastContentStyled>
-        <ToastTextContainer hasCloseButton={dismissible}>
-          <ToastTitleStyled>{title}</ToastTitleStyled>
-          {dismissible ? (
-            <ToastButtonCloseStyled onClick={onClose}>
-              <CloseIcon />
-            </ToastButtonCloseStyled>
-          ) : null}
-          <ToastMessageStyled>{message}</ToastMessageStyled>
-        </ToastTextContainer>
-        <ToastActionsStyled hasChildren={Boolean(children)}>
-          {children}
-        </ToastActionsStyled>
-      </ToastContentStyled>
+      <Box
+        style={{
+          alignSelf: 'start',
+          flexDirection: 'row',
+          width: '100%',
+          gap: theme.spacing.spacing_30,
+        }}
+      >
+        <Icon code={ToastIcons[type]} color={theme.palette[type].dark} />
+
+        <Typography
+          color={`${type}.dark`}
+          element='span'
+          fontStyles='bodyLgBold'
+          style={{
+            textTransform: 'capitalize',
+          }}
+        >
+          {title}
+        </Typography>
+
+        {dismissible ? (
+          <ToastButtonCloseStyled
+            data-testId='close-button'
+            onClick={onClose}
+            toastType={type}
+          >
+            <Icon code='close' color={theme.palette[type].dark} />
+          </ToastButtonCloseStyled>
+        ) : null}
+      </Box>
+      <ToastMessageStyled toastType={type}>{message}</ToastMessageStyled>
+
+      {actions && actions?.length > 0 ? (
+        <Box
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            gap: theme.spacing.spacing_20,
+            marginTop: theme.spacing.spacing_30,
+          }}
+        >
+          {actions.map(({ label, onClick, dataTestId }, index) =>
+            index <= 1 ? (
+              <ActionButtonStyled
+                dataTestId={dataTestId}
+                key={label}
+                onClick={onClick}
+                size='small'
+                toastType={type}
+                variant='text'
+              >
+                {label}
+              </ActionButtonStyled>
+            ) : null
+          )}
+        </Box>
+      ) : null}
     </ToastStyled>
   );
 };
