@@ -1,6 +1,5 @@
-import { Button } from '@dt-dds/react-button';
 import { Portal } from '@dt-dds/react-core';
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 import { ToasterProps } from 'react-hot-toast';
 
 import { ToastType } from './constants';
@@ -20,11 +19,11 @@ const meta: Meta<typeof Toast> = {
       control: { type: 'inline-radio' },
     },
   },
-  render: ({ children, type, title, message, dismissible, ...props }) => (
+  render: ({ actions, type, title, message, dismissible, ...props }) => (
     <>
       <button
         onClick={() =>
-          emitToast({ type, title, message, dismissible, children })
+          emitToast({ type, title, message, dismissible, actions })
         }
         type='button'
       >
@@ -49,31 +48,21 @@ export const Default: Story = {
   },
 };
 
-export const WithChildren: Story = {
+export const WithActions: Story = {
   args: {
     type: ToastType.Error,
     title: 'error',
     message: 'This is an error message showed in the Toast.',
     onClose: () => console.log('clicked'),
-    children: (
-      <>
-        <Button
-          color='secondary'
-          onClick={() => console.log('clicked')}
-          style={{ padding: '8px 12px' }}
-          variant='text'
-        >
-          Action 1
-        </Button>
-        <Button
-          color='secondary'
-          onClick={() => console.log('clicked')}
-          style={{ padding: '8px 12px' }}
-          variant='text'
-        >
-          Action 2
-        </Button>
-      </>
-    ),
+    actions: [
+      {
+        onClick: () => console.log('Action 1 clicked'),
+        label: 'Action 1',
+      },
+      {
+        onClick: () => console.log('Action 2 clicked'),
+        label: 'Action 2',
+      },
+    ],
   },
 };

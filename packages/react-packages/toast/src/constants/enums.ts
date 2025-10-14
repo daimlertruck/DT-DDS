@@ -12,9 +12,4 @@ export enum ToastType {
   Error = 'error',
   Info = 'informative',
   Warning = 'warning',
-  /* react-hot-toast types
-  Loading = 'loading',
-  Blank = 'blank',
-  Custom = 'custom',
-  */
 }

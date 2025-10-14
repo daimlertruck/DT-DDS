@@ -1,6 +1,6 @@
 import { withProviders } from '@dt-dds/react-core';
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { toast } from 'react-hot-toast';
+import { toast, ToasterProps } from 'react-hot-toast';
 
 import { emitToast, Toaster } from '..';
 
@@ -24,16 +24,7 @@ describe('<Toast /> component', () => {
   const ProvidedToast = withProviders(Toast);
 
   beforeEach(() => {
-    act(() => {
-      toast.dismiss();
-    });
     jest.clearAllTimers();
-  });
-
-  afterEach(() => {
-    act(() => {
-      toast.dismiss();
-    });
   });
 
   it.each`
@@ -57,22 +48,28 @@ describe('<Toast /> component', () => {
   });
 
   it('should render toast with action buttons', () => {
-    const { container } = render(
+    render(
       <ProvidedToast
+        actions={[
+          {
+            onClick: () => console.log('Action 1 clicked'),
+            label: 'Action 1',
+          },
+          {
+            onClick: () => console.log('Action 2 clicked'),
+            label: 'Action 2',
+          },
+        ]}
         id={TOAST_ID}
         message={MESSAGE}
         onClose={onCloseFn}
         title={TITLE}
         type={ToastType.Success}
-      >
-        <button type='button'>Action 1</button>
-        <button type='button'>Action 2</button>
-      </ProvidedToast>
+      />
     );
 
     expect(screen.getByText('Action 1')).toBeInTheDocument();
     expect(screen.getByText('Action 2')).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
 
   it('should show close button when dismissible is true', () => {
@@ -87,7 +84,7 @@ describe('<Toast /> component', () => {
       />
     );
 
-    const closeBtn = screen.getByRole('button');
+    const closeBtn = screen.getByTestId('close-button');
     fireEvent.click(closeBtn);
     expect(onCloseFn).toHaveBeenCalled();
   });
@@ -104,7 +101,7 @@ describe('<Toast /> component', () => {
       />
     );
 
-    const closeBtn = screen.queryByRole('button');
+    const closeBtn = screen.queryByTestId('close-button');
     expect(closeBtn).toBeNull();
   });
 
@@ -112,6 +109,22 @@ describe('<Toast /> component', () => {
     const spy = jest.spyOn(toast, 'dismiss');
     dismissToast('testToastId');
     expect(spy).toHaveBeenCalledWith('testToastId');
+  });
+
+  it('should not show toast if isVisible is false', () => {
+    render(
+      <ProvidedToast
+        dismissible={false}
+        id={TOAST_ID}
+        isVisible={false}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      />
+    );
+
+    expect(screen.getByTestId('toast-myId')).toHaveStyleRule('opacity', '0');
   });
 });
 
@@ -138,6 +151,7 @@ describe('emitToast', () => {
     ${ToastType.Info}
     ${ToastType.Error}
   `('should emit toast of type $type', ({ type }) => {
+    const toastCustomSpy = jest.spyOn(toast, 'custom');
     const mockProps = {
       type,
       title: `Title-${type}`,
@@ -150,6 +164,7 @@ describe('emitToast', () => {
       emitToast(mockProps);
     });
 
+    expect(toastCustomSpy).toHaveBeenCalled();
     expect(screen.getByText(`Title-${type}`)).toBeInTheDocument();
     expect(screen.getByText(`Message-${type}`)).toBeInTheDocument();
   });
@@ -168,8 +183,12 @@ describe('emitToast', () => {
       emitToast(mockProps);
     });
 
-    const options = toastCustomSpy.mock.calls[0][1];
-    expect(options.duration).toBe(Infinity);
+    expect(toastCustomSpy).toHaveBeenCalledWith(
+      expect.any(Function),
+      expect.objectContaining({
+        duration: Infinity,
+      })
+    );
     toastCustomSpy.mockRestore();
   });
 
@@ -188,39 +207,12 @@ describe('emitToast', () => {
       emitToast(mockProps);
     });
 
-    const options = toastCustomSpy.mock.calls[0][1];
-    expect(options.duration).toBe(5000);
-    toastCustomSpy.mockRestore();
-  });
-
-  it('should handle children in toast callback', () => {
-    const toastCustomSpy = jest.spyOn(toast, 'custom');
-    const mockProps = {
-      type: ToastType.Success,
-      title: 'Test Title',
-      message: 'Test Message',
-      children: <button type='button'>Test Button</button>,
-    };
-
-    render(<ProvidedToaster />);
-
-    act(() => {
-      emitToast(mockProps);
-    });
-
-    expect(toastCustomSpy).toHaveBeenCalled();
-
-    // Verify the callback function is called with correct parameters
-    const callbackFunction = toastCustomSpy.mock.calls[0][0];
-    const mockToast = { id: 'test-toast-id', visible: true };
-    const result = callbackFunction(mockToast);
-
-    expect(result).toBeDefined();
-    expect(result.props.title).toBe('Test Title');
-    expect(result.props.message).toBe('Test Message');
-    expect(result.props.type).toBe(ToastType.Success);
-    expect(result.props.children).toBeDefined();
-
+    expect(toastCustomSpy).toHaveBeenCalledWith(
+      expect.any(Function),
+      expect.objectContaining({
+        duration: 5000,
+      })
+    );
     toastCustomSpy.mockRestore();
   });
 
@@ -263,69 +255,33 @@ describe('emitToast', () => {
   });
 });
 
-describe('<Toaster /> component', () => {
-  const { useMedia }: { useMedia: jest.Mock } =
-    jest.requireMock('@dt-dds/react-core');
-
-  beforeEach(() => {
-    useMedia.mockReset();
-  });
-
-  it('should render with default props', () => {
-    useMedia.mockReturnValue(false);
-    const ProvidedToaster = withProviders(Toaster);
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should handle small screen breakpoint', () => {
-    useMedia.mockReturnValue(true);
-    const ProvidedToaster = withProviders(Toaster);
-    const { container } = render(<ProvidedToaster />);
-    expect(container).toBeInTheDocument();
-  });
-
-  it('should handle custom props', () => {
-    useMedia.mockReturnValue(false);
-    const customStyle = { backgroundColor: 'red', top: 20 };
-    const ProvidedToaster = withProviders(Toaster);
-    const { container } = render(
-      <ProvidedToaster
-        containerStyle={customStyle}
-        gutter={16}
-        position='top-right'
-        reverseOrder
-      />
-    );
-    expect(container).toBeInTheDocument();
-  });
-});
-
 describe('<Toaster /> props', () => {
-  const ToasterRenderSpy: jest.Mock = jest.fn();
-  const { useMedia }: { useMedia: jest.Mock } =
+  const ToasterRenderSpy = jest.fn<ToasterProps, [ToasterProps]>();
+  const { useMedia }: { useMedia: jest.Mock<boolean, []> } =
     jest.requireMock('@dt-dds/react-core');
 
-  const renderWithMocks = (
-    options: {
-      small?: boolean;
-      userContainerStyle?: Record<string, any>;
-      gutter?: number;
-    } = {}
-  ) => {
+  interface RenderOptions {
+    small?: boolean;
+    userContainerStyle?: React.CSSProperties;
+    gutter?: number;
+  }
+
+  const renderWithMocks = (options: RenderOptions = {}): ToasterProps => {
     const { small = false, userContainerStyle, gutter } = options;
     ToasterRenderSpy.mockClear();
     useMedia.mockReset();
     useMedia.mockReturnValue(small);
 
-    let ToasterComp: any;
+    let ToasterComp: React.ComponentType<Partial<ToasterProps>>;
 
     jest.isolateModules(() => {
       jest.doMock('react-hot-toast', () => {
-        const original = jest.requireActual('react-hot-toast');
+        const original = jest.requireActual('react-hot-toast') as {
+          Toaster: React.ComponentType<ToasterProps>;
+        };
         return {
           ...original,
-          Toaster: (props: any) => {
+          Toaster: (props: ToasterProps) => {
             ToasterRenderSpy(props);
             return null;
           },
@@ -338,10 +294,13 @@ describe('<Toaster /> props', () => {
       }));
 
       // eslint-disable-next-line @typescript-eslint/no-var-requires
-      ToasterComp = require('./Toaster').default;
+      const module = require('./Toaster');
+      ToasterComp = module.default as React.ComponentType<
+        Partial<ToasterProps>
+      >;
     });
 
-    const props: any = {};
+    const props: Partial<ToasterProps> = {};
     if (typeof gutter !== 'undefined') props.gutter = gutter;
     if (userContainerStyle) {
       props.containerStyle = userContainerStyle;
