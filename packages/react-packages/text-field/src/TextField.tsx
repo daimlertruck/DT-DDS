@@ -33,6 +33,7 @@ export interface TextFieldProps
   extends ComponentPropsWithoutRef<'input'>,
     BaseProps {
   label: string;
+  labelIcon?: ReactNode;
   isFloatingLabel?: boolean;
   extraPrefix?: ExtraComponent;
   extraSuffix?: ExtraComponent;
@@ -51,6 +52,7 @@ export const TextField = ({
   extraPrefix,
   extraSuffix,
   label,
+  labelIcon,
   isFloatingLabel = true,
   name,
   id,
@@ -165,6 +167,7 @@ export const TextField = ({
         <LabelField
           hasError={showError}
           htmlFor={textFieldId}
+          icon={labelIcon}
           isActive={isActiveInput || type === 'date'}
           isDisabled={disabled}
           isFloating={isFloatingLabel}
