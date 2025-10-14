@@ -1,8 +1,10 @@
 import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
+import { Tooltip } from '@dt-dds/react-tooltip';
 import { Typography } from '@dt-dds/react-typography';
 import { useTheme } from '@emotion/react';
+import React from 'react';
 
 import { Action, ToastType } from './constants';
 import {
@@ -96,11 +98,12 @@ const Toast = ({
             marginTop: theme.spacing.spacing_30,
           }}
         >
-          {actions.map(({ label, onClick, dataTestId }, index) =>
-            index <= 1 ? (
+          {actions.map(({ label, onClick, dataTestId, tooltip }, index) => {
+            if (index > 1) return null;
+
+            const actionButtonElement = (
               <ActionButtonStyled
-                dataTestId={dataTestId}
-                key={label}
+                data-testid={dataTestId}
                 onClick={onClick}
                 size='small'
                 toastType={type}
@@ -108,8 +111,18 @@ const Toast = ({
               >
                 {label}
               </ActionButtonStyled>
-            ) : null
-          )}
+            );
+            return tooltip?.message ? (
+              <Tooltip key={label}>
+                {actionButtonElement}
+                <Tooltip.Content background={tooltip?.background ?? 'full'}>
+                  {tooltip?.message}
+                </Tooltip.Content>
+              </Tooltip>
+            ) : (
+              <React.Fragment key={label}>{actionButtonElement}</React.Fragment>
+            );
+          })}
         </Box>
       ) : null}
     </ToastStyled>

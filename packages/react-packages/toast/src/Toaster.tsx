@@ -1,4 +1,4 @@
-import { useMedia } from '@dt-dds/react-core';
+import { TOAST_Z_INDEX, useMedia } from '@dt-dds/react-core';
 import { useTheme } from '@emotion/react';
 import {
   toast,
@@ -77,6 +77,7 @@ const Toaster = ({ gutter = 8, ...props }: ToasterProviderProps) => {
         top: margin,
         left: margin,
         ...props.containerStyle,
+        zIndex: TOAST_Z_INDEX,
       }}
     />
   );

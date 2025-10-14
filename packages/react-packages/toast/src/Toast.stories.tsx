@@ -58,6 +58,9 @@ export const WithActions: Story = {
       {
         onClick: () => console.log('Action 1 clicked'),
         label: 'Action 1',
+        tooltip: {
+          message: 'View Action 1',
+        },
       },
       {
         onClick: () => console.log('Action 2 clicked'),

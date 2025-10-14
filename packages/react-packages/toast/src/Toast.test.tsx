@@ -4,7 +4,7 @@ import { toast, ToasterProps } from 'react-hot-toast';
 
 import { emitToast, Toaster } from '..';
 
-import { ToastType } from './constants';
+import { Action, ToastType } from './constants';
 import Toast from './Toast';
 import { dismissToast } from './Toaster';
 
@@ -125,6 +125,63 @@ describe('<Toast /> component', () => {
     );
 
     expect(screen.getByTestId('toast-myId')).toHaveStyleRule('opacity', '0');
+  });
+
+  it('should render toast with actions with tooltip', () => {
+    render(
+      <ProvidedToast
+        actions={[
+          {
+            label: 'label',
+            onClick: jest.fn(),
+            tooltip: {
+              message: 'tooltip message',
+            },
+          },
+        ]}
+        dismissible={false}
+        id={TOAST_ID}
+        isVisible={false}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      />
+    );
+
+    expect(screen.getByTestId('tooltip-container')).toBeInTheDocument();
+  });
+
+  it('should not render toast with more than 2 actions ', () => {
+    render(
+      <ProvidedToast
+        actions={
+          [
+            {
+              label: 'label 1',
+              onClick: jest.fn(),
+            },
+            {
+              label: 'label 2',
+              onClick: jest.fn(),
+            },
+            {
+              label: 'label 3',
+              onClick: jest.fn(),
+            },
+          ] as unknown as [Action]
+        }
+        dismissible={false}
+        id={TOAST_ID}
+        isVisible={false}
+        message={MESSAGE}
+        onClose={onCloseFn}
+        title={TITLE}
+        type={ToastType.Success}
+      />
+    );
+
+    expect(screen.getAllByRole('button')).toHaveLength(2);
   });
 });
 
