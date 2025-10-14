@@ -1,3 +1,4 @@
+import { Icon } from '@dt-dds/react-icon';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { LabelField, LabelFieldProps } from './LabelField';
@@ -21,5 +22,6 @@ export const Default: StoryObj<LabelFieldProps> = {
     isRequired: false,
     hasError: false,
     isFloating: true,
+    icon: <Icon code='info' size='s' />,
   },
 };
