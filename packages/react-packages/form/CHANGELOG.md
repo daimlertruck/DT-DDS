@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.37
+
+### Patch Changes
+
+- refactor: text-field style
+
 ## 1.0.0-beta.36
 
 ### Patch Changes

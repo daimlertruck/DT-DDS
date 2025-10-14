@@ -1,5 +1,12 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.62
+
+### Patch Changes
+
+- refactor: text-field style
+  - @dt-dds/react-spinner@1.0.0-beta.57
+
 ## 1.0.0-beta.61
 
 ### Patch Changes
