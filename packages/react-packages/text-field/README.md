@@ -18,6 +18,7 @@ export const App = () => {
 | ----------------- | ---------------------------- | ---------- | ----------------------------------------------------------------------------------------------------- |
 | `children`        | `ReactNode`                  | -          | Child components to be rendered inside input field.                                                   |
 | `label`           | `string`                     | -          | A label to help users understand the scope of the text field.                                         |
+| `labelIcon`       | `ReactNode`                  | -          | Sets icon for label to provide guidance about the scope of the field.                            |
 | `initialValue`    | `string`                     | -          | Sets the initial value of the text field.                                                             |
 | `message`         | `string`                     | -          | The message to be displayed below the input field. Useful for hints or to display errors.             |
 | `hasError`        | `boolean`                    | -          | Set error state for text field.                                                                       |

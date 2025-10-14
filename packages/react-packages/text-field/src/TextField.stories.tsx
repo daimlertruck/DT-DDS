@@ -1,4 +1,5 @@
 import { Icon } from '@dt-dds/react-icon';
+import { Tooltip } from '@dt-dds/react-tooltip';
 import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 import { ExtraComponent, TextField, TextFieldProps } from './TextField';
@@ -141,5 +142,21 @@ export const ChatInputField: StoryObj<TextFieldPropsWithExtrasProp> = {
         console.log('ev', event);
       }
     },
+  },
+};
+
+export const WithLabelIcon: StoryObj<TextFieldPropsWithExtrasProp> = {
+  args: {
+    type: TextFieldTypeOptions.Text,
+    isFloatingLabel: false,
+    name: 'field-name',
+    label: 'My label',
+    labelIcon: (
+      <Tooltip>
+        <Icon code='info' size='s' />
+        <Tooltip.Content>Additional info about the field</Tooltip.Content>
+      </Tooltip>
+    ),
+    message: 'Additional info',
   },
 };
