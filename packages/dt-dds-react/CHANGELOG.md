@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.224
+
+### Minor Changes
+
+- feat: change toast design
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-toast@1.0.0-beta.71
+  - @dt-dds/react-box@1.0.0-beta.25
+  - @dt-dds/react-dropdown@1.0.0-beta.46
+  - @dt-dds/react-radio@1.0.0-beta.41
+  - @dt-dds/react-spinner@1.0.0-beta.59
+  - @dt-dds/react-tabs@1.0.0-beta.54
+  - @dt-dds/react-text-area@1.0.0-beta.36
+  - @dt-dds/react-button@1.0.0-beta.54
+  - @dt-dds/react-modal@1.0.0-beta.54
+  - @dt-dds/react-text-field@1.0.0-beta.64
+  - @dt-dds/react-empty-state@1.0.0-beta.74
+  - @dt-dds/react-link@1.0.0-beta.31
+  - @dt-dds/react-date-picker@1.0.0-beta.47
+  - @dt-dds/react-message@1.0.0-beta.70
+
 ## 1.0.0-beta.223
 
 ### Minor Changes
