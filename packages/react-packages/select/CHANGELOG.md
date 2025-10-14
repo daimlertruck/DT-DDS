@@ -1,5 +1,22 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.56
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-checkbox@1.0.0-beta.48
+  - @dt-dds/react-icon@1.0.0-beta.50
+  - @dt-dds/react-label-field@1.0.0-beta.47
+  - @dt-dds/react-icon-button@1.0.0-beta.17
+  - @dt-dds/react-tooltip@1.0.0-beta.57
+  - @dt-dds/react-typography@1.0.0-beta.40
+
 ## 1.0.0-beta.55
 
 ### Minor Changes

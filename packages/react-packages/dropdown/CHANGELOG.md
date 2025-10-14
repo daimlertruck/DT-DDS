@@ -1,5 +1,21 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-icon@1.0.0-beta.50
+  - @dt-dds/react-icon-button@1.0.0-beta.17
+  - @dt-dds/react-typography@1.0.0-beta.40
+  - @dt-dds/react-box@1.0.0-beta.26
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

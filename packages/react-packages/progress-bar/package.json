@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-progress-bar",
-  "version": "1.0.0-beta.42",
+  "version": "1.0.0-beta.43",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,8 +20,8 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-icon": "1.0.0-beta.49",
-    "@dt-dds/react-typography": "1.0.0-beta.39",
+    "@dt-dds/react-icon": "1.0.0-beta.50",
+    "@dt-dds/react-typography": "1.0.0-beta.40",
     "@dt-dds/themes": "1.0.0-beta.8"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.23.3",
-    "@dt-dds/react-core": "1.0.0-beta.48",
+    "@dt-dds/react-core": "1.0.0-beta.49",
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/css": "^11.7.1",
     "@emotion/jest": "^11.10.0",

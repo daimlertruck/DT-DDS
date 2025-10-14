@@ -1,5 +1,18 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.71
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-link@1.0.0-beta.32
+  - @dt-dds/react-typography@1.0.0-beta.40
+
 ## 1.0.0-beta.70
 
 ### Patch Changes

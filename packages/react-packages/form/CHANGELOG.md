@@ -1,5 +1,18 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.38
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-tooltip@1.0.0-beta.57
+  - @dt-dds/react-typography@1.0.0-beta.40
+
 ## 1.0.0-beta.37
 
 ### Patch Changes

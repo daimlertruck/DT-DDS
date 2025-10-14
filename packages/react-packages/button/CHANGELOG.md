@@ -1,5 +1,17 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.55
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-spinner@1.0.0-beta.60
+
 ## 1.0.0-beta.54
 
 ### Patch Changes

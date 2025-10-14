@@ -1,5 +1,21 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.55
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-backdrop@1.0.0-beta.51
+  - @dt-dds/react-icon@1.0.0-beta.50
+  - @dt-dds/react-icon-button@1.0.0-beta.17
+  - @dt-dds/react-spinner@1.0.0-beta.60
+  - @dt-dds/react-typography@1.0.0-beta.40
+
 ## 1.0.0-beta.54
 
 ### Patch Changes

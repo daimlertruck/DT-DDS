@@ -1,5 +1,16 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.50
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

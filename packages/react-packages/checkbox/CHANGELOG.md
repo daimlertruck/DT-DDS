@@ -1,5 +1,17 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.48
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.49
+  - @dt-dds/react-icon@1.0.0-beta.50
+
 ## 1.0.0-beta.47
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.49
+
+### Minor Changes
+
+- feat: add tooltip to action buttons
+
 ## 1.0.0-beta.48
 
 ### Patch Changes
