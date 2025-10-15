@@ -53,7 +53,7 @@ const Toast = ({
       data-testid={dataTest}
       isVisible={isVisible}
       key={id}
-      toastType={type}
+      type={type}
     >
       <Box
         style={{
@@ -83,10 +83,10 @@ const Toast = ({
           </ToastButtonCloseStyled>
         ) : null}
       </Box>
-      <ToastMessageStyled toastType={type}>{message}</ToastMessageStyled>
+      <ToastMessageStyled type={type}>{message}</ToastMessageStyled>
 
       {Boolean(children) ? (
-        <ActionsContainer toastType={type}>{children}</ActionsContainer>
+        <ActionsContainer type={type}>{children}</ActionsContainer>
       ) : null}
     </ToastStyled>
   );

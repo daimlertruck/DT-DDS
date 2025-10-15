@@ -150,6 +150,7 @@ exports[`<Toast /> component should render toast with title & message for type e
   <div
     class="emotion-0 emotion-1"
     data-testid="toast-myId"
+    type="error"
   >
     <div
       class="emotion-2"
@@ -184,6 +185,7 @@ exports[`<Toast /> component should render toast with title & message for type e
     </div>
     <div
       class="emotion-8 emotion-9"
+      type="error"
     >
       my message text
     </div>
@@ -331,6 +333,7 @@ exports[`<Toast /> component should render toast with title & message for type i
   <div
     class="emotion-0 emotion-1"
     data-testid="toast-myId"
+    type="informative"
   >
     <div
       class="emotion-2"
@@ -365,6 +368,7 @@ exports[`<Toast /> component should render toast with title & message for type i
     </div>
     <div
       class="emotion-8 emotion-9"
+      type="informative"
     >
       my message text
     </div>
@@ -492,6 +496,7 @@ exports[`<Toast /> component should render toast with title & message for type s
   <div
     class="emotion-0 emotion-1"
     data-testid="toast-myId"
+    type="success"
   >
     <div
       class="emotion-2"
@@ -526,6 +531,7 @@ exports[`<Toast /> component should render toast with title & message for type s
     </div>
     <div
       class="emotion-8 emotion-9"
+      type="success"
     >
       my message text
     </div>
@@ -663,6 +669,7 @@ exports[`<Toast /> component should render toast with title & message for type w
   <div
     class="emotion-0 emotion-1"
     data-testid="toast-myId"
+    type="warning"
   >
     <div
       class="emotion-2"
@@ -697,6 +704,7 @@ exports[`<Toast /> component should render toast with title & message for type w
     </div>
     <div
       class="emotion-8 emotion-9"
+      type="warning"
     >
       my message text
     </div>
