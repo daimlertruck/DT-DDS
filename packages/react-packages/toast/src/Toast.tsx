@@ -1,14 +1,13 @@
 import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
-import { Tooltip } from '@dt-dds/react-tooltip';
 import { Typography } from '@dt-dds/react-typography';
 import { useTheme } from '@emotion/react';
-import React from 'react';
+import { ReactNode } from 'react';
 
-import { Action, ToastType } from './constants';
+import { ToastType } from './constants';
 import {
-  ActionButtonStyled,
+  ActionsContainer,
   ToastButtonCloseStyled,
   ToastMessageStyled,
   ToastStyled,
@@ -22,7 +21,7 @@ export interface ToastProps extends Pick<BaseProps, 'dataTestId'> {
   onClose: () => void;
   isVisible?: boolean;
   dismissible?: boolean;
-  actions?: [Action] | [Action, Action];
+  children?: ReactNode;
 }
 
 const ToastIcons: Record<
@@ -44,7 +43,7 @@ const Toast = ({
   type,
   isVisible = true,
   dismissible = true,
-  actions,
+  children,
 }: ToastProps) => {
   const dataTest = dataTestId ?? `toast-${id}`;
   const theme = useTheme();
@@ -70,9 +69,6 @@ const Toast = ({
           color={`${type}.dark`}
           element='span'
           fontStyles='bodyLgBold'
-          style={{
-            textTransform: 'capitalize',
-          }}
         >
           {title}
         </Typography>
@@ -89,41 +85,8 @@ const Toast = ({
       </Box>
       <ToastMessageStyled toastType={type}>{message}</ToastMessageStyled>
 
-      {actions && actions?.length > 0 ? (
-        <Box
-          style={{
-            flexDirection: 'row',
-            justifyContent: 'flex-end',
-            gap: theme.spacing.spacing_20,
-            marginTop: theme.spacing.spacing_30,
-          }}
-        >
-          {actions.map(({ label, onClick, dataTestId, tooltip }, index) => {
-            if (index > 1) return null;
-
-            const actionButtonElement = (
-              <ActionButtonStyled
-                data-testid={dataTestId}
-                onClick={onClick}
-                size='small'
-                toastType={type}
-                variant='text'
-              >
-                {label}
-              </ActionButtonStyled>
-            );
-            return tooltip?.message ? (
-              <Tooltip key={label}>
-                {actionButtonElement}
-                <Tooltip.Content background={tooltip?.background ?? 'full'}>
-                  {tooltip?.message}
-                </Tooltip.Content>
-              </Tooltip>
-            ) : (
-              <React.Fragment key={label}>{actionButtonElement}</React.Fragment>
-            );
-          })}
-        </Box>
+      {Boolean(children) ? (
+        <ActionsContainer toastType={type}>{children}</ActionsContainer>
       ) : null}
     </ToastStyled>
   );

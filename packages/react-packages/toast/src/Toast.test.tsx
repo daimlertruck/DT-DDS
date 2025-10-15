@@ -1,12 +1,11 @@
+import { Button } from '@dt-dds/react-button';
 import { withProviders } from '@dt-dds/react-core';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { toast, ToasterProps } from 'react-hot-toast';
 
-import { emitToast, Toaster } from '..';
-
-import { Action, ToastType } from './constants';
+import { ToastType } from './constants';
 import Toast from './Toast';
-import { dismissToast } from './Toaster';
+import Toaster, { dismissToast, emitToast } from './Toaster';
 
 // Mock useMedia hook
 jest.mock('@dt-dds/react-core', () => ({
@@ -45,31 +44,6 @@ describe('<Toast /> component', () => {
     );
 
     expect(container).toMatchSnapshot();
-  });
-
-  it('should render toast with action buttons', () => {
-    render(
-      <ProvidedToast
-        actions={[
-          {
-            onClick: () => console.log('Action 1 clicked'),
-            label: 'Action 1',
-          },
-          {
-            onClick: () => console.log('Action 2 clicked'),
-            label: 'Action 2',
-          },
-        ]}
-        id={TOAST_ID}
-        message={MESSAGE}
-        onClose={onCloseFn}
-        title={TITLE}
-        type={ToastType.Success}
-      />
-    );
-
-    expect(screen.getByText('Action 1')).toBeInTheDocument();
-    expect(screen.getByText('Action 2')).toBeInTheDocument();
   });
 
   it('should show close button when dismissible is true', () => {
@@ -127,18 +101,9 @@ describe('<Toast /> component', () => {
     expect(screen.getByTestId('toast-myId')).toHaveStyleRule('opacity', '0');
   });
 
-  it('should render toast with actions with tooltip', () => {
+  it('should render actions container', () => {
     render(
       <ProvidedToast
-        actions={[
-          {
-            label: 'label',
-            onClick: jest.fn(),
-            tooltip: {
-              message: 'tooltip message',
-            },
-          },
-        ]}
         dismissible={false}
         id={TOAST_ID}
         isVisible={false}
@@ -146,42 +111,12 @@ describe('<Toast /> component', () => {
         onClose={onCloseFn}
         title={TITLE}
         type={ToastType.Success}
-      />
+      >
+        <Button dataTestId='action-1'>Action 1</Button>
+      </ProvidedToast>
     );
 
-    expect(screen.getByTestId('tooltip-container')).toBeInTheDocument();
-  });
-
-  it('should not render toast with more than 2 actions ', () => {
-    render(
-      <ProvidedToast
-        actions={
-          [
-            {
-              label: 'label 1',
-              onClick: jest.fn(),
-            },
-            {
-              label: 'label 2',
-              onClick: jest.fn(),
-            },
-            {
-              label: 'label 3',
-              onClick: jest.fn(),
-            },
-          ] as unknown as [Action]
-        }
-        dismissible={false}
-        id={TOAST_ID}
-        isVisible={false}
-        message={MESSAGE}
-        onClose={onCloseFn}
-        title={TITLE}
-        type={ToastType.Success}
-      />
-    );
-
-    expect(screen.getAllByRole('button')).toHaveLength(2);
+    expect(screen.getByTestId('action-1-button')).toBeInTheDocument();
   });
 });
 
@@ -246,6 +181,31 @@ describe('emitToast', () => {
         duration: Infinity,
       })
     );
+    toastCustomSpy.mockRestore();
+  });
+
+  it('should display children', () => {
+    const toastCustomSpy = jest.spyOn(toast, 'custom');
+    const mockProps = {
+      type: ToastType.Error,
+      title: 'Error Title',
+      message: 'Error Message',
+      children: (
+        <>
+          <Button dataTestId='action1'>Action 1</Button>
+          <Button dataTestId='action2'>Action 2</Button>
+        </>
+      ),
+    };
+
+    render(<ProvidedToaster />);
+
+    act(() => {
+      emitToast(mockProps);
+    });
+
+    expect(screen.getByTestId('action1-button')).toBeVisible();
+    expect(screen.getByTestId('action2-button')).toBeVisible();
     toastCustomSpy.mockRestore();
   });
 

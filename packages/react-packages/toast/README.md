@@ -12,6 +12,12 @@ const notify = () =>
     title: 'success',
     message: 'myMEssage' + count,
     type: ToastType.Success,
+    children: (
+      <Tooltip>
+        <Button onClick={() => console.log('clicked')}>Action 2</Button>
+        <Tooltip.Content>Some tooltip</Tooltip.Content>
+      </Tooltip>
+    ),
   });
 
 const App = () => {
@@ -116,14 +122,14 @@ const MyComponent = () => {
 
 ### Toaster
 
-| Property             | Type                  | Default   | Description                                                                                                             |
-| -------------------- | :-------------------- | :-------- | :---------------------------------------------------------------------------------------------------------------------- |
-| `toastOptions`       | `DefaultToastOptions` | -         | These will act as default options for all toasts. See the documentation [here](https://react-hot-toast.com/docs/toast). |
-| `reverseOrder`       | `boolean`             | -         | Toasts spawn at top by default. Set to true if you want new toasts at the end.                                          |
-| `gutter`             | `number`              | 8         | Changes the gap between each toast.                                                                                     |
-| `containerStyle`     | `React.CSSProperties` | -         | Customize the style of toaster div. This can be used to change the offset of all toasts                                 |
-| `containerClassName` | `string`              | undefined | Add a custom CSS class name to toaster div.                                                                             |
-| `actions`            | `Action`              | -         | An array of 2 actions                                                                                                   |
+| Property             | Type                            | Default   | Description                                                                                                                                                                                                                                                                                                                        |
+| -------------------- | :------------------------------ | :-------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `toastOptions`       | `DefaultToastOptions`           | -         | These will act as default options for all toasts. See the documentation [here](https://react-hot-toast.com/docs/toast).                                                                                                                                                                                                            |
+| `reverseOrder`       | `boolean`                       | -         | Toasts spawn at top by default. Set to true if you want new toasts at the end.                                                                                                                                                                                                                                                     |
+| `gutter`             | `number`                        | 8         | Changes the gap between each toast.                                                                                                                                                                                                                                                                                                |
+| `containerStyle`     | `React.CSSProperties`           | -         | Customize the style of toaster div. This can be used to change the offset of all toasts                                                                                                                                                                                                                                            |
+| `containerClassName` | `string`                        | undefined | Add a custom CSS class name to toaster div.                                                                                                                                                                                                                                                                                        |
+| `children`           | `(toast: Toast) => JSX.Element` | -         | You can customize how each toast is displayed by passing your own render function to the Toaster as its children. This function will be called for every toast, allowing you to render any component based on the toast’s state. Note: If the rendered component is a button, its styles will be overridden by the default styles. |
 
 ### emitToast
 
@@ -133,7 +139,7 @@ const MyComponent = () => {
 | `title`       | `string`          | -       | The title to be displayed                                                 |
 | `message`     | `string`          | -       | The message to be displayed                                               |
 | `dismissable` | `boolean`         | true    | Sets the visibility of a close button that will fire the onClose callback |
-| `actions`     | `Action`          | -       | List of 2 actions that will be rendered on the bottom                     |
+| `children`    | `ReactNode`       | -       | A child that will be rendered at the end of the content section           |
 
 The emitToast extends from ToastOptions. They will overwrite all options received from `<Toaster />`. For example:
 
