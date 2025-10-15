@@ -1,5 +1,27 @@
 # @dt-ui/react
 
+## 1.0.0-beta.228
+
+### Patch Changes
+
+- fix: change prop name
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-toast@1.0.0-beta.75
+  - @dt-dds/react-box@1.0.0-beta.29
+  - @dt-dds/react-dropdown@1.0.0-beta.50
+  - @dt-dds/react-radio@1.0.0-beta.45
+  - @dt-dds/react-spinner@1.0.0-beta.63
+  - @dt-dds/react-tabs@1.0.0-beta.58
+  - @dt-dds/react-text-area@1.0.0-beta.40
+  - @dt-dds/react-button@1.0.0-beta.58
+  - @dt-dds/react-modal@1.0.0-beta.58
+  - @dt-dds/react-text-field@1.0.0-beta.68
+  - @dt-dds/react-empty-state@1.0.0-beta.78
+  - @dt-dds/react-link@1.0.0-beta.35
+  - @dt-dds/react-date-picker@1.0.0-beta.51
+  - @dt-dds/react-message@1.0.0-beta.74
+
 ## 1.0.0-beta.227
 
 ### Minor Changes

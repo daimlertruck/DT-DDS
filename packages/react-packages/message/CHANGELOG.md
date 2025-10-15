@@ -1,5 +1,11 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.74
+
+### Patch Changes
+
+- @dt-dds/react-link@1.0.0-beta.35
+
 ## 1.0.0-beta.73
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.75
+
+### Patch Changes
+
+- fix: change prop name
+  - @dt-dds/react-button@1.0.0-beta.58
+
 ## 1.0.0-beta.74
 
 ### Patch Changes
