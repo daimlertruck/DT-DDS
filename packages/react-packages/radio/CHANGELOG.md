@@ -1,5 +1,12 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.43
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.27
+
 ## 1.0.0-beta.42
 
 ### Minor Changes

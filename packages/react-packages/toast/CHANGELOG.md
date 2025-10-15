@@ -1,5 +1,15 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.73
+
+### Minor Changes
+
+- feat: pass children instead of actions
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.56
+
 ## 1.0.0-beta.72
 
 ### Minor Changes
