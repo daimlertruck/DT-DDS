@@ -1,5 +1,15 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.67
+
+### Minor Changes
+
+- feat: allow passing icon to text filed label
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.62
+
 ## 1.0.0-beta.66
 
 ### Patch Changes
