@@ -29,6 +29,7 @@ export const App = () => {
 | `message`        | `string`                    | -                | The message to be displayed below the input field. Useful for hints or to display errors. |
 | `labelVariant`   | `[default, floating]`       | `default`        | Sets the label floating or traditional on top of the input                                |
 | `hasLabel`       | `boolean`                   | `true`           | Show/hide the label                                                                       |
+| `labelIcon`      | `ReactNode`.      | -                | Sets an element for label to provide guidance about the scope of the field.                     |
 
 ## Stack
 
