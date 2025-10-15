@@ -1,5 +1,7 @@
+import { Button } from '@dt-dds/react-button';
 import { TOAST_Z_INDEX, useMedia } from '@dt-dds/react-core';
 import { useTheme } from '@emotion/react';
+import React, { ReactNode } from 'react';
 import {
   toast,
   ToasterProps as ToasterProviderProps,
@@ -7,7 +9,7 @@ import {
   Toaster as ToastProvider,
 } from 'react-hot-toast';
 
-import { Action, ToastPosition, ToastType } from './constants';
+import { ToastPosition, ToastType } from './constants';
 import Toast from './Toast';
 
 const TOAST_DEFAULT_DURATION = 4000;
@@ -19,7 +21,7 @@ export interface EmitToastProps extends ToastOptions {
   type: ToastType;
   title: string;
   message: string;
-  actions?: [Action] | [Action, Action];
+  children?: ReactNode;
   dismissible?: boolean;
 }
 
@@ -27,11 +29,37 @@ export const dismissToast = (id: string) => {
   toast.dismiss(id);
 };
 
+const processChildren = (children: ReactNode): ReactNode => {
+  return React.Children.map(children, (child) => {
+    if (!React.isValidElement(child)) {
+      return child;
+    }
+
+    if (child.type === Button) {
+      return React.cloneElement(child, {
+        ...child.props,
+        size: 'small',
+        variant: 'text',
+      });
+    }
+
+    if (child.props.children) {
+      return React.cloneElement(
+        child,
+        { ...child.props },
+        processChildren(child.props.children)
+      );
+    }
+
+    return child;
+  });
+};
+
 export const emitToast = ({
   type,
   title,
   message,
-  actions,
+  children,
   dismissible,
   ...props
 }: EmitToastProps) => {
@@ -42,7 +70,6 @@ export const emitToast = ({
     (t) => {
       return (
         <Toast
-          actions={actions}
           dismissible={dismissible}
           id={t.id}
           isVisible={t.visible}
@@ -50,7 +77,9 @@ export const emitToast = ({
           onClose={() => toast.dismiss(t.id)}
           title={title}
           type={type}
-        />
+        >
+          {processChildren(children)}
+        </Toast>
       );
     },
     {

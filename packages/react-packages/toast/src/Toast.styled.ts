@@ -1,4 +1,3 @@
-import { Button } from '@dt-dds/react-button';
 import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
@@ -69,13 +68,21 @@ export const ToastButtonCloseStyled = styled.button<ToastProps>`
   `}
 `;
 
-export const ActionButtonStyled = styled(Button)<ToastProps>`
+export const ActionsContainer = styled.div<ToastProps>`
   ${({ theme, toastType }) => `
-    color: ${theme.palette[toastType].dark};
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: ${theme.spacing.spacing_20};
+    margin-top: ${theme.spacing.spacing_30};
 
-    &:hover {
-      background-color: ${theme.palette[toastType].medium};
+    button {
       color: ${theme.palette[toastType].dark};
+      
+      &:hover {
+        background-color: ${theme.palette[toastType].medium};
+        color: ${theme.palette[toastType].dark};
+      }
     }
 `}
 `;

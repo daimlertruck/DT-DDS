@@ -166,7 +166,6 @@ exports[`<Toast /> component should render toast with title & message for type e
         class="emotion-4"
         color="error.dark"
         data-testid="typography"
-        style="text-transform: capitalize;"
       >
         my title text
       </span>
@@ -348,7 +347,6 @@ exports[`<Toast /> component should render toast with title & message for type i
         class="emotion-4"
         color="informative.dark"
         data-testid="typography"
-        style="text-transform: capitalize;"
       >
         my title text
       </span>
@@ -510,7 +508,6 @@ exports[`<Toast /> component should render toast with title & message for type s
         class="emotion-4"
         color="success.dark"
         data-testid="typography"
-        style="text-transform: capitalize;"
       >
         my title text
       </span>
@@ -682,7 +679,6 @@ exports[`<Toast /> component should render toast with title & message for type w
         class="emotion-4"
         color="warning.dark"
         data-testid="typography"
-        style="text-transform: capitalize;"
       >
         my title text
       </span>
