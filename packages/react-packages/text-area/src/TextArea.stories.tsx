@@ -1,3 +1,5 @@
+import { Icon } from '@dt-dds/react-icon';
+import { Tooltip } from '@dt-dds/react-tooltip';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextArea, TextAreaProps } from './TextArea';
@@ -59,5 +61,17 @@ export const Default: StoryObj<TextAreaProps> = {
     hasLabel: true,
     labelVariant: 'default',
     readOnly: false,
+  },
+};
+
+export const TestAreaWithLabelIcon: StoryObj<TextAreaProps> = {
+  args: {
+    label: 'My label',
+    labelIcon: (
+      <Tooltip>
+        <Icon code='info' size='s' />
+        <Tooltip.Content>Additional info about the field</Tooltip.Content>
+      </Tooltip>
+    ),
   },
 };

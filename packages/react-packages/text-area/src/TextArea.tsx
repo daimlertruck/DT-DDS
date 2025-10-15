@@ -7,6 +7,7 @@ import {
   ChangeEvent,
   ComponentPropsWithoutRef,
   FocusEvent,
+  ReactNode,
   useEffect,
   useState,
 } from 'react';
@@ -32,10 +33,12 @@ export interface TextAreaProps
   message?: string;
   labelVariant?: TextAreaLabelVariant;
   hasLabel?: boolean;
+  labelIcon?: ReactNode;
 }
 
 export const TextArea = ({
   label,
+  labelIcon,
   dataTestId,
   name,
   value,
@@ -117,6 +120,7 @@ export const TextArea = ({
         <LabelField
           hasError={showError}
           htmlFor={testId}
+          icon={labelIcon}
           isActive={isActive && !readOnly ? true : false}
           isDisabled={disabled || readOnly}
           isFloating={isFloatingLabel}

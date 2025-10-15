@@ -1,4 +1,5 @@
 import { withProviders } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render, screen } from '@testing-library/react';
 
@@ -147,5 +148,174 @@ describe('<TextArea /> component', () => {
     expect(getByTestId('my-input-textarea')).toHaveStyle(
       `background-color: ${theme.palette.surface.light}`
     );
+  });
+
+  describe('TextArea labelIcon feature tests', () => {
+    test('renders label with icon', () => {
+      render(
+        <ProvidedTextArea
+          label='My textarea with icon'
+          labelIcon={<Icon code='info' size='s' />}
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toHaveTextContent('My textarea with icon');
+      expect(screen.getByTestId('icon')).toBeVisible();
+      expect(screen.getByTestId('icon')).toHaveTextContent('info');
+    });
+
+    test('renders label without icon when labelIcon prop is not provided', () => {
+      render(<ProvidedTextArea label='My textarea without icon' />);
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toBeVisible();
+      expect(label).toHaveTextContent('My textarea without icon');
+      expect(screen.queryByTestId('icon')).not.toBeInTheDocument();
+    });
+
+    test('renders label with icon and required indicator', () => {
+      render(
+        <ProvidedTextArea
+          label='My required textarea with icon'
+          labelIcon={<Icon code='warning' size='s' />}
+          required
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toHaveTextContent('My required textarea with icon*');
+      expect(screen.getByTestId('icon')).toBeVisible();
+    });
+
+    test('renders label with icon and maintains floating label behavior', () => {
+      render(
+        <ProvidedTextArea
+          label='My floating label with icon'
+          labelIcon={<Icon code='info' size='s' />}
+          labelVariant='floating'
+        />
+      );
+
+      const textarea = screen.getByRole('textbox');
+      const label = screen.getByTestId('label-field');
+
+      fireEvent.focus(textarea);
+
+      expect(label).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+    });
+
+    test('renders label with icon and error state', () => {
+      render(
+        <ProvidedTextArea
+          hasError
+          label='My textarea with icon and error'
+          labelIcon={<Icon code='info' size='s' />}
+          message='Error message'
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+      expect(screen.getByText('Error message')).toBeVisible();
+    });
+
+    test('renders label with icon when hasLabel is true', () => {
+      render(
+        <ProvidedTextArea
+          hasLabel
+          label='Textarea with label and icon'
+          labelIcon={<Icon code='help' size='s' />}
+        />
+      );
+
+      expect(screen.getByTestId('label-field')).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+    });
+
+    test('does not render icon when hasLabel is false', () => {
+      render(
+        <ProvidedTextArea
+          hasLabel={false}
+          label='Textarea without label'
+          labelIcon={<Icon code='help' size='s' />}
+        />
+      );
+
+      expect(screen.queryByTestId('label-field')).not.toBeInTheDocument();
+      expect(screen.queryByTestId('icon')).not.toBeInTheDocument();
+    });
+
+    test('renders label with icon for default label variant', () => {
+      render(
+        <ProvidedTextArea
+          label='Default variant with icon'
+          labelIcon={<Icon code='info' size='s' />}
+          labelVariant='default'
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+    });
+
+    test('renders label with icon when disabled', () => {
+      render(
+        <ProvidedTextArea
+          disabled
+          label='Disabled textarea with icon'
+          labelIcon={<Icon code='lock' size='s' />}
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+      expect(screen.getByRole('textbox')).toBeDisabled();
+    });
+
+    test('renders label with icon when readonly', () => {
+      render(
+        <ProvidedTextArea
+          label='Readonly textarea with icon'
+          labelIcon={<Icon code='visibility' size='s' />}
+          readOnly
+        />
+      );
+
+      const label = screen.getByTestId('label-field');
+      expect(label).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+    });
+
+    test('renders label with icon and maxLength counter', () => {
+      render(
+        <ProvidedTextArea
+          label='Textarea with icon and counter'
+          labelIcon={<Icon code='edit' size='s' />}
+          maxLength={100}
+        />
+      );
+
+      expect(screen.getByTestId('label-field')).toBeVisible();
+      expect(screen.getByTestId('icon')).toBeVisible();
+      expect(screen.getByTestId('char-counter')).toHaveTextContent('0 / 100');
+    });
+
+    test('renders label with icon and updates on value change', () => {
+      render(
+        <ProvidedTextArea
+          label='Textarea with icon'
+          labelIcon={<Icon code='info' size='s' />}
+          value='Initial value'
+        />
+      );
+
+      expect(screen.getByTestId('icon')).toBeVisible();
+      expect(screen.getByRole('textbox')).toHaveValue('Initial value');
+    });
   });
 });
