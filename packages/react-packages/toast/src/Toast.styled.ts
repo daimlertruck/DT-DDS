@@ -4,11 +4,15 @@ import styled from '@emotion/styled';
 import { ToastType } from './constants';
 
 interface ToastProps {
-  toastType: ToastType;
+  type: ToastType;
 }
 
 interface ToastStyledProps extends ToastProps {
   isVisible: boolean;
+}
+
+interface ToastButtonCloseStyledProps {
+  toastType: ToastType;
 }
 
 const fadeIn = keyframes`
@@ -23,10 +27,10 @@ export const ToastStyled = styled.div<ToastStyledProps>`
   animation: ${fadeIn} 0.75s ease-in;
   transition: all 0.75s ease-in-out;
   overflow: hidden;
-  ${({ theme, isVisible, toastType }) => `
-    border: 1px solid ${theme.palette[toastType].default};
-    border-left: 6px solid ${theme.palette[toastType].default};
-    background-color: ${theme.palette[toastType].light};
+  ${({ theme, isVisible, type }) => `
+    border: 1px solid ${theme.palette[type].default};
+    border-left: 6px solid ${theme.palette[type].default};
+    background-color: ${theme.palette[type].light};
     opacity: ${isVisible ? 1 : 0};
     border-radius: ${theme.shape.toast};
     padding: ${theme.spacing.spacing_50} ${theme.spacing.spacing_50} ${
@@ -36,9 +40,9 @@ export const ToastStyled = styled.div<ToastStyledProps>`
 `;
 
 export const ToastMessageStyled = styled.div<ToastProps>`
-  ${({ theme, toastType }) => `
+  ${({ theme, type }) => `
     ${theme.fontStyles.bodyMdRegular};
-    color: ${theme.palette[toastType].dark};
+    color: ${theme.palette[type].dark};
     overflow: hidden;
     word-break: break-word;
     hyphens: auto;
@@ -49,7 +53,7 @@ export const ToastMessageStyled = styled.div<ToastProps>`
   `}
 `;
 
-export const ToastButtonCloseStyled = styled.button<ToastProps>`
+export const ToastButtonCloseStyled = styled.button<ToastButtonCloseStyledProps>`
   ${({ theme, toastType }) => `
     color: ${theme.palette[toastType].dark};
     border: 0;
@@ -69,7 +73,7 @@ export const ToastButtonCloseStyled = styled.button<ToastProps>`
 `;
 
 export const ActionsContainer = styled.div<ToastProps>`
-  ${({ theme, toastType }) => `
+  ${({ theme, type }) => `
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -77,11 +81,11 @@ export const ActionsContainer = styled.div<ToastProps>`
     margin-top: ${theme.spacing.spacing_30};
 
     button {
-      color: ${theme.palette[toastType].dark};
+      color: ${theme.palette[type].dark};
       
       &:hover {
-        background-color: ${theme.palette[toastType].medium};
-        color: ${theme.palette[toastType].dark};
+        background-color: ${theme.palette[type].medium};
+        color: ${theme.palette[type].dark};
       }
     }
 `}
