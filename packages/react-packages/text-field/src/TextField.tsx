@@ -48,6 +48,7 @@ export interface TextFieldProps
 }
 
 export const TextField = ({
+  dataTestId,
   hasError = false,
   extraPrefix,
   extraSuffix,
@@ -75,6 +76,8 @@ export const TextField = ({
   const [inputValue, setInputValue] = useState('');
   const [hasRequiredError, setHasRequiredError] = useState(false);
   const textFieldId = id ?? label.replaceAll(' ', '-').toLowerCase();
+  const testId =
+    dataTestId ?? `${label.replaceAll(' ', '-').toLowerCase()}-text-field`;
 
   useEffect(() => {
     // Check if there's an initial value coming from props
@@ -199,7 +202,7 @@ export const TextField = ({
 
         <InputFieldStyled
           data-error={showError}
-          data-testid='input-field'
+          data-testid={testId}
           disabled={disabled}
           id={textFieldId}
           isFloatingLabel={isFloatingLabel}

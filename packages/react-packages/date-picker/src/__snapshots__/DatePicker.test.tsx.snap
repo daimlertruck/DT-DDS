@@ -211,7 +211,7 @@ exports[`<DatePicker /> component onBlur event should render error message when 
       <input
         class="emotion-3"
         data-error="true"
-        data-testid="input-field"
+        data-testid="choose-a-date-text-field"
         id="Choose-a-date"
         min="2023-03-30"
         name="Choose-a-date"
@@ -445,7 +445,7 @@ exports[`<DatePicker /> component onBlur event should render error message when 
       <input
         class="emotion-3"
         data-error="true"
-        data-testid="input-field"
+        data-testid="choose-a-date-text-field"
         id="Choose-a-date"
         max="2025-03-30"
         name="Choose-a-date"
@@ -682,7 +682,7 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
       <input
         class="emotion-4"
         data-error="false"
-        data-testid="input-field"
+        data-testid="choose-a-date-text-field"
         id="Choose-a-date"
         max="2025-03-30"
         min="2023-03-30"

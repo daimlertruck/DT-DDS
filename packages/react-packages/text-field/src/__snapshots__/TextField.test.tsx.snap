@@ -197,7 +197,7 @@ exports[`<TextField /> component renders disabled input 1`] = `
       <input
         class="emotion-5 emotion-6"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-disabled-input-text-field"
         disabled=""
         id="my-disabled-input"
         name="my-disabled-input"
@@ -457,7 +457,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
       <input
         class="emotion-8 emotion-9"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-input-text-field"
         id="my-input"
         name="my-input"
         type="text"
@@ -676,7 +676,7 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
       <input
         class="emotion-5 emotion-6"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-input-text-field"
         id="my-input"
         name="my-input"
         type="text"
@@ -879,7 +879,7 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
       <input
         class="emotion-5 emotion-6"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-input-text-field"
         id="my-input"
         name="my-input"
         type="text"
@@ -1070,7 +1070,7 @@ exports[`<TextField /> component renders input without floating label 1`] = `
       <input
         class="emotion-5 emotion-6"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-input-text-field"
         id="my-input"
         name="my-input"
         type="text"
@@ -1292,7 +1292,7 @@ exports[`<TextField /> component should render the TextField with error styles a
       <input
         class="emotion-5 emotion-6"
         data-error="true"
-        data-testid="input-field"
+        data-testid="my-input-with-error-message-text-field"
         id="my-input-with-error-message"
         name="my-input-with-error-message"
         type="text"
@@ -1525,7 +1525,7 @@ exports[`<TextField /> component should render the TextField with info message 1
       <input
         class="emotion-5 emotion-6"
         data-error="false"
-        data-testid="input-field"
+        data-testid="my-input-with-info-message-text-field"
         id="my-input-with-info-message"
         name="my-input-with-info-message"
         type="text"
