@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.230
+
+### Minor Changes
+
+- feat: add testId prop to text-field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-date-picker@1.0.0-beta.53
+  - @dt-dds/react-form@1.0.0-beta.39
+  - @dt-dds/react-text-field@1.0.0-beta.70
+  - @dt-dds/react-box@1.0.0-beta.31
+  - @dt-dds/react-dropdown@1.0.0-beta.52
+  - @dt-dds/react-radio@1.0.0-beta.47
+  - @dt-dds/react-spinner@1.0.0-beta.65
+  - @dt-dds/react-tabs@1.0.0-beta.60
+  - @dt-dds/react-text-area@1.0.0-beta.42
+  - @dt-dds/react-button@1.0.0-beta.60
+  - @dt-dds/react-modal@1.0.0-beta.60
+  - @dt-dds/react-empty-state@1.0.0-beta.80
+  - @dt-dds/react-link@1.0.0-beta.37
+  - @dt-dds/react-toast@1.0.0-beta.77
+  - @dt-dds/react-message@1.0.0-beta.76
+
 ## 1.0.0-beta.229
 
 ### Minor Changes

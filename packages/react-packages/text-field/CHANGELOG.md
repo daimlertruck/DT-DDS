@@ -1,5 +1,15 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.70
+
+### Minor Changes
+
+- feat: add testId prop to text-field
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.65
+
 ## 1.0.0-beta.69
 
 ### Patch Changes

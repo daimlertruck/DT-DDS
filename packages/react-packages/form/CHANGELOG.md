@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.39
+
+### Minor Changes
+
+- feat: add testId prop to text-field
+
 ## 1.0.0-beta.38
 
 ### Minor Changes
