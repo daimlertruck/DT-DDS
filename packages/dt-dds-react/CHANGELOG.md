@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.229
+
+### Minor Changes
+
+- feat: allow passing icon to text area label
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-text-area@1.0.0-beta.41
+  - @dt-dds/react-box@1.0.0-beta.30
+  - @dt-dds/react-dropdown@1.0.0-beta.51
+  - @dt-dds/react-radio@1.0.0-beta.46
+  - @dt-dds/react-spinner@1.0.0-beta.64
+  - @dt-dds/react-tabs@1.0.0-beta.59
+  - @dt-dds/react-button@1.0.0-beta.59
+  - @dt-dds/react-modal@1.0.0-beta.59
+  - @dt-dds/react-text-field@1.0.0-beta.69
+  - @dt-dds/react-empty-state@1.0.0-beta.79
+  - @dt-dds/react-link@1.0.0-beta.36
+  - @dt-dds/react-toast@1.0.0-beta.76
+  - @dt-dds/react-date-picker@1.0.0-beta.52
+  - @dt-dds/react-message@1.0.0-beta.75
+
 ## 1.0.0-beta.228
 
 ### Patch Changes

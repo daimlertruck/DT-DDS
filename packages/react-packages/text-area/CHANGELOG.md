@@ -1,5 +1,16 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.41
+
+### Minor Changes
+
+- feat: allow passing icon to text area label
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.30
+
 ## 1.0.0-beta.40
 
 ### Patch Changes
