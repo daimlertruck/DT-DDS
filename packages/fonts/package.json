@@ -1,0 +1,34 @@
+{
+  "name": "@dt-dds/fonts",
+  "version": "0.1.0-beta.0",
+  "description": "DT-DDS Design System Fonts",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.css": "./dist/index.css",
+    "./DaimlerCS-Regular.woff2": "./dist/DaimlerCS-Regular.woff2",
+    "./DaimlerCS-Regular.woff": "./dist/DaimlerCS-Regular.woff",
+    "./DaimlerCS-Bold.woff2": "./dist/DaimlerCS-Bold.woff2",
+    "./DaimlerCS-Bold.woff": "./dist/DaimlerCS-Bold.woff"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint --cache ."
+  },
+  "dependencies": {
+    "@dt-dds/themes": "1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "tsup": "^8.5.0",
+    "typescript": "^4.5.3"
+  }
+}
