@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./DaimlerCS-Regular.woff2') format('woff2'),
+    url('./DaimlerCS-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./DaimlerCS-Bold.woff2') format('woff2'),
+    url('./DaimlerCS-Bold.woff') format('woff');
+}
