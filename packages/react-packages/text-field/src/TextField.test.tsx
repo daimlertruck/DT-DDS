@@ -47,13 +47,18 @@ describe('<TextField /> component', () => {
       />
     );
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute('id', 'my-id');
+    expect(
+      screen.getByTestId('my-input-with-prefilled-value-text-field')
+    ).toHaveAttribute('id', 'my-id');
   });
 
   it('renders input with a default id', () => {
     render(<ProvidedTextField initialValue='Initial Value' label='My Input' />);
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute('id', 'my-input');
+    expect(screen.getByTestId('my-input-text-field')).toHaveAttribute(
+      'id',
+      'my-input'
+    );
   });
 
   it('fills input correctly with new value on change Event', () => {
@@ -99,7 +104,7 @@ describe('<TextField /> component', () => {
   it('renders hidden text input', () => {
     render(<ProvidedTextField label='Hidden text' type='password' />);
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute(
+    expect(screen.getByTestId('hidden-text-text-field')).toHaveAttribute(
       'type',
       'password'
     );
@@ -168,7 +173,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField initialValue='Value' label='Some text' required />
       );
-      const input = screen.getByTestId('input-field');
+      const input = screen.getByTestId('some-text-text-field');
       const label = screen.getByTestId('label-field');
 
       fireEvent.blur(input, { currentTarget: { value: 'Some value' } });
@@ -260,7 +265,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field');
 
     fireEvent.change(input, {
       target: { value: 'search' },
@@ -285,7 +290,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field');
 
     fireEvent.change(input, {
       target: { value: 'search' },
@@ -311,7 +316,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field');
 
     fireEvent.change(input, {
       target: { value: 'search' },

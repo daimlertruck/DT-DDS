@@ -38,6 +38,7 @@ export const App = () => {
 | `extraPrefix`     | `ExtraComponent`             | -          | Component to be rendered on the left side inside the input field                                      |
 | `extraSuffix`     | `ExtraComponent`             | -          | Component to be rendered on the right side inside the input field                                     |
 | `id`              | `string`                     | -          | The unique identifier used to link the element to the corresponding element via the htmlFor attribute |
+| `dataTestId`      | `string`                     | `label`-text-field | Customizable test identifier                                                                  |
 | `...`             | `InputHTMLAttributes`        | -          | All available attributes from native html input                                                       |
 
 ## Stack

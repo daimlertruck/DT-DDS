@@ -212,7 +212,7 @@ exports[`<Form /> component renders simple form 1`] = `
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="input-field"
+          data-testid="label-1-text-field"
           id="label-1"
           name="label-1"
           type="text"
@@ -237,7 +237,7 @@ exports[`<Form /> component renders simple form 1`] = `
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="input-field"
+          data-testid="label-2-text-field"
           id="label-2"
           name="label-2"
           type="text"
@@ -510,7 +510,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -782,7 +782,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -807,7 +807,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-2-text-field"
               id="label-2"
               name="label-2"
               type="text"
@@ -1118,7 +1118,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -1143,7 +1143,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-2-text-field"
               id="label-2"
               name="label-2"
               type="text"
