@@ -162,6 +162,7 @@ export const TextField = ({
 
   return (
     <TextFieldStyled
+      data-testid={testId}
       hasPrefix={!!extraPrefix}
       isFloatingLabel={isFloatingLabel}
       style={style}
@@ -202,7 +203,7 @@ export const TextField = ({
 
         <InputFieldStyled
           data-error={showError}
-          data-testid={testId}
+          data-testid='input-field'
           disabled={disabled}
           id={textFieldId}
           isFloatingLabel={isFloatingLabel}
