@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.40
+
+### Patch Changes
+
+- refactor: text-field test-id element
+
 ## 1.0.0-beta.39
 
 ### Minor Changes

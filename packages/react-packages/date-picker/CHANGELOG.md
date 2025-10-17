@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.55
+
+### Patch Changes
+
+- refactor: text-field test-id element
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.72
+
 ## 1.0.0-beta.54
 
 ### Patch Changes

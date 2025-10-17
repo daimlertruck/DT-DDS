@@ -1,5 +1,12 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- refactor: text-field test-id element
+  - @dt-dds/react-spinner@1.0.0-beta.67
+
 ## 1.0.0-beta.71
 
 ### Patch Changes
