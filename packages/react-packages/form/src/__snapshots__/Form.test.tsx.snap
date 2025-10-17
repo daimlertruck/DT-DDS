@@ -197,6 +197,7 @@ exports[`<Form /> component renders simple form 1`] = `
   >
     <div
       class="emotion-2"
+      data-testid="label-1-text-field"
     >
       <label
         class="emotion-3"
@@ -212,7 +213,7 @@ exports[`<Form /> component renders simple form 1`] = `
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="label-1-text-field"
+          data-testid="input-field"
           id="label-1"
           name="label-1"
           type="text"
@@ -222,6 +223,7 @@ exports[`<Form /> component renders simple form 1`] = `
     </div>
     <div
       class="emotion-2"
+      data-testid="label-2-text-field"
     >
       <label
         class="emotion-3"
@@ -237,7 +239,7 @@ exports[`<Form /> component renders simple form 1`] = `
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="label-2-text-field"
+          data-testid="input-field"
           id="label-2"
           name="label-2"
           type="text"
@@ -495,6 +497,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
       >
         <div
           class="emotion-6"
+          data-testid="label-1-text-field"
         >
           <label
             class="emotion-7"
@@ -510,7 +513,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="label-1-text-field"
+              data-testid="input-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -767,6 +770,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
       >
         <div
           class="emotion-6"
+          data-testid="label-1-text-field"
         >
           <label
             class="emotion-7"
@@ -782,7 +786,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="label-1-text-field"
+              data-testid="input-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -792,6 +796,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
         </div>
         <div
           class="emotion-6"
+          data-testid="label-2-text-field"
         >
           <label
             class="emotion-7"
@@ -807,7 +812,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="label-2-text-field"
+              data-testid="input-field"
               id="label-2"
               name="label-2"
               type="text"
@@ -1103,6 +1108,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
       >
         <div
           class="emotion-9"
+          data-testid="label-1-text-field"
         >
           <label
             class="emotion-10"
@@ -1118,7 +1124,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="label-1-text-field"
+              data-testid="input-field"
               id="label-1"
               name="label-1"
               type="text"
@@ -1128,6 +1134,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
         </div>
         <div
           class="emotion-9"
+          data-testid="label-2-text-field"
         >
           <label
             class="emotion-10"
@@ -1143,7 +1150,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="label-2-text-field"
+              data-testid="input-field"
               id="label-2"
               name="label-2"
               type="text"
