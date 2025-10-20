@@ -125,6 +125,10 @@ exports[`<Toast /> component should render toast with title & message for type e
   outline-offset: 1px;
 }
 
+.emotion-5:hover {
+  background-color: #ff8a8a;
+}
+
 .emotion-8 {
   font-family: Daimler CS;
   font-size: 14px;
@@ -308,6 +312,10 @@ exports[`<Toast /> component should render toast with title & message for type i
   outline-offset: 1px;
 }
 
+.emotion-5:hover {
+  background-color: #8ab9c4;
+}
+
 .emotion-8 {
   font-family: Daimler CS;
   font-size: 14px;
@@ -469,6 +477,10 @@ exports[`<Toast /> component should render toast with title & message for type s
 .emotion-5:focus-visible {
   outline: 2px solid #000000;
   outline-offset: 1px;
+}
+
+.emotion-5:hover {
+  background-color: #98cda8;
 }
 
 .emotion-8 {
@@ -642,6 +654,10 @@ exports[`<Toast /> component should render toast with title & message for type w
 .emotion-5:focus-visible {
   outline: 2px solid #000000;
   outline-offset: 1px;
+}
+
+.emotion-5:hover {
+  background-color: #fdde8a;
 }
 
 .emotion-8 {
