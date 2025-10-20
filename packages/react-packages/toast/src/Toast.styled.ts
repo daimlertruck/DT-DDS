@@ -68,6 +68,10 @@ export const ToastButtonCloseStyled = styled.button<ToastButtonCloseStyledProps>
       outline: 2px solid ${theme.palette.primary.default};
       outline-offset: 1px;
     }
+
+    &:hover {
+      background-color: ${theme.palette[toastType].medium};
+    }
     
   `}
 `;
