@@ -1,5 +1,15 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.80
+
+### Minor Changes
+
+- feat: add hover on close icon
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.63
+
 ## 1.0.0-beta.79
 
 ### Patch Changes
