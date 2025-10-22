@@ -68,18 +68,18 @@ export function generateTypography(
 
   const fontStyles = {
     // Headings - Regular variants
-    h1: getTypographyValue('Headings', 'h1-regular'),
-    h2: getTypographyValue('Headings', 'h2-regular'),
-    h3: getTypographyValue('Headings', 'h3-regular'),
-    h4: getTypographyValue('Headings', 'h4-regular'),
-    h5: getTypographyValue('Headings', 'h5-regular'),
+    h1: getTypographyValue('Headings', 'h1-xs-regular'),
+    h2: getTypographyValue('Headings', 'h2-xs-regular'),
+    h3: getTypographyValue('Headings', 'h3-xs-regular'),
+    h4: getTypographyValue('Headings', 'h4-xs-regular'),
+    h5: getTypographyValue('Headings', 'h5-xs-regular'),
     h6: getTypographyValue('Headings', 'h6-regular'),
     // Headings - Bold variants
-    h1Bold: getTypographyValue('Headings', 'h1-bold'),
-    h2Bold: getTypographyValue('Headings', 'h2-bold'),
-    h3Bold: getTypographyValue('Headings', 'h3-bold'),
-    h4Bold: getTypographyValue('Headings', 'h4-bold'),
-    h5Bold: getTypographyValue('Headings', 'h5-bold'),
+    h1Bold: getTypographyValue('Headings', 'h1-xs-bold'),
+    h2Bold: getTypographyValue('Headings', 'h2-xs-bold'),
+    h3Bold: getTypographyValue('Headings', 'h3-xs-bold'),
+    h4Bold: getTypographyValue('Headings', 'h4-xs-bold'),
+    h5Bold: getTypographyValue('Headings', 'h5-xs-bold'),
     h6Bold: getTypographyValue('Headings', 'h6-bold'),
     // Headings - XS Regular variants
     h1XsRegular: getTypographyValue('Headings', 'h1-xs-regular'),
@@ -145,6 +145,14 @@ export function generateTypography(
     tag: getTypographyValue('Body', 'body-sm-regular'), // Map to body-sm-regular
   };
 
+  const responsiveFontStyles = {
+    h1: getTypographyValue('Headings', 'h1-regular'),
+    h2: getTypographyValue('Headings', 'h2-regular'),
+    h3: getTypographyValue('Headings', 'h3-regular'),
+    h4: getTypographyValue('Headings', 'h4-regular'),
+    h5: getTypographyValue('Headings', 'h5-regular'),
+  };
+
   return `import { Breakpoints, CustomTheme as Theme } from '../../types';
 import { breakpoints } from './breakpoints';
 
@@ -159,8 +167,7 @@ export const fontFamily = {
 interface ResponsiveStyle {
   minBound?: Breakpoints;
   maxBound?: Breakpoints;
-  fontSize: string;
-  lineHeight: string;
+  fontStyles: string;
 }
 
 const getTextResponsiveStyle = (styles: ResponsiveStyle[]) => {
@@ -174,8 +181,7 @@ const getTextResponsiveStyle = (styles: ResponsiveStyle[]) => {
         : '';
       return \`
       @media only screen\${minBoundStyle} \${maxBoundStyle} {
-          font-size: \${style.fontSize};
-          line-height: \${style.lineHeight};
+          \${style.fontStyles}
       }\`;
     })
     .join('');
@@ -185,21 +191,40 @@ export const fontStyles: Theme['fontStyles'] = ${formatObject(
     fontStyles
   )} as const;
 
+const formattedResponsiveFontStyles = ${formatObject(
+    responsiveFontStyles
+  )} as const;
+
 export const responsiveFontStyles = {
   h1: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '3rem', lineHeight: '3.25rem' },
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h1'] }
   ]),
   h2: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '2.5rem', lineHeight: '2.75rem' },
-  ]),
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h2']}
+       ]),
   h3: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '2rem', lineHeight: '2.25rem' },
-  ]),
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h3']}
+      ]),
   h4: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '1.5rem', lineHeight: '1.75rem' },
-  ]),
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h4']}
+       ]),
   h5: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '1.25rem', lineHeight: '1.5rem' },
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h5']}
+       ]),
+  h1Bold: getTextResponsiveStyle([
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h1']}
+  ]),
+  h2Bold: getTextResponsiveStyle([
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h2']}
+  ]),
+  h3Bold: getTextResponsiveStyle([
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h3']}
+  ]),
+  h4Bold: getTextResponsiveStyle([
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h4']}
+  ]),
+  h5Bold: getTextResponsiveStyle([
+    { minBound: 'mq4', fontStyles: formattedResponsiveFontStyles['h5']}
   ]),
 };
 `;
