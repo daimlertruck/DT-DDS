@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.57
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-text-field@1.0.0-beta.74
+
 ## 1.0.0-beta.56
 
 ### Patch Changes

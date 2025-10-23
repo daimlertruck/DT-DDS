@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.57
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-checkbox@1.0.0-beta.49
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-icon@1.0.0-beta.51
+  - @dt-dds/react-label-field@1.0.0-beta.48
+  - @dt-dds/react-icon-button@1.0.0-beta.18
+  - @dt-dds/react-tooltip@1.0.0-beta.58
+  - @dt-dds/react-typography@1.0.0-beta.41
+
 ## 1.0.0-beta.56
 
 ### Minor Changes

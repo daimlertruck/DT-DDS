@@ -1,5 +1,15 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.44
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-icon@1.0.0-beta.51
+  - @dt-dds/react-typography@1.0.0-beta.41
+
 ## 1.0.0-beta.43
 
 ### Minor Changes

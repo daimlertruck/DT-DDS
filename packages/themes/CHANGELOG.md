@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- fix: update responsive font styles
+
 ## 1.0.0-beta.8
 
 ### Patch Changes

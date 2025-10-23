@@ -1,5 +1,19 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.56
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-icon@1.0.0-beta.51
+  - @dt-dds/react-icon-button@1.0.0-beta.18
+  - @dt-dds/react-typography@1.0.0-beta.41
+  - @dt-dds/react-box@1.0.0-beta.35
+
 ## 1.0.0-beta.55
 
 ### Patch Changes

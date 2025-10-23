@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+
 ## 1.0.0-beta.49
 
 ### Minor Changes

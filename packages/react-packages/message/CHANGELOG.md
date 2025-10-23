@@ -1,5 +1,16 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.80
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-link@1.0.0-beta.41
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-typography@1.0.0-beta.41
+
 ## 1.0.0-beta.79
 
 ### Patch Changes

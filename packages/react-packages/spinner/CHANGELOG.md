@@ -1,5 +1,17 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.69
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-typography@1.0.0-beta.41
+  - @dt-dds/react-box@1.0.0-beta.35
+
 ## 1.0.0-beta.68
 
 ### Patch Changes

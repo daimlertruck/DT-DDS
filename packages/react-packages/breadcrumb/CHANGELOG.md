@@ -1,5 +1,16 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.60
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-icon@1.0.0-beta.51
+  - @dt-dds/react-tooltip@1.0.0-beta.58
+
 ## 1.0.0-beta.59
 
 ### Minor Changes

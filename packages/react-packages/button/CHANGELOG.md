@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- fix: update responsive font styles
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.50
+  - @dt-dds/react-spinner@1.0.0-beta.69
+
 ## 1.0.0-beta.63
 
 ### Patch Changes
