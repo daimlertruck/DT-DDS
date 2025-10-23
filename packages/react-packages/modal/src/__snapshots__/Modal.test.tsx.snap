@@ -120,10 +120,10 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 
 .emotion-6 {
   font-family: Daimler CS;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 0px;
-  line-height: 28px;
+  line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #1d1d1d;
@@ -131,8 +131,13 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 
 @media only screen and (min-width:1024px) {
   .emotion-6 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-family: Daimler CS;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 28px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 }
 
@@ -388,10 +393,10 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 
 .emotion-6 {
   font-family: Daimler CS;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   letter-spacing: 0px;
-  line-height: 28px;
+  line-height: 24px;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #1d1d1d;
@@ -399,8 +404,13 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 
 @media only screen and (min-width:1024px) {
   .emotion-6 {
-    font-size: 1.5rem;
-    line-height: 1.75rem;
+    font-family: Daimler CS;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 28px;
+    -webkit-text-decoration: none;
+    text-decoration: none;
   }
 }
 

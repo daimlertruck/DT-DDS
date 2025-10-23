@@ -13,8 +13,7 @@ export const fontFamily = {
 interface ResponsiveStyle {
   minBound?: Breakpoints;
   maxBound?: Breakpoints;
-  fontSize: string;
-  lineHeight: string;
+  fontStyles: string;
 }
 
 const getTextResponsiveStyle = (styles: ResponsiveStyle[]) => {
@@ -28,30 +27,29 @@ const getTextResponsiveStyle = (styles: ResponsiveStyle[]) => {
         : '';
       return `
       @media only screen${minBoundStyle} ${maxBoundStyle} {
-          font-size: ${style.fontSize};
-          line-height: ${style.lineHeight};
+          ${style.fontStyles}
       }`;
     })
     .join('');
 };
 
 export const fontStyles: Theme['fontStyles'] = {
-  h1: 'font-family: Daimler CS; font-size: 48px; font-weight: 400; letter-spacing: 0px; line-height: 52px; text-decoration: none;',
-  h2: 'font-family: Daimler CS; font-size: 40px; font-weight: 400; letter-spacing: 0px; line-height: 44px; text-decoration: none;',
-  h3: 'font-family: Daimler CS; font-size: 32px; font-weight: 400; letter-spacing: 0px; line-height: 36px; text-decoration: none;',
-  h4: 'font-family: Daimler CS; font-size: 24px; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-decoration: none;',
-  h5: 'font-family: Daimler CS; font-size: 20px; font-weight: 400; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
+  h1: 'font-family: Daimler CS; font-size: 40px; font-weight: 400; letter-spacing: 0px; line-height: 48px; text-decoration: none;',
+  h2: 'font-family: Daimler CS; font-size: 32px; font-weight: 400; letter-spacing: 0px; line-height: 40px; text-decoration: none;',
+  h3: 'font-family: Daimler CS; font-size: 24px; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-decoration: none;',
+  h4: 'font-family: Daimler CS; font-size: 20px; font-weight: 400; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
+  h5: 'font-family: Daimler CS; font-size: 16px; font-weight: 400; letter-spacing: 0px; line-height: 20px; text-decoration: none;',
   h6: 'font-family: Daimler CS; font-size: 16px; font-weight: 400; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
   h1Bold:
-    'font-family: Daimler CS; font-size: 48px; font-weight: 700; letter-spacing: 0px; line-height: 52px; text-decoration: none;',
+    'font-family: Daimler CS; font-size: 40px; font-weight: 700; letter-spacing: 0px; line-height: 48px; text-decoration: none;',
   h2Bold:
-    'font-family: Daimler CS; font-size: 40px; font-weight: 700; letter-spacing: 0px; line-height: 44px; text-decoration: none;',
+    'font-family: Daimler CS; font-size: 32px; font-weight: 700; letter-spacing: 0px; line-height: 40px; text-decoration: none;',
   h3Bold:
-    'font-family: Daimler CS; font-size: 32px; font-weight: 700; letter-spacing: 0px; line-height: 36px; text-decoration: none;',
-  h4Bold:
     'font-family: Daimler CS; font-size: 24px; font-weight: 700; letter-spacing: 0px; line-height: 28px; text-decoration: none;',
-  h5Bold:
+  h4Bold:
     'font-family: Daimler CS; font-size: 20px; font-weight: 700; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
+  h5Bold:
+    'font-family: Daimler CS; font-size: 16px; font-weight: 700; letter-spacing: 0px; line-height: 20px; text-decoration: none;',
   h6Bold:
     'font-family: Daimler CS; font-size: 16px; font-weight: 700; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
   h1XsRegular:
@@ -154,20 +152,27 @@ export const fontStyles: Theme['fontStyles'] = {
   tag: 'font-family: Daimler CS; font-size: 12px; font-weight: 400; letter-spacing: 0px; line-height: 16px; text-decoration: none;',
 } as const;
 
-export const responsiveFontStyles = {
-  h1: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '3rem', lineHeight: '3.25rem' },
-  ]),
-  h2: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '2.5rem', lineHeight: '2.75rem' },
-  ]),
-  h3: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '2rem', lineHeight: '2.25rem' },
-  ]),
-  h4: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '1.5rem', lineHeight: '1.75rem' },
-  ]),
-  h5: getTextResponsiveStyle([
-    { minBound: 'mq4', fontSize: '1.25rem', lineHeight: '1.5rem' },
-  ]),
-};
+const formattedResponsiveFontStyles = {
+  h1: 'font-family: Daimler CS; font-size: 48px; font-weight: 400; letter-spacing: 0px; line-height: 52px; text-decoration: none;',
+  h2: 'font-family: Daimler CS; font-size: 40px; font-weight: 400; letter-spacing: 0px; line-height: 44px; text-decoration: none;',
+  h3: 'font-family: Daimler CS; font-size: 32px; font-weight: 400; letter-spacing: 0px; line-height: 36px; text-decoration: none;',
+  h4: 'font-family: Daimler CS; font-size: 24px; font-weight: 400; letter-spacing: 0px; line-height: 28px; text-decoration: none;',
+  h5: 'font-family: Daimler CS; font-size: 20px; font-weight: 400; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
+  h1Bold:
+    'font-family: Daimler CS; font-size: 48px; font-weight: 700; letter-spacing: 0px; line-height: 52px; text-decoration: none;',
+  h2Bold:
+    'font-family: Daimler CS; font-size: 40px; font-weight: 700; letter-spacing: 0px; line-height: 44px; text-decoration: none;',
+  h3Bold:
+    'font-family: Daimler CS; font-size: 32px; font-weight: 700; letter-spacing: 0px; line-height: 36px; text-decoration: none;',
+  h4Bold:
+    'font-family: Daimler CS; font-size: 24px; font-weight: 700; letter-spacing: 0px; line-height: 28px; text-decoration: none;',
+  h5Bold:
+    'font-family: Daimler CS; font-size: 20px; font-weight: 700; letter-spacing: 0px; line-height: 24px; text-decoration: none;',
+} as const;
+
+export const responsiveFontStyles = Object.fromEntries(
+  Object.entries(formattedResponsiveFontStyles).map(([key, styleString]) => [
+    key,
+    getTextResponsiveStyle([{ minBound: 'mq4', fontStyles: styleString }]),
+  ])
+);
