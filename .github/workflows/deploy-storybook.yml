@@ -12,12 +12,14 @@ on:
       - 'packages/dt-dds-react/**'
       - 'packages/react-packages/**'
       - 'apps/docs/**'
+      - 'packages/themes'
 
   pull_request:
     paths:
       - 'packages/dt-dds-react/**'
       - 'packages/react-packages/**'
       - 'apps/docs/**'
+      - 'packages/themes'
 
 jobs:
   build-storybook:
