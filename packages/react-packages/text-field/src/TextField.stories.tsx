@@ -63,6 +63,13 @@ const meta: Meta<TextFieldPropsWithExtrasProp> = {
       },
       control: { type: 'select' },
     },
+    scale: {
+      options: {
+        compact: 'compact',
+        standard: 'standard',
+      },
+      control: { type: 'select' },
+    },
     backgroundFill: {
       options: {
         default: 'default',
@@ -108,6 +115,7 @@ export const Default: StoryObj<TextFieldPropsWithExtrasProp> = {
     readOnly: false,
     placeholder: 'My field placeholder',
     variant: 'outlined',
+    scale: 'standard',
     backgroundFill: 'default',
     extras: 'none',
   },
