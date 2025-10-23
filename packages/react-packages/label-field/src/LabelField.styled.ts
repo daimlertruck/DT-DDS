@@ -44,18 +44,21 @@ const floatingLabel = (
   isInputFilled: boolean,
   theme: Theme
 ) => {
+  const isInActiveState = isActive || isInputFilled;
+
   return `
-  
-  ${theme.fontStyles.bodySmRegular}
+  ${
+    isInActiveState
+      ? theme.fontStyles.bodySmRegular
+      : theme.fontStyles.bodyMdRegular
+  }
 
   left: 12px;
-  top: 16px;
+  top: ${isInActiveState ? '14px' : '12px'};
   position: absolute;
 
-  transform: ${
-    isActive || isInputFilled ? 'translateY(-45%)' : 'translateY(0)'
-  };
-  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  transform: ${isInActiveState ? 'translateY(-45%)' : 'translateY(0)'};
+  transition: all 150ms ease-out;
   `;
 };
 

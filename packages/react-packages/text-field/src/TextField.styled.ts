@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 import {
   TextFieldVariant,
+  TextFieldScale,
   TextFieldBackgroundFill,
   getThemedBackgroundFill,
 } from './constants';
@@ -14,6 +15,7 @@ export interface InputFieldStyledProps {
 export interface InputWrapperStyledProps {
   isFloatingLabel: boolean;
   variant: TextFieldVariant;
+  scale: TextFieldScale;
   backgroundFill: TextFieldBackgroundFill;
   hasError: boolean;
 }
@@ -41,10 +43,6 @@ export const TextFieldStyled = styled.div<{
         : ''
     }
 
-    i {
-      color: ${theme.palette.content.medium};
-    }
-
     :has(input[disabled]) {
       i, label > span {
         color: ${theme.palette.content.light};
@@ -52,14 +50,22 @@ export const TextFieldStyled = styled.div<{
     }
 
     :has(input[readonly]:not(input[disabled])) {
-      label, label > span {
-        color: ${
-          isFloatingLabel
-            ? theme.palette.content.medium
-            : theme.palette.content.default
-        };
+      i, label, label > span {
+        color: ${theme.palette.content.medium};
+      }
+    }
+
+    &:has(input[readonly]:not(input[disabled])) {
+      &:hover {
+        label {
+          color: ${
+            isFloatingLabel
+              ? theme.palette.content.medium
+              : theme.palette.informative.default
+          };
         }
       }
+    }
   `}
 
   input[type="search"]::-webkit-search-decoration,
@@ -77,8 +83,11 @@ export const InputFieldStyled = styled.input<InputFieldStyledProps>`
     outline: 0;
     width: 100%;
     background-color: inherit;
-    
-
+    color: ${theme.palette.content.default};
+  
+    &:read-only {
+      color: ${theme.palette.content.medium};
+    }
 
     input:-webkit-autofill,
     input:-webkit-autofill:hover,
@@ -91,9 +100,21 @@ export const InputFieldStyled = styled.input<InputFieldStyledProps>`
       color: ${isFloatingLabel ? 'transparent' : theme.palette.content.medium};
     }
 
+    &:not(:focus)::placeholder {
+      color: 'transparent';
+    }
+
+    &:focus::placeholder {
+      color: ${theme.palette.content.medium}; 
+    }
+
+    &:disabled {
+      color: ${theme.palette.content.light};
+    }
+
     padding: ${
       isFloatingLabel && !isSearchType
-        ? `${theme.spacing.xs} 0 ${theme.spacing.spacing_30} 0`
+        ? `${theme.spacing.spacing_50} 0 0 0`
         : ''
     };
   `}
@@ -156,7 +177,7 @@ export const ResetInputIconStyled = styled.div`
 `;
 
 export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
-  ${({ theme, isFloatingLabel, variant, backgroundFill, hasError }) => {
+  ${({ theme, isFloatingLabel, variant, backgroundFill, hasError, scale }) => {
     const borderColor = hasError
       ? theme.palette.error.default
       : theme.palette.border.medium;
@@ -171,7 +192,7 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     align-items: center;
     min-width: 198px;
     width: 100%;
-    height: 54px;
+    height: ${scale === 'compact' ? '44px' : '56px'};
     color: ${theme.palette.content.default};
     gap: ${theme.spacing.spacing_30};
     background-color: ${getThemedBackgroundFill(backgroundFill, theme)};
@@ -205,12 +226,17 @@ export const InputWrapperStyled = styled.div<InputWrapperStyledProps>`
     };
 
     &:has(input[readonly]:not([disabled])) {
-      background-color: ${theme.palette.surface.default};
-      color: ${theme.palette.content.medium};
+      background-color: ${theme.palette.surface.light};
+      border: 1px solid ${theme.palette.surface.default};
+
+      &:focus-within, &:hover { 
+          border: 1px solid  ${theme.palette.informative.default};
+        }
     }
 
     &:has(input[disabled]), &:has(input[disabled]) > * {
       cursor: not-allowed;
+      background-color: ${theme.palette.surface.contrast};
 
       &:hover {
         border-color: ${borderColor};

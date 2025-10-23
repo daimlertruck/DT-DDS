@@ -12,21 +12,21 @@ exports[`<LabelField /> component it renders a disabled label field 1`] = `
   color: #a9a9a9;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 <div>
@@ -56,21 +56,21 @@ exports[`<LabelField /> component it renders a label field as required 1`] = `
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-2 {
@@ -124,14 +124,14 @@ exports[`<LabelField /> component when the LabelField is active it should render
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 14px;
   position: absolute;
   -webkit-transform: translateY(-45%);
   -moz-transform: translateY(-45%);
   -ms-transform: translateY(-45%);
   transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 <div>
@@ -160,21 +160,21 @@ exports[`<LabelField /> component when the LabelField is inactive it should rend
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 <div>

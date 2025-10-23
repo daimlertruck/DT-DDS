@@ -26,17 +26,18 @@ exports[`<Form /> component renders simple form 1`] = `
   position: relative;
 }
 
-.emotion-2 i {
-  color: #3e3e3e;
-}
-
 .emotion-2:has(input[disabled]) i,
 .emotion-2:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-2:has(input[readonly]:not(input[disabled])) i,
 .emotion-2:has(input[readonly]:not(input[disabled])) label,
 .emotion-2:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-2:has(input[readonly]:not(input[disabled])):hover label {
   color: #3e3e3e;
 }
 
@@ -58,21 +59,21 @@ exports[`<Form /> component renders simple form 1`] = `
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-4 {
@@ -89,7 +90,7 @@ exports[`<Form /> component renders simple form 1`] = `
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
+  height: 56px;
   color: #252525;
   gap: 8px;
   background-color: #e6e6e6;
@@ -108,13 +109,19 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-4:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-4:has(input[readonly]:not([disabled])):focus-within,
+.emotion-4:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-4:has(input[disabled]),
 .emotion-4:has(input[disabled])>* {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-4:has(input[disabled]):hover,
@@ -163,7 +170,16 @@ exports[`<Form /> component renders simple form 1`] = `
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 16px 0 0 0;
+}
+
+.emotion-5:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-5:read-only {
+  color: #3e3e3e;
 }
 
 .emotion-5 input:-webkit-autofill,
@@ -190,6 +206,42 @@ exports[`<Form /> component renders simple form 1`] = `
   color: transparent;
 }
 
+.emotion-5:not(:focus)::-webkit-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-5:not(:focus)::-moz-placeholder {
+  color: 'transparent';
+}
+
+.emotion-5:not(:focus):-ms-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-5:not(:focus)::placeholder {
+  color: 'transparent';
+}
+
+.emotion-5:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:disabled {
+  color: #a9a9a9;
+}
+
 <div>
   <form
     class="emotion-0 emotion-1"
@@ -203,17 +255,19 @@ exports[`<Form /> component renders simple form 1`] = `
         class="emotion-3"
         data-testid="label-field"
         for="label-1"
+        style="top: 18px;"
       >
         label 1
       </label>
       <div
         class="emotion-4"
-        data-testid="input-wrapper"
+        data-testid="label-1-text-field-wrapper"
+        scale="standard"
       >
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="input-field"
+          data-testid="label-1-text-field-input"
           id="label-1"
           name="label-1"
           type="text"
@@ -229,17 +283,19 @@ exports[`<Form /> component renders simple form 1`] = `
         class="emotion-3"
         data-testid="label-field"
         for="label-2"
+        style="top: 18px;"
       >
         label 2
       </label>
       <div
         class="emotion-4"
-        data-testid="input-wrapper"
+        data-testid="label-2-text-field-wrapper"
+        scale="standard"
       >
         <input
           class="emotion-5"
           data-error="false"
-          data-testid="input-field"
+          data-testid="label-2-text-field-input"
           id="label-2"
           name="label-2"
           type="text"
@@ -319,17 +375,18 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   position: relative;
 }
 
-.emotion-6 i {
-  color: #3e3e3e;
-}
-
 .emotion-6:has(input[disabled]) i,
 .emotion-6:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-6:has(input[readonly]:not(input[disabled])) i,
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-6:has(input[readonly]:not(input[disabled])):hover label {
   color: #3e3e3e;
 }
 
@@ -351,21 +408,21 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-8 {
@@ -382,7 +439,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
+  height: 56px;
   color: #252525;
   gap: 8px;
   background-color: #e6e6e6;
@@ -401,13 +458,19 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-8:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-8:has(input[readonly]:not([disabled])):focus-within,
+.emotion-8:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-8:has(input[disabled]),
 .emotion-8:has(input[disabled])>* {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-8:has(input[disabled]):hover,
@@ -456,7 +519,16 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 16px 0 0 0;
+}
+
+.emotion-9:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-9:read-only {
+  color: #3e3e3e;
 }
 
 .emotion-9 input:-webkit-autofill,
@@ -483,6 +555,42 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   color: transparent;
 }
 
+.emotion-9:not(:focus)::-webkit-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus)::-moz-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus):-ms-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus)::placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:disabled {
+  color: #a9a9a9;
+}
+
 <div>
   <form
     class="emotion-0 emotion-1"
@@ -503,17 +611,19 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
             class="emotion-7"
             data-testid="label-field"
             for="label-1"
+            style="top: 18px;"
           >
             label 1
           </label>
           <div
             class="emotion-8"
-            data-testid="input-wrapper"
+            data-testid="label-1-text-field-wrapper"
+            scale="standard"
           >
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field-input"
               id="label-1"
               name="label-1"
               type="text"
@@ -593,17 +703,18 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   position: relative;
 }
 
-.emotion-6 i {
-  color: #3e3e3e;
-}
-
 .emotion-6:has(input[disabled]) i,
 .emotion-6:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-6:has(input[readonly]:not(input[disabled])) i,
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-6:has(input[readonly]:not(input[disabled])):hover label {
   color: #3e3e3e;
 }
 
@@ -625,21 +736,21 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-8 {
@@ -656,7 +767,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
+  height: 56px;
   color: #252525;
   gap: 8px;
   background-color: #e6e6e6;
@@ -675,13 +786,19 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-8:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-8:has(input[readonly]:not([disabled])):focus-within,
+.emotion-8:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-8:has(input[disabled]),
 .emotion-8:has(input[disabled])>* {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-8:has(input[disabled]):hover,
@@ -730,7 +847,16 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 16px 0 0 0;
+}
+
+.emotion-9:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-9:read-only {
+  color: #3e3e3e;
 }
 
 .emotion-9 input:-webkit-autofill,
@@ -757,6 +883,42 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   color: transparent;
 }
 
+.emotion-9:not(:focus)::-webkit-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus)::-moz-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus):-ms-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:not(:focus)::placeholder {
+  color: 'transparent';
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-9:disabled {
+  color: #a9a9a9;
+}
+
 <div>
   <form
     class="emotion-0 emotion-1"
@@ -776,17 +938,19 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             class="emotion-7"
             data-testid="label-field"
             for="label-1"
+            style="top: 18px;"
           >
             label 1
           </label>
           <div
             class="emotion-8"
-            data-testid="input-wrapper"
+            data-testid="label-1-text-field-wrapper"
+            scale="standard"
           >
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field-input"
               id="label-1"
               name="label-1"
               type="text"
@@ -802,17 +966,19 @@ exports[`<Form /> component with Form.Group should render a form with display fl
             class="emotion-7"
             data-testid="label-field"
             for="label-2"
+            style="top: 18px;"
           >
             label 2
           </label>
           <div
             class="emotion-8"
-            data-testid="input-wrapper"
+            data-testid="label-2-text-field-wrapper"
+            scale="standard"
           >
             <input
               class="emotion-9"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-2-text-field-input"
               id="label-2"
               name="label-2"
               type="text"
@@ -919,17 +1085,18 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   position: relative;
 }
 
-.emotion-9 i {
-  color: #3e3e3e;
-}
-
 .emotion-9:has(input[disabled]) i,
 .emotion-9:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-9:has(input[readonly]:not(input[disabled])) i,
 .emotion-9:has(input[readonly]:not(input[disabled])) label,
 .emotion-9:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-9:has(input[readonly]:not(input[disabled])):hover label {
   color: #3e3e3e;
 }
 
@@ -951,21 +1118,21 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
+  top: 12px;
   position: absolute;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-11 {
@@ -982,7 +1149,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
+  height: 56px;
   color: #252525;
   gap: 8px;
   background-color: #e6e6e6;
@@ -1001,13 +1168,19 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-11:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-11:has(input[readonly]:not([disabled])):focus-within,
+.emotion-11:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-11:has(input[disabled]),
 .emotion-11:has(input[disabled])>* {
   cursor: not-allowed;
+  background-color: #ffffff;
 }
 
 .emotion-11:has(input[disabled]):hover,
@@ -1056,7 +1229,16 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 16px 0 0 0;
+}
+
+.emotion-12:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-12:read-only {
+  color: #3e3e3e;
 }
 
 .emotion-12 input:-webkit-autofill,
@@ -1081,6 +1263,42 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 
 .emotion-12::placeholder {
   color: transparent;
+}
+
+.emotion-12:not(:focus)::-webkit-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-12:not(:focus)::-moz-placeholder {
+  color: 'transparent';
+}
+
+.emotion-12:not(:focus):-ms-input-placeholder {
+  color: 'transparent';
+}
+
+.emotion-12:not(:focus)::placeholder {
+  color: 'transparent';
+}
+
+.emotion-12:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-12:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-12:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-12:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-12:disabled {
+  color: #a9a9a9;
 }
 
 <div>
@@ -1114,17 +1332,19 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             class="emotion-10"
             data-testid="label-field"
             for="label-1"
+            style="top: 18px;"
           >
             label 1
           </label>
           <div
             class="emotion-11"
-            data-testid="input-wrapper"
+            data-testid="label-1-text-field-wrapper"
+            scale="standard"
           >
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-1-text-field-input"
               id="label-1"
               name="label-1"
               type="text"
@@ -1140,17 +1360,19 @@ exports[`<Form /> component with Form.Group should render a form with group titl
             class="emotion-10"
             data-testid="label-field"
             for="label-2"
+            style="top: 18px;"
           >
             label 2
           </label>
           <div
             class="emotion-11"
-            data-testid="input-wrapper"
+            data-testid="label-2-text-field-wrapper"
+            scale="standard"
           >
             <input
               class="emotion-12"
               data-error="false"
-              data-testid="input-field"
+              data-testid="label-2-text-field-input"
               id="label-2"
               name="label-2"
               type="text"

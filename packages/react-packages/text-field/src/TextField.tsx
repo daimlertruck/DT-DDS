@@ -13,7 +13,11 @@ import {
   useState,
 } from 'react';
 
-import { TextFieldVariant, TextFieldBackgroundFill } from './constants';
+import {
+  TextFieldVariant,
+  TextFieldBackgroundFill,
+  TextFieldScale,
+} from './constants';
 import {
   InputExtraPrefixStyled,
   InputExtraSuffixStyled,
@@ -43,6 +47,7 @@ export interface TextFieldProps
   inputRef?: RefObject<HTMLInputElement>;
   message?: string;
   variant?: TextFieldVariant;
+  scale?: TextFieldScale;
   backgroundFill?: TextFieldBackgroundFill;
   onResetInput?: () => void;
 }
@@ -66,6 +71,7 @@ export const TextField = ({
   message: messageProp = '',
   type = 'text',
   variant = 'outlined',
+  scale = 'standard',
   backgroundFill = 'default',
   disabled = false,
   onChange = () => null,
@@ -176,6 +182,7 @@ export const TextField = ({
           isDisabled={disabled}
           isFloating={isFloatingLabel}
           isRequired={required}
+          style={{ top: scale === 'compact' ? 12 : 18 }}
         >
           {label}
         </LabelField>
@@ -183,9 +190,10 @@ export const TextField = ({
 
       <InputWrapperStyled
         backgroundFill={backgroundFill}
-        data-testid='input-wrapper'
+        data-testid={`${testId}-wrapper`}
         hasError={showError}
         isFloatingLabel={isFloatingLabel}
+        scale={scale}
         variant={variant}
       >
         {extraPrefix?.component ? (
@@ -203,7 +211,7 @@ export const TextField = ({
 
         <InputFieldStyled
           data-error={showError}
-          data-testid='input-field'
+          data-testid={`${testId}-input`}
           disabled={disabled}
           id={textFieldId}
           isFloatingLabel={isFloatingLabel}
