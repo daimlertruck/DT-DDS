@@ -1,5 +1,11 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.60
+
+### Minor Changes
+
+- feat: persist avatar active state
+
 ## 1.0.0-beta.59
 
 ### Patch Changes
