@@ -5,10 +5,11 @@ import { AvatarType, AvatarSize } from './constants';
 export interface AvatarStyledProps {
   type: AvatarType;
   size: AvatarSize;
+  isActive?: boolean;
 }
 
 export const AvatarStyled = styled.div<AvatarStyledProps>`
-  ${({ theme, type, size }) => {
+  ${({ theme, type, size, isActive }) => {
     let styles = `
       & > * {
         width: 100%;
@@ -62,7 +63,11 @@ export const AvatarStyled = styled.div<AvatarStyledProps>`
           color: ${theme.palette.content.contrast};
           
           & > * {
-            background-color: ${theme.palette.primary.default};
+            background-color: ${
+              isActive
+                ? theme.palette.primary.dark
+                : theme.palette.primary.default
+            };
 
             &:hover {
               background-color: ${theme.palette.primary.dark};

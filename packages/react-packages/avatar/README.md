@@ -33,6 +33,7 @@ This component can contain upto two simple characters by passing a string in pro
 | `size`       | `enum<AvatarSize>` | medium  | Sets the Avatar size given the available options                   |
 | `imageSrc`   | `string`           | -       | Optional profile image path (will only work with "Profile" type)   |
 | `dataTestId` | `string`           | avatar  | Avatar test identifier                                             |
+| `isActive`   | `Boolean`          | false   | Persist the Avatar active state                                    |
 
 ## Stack
 

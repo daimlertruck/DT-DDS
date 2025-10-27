@@ -170,4 +170,31 @@ describe('<Avatar /> component', () => {
     const tooltipContainer = screen.queryByTestId('tooltip-container');
     expect(tooltipContainer).not.toBeInTheDocument();
   });
+
+  it.each`
+    type                  | isActive
+    ${AvatarType.Primary} | ${true}
+    ${AvatarType.Primary} | ${false}
+  `(
+    'should render avatar with type $type when isActive is $isActive',
+    ({ type, isActive }: { type: AvatarType; isActive: boolean }) => {
+      const { getByTestId } = render(
+        <ProvidedAvatar
+          isActive={isActive}
+          size={AvatarSize.Medium}
+          title='User Name'
+          type={type}
+        />
+      );
+
+      const avatar = getByTestId('avatar');
+      const innerElement = avatar.firstChild as HTMLElement;
+
+      const expectedBackgroundColor = isActive ? '#3e3e3e' : '#000000';
+
+      expect(innerElement).toHaveStyle(
+        `background-color: ${expectedBackgroundColor}`
+      );
+    }
+  );
 });
