@@ -13,6 +13,7 @@ export interface AvatarProps extends AvatarStyledProps {
   dataTestId?: string;
   customInitials?: string;
   hasTooltip?: boolean;
+  isActive?: boolean;
 }
 
 const Avatar = ({
@@ -23,6 +24,7 @@ const Avatar = ({
   dataTestId,
   customInitials,
   hasTooltip = true,
+  isActive = false,
 }: AvatarProps) => {
   const [showThumbnail, setShowThumbnail] = useState(false);
 
@@ -43,6 +45,7 @@ const Avatar = ({
         data-testid={dataTestId ?? 'avatar'}
         size={size}
         type={type}
+        isActive={isActive}
       >
         {type === AvatarType.Profile ? (
           renderProfileImage()

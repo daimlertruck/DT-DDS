@@ -21,6 +21,9 @@ const meta: Meta<typeof Avatar> = {
     hasTooltip: {
       control: { type: 'boolean' },
     },
+    isActive: {
+      control: { type: 'boolean' },
+    },
   },
 };
 
@@ -33,6 +36,7 @@ export const Default: StoryObj<typeof Avatar> = {
     type: AvatarType.Primary,
     size: AvatarSize.Medium,
     hasTooltip: true,
+    isActive: false,
   },
 };
 
