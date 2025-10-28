@@ -108,8 +108,7 @@ export const TextArea = ({
   const testId =
     dataTestId ?? `${label.replaceAll(' ', '-').toLocaleLowerCase()}-textarea`;
 
-  const messageColor =
-    disabled || readOnly ? 'content.light' : 'content.medium';
+  const messageColor = disabled ? 'content.light' : 'content.medium';
   const showError = hasError || hasRequiredError;
   const message = messageProp;
   const isFloatingLabel = labelVariant === 'floating';
@@ -121,8 +120,8 @@ export const TextArea = ({
           hasError={showError}
           htmlFor={testId}
           icon={labelIcon}
-          isActive={isActive && !readOnly ? true : false}
-          isDisabled={disabled || readOnly}
+          isActive={isActive}
+          isDisabled={disabled}
           isFloating={isFloatingLabel}
           isInputFilled={!!chars}
           isRequired={required}
@@ -151,7 +150,7 @@ export const TextArea = ({
         onBlur={onBlur}
         onChange={handleChange}
         onFocus={onFocus}
-        {...((!isFloatingLabel || !hasLabel) && {
+        {...((!isFloatingLabel || isActive) && {
           placeholder: placeholder,
         })}
       />

@@ -48,17 +48,50 @@ exports[`<TextArea /> component should render default text area 1`] = `
   border: 1px solid #c5c5c5;
 }
 
+.emotion-2::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2::placeholder {
+  color: #3e3e3e;
+}
+
 .emotion-2:focus-within,
 .emotion-2:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-2:-moz-read-only {
-  color: #a9a9a9;
+.emotion-2:-moz-read-only:not(:disabled) {
+  border-color: #e6e6e6;
+  color: #3e3e3e;
+  background-color: #f2f2f2;
 }
 
-.emotion-2:read-only {
-  color: #a9a9a9;
+.emotion-2:read-only:not(:disabled) {
+  border-color: #e6e6e6;
+  color: #3e3e3e;
+  background-color: #f2f2f2;
+}
+
+.emotion-2:-moz-read-only:not(:disabled):focus-within {
+  border: 1px solid #00677f;
+}
+
+.emotion-2:-moz-read-only:not(:disabled):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-2:read-only:not(:disabled):focus-within,
+.emotion-2:read-only:not(:disabled):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-2:disabled {
@@ -159,17 +192,50 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
   border: 1px solid #c5c5c5;
 }
 
+.emotion-2::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-2::placeholder {
+  color: #3e3e3e;
+}
+
 .emotion-2:focus-within,
 .emotion-2:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-2:-moz-read-only {
-  color: #a9a9a9;
+.emotion-2:-moz-read-only:not(:disabled) {
+  border-color: #e6e6e6;
+  color: #3e3e3e;
+  background-color: #f2f2f2;
 }
 
-.emotion-2:read-only {
-  color: #a9a9a9;
+.emotion-2:read-only:not(:disabled) {
+  border-color: #e6e6e6;
+  color: #3e3e3e;
+  background-color: #f2f2f2;
+}
+
+.emotion-2:-moz-read-only:not(:disabled):focus-within {
+  border: 1px solid #00677f;
+}
+
+.emotion-2:-moz-read-only:not(:disabled):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-2:read-only:not(:disabled):focus-within,
+.emotion-2:read-only:not(:disabled):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-2:disabled {
