@@ -3,6 +3,7 @@ import { Typography } from '@dt-dds/react-typography';
 import { theme } from '@dt-dds/themes';
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
+import { FieldScale } from './constants';
 import { LabelFieldStyled } from './LabelField.styled';
 
 export interface LabelFieldProps
@@ -14,7 +15,9 @@ export interface LabelFieldProps
   isRequired?: boolean;
   isFloating?: boolean;
   isInputFilled?: boolean;
+  isCentered?: boolean;
   icon?: ReactNode;
+  scale?: FieldScale;
 }
 
 export const LabelField = ({
@@ -27,6 +30,8 @@ export const LabelField = ({
   isFloating = true,
   isInputFilled = false,
   htmlFor,
+  isCentered = false,
+  scale = 'standard',
   icon,
   ...rest
 }: LabelFieldProps) => {
@@ -65,8 +70,10 @@ export const LabelField = ({
       hasError={hasError}
       htmlFor={htmlFor}
       isActive={isActive}
+      isCentered={isCentered}
       isFloating={isFloating}
       isInputFilled={isInputFilled}
+      scale={scale}
       {...rest}
     >
       {labelContent}

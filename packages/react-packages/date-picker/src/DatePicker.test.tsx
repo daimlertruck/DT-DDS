@@ -79,7 +79,7 @@ describe('<DatePicker /> component', () => {
 
       fireEvent.blur(input);
 
-      expect(label).toHaveStyle('transform: translateY(-45%)');
+      expect(label).toHaveStyle('transform: translateY(-50%)');
     });
 
     it('should render error message when date is below min', () => {

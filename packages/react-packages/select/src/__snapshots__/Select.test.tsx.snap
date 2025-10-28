@@ -85,21 +85,21 @@ exports[`<Select /> component should render Select 1`] = `
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-9 {
@@ -237,6 +237,7 @@ exports[`<Select /> component should render Select 1`] = `
             data-testid="label-field"
             for="downshift-:r0:-toggle-button"
             id="downshift-:r0:-label"
+            scale="standard"
           >
             select
           </label>
@@ -427,21 +428,21 @@ exports[`<Select /> component should render Select as multi select 1`] = `
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-9 {
@@ -513,6 +514,7 @@ exports[`<Select /> component should render Select as multi select 1`] = `
             data-testid="label-field"
             for="downshift-:r4:-toggle-button"
             id="downshift-:r4:-label"
+            scale="standard"
           >
             select
           </label>

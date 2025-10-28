@@ -1,12 +1,24 @@
 import { CustomTheme as Theme } from '@dt-dds/themes';
 import styled from '@emotion/styled';
 
+import { FieldScale } from './constants';
+
 export interface LabelFieldProps {
   isActive: boolean;
   disabled: boolean;
   hasError: boolean;
   isFloating: boolean;
   isInputFilled: boolean;
+  isCentered?: boolean;
+  scale?: FieldScale;
+}
+
+interface labelColorStateProps {
+  isDisabled: boolean;
+  hasError: boolean;
+  isFloating: boolean;
+  isActive: boolean;
+  theme: Theme;
 }
 
 const labelColorState = ({
@@ -15,13 +27,7 @@ const labelColorState = ({
   isFloating,
   isActive,
   theme,
-}: {
-  isDisabled: boolean;
-  hasError: boolean;
-  isFloating: boolean;
-  isActive: boolean;
-  theme: Theme;
-}) => {
+}: labelColorStateProps) => {
   if (isDisabled) {
     return theme.palette.content.light;
   }
@@ -42,25 +48,39 @@ const labelColorState = ({
 const floatingLabel = (
   isActive: boolean,
   isInputFilled: boolean,
+  isCentered: boolean,
+  scale: FieldScale,
   theme: Theme
 ) => {
+  const activeTop =
+    scale === 'compact' ? theme.spacing.spacing_30 : theme.spacing.spacing_40;
+
   return `
-  
-  ${theme.fontStyles.bodySmRegular}
+    ${
+      isActive || isInputFilled
+        ? theme.fontStyles.bodySmRegular
+        : theme.fontStyles.bodyMdRegular
+    }
 
   left: 12px;
-  top: 16px;
   position: absolute;
-
-  transform: ${
-    isActive || isInputFilled ? 'translateY(-45%)' : 'translateY(0)'
-  };
-  transition: transform 150ms ease-out, font-size 150ms ease-out;
+  top: ${!isActive && isCentered ? '50%' : activeTop};
+  transform: ${!isActive && isCentered ? 'translateY(-50%)' : 'translateY(0)'};
+  transition: all 150ms ease-out;
   `;
 };
 
 export const LabelFieldStyled = styled.label<LabelFieldProps>`
-  ${({ theme, isActive, isFloating, disabled, hasError, isInputFilled }) => `
+  ${({
+    theme,
+    isActive,
+    isFloating,
+    disabled,
+    hasError,
+    isInputFilled,
+    isCentered = false,
+    scale = 'standard',
+  }) => `
    ${theme.fontStyles.bodyMdBold};
 
     color: ${labelColorState({
@@ -72,6 +92,9 @@ export const LabelFieldStyled = styled.label<LabelFieldProps>`
     })};
     cursor: inherit;
 
-    ${isFloating && floatingLabel(isActive, isInputFilled, theme)}
+    ${
+      isFloating &&
+      floatingLabel(isActive, isInputFilled, isCentered, scale, theme)
+    }
   `};
 `;

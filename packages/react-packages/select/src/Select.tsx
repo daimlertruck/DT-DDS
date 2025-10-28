@@ -265,6 +265,7 @@ const Select = ({
                 {...getLabelProps()}
                 hasError={hasError}
                 isActive={hasSelectedItems}
+                isCentered
                 isDisabled={disabled}
                 isRequired={isRequired}
               >

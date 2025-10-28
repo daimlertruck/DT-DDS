@@ -108,6 +108,7 @@ exports[`<TextArea /> component should render default text area 1`] = `
       class="emotion-1"
       data-testid="label-field"
       for="my-awesome-text-area-textarea"
+      scale="standard"
       style="z-index: 1;"
     >
       My awesome text area
@@ -162,14 +163,14 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(-45%);
-  -moz-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 12px;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-2 {
@@ -186,7 +187,7 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
   outline: none;
   color: #252525;
   resize: none;
-  padding: 24px 12px 12px 12px;
+  padding: 30px 12px 12px 12px;
   border: 0;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
@@ -252,6 +253,7 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
       class="emotion-1"
       data-testid="label-field"
       for="my-awesome-text-area-textarea"
+      scale="standard"
       style="z-index: 1;"
     >
       My awesome text area

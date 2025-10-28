@@ -38,7 +38,7 @@ export const TextAreaStyled = styled.textarea<TextAreaStyledProps>`
     outline: none;
     color: ${theme.palette.content.default};
     resize: ${enableResize ? 'vertical' : 'none'};
-    padding: ${isFloatingLabel && hasLabel ? '24px 12px 12px 12px' : '12px'};
+    padding: ${isFloatingLabel && hasLabel ? '30px 12px 12px 12px' : '12px'};
     border: 0;
 
     ${!isFloatingLabel && hasLabel && 'margin-top: 8px'};

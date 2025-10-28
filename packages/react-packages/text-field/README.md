@@ -33,6 +33,7 @@ export const App = () => {
 | `onChange`        | `function`                   | -          | The triggered function when the input change.                                                         |
 | `onResetInput`    | `function`                   | -          | The triggered function when clicked on the cross icon, when type is search                            |
 | `variant`         | `[outlined, bottomLine]`     | `outlined` | Styles the input with outlined or with bottom line                                                    |
+| `scale`           | `[compact, standard]`        | `standard` | Sets the spacing and size of the text field                                                               |
 | `backgroundFill`  | `[default, contrast, light]` | `default`  | Styles the input with background color                                                                |
 | `isFloatingLabel` | `boolean`                    | `false`    | Sets the label floating or traditional on top of the input                                            |
 | `extraPrefix`     | `ExtraComponent`             | -          | Component to be rendered on the left side inside the input field                                      |
