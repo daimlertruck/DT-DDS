@@ -43,6 +43,10 @@ export const TextAreaStyled = styled.textarea<TextAreaStyledProps>`
 
     ${!isFloatingLabel && hasLabel && 'margin-top: 8px'};
 
+    ::placeholder {
+      color: ${theme.palette.content.medium};
+    }
+
     ${
       variant === 'outlined'
         ? `border-radius: ${theme.shape.formField};
@@ -71,8 +75,19 @@ export const TextAreaStyled = styled.textarea<TextAreaStyledProps>`
           `
     };
 
-    &:read-only {
-      color: ${theme.palette.content.light};
+    &:read-only:not(:disabled) {
+      border-color: ${theme.palette.border.default};
+      color: ${theme.palette.content.medium};
+      background-color: ${theme.palette.surface.light};
+
+      &:focus-within,
+      &:hover { 
+       ${
+         variant === 'outlined'
+           ? `border: 1px solid ${borderColor};`
+           : `border-bottom: 1px solid ${borderColor}`
+       }
+      }
     }
 
     &:disabled {
