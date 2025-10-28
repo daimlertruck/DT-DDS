@@ -1,7 +1,7 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
-import { LabelField } from '@dt-dds/react-label-field';
+import { LabelField, FieldScale } from '@dt-dds/react-label-field';
 import { Typography } from '@dt-dds/react-typography';
 import {
   ChangeEvent,
@@ -15,11 +15,11 @@ import {
 
 import { TextFieldVariant, TextFieldBackgroundFill } from './constants';
 import {
+  InputContainerStyled,
   InputExtraPrefixStyled,
   InputExtraSuffixStyled,
   InputFieldStyled,
   InputWrapperStyled,
-  ResetInputIconStyled,
   TextFieldMessageStyled,
   TextFieldStyled,
 } from './TextField.styled';
@@ -43,6 +43,7 @@ export interface TextFieldProps
   inputRef?: RefObject<HTMLInputElement>;
   message?: string;
   variant?: TextFieldVariant;
+  scale?: FieldScale;
   backgroundFill?: TextFieldBackgroundFill;
   onResetInput?: () => void;
 }
@@ -66,6 +67,7 @@ export const TextField = ({
   message: messageProp = '',
   type = 'text',
   variant = 'outlined',
+  scale = 'standard',
   backgroundFill = 'default',
   disabled = false,
   onChange = () => null,
@@ -109,13 +111,11 @@ export const TextField = ({
   };
 
   const onBlur = (event: FocusEvent<HTMLInputElement>) => {
-    const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
-    if (isEmptyOrOnlySpaces) {
-      setActiveInput(false);
+    setActiveInput(false);
 
-      if (required && requiredMessage) {
-        setHasRequiredError(true);
-      }
+    const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
+    if (isEmptyOrOnlySpaces && required) {
+      setHasRequiredError(true);
     }
 
     if (rest.onBlur) {
@@ -129,9 +129,6 @@ export const TextField = ({
 
     onResetInput();
   };
-
-  const handleResetIconEnter = (event: React.KeyboardEvent<HTMLInputElement>) =>
-    event.code === 'Enter' && handleResetInput();
 
   const handleExtraPreffixEnter = (
     event: React.KeyboardEvent<HTMLInputElement>
@@ -167,82 +164,83 @@ export const TextField = ({
       isFloatingLabel={isFloatingLabel}
       style={style}
     >
-      {!isActiveInput || !isFloatingLabel || !isSearchType ? (
+      <InputContainerStyled isFloatingLabel={isFloatingLabel}>
         <LabelField
           hasError={showError}
           htmlFor={textFieldId}
           icon={labelIcon}
-          isActive={isActiveInput || type === 'date'}
+          isActive={activeInput}
+          isCentered={!isActiveInput && isFloatingLabel}
           isDisabled={disabled}
           isFloating={isFloatingLabel}
+          isInputFilled={!!inputValue}
           isRequired={required}
+          scale={scale}
         >
           {label}
         </LabelField>
-      ) : null}
 
-      <InputWrapperStyled
-        backgroundFill={backgroundFill}
-        data-testid='input-wrapper'
-        hasError={showError}
-        isFloatingLabel={isFloatingLabel}
-        variant={variant}
-      >
-        {extraPrefix?.component ? (
-          <InputExtraPrefixStyled
-            data-testid='extra-preffix'
-            {...(!!extraPreffixOnClick && {
-              tabIndex: 0,
-              onClick: () => extraPreffixOnClick(inputValue),
-              onKeyDown: handleExtraPreffixEnter,
-            })}
-          >
-            {extraPrefix.component}
-          </InputExtraPrefixStyled>
-        ) : null}
-
-        <InputFieldStyled
-          data-error={showError}
-          data-testid='input-field'
-          disabled={disabled}
-          id={textFieldId}
+        <InputWrapperStyled
+          backgroundFill={backgroundFill}
+          data-testid={`${testId}-wrapper`}
+          hasError={showError}
           isFloatingLabel={isFloatingLabel}
-          isSearchType={isSearchType}
-          name={name ?? textFieldId}
-          ref={inputRef}
-          type={type}
-          value={inputValue}
-          {...rest}
-          onBlur={onBlur}
-          onChange={handleChange}
-          onFocus={onFocus}
-        />
+          variant={variant}
+        >
+          {extraPrefix?.component ? (
+            <InputExtraPrefixStyled
+              data-testid='extra-preffix'
+              {...(!!extraPreffixOnClick && {
+                tabIndex: 0,
+                onClick: () => extraPreffixOnClick(inputValue),
+                onKeyDown: handleExtraPreffixEnter,
+              })}
+            >
+              {extraPrefix.component}
+            </InputExtraPrefixStyled>
+          ) : null}
 
-        {isSearchType && !!inputValue ? (
-          <ResetInputIconStyled
-            data-testid='reset-icon'
-            onKeyDown={handleResetIconEnter}
-            tabIndex={0}
-          >
-            <IconButton onClick={handleResetInput}>
-              <Icon code='close_small' />
+          <InputFieldStyled
+            data-error={showError}
+            data-testid={`${testId}-input`}
+            disabled={disabled}
+            id={textFieldId}
+            isFloatingLabel={isFloatingLabel}
+            name={name ?? textFieldId}
+            ref={inputRef}
+            scale={scale}
+            type={type}
+            value={inputValue}
+            {...rest}
+            onBlur={onBlur}
+            onChange={handleChange}
+            onFocus={onFocus}
+          />
+
+          {isSearchType && !!inputValue ? (
+            <IconButton
+              dataTestId='reset-icon'
+              onClick={handleResetInput}
+              style={{ marginRight: 12 }}
+            >
+              <Icon code='close' />
             </IconButton>
-          </ResetInputIconStyled>
-        ) : null}
+          ) : null}
 
-        {extraSuffix?.component ? (
-          <InputExtraSuffixStyled
-            data-testid='extra-suffix'
-            {...(!!extraSuffixOnClick && {
-              tabIndex: 0,
-              onClick: () => extraSuffixOnClick(inputValue),
-              onKeyDown: handleExtraSuffixEnter,
-            })}
-          >
-            {extraSuffix.component}
-          </InputExtraSuffixStyled>
-        ) : null}
-      </InputWrapperStyled>
+          {extraSuffix?.component ? (
+            <InputExtraSuffixStyled
+              data-testid='extra-suffix'
+              {...(!!extraSuffixOnClick && {
+                tabIndex: 0,
+                onClick: () => extraSuffixOnClick(inputValue),
+                onKeyDown: handleExtraSuffixEnter,
+              })}
+            >
+              {extraSuffix.component}
+            </InputExtraSuffixStyled>
+          ) : null}
+        </InputWrapperStyled>
+      </InputContainerStyled>
 
       {message ? (
         <TextFieldMessageStyled>

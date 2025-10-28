@@ -47,13 +47,18 @@ describe('<TextField /> component', () => {
       />
     );
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute('id', 'my-id');
+    expect(
+      screen.getByTestId('my-input-with-prefilled-value-text-field-input')
+    ).toHaveAttribute('id', 'my-id');
   });
 
   it('renders input with a default id', () => {
     render(<ProvidedTextField initialValue='Initial Value' label='My Input' />);
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute('id', 'my-input');
+    expect(screen.getByTestId('my-input-text-field-input')).toHaveAttribute(
+      'id',
+      'my-input'
+    );
   });
 
   it('fills input correctly with new value on change Event', () => {
@@ -99,7 +104,7 @@ describe('<TextField /> component', () => {
   it('renders hidden text input', () => {
     render(<ProvidedTextField label='Hidden text' type='password' />);
 
-    expect(screen.getByTestId('input-field')).toHaveAttribute(
+    expect(screen.getByTestId('hidden-text-text-field-input')).toHaveAttribute(
       'type',
       'password'
     );
@@ -124,12 +129,12 @@ describe('<TextField /> component', () => {
 
     const input = screen.getByRole('textbox');
     const label = screen.getByTestId('label-field');
-    const inputWrapper = screen.getByTestId('input-wrapper');
+    const inputWrapper = screen.getByTestId('some-text-text-field-wrapper');
 
     fireEvent.focus(input);
 
     expect(label).toHaveStyle('font-size: 12px');
-    expect(label).toHaveStyle('transform: translateY(-45%)');
+    expect(label).toHaveStyle('transform: translateY(0)');
     expect(input).toHaveStyle('outline: 0;');
     expect(inputWrapper).toHaveStyle('border-width: 1px;');
     expect(inputWrapper).toHaveStyle('border-style: solid');
@@ -138,7 +143,7 @@ describe('<TextField /> component', () => {
   it('should have hover style', () => {
     render(<ProvidedTextField label='Some text' />);
 
-    const inputWrapper = screen.getByTestId('input-wrapper');
+    const inputWrapper = screen.getByTestId('some-text-text-field-wrapper');
 
     fireEvent.mouseOver(inputWrapper, { currentTarget: { value: '' } });
 
@@ -168,13 +173,13 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField initialValue='Value' label='Some text' required />
       );
-      const input = screen.getByTestId('input-field');
+      const input = screen.getByTestId('some-text-text-field-input');
       const label = screen.getByTestId('label-field');
 
       fireEvent.blur(input, { currentTarget: { value: 'Some value' } });
 
       expect(label).toHaveStyle('font-size: 12px');
-      expect(label).toHaveStyle('transform: translateY(-45%)');
+      expect(label).toHaveStyle('transform: translateY(0)');
     });
   });
 
@@ -260,7 +265,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field-input');
 
     fireEvent.change(input, {
       target: { value: 'search' },
@@ -285,7 +290,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field-input');
 
     fireEvent.change(input, {
       target: { value: 'search' },
@@ -311,13 +316,13 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const input = screen.getByTestId('input-field');
+    const input = screen.getByTestId('search-for-anything-text-field-input');
 
     fireEvent.change(input, {
       target: { value: 'search' },
     });
 
-    fireEvent.click(screen.getByText('close_small'));
+    fireEvent.click(screen.getByText('close'));
 
     expect(handleClick).toHaveBeenCalled();
   });
@@ -364,7 +369,7 @@ describe('<TextField /> component', () => {
 
     fireEvent.focus(input);
 
-    expect(label).not.toHaveStyle('transform: translateY(-45%)');
+    expect(label).not.toHaveStyle('transform: translateY(0)');
   });
 
   test('should handle Enter key on extra prefix when onClick is provided', () => {
@@ -411,7 +416,7 @@ describe('<TextField /> component', () => {
     expect(handleClick).toHaveBeenCalledWith('test');
   });
 
-  test('should handle Enter key on reset icon', () => {
+  test('should clear input when reset icon is clicked', () => {
     render(
       <ProvidedTextField
         initialValue='test value'
@@ -421,10 +426,9 @@ describe('<TextField /> component', () => {
     );
 
     const input = screen.getByRole('searchbox');
+    const resetButton = screen.getByRole('button', { name: /close/i });
 
-    const resetIcon = screen.getByTestId('reset-icon');
-
-    fireEvent.keyDown(resetIcon, { code: 'Enter' });
+    fireEvent.click(resetButton);
 
     expect(input).toHaveValue('');
   });
@@ -556,7 +560,7 @@ describe('<TextField /> component', () => {
 
       fireEvent.focus(input);
 
-      expect(label).toHaveStyle('transform: translateY(-45%)');
+      expect(label).toHaveStyle('transform: translateY(0)');
       expect(screen.getByTestId('icon')).toBeInTheDocument();
     });
 

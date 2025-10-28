@@ -14,21 +14,18 @@ exports[`<TextField /> component renders disabled input 1`] = `
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -36,6 +33,18 @@ exports[`<TextField /> component renders disabled input 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -46,24 +55,24 @@ exports[`<TextField /> component renders disabled input 1`] = `
   color: #a9a9a9;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,69 +86,71 @@ exports[`<TextField /> component renders disabled input 1`] = `
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -151,31 +162,93 @@ exports[`<TextField /> component renders disabled input 1`] = `
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
+}
+
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 <div>
@@ -183,28 +256,34 @@ exports[`<TextField /> component renders disabled input 1`] = `
     class="emotion-0 emotion-1"
     data-testid="my-disabled-input-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      disabled=""
-      for="my-disabled-input"
-    >
-      My disabled input
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
-        class="emotion-5 emotion-6"
-        data-error="false"
-        data-testid="input-field"
+      <label
+        class="emotion-4"
+        data-testid="label-field"
         disabled=""
-        id="my-disabled-input"
-        name="my-disabled-input"
-        type="text"
-        value=""
-      />
+        for="my-disabled-input"
+        scale="standard"
+      >
+        My disabled input
+      </label>
+      <div
+        class="emotion-5 emotion-6"
+        data-testid="my-disabled-input-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="false"
+          data-testid="my-disabled-input-text-field-input"
+          disabled=""
+          id="my-disabled-input"
+          name="my-disabled-input"
+          scale="standard"
+          type="text"
+          value=""
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -229,21 +308,18 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   padding-left: 48px;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -251,6 +327,18 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -261,24 +349,24 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -292,77 +380,80 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   cursor: default;
+  padding-left: 12px;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -381,7 +472,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   font-feature-settings: 'liga';
 }
 
-.emotion-8 {
+.emotion-10 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -393,39 +484,102 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-8 input:-webkit-autofill,
-.emotion-8 input:-webkit-autofill:hover,
-.emotion-8 input:-webkit-autofill:focus,
-.emotion-8 input:-webkit-autofill:active {
+.emotion-10:focus {
+  outline: none;
+}
+
+.emotion-10:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-10:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-10 input:-webkit-autofill,
+.emotion-10 input:-webkit-autofill:hover,
+.emotion-10 input:-webkit-autofill:focus,
+.emotion-10 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-10[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-10[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-10[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-8::placeholder {
+.emotion-10[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-10 {
+.emotion-10[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-10[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-10[readonly]::placeholder,
+.emotion-10[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-10::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-10::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-10:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-10::placeholder {
+  color: transparent;
+}
+
+.emotion-10:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-10:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-10:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-10:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-10:disabled {
+  color: #a9a9a9;
+}
+
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   cursor: default;
+  padding-right: 12px;
 }
 
 <div>
@@ -433,49 +587,55 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
     class="emotion-0 emotion-1"
     data-testid="my-input-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input"
-    >
-      My input
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input"
+        scale="standard"
+      >
+        My input
+      </label>
       <div
         class="emotion-5 emotion-6"
-        data-testid="extra-preffix"
+        data-testid="my-input-text-field-wrapper"
       >
-        <i
-          class="emotion-7"
-          color="#252525"
-          data-testid="icon"
+        <div
+          class="emotion-7 emotion-8"
+          data-testid="extra-preffix"
         >
-          home_work
-        </i>
-      </div>
-      <input
-        class="emotion-8 emotion-9"
-        data-error="false"
-        data-testid="input-field"
-        id="my-input"
-        name="my-input"
-        type="text"
-        value=""
-      />
-      <div
-        class="emotion-10 emotion-11"
-        data-testid="extra-suffix"
-      >
-        <i
-          class="emotion-7"
-          color="#252525"
-          data-testid="icon"
+          <i
+            class="emotion-9"
+            color="#252525"
+            data-testid="icon"
+          >
+            home_work
+          </i>
+        </div>
+        <input
+          class="emotion-10 emotion-11"
+          data-error="false"
+          data-testid="my-input-text-field-input"
+          id="my-input"
+          name="my-input"
+          scale="standard"
+          type="text"
+          value=""
+        />
+        <div
+          class="emotion-12 emotion-13"
+          data-testid="extra-suffix"
         >
-          home_work
-        </i>
+          <i
+            class="emotion-9"
+            color="#252525"
+            data-testid="icon"
+          >
+            home_work
+          </i>
+        </div>
       </div>
     </div>
   </div>
@@ -496,21 +656,18 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -518,6 +675,18 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -528,24 +697,24 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -559,69 +728,71 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #f2f2f2;
-  padding-inline: 12px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -633,31 +804,93 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
+}
+
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 <div>
@@ -665,26 +898,32 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
     class="emotion-0 emotion-1"
     data-testid="my-input-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input"
-    >
-      My input
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input"
+        scale="standard"
+      >
+        My input
+      </label>
+      <div
         class="emotion-5 emotion-6"
-        data-error="false"
-        data-testid="input-field"
-        id="my-input"
-        name="my-input"
-        type="text"
-        value=""
-      />
+        data-testid="my-input-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="false"
+          data-testid="my-input-text-field-input"
+          id="my-input"
+          name="my-input"
+          scale="standard"
+          type="text"
+          value=""
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -704,21 +943,18 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -726,6 +962,18 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -736,24 +984,24 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -767,65 +1015,67 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px 0px 0 0;
   border-bottom: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border-bottom: 1px solid #00677f;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -837,31 +1087,93 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
+}
+
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 <div>
@@ -869,26 +1181,32 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
     class="emotion-0 emotion-1"
     data-testid="my-input-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input"
-    >
-      My input
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input"
+        scale="standard"
+      >
+        My input
+      </label>
+      <div
         class="emotion-5 emotion-6"
-        data-error="false"
-        data-testid="input-field"
-        id="my-input"
-        name="my-input"
-        type="text"
-        value=""
-      />
+        data-testid="my-input-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="false"
+          data-testid="my-input-text-field-input"
+          id="my-input"
+          name="my-input"
+          scale="standard"
+          type="text"
+          value=""
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -908,18 +1226,19 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #252525;
+  color: #3e3e3e;
+}
+
+.emotion-0:has(input[readonly]:not([disabled]):focus) label {
+  color: #00677f;
 }
 
 .emotion-0 input[type="search"]::-webkit-search-decoration,
@@ -930,6 +1249,18 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -941,7 +1272,7 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   cursor: inherit;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -955,70 +1286,71 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
-  margin-top: 8px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: #a9a9a9;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: #a9a9a9;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -1030,30 +1362,93 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   outline: 0;
   width: 100%;
   background-color: inherit;
+  color: #252525;
+  padding: 20px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
   color: #3e3e3e;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #3e3e3e;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #3e3e3e;
 }
 
-.emotion-5::placeholder {
+.emotion-7::placeholder {
   color: #3e3e3e;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 <div>
@@ -1061,26 +1456,32 @@ exports[`<TextField /> component renders input without floating label 1`] = `
     class="emotion-0 emotion-1"
     data-testid="my-input-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input"
-    >
-      My input
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input"
+        scale="standard"
+      >
+        My input
+      </label>
+      <div
         class="emotion-5 emotion-6"
-        data-error="false"
-        data-testid="input-field"
-        id="my-input"
-        name="my-input"
-        type="text"
-        value=""
-      />
+        data-testid="my-input-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="false"
+          data-testid="my-input-text-field-input"
+          id="my-input"
+          name="my-input"
+          scale="standard"
+          type="text"
+          value=""
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -1100,21 +1501,18 @@ exports[`<TextField /> component should render the TextField with error styles a
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -1122,6 +1520,18 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -1139,17 +1549,17 @@ exports[`<TextField /> component should render the TextField with error styles a
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(-45%);
-  -moz-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 12px;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1163,69 +1573,71 @@ exports[`<TextField /> component should render the TextField with error styles a
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px;
   border: 1px solid #e80000;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #e80000;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #e80000;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #e80000;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -1237,38 +1649,100 @@ exports[`<TextField /> component should render the TextField with error styles a
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-7 {
-  padding-left: 12px;
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 .emotion-9 {
+  padding-left: 12px;
+}
+
+.emotion-11 {
   font-family: Daimler CS;
   font-size: 12px;
   font-weight: 400;
@@ -1284,32 +1758,38 @@ exports[`<TextField /> component should render the TextField with error styles a
     class="emotion-0 emotion-1"
     data-testid="my-input-with-error-message-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input-with-error-message"
-    >
-      My Input with Error Message
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input-with-error-message"
+        scale="standard"
+      >
+        My Input with Error Message
+      </label>
+      <div
         class="emotion-5 emotion-6"
-        data-error="true"
-        data-testid="input-field"
-        id="my-input-with-error-message"
-        name="my-input-with-error-message"
-        type="text"
-        value="Initial Value"
-      />
+        data-testid="my-input-with-error-message-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="true"
+          data-testid="my-input-with-error-message-text-field-input"
+          id="my-input-with-error-message"
+          name="my-input-with-error-message"
+          scale="standard"
+          type="text"
+          value="Initial Value"
+        />
+      </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-9 emotion-10"
     >
       <span
-        class="emotion-9"
+        class="emotion-11"
         color="error.default"
         data-testid="typography"
       >
@@ -1334,21 +1814,18 @@ exports[`<TextField /> component should render the TextField with info message 1
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -1356,6 +1833,18 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-4 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -1366,24 +1855,24 @@ exports[`<TextField /> component should render the TextField with info message 1
   color: #3e3e3e;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1397,69 +1886,71 @@ exports[`<TextField /> component should render the TextField with info message 1
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px;
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:focus-within,
-.emotion-3:hover:not([disabled]) {
+.emotion-5:focus-within,
+.emotion-5:hover:not([disabled]) {
   border: 1px solid #00677f;
 }
 
-.emotion-3:hover:([disabled]) {
+.emotion-5:hover:([disabled]) {
   border: 1px solid #c5c5c5;
 }
 
-.emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+.emotion-5:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
 }
 
-.emotion-3:has(input[disabled]),
-.emotion-3:has(input[disabled])>* {
+.emotion-5:has(input[readonly]:not([disabled])):focus-within,
+.emotion-5:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-5:has(input[disabled]),
+.emotion-5:has(input[disabled])>* {
   cursor: not-allowed;
 }
 
-.emotion-3:has(input[disabled]):hover,
-.emotion-3:has(input[disabled])>*:hover {
+.emotion-5:has(input[disabled]):hover,
+.emotion-5:has(input[disabled])>*:hover {
   border-color: #c5c5c5;
 }
 
-.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled]) input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::-moz-placeholder {
+.emotion-5:has(input[disabled]) input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+.emotion-5:has(input[disabled]) input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+.emotion-5:has(input[disabled])>* input::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+.emotion-5:has(input[disabled])>* input::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+.emotion-5:has(input[disabled])>* input:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-3:has(input[disabled]) input::placeholder,
-.emotion-3:has(input[disabled])>* input::placeholder {
+.emotion-5:has(input[disabled]) input::placeholder,
+.emotion-5:has(input[disabled])>* input::placeholder {
   color: transparent;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
@@ -1471,38 +1962,100 @@ exports[`<TextField /> component should render the TextField with info message 1
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
 }
 
-.emotion-5 input:-webkit-autofill,
-.emotion-5 input:-webkit-autofill:hover,
-.emotion-5 input:-webkit-autofill:focus,
-.emotion-5 input:-webkit-autofill:active {
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-7 input:-webkit-autofill,
+.emotion-7 input:-webkit-autofill:hover,
+.emotion-7 input:-webkit-autofill:focus,
+.emotion-7 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-7[readonly]::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-7[readonly]::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-7[readonly]:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-7[readonly]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-7 {
-  padding-left: 12px;
+.emotion-7[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7[readonly]::placeholder,
+.emotion-7[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-7:disabled {
+  color: #a9a9a9;
 }
 
 .emotion-9 {
+  padding-left: 12px;
+}
+
+.emotion-11 {
   font-family: Daimler CS;
   font-size: 12px;
   font-weight: 400;
@@ -1518,32 +2071,38 @@ exports[`<TextField /> component should render the TextField with info message 1
     class="emotion-0 emotion-1"
     data-testid="my-input-with-info-message-text-field"
   >
-    <label
-      class="emotion-2"
-      data-testid="label-field"
-      for="my-input-with-info-message"
-    >
-      My Input with info message
-    </label>
     <div
-      class="emotion-3 emotion-4"
-      data-testid="input-wrapper"
+      class="emotion-2 emotion-3"
     >
-      <input
+      <label
+        class="emotion-4"
+        data-testid="label-field"
+        for="my-input-with-info-message"
+        scale="standard"
+      >
+        My Input with info message
+      </label>
+      <div
         class="emotion-5 emotion-6"
-        data-error="false"
-        data-testid="input-field"
-        id="my-input-with-info-message"
-        name="my-input-with-info-message"
-        type="text"
-        value=""
-      />
+        data-testid="my-input-with-info-message-text-field-wrapper"
+      >
+        <input
+          class="emotion-7 emotion-8"
+          data-error="false"
+          data-testid="my-input-with-info-message-text-field-input"
+          id="my-input-with-info-message"
+          name="my-input-with-info-message"
+          scale="standard"
+          type="text"
+          value=""
+        />
+      </div>
     </div>
     <div
-      class="emotion-7 emotion-8"
+      class="emotion-9 emotion-10"
     >
       <span
-        class="emotion-9"
+        class="emotion-11"
         color="content.medium"
         data-testid="typography"
       >

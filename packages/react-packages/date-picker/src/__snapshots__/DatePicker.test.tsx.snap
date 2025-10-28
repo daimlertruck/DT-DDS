@@ -14,21 +14,18 @@ exports[`<DatePicker /> component onBlur event should render error message when 
   position: relative;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
 .emotion-0:has(input[disabled]) i,
 .emotion-0:has(input[disabled]) label>span {
   color: #a9a9a9;
 }
 
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
   color: #3e3e3e;
 }
 
-.emotion-0 input[type="search"]::-webkit-search-decoration,
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
 .emotion-0 input[type="search"]::-webkit-search-cancel-button,
 .emotion-0 input[type="search"]::-webkit-search-results-button,
 .emotion-0 input[type="search"]::-webkit-search-results-decoration {
@@ -36,207 +33,7 @@ exports[`<DatePicker /> component onBlur event should render error message when 
 }
 
 .emotion-1 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #e80000;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(-45%);
-  -moz-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 198px;
-  width: 100%;
-  height: 54px;
-  color: #252525;
-  gap: 8px;
-  background-color: #e6e6e6;
-  padding-inline: 12px;
-  border-radius: 0px;
-  border: 1px solid #e80000;
-}
-
-.emotion-2:focus-within,
-.emotion-2:hover:not([disabled]) {
-  border: 1px solid #e80000;
-}
-
-.emotion-2:hover:([disabled]) {
-  border: 1px solid #e80000;
-}
-
-.emotion-2:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
-}
-
-.emotion-2:has(input[disabled]),
-.emotion-2:has(input[disabled])>* {
-  cursor: not-allowed;
-}
-
-.emotion-2:has(input[disabled]):hover,
-.emotion-2:has(input[disabled])>*:hover {
-  border-color: #e80000;
-}
-
-.emotion-2:has(input[disabled]) input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input::placeholder,
-.emotion-2:has(input[disabled])>* input::placeholder {
-  color: transparent;
-}
-
-.emotion-3 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  border: 0;
-  outline: 0;
-  width: 100%;
-  background-color: inherit;
-  padding: 24px 0 8px 0;
-}
-
-.emotion-3 input:-webkit-autofill,
-.emotion-3 input:-webkit-autofill:hover,
-.emotion-3 input:-webkit-autofill:focus,
-.emotion-3 input:-webkit-autofill:active {
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.emotion-3::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-3:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3::placeholder {
-  color: transparent;
-}
-
-.emotion-4 {
-  padding-left: 12px;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #e80000;
-}
-
-<div>
-  <div
-    class="emotion-0"
-    data-testid="choose-a-date-text-field"
-  >
-    <label
-      class="emotion-1"
-      data-testid="label-field"
-      for="Choose-a-date"
-    >
-      Choose a date
-    </label>
-    <div
-      class="emotion-2"
-      data-testid="input-wrapper"
-    >
-      <input
-        class="emotion-3"
-        data-error="true"
-        data-testid="input-field"
-        id="Choose-a-date"
-        min="2023-03-30"
-        name="Choose-a-date"
-        type="date"
-        value="2023-02-01"
-      />
-    </div>
-    <div
-      class="emotion-4"
-    >
-      <span
-        class="emotion-5"
-        color="error.default"
-        data-testid="typography"
-      >
-        Please enter a valid date
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<DatePicker /> component onBlur event should render error message when date is higher than max 1`] = `
-.emotion-0 {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,33 +41,10 @@ exports[`<DatePicker /> component onBlur event should render error message when 
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 4px;
-  width: 100%;
-  position: relative;
+  gap: 0;
 }
 
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
-.emotion-0:has(input[disabled]) i,
-.emotion-0:has(input[disabled]) label>span {
-  color: #a9a9a9;
-}
-
-.emotion-0:has(input[readonly]:not(input[disabled])) label,
-.emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
-}
-
-.emotion-0 input[type="search"]::-webkit-search-decoration,
-.emotion-0 input[type="search"]::-webkit-search-cancel-button,
-.emotion-0 input[type="search"]::-webkit-search-results-button,
-.emotion-0 input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-.emotion-1 {
+.emotion-2 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -281,267 +55,21 @@ exports[`<DatePicker /> component onBlur event should render error message when 
   color: #e80000;
   cursor: inherit;
   font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  left: 12px;
-  top: 16px;
-  position: absolute;
-  -webkit-transform: translateY(-45%);
-  -moz-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  min-width: 198px;
-  width: 100%;
-  height: 54px;
-  color: #252525;
-  gap: 8px;
-  background-color: #e6e6e6;
-  padding-inline: 12px;
-  border-radius: 0px;
-  border: 1px solid #e80000;
-}
-
-.emotion-2:focus-within,
-.emotion-2:hover:not([disabled]) {
-  border: 1px solid #e80000;
-}
-
-.emotion-2:hover:([disabled]) {
-  border: 1px solid #e80000;
-}
-
-.emotion-2:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
-}
-
-.emotion-2:has(input[disabled]),
-.emotion-2:has(input[disabled])>* {
-  cursor: not-allowed;
-}
-
-.emotion-2:has(input[disabled]):hover,
-.emotion-2:has(input[disabled])>*:hover {
-  border-color: #e80000;
-}
-
-.emotion-2:has(input[disabled]) input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled])>* input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-2:has(input[disabled]) input::placeholder,
-.emotion-2:has(input[disabled])>* input::placeholder {
-  color: transparent;
-}
-
-.emotion-3 {
-  font-family: Daimler CS;
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  border: 0;
-  outline: 0;
-  width: 100%;
-  background-color: inherit;
-  padding: 24px 0 8px 0;
-}
-
-.emotion-3 input:-webkit-autofill,
-.emotion-3 input:-webkit-autofill:hover,
-.emotion-3 input:-webkit-autofill:focus,
-.emotion-3 input:-webkit-autofill:active {
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-.emotion-3::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-3:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-3::placeholder {
-  color: transparent;
-}
-
-.emotion-4 {
-  padding-left: 12px;
-}
-
-.emotion-5 {
-  font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #e80000;
-}
-
-<div>
-  <div
-    class="emotion-0"
-    data-testid="choose-a-date-text-field"
-  >
-    <label
-      class="emotion-1"
-      data-testid="label-field"
-      for="Choose-a-date"
-    >
-      Choose a date
-    </label>
-    <div
-      class="emotion-2"
-      data-testid="input-wrapper"
-    >
-      <input
-        class="emotion-3"
-        data-error="true"
-        data-testid="input-field"
-        id="Choose-a-date"
-        max="2025-03-30"
-        name="Choose-a-date"
-        type="date"
-        value="2026-02-01"
-      />
-    </div>
-    <div
-      class="emotion-4"
-    >
-      <span
-        class="emotion-5"
-        color="error.default"
-        data-testid="typography"
-      >
-        Please enter a valid date
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<DatePicker /> component should render date input correctly 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
-  position: relative;
-}
-
-.emotion-0 i {
-  color: #3e3e3e;
-}
-
-.emotion-0:has(input[disabled]) i,
-.emotion-0:has(input[disabled]) label>span {
-  color: #a9a9a9;
-}
-
-.emotion-0:has(input[readonly]:not(input[disabled])) label,
-.emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
-}
-
-.emotion-0 input[type="search"]::-webkit-search-decoration,
-.emotion-0 input[type="search"]::-webkit-search-cancel-button,
-.emotion-0 input[type="search"]::-webkit-search-results-button,
-.emotion-0 input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-.emotion-1 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e3e3e;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
   left: 12px;
-  top: 16px;
   position: absolute;
-  -webkit-transform: translateY(-45%);
-  -moz-transform: translateY(-45%);
-  -ms-transform: translateY(-45%);
-  transform: translateY(-45%);
-  -webkit-transition: -webkit-transform 150ms ease-out,font-size 150ms ease-out;
-  transition: transform 150ms ease-out,font-size 150ms ease-out;
-}
-
-.emotion-2 {
-  font-family: Daimler CS;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #e80000;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
 }
 
 .emotion-3 {
@@ -558,27 +86,29 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
   align-items: center;
   min-width: 198px;
   width: 100%;
-  height: 54px;
   color: #252525;
-  gap: 8px;
   background-color: #e6e6e6;
-  padding-inline: 12px;
   border-radius: 0px;
-  border: 1px solid #c5c5c5;
+  border: 1px solid #e80000;
 }
 
 .emotion-3:focus-within,
 .emotion-3:hover:not([disabled]) {
-  border: 1px solid #00677f;
+  border: 1px solid #e80000;
 }
 
 .emotion-3:hover:([disabled]) {
-  border: 1px solid #c5c5c5;
+  border: 1px solid #e80000;
 }
 
 .emotion-3:has(input[readonly]:not([disabled])) {
-  background-color: #e6e6e6;
-  color: #3e3e3e;
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-3:has(input[readonly]:not([disabled])):focus-within,
+.emotion-3:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
 }
 
 .emotion-3:has(input[disabled]),
@@ -588,7 +118,7 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
 
 .emotion-3:has(input[disabled]):hover,
 .emotion-3:has(input[disabled])>*:hover {
-  border-color: #c5c5c5;
+  border-color: #e80000;
 }
 
 .emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
@@ -632,7 +162,20 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
   outline: 0;
   width: 100%;
   background-color: inherit;
-  padding: 24px 0 8px 0;
+  color: #252525;
+  padding: 28px 12px 12px;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-4:read-only {
+  color: #3e3e3e;
 }
 
 .emotion-4 input:-webkit-autofill,
@@ -641,6 +184,35 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
 .emotion-4 input:-webkit-autofill:active {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.emotion-4[readonly]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]::placeholder,
+.emotion-4[readonly]:focus::placeholder {
+  color: transparent;
 }
 
 .emotion-4::-webkit-input-placeholder {
@@ -659,40 +231,705 @@ exports[`<DatePicker /> component should render date input correctly 1`] = `
   color: transparent;
 }
 
+.emotion-4:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:disabled {
+  color: #a9a9a9;
+}
+
+.emotion-5 {
+  padding-left: 12px;
+}
+
+.emotion-6 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #e80000;
+}
+
 <div>
   <div
     class="emotion-0"
     data-testid="choose-a-date-text-field"
   >
-    <label
+    <div
       class="emotion-1"
-      data-testid="label-field"
-      for="Choose-a-date"
     >
-      Choose a date
-      <span
+      <label
         class="emotion-2"
+        data-testid="label-field"
+        for="Choose-a-date"
+        scale="standard"
+      >
+        Choose a date
+      </label>
+      <div
+        class="emotion-3"
+        data-testid="choose-a-date-text-field-wrapper"
+      >
+        <input
+          class="emotion-4"
+          data-error="true"
+          data-testid="choose-a-date-text-field-input"
+          id="Choose-a-date"
+          min="2023-03-30"
+          name="Choose-a-date"
+          scale="standard"
+          type="date"
+          value="2023-02-01"
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-5"
+    >
+      <span
+        class="emotion-6"
         color="error.default"
         data-testid="typography"
       >
-        *
+        Please enter a valid date
       </span>
-    </label>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DatePicker /> component onBlur event should render error message when date is higher than max 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:has(input[disabled]) i,
+.emotion-0:has(input[disabled]) label>span {
+  color: #a9a9a9;
+}
+
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
+.emotion-0:has(input[readonly]:not(input[disabled])) label,
+.emotion-0:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
+.emotion-0 input[type="search"]::-webkit-search-cancel-button,
+.emotion-0 input[type="search"]::-webkit-search-results-button,
+.emotion-0 input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #e80000;
+  cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 198px;
+  width: 100%;
+  color: #252525;
+  background-color: #e6e6e6;
+  border-radius: 0px;
+  border: 1px solid #e80000;
+}
+
+.emotion-3:focus-within,
+.emotion-3:hover:not([disabled]) {
+  border: 1px solid #e80000;
+}
+
+.emotion-3:hover:([disabled]) {
+  border: 1px solid #e80000;
+}
+
+.emotion-3:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-3:has(input[readonly]:not([disabled])):focus-within,
+.emotion-3:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-3:has(input[disabled]),
+.emotion-3:has(input[disabled])>* {
+  cursor: not-allowed;
+}
+
+.emotion-3:has(input[disabled]):hover,
+.emotion-3:has(input[disabled])>*:hover {
+  border-color: #e80000;
+}
+
+.emotion-3:has(input[disabled]) input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled]) input::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled]) input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled])>* input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled])>* input::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled])>* input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-3:has(input[disabled]) input::placeholder,
+.emotion-3:has(input[disabled])>* input::placeholder {
+  color: transparent;
+}
+
+.emotion-4 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  background-color: inherit;
+  color: #252525;
+  padding: 28px 12px 12px;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-4:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-4 input:-webkit-autofill,
+.emotion-4 input:-webkit-autofill:hover,
+.emotion-4 input:-webkit-autofill:focus,
+.emotion-4 input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.emotion-4[readonly]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4[readonly]::placeholder,
+.emotion-4[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-4:disabled {
+  color: #a9a9a9;
+}
+
+.emotion-5 {
+  padding-left: 12px;
+}
+
+.emotion-6 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #e80000;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="choose-a-date-text-field"
+  >
     <div
-      class="emotion-3"
-      data-testid="input-wrapper"
+      class="emotion-1"
     >
-      <input
+      <label
+        class="emotion-2"
+        data-testid="label-field"
+        for="Choose-a-date"
+        scale="standard"
+      >
+        Choose a date
+      </label>
+      <div
+        class="emotion-3"
+        data-testid="choose-a-date-text-field-wrapper"
+      >
+        <input
+          class="emotion-4"
+          data-error="true"
+          data-testid="choose-a-date-text-field-input"
+          id="Choose-a-date"
+          max="2025-03-30"
+          name="Choose-a-date"
+          scale="standard"
+          type="date"
+          value="2026-02-01"
+        />
+      </div>
+    </div>
+    <div
+      class="emotion-5"
+    >
+      <span
+        class="emotion-6"
+        color="error.default"
+        data-testid="typography"
+      >
+        Please enter a valid date
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<DatePicker /> component should render date input correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.emotion-0:has(input[disabled]) i,
+.emotion-0:has(input[disabled]) label>span {
+  color: #a9a9a9;
+}
+
+.emotion-0:has(input[readonly]:not(input[disabled])) i,
+.emotion-0:has(input[readonly]:not(input[disabled])) label,
+.emotion-0:has(input[readonly]:not(input[disabled])) label>span {
+  color: #3e3e3e;
+}
+
+.emotion-0 false input[type="search"]::-webkit-search-decoration,
+.emotion-0 input[type="search"]::-webkit-search-cancel-button,
+.emotion-0 input[type="search"]::-webkit-search-results-button,
+.emotion-0 input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.emotion-1 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emotion-2 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e3e3e;
+  cursor: inherit;
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 150ms ease-out;
+  transition: all 150ms ease-out;
+}
+
+.emotion-3 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #e80000;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 198px;
+  width: 100%;
+  color: #252525;
+  background-color: #e6e6e6;
+  border-radius: 0px;
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-4:focus-within,
+.emotion-4:hover:not([disabled]) {
+  border: 1px solid #00677f;
+}
+
+.emotion-4:hover:([disabled]) {
+  border: 1px solid #c5c5c5;
+}
+
+.emotion-4:has(input[readonly]:not([disabled])) {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+}
+
+.emotion-4:has(input[readonly]:not([disabled])):focus-within,
+.emotion-4:has(input[readonly]:not([disabled])):hover {
+  border: 1px solid #00677f;
+}
+
+.emotion-4:has(input[disabled]),
+.emotion-4:has(input[disabled])>* {
+  cursor: not-allowed;
+}
+
+.emotion-4:has(input[disabled]):hover,
+.emotion-4:has(input[disabled])>*:hover {
+  border-color: #c5c5c5;
+}
+
+.emotion-4:has(input[disabled]) input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled]) input::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled]) input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled])>* input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled])>* input::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled])>* input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4:has(input[disabled]) input::placeholder,
+.emotion-4:has(input[disabled])>* input::placeholder {
+  color: transparent;
+}
+
+.emotion-5 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  background-color: inherit;
+  color: #252525;
+  padding: 28px 12px 12px;
+}
+
+.emotion-5:focus {
+  outline: none;
+}
+
+.emotion-5:-moz-read-only {
+  color: #3e3e3e;
+}
+
+.emotion-5:read-only {
+  color: #3e3e3e;
+}
+
+.emotion-5 input:-webkit-autofill,
+.emotion-5 input:-webkit-autofill:hover,
+.emotion-5 input:-webkit-autofill:focus,
+.emotion-5 input:-webkit-autofill:active {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.emotion-5[readonly]::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5[readonly]::placeholder,
+.emotion-5[readonly]:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-5::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-5:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-5::placeholder {
+  color: transparent;
+}
+
+.emotion-5:focus::-webkit-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus::-moz-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus:-ms-input-placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:focus::placeholder {
+  color: #3e3e3e;
+}
+
+.emotion-5:disabled {
+  color: #a9a9a9;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="choose-a-date-text-field"
+  >
+    <div
+      class="emotion-1"
+    >
+      <label
+        class="emotion-2"
+        data-testid="label-field"
+        for="Choose-a-date"
+        scale="standard"
+      >
+        Choose a date
+        <span
+          class="emotion-3"
+          color="error.default"
+          data-testid="typography"
+        >
+          *
+        </span>
+      </label>
+      <div
         class="emotion-4"
-        data-error="false"
-        data-testid="input-field"
-        id="Choose-a-date"
-        max="2025-03-30"
-        min="2023-03-30"
-        name="Choose-a-date"
-        type="date"
-        value=""
-      />
+        data-testid="choose-a-date-text-field-wrapper"
+      >
+        <input
+          class="emotion-5"
+          data-error="false"
+          data-testid="choose-a-date-text-field-input"
+          id="Choose-a-date"
+          max="2025-03-30"
+          min="2023-03-30"
+          name="Choose-a-date"
+          scale="standard"
+          type="date"
+          value=""
+        />
+      </div>
     </div>
   </div>
 </div>
