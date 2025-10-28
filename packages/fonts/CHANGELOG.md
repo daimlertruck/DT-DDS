@@ -1,5 +1,11 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.3
+
+### Patch Changes
+
+- chore: fix font packages version
+
 ## 0.1.0-beta.2
 
 ### Patch Changes

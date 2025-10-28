@@ -1,5 +1,11 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.77
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.72
+
 ## 1.0.0-beta.76
 
 ### Patch Changes
