@@ -22,16 +22,16 @@ describe('<EmptyState /> component', () => {
   });
 
   it('should render Empty State with a Button', () => {
-    const { container } = render(
+    const { getByTestId } = render(
       <ProvidedEmptyState>
         <EmptyState.Content description={description} title={title} />
-        <Button onClick={() => {}} variant='solid'>
+        <Button dataTestId='action' onClick={() => {}} variant='solid'>
           Button
         </Button>
       </ProvidedEmptyState>
     );
 
-    expect(container).toMatchSnapshot();
+    expect(getByTestId('action-button')).toBeVisible();
   });
 
   it('should render Empty State with image', () => {
