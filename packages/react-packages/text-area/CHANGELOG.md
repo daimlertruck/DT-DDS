@@ -1,5 +1,18 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.51
+
+### Minor Changes
+
+- feat: improve text-field and label-field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-label-field@1.0.0-beta.49
+  - @dt-dds/react-box@1.0.0-beta.40
+
 ## 1.0.0-beta.50
 
 ### Patch Changes

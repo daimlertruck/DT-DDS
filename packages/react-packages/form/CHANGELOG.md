@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.42
+
+### Minor Changes
+
+- feat: improve text-field and label-field
+
 ## 1.0.0-beta.41
 
 ### Patch Changes

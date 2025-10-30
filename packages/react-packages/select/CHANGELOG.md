@@ -1,5 +1,16 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.58
+
+### Minor Changes
+
+- feat: improve text-field and label-field
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-label-field@1.0.0-beta.49
+
 ## 1.0.0-beta.57
 
 ### Patch Changes
