@@ -25,10 +25,10 @@ EmptyState.Content = ({
       data-testid={dataTestId ?? 'empty-state-content'}
       style={style}
     >
-      <Typography color='content.dark' element='h2' fontStyles='h4'>
+      <Typography color='content.dark' element='h2' fontStyles='h4Bold'>
         {title}
       </Typography>
-      <Typography color='content.default' fontStyles='bodyLgRegular'>
+      <Typography color='content.default' fontStyles='bodyMdRegular'>
         {description}
       </Typography>
     </EmptyStateContentStyled>

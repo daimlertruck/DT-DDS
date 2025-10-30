@@ -1,5 +1,5 @@
 import { Button } from '@dt-dds/react-button';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react';
 
 import { NoDataIcon } from '../../../dt-dds-react/core';
 
@@ -19,6 +19,11 @@ const meta: Meta<EmptyStateProps> = {
   },
   render: ({ title, description, addActionButton }) => (
     <EmptyState>
+      {addActionButton ? (
+        <Button onClick={() => {}} variant='solid'>
+          Action
+        </Button>
+      ) : null}
       <EmptyState.Content description={description} title={title} />
       {addActionButton ? (
         <Button onClick={() => {}} variant='solid'>
