@@ -1,5 +1,27 @@
 # @dt-ui/react
 
+## 1.0.0-beta.238
+
+### Patch Changes
+
+- refactor: update empty state
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-empty-state@1.0.0-beta.88
+  - @dt-dds/react-box@1.0.0-beta.39
+  - @dt-dds/react-dropdown@1.0.0-beta.60
+  - @dt-dds/react-radio@1.0.0-beta.55
+  - @dt-dds/react-spinner@1.0.0-beta.73
+  - @dt-dds/react-tabs@1.0.0-beta.68
+  - @dt-dds/react-text-area@1.0.0-beta.50
+  - @dt-dds/react-button@1.0.0-beta.68
+  - @dt-dds/react-modal@1.0.0-beta.68
+  - @dt-dds/react-text-field@1.0.0-beta.78
+  - @dt-dds/react-link@1.0.0-beta.45
+  - @dt-dds/react-toast@1.0.0-beta.85
+  - @dt-dds/react-date-picker@1.0.0-beta.61
+  - @dt-dds/react-message@1.0.0-beta.84
+
 ## 1.0.0-beta.237
 
 ### Patch Changes
