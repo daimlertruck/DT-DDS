@@ -1,5 +1,13 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.90
+
+### Patch Changes
+
+- refactor: update empty-state description
+  - @dt-dds/react-button@1.0.0-beta.70
+  - @dt-dds/react-link@1.0.0-beta.47
+
 ## 1.0.0-beta.89
 
 ### Patch Changes
