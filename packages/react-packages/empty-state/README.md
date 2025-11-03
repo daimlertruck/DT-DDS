@@ -37,12 +37,12 @@ export const App = () => {
 
 ### EmptyState.Content
 
-| Property      | Type                  | Default                 | Description                                                 |
-| ------------- | --------------------- | ----------------------- | ----------------------------------------------------------- |
-| `dataTestId`  | `string`              | `'empty-state-content'` | Customizable test identifier.                               |
-| `style`       | `React.CSSProperties` | -                       | Gives the EmptyState Content some specific css properties   |
-| `title`       | `string`              | -                       | Text to be presented as Title within the Empty State.       |
-| `description` | `string`              | -                       | Text to be presented as Description within the Empty State. |
+| Property      | Type                  | Default                 | Description                                                                |
+| ------------- | --------------------- | ----------------------- | -------------------------------------------------------------------------- |
+| `dataTestId`  | `string`              | `'empty-state-content'` | Customizable test identifier.                                              |
+| `style`       | `React.CSSProperties` | -                       | Gives the EmptyState Content some specific css properties                  |
+| `title`       | `string`              | -                       | Text to be presented as Title within the Empty State.                      |
+| `description` | `ReactNode`           | -                       | Text/Custom element to be presented as Description within the Empty State. |
 
 ### Stack
 

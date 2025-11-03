@@ -1,4 +1,5 @@
 import { Button } from '@dt-dds/react-button';
+import { Link } from '@dt-dds/react-link';
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { NoDataIcon } from '../../../dt-dds-react/core';
@@ -44,15 +45,24 @@ export const Default: StoryObj<EmptyStateProps> = {
   },
 };
 
-export const EmptyStateWithImage: StoryObj<EmptyStateProps> = {
-  args: {
-    title: 'Title here',
-    description: 'Some description here.',
-  },
-  render: ({ title, description }) => (
-    <EmptyState>
-      <NoDataIcon />
-      <EmptyState.Content description={description} title={title} />
-    </EmptyState>
-  ),
-};
+export const EmptyStateWithImageAndCustomDescription: StoryObj<EmptyStateProps> =
+  {
+    args: {
+      title: 'Title here',
+      description: (
+        <>
+          This is a custom description with a{' '}
+          <Link href='/' rel='noopener' target='_blank'>
+            link
+          </Link>
+          .
+        </>
+      ),
+    },
+    render: ({ title, description }) => (
+      <EmptyState>
+        <NoDataIcon />
+        <EmptyState.Content description={description} title={title} />
+      </EmptyState>
+    ),
+  };

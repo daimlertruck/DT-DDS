@@ -1,11 +1,12 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
+import { ReactNode } from 'react';
 
 import { EmptyStateStyled, EmptyStateContentStyled } from './EmptyState.styled';
 
 export interface EmptyStateContentProps extends Omit<BaseProps, 'children'> {
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 export const EmptyState = ({ children, dataTestId, style }: BaseProps) => (
