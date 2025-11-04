@@ -302,13 +302,13 @@ exports[`<DatePicker /> component onBlur event should render error message when 
     <div
       class="emotion-5"
     >
-      <span
+      <p
         class="emotion-6"
         color="error.default"
         data-testid="typography"
       >
         Please enter a valid date
-      </span>
+      </p>
     </div>
   </div>
 </div>
@@ -616,13 +616,13 @@ exports[`<DatePicker /> component onBlur event should render error message when 
     <div
       class="emotion-5"
     >
-      <span
+      <p
         class="emotion-6"
         color="error.default"
         data-testid="typography"
       >
         Please enter a valid date
-      </span>
+      </p>
     </div>
   </div>
 </div>

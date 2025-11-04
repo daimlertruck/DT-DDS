@@ -1788,13 +1788,13 @@ exports[`<TextField /> component should render the TextField with error styles a
     <div
       class="emotion-9 emotion-10"
     >
-      <span
+      <p
         class="emotion-11"
         color="error.default"
         data-testid="typography"
       >
         My Error Message
-      </span>
+      </p>
     </div>
   </div>
 </div>
@@ -2101,13 +2101,13 @@ exports[`<TextField /> component should render the TextField with info message 1
     <div
       class="emotion-9 emotion-10"
     >
-      <span
+      <p
         class="emotion-11"
         color="content.medium"
         data-testid="typography"
       >
         My Infor Message
-      </span>
+      </p>
     </div>
   </div>
 </div>
