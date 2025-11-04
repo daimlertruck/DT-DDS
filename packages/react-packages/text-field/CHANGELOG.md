@@ -1,5 +1,12 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- fix: text field helper message element
+  - @dt-dds/react-spinner@1.0.0-beta.76
+
 ## 1.0.0-beta.80
 
 ### Patch Changes

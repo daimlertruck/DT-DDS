@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- fix: text field helper message element
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.81
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

@@ -1,5 +1,27 @@
 # @dt-ui/react
 
+## 1.0.0-beta.241
+
+### Patch Changes
+
+- fix: text field helper message element
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-date-picker@1.0.0-beta.64
+  - @dt-dds/react-text-field@1.0.0-beta.81
+  - @dt-dds/react-box@1.0.0-beta.42
+  - @dt-dds/react-dropdown@1.0.0-beta.63
+  - @dt-dds/react-radio@1.0.0-beta.58
+  - @dt-dds/react-spinner@1.0.0-beta.76
+  - @dt-dds/react-tabs@1.0.0-beta.71
+  - @dt-dds/react-text-area@1.0.0-beta.53
+  - @dt-dds/react-button@1.0.0-beta.71
+  - @dt-dds/react-modal@1.0.0-beta.71
+  - @dt-dds/react-empty-state@1.0.0-beta.91
+  - @dt-dds/react-link@1.0.0-beta.48
+  - @dt-dds/react-toast@1.0.0-beta.88
+  - @dt-dds/react-message@1.0.0-beta.87
+
 ## 1.0.0-beta.240
 
 ### Patch Changes
