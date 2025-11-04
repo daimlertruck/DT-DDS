@@ -246,7 +246,6 @@ export const TextField = ({
         <TextFieldMessageStyled>
           <Typography
             color={showError ? 'error.default' : messageColor}
-            element='span'
             fontStyles='bodySmRegular'
           >
             {message}
