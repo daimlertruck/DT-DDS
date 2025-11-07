@@ -182,7 +182,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
 .emotion-3 {
   width: 14px;
   height: 14px;
-  border: 2px solid #ffffff;
+  border: 2px solid #e6e6e6;
   border-radius: 50%;
   border-top: 2px solid #000000;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
@@ -204,6 +204,7 @@ exports[`<Button /> component when loading is true renders a spinner dark theme 
     >
       <div
         class="emotion-3"
+        data-testid="spinner-element"
       />
     </div>
   </button>
@@ -302,7 +303,7 @@ exports[`<Button /> component when loading is true renders a spinner light theme
   height: 14px;
   border: 2px solid #3e3e3e;
   border-radius: 50%;
-  border-top: 2px solid #ffffff;
+  border-top: 2px solid #f2f2f2;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
   animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
 }
@@ -322,6 +323,7 @@ exports[`<Button /> component when loading is true renders a spinner light theme
     >
       <div
         class="emotion-3"
+        data-testid="spinner-element"
       />
     </div>
   </button>

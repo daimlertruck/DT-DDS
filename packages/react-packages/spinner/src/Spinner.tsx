@@ -36,12 +36,16 @@ export const Spinner = ({
   const theme = useTheme();
   return (
     <Box dataTestId={dataTestId} style={{ ...style }}>
-      <SpinnerStyled colorScheme={colorScheme} size={size} />
+      <SpinnerStyled
+        colorScheme={colorScheme}
+        data-testid={`${dataTestId}-element`}
+        size={size}
+      />
       {loadingText ? (
         <Typography
           color={spinnerTextColor[colorScheme]}
           fontStyles={spinnerTextSize[size]}
-          style={{ marginTop: theme.spacing.spacing_40 }}
+          style={{ marginTop: theme.spacing.spacing_30 }}
         >
           {loadingText}
         </Typography>
