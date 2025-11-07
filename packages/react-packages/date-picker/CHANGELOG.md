@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.82
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

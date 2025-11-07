@@ -1,5 +1,13 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.49
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.72
+
 ## 1.0.0-beta.48
 
 ### Patch Changes

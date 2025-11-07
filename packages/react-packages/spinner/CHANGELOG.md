@@ -1,5 +1,13 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.77
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.43
+
 ## 1.0.0-beta.76
 
 ### Patch Changes

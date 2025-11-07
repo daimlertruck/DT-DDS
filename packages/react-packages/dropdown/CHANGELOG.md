@@ -1,5 +1,12 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.43
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

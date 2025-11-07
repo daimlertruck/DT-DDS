@@ -1,5 +1,13 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.89
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.72
+
 ## 1.0.0-beta.88
 
 ### Patch Changes

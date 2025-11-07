@@ -1,5 +1,13 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.88
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.49
+
 ## 1.0.0-beta.87
 
 ### Patch Changes

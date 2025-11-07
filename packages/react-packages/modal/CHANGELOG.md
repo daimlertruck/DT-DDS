@@ -1,5 +1,13 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.77
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

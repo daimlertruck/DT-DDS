@@ -1,5 +1,14 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.92
+
+### Patch Changes
+
+- refactor: spinner style
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.72
+  - @dt-dds/react-link@1.0.0-beta.49
+
 ## 1.0.0-beta.91
 
 ### Patch Changes
