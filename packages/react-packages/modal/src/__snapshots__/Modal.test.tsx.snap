@@ -223,7 +223,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 .emotion-14 {
   width: 58px;
   height: 58px;
-  border: 4px solid #ffffff;
+  border: 4px solid #e6e6e6;
   border-radius: 50%;
   border-top: 4px solid #000000;
   -webkit-animation: animation-0 1s cubic-bezier(0.3, 0.1, 0.25, 0.65) 0s infinite normal none;
@@ -280,6 +280,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
         >
           <div
             class="emotion-14"
+            data-testid="spinner-element"
           />
         </div>
       </div>
