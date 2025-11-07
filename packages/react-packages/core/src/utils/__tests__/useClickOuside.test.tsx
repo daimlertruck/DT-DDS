@@ -1,5 +1,5 @@
 import { act, fireEvent, render } from '@testing-library/react';
-import React, { createRef } from 'react';
+import { createRef } from 'react';
 
 import useClickOutside from '../useClickOutside';
 
@@ -9,7 +9,7 @@ describe('useClickOutside', () => {
     const Component = () => {
       const ref = createRef<HTMLDivElement>();
       useClickOutside({
-        ref,
+        refs: [ref],
         handler: handlerMock,
       });
 
@@ -35,7 +35,7 @@ describe('useClickOutside', () => {
     const Component = () => {
       const ref = createRef<HTMLDivElement>();
       useClickOutside({
-        ref,
+        refs: [ref],
         handler: handlerMock,
       });
 

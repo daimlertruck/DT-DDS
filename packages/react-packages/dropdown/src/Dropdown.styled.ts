@@ -1,11 +1,15 @@
 import styled from '@emotion/styled';
 
 export const DropdownStyled = styled.div`
-  ${({ theme, style }) => `
-    margin: ${theme.spacing.spacing_0};
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    ${style}
+  list-style-type: none;
+  width: 100%;
+  max-height: 360px;
+  overflow: auto;
+
+  ${({ theme }) => `
+    padding: ${theme.spacing.spacing_50} ${theme.spacing.spacing_0};
+    background-color: ${theme.palette.surface.contrast};
+    border-radius: ${theme.shape.dropdown};
+    border: 1px solid ${theme.palette.border.medium};
   `}
 `;

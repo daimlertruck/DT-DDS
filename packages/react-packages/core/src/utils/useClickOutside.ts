@@ -1,8 +1,9 @@
 import { RefObject, useEffect } from 'react';
 
 interface UseClickOutsideProps {
-  ref: RefObject<Element>;
+  refs: Array<RefObject<HTMLElement | null>>;
   handler: () => void;
+  ignore?: Array<HTMLElement | null | undefined>;
 }
 
 /**
@@ -10,21 +11,21 @@ interface UseClickOutsideProps {
  * dropdown, it should close.
  * @param {string} ref - Ref object of the element
  * @param {string} handler - Action to be performed when user click outside of element
+ * @param {string} ignore - Array of elements to be ignored when clicking outside
  */
-const useClickOutside = ({ ref, handler }: UseClickOutsideProps) => {
+const useClickOutside = ({ refs = [], handler }: UseClickOutsideProps) => {
   useEffect(() => {
     const eventHandler = (event: MouseEvent) => {
-      // Do nothing if user click inside of element
-      if (!ref.current || ref.current.contains(event.target as Node)) {
-        return;
+      for (const ref of refs) {
+        if (!ref.current || ref.current.contains(event.target as Node)) {
+          return;
+        }
       }
 
       handler();
     };
 
-    if (ref.current) {
-      document.addEventListener('mousedown', eventHandler);
-    }
+    document.addEventListener('mousedown', eventHandler);
 
     return () => document.removeEventListener('mousedown', eventHandler);
   });

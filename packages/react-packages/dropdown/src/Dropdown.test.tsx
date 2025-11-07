@@ -1,233 +1,92 @@
 import { withProviders } from '@dt-dds/react-core';
-import { defaultTheme as theme } from '@dt-dds/themes';
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { RefObject } from 'react';
 
-import { withDropdownProvider } from './utils';
+import { Dropdown as DropdownRaw } from './Dropdown';
 
-import { Dropdown, DropdownFill, DropdownVariant } from '.';
+jest.mock('./hooks', () => ({
+  useFloatingPosition: () => ({
+    style: {
+      position: 'fixed',
+      top: 10,
+      left: 20,
+      width: 200,
+      maxWidth: 200,
+      zIndex: 1234,
+    },
+  }),
+}));
 
-interface RenderDropdownProps {
-  fill?: DropdownFill;
-  variant?: DropdownVariant;
-  isSelectDisabled?: boolean;
-  isOptionDisabled?: boolean;
-  hasBorder?: boolean;
-  hasDeselect?: boolean;
-  defaultValue?: { text: string; value: string };
-  hasError?: boolean;
-  isRequired?: boolean;
-  options?: Array<{ text: string; value: string }>;
-}
+jest.mock('@dt-dds/react-core', () => {
+  const real = jest.requireActual('@dt-dds/react-core');
+  return {
+    ...real,
+    useClickOutside: () => {},
+  };
+});
 
-describe('<Dropdown /> component', () => {
-  const onClickMock = jest.fn();
+const Dropdown = withProviders(DropdownRaw);
 
-  const dropdownSelectId = 'dropdown-select';
-  const menuRole = 'menu';
-  const optionRole = 'option';
-  const dropdownTextId = 'dropdown-text';
+const dropdownTestId = 'dropdown';
 
-  const OPTIONS = [
-    { text: 'Option 1', value: '1' },
-    { text: 'Option 2', value: '2' },
-  ];
+describe('<Dropdown /> ', () => {
+  test('should have correct styles', () => {
+    const anchorRef = {
+      current: document.createElement('div'),
+    } as RefObject<HTMLElement>;
 
-  const ProvidedDropdown = withProviders(withDropdownProvider(Dropdown));
-
-  const renderDropdown = ({
-    fill,
-    variant,
-    isSelectDisabled,
-    isOptionDisabled,
-    hasBorder,
-    hasDeselect,
-    defaultValue,
-    hasError,
-    isRequired,
-    options = OPTIONS,
-  }: RenderDropdownProps = {}) =>
-    render(
-      <ProvidedDropdown defaultValue={defaultValue} name='test-dropdown'>
-        <Dropdown.Container>
-          <Dropdown.Select
-            fill={fill}
-            hasBorder={hasBorder}
-            hasDeselect={hasDeselect}
-            hasError={hasError}
-            isDisabled={isSelectDisabled}
-            isRequired={isRequired}
-            label='Label'
-            variant={variant}
-          >
-            {options.map((option) => (
-              <Dropdown.Option
-                isDisabled={isOptionDisabled}
-                key={option.value}
-                onClick={onClickMock}
-                option={option}
-              >
-                {option.text ?? option.value}
-              </Dropdown.Option>
-            ))}
-          </Dropdown.Select>
-          <Dropdown.Detail hasError={hasError} isDisabled={isSelectDisabled}>
-            A short message.
-          </Dropdown.Detail>
-        </Dropdown.Container>
-      </ProvidedDropdown>
+    const { container } = render(
+      <Dropdown anchorRef={anchorRef} dataTestId={dropdownTestId} isOpen>
+        Hello dropdown
+      </Dropdown>
     );
-
-  beforeEach(() => {
-    jest.clearAllMocks();
-  });
-
-  it('renders dropdown correctly', () => {
-    const { container } = renderDropdown();
-
-    const select = screen.getByTestId(dropdownSelectId);
-    fireEvent.click(select);
 
     expect(container).toMatchSnapshot();
   });
 
-  it('should change dropdown option by triggering onClick', () => {
-    renderDropdown();
+  test('should render correct aria, role and styles', () => {
+    const anchor = document.createElement('button');
+    document.body.appendChild(anchor);
+    const anchorRef = { current: anchor } as RefObject<HTMLElement>;
 
-    const select = screen.getByTestId(dropdownSelectId);
-    const menu = screen.getByRole(menuRole);
-
-    expect(select.textContent).toContain('Label');
-    expect(select.textContent).toContain('Select an option');
-
-    fireEvent.click(select);
-
-    const optionsEl = within(menu).getAllByRole(optionRole);
-
-    expect(optionsEl.length).toEqual(2);
-
-    const option = optionsEl[0];
-
-    fireEvent.click(option);
-
-    expect(option).toHaveTextContent('Option 1');
-    expect(onClickMock).toHaveBeenCalledTimes(1);
-  });
-
-  it('should not change option when the clicked option is disabled', () => {
-    renderDropdown({ isOptionDisabled: true });
-
-    const select = screen.getByTestId(dropdownSelectId);
-    const menu = screen.getByRole(menuRole);
-
-    fireEvent.click(select);
-
-    const optionsEl = within(menu).getAllByRole(optionRole);
-    const option = optionsEl[0];
-
-    expect(select).toHaveTextContent('Select an option');
-
-    fireEvent.click(option);
-
-    expect(onClickMock).toHaveBeenCalledTimes(0);
-
-    expect(select).toHaveTextContent('Select an option');
-  });
-
-  it('should render the disabled dropdown', () => {
-    renderDropdown({ isSelectDisabled: true });
-
-    const select = screen.getByTestId(dropdownSelectId);
-    const dropdownText = within(screen.getByTestId(dropdownTextId)).getByTestId(
-      'typography'
+    render(
+      <Dropdown anchorRef={anchorRef} dataTestId={dropdownTestId} isOpen>
+        <div data-testid='content'>hello</div>
+      </Dropdown>
     );
 
-    expect(select).toBeDisabled();
-    expect(dropdownText).toHaveAttribute('color', 'content.light');
+    const el = screen.getByTestId(dropdownTestId);
+
+    expect(el).toHaveAttribute('role', 'menu');
+    expect(el).toHaveAttribute('aria-hidden', 'false');
+
+    expect(el).toHaveStyle({
+      position: 'fixed',
+      top: '10px',
+      left: '20px',
+      width: '200px',
+      maxWidth: '200px',
+      zIndex: '1234',
+    });
+
+    expect(screen.getByTestId('content')).toHaveTextContent('hello');
   });
 
-  it('should render the error state', () => {
-    renderDropdown({ hasError: true });
+  test('should have aria-hidden true if isOpen is false', () => {
+    const anchor = document.createElement('div');
+    document.body.appendChild(anchor);
+    const anchorRef = { current: anchor } as RefObject<HTMLElement>;
 
-    const select = screen.getByTestId(dropdownSelectId);
-    const dropdownText = within(screen.getByTestId(dropdownTextId)).getByTestId(
-      'typography'
+    render(
+      <Dropdown
+        anchorRef={anchorRef}
+        dataTestId={dropdownTestId}
+        isOpen={false}
+      />
     );
 
-    expect(select).toHaveStyle(`border-color: ${theme.palette.error.default}`);
-    expect(dropdownText).toHaveAttribute('color', 'error.default');
-  });
+    const dropdown = screen.getByTestId(dropdownTestId);
 
-  it('should select by default if there is only one option', () => {
-    renderDropdown({ options: [OPTIONS[0]] });
-
-    const select = screen.getByTestId(dropdownSelectId);
-    const dropdownText = within(screen.getByTestId(dropdownTextId)).getByTestId(
-      'typography'
-    );
-
-    expect(select).toHaveTextContent('Option 1');
-    expect(dropdownText).toHaveAttribute('color', 'content.medium');
-  });
-
-  it('should render a dropdown without border', () => {
-    renderDropdown({ hasBorder: false });
-
-    const select = screen.getByTestId(dropdownSelectId);
-
-    expect(select).toHaveStyle('border: none');
-  });
-
-  it.each`
-    fill          | expectedBackgroundColor
-    ${'light'}    | ${theme.palette.surface.light}
-    ${'contrast'} | ${theme.palette.surface.contrast}
-    ${'default'}  | ${theme.palette.surface.default}
-  `(
-    'renders select with $fill background fill',
-    ({ fill, expectedBackgroundColor }) => {
-      renderDropdown({ fill });
-
-      const select = screen.getByTestId(dropdownSelectId);
-
-      expect(select).toHaveStyle(
-        `background-color: ${expectedBackgroundColor}`
-      );
-    }
-  );
-
-  it.each`
-    variant          | expectedBorderWidth
-    ${'outlined'}    | ${'border-width: 1px'}
-    ${'bottom-line'} | ${'border-width: 0 0 1px'}
-  `(
-    'renders select with $variant variant with correct border width',
-    ({ variant, expectedBorderWidth }) => {
-      renderDropdown({ variant });
-
-      const select = screen.getByTestId(dropdownSelectId);
-
-      expect(select).toHaveStyle(expectedBorderWidth);
-    }
-  );
-
-  it('should reset dropdown value when deselecting', () => {
-    renderDropdown({ hasDeselect: true, defaultValue: OPTIONS[1] });
-
-    const select = screen.getByTestId(dropdownSelectId);
-    const deselect = screen.getByTestId('deselect-value');
-
-    expect(select).toHaveTextContent('Option 2');
-
-    fireEvent.click(deselect);
-
-    expect(select).toHaveTextContent('Select an option');
-  });
-
-  it('should renders dropdown as required', () => {
-    renderDropdown({ isRequired: true });
-
-    const select = screen.getByTestId(dropdownSelectId);
-
-    expect(select.textContent).toContain('Label*');
+    expect(dropdown).toHaveAttribute('aria-hidden', 'true');
   });
 });

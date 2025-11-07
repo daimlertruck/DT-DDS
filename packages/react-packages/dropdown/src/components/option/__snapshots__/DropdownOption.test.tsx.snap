@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownOption />  should have correct styles 1`] = `
+.emotion-0 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #252525;
+  padding: 12px 16px;
+  list-style: none;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  text-wrap: nowrap;
+}
+
+.emotion-0:not([aria-disabled="true"])[aria-selected="true"],
+.emotion-0:not([aria-disabled="true"])[aria-selected="true"] span {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-0:not([aria-disabled="true"]):hover,
+.emotion-0:not([aria-disabled="true"])[data-highlighted="true"] {
+  background: #deeff2;
+  cursor: pointer;
+}
+
+.emotion-0[aria-disabled="true"] {
+  color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.emotion-0[aria-disabled="true"][aria-selected="true"] {
+  background-color: #f2f2f2;
+}
+
+<div>
+  <li
+    aria-selected="false"
+    class="emotion-0 emotion-1"
+    data-highlighted="false"
+    data-testid="dropdown-option"
+  >
+    Hello dropdown
+  </li>
+</div>
+`;
