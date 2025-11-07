@@ -29,7 +29,6 @@ export const CheckboxStyled = styled.label<CheckBoxInputWrapperProps>`
         !isDisabled &&
         !isChecked &&
         `
-         background-color: ${theme.palette.primary.light};
          border: 1px solid ${theme.palette.primary.default};
       `
       };
@@ -38,10 +37,10 @@ export const CheckboxStyled = styled.label<CheckBoxInputWrapperProps>`
 `;
 
 export const CheckBoxInputWrapper = styled.div`
-  height: 24px;
-  min-height: 24px;
-  width: 24px;
-  min-width: 24px;
+  height: 20px;
+  min-height: 20px;
+  width: 20px;
+  min-width: 20px;
   position: relative;
   display: flex;
 `;
@@ -73,7 +72,7 @@ export const CheckboxLabelStyled = styled.span<CheckboxLabelStyledProps>`
     padding-left: ${theme.spacing.spacing_30};
     ${theme.fontStyles.bodyMdRegular};
     color: ${
-      isDisabled ? theme.palette.content.light : theme.palette.content.default
+      isDisabled ? theme.palette.content.medium : theme.palette.content.default
     };
   `}
 `;

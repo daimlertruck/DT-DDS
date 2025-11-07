@@ -10,13 +10,17 @@ export const checkboxStyles = (
         border: none;
         background-color: ${
           isDisabled
-            ? theme.palette.primary.light
-            : theme.palette.accent.default
+            ? theme.palette.informative.light
+            : theme.palette.informative.default
         };
     `;
   }
   return ` 
-        border: 1px solid ${theme.palette.border.default};
-        background-color: ${theme.palette.surface.contrast};
+        border: 1px solid ${theme.palette.informative.medium};
+        background-color: ${
+          isDisabled
+            ? theme.palette.informative.light
+            : theme.palette.surface.contrast
+        };
     `;
 };

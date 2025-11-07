@@ -16,6 +16,7 @@ export interface CheckBoxProps
   onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
   isChecked?: boolean;
   isDisabled?: boolean;
+  className?: string;
 }
 
 export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
@@ -27,6 +28,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
       isChecked = false,
       isDisabled = false,
       style,
+      className,
       ...rest
     }: CheckBoxProps,
     ref
@@ -45,6 +47,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
 
     return (
       <CheckboxStyled
+        className={className}
         data-testid={dataTestId}
         isChecked={isChecked}
         isDisabled={isDisabled}
@@ -60,7 +63,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
             {...rest}
           />
           {isChecked ? (
-            <Icon code='check' color={theme.palette.content.contrast} />
+            <Icon
+              code='check'
+              color={theme.palette.content.contrast}
+              size='m'
+            />
           ) : null}
         </CheckBoxInputWrapper>
         {children ? (
