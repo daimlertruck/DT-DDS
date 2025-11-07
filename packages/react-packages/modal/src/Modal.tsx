@@ -1,6 +1,6 @@
 import { Backdrop, BackdropProps } from '@dt-dds/react-backdrop';
 import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
-import { forwardRef, RefObject, useRef } from 'react';
+import { forwardRef, useRef } from 'react';
 
 import { ModalContent, ModalFooter, ModalHeader } from './components';
 import { ModalStyled } from './Modal.styled';
@@ -30,7 +30,7 @@ export const Modal = ({
   const ref = useRef<HTMLDivElement>(null);
 
   useClickOutside({
-    ref: ref as RefObject<Element>,
+    refs: [ref],
     handler: onClickOutside ?? (() => {}),
   });
 

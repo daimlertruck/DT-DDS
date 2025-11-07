@@ -1,38 +1,88 @@
-import { BaseProps } from '@dt-dds/react-core';
+import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
+import { forwardRef, RefObject, useCallback, useRef } from 'react';
 
-import {
-  DropdownContainer,
-  DropdownDetail,
-  DropdownMenu,
-  DropdownOption,
-  DropdownSelect,
-} from './components';
+import { DropdownOption } from './components';
 import { DropdownStyled } from './Dropdown.styled';
-
-import { DropdownOptionValue, DropdownContextProvider } from '.';
+import { useFloatingPosition } from './hooks';
+import { DropdownPlacement } from './types';
+import { setRef } from './utils';
 
 export interface DropdownProps extends BaseProps {
-  defaultValue?: DropdownOptionValue;
-  name?: string;
+  isOpen?: boolean;
+  anchorRef: RefObject<HTMLElement | null>;
+  matchWidth?: boolean;
+  offsetX?: number;
+  offsetY?: number;
+  onClose?: () => void;
+  as?: keyof JSX.IntrinsicElements;
+  placement?: DropdownPlacement;
 }
 
-const Dropdown = ({
-  children,
-  defaultValue,
-  style,
-  name,
-  dataTestId = 'dropdown',
-}: DropdownProps) => (
-  <DropdownContextProvider defaultValue={defaultValue} name={name}>
-    <DropdownStyled data-testid={dataTestId} role='menu' style={style}>
-      {children}
-    </DropdownStyled>
-  </DropdownContextProvider>
-);
+export const Dropdown = Object.assign(
+  forwardRef<HTMLElement, DropdownProps>(
+    (
+      {
+        children,
+        style,
+        dataTestId = 'dropdown',
+        isOpen = false,
+        anchorRef,
+        matchWidth = true,
+        offsetX,
+        offsetY,
+        as = 'div',
+        onClose,
+        placement,
+        ...rest
+      },
+      forwardedRef
+    ) => {
+      const localMenuRef = useRef<HTMLElement | null>(null);
 
-Dropdown.Container = DropdownContainer;
-Dropdown.Detail = DropdownDetail;
-Dropdown.Select = DropdownSelect;
-Dropdown.Option = DropdownOption;
-Dropdown.Menu = DropdownMenu;
-export default Dropdown;
+      const setMenuRef = useCallback(
+        (node: HTMLElement | null) => {
+          localMenuRef.current = node;
+          setRef(forwardedRef, node);
+        },
+        [forwardedRef]
+      );
+
+      const { style: floatingStyle } = useFloatingPosition<HTMLElement>(
+        anchorRef,
+        isOpen,
+        {
+          matchWidth,
+          offsetX,
+          offsetY,
+          placement,
+          menuRef: localMenuRef,
+        }
+      );
+
+      useClickOutside({
+        refs: [localMenuRef, anchorRef],
+        handler: () => onClose?.(),
+      });
+
+      return (
+        <Portal isOpen>
+          <DropdownStyled
+            as={as}
+            data-testid={dataTestId}
+            ref={setMenuRef}
+            role='menu'
+            style={{ ...floatingStyle, ...style }}
+            {...rest}
+            aria-hidden={!isOpen}
+            onMouseDown={(e) => e.preventDefault()}
+          >
+            {children}
+          </DropdownStyled>
+        </Portal>
+      );
+    }
+  ),
+  {
+    Option: DropdownOption,
+  }
+);

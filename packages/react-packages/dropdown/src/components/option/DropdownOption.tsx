@@ -1,60 +1,55 @@
 import { BaseProps } from '@dt-dds/react-core';
-import { MouseEvent } from 'react';
-
-import { useDropdownContext } from '../../context';
-import { DropdownFill, DropdownOptionValue } from '../../types';
+import React, { forwardRef, MouseEvent } from 'react';
 
 import { DropdownOptionStyled } from './DropdownOption.styled';
-
-export interface DropdownOptionProps extends BaseProps {
-  fill?: DropdownFill;
-  option: DropdownOptionValue;
+export interface DropdownOptionProps
+  extends BaseProps,
+    React.LiHTMLAttributes<HTMLLIElement> {
   isDisabled?: boolean;
-  onClick?: (
-    option: string,
-    name: string | undefined,
-    event: MouseEvent<HTMLLIElement>
-  ) => void;
+  isSelected?: boolean;
+  isHighlighted?: boolean;
+  isMulti?: boolean;
 }
 
-export const DropdownOption = ({
-  dataTestId,
-  option,
-  children,
-  style,
-  isDisabled,
-  onClick,
-}: DropdownOptionProps) => {
-  const { state, setState, setIsOpen, name } = useDropdownContext();
+export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
+  (
+    {
+      dataTestId,
+      children,
+      style,
+      isDisabled,
+      isSelected = false,
+      isHighlighted = false,
+      onClick,
+      ...rest
+    },
+    ref
+  ) => {
+    const testId = dataTestId ?? 'dropdown-option';
 
-  const testId = dataTestId ?? `dropdown-option-${option.value}`;
+    const handleClick = (e: MouseEvent<HTMLLIElement>) => {
+      if (isDisabled) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
 
-  const value = {
-    text: option.text ?? option.value,
-    value: option.value,
-  };
+      onClick?.(e);
+    };
 
-  const handleClick = (event: MouseEvent<HTMLLIElement>) => {
-    if (isDisabled) {
-      return;
-    }
-
-    setIsOpen(false);
-    setState(value);
-    onClick && onClick(option.value, name, event);
-  };
-
-  return (
-    <DropdownOptionStyled
-      data-testid={testId}
-      disabled={isDisabled}
-      isSelected={state.value === option.value}
-      key={option.value}
-      onClick={handleClick}
-      role='option'
-      style={style}
-    >
-      {children}
-    </DropdownOptionStyled>
-  );
-};
+    return (
+      <DropdownOptionStyled
+        {...rest}
+        aria-disabled={isDisabled}
+        aria-selected={isSelected}
+        data-highlighted={isHighlighted}
+        data-testid={testId}
+        onClick={handleClick}
+        ref={ref}
+        style={style}
+      >
+        {children}
+      </DropdownOptionStyled>
+    );
+  }
+);
