@@ -61,6 +61,6 @@ runs:
 
     # Install dependencies if there isn't a hit on the cache
     - name: Install dependencies
-      if: steps.cache-node_modules.outputs.cache-hit != 'true'
+      # if: steps.cache-node_modules.outputs.cache-hit != 'true'
       shell: bash
       run: yarn --frozen-lockfile
