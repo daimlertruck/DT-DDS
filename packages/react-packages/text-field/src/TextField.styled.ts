@@ -1,4 +1,4 @@
-import { FieldScale } from '@dt-dds/react-label-field';
+import { Scale } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
 
 import {
@@ -14,7 +14,7 @@ export interface TextFieldStyledProps {
 
 export interface InputFieldStyledProps {
   isFloatingLabel: boolean;
-  scale: FieldScale;
+  scale: Scale;
 }
 
 export interface InputWrapperStyledProps {

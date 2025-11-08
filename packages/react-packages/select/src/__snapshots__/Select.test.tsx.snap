@@ -1,80 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Select /> component should render Select 1`] = `
+exports[`<Select /> Single Select should render with correct styles 1`] = `
 .emotion-0 {
-  position: relative;
-  width: 100%;
-}
-
-.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  width: 100%;
-  position: relative;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  overflow: hidden;
-}
-
-.emotion-4 {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  width: 100%;
-  height: 54px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #252525;
-  padding: 8px 12px;
-  gap: 8px;
-  background-color: #e6e6e6;
-  border-radius: 0px;
-  cursor: pointer;
-  border-width: 1px;
-  border-color: #1d1d1d;
-  border-style: solid;
 }
 
-.emotion-4:focus,
-.emotion-4:hover {
-  border-color: #1d1d1d;
-}
-
-.emotion-6 {
+.emotion-1 {
+  position: relative;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-  overflow: hidden;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.emotion-8 {
+.emotion-3 {
   font-family: Daimler CS;
   font-size: 14px;
   font-weight: 700;
@@ -102,18 +56,99 @@ exports[`<Select /> component should render Select 1`] = `
   transition: all 150ms ease-out;
 }
 
-.emotion-9 {
+.emotion-4 {
+  -webkit-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #252525;
+  padding: 12px;
+  gap: 8px;
+  background-color: #e6e6e6;
+  border-radius: 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-width: 1px;
+  border-color: #00677f;
+  border-style: solid;
 }
 
-.emotion-11 {
+.emotion-4:not([disabled]):focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+}
+
+.emotion-4:not([disabled]):not([aria-invalid="true"]):focus-visible,
+.emotion-4:not([disabled]):not([aria-invalid="true"]):hover {
+  border-color: #00677f;
+}
+
+.emotion-4:not([disabled])[aria-invalid="true"] {
+  border-color: #e80000;
+}
+
+.emotion-4:not([disabled])[aria-invalid="true"] i {
+  color: #e80000;
+}
+
+.emotion-4[disabled] {
+  color: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.emotion-4[disabled] i {
+  color: inherit;
+}
+
+.emotion-7 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #252525;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 16px;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  padding-block: 4px;
+}
+
+.emotion-10 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
-  font-size: 16px;
+  font-size: 24px;
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -129,76 +164,6 @@ exports[`<Select /> component should render Select 1`] = `
 }
 
 .emotion-12 {
-  list-style-type: none;
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  max-height: 180px;
-  overflow: auto;
-  margin-top: 4px;
-  padding: 16px 0px;
-  background-color: #ffffff;
-  display: block;
-  border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px #1018281a;
-}
-
-.emotion-14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px 16px;
-  gap: 4px;
-  background-color: #ffffff;
-  color: #252525;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-14:hover,
-.emotion-14:focus-within {
-  background-color: #c5c5c5;
-}
-
-.emotion-14[aria-disabled="true"] {
-  cursor: not-allowed;
-  color: #a9a9a9;
-}
-
-.emotion-14[aria-disabled="true"]:hover {
-  background-color: #ffffff;
-}
-
-.emotion-16 {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.emotion-34 {
-  padding-left: 16px;
-}
-
-.emotion-36 {
   font-family: Daimler CS;
   font-size: 12px;
   font-weight: 400;
@@ -206,19 +171,33 @@ exports[`<Select /> component should render Select 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #a9a9a9;
+  color: #3e3e3e;
+  padding-left: 12px;
 }
 
 <div>
   <div
-    class="emotion-0 emotion-1"
+    class="emotion-0"
+    data-testid="select"
+    style="align-items: start; gap: 4px;"
   >
     <div
-      class="emotion-2 emotion-3"
+      class="emotion-1 emotion-2"
     >
+      <label
+        class="emotion-3"
+        data-testid="label-field"
+        for="downshift-:r0:-toggle-button"
+        id="downshift-:r0:-label"
+        scale="standard"
+        style="pointer-events: none;"
+      >
+        Select label
+      </label>
       <div
-        aria-activedescendant=""
+        aria-activedescendant="downshift-:r0:-item-0"
         aria-controls="downshift-:r0:-menu"
+        aria-describedby="helper-text-id"
         aria-expanded="true"
         aria-haspopup="listbox"
         aria-labelledby="downshift-:r0:-label"
@@ -227,26 +206,20 @@ exports[`<Select /> component should render Select 1`] = `
         fill="default"
         id="downshift-:r0:-toggle-button"
         role="combobox"
+        scale="standard"
         tabindex="0"
       >
-        <div
+        <span
           class="emotion-6 emotion-7"
-        >
-          <label
-            class="emotion-8"
-            data-testid="label-field"
-            for="downshift-:r0:-toggle-button"
-            id="downshift-:r0:-label"
-            scale="standard"
-          >
-            select
-          </label>
-        </div>
+          color="content.default"
+          data-testid="select-value"
+        />
         <div
-          class="emotion-9 emotion-10"
+          class="emotion-8 emotion-9"
+          scale="standard"
         >
           <i
-            class="emotion-11"
+            class="emotion-10"
             color="#252525"
             data-testid="icon"
           >
@@ -255,290 +228,14 @@ exports[`<Select /> component should render Select 1`] = `
         </div>
       </div>
     </div>
-    <ul
-      aria-labelledby="downshift-:r0:-label"
-      aria-multiselectable="false"
-      class="emotion-12 emotion-13"
-      id="downshift-:r0:-menu"
-      role="listbox"
+    <span
+      class="emotion-11 emotion-12"
+      color="content.medium"
+      data-testid="select-helper-text"
+      id="helper-text-id"
     >
-      <li
-        aria-disabled="false"
-        aria-selected="false"
-        class="emotion-14 emotion-15"
-        id="downshift-:r0:-item-0"
-        role="option"
-      >
-        <div
-          class="emotion-16 emotion-17"
-        >
-          Option 1
-        </div>
-      </li>
-      <li
-        aria-disabled="false"
-        aria-selected="false"
-        class="emotion-14 emotion-15"
-        id="downshift-:r0:-item-1"
-        role="option"
-      >
-        <div
-          class="emotion-16 emotion-17"
-        >
-          Option 2
-        </div>
-      </li>
-      <li
-        aria-disabled="false"
-        aria-selected="false"
-        class="emotion-14 emotion-15"
-        id="downshift-:r0:-item-2"
-        role="option"
-      >
-        <div
-          class="emotion-16 emotion-17"
-        >
-          A text message to see how big labels will be handled
-        </div>
-      </li>
-      <li
-        aria-disabled="false"
-        aria-selected="false"
-        class="emotion-14 emotion-15"
-        id="downshift-:r0:-item-3"
-        role="option"
-      >
-        <div
-          class="emotion-16 emotion-17"
-        >
-          Option 3
-        </div>
-      </li>
-      <li
-        aria-disabled="false"
-        aria-selected="false"
-        class="emotion-14 emotion-15"
-        id="downshift-:r0:-item-4"
-        role="option"
-      >
-        <div
-          class="emotion-16 emotion-17"
-        >
-          Option 4
-        </div>
-      </li>
-    </ul>
-    <div
-      class="emotion-34 emotion-35"
-    >
-      <span
-        class="emotion-36"
-        color="content.light"
-        data-testid="typography"
-      >
-        you need to make a selection
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`<Select /> component should render Select as multi select 1`] = `
-.emotion-0 {
-  position: relative;
-  width: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  width: 100%;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.emotion-4 {
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  width: 100%;
-  height: 54px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #252525;
-  padding: 8px 12px;
-  gap: 8px;
-  background-color: #e6e6e6;
-  border-radius: 0px;
-  cursor: pointer;
-  border-width: 1px;
-  border-color: #c5c5c5;
-  border-style: solid;
-}
-
-.emotion-4:focus,
-.emotion-4:hover {
-  border-color: #1d1d1d;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: end;
-  -ms-flex-item-align: end;
-  align-self: end;
-  overflow: hidden;
-}
-
-.emotion-8 {
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #3e3e3e;
-  cursor: inherit;
-  font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0px;
-  line-height: 16px;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  left: 12px;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 150ms ease-out;
-  transition: all 150ms ease-out;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-11 {
-  font-family: DTUI-icons-outlined;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  font-variation-settings: 'FILL' 0;
-  color: #252525;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-}
-
-.emotion-12 {
-  list-style-type: none;
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  max-height: 180px;
-  overflow: auto;
-  margin-top: 4px;
-  padding: 16px 0px;
-  background-color: #ffffff;
-  display: none;
-  border-radius: 0px;
-  box-shadow: 0px 1px 3px 0px #1018281a;
-}
-
-<div>
-  <div
-    class="emotion-0 emotion-1"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <div
-        aria-activedescendant=""
-        aria-controls="downshift-:r4:-menu"
-        aria-expanded="false"
-        aria-haspopup="listbox"
-        aria-labelledby="downshift-:r4:-label"
-        class="emotion-4 emotion-5"
-        data-testid="select-container"
-        fill="default"
-        id="downshift-:r4:-toggle-button"
-        role="combobox"
-        tabindex="0"
-      >
-        <div
-          class="emotion-6 emotion-7"
-        >
-          <label
-            class="emotion-8"
-            data-testid="label-field"
-            for="downshift-:r4:-toggle-button"
-            id="downshift-:r4:-label"
-            scale="standard"
-          >
-            select
-          </label>
-        </div>
-        <div
-          class="emotion-9 emotion-10"
-        >
-          <i
-            class="emotion-11"
-            color="#252525"
-            data-testid="icon"
-          >
-            expand_more
-          </i>
-        </div>
-      </div>
-    </div>
-    <ul
-      aria-labelledby="downshift-:r4:-label"
-      aria-multiselectable="true"
-      class="emotion-12 emotion-13"
-      id="downshift-:r4:-menu"
-      role="listbox"
-    />
+      you need to make a selection
+    </span>
   </div>
 </div>
 `;

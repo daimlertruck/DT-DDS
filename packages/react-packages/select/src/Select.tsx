@@ -1,32 +1,29 @@
-import { BaseProps, useClickOutside } from '@dt-dds/react-core';
+import { Box } from '@dt-dds/react-box';
+import { BaseProps, Scale } from '@dt-dds/react-core';
+import { Dropdown } from '@dt-dds/react-dropdown';
 import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
 import { LabelField } from '@dt-dds/react-label-field';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { Typography } from '@dt-dds/react-typography';
 import { useSelect } from 'downshift';
 import {
-  useRef,
-  useState,
-  useEffect,
   Children,
   isValidElement,
-  ReactElement,
   useMemo,
-  useCallback,
+  MouseEvent,
+  KeyboardEvent,
+  useRef,
+  ReactNode,
 } from 'react';
 
 import { SelectOption } from './components/SelectOption';
 import { SelectProvider } from './context';
 import {
-  SelectMenuStyled,
   SelectContainerStyled,
-  SelectFieldStyled,
   SelectStyled,
-  HelperSelectFieldMessageStyled,
-  SelectValueContainerStyled,
+  TypographyHelperTextStyled,
   SelectActionContainerStyled,
-  SelectValueStyled,
+  TypographyValueStyled,
 } from './Select.styled';
 import { SelectOptionValue, SelectFill, SelectVariant } from './types';
 
@@ -35,147 +32,96 @@ interface BaseSelectProps extends BaseProps {
   hasError?: boolean;
   label: string;
   isRequired?: boolean;
-  errorMessage?: string;
   isDisabled?: boolean;
   variant?: SelectVariant;
   fill?: SelectFill;
+  isFloatingLabel?: boolean;
+  scale?: Scale;
+  labelIcon?: ReactNode;
 }
 
 interface SingleSelectProps extends BaseSelectProps {
   isMulti?: false;
-  initialValue?: string;
-  onChange?: (value: string) => void;
+  value?: string;
+  onChange: (value: string) => void;
 }
 
 interface MultiSelectProps extends BaseSelectProps {
   isMulti: true;
-  initialValue?: string[];
-  onChange?: (value: string[]) => void;
+  value?: string[];
+  onChange: (value: string[]) => void;
 }
 
 export type SelectProps = SingleSelectProps | MultiSelectProps;
 
-const createOptionObject = (element: ReactElement): SelectOptionValue => {
-  return {
-    value: element.props.value,
-    label: element.props.label,
-    disabled: !!element.props.disabled,
-  };
-};
+const helperTextId = 'helper-text-id';
 
-const itemToString = (item: SelectOptionValue | null): string => {
-  if (item) {
-    return item.label || item.value;
-  }
-  return '';
-};
-
-const Select = ({
+export const Select = ({
   dataTestId,
   style,
-  helperText = '',
-  hasError = false,
-  initialValue = '',
+  value,
   label,
-  isMulti = false,
+  isMulti,
   isRequired,
-  errorMessage,
   children,
   isDisabled,
+  labelIcon,
+  hasError = false,
+  helperText = '',
   variant = 'outlined',
   fill = 'default',
+  isFloatingLabel = true,
+  scale = 'standard',
   onChange,
 }: SelectProps) => {
-  const [selectedItems, setSelectedItems] = useState<SelectOptionValue[]>([]);
+  const anchorRef = useRef<HTMLDivElement | null>(null);
 
-  const ref = useRef<HTMLDivElement>(null);
-
-  const changeSelectedItems = useCallback(
-    (newItems: SelectOptionValue[], skipOnChangeTrigger = false) => {
-      setSelectedItems(newItems);
-      if (onChange && !skipOnChangeTrigger) {
-        if (isMulti) {
-          const values = newItems
-            .map((newSelectedItem) => newSelectedItem.value)
-            .filter((value) => Boolean(value));
-          (onChange as (value: string[]) => void)(values);
-        } else {
-          const value = newItems[0]?.value || '';
-          (onChange as (value: string) => void)(value);
-        }
-      }
-    },
-    [setSelectedItems, isMulti, onChange]
-  );
-
-  const clearSelection = (event: React.MouseEvent<HTMLElement>) => {
-    event.stopPropagation();
-    changeSelectedItems([]);
+  const handleClearKeyDown = (e: KeyboardEvent<HTMLElement>) => {
+    if (e.code === 'Enter' || e.code === 'Space') {
+      handleClearSelection(e);
+    }
   };
 
-  const helperMessage = hasError && errorMessage ? errorMessage : helperText;
+  const handleClearSelection = (
+    e: MouseEvent<HTMLElement> | KeyboardEvent<HTMLElement>
+  ) => {
+    e.stopPropagation();
 
-  const options = useMemo(() => {
+    isMulti && onChange([]);
+  };
+
+  const options: SelectOptionValue[] = useMemo(() => {
     const tempOptions = Children.map(children, (child) => {
       if (isValidElement(child) && child.props.value != undefined) {
-        return createOptionObject(child);
+        return {
+          value: child.props.value,
+          isDisabled: child.props.isDisabled,
+          label: child.props.children,
+        };
       }
 
       return null;
     });
-    return tempOptions ? tempOptions.filter(Boolean) : [];
+    return tempOptions?.filter(Boolean) ?? [];
   }, [children]);
 
-  const validSelectedItems = useMemo(() => {
-    const isSelectedItemValid = (selectedItem: SelectOptionValue) => {
-      return !!options.find((option) => option.value === selectedItem.value);
-    };
+  const selectedOptionsSet = useMemo(
+    () => new Set(value ? [value].flat() : []),
+    [value]
+  );
 
-    return selectedItems.filter(isSelectedItemValid);
-  }, [options, selectedItems]);
+  const selectedItems = useMemo(
+    () => options.filter((o) => selectedOptionsSet.has(o.value)),
+    [options, selectedOptionsSet]
+  );
 
-  useEffect(() => {
-    const getInitialOptions = () => {
-      if (Array.isArray(initialValue)) {
-        return initialValue
-          .map((value: string) =>
-            options.find((option) => option.value === value)
-          )
-          .filter((option): option is SelectOptionValue => Boolean(option));
-      } else {
-        return options.find((option) => option.value === initialValue);
-      }
-    };
+  const hasSelectedItems = !!selectedItems?.length;
 
-    const initalOptions = getInitialOptions();
-
-    if (
-      !initialValue ||
-      !initalOptions ||
-      (Array.isArray(initalOptions) && initalOptions.length === 0)
-    ) {
-      changeSelectedItems([], true);
-    } else {
-      if (Array.isArray(initalOptions)) {
-        changeSelectedItems(isMulti ? initalOptions : [initalOptions[0]], true);
-      } else {
-        changeSelectedItems([initalOptions], true);
-      }
-    }
-  }, [isMulti, initialValue, options, changeSelectedItems]);
-
-  /**
-   * When an option is no longer available, it should also be removed from the selected options
-   */
-  useEffect(() => {
-    if (options.length === 1 && selectedItems.length === 0) {
-      changeSelectedItems([options[0]]);
-    }
-
-    if (validSelectedItems.length !== selectedItems.length) {
-      changeSelectedItems(validSelectedItems);
-    }
-  }, [options, selectedItems, validSelectedItems, changeSelectedItems]);
+  const selectedValueContainerText = () => {
+    return selectedItems.length > 1
+      ? `${selectedItems.length} options selected`
+      : selectedItems[0]?.label;
+  };
 
   const {
     isOpen,
@@ -188,139 +134,173 @@ const Select = ({
   } = useSelect<SelectOptionValue>({
     items: options,
     isItemDisabled(item) {
-      return !!item.disabled;
+      return !!item.isDisabled;
     },
-    itemToString,
-    stateReducer: (state, actionAndChanges) => {
+    defaultHighlightedIndex: isMulti || !selectedItems?.[0] ? 0 : undefined,
+    selectedItem: !isMulti ? selectedItems?.[0] ?? null : null,
+    stateReducer(state, actionAndChanges) {
       const { changes, type } = actionAndChanges;
+
       switch (type) {
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownEnter:
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownSpaceButton:
-        case useSelect.stateChangeTypes.ItemClick:
         case useSelect.stateChangeTypes.ToggleButtonBlur:
           return {
             ...changes,
-            isOpen: isMulti,
+            isOpen: false,
+            selectedItem: state.selectedItem,
             highlightedIndex: state.highlightedIndex,
           };
+        case useSelect.stateChangeTypes.ItemClick:
+        case useSelect.stateChangeTypes.ToggleButtonKeyDownEnter:
+        case useSelect.stateChangeTypes.ToggleButtonKeyDownSpaceButton:
+          return isMulti
+            ? {
+                ...changes,
+                isOpen: true,
+                highlightedIndex: state.highlightedIndex,
+              }
+            : changes;
         default:
           return changes;
       }
     },
 
-    selectedItem: null,
     onSelectedItemChange: ({ selectedItem }) => {
-      let newSelectedItems: SelectOptionValue[] = [];
-
-      if (!isMulti) {
-        if (selectedItem) {
-          newSelectedItems = [selectedItem];
-        }
-      } else {
-        if (selectedItem) {
-          if (selectedItems.includes(selectedItem)) {
-            newSelectedItems = selectedItems.filter(
-              (item) => item !== selectedItem
-            );
-          } else {
-            newSelectedItems = [...selectedItems, selectedItem];
-          }
-        } else {
-          newSelectedItems = selectedItems;
-        }
+      if (!selectedItem) {
+        return;
       }
 
-      changeSelectedItems(newSelectedItems);
+      if (isMulti) {
+        const currentValue = Array.isArray(value) ? value : [];
+        const isSelectedItem = selectedOptionsSet.has(selectedItem.value);
+
+        const nextValue = isSelectedItem
+          ? currentValue.filter((v) => v !== selectedItem.value)
+          : [...currentValue, selectedItem.value];
+
+        onChange(nextValue);
+        return;
+      }
+
+      onChange(selectedItem.value);
     },
   });
 
-  const hasSelectedItems = !!selectedItems && !!selectedItems.length;
-
-  const selectedValueContainerText = () => {
-    return selectedItems.length > 1
-      ? `${selectedItems.length} options selected`
-      : selectedItems[0].label || selectedItems[0].value;
-  };
-
-  useClickOutside({ ref, handler: () => closeMenu() });
-
   const disabled = isDisabled || options.length === 1;
+
+  const toggleProps = getToggleButtonProps({
+    disabled,
+    tabIndex: disabled ? -1 : 0,
+    ref: anchorRef,
+  });
 
   return (
     <SelectProvider
-      value={{ highlightedIndex, getItemProps, selectedItems, isMulti }}
+      value={{
+        highlightedIndex,
+        getItemProps,
+        selectedItems,
+        isMulti: !!isMulti,
+      }}
     >
-      <SelectStyled data-testid={dataTestId} ref={ref} style={style}>
-        <SelectFieldStyled>
+      <Box
+        dataTestId={dataTestId ?? 'select'}
+        style={{ alignItems: 'start', gap: 4 }}
+      >
+        <SelectStyled style={style}>
+          <LabelField
+            {...getLabelProps()}
+            hasError={hasError}
+            icon={labelIcon}
+            isActive={isFloatingLabel ? hasSelectedItems : isOpen}
+            isCentered
+            isDisabled={disabled}
+            isFloating={isFloatingLabel}
+            isRequired={isRequired}
+            scale={scale}
+            {...(isFloatingLabel && {
+              style: { pointerEvents: 'none' },
+            })}
+          >
+            {label}
+          </LabelField>
+
           <SelectContainerStyled
-            {...getToggleButtonProps({ disabled })}
+            {...toggleProps}
+            {...(!!helperText && { 'aria-describedby': helperTextId })}
+            {...(hasError && { 'aria-invalid': hasError })}
             data-testid='select-container'
             fill={fill}
-            hasError={hasError}
             isOpen={isOpen}
+            scale={scale}
             variant={variant}
           >
-            <SelectValueContainerStyled>
-              <LabelField
-                {...getLabelProps()}
-                hasError={hasError}
-                isActive={hasSelectedItems}
-                isCentered
-                isDisabled={disabled}
-                isRequired={isRequired}
-              >
-                {label}
-              </LabelField>
-              {hasSelectedItems ? (
-                <SelectValueStyled>
-                  {selectedValueContainerText()}
-                </SelectValueStyled>
-              ) : null}
-            </SelectValueContainerStyled>
-            <SelectActionContainerStyled>
+            <TypographyValueStyled
+              color='content.default'
+              dataTestId='select-value'
+              element='span'
+              fontStyles='bodyMdRegular'
+              isFloatingLabel={isFloatingLabel}
+              scale={scale}
+              {...(disabled && { color: 'content.light' })}
+            >
+              {selectedValueContainerText()}
+            </TypographyValueStyled>
+
+            <SelectActionContainerStyled
+              hasItems={hasSelectedItems}
+              isFloatingLabel={isFloatingLabel}
+              scale={scale}
+            >
               {isMulti && hasSelectedItems ? (
                 <Tooltip>
-                  <IconButton onClick={clearSelection}>
-                    <Icon
-                      code='close'
-                      dataTestId='clear-selection'
-                      size='small'
-                    />
+                  <IconButton
+                    dataTestId='clear-selection'
+                    onClick={handleClearSelection}
+                    onKeyDown={handleClearKeyDown}
+                    onMouseDown={(e) => e.preventDefault()}
+                  >
+                    <Icon code='close_small' />
                   </IconButton>
                   <Tooltip.Content>Clear all</Tooltip.Content>
                 </Tooltip>
               ) : null}
-              <Icon
-                code={isOpen ? 'expand_less' : 'expand_more'}
-                size='small'
-              />
+              <Icon code={isOpen ? 'expand_less' : 'expand_more'} />
             </SelectActionContainerStyled>
           </SelectContainerStyled>
-        </SelectFieldStyled>
-        <SelectMenuStyled
-          {...getMenuProps()}
-          aria-multiselectable={isMulti}
-          isOpen={isOpen}
-        >
-          {isOpen ? children : null}
-        </SelectMenuStyled>
+        </SelectStyled>
 
-        {helperMessage ? (
-          <HelperSelectFieldMessageStyled>
-            <Typography
-              color={hasError ? 'error.default' : 'content.light'}
-              element='span'
-              fontStyles='bodySmRegular'
-            >
-              {helperMessage}
-            </Typography>
-          </HelperSelectFieldMessageStyled>
+        {helperText ? (
+          <TypographyHelperTextStyled
+            color={
+              isDisabled
+                ? 'content.light'
+                : hasError
+                ? 'error.default'
+                : 'content.medium'
+            }
+            dataTestId='select-helper-text'
+            element='span'
+            fontStyles='bodySmRegular'
+            id={helperTextId}
+          >
+            {helperText}
+          </TypographyHelperTextStyled>
         ) : null}
-      </SelectStyled>
+
+        <Dropdown
+          {...getMenuProps()}
+          anchorRef={anchorRef}
+          aria-multiselectable={isMulti}
+          as='ul'
+          isOpen={isOpen}
+          onClose={closeMenu}
+          style={{ maxHeight: 200 }}
+        >
+          {children}
+        </Dropdown>
+      </Box>
     </SelectProvider>
   );
 };
 
 Select.Option = SelectOption;
-
-export { Select };

@@ -1,7 +1,7 @@
-import { BaseProps } from '@dt-dds/react-core';
+import { BaseProps, Scale } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
-import { LabelField, FieldScale } from '@dt-dds/react-label-field';
+import { LabelField } from '@dt-dds/react-label-field';
 import { Typography } from '@dt-dds/react-typography';
 import {
   ChangeEvent,
@@ -43,7 +43,7 @@ export interface TextFieldProps
   inputRef?: RefObject<HTMLInputElement>;
   message?: string;
   variant?: TextFieldVariant;
-  scale?: FieldScale;
+  scale?: Scale;
   backgroundFill?: TextFieldBackgroundFill;
   onResetInput?: () => void;
 }
