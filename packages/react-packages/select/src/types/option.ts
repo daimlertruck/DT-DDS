@@ -1,7 +1,7 @@
 export type SelectOptionValue = {
-  label?: string;
   value: string;
-  disabled?: boolean;
+  isDisabled?: boolean;
+  label?: string;
 };
 
 export type SelectVariant = 'outlined' | 'bottom-line';

@@ -1,18 +1,14 @@
-import { Checkbox } from '@dt-dds/react-checkbox';
 import { BaseProps } from '@dt-dds/react-core';
+import { Dropdown } from '@dt-dds/react-dropdown';
 
 import { useSelectContext } from '../context';
 
-import {
-  SelectOptionStyled,
-  SelectOptionContentStyled,
-} from './SelectOption.styled';
+import { SelectCheckboxStyled } from './SelectOption.styled';
 
 export interface SelectOptionProps extends BaseProps {
   value: string;
-  label?: string;
   index: number;
-  disabled?: boolean;
+  isDisabled?: boolean;
 }
 
 export const SelectOption = ({
@@ -21,44 +17,38 @@ export const SelectOption = ({
   children,
   style,
   value,
-  label,
-  disabled,
+  isDisabled = false,
 }: SelectOptionProps) => {
   const { getItemProps, isItemHighlighted, isItemSelected, isMulti } =
     useSelectContext();
 
-  const item = { value: value, label: label, disabled: !!disabled };
+  const item = { value, isDisabled };
 
   const isSelected = isItemSelected(item);
-
   const isHighlighted = isItemHighlighted(index);
-  const itemProps = getItemProps({ item, index });
 
   return (
-    <SelectOptionStyled
-      aria-disabled={itemProps['aria-disabled']}
-      data-testid={dataTestId}
+    <Dropdown.Option
+      dataTestId={dataTestId}
+      isDisabled={isDisabled}
       isHighlighted={isHighlighted}
-      isMulti={isMulti}
-      style={style}
-      {...(!isMulti && {
-        ...itemProps,
-        'aria-selected': isSelected,
-      })}
+      isSelected={isSelected}
+      style={{ ...style, ...(isMulti ? { padding: 0 } : {}) }}
+      {...getItemProps({ item, index })}
     >
       {isMulti ? (
-        <Checkbox
+        <SelectCheckboxStyled
+          aria-hidden='true'
           isChecked={isSelected}
-          isDisabled={itemProps['aria-disabled']}
-          {...itemProps}
+          isDisabled={isDisabled}
+          role='presentation'
+          tabIndex={-1}
         >
-          {children || label || value}
-        </Checkbox>
+          {children}
+        </SelectCheckboxStyled>
       ) : (
-        <SelectOptionContentStyled isSelected={isSelected}>
-          {children || label || value}
-        </SelectOptionContentStyled>
+        children
       )}
-    </SelectOptionStyled>
+    </Dropdown.Option>
   );
 };

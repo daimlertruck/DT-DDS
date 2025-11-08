@@ -66,7 +66,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
             <Icon
               code='check'
               color={theme.palette.content.contrast}
-              size='m'
+              size='medium'
             />
           ) : null}
         </CheckBoxInputWrapper>

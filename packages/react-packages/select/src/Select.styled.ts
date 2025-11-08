@@ -1,4 +1,5 @@
-import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
+import { Scale } from '@dt-dds/react-core';
+import { Typography } from '@dt-dds/react-typography';
 import { CustomTheme as Theme } from '@dt-dds/themes';
 import styled from '@emotion/styled';
 
@@ -7,14 +8,16 @@ import { SelectFill, SelectVariant } from './types';
 export const SelectStyled = styled.div`
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: ${({ theme }) => theme.spacing.spacing_30};
 `;
 
 export interface SelectContainerStyledProps {
-  hasError: boolean;
-  disabled?: boolean;
   isOpen?: boolean;
   variant?: SelectVariant;
   fill?: SelectFill;
+  scale?: Scale;
 }
 
 const getThemedBackgroundFill = (fill: SelectFill, theme: Theme) =>
@@ -24,104 +27,126 @@ const getThemedBackgroundFill = (fill: SelectFill, theme: Theme) =>
     light: theme.palette.surface.light,
   }[fill]);
 
-export const SelectFieldStyled = styled.div`
-  display: flex;
-  height: auto;
-  width: 100%;
-  position: relative;
-  flex-direction: column;
-  overflow: hidden;
-`;
+type TypographyValueStyledProps = {
+  scale?: Scale;
+  isFloatingLabel?: boolean;
+};
 
-export interface LabelFieldProps {
-  isActive: boolean;
-  disabled?: boolean;
-}
-
-export const SelectMenuStyled = styled.ul<{ isOpen: boolean }>`
-  list-style-type: none;
-  position: absolute;
-  z-index: ${DROPDOWN_MENU_Z_INDEX};
-  width: 100%;
-  max-height: 180px;
-  overflow: auto;
-
-  ${({ isOpen, theme }) => `
-    margin-top:${theme.spacing.spacing_20};
-    padding:  ${theme.spacing.spacing_50} ${theme.spacing.spacing_0};
-    background-color: ${theme.palette.surface.contrast};
-    display: ${isOpen ? 'block' : 'none'};
-    border-radius: ${theme.shape.formField};
-    box-shadow: ${theme.shadows.elevation_200};
-  `}
-`;
-
-export const SelectValueContainerStyled = styled.div`
-  display: flex;
-  flex: 1;
-  align-self: end;
-  overflow: hidden;
-`;
-
-export const SelectValueStyled = styled.div`
+export const TypographyValueStyled = styled(Typography, {
+  shouldForwardProp: (prop) => prop !== 'scale' && prop !== 'isFloatingLabel',
+})<TypographyValueStyledProps>`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  ${({ theme }) => `
-    ${theme.fontStyles.bodyMdRegular}
-    color: ${theme.palette.content.default};
+  ${({ theme, scale, isFloatingLabel }) => `
+    ${
+      isFloatingLabel
+        ? `padding-top: ${
+            scale === 'standard'
+              ? theme.spacing.spacing_50
+              : theme.spacing.spacing_40
+          };`
+        : `padding-block: ${
+            scale === 'standard'
+              ? theme.spacing.spacing_30
+              : theme.spacing.spacing_20
+          };`
+    }
   `}
 `;
 
 export const SelectContainerStyled = styled.div<SelectContainerStyledProps>`
-  transition: all 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
   width: 100%;
-  height: 54px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 
   ${({
     theme,
-    hasError,
-    disabled,
     isOpen = false,
     variant = 'outlined',
     fill = 'default',
+    scale,
   }) => `
     ${theme.fontStyles.bodyMdRegular}
-    color: ${
-      disabled ? theme.palette.content.light : theme.palette.content.default
+    color: ${theme.palette.content.default};
+    padding: ${
+      scale === 'standard'
+        ? theme.spacing.spacing_40
+        : `${theme.spacing.spacing_30} ${theme.spacing.spacing_40}`
     };
-    padding: ${theme.spacing.spacing_30} ${theme.spacing.spacing_40};
-    gap: ${theme.spacing.spacing_30} ;
+    gap: ${theme.spacing.spacing_30};
     background-color: ${getThemedBackgroundFill(fill, theme)};
     border-radius: ${theme.shape.formField};
-    cursor: ${disabled ? 'not-allowed' : 'pointer'};
+    cursor: pointer;
+    user-select: none;
+
+
 
     border-width: ${variant === 'outlined' ? '1px' : '0 0 1px'};
-      border-color: ${
-        isOpen ? theme.palette.content.dark : theme.palette.border.medium
-      };
-      border-style: solid;
+    border-color: ${
+      isOpen ? theme.palette.informative.default : theme.palette.border.medium
+    };
+    border-style: solid;
 
-      &:focus, &:hover {
-        border-color: ${
-          hasError ? theme.palette.error.default : theme.palette.content.dark
-        };
+    &:not([disabled]){
+      &:focus-visible {
+        outline: 2px solid ${theme.palette.primary.default};
+        outline-offset: 1px; 
       }
 
-      ${hasError && `border-color: ${theme.palette.error.default}`};
+      &:not([aria-invalid="true"]){
+        &:focus-visible, &:hover {
+          border-color: ${theme.palette.informative.default};
+        }
+      }
+
+      &[aria-invalid="true"]{
+        border-color: ${theme.palette.error.default};
+
+        i {
+          color: ${theme.palette.error.default}
+        } 
+      }
+    }
+
+    &[disabled] {
+      color: ${theme.palette.content.light};
+      cursor: not-allowed;
+
+      i {
+        color: inherit;
+      }
+    }
   `};
 `;
 
-export const SelectActionContainerStyled = styled.div`
-  display: flex;
-`;
+interface SelectActionContainerStyledProps
+  extends Pick<SelectContainerStyledProps, 'scale'> {
+  hasItems: boolean;
+  isFloatingLabel: boolean;
+}
 
-export const HelperSelectFieldMessageStyled = styled.div`
+export const SelectActionContainerStyled = styled.div<SelectActionContainerStyledProps>`
+  display: flex;
+
+  ${({ scale, hasItems, isFloatingLabel, theme }) => `
+    gap: ${theme.spacing.spacing_30};
+
+    ${
+      (!hasItems || !isFloatingLabel) &&
+      `padding-block: ${
+        scale === 'standard'
+          ? theme.spacing.spacing_20
+          : theme.spacing.spacing_10
+      }`
+    }
+  `}
+`;
+export const TypographyHelperTextStyled = styled(Typography)`
   ${({ theme }) => `
-    padding-left: ${theme.spacing.spacing_50};
+    padding-left: ${theme.spacing.spacing_40};
   `}
 `;

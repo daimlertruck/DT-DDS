@@ -5,25 +5,36 @@ A Select is designed to gather input from users by offering a selection from a p
 ## Select Usage
 
 ```jsx
-import { Select, SelectOptionValue } from '@dt-dds/react-select';
+import { Select } from '@dt-dds/react-select';
 
-const items: SelectOptionValue[] = [
+const items = [
   { value: 'value1', label: 'Value 1' },
   { value: 'value2', label: 'Value 2' },
   { value: 'value3', label: 'Value 3', disabled: true },
 ];
 
 export const App = () => {
+  const [value, setValue] = useState < string > '';
+
   return (
-    <Select {...props}>
+    <Select
+      label='Choose a value'
+      helperText='you need to make a selection'
+      isMulti={false}
+      value={value}
+      onChange={setValue}
+      variant='outlined'
+      fill='default'
+    >
       {items.map((item, index) => (
         <Select.Option
-          disabled={item.disabled}
-          index={index}
           key={item.value}
-          label={item.label}
+          index={index}
           value={item.value}
-        />
+          disabled={item.disabled}
+        >
+          {item.label}
+        </Select.Option>
       ))}
     </Select>
   );
@@ -32,32 +43,35 @@ export const App = () => {
 
 ## Select
 
-| Property       | Type                 | Default    | Description                                                           |
-| -------------- | -------------------- | ---------- | --------------------------------------------------------------------- |
-| `label`        | `string`             | -          | A label to help users understand the scope of the select field.       |
-| `initialValue` | `string \| string[]` | []         | Sets the initial value of the select field.                           |
-| `helperText`   | `string`             | -          | The message to be displayed below the select field. Useful for hints. |
-| `hasError`     | `boolean`            | false      | Set error state for select field.                                     |
-| `isDisabled`   | `boolean`            | false      | Determines the disabled state of the select field.                    |
-| `isRequired`   | `boolean`            | -          | Set the state of the select field to required.                        |
-| `errorMessage` | `string`             | -          | The error message to show when hasError is true                       |
-| `style`        | `CSSProperties`      | -          | Add css style directly to the select field.                           |
-| `onChange`     | `function`           | -          | The triggered function when the selected option changes.              |
-| `isMulti`      | `boolean`            | false      | Toggles the Select between multi selection and single selection       |
-| `children`     | `React node`         | -          | Child components to be rendered. Useful to pass the list of options   |
-| `fill`         | `DropdownFill`       | `default`  | Styles the input with a specific background color                     |
-| `variant`      | `DropdownVariant`    | `outlined` | Styles the input with a specific border                               |
+| Property          | Type                       | Default                     | Description                                                                         |
+| ----------------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
+| `label`           | `string`                   | —                           | Field label to give context to the selection.                                       |
+| `value`           | `string`                   | `string[]`                  | Controlled value. A string for single-select; an array of strings for multi-select. |
+| `onChange`        | `(value: string) => void`  | `(value: string[]) => void` | Called when the selection changes (string in single mode; array in multi mode).     |
+| `isMulti`         | `boolean`                  | `false`                     | Toggles between single and multiple selection.                                      |
+| `helperText`      | `string`                   | -                           | Helper text displayed below the field; associated via `aria-describedby`.           |
+| `hasError`        | `boolean`                  | `false`                     | Error state (applies `aria-invalid` and error styles).                              |
+| `isDisabled`      | `boolean`                  | `false`                     | Disables user interaction.                                                          |
+| `isRequired`      | `boolean`                  | —                           | Marks the field as required.                                                        |
+| `isFloatingLabel` | `boolean`                  | `true`                      | Controls the “floating label” behavior.                                             |
+| `scale`           | `LabelFieldProps['scale']` | `'standard'`                | Visual scale/size for label/field.                                                  |
+| `labelIcon`       | `ReactNode`                | —                           | Optional icon rendered next to the label.                                           |
+| `variant`         | `SelectVariant`            | `'outlined'`                | Border/line variant of the field.                                                   |
+| `fill`            | `SelectFill`               | `'default'`                 | Background fill style of the field.                                                 |
+| `style`           | `React.CSSProperties`      | —                           | Inline styles applied to the Select wrapper.                                        |
+| `dataTestId`      | `string`                   | `'select'`                  | Test identifier applied to the component container.                                 |
+| `children`        | `ReactNode`                | —                           | Typically a list of `Select.Option`.                                                |
 
 ### Select.Option
 
-| Property     | Type                  | Default           | Description                                    |
-| ------------ | --------------------- | ----------------- | ---------------------------------------------- |
-| `children`   | `ReactNode`           | -                 | Child component to be rendered                 |
-| `value`      | `string`              | -                 | Value of the option                            |
-| `label`      | `string`              | -                 | Text that describes the option                 |
-| `style`      | `React.CSSProperties` | -                 | Add css style directly to the select option.   |
-| `dataTestId` | `string`              | `dropdown-select` | Customizable test identifier                   |
-| `index`      | `number`              | -                 | To be used to get the properties of the option |
+| Property     | Type                  | Default | Description                                                  |
+| ------------ | --------------------- | ------- | ------------------------------------------------------------ |
+| `children`   | `ReactNode`           | —       | Visible content of the option (the label shown to the user). |
+| `value`      | `string`              | —       | Option value.                                                |
+| `index`      | `number`              | —       | Option index in the list (used internally by Downshift).     |
+| `isDisabled` | `boolean`             | `false` | Disables the option.                                         |
+| `style`      | `React.CSSProperties` | —       | Inline styles for the option.                                |
+| `dataTestId` | `string`              | —       | Test identifier for the option.                              |
 
 ## Stack
 
