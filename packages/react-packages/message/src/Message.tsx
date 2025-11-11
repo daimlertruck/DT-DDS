@@ -1,38 +1,17 @@
-import { BaseProps } from '@dt-dds/react-core';
+import { Code } from '@dt-dds/icons';
+import { Box } from '@dt-dds/react-box';
+import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
-import { SVGProps, ReactElement } from 'react';
+import { useTheme } from '@emotion/react';
+import { Children, cloneElement, ReactElement, useMemo } from 'react';
 
+import { MESSAGE_ICONS } from './constants';
 import {
-  CheckCircleIcon,
-  CloseIcon,
-  ErrorIcon,
-  InfoIcon,
-  WarningIcon,
-} from '../../../dt-dds-react/core';
-
-import {
-  MessageStyled,
-  MessageIconStyled,
+  MessageActionsStyled,
   MessageButtonCloseStyled,
-  MessageContentStyled,
-  MessageActionStyled,
+  MessageStyled,
 } from './Message.styled';
-import { MessageType, OMessageType } from './types';
-
-export interface MessageProps extends BaseProps {
-  type: MessageType;
-  onClose?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
-
-type MessageIcon = (props: SVGProps<SVGSVGElement>) => ReactElement;
-
-export const MessageIcons: Record<MessageType, MessageIcon | null> = {
-  [OMessageType.Error]: ErrorIcon,
-  [OMessageType.Info]: InfoIcon,
-  [OMessageType.Success]: CheckCircleIcon,
-  [OMessageType.Warning]: WarningIcon,
-  [OMessageType.Default]: null,
-};
+import { ActionsProps, MessageProps, OMessageType } from './types';
 
 export const Message = ({
   children,
@@ -40,49 +19,92 @@ export const Message = ({
   style,
   type = OMessageType.Default,
   onClose,
+  description,
+  title,
+  orientation = 'horizontal',
 }: MessageProps) => {
-  const isDismissable = !!onClose;
-  const Icon = MessageIcons[type];
+  const theme = useTheme();
+  const isDefault = type === OMessageType.Default;
+  const isHorizontal = orientation === 'horizontal';
+  const isDismissible = !!onClose;
+  const textColor = isDefault ? 'content.default' : `${type}.dark`;
+  const iconColor = isDefault
+    ? theme.palette.content.default
+    : theme.palette[type].dark;
+
+  const clonedChildren = useMemo(
+    () =>
+      Children.map(children as ReactElement<MessageProps>, (child) => {
+        return (
+          child &&
+          cloneElement(child, {
+            ...child.props,
+            type: type,
+          })
+        );
+      }),
+    [children, type]
+  );
 
   return (
     <MessageStyled
       data-testid={dataTestId ?? 'message'}
+      messageType={type}
+      orientation={orientation}
       style={style}
-      type={type}
     >
-      {Icon ? (
-        <MessageIconStyled type={type}>
-          <Icon data-testid='message-icon' height='16px' width='16px' />
-        </MessageIconStyled>
-      ) : null}
-      <MessageContentStyled>{children}</MessageContentStyled>
-      {isDismissable ? (
-        <MessageButtonCloseStyled onClick={onClose}>
-          <CloseIcon height='16px' width='16px' />
+      {!isDefault && (
+        <Icon
+          code={MESSAGE_ICONS[type] as Code}
+          color={theme.palette[type].dark}
+          data-testid='message-icon'
+          dataTestId='message-icon'
+        />
+      )}
+
+      <Box
+        dataTestId='message-content'
+        style={{
+          flexDirection: isHorizontal ? 'row' : 'column',
+          justifyContent: 'space-between',
+          gap: isHorizontal
+            ? theme.spacing.spacing_30
+            : theme.spacing.spacing_50,
+          alignItems: isHorizontal ? 'center' : 'start',
+        }}
+      >
+        <Box style={{ alignItems: 'flex-start' }}>
+          {title ? (
+            <Typography color={textColor} fontStyles='bodyLgBold'>
+              {title}
+            </Typography>
+          ) : null}
+          <Typography color={textColor} fontStyles='bodyLgRegular'>
+            {description}
+          </Typography>
+        </Box>
+        {clonedChildren}
+      </Box>
+
+      {isDismissible ? (
+        <MessageButtonCloseStyled
+          aria-label='Close message'
+          messageType={type}
+          onClick={onClose}
+          orientation={orientation}
+        >
+          <Icon code='close' color={iconColor} />
         </MessageButtonCloseStyled>
       ) : null}
     </MessageStyled>
   );
 };
 
-Message.Title = ({ children }: BaseProps) => {
-  return (
-    <Typography color='content.dark' element='h2' fontStyles='bodyMdBold'>
-      {children}
-    </Typography>
-  );
-};
-
-Message.Description = ({ children }: BaseProps) => {
-  return (
-    <Typography color='content.default' fontStyles='bodySmRegular'>
-      {children}
-    </Typography>
-  );
-};
-
-Message.Action = ({ children, dataTestId }: BaseProps) => (
-  <MessageActionStyled data-testid={dataTestId ?? 'message-action'}>
+Message.Actions = ({ children, dataTestId, type }: ActionsProps) => (
+  <MessageActionsStyled
+    data-testid={dataTestId ?? 'message-actions'}
+    messageType={type!}
+  >
     {children}
-  </MessageActionStyled>
+  </MessageActionsStyled>
 );

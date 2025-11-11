@@ -1,13 +1,11 @@
-import { Link } from '@dt-dds/react-link';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Button } from '@dt-dds/react-button';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { Message, MessageProps } from './Message';
-import { OMessageType } from './types';
+import { Message } from './Message';
+import { OMessageType, MessageProps } from './types';
 
 interface MessageStory extends MessageProps {
-  description?: string;
   hasActions?: boolean;
-  title?: string;
 }
 
 const meta: Meta<MessageStory> = {
@@ -28,24 +26,27 @@ const meta: Meta<MessageStory> = {
         },
       },
     },
+    orientation: {
+      options: ['horizontal', 'vertical'],
+      control: { type: 'inline-radio' },
+    },
   },
-  render: ({ hasActions, onClose, title, description, type }) => (
+  render: ({ hasActions, onClose, title, description, type, orientation }) => (
     <Message
       {...(onClose && {
         onClose: () => console.log('closed'),
       })}
+      description={description}
+      orientation={orientation}
+      title={title}
       type={type}
     >
-      {title ? <Message.Title>{title}</Message.Title> : null}
-      {description ? (
-        <Message.Description>{description}</Message.Description>
-      ) : null}
       {hasActions ? (
-        <Message.Action>
-          <Link href='#' textSize='small'>
-            View action
-          </Link>
-        </Message.Action>
+        <Message.Actions>
+          <Button size='small' variant='text'>
+            Action
+          </Button>
+        </Message.Actions>
       ) : null}
     </Message>
   ),
@@ -59,16 +60,6 @@ export const Default: StoryObj<MessageStory> = {
     title: 'This is a title',
     description: 'Some important information will appear here.',
     onClose: true as unknown as MessageStory['onClose'],
+    orientation: 'horizontal',
   },
-};
-
-export const WithCustomContent: StoryObj<MessageStory> = {
-  args: {
-    type: OMessageType.Info,
-  },
-  render: ({ type }) => (
-    <Message style={{ alignItems: 'center' }} type={type}>
-      <p>This is a custom and non-dismissable content</p>
-    </Message>
-  ),
 };
