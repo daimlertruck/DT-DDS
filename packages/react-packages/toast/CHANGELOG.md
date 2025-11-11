@@ -1,5 +1,11 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.90
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.73
+
 ## 1.0.0-beta.89
 
 ### Patch Changes

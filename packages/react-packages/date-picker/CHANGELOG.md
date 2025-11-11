@@ -1,5 +1,11 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- @dt-dds/react-text-field@1.0.0-beta.83
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

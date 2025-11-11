@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.243
+
+### Minor Changes
+
+- feat: refactor message component
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-message@1.0.0-beta.89
+  - @dt-dds/react-box@1.0.0-beta.44
+  - @dt-dds/react-dropdown@1.0.0-beta.65
+  - @dt-dds/react-radio@1.0.0-beta.60
+  - @dt-dds/react-spinner@1.0.0-beta.78
+  - @dt-dds/react-tabs@1.0.0-beta.73
+  - @dt-dds/react-text-area@1.0.0-beta.55
+  - @dt-dds/react-button@1.0.0-beta.73
+  - @dt-dds/react-modal@1.0.0-beta.73
+  - @dt-dds/react-text-field@1.0.0-beta.83
+  - @dt-dds/react-empty-state@1.0.0-beta.93
+  - @dt-dds/react-link@1.0.0-beta.50
+  - @dt-dds/react-toast@1.0.0-beta.90
+  - @dt-dds/react-date-picker@1.0.0-beta.66
+
 ## 1.0.0-beta.242
 
 ### Patch Changes

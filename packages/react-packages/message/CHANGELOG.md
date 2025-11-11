@@ -1,5 +1,15 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.89
+
+### Minor Changes
+
+- feat: refactor message component
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.73
+
 ## 1.0.0-beta.88
 
 ### Patch Changes
