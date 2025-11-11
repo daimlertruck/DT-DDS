@@ -7,7 +7,7 @@ Furthermore, it can be used to add an action like a link, by passing it as a chi
 ## Usage
 
 ```jsx
-import { Message } from '@dt-dds/react';
+import { Message, Button } from '@dt-dds/react';
 
 export const App = () => {
   const title = 'Some Title';
@@ -15,14 +15,12 @@ export const App = () => {
   const type = 'Error';
 
   return (
-    <Message type={type}>
-      <Message.Title>{title}</Message.Title>
-      <Message.Description>{description}</Message.Description>
-      <Message.Action>
-        <Link textSize='small' href='/'>
+    <Message type={type} title={title} description={description}>
+      <Message.Actions>
+        <Button size='small' variant='text'>
           View action
-        </Link>
-      </Message.Action>
+        </Button>
+      </Message.Actions>
     </Message>
   );
 };
@@ -32,34 +30,23 @@ export const App = () => {
 
 ### Message
 
-| Property      | Type                  | Default     | Description                                                                                                                                                              |
-| ------------- | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `children`    | `ReactNode`           | -           | Child components to be rendered. There is flexibility on what the content can be, but the recommendation is that it should be a link with a character count limit of 25. |
-| `dataTestId`  | `string`              | `'message'` | Customizable test identifier.                                                                                                                                            |
-| `style`       | `React.CSSProperties` | -           | Customizable styles                                                                                                                                                      |
-| `type`        | `MessageType`         | `'default'` | Sets the type of the Message, responsible for the icon and It's color, the background color and color of the dashed border                                               |
-| `title`       | `string`              | -           | Optional Text to be presented as Title within the Message.Content, It should have text character count limit: 50.                                                        |
-| `description` | `string`              | -           | Text to be presented as Description within the Message.Content, It should have text character count limit: 230.                                                          |
-| `onClose`     | `function`            | -           | When provided, a close button is displayed and, when clicked, it triggers this function.                                                                                 |
+| Property      | Type                  | Default        | Description                                                                                                                                                              |
+| ------------- | --------------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `children`    | `ReactNode`           | -              | Child components to be rendered. There is flexibility on what the content can be, but the recommendation is that it should be a link with a character count limit of 25. |
+| `dataTestId`  | `string`              | `'message'`    | Customizable test identifier.                                                                                                                                            |
+| `style`       | `React.CSSProperties` | -              | Customizable styles                                                                                                                                                      |
+| `type`        | `MessageType`         | `'default'`    | Sets the type of the Message, responsible for the icon and It's color, the background color and color of the dashed border                                               |
+| `title`       | `string`              | -              | Optional Text to be presented as Title within the Message.Content, It should have text character count limit: 50.                                                        |
+| `description` | `string`              | -              | Text to be presented as Description within the Message.Content, It should have text character count limit: 230.                                                          |
+| `onClose`     | `function`            | -              | When provided, a close button is displayed and, when clicked, it triggers this function.                                                                                 |
+| `orientation` | `Orientation`         | `'horizontal'` | Sets the orientation of the message component.                                                                                                                           |
 
-### Message.Title
+### Message.Actions
 
-| Property   | Type        | Default | Description                                                          |
-| ---------- | ----------- | ------- | -------------------------------------------------------------------- |
-| `children` | `ReactNode` | -       | Child components to be rendered within the action. Text is expected. |
-
-### Message.Description
-
-| Property   | Type        | Default | Description                                                          |
-| ---------- | ----------- | ------- | -------------------------------------------------------------------- |
-| `children` | `ReactNode` | -       | Child components to be rendered within the action. Text is expected. |
-
-### Message.Action
-
-| Property     | Type        | Default            | Description                                        |
-| ------------ | ----------- | ------------------ | -------------------------------------------------- |
-| `children`   | `ReactNode` | -                  | Child components to be rendered within the action. |
-| `dataTestId` | `string`    | `'message-action'` | Customizable test identifier for the action.       |
+| Property     | Type        | Default            | Description                                      |
+| ------------ | ----------- | ------------------ | ------------------------------------------------ |
+| `children`   | `ReactNode` | -                  | Container to render actions. Button is expected. |
+| `dataTestId` | `string`    | `'message-action'` | Customizable test identifier for the action.     |
 
 ## Stack
 

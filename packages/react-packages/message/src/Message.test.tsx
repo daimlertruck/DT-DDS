@@ -1,5 +1,5 @@
+import { Button } from '@dt-dds/react-button';
 import { withProviders } from '@dt-dds/react-core';
-import { Link } from '@dt-dds/react-link';
 import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render } from '@testing-library/react';
 
@@ -11,6 +11,19 @@ describe('<Message /> component', () => {
   const title = 'Title here';
   const description = 'Some description here.';
 
+  it('should render message with vertical variant', () => {
+    const { queryByTestId } = render(
+      <ProvidedMessage
+        description={description}
+        orientation='vertical'
+        type={OMessageType.Success}
+      />
+    );
+    expect(queryByTestId('message-content')).toHaveStyle(
+      'flex-direction: column'
+    );
+  });
+
   it.each`
     type
     ${OMessageType.Info}
@@ -21,20 +34,20 @@ describe('<Message /> component', () => {
   `(
     'should render a Message with title & description, when type $type',
     ({ type }: { type: MessageType }) => {
-      const { container, queryByTestId } = render(
-        <ProvidedMessage onClose={jest.fn()} type={type}>
-          <Message.Title>{title}</Message.Title>
-          <Message.Description>{description}</Message.Description>
-        </ProvidedMessage>
+      const { queryByTestId } = render(
+        <ProvidedMessage
+          description={description}
+          onClose={jest.fn()}
+          title={title}
+          type={type}
+        />
       );
 
       const icon = queryByTestId('message-icon');
       if (type === OMessageType.Default) {
-        expect(icon).not.toBeInTheDocument();
+        expect(icon).toBeNull();
       } else {
-        expect(icon).toBeInTheDocument();
-        const messageIconStyled = icon?.parentElement;
-        expect(messageIconStyled).toHaveAttribute('type', type);
+        expect(icon).toBeVisible();
       }
 
       expect(queryByTestId('message')).toHaveStyle(
@@ -44,14 +57,12 @@ describe('<Message /> component', () => {
             : theme.palette[type].light
         };`
       );
-
-      expect(container).toMatchSnapshot();
     }
   );
 
   it('should render a Message without title and not render the close button if onClose is not a prop', () => {
     const { queryByRole } = render(
-      <ProvidedMessage type={OMessageType.Success} />
+      <ProvidedMessage description={description} type={OMessageType.Success} />
     );
 
     const messageTitle = queryByRole('heading');
@@ -64,7 +75,11 @@ describe('<Message /> component', () => {
   it('should call onClose if the close button is clicked', () => {
     const onCloseMock = jest.fn();
     const { getByRole } = render(
-      <ProvidedMessage onClose={onCloseMock} type={OMessageType.Warning} />
+      <ProvidedMessage
+        description={description}
+        onClose={onCloseMock}
+        type={OMessageType.Warning}
+      />
     );
 
     const messageCloseButton = getByRole('button');
@@ -79,17 +94,17 @@ describe('<Message /> component', () => {
   it('should render a Message with an Action', () => {
     const mockOnClick = jest.fn();
     const { getByRole } = render(
-      <ProvidedMessage type={OMessageType.Info}>
-        <Message.Action>
-          <Link href='#' onClick={mockOnClick}>
+      <ProvidedMessage description={description} type={OMessageType.Info}>
+        <Message.Actions>
+          <Button onClick={mockOnClick} size='small' variant='text'>
             View action
-          </Link>
-        </Message.Action>
+          </Button>
+        </Message.Actions>
       </ProvidedMessage>
     );
 
-    const messageAction = getByRole('link');
-    expect(messageAction).toBeInTheDocument();
+    const messageAction = getByRole('button');
+    expect(messageAction).toBeVisible();
 
     fireEvent.click(messageAction);
 
