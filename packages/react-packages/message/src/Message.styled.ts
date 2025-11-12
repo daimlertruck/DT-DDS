@@ -10,6 +10,7 @@ interface MessageStyledProps {
 
 export const MessageStyled = styled.div<MessageStyledProps>`
   display: grid;
+  width: 100%;
   padding: ${({ theme }) =>
     `${theme.spacing.spacing_40} ${theme.spacing.spacing_50}`};
   border-radius: ${({ theme }) => theme.shape.message};
