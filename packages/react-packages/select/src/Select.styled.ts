@@ -1,8 +1,9 @@
+import styled from '@emotion/styled';
+
 import { Scale } from '@dt-dds/react-core';
 import { Dropdown } from '@dt-dds/react-dropdown';
 import { Typography } from '@dt-dds/react-typography';
 import { CustomTheme as Theme } from '@dt-dds/themes';
-import styled from '@emotion/styled';
 
 import { SelectFill, SelectVariant } from './types';
 

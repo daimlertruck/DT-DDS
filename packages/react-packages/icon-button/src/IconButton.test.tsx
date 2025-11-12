@@ -1,7 +1,9 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+
+import { css } from '@emotion/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
-import { css } from '@emotion/react';
-import { fireEvent, render, screen } from '@testing-library/react';
 
 import { IconButton, IconButtonProps } from './IconButton';
 import { MockAvatar, MockAvatarType } from './mocks/MockAvatar';

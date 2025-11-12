@@ -1,6 +1,7 @@
-import { ComponentSize } from '@dt-dds/react-core';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+
+import { ComponentSize } from '@dt-dds/react-core';
 
 import { IconButtonVariant } from './constants';
 

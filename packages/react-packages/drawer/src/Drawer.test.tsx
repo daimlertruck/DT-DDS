@@ -1,6 +1,7 @@
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
 import { default as Drawer } from './Drawer';
 

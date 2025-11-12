@@ -1,4 +1,3 @@
-import { BaseProps } from '@dt-dds/react-core';
 import {
   ComponentPropsWithoutRef,
   ElementType,
@@ -8,6 +7,8 @@ import {
   ReactElement,
   Ref,
 } from 'react';
+
+import { BaseProps } from '@dt-dds/react-core';
 
 import { DropdownOptionStyled } from './DropdownOption.styled';
 

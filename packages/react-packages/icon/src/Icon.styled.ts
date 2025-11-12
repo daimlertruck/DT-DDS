@@ -1,5 +1,6 @@
-import { ComponentSize } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { ComponentSize } from '@dt-dds/react-core';
 
 import { Variant } from './types';
 

@@ -1,6 +1,8 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { cloneElement, useRef } from 'react';
 
+import { BaseProps } from '@dt-dds/react-core';
+
+import { RowStyled } from './TableRow.styled';
 import { useTableContext } from '../../context';
 import {
   getColumnsWidths,
@@ -8,8 +10,6 @@ import {
   getFixedEndColumnPosition,
   mapValidChildren,
 } from '../../utils/fixedColumns';
-
-import { RowStyled } from './TableRow.styled';
 
 const SHADOW_COLUMN_LEFT = 0;
 const SHADOW_COLUMN_RIGHT = 1;

@@ -1,5 +1,6 @@
+import { Meta, StoryObj } from '@storybook/react';
+
 import { Icon } from '@dt-dds/react-icon';
-import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { LabelField, LabelFieldProps } from './LabelField';
 

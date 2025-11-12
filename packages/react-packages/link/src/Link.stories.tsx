@@ -1,7 +1,8 @@
 import { codes } from '@dt-dds/icons';
-import type { Meta, StoryObj } from '@storybook/react';
 
 import { Link, LinkProps } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const TEXT_SIZES = ['small', 'medium', 'large'];
 

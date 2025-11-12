@@ -1,5 +1,6 @@
-import { TABLE_STICKY_COLUMN_Z_INDEX } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { TABLE_STICKY_COLUMN_Z_INDEX } from '@dt-dds/react-core';
 
 import { COLUMN_MIN_WIDTH } from '../../constants';
 import { TextAlign } from '../../types';

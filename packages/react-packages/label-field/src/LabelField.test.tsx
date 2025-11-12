@@ -1,7 +1,8 @@
+import { render } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { render } from '@testing-library/react';
 
 import { LabelField } from './LabelField';
 

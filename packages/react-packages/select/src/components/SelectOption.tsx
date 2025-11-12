@@ -1,10 +1,10 @@
+import { ReactNode } from 'react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Dropdown } from '@dt-dds/react-dropdown';
-import { ReactNode } from 'react';
 
 import { useSelectContext } from '../context';
 import { SelectOptionValue } from '../types';
-
 import { SelectCheckboxStyled } from './SelectOption.styled';
 
 export interface SelectOptionProps extends BaseProps {

@@ -1,7 +1,8 @@
-import { Button } from '@dt-dds/react-button';
-import { withProviders } from '@dt-dds/react-core';
 import { act, fireEvent, render, screen } from '@testing-library/react';
 import { toast, ToasterProps } from 'react-hot-toast';
+
+import { Button } from '@dt-dds/react-button';
+import { withProviders } from '@dt-dds/react-core';
 
 import { ToastType } from './constants';
 import Toast from './Toast';

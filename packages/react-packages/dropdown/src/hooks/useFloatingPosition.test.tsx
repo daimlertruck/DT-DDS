@@ -1,8 +1,10 @@
-import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
-import { render, screen } from '@testing-library/react';
 import { useRef } from 'react';
 
 import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+
+import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
+
 import { useFloatingPosition } from './useFloatingPosition';
 
 type RectInit = { left: number; top: number; width: number; height: number };

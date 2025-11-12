@@ -1,6 +1,8 @@
-import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
-import { FocusTrap } from 'focus-trap-react';
 import { forwardRef, RefObject, useCallback, useRef } from 'react';
+
+import { FocusTrap } from 'focus-trap-react';
+
+import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
 
 import { DropdownOption } from './components';
 import { DropdownStyled } from './Dropdown.styled';

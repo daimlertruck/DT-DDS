@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { Tag, TagProps } from './Tag';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const TagVariantOptions = {
   Solid: 'solid',

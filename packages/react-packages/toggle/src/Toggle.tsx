@@ -1,5 +1,6 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { MouseEvent, KeyboardEvent } from 'react';
+
+import { BaseProps } from '@dt-dds/react-core';
 
 import {
   ToggleCheckBoxStyled,

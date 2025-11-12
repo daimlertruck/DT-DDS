@@ -1,11 +1,11 @@
-import { BaseProps } from '@dt-dds/react-core';
-import { Tooltip, TooltipBackground } from '@dt-dds/react-tooltip';
 import { forwardRef, useEffect, useRef, useState } from 'react';
 
-import { CloseIcon } from '../../../dt-dds-react/core/assets';
+import { BaseProps } from '@dt-dds/react-core';
+import { Tooltip, TooltipBackground } from '@dt-dds/react-tooltip';
 
 import { TagBorder, TagColor, TagSize, TagVariant } from './constants';
 import { TagStyled, TagButtonCloseStyled } from './Tag.styled';
+import { CloseIcon } from '../../../dt-dds-react/core/assets';
 
 export type TagProps = {
   variant?: TagVariant;

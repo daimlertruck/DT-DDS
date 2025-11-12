@@ -1,8 +1,9 @@
 import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import type { Meta, StoryObj } from '@storybook/react';
 
 import { TextArea, TextAreaProps } from './TextArea';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<TextAreaProps> = {
   title: 'Data Display/TextArea',

@@ -1,9 +1,10 @@
 import { Orientation } from '@dt-dds/react-core';
-import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Step } from './components/Step';
 
 import { Stepper, StepperProps } from './';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const OrientationOptions = {
   Vertical: 'vertical',

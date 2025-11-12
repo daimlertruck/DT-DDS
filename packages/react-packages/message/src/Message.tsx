@@ -1,10 +1,12 @@
+import { Children, cloneElement, ReactElement, useMemo } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { Code } from '@dt-dds/icons';
 import { Box } from '@dt-dds/react-box';
 import { useMedia } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
-import { Children, cloneElement, ReactElement, useMemo } from 'react';
 
 import { MESSAGE_ICONS } from './constants';
 import {

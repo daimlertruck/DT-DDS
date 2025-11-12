@@ -1,5 +1,3 @@
-import { CustomTheme } from '../../types';
-
 import { animations } from './animations';
 import { breakpoints } from './breakpoints';
 import { colors } from './colors';
@@ -11,6 +9,7 @@ import { shadows } from './shadows';
 import { shape } from './shape';
 import { spacing } from './spacing';
 import { fontFamily, fontStyles, responsiveFontStyles } from './typography';
+import { CustomTheme } from '../../types';
 
 export const theme: CustomTheme = {
   animations,

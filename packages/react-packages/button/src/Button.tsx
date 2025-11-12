@@ -1,6 +1,7 @@
+import { ComponentPropsWithoutRef } from 'react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Spinner } from '@dt-dds/react-spinner';
-import { ComponentPropsWithoutRef } from 'react';
 
 import { ButtonStyled } from './Button.styled';
 import { ButtonAppearance, ButtonSize, ButtonVariant } from './constants';

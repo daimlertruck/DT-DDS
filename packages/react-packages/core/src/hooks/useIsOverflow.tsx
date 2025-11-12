@@ -1,5 +1,6 @@
-import { useTheme } from '@emotion/react';
 import { useCallback, useRef, useState } from 'react';
+
+import { useTheme } from '@emotion/react';
 
 import useDebounceResize from './useDebounceResize';
 import useMedia from './useMedia';

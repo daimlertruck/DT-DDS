@@ -1,10 +1,10 @@
-import { Button } from '@dt-dds/react-button';
-import { withProviders } from '@dt-dds/react-core';
 import { render } from '@testing-library/react';
 
-import { NoDataIcon } from '../../../dt-dds-react/core';
+import { Button } from '@dt-dds/react-button';
+import { withProviders } from '@dt-dds/react-core';
 
 import { EmptyState } from './EmptyState';
+import { NoDataIcon } from '../../../dt-dds-react/core';
 
 describe('<EmptyState /> component', () => {
   const ProvidedEmptyState = withProviders(EmptyState);

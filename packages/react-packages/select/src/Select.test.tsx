@@ -1,8 +1,10 @@
-import { withProviders } from '@dt-dds/react-core';
-import { theme } from '@dt-dds/themes';
+import { act, useState } from 'react';
+
 import { render, fireEvent, within, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { act, useState } from 'react';
+
+import { withProviders } from '@dt-dds/react-core';
+import { theme } from '@dt-dds/themes';
 
 import { SelectOption as SelectOptionRaw } from './components/SelectOption';
 import { SelectProps, Select as SelectRaw } from './Select';

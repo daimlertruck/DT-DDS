@@ -17,7 +17,7 @@ export const HeaderStyled = styled.div<HeaderProps>`
     };
     gap: ${theme.spacing.spacing_30};
 
-    @media only screen and (min-width: ${theme.breakpoints.mq32}px) {
+    @media only screen and (min-width: ${theme.breakpoints.mq3}px) {
       padding-top: ${theme.spacing.s};
     }
 

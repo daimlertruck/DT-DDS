@@ -1,8 +1,9 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
-import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Card } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type CardStoryProps = BaseProps & {
   title: string;

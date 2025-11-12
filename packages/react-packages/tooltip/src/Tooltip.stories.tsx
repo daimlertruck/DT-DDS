@@ -1,13 +1,14 @@
-import { IconButton } from '@dt-dds/react-icon-button';
-import styled from '@emotion/styled';
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { DeleteIcon } from '../../../dt-dds-react/core';
+import styled from '@emotion/styled';
+
+import { IconButton } from '@dt-dds/react-icon-button';
 
 import { TooltipContainerProps } from './components/container';
 import { TooltipContentProps } from './components/content';
 import { OTooltipBackground, OTooltipDirection } from './constants';
 import Tooltip from './Tooltip';
+import { DeleteIcon } from '../../../dt-dds-react/core';
 
 const StyledContainer = styled.div`
   text-align: center;

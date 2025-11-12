@@ -1,6 +1,7 @@
+import { StoryFn } from '@storybook/react-vite';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { TextField } from '@dt-dds/react-text-field';
-import { StoryFn } from '@storybook/react-vite';
 
 import { GroupProps } from './Form';
 

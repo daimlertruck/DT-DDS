@@ -1,6 +1,8 @@
-import { defaultTheme, FontFace, CustomTheme as Theme } from '@dt-dds/themes';
-import { ThemeProvider, Global } from '@emotion/react';
 import React from 'react';
+
+import { ThemeProvider, Global } from '@emotion/react';
+
+import { defaultTheme, FontFace, CustomTheme as Theme } from '@dt-dds/themes';
 
 import { globalStyles } from '../utils/globalStyles';
 

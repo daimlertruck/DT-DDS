@@ -1,7 +1,9 @@
+import React from 'react';
+
+import styled from '@emotion/styled';
+
 import { Icon } from '@dt-dds/react-icon';
 import { theme } from '@dt-dds/themes';
-import styled from '@emotion/styled';
-import React from 'react';
 
 export type MockAvatarType = 'letter' | 'photo' | 'collapsed' | 'thumbnail';
 export type MockAvatarSize = 'small' | 'medium' | 'large';

@@ -1,5 +1,3 @@
-const { resolve } = require('node:path');
-
 module.exports = {
   extends: [
     'plugin:@typescript-eslint/recommended',
@@ -45,15 +43,39 @@ module.exports = {
           'builtin',
           'external',
           'internal',
-          'parent',
-          'sibling',
+          ['parent', 'sibling'],
           'index',
+          'type',
         ],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: 'react-dom',
+            group: 'external',
+            position: 'before',
+          },
+          {
+            pattern: '@emotion/**',
+            group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: '@dt-dds/**',
+            group: 'internal',
+            position: 'before',
+          },
+        ],
+        pathGroupsExcludedImportTypes: ['type'],
         alphabetize: {
           order: 'asc',
           caseInsensitive: true,
         },
         'newlines-between': 'always',
+        warnOnUnassignedImports: true,
       },
     ],
     'react/function-component-definition': [

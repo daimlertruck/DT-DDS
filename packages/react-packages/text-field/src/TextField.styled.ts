@@ -1,5 +1,6 @@
-import { Scale } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { Scale } from '@dt-dds/react-core';
 
 import {
   TextFieldVariant,

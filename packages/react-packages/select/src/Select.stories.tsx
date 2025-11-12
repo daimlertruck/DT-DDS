@@ -1,10 +1,12 @@
-import { useArgs } from '@storybook/preview-api';
-import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps, useState } from 'react';
+
+import { useArgs } from '@storybook/preview-api';
 
 import { SelectFill, SelectVariant } from './types';
 
 import { Select, SelectOptionValue } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const options = [
   { value: 'opt1', label: 'Option 1', isDisabled: false },

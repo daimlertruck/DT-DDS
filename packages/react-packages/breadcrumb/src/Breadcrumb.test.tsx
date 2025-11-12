@@ -1,9 +1,9 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render } from '@testing-library/react';
 
-import { ViewAgendaIcon } from '../../../dt-dds-react/core';
+import { withProviders } from '@dt-dds/react-core';
 
 import { Breadcrumb } from './Breadcrumb';
+import { ViewAgendaIcon } from '../../../dt-dds-react/core';
 
 describe('<Breadcrumb /> component', () => {
   const ProvidedBreadcrumb = withProviders(Breadcrumb);

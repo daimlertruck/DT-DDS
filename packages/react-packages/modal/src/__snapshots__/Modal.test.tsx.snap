@@ -90,7 +90,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   gap: 8px;
 }
 
-@media only screen and (min-width: undefinedpx) {
+@media only screen and (min-width: 768px) {
   .emotion-3 {
     padding-top: 40px;
   }
@@ -376,7 +376,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   gap: 8px;
 }
 
-@media only screen and (min-width: undefinedpx) {
+@media only screen and (min-width: 768px) {
   .emotion-3 {
     padding-top: 40px;
   }

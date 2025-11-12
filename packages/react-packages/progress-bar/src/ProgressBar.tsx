@@ -1,6 +1,7 @@
+import { useTheme } from '@emotion/react';
+
 import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
 
 import { MAX_PROGRESS_BAR_VALUE, MIN_PROGRESS_BAR_VALUE } from './constants';
 import {

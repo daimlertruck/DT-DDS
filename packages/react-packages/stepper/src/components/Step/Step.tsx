@@ -1,11 +1,12 @@
+import { Children, cloneElement, ReactElement, useMemo } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
-import { Children, cloneElement, ReactElement, useMemo } from 'react';
 
 import { Counter } from '../Counter';
-
 import { LabelStyled, StepStyled } from './Step.styled';
 
 export interface BaseStepProps extends Pick<BaseProps, 'children'> {

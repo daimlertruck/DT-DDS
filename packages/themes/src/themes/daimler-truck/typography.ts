@@ -1,6 +1,5 @@
-import { Breakpoints, CustomTheme as Theme } from '../../types';
-
 import { breakpoints } from './breakpoints';
+import { Breakpoints, CustomTheme as Theme } from '../../types';
 
 // Currently, fontFamily and responsiveFontStyles are hardcoded in the theme generator
 // This is a temporary fix to make the theme generator work.
