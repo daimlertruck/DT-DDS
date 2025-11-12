@@ -1390,6 +1390,47 @@
   resolved "https://registry.yarnpkg.com/@date-fns/tz/-/tz-1.4.1.tgz#2d905f282304630e07bef6d02d2e7dbf3f0cc4e4"
   integrity sha512-P5LUNhtbj6YfI3iJjw5EL9eUAG6OitD0W3fWQcpQjDRc/QIsL0tRNuO1PcDvPccWL1fSTXXdE1ds+l95DV/OFA==
 
+<<<<<<< HEAD
+"@dt-dds/react-box@1.0.0-beta.49":
+  version "1.0.0-beta.49"
+  resolved "https://registry.yarnpkg.com/@dt-dds/react-box/-/react-box-1.0.0-beta.49.tgz#7f54e64e3f83f925baf5bdf55dfe4818b8bdc13f"
+  integrity sha512-wIK2fPUsXGTA9SAzuJzrCZGX7hpxcdEt4LNX3Hcvf6WiUsmIX6Sl4fB7557Vj5eyBJJK+aVuNi4dBZeM6rJzPQ==
+
+"@dt-dds/react-dropdown@1.0.0-beta.70":
+  version "1.0.0-beta.70"
+  resolved "https://registry.yarnpkg.com/@dt-dds/react-dropdown/-/react-dropdown-1.0.0-beta.70.tgz#b0e67db8c662e98b1459d4835003db3f9ca92dc0"
+  integrity sha512-cofrzMZBWOrJYwlbDcQkTuhBTTFplE80OgctgkVBFiNmXjJXqWvbLCcjktEepoQfL87HvSluFCXROYy5RXQANQ==
+  dependencies:
+    "@dt-dds/react-box" "1.0.0-beta.49"
+    "@dt-dds/react-core" "1.0.0-beta.51"
+    "@dt-dds/react-icon" "1.0.0-beta.53"
+    "@dt-dds/react-icon-button" "1.0.0-beta.19"
+    "@dt-dds/react-typography" "1.0.0-beta.42"
+    "@dt-dds/themes" "1.0.0-beta.9"
+
+"@dt-dds/react-icon-button@1.0.0-beta.19":
+  version "1.0.0-beta.19"
+  resolved "https://registry.yarnpkg.com/@dt-dds/react-icon-button/-/react-icon-button-1.0.0-beta.19.tgz#bff92262fa18db28bc0b0771b7789dfa90b4820a"
+  integrity sha512-kBv4rae76A94JbutYAlghskWxO4YLwQs2G2ERfn7RuGjkQ0x4mfxO9GnVbKVDOIGMzLB6WJC6PFKyUT78RXV7A==
+  dependencies:
+    "@dt-dds/react-core" "1.0.0-beta.51"
+    "@dt-dds/themes" "1.0.0-beta.9"
+
+"@dt-dds/react-icon@1.0.0-beta.53":
+  version "1.0.0-beta.53"
+  resolved "https://registry.yarnpkg.com/@dt-dds/react-icon/-/react-icon-1.0.0-beta.53.tgz#c2098ba81f1af46f91e6d826db2e6293be684348"
+  integrity sha512-2UVqc6JNcaV9wXGhMV0CGhtEQzJoO7HiqxG2H3Jn3ILdek0ELKuLkusx3HGBEqaivyZgbnr4qLupmkhehQktSQ==
+  dependencies:
+    "@dt-dds/icons" "1.0.0-beta.5"
+    "@dt-dds/react-core" "1.0.0-beta.51"
+    "@dt-dds/themes" "1.0.0-beta.9"
+=======
+"@dt-dds/react-box@1.0.0-beta.51":
+  version "1.0.0-beta.51"
+  resolved "https://registry.yarnpkg.com/@dt-dds/react-box/-/react-box-1.0.0-beta.51.tgz#58741e28b1b3f4185b7dfbf63a7182c8cc853bc5"
+  integrity sha512-OvgVFf9o7ubZwB4STjQUibpPiQpHF5soR46YjvUZ7ASiYj+5IlMGUkTG8A7nLkhzWqgIMd5Y4Hl3uFg9v2VJtQ==
+>>>>>>> c26c53a1 (fixup! feat: add AppHeader compound component)
+
 "@emnapi/core@^1.4.3":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@emnapi/core/-/core-1.5.0.tgz#85cd84537ec989cebb2343606a1ee663ce4edaf0"
