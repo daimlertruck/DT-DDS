@@ -1,5 +1,6 @@
-import { act, fireEvent, render } from '@testing-library/react';
 import React, { createRef } from 'react';
+
+import { act, fireEvent, render } from '@testing-library/react';
 
 import useClickOutside from '../useClickOutside';
 

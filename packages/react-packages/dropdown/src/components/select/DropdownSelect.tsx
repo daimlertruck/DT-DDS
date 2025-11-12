@@ -1,16 +1,17 @@
+import { Children, ReactElement, useEffect } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
 import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
-import { Children, ReactElement, useEffect } from 'react';
 
+import { SelectDropdownStyled } from './DropdownSelect.styled';
 import { useDropdownContext } from '../../context';
 import { DropdownFill, DropdownVariant } from '../../types';
 import { DropdownMenu } from '../menu/DropdownMenu';
-
-import { SelectDropdownStyled } from './DropdownSelect.styled';
 
 export type DropdownSelectProps = {
   label?: string;

@@ -4,7 +4,6 @@ import {
   validateRequiredTokens,
   resolveTokenReference,
 } from '../tokenUtils';
-
 import { TokenFile, TokenCategory } from './../../../types';
 
 /**

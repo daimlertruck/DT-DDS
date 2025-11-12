@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render, fireEvent, screen } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Radio, RadioGroup } from '.';
 

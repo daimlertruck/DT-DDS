@@ -1,7 +1,8 @@
+import { forwardRef } from 'react';
+
 import { Code } from '@dt-dds/icons';
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
-import { forwardRef } from 'react';
 
 import { LinkStyled } from './Link.styled';
 

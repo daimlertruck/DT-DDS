@@ -1,6 +1,8 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render, screen, within, waitFor } from '@testing-library/react';
+
 import '@emotion/jest';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { TableHeadProps, TableDataCellProps } from './components';
 import { default as Table, TableProps } from './Table';

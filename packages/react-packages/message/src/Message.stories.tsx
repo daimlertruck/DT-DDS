@@ -1,5 +1,6 @@
-import { Button } from '@dt-dds/react-button';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { Button } from '@dt-dds/react-button';
 
 import { Message } from './Message';
 import { OMessageType, MessageProps } from './types';

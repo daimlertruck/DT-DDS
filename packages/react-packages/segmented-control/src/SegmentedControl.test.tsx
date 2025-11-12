@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render, fireEvent } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { SegmentedControl } from './SegmentedControl';
 

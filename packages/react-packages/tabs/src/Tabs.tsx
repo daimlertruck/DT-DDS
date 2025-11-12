@@ -1,8 +1,3 @@
-import { Box } from '@dt-dds/react-box';
-import { BaseProps, useDebounceResize } from '@dt-dds/react-core';
-import { Icon } from '@dt-dds/react-icon';
-import { IconButton } from '@dt-dds/react-icon-button';
-import { useTheme } from '@emotion/react';
 import {
   Children,
   cloneElement,
@@ -12,6 +7,13 @@ import {
   useRef,
   useState,
 } from 'react';
+
+import { useTheme } from '@emotion/react';
+
+import { Box } from '@dt-dds/react-box';
+import { BaseProps, useDebounceResize } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
+import { IconButton } from '@dt-dds/react-icon-button';
 
 import { TabItem, TabItemProps } from './components';
 import { TabsStyled } from './Tabs.styled';

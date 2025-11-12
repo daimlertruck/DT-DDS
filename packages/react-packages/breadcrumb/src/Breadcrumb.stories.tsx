@@ -1,5 +1,6 @@
-import { Icon } from '@dt-dds/react-icon';
 import { Meta, StoryObj } from '@storybook/react-vite';
+
+import { Icon } from '@dt-dds/react-icon';
 
 import { Breadcrumb, BreadcrumbProps } from './Breadcrumb';
 

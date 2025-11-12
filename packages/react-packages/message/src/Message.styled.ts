@@ -1,5 +1,6 @@
-import { Orientation } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { Orientation } from '@dt-dds/react-core';
 
 import { MessageType, OMessageType } from './types';
 

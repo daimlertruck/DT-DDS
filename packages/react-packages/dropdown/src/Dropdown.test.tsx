@@ -1,6 +1,7 @@
+import { fireEvent, render, screen, within } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { fireEvent, render, screen, within } from '@testing-library/react';
 
 import { withDropdownProvider } from './utils';
 

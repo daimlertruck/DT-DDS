@@ -1,9 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ComponentProps } from 'react';
 
 import { SelectFill, SelectVariant } from './types';
 
 import { Select, SelectOptionValue } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const options: SelectOptionValue[] = [
   { value: 'opt1', label: 'Option 1', disabled: false },

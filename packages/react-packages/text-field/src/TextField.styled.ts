@@ -1,5 +1,6 @@
-import { FieldScale } from '@dt-dds/react-label-field';
 import styled from '@emotion/styled';
+
+import { FieldScale } from '@dt-dds/react-label-field';
 
 import {
   TextFieldVariant,

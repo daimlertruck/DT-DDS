@@ -1,7 +1,6 @@
 import { BaseProps } from '@dt-dds/react-core';
 
 import { ModalLoadingOverlay } from '../LoadingOverlay';
-
 import { ContentStyled } from './Content.styled';
 
 export interface ModalContentProps extends BaseProps {

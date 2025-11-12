@@ -1,9 +1,10 @@
-import { BaseProps, withProviders } from '@dt-dds/react-core';
-import { renderHook, act } from '@testing-library/react';
 import { ReactNode } from 'react';
 
-import { Breadcrumb } from '../Breadcrumb';
+import { renderHook, act } from '@testing-library/react';
 
+import { BaseProps, withProviders } from '@dt-dds/react-core';
+
+import { Breadcrumb } from '../Breadcrumb';
 import { useCollapsedBreadcrumb } from './useCollapsedBreadcrumb';
 
 const matchMediaMock = jest.fn();

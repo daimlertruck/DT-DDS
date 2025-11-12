@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { DatePicker, DatePickerProps } from './DatePicker';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<DatePickerProps> = {
   title: 'Data Display/DatePicker',

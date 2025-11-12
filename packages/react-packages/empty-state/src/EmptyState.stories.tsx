@@ -1,10 +1,11 @@
 import { Button } from '@dt-dds/react-button';
 import { Link } from '@dt-dds/react-link';
-import type { Meta, StoryObj } from '@storybook/react';
 
 import { NoDataIcon } from '../../../dt-dds-react/core';
 
 import { EmptyState, EmptyStateContentProps } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 type EmptyStateProps = EmptyStateContentProps & { addActionButton?: boolean };
 

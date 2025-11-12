@@ -1,10 +1,3 @@
-import { BaseProps, useClickOutside } from '@dt-dds/react-core';
-import { Icon } from '@dt-dds/react-icon';
-import { IconButton } from '@dt-dds/react-icon-button';
-import { LabelField } from '@dt-dds/react-label-field';
-import { Tooltip } from '@dt-dds/react-tooltip';
-import { Typography } from '@dt-dds/react-typography';
-import { useSelect } from 'downshift';
 import {
   useRef,
   useState,
@@ -15,6 +8,15 @@ import {
   useMemo,
   useCallback,
 } from 'react';
+
+import { useSelect } from 'downshift';
+
+import { BaseProps, useClickOutside } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
+import { IconButton } from '@dt-dds/react-icon-button';
+import { LabelField } from '@dt-dds/react-label-field';
+import { Tooltip } from '@dt-dds/react-tooltip';
+import { Typography } from '@dt-dds/react-typography';
 
 import { SelectOption } from './components/SelectOption';
 import { SelectProvider } from './context';

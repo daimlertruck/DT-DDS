@@ -1,6 +1,8 @@
-import { withProviders } from '@dt-dds/react-core';
-import { render } from '@testing-library/react';
 import React from 'react';
+
+import { render } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Divider } from './Divider';
 

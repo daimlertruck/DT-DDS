@@ -1,5 +1,6 @@
-import { BaseProps, useClickOutside } from '@dt-dds/react-core';
 import { useRef } from 'react';
+
+import { BaseProps, useClickOutside } from '@dt-dds/react-core';
 
 import { useDropdownContext } from '../../context';
 

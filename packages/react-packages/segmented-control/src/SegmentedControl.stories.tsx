@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { SegmentedControl } from './SegmentedControl';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type Story = StoryObj<typeof SegmentedControl>;
 

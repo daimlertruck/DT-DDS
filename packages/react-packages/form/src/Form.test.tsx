@@ -1,6 +1,7 @@
+import { render, fireEvent, waitFor } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { TextField } from '@dt-dds/react-text-field';
-import { render, fireEvent, waitFor } from '@testing-library/react';
 
 import { Form } from './Form';
 

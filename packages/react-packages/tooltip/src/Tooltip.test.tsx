@@ -1,9 +1,10 @@
-import { withProviders } from '@dt-dds/react-core';
 import {
   render,
   fireEvent,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { TooltipContentProps } from './components';
 import Tooltip from './Tooltip';

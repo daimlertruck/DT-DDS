@@ -1,5 +1,6 @@
-import { BaseProps, ComponentSize } from '@dt-dds/react-core';
 import { ComponentPropsWithoutRef } from 'react';
+
+import { BaseProps, ComponentSize } from '@dt-dds/react-core';
 
 import { IconButtonVariant } from './constants';
 import { IconButtonStyled } from './IconButton.styled';

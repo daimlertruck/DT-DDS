@@ -1,7 +1,9 @@
+import { KeyboardEvent } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
-import { useTheme } from '@emotion/react';
-import { KeyboardEvent } from 'react';
 
 import { HeaderStyled } from './AccordionHeader.styled';
 

@@ -2,7 +2,6 @@ import { Checkbox } from '@dt-dds/react-checkbox';
 import { BaseProps } from '@dt-dds/react-core';
 
 import { useSelectContext } from '../context';
-
 import {
   SelectOptionStyled,
   SelectOptionContentStyled,

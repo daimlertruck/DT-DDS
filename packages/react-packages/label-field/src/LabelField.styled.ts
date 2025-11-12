@@ -1,5 +1,6 @@
-import { CustomTheme as Theme } from '@dt-dds/themes';
 import styled from '@emotion/styled';
+
+import { CustomTheme as Theme } from '@dt-dds/themes';
 
 import { FieldScale } from './constants';
 

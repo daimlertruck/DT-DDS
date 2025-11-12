@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render, screen, fireEvent } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { AccordionBaseProps } from './Accordion';
 

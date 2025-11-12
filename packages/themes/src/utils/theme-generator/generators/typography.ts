@@ -1,6 +1,5 @@
 import { formatObject, formatTypographyStyle } from '../formatter';
 import { resolveTokenReference } from '../tokenUtils';
-
 import { TokenFile } from './../../../types';
 
 /**
