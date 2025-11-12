@@ -1,6 +1,7 @@
+import { useState } from 'react';
+
 import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { useState } from 'react';
 
 import { AvatarStyled } from './Avatar.styled';
 import { AvatarType } from './constants';

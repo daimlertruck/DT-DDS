@@ -1,6 +1,7 @@
+import { useTheme } from '@emotion/react';
+
 import { Code } from '@dt-dds/icons';
 import { BaseProps, ComponentSize } from '@dt-dds/react-core';
-import { useTheme } from '@emotion/react';
 
 import { IconStyled } from './Icon.styled';
 import { Variant } from './types';

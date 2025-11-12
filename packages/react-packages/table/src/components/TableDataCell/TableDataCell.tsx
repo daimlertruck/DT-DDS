@@ -1,10 +1,10 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { DetailedHTMLProps, TdHTMLAttributes } from 'react';
 
-import { useTableContext } from '../../context';
-import { TextAlign } from '../../types';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { CellStyled } from './TableDataCell.styled';
+import { useTableContext } from '../../context';
+import { TextAlign } from '../../types';
 
 export interface TableDataCellProps
   extends BaseProps,

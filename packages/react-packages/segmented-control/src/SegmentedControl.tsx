@@ -1,5 +1,6 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { ComponentPropsWithoutRef } from 'react';
+
+import { BaseProps } from '@dt-dds/react-core';
 
 import { SegmentedControlOption } from './components/SegmentedControlOption';
 import { SegmentedControlProvider } from './context';

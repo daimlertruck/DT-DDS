@@ -1,7 +1,8 @@
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
+
 import { BaseProps, Scale } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
 import { theme } from '@dt-dds/themes';
-import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
 import { LabelFieldStyled } from './LabelField.styled';
 

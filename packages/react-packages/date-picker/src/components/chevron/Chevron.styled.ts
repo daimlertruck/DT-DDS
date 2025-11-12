@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
 import { ChevronProps } from 'react-day-picker';
+
+import styled from '@emotion/styled';
 
 export const ChevronStyled = styled.div<ChevronProps>`
   display: flex;

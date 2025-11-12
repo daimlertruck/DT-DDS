@@ -1,8 +1,7 @@
-import { BaseProps } from '@dt-dds/react-core';
-import { Tooltip } from '@dt-dds/react-tooltip';
 import { Children, ReactNode, cloneElement, isValidElement } from 'react';
 
-import { ArrowRightIcon } from '../../../dt-dds-react/core';
+import { BaseProps } from '@dt-dds/react-core';
+import { Tooltip } from '@dt-dds/react-tooltip';
 
 import {
   BreadcrumbStyled,
@@ -11,6 +10,7 @@ import {
   ItemContainerStyled,
 } from './Breadcrumb.styled';
 import { useCollapsedBreadcrumb } from './hooks/useCollapsedBreadcrumb';
+import { ArrowRightIcon } from '../../../dt-dds-react/core';
 
 const BREADCRUMB_CHARACTER_LIMIT = 30;
 

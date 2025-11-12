@@ -1,7 +1,9 @@
-import { withProviders } from '@dt-dds/react-core';
+import { RefObject, useRef, useState } from 'react';
+
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { RefObject, useRef, useState } from 'react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Dropdown as DropdownRaw } from './Dropdown';
 

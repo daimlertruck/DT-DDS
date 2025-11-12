@@ -1,9 +1,9 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { Children, isValidElement } from 'react';
 
-import { useTableContext } from '../../context';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { TableHeadStyled } from './TableHead.styled';
+import { useTableContext } from '../../context';
 
 export interface TableHeadProps extends BaseProps {
   hasFixedHeader?: boolean;

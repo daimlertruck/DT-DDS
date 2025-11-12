@@ -1,5 +1,6 @@
-import styled from '@emotion/styled';
 import { DayPicker } from 'react-day-picker';
+
+import styled from '@emotion/styled';
 
 export const DatePickerStyled = styled(DayPicker)`
   ${({ theme }) => `

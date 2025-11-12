@@ -1,7 +1,7 @@
-import { CustomTheme as Theme } from '@dt-dds/themes';
 import styled from '@emotion/styled';
 
-import { FieldScale } from './constants';
+import { Scale } from '@dt-dds/react-core';
+import { CustomTheme as Theme } from '@dt-dds/themes';
 
 export interface LabelFieldProps {
   isActive: boolean;
@@ -10,7 +10,7 @@ export interface LabelFieldProps {
   isFloating: boolean;
   isInputFilled: boolean;
   isCentered?: boolean;
-  scale?: FieldScale;
+  scale?: Scale;
 }
 
 interface labelColorStateProps {
@@ -49,7 +49,7 @@ const floatingLabel = (
   isActive: boolean,
   isInputFilled: boolean,
   isCentered: boolean,
-  scale: FieldScale,
+  scale: Scale,
   theme: Theme
 ) => {
   const activeTop =

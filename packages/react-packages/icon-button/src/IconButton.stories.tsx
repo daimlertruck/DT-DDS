@@ -1,6 +1,8 @@
-import { Icon } from '@dt-dds/react-icon';
-import { css } from '@emotion/react';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { css } from '@emotion/react';
+
+import { Icon } from '@dt-dds/react-icon';
 
 import { IconButton, IconButtonProps } from './IconButton';
 import { MockAvatar } from './mocks/MockAvatar';

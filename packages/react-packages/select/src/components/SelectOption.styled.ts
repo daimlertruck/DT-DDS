@@ -1,5 +1,6 @@
-import { Checkbox } from '@dt-dds/react-checkbox';
 import styled from '@emotion/styled';
+
+import { Checkbox } from '@dt-dds/react-checkbox';
 
 export const SelectCheckboxStyled = styled(Checkbox)`
   ${({ theme }) => `

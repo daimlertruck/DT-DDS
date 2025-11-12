@@ -1,7 +1,3 @@
-import { Dropdown } from '@dt-dds/react-dropdown';
-import { Icon } from '@dt-dds/react-icon';
-import { TextField } from '@dt-dds/react-text-field';
-import { format, isValid, parse } from 'date-fns';
 import React, {
   useCallback,
   useEffect,
@@ -9,10 +5,16 @@ import React, {
   useRef,
   useState,
 } from 'react';
+
+import { format, isValid, parse } from 'date-fns';
 import { DateRange, DayPickerProps, Matcher } from 'react-day-picker';
 import { enUS } from 'react-day-picker/locale';
-
 import 'react-day-picker/style.css';
+
+import { Dropdown } from '@dt-dds/react-dropdown';
+import { Icon } from '@dt-dds/react-icon';
+import { TextField } from '@dt-dds/react-text-field';
+
 import { Chevron } from './components';
 import {
   DATE_FORMAT,

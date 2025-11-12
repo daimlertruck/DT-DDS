@@ -1,8 +1,3 @@
-import { BaseProps, Scale } from '@dt-dds/react-core';
-import { Icon } from '@dt-dds/react-icon';
-import { IconButton } from '@dt-dds/react-icon-button';
-import { LabelField } from '@dt-dds/react-label-field';
-import { Typography } from '@dt-dds/react-typography';
 import {
   ChangeEvent,
   ComponentPropsWithoutRef,
@@ -13,6 +8,12 @@ import {
   useEffect,
   useState,
 } from 'react';
+
+import { BaseProps, Scale } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
+import { IconButton } from '@dt-dds/react-icon-button';
+import { LabelField } from '@dt-dds/react-label-field';
+import { Typography } from '@dt-dds/react-typography';
 
 import { TextFieldVariant, TextFieldBackgroundFill } from './constants';
 import {

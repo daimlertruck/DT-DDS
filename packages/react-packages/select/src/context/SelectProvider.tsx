@@ -1,5 +1,6 @@
-import { UseSelectReturnValue } from 'downshift';
 import { createContext, useContext, ReactNode } from 'react';
+
+import { UseSelectReturnValue } from 'downshift';
 
 import { SelectOptionValue } from '../types';
 

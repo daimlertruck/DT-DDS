@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps, useRef, useState } from 'react';
 
 import { Dropdown } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 type Option = { text: string; value: string; disabled?: boolean };
 

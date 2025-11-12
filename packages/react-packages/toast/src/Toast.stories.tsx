@@ -1,12 +1,14 @@
+import { ToasterProps } from 'react-hot-toast';
+
 import { Button } from '@dt-dds/react-button';
 import { Portal } from '@dt-dds/react-core';
-import type { Meta, StoryObj } from '@storybook/react';
-import { ToasterProps } from 'react-hot-toast';
 
 import { ToastType } from './constants';
 import Toast from './Toast';
 
 import { emitToast, Toaster } from './';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 type Story = StoryObj<typeof Toast>;
 

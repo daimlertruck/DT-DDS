@@ -1,5 +1,6 @@
-import { hexToRgba } from '@dt-dds/themes';
 import styled from '@emotion/styled';
+
+import { hexToRgba } from '@dt-dds/themes';
 
 export const ModalLoadingOverlayStyled = styled.div`
   ${({ theme }) =>

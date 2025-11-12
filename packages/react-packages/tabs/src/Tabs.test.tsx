@@ -1,7 +1,9 @@
+import { Fragment } from 'react';
+
+import { fireEvent, render, screen } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { Fragment } from 'react';
 
 import { Tabs } from './Tabs';
 import { Variant } from './types';

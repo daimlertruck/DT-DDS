@@ -1,6 +1,5 @@
 import { formatObject } from '../formatter';
 import { resolveTokenReference } from '../tokenUtils';
-
 import { TokenFile } from './../../../types';
 
 /**

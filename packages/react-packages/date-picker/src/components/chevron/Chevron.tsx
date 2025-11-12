@@ -1,6 +1,7 @@
+import { ChevronProps } from 'react-day-picker';
+
 import { Code } from '@dt-dds/icons';
 import { Icon } from '@dt-dds/react-icon';
-import { ChevronProps } from 'react-day-picker';
 
 import { ChevronStyled } from './Chevron.styled';
 

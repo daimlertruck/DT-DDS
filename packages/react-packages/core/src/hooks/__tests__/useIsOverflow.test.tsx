@@ -1,5 +1,6 @@
-import { renderHook } from '@testing-library/react';
 import React from 'react';
+
+import { renderHook } from '@testing-library/react';
 
 import { BaseProps } from '../../types';
 import { withProviders } from '../../utils';

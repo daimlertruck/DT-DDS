@@ -1,5 +1,6 @@
+import { Meta, StoryFn } from '@storybook/react';
+
 import { Button } from '@dt-dds/react-button';
-import { Meta, StoryFn } from '@storybook/react-vite';
 
 import { ModalHeaderProps, ModalContentProps } from './components';
 import { useModal } from './hooks';
@@ -22,7 +23,6 @@ const Template: StoryFn<ModalStoryProps> = ({
   title,
   subTitle,
   hasHeaderBorder,
-  hasHeaderBackgroundColor,
   hasFooterBorder,
   hasFooterBackgroundColor,
   isLoading,
@@ -37,7 +37,6 @@ const Template: StoryFn<ModalStoryProps> = ({
       <Overlay isOpen={isModalOpen}>
         <Modal onClickOutside={toggleModal}>
           <Modal.Header
-            hasBackgroundColor={hasHeaderBackgroundColor}
             hasBorder={hasHeaderBorder}
             onClose={toggleModal}
             subTitle={subTitle}

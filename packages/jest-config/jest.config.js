@@ -15,7 +15,13 @@ const config = {
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$'],
   setupFilesAfterEnv: [path.resolve(__dirname, 'jest.setup.ts')],
   snapshotSerializers: ['@emotion/jest/serializer'],
-  coveragePathIgnorePatterns: ['node_modules', '.test.', '.stories.', 'dist'],
+  coveragePathIgnorePatterns: [
+    'node_modules',
+    '.test.',
+    '.stories.',
+    'dist',
+    'mocks',
+  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{ts,tsx}',

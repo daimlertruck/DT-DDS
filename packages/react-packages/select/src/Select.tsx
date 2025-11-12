@@ -1,10 +1,3 @@
-import { Box } from '@dt-dds/react-box';
-import { BaseProps, Scale } from '@dt-dds/react-core';
-import { Icon } from '@dt-dds/react-icon';
-import { IconButton } from '@dt-dds/react-icon-button';
-import { LabelField } from '@dt-dds/react-label-field';
-import { Tooltip } from '@dt-dds/react-tooltip';
-import * as Downshift from 'downshift';
 import {
   Children,
   isValidElement,
@@ -14,6 +7,15 @@ import {
   useRef,
   ReactNode,
 } from 'react';
+
+import * as Downshift from 'downshift';
+
+import { Box } from '@dt-dds/react-box';
+import { BaseProps, Scale } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
+import { IconButton } from '@dt-dds/react-icon-button';
+import { LabelField } from '@dt-dds/react-label-field';
+import { Tooltip } from '@dt-dds/react-tooltip';
 
 import { SelectOption } from './components/SelectOption';
 import { SelectProvider } from './context';

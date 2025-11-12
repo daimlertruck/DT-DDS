@@ -1,5 +1,6 @@
-import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
 import { RefObject, useLayoutEffect, useState } from 'react';
+
+import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
 
 import { DropdownPlacement } from '../types';
 

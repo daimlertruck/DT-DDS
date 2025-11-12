@@ -1,11 +1,10 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 
-import type { Changeset } from '@changesets/types';
+import { CHANGESET_TAGS_FILE_LOCATION } from './constants';
 
 import type { ManyPkgPackage } from '../types';
-
-import { CHANGESET_TAGS_FILE_LOCATION } from './constants';
+import type { Changeset } from '@changesets/types';
 
 interface Commit {
   commitHash: string;

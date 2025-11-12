@@ -1,8 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { ptBR } from 'react-day-picker/locale';
 
 import { DatePicker } from './DatePicker';
 import { DatePickerProps } from './types';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<DatePickerProps> = {
   title: 'Data Display/DatePicker',

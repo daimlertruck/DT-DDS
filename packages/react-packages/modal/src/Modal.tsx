@@ -1,6 +1,7 @@
+import { forwardRef, useRef } from 'react';
+
 import { Backdrop, BackdropProps } from '@dt-dds/react-backdrop';
 import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
-import { forwardRef, useRef } from 'react';
 
 import { ModalContent, ModalFooter, ModalHeader } from './components';
 import { ModalStyled } from './Modal.styled';

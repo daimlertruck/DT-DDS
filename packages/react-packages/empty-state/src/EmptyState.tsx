@@ -1,6 +1,7 @@
+import { ReactNode } from 'react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
-import { ReactNode } from 'react';
 
 import { EmptyStateStyled, EmptyStateContentStyled } from './EmptyState.styled';
 

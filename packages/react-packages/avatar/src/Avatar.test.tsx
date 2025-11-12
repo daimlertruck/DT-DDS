@@ -1,6 +1,7 @@
+import { render, screen, within, fireEvent } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { theme } from '@dt-dds/themes';
-import { render, screen, within, fireEvent } from '@testing-library/react';
 
 import { Avatar } from './Avatar';
 import { AvatarType } from './constants';

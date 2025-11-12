@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { fireEvent, render } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Tag, TagProps } from './Tag';
 

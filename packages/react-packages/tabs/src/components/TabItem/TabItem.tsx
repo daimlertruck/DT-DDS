@@ -1,9 +1,9 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { ReactNode, useRef } from 'react';
 
-import { Variant } from '../../types';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { TabItemStyled } from './TabItem.styled';
+import { Variant } from '../../types';
 
 export interface TabItemProps extends BaseProps {
   activeTab?: number;

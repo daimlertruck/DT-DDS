@@ -1,5 +1,6 @@
-import { TextFieldProps } from '@dt-dds/react-text-field';
 import { DateRange, Locale } from 'react-day-picker';
+
+import { TextFieldProps } from '@dt-dds/react-text-field';
 
 type BaseDatePickerProps = {
   isDisabled?: boolean;
