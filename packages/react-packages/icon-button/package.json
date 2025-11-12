@@ -28,6 +28,7 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.23.3",
+    "@dt-dds/react-icon": "1.0.0-beta.54",
     "@emotion/babel-plugin": "^11.11.0",
     "@emotion/css": "^11.7.1",
     "@emotion/jest": "^11.10.0",
