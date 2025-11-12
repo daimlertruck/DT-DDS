@@ -1,5 +1,27 @@
 # @dt-ui/react
 
+## 1.0.0-beta.244
+
+### Patch Changes
+
+- fix: set full width on message
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-message@1.0.0-beta.90
+  - @dt-dds/react-box@1.0.0-beta.45
+  - @dt-dds/react-dropdown@1.0.0-beta.66
+  - @dt-dds/react-radio@1.0.0-beta.61
+  - @dt-dds/react-spinner@1.0.0-beta.79
+  - @dt-dds/react-tabs@1.0.0-beta.74
+  - @dt-dds/react-text-area@1.0.0-beta.56
+  - @dt-dds/react-button@1.0.0-beta.74
+  - @dt-dds/react-modal@1.0.0-beta.74
+  - @dt-dds/react-text-field@1.0.0-beta.84
+  - @dt-dds/react-empty-state@1.0.0-beta.94
+  - @dt-dds/react-link@1.0.0-beta.51
+  - @dt-dds/react-toast@1.0.0-beta.91
+  - @dt-dds/react-date-picker@1.0.0-beta.67
+
 ## 1.0.0-beta.243
 
 ### Minor Changes

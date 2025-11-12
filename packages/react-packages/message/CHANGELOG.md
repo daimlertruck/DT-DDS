@@ -1,5 +1,12 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.90
+
+### Patch Changes
+
+- fix: set full width on message
+  - @dt-dds/react-button@1.0.0-beta.74
+
 ## 1.0.0-beta.89
 
 ### Minor Changes

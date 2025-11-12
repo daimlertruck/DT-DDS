@@ -1,5 +1,12 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.94
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.74
+- @dt-dds/react-link@1.0.0-beta.51
+
 ## 1.0.0-beta.93
 
 ### Patch Changes
