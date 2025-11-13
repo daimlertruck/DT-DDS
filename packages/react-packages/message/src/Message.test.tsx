@@ -1,10 +1,21 @@
 import { Button } from '@dt-dds/react-button';
-import { withProviders } from '@dt-dds/react-core';
+import { useMedia, withProviders } from '@dt-dds/react-core';
 import { defaultTheme as theme } from '@dt-dds/themes';
 import { fireEvent, render } from '@testing-library/react';
 
 import { Message } from './Message';
 import { MessageType, OMessageType } from './types';
+
+jest.mock('@dt-dds/react-core', () => {
+  const actual = jest.requireActual('@dt-dds/react-core');
+
+  return {
+    ...actual,
+    useMedia: jest.fn(),
+  };
+});
+
+const mockedUseMedia = useMedia as jest.Mock;
 
 describe('<Message /> component', () => {
   const ProvidedMessage = withProviders(Message);
@@ -109,5 +120,33 @@ describe('<Message /> component', () => {
     fireEvent.click(messageAction);
 
     expect(mockOnClick).toHaveBeenCalled();
+  });
+
+  describe('Responsive styles', () => {
+    beforeEach(() => {
+      mockedUseMedia.mockReset();
+    });
+
+    it('should change orientation to vertical when is mobile viewport', () => {
+      mockedUseMedia.mockReturnValue(true);
+
+      const { getByTestId } = render(
+        <ProvidedMessage description={description} type={OMessageType.Info} />
+      );
+
+      expect(getByTestId('message-content')).toHaveStyle(
+        'flex-direction: column'
+      );
+    });
+
+    it('should change orientation to horizontal when is desktop viewport', () => {
+      mockedUseMedia.mockReturnValue(false);
+
+      const { getByTestId } = render(
+        <ProvidedMessage description={description} type={OMessageType.Info} />
+      );
+
+      expect(getByTestId('message-content')).toHaveStyle('flex-direction: row');
+    });
   });
 });

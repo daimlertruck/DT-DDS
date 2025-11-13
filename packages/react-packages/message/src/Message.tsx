@@ -1,5 +1,6 @@
 import { Code } from '@dt-dds/icons';
 import { Box } from '@dt-dds/react-box';
+import { useMedia } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
 import { useTheme } from '@emotion/react';
@@ -21,10 +22,12 @@ export const Message = ({
   onClose,
   description,
   title,
-  orientation = 'horizontal',
+  orientation: propOrientation = 'horizontal',
 }: MessageProps) => {
   const theme = useTheme();
   const isDefault = type === OMessageType.Default;
+  const isMobile = useMedia(`(max-width: ${theme.breakpoints.mq2}px)`);
+  const orientation = isMobile ? 'vertical' : propOrientation || 'horizontal';
   const isHorizontal = orientation === 'horizontal';
   const isDismissible = !!onClose;
   const textColor = isDefault ? 'content.default' : `${type}.dark`;
@@ -73,7 +76,9 @@ export const Message = ({
           alignItems: isHorizontal ? 'center' : 'start',
         }}
       >
-        <Box style={{ alignItems: 'flex-start' }}>
+        <Box
+          style={{ alignItems: 'flex-start', gap: theme.spacing.spacing_10 }}
+        >
           {title ? (
             <Typography color={textColor} fontStyles='bodyLgBold'>
               {title}
