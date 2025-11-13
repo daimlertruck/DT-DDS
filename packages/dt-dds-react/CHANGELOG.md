@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.245
+
+### Minor Changes
+
+- feat: add breakpoint to message
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-message@1.0.0-beta.91
+  - @dt-dds/react-box@1.0.0-beta.46
+  - @dt-dds/react-dropdown@1.0.0-beta.67
+  - @dt-dds/react-radio@1.0.0-beta.62
+  - @dt-dds/react-spinner@1.0.0-beta.80
+  - @dt-dds/react-tabs@1.0.0-beta.75
+  - @dt-dds/react-text-area@1.0.0-beta.57
+  - @dt-dds/react-button@1.0.0-beta.75
+  - @dt-dds/react-modal@1.0.0-beta.75
+  - @dt-dds/react-text-field@1.0.0-beta.85
+  - @dt-dds/react-empty-state@1.0.0-beta.95
+  - @dt-dds/react-link@1.0.0-beta.52
+  - @dt-dds/react-toast@1.0.0-beta.92
+  - @dt-dds/react-date-picker@1.0.0-beta.68
+
 ## 1.0.0-beta.244
 
 ### Patch Changes

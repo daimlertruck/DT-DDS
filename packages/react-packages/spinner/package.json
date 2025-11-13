@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-spinner",
-  "version": "1.0.0-beta.79",
+  "version": "1.0.0-beta.80",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.50",
-    "@dt-dds/react-box": "1.0.0-beta.45",
+    "@dt-dds/react-box": "1.0.0-beta.46",
     "@dt-dds/react-typography": "1.0.0-beta.41",
     "@dt-dds/themes": "1.0.0-beta.9"
   },

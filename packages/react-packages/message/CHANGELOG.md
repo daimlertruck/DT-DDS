@@ -1,5 +1,15 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.91
+
+### Minor Changes
+
+- feat: add breakpoint to message
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.75
+
 ## 1.0.0-beta.90
 
 ### Patch Changes
