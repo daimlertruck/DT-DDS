@@ -39,7 +39,7 @@ export const App = () => {
 | `title`       | `string`              | -              | Optional Text to be presented as Title within the Message.Content, It should have text character count limit: 50.                                                        |
 | `description` | `string`              | -              | Text to be presented as Description within the Message.Content, It should have text character count limit: 230.                                                          |
 | `onClose`     | `function`            | -              | When provided, a close button is displayed and, when clicked, it triggers this function.                                                                                 |
-| `orientation` | `Orientation`         | `'horizontal'` | Sets the orientation of the message component.                                                                                                                           |
+| `orientation` | `Orientation`         | `'horizontal'` | Sets the orientation of the message component. On mobile the orientation is vertical                                                                                     |
 
 ### Message.Actions
 
