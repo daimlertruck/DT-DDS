@@ -10,7 +10,7 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Roboto',
       fontStyle: 'normal',
       fontWeight: 400,
-      src: "url(/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff) format('woff'), url(/fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2) format('woff2')",
+      src: "url(./fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2) format('woff2'), url(./fonts/roboto-v30-latin/roboto-v30-latin-regular.woff) format('woff')",
     },
   },
   /* roboto-italic - latin */
@@ -19,16 +19,25 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Roboto',
       fontStyle: 'italic',
       fontWeight: 400,
-      src: "url(/fonts/roboto-v30-latin/roboto-v30-latin-italic.woff) format('woff'), url(/fonts/roboto-v30-latin/roboto-v30-latin-italic.woff2) format('woff2')",
+      src: "url(./fonts/roboto-v30-latin/roboto-v30-latin-italic.woff2) format('woff2'), url(./fonts/roboto-v30-latin/roboto-v30-latin-italic.woff) format('woff')",
     },
   },
   {
-    /* roboto-900 - latin */
+    /* roboto-regular - latin */
     '@font-face': {
       fontFamily: 'Roboto',
       fontStyle: 'normal',
-      fontWeight: 900,
-      src: "url(/fonts/roboto-v30-latin/roboto-v30-latin-900.woff) format('woff'), url(/fonts/roboto-v30-latin/roboto-v30-latin-900.woff2) format('woff2')",
+      fontWeight: 500,
+      src: "url(./fonts/roboto-v30-latin/roboto-v30-latin-regular.woff2) format('woff2'), url(./fonts/roboto-v30-latin/roboto-v30-latin-regular.woff) format('woff')",
+    },
+  },
+  {
+    /* roboto-regular - latin */
+    '@font-face': {
+      fontFamily: 'Roboto',
+      fontStyle: 'normal',
+      fontWeight: 700,
+      src: "url(./fonts/roboto-v30-latin/roboto-v30-latin-900.woff2) format('woff2'), url(./fonts/roboto-v30-latin/roboto-v30-latin-900.woff) format('woff')",
     },
   },
   {
@@ -37,7 +46,7 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Poppins',
       fontStyle: 'normal',
       fontWeight: 400,
-      src: "url(/fonts/poppins/poppins-regular.woff) format('woff'), url(/fonts/poppins/poppins-regular.woff2) format('woff2')",
+      src: "url(./fonts/poppins/poppins-regular.woff2) format('woff2'), url(./fonts/poppins/poppins-regular.woff) format('woff')",
     },
   },
   {
@@ -46,7 +55,7 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Poppins',
       fontStyle: 'italic',
       fontWeight: 400,
-      src: "url(/fonts/poppins/poppins-italic.woff) format('woff'), url(/fonts/poppins/poppins-italic.woff2) format('woff2')",
+      src: "url(./fonts/poppins/poppins-italic.woff2) format('woff2'), url(./fonts/poppins/poppins-italic.woff) format('woff')",
     },
   },
   {
@@ -55,7 +64,7 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Poppins',
       fontStyle: 'normal',
       fontWeight: 600,
-      src: "url(/fonts/poppins/poppins-semi-bold.woff) format('woff'), url(/fonts/poppins/poppins-semi-bold.woff2) format('woff2')",
+      src: "url(./fonts/poppins/poppins-semi-bold.woff2) format('woff2'), url(./fonts/poppins/poppins-semi-bold.woff) format('woff')",
     },
   },
   {
@@ -64,42 +73,15 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Poppins',
       fontStyle: 'normal',
       fontWeight: 700,
-      src: "url(/fonts/poppins/poppins-bold.woff) format('woff'), url(/fonts/poppins/poppins-bold.woff2) format('woff2')",
-    },
-  },
-  /* daimler-cs PRO regular */
-  {
-    '@font-face': {
-      fontFamily: 'DaimlerCSPro',
-      fontStyle: 'normal',
-      fontWeight: 400,
-      src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Regular.otf) format('opentype')",
-    },
-  },
-  /* daimler-cs PRO bold */
-  {
-    '@font-face': {
-      fontFamily: 'DaimlerCSPro',
-      fontStyle: 'normal',
-      fontWeight: 700,
-      src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Bold.otf) format('opentype')",
-    },
-  },
-  /* daimler-cs PRO italic */
-  {
-    '@font-face': {
-      fontFamily: 'DaimlerCSPro',
-      fontStyle: 'italic',
-      fontWeight: 400,
-      src: "url(/fonts/daimler-cs-pro/DaimlerCSPro-Italic.otf) format('opentype')",
+      src: "url(./fonts/poppins/poppins-bold.woff2) format('woff2'), url(./fonts/poppins/poppins-bold.woff) format('woff')",
     },
   },
   {
     '@font-face': {
       fontFamily: 'Daimler CS',
       fontStyle: 'normal',
-      fontWeight: 350,
-      src: "url(/fonts/daimler-cs/DaimlerCS-Regular.woff) format('woff'), url(/fonts/daimler-cs/DaimlerCS-Regular.woff2) format('woff2')",
+      fontWeight: 400,
+      src: "url(./fonts/daimler-cs/DaimlerCS-Regular.woff) format('woff'), url(./fonts/daimler-cs/DaimlerCS-Regular.woff2) format('woff2')",
     },
   },
   {
@@ -107,7 +89,7 @@ export const webFonts: FontFace[] = [
       fontFamily: 'Daimler CS',
       fontStyle: 'normal',
       fontWeight: 700,
-      src: "url(/fonts/daimler-cs/DaimlerCS-Bold.woff) format('woff'), url(/fonts/daimler-cs/DaimlerCS-Bold.woff2) format('woff2')",
+      src: "url(./fonts/daimler-cs/DaimlerCS-Bold.woff) format('woff'), url(./fonts/daimler-cs/DaimlerCS-Bold.woff2) format('woff2')",
     },
   },
 ];
