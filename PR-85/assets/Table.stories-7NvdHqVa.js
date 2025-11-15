@@ -1,0 +1,46 @@
+import{j as e}from"./jsx-runtime-CB_V9I5Y.js";import"./index-CTjT7uj6.js";import"./AccordionBody.styled-DeLC8Jsp.js";import"./Icon-DG6KDu5A.js";import{A as y}from"./Avatar-CoykDtzb.js";import"./Avatar.styled-BRcnJVVs.js";import"./Backdrop-BSbPlThE.js";import"./index-CWvrgZ1b.js";import"./Breadcrumb-DXrr_fIJ.js";import"./index-D9dZuxfj.js";import"./index-GSya0wIc.js";import"./index-XjDa9cP3.js";import"./Divider.styled-tVZRGFzw.js";import"./Drawer-BDI2xcci.js";import"./EmptyState-5OUKrF6q.js";import"./Typography-DHEP7O00.js";import"./LabelField-x8FAhJm0.js";import"./Message-Bh3uACQb.js";import"./Spinner-C7-RPGlb.js";import"./Tabs-BD_iZYBx.js";import{T as f}from"./Tag-C_NO27Fc.js";import"./index-YjzhnqnF.js";import"./Button.styled-BhGEnxfn.js";import{T as a}from"./Tooltip-w4r6JVjp.js";import"./Checkbox-DtiS2S4C.js";import{I as v}from"./IconButton-C_mszqXk.js";import"./TextField.styled-Dy6mViiV.js";import{T as t}from"./Table-CReE_bxr.js";import"./ProgressBar.styled-C08Gdo4X.js";import"./Select-B_CpYpUU.js";import"./Step-Bbeyp5h7.js";import"./Radio.styled-ZkpEjroR.js";import"./Modal-itSmv6jc.js";import"./Card-CP8_Kl2b.js";import"./SegmentedControl-Bz7BOFvj.js";import"./Dropdown-GpfluN1G.js";import"./Toggle.styled-CkybMFiB.js";import"./TextArea.styled-DaEzWfco.js";import"./Form-KQb8L6Yb.js";import"./Pagination-9SN7FYrp.js";import"./constants-BUjojGf9.js";import"./emotion-styled.browser.esm-DBghOYGd.js";import"./z-index-CLLOsryR.js";import"./useMedia-bxl5YFrZ.js";import"./useDebounceResize-BdCAAo00.js";import"./debounce-BF4Cdv7I.js";import"./emotion-react.browser.esm-Bwsi5GpN.js";import"./index-BAMY2Nnw.js";import"./iframe-CKdM2Dky.js";import"./Close-BgpoXZkN.js";import"./Portal-DUP4U3GD.js";import"./useClickOutside-CvVYzr-_.js";const g=n=>e.jsx("svg",{fill:"currentColor",height:"24",viewBox:"0 0 24 24",width:"24",xmlns:"http://www.w3.org/2000/svg",...n,children:e.jsx("path",{d:"M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"})}),b=n=>e.jsx("svg",{fill:"currentColor",height:"24",viewBox:"0 0 24 24",width:"24",xmlns:"http://www.w3.org/2000/svg",...n,children:e.jsx("path",{d:"M12 8C13.1 8 14 7.1 14 6C14 4.9 13.1 4 12 4C10.9 4 10 4.9 10 6C10 7.1 10.9 8 12 8ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM12 16C10.9 16 10 16.9 10 18C10 19.1 10.9 20 12 20C13.1 20 14 19.1 14 18C14 16.9 13.1 16 12 16Z"})}),i=["Name","Email","Role","Status","Phone","Department","Location","Actions"],w=[["John Doe","john@example.com","Developer","green","+123456789","Engineering","New York",""],["Jane Smith","jane@example.com","Designer","yellow","+987654321","Design","San Francisco",""],["Alice Johnson","alice@example.com","Manager","grey","+135792468","Management","Los Angeles",""],["Bob Brown","bob@example.com","Engineer","green","+246813579","Engineering","Chicago",""]],T={Name:"200px",Status:"120px",Actions:"fit-content"},D=n=>e.jsxs("div",{style:{display:"flex",alignItems:"center",gap:"8px"},children:[e.jsx(y,{title:n}),n]}),A=n=>{const r={green:"success",yellow:"warning",grey:"secondary"}[n]||"secondary";return e.jsx(f,{border:"rounded",color:r,size:"small",children:{green:"ACTIVE",yellow:"PENDING",grey:"DEACTIVATED"}[n]})},j=(n,r)=>{const o=i[n];return{Name:D(r),Status:A(r),Actions:I()}[o]??r},I=()=>e.jsx(v,{children:e.jsx(b,{})}),Se={title:"Data Display/Table",component:t,render:({isFixed:n,hasFixedHeader:r})=>e.jsx("div",{style:{...r&&{height:"200px",overflow:"auto"}},children:e.jsxs(t,{isFixed:n,children:[e.jsx(t.Head,{hasFixedHeader:r,children:e.jsx(t.Row,{children:i.map(o=>e.jsx(t.ColumnHeader,{dataTestId:"test",children:e.jsxs("div",{style:{display:"flex",alignItems:"center",gap:4},children:[o,o==="Status"&&e.jsxs(a,{children:[e.jsx(g,{height:16,width:16}),e.jsx(a.Content,{children:"Pending: Yellow | Active: Green | Deactivated: Grey"})]})]})},`column-header-${o}`))})}),e.jsx(t.Body,{children:w.map(o=>e.jsx(t.Row,{children:o.map((m,d)=>e.jsx(t.DataCell,{columnWidth:T[i[d]],children:j(d,m)},`column-${i[d]}-${m}`))},o.toString()))})]})})},l={args:{isFixed:!1,hasFixedHeader:!1}},S=1,E=2,s={title:"Table",component:t,render:()=>e.jsx("div",{style:{width:"500px",overflow:"auto"},children:e.jsxs(t,{fixedColumnCount:S,fixedEndColumnCount:E,children:[e.jsx(t.Head,{children:e.jsx(t.Row,{children:i.map(n=>e.jsx(t.ColumnHeader,{dataTestId:"test",children:e.jsxs("div",{style:{display:"flex",alignItems:"center",gap:4},children:[n,n==="Status"&&e.jsxs(a,{children:[e.jsx(g,{height:16,width:16}),e.jsx(a.Content,{children:"Pending: Yellow | Active: Green | Deactivated: Grey"})]})]})},`column-header-${n}`))})}),e.jsx(t.Body,{children:w.map(n=>e.jsx(t.Row,{children:n.map((r,o)=>e.jsx(t.DataCell,{columnWidth:T[i[o]],style:{...i[o]==="Actions"&&{minWidth:"65px"}},children:j(o,r)},`column-${i[o]}-${r}`))},n.toString()))})]})})};var c,p,h;l.parameters={...l.parameters,docs:{...(c=l.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    isFixed: false,
+    hasFixedHeader: false
+  }
+}`,...(h=(p=l.parameters)==null?void 0:p.docs)==null?void 0:h.source}}};var u,x,C;s.parameters={...s.parameters,docs:{...(u=s.parameters)==null?void 0:u.docs,source:{originalSource:`{
+  title: 'Table',
+  component: Table,
+  render: () => <div style={{
+    width: '500px',
+    overflow: 'auto'
+  }}>
+      <Table fixedColumnCount={fixedColumnCount} fixedEndColumnCount={fixedEndColumnCount}>
+        <Table.Head>
+          <Table.Row>
+            {columns.map((column: string) => <Table.ColumnHeader dataTestId='test' key={\`column-header-\${column}\`}>
+                <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 4
+            }}>
+                  {column}
+                  {column === 'Status' && <Tooltip>
+                      <InfoOutlineIcon height={16} width={16} />
+                      <Tooltip.Content>
+                        Pending: Yellow | Active: Green | Deactivated: Grey
+                      </Tooltip.Content>
+                    </Tooltip>}
+                </div>
+              </Table.ColumnHeader>)}
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          {rows.map((row: string[]) => <Table.Row key={row.toString()}>
+              {row.map((content: string, i: number) => <Table.DataCell columnWidth={columnSizes[columns[i]]} key={\`column-\${columns[i]}-\${content}\`} style={{
+            ...(columns[i] === 'Actions' && {
+              minWidth: '65px'
+            })
+          }}>
+                  {renderContent(i, content)}
+                </Table.DataCell>)}
+            </Table.Row>)}
+        </Table.Body>
+      </Table>
+    </div>
+}`,...(C=(x=s.parameters)==null?void 0:x.docs)==null?void 0:C.source}}};const Ee=["Default","TableWithPinnedColumns"];export{l as Default,s as TableWithPinnedColumns,Ee as __namedExportsOrder,Se as default};
