@@ -21,12 +21,12 @@ describe('Icon component tests', () => {
   });
 
   it.each`
-    size    | fontSize
-    ${'xs'} | ${'12px'}
-    ${'s'}  | ${'16px'}
-    ${'m'}  | ${'20px'}
-    ${'l'}  | ${'24px'}
-    ${'xl'} | ${'32px'}
+    size             | fontSize
+    ${'extra-small'} | ${'12px'}
+    ${'small'}       | ${'16px'}
+    ${'medium'}      | ${'20px'}
+    ${'large'}       | ${'24px'}
+    ${'extra-large'} | ${'32px'}
   `(
     'applies the font size $fontSize in the Icon component when size is $size',
     ({ size, fontSize }) => {

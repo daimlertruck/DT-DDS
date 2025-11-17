@@ -155,7 +155,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='My textarea with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 
@@ -178,7 +178,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='My required textarea with icon'
-          labelIcon={<Icon code='warning' size='s' />}
+          labelIcon={<Icon code='warning' size='small' />}
           required
         />
       );
@@ -192,7 +192,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='My floating label with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           labelVariant='floating'
         />
       );
@@ -211,7 +211,7 @@ describe('<TextArea /> component', () => {
         <ProvidedTextArea
           hasError
           label='My textarea with icon and error'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           message='Error message'
         />
       );
@@ -227,7 +227,7 @@ describe('<TextArea /> component', () => {
         <ProvidedTextArea
           hasLabel
           label='Textarea with label and icon'
-          labelIcon={<Icon code='help' size='s' />}
+          labelIcon={<Icon code='help' size='small' />}
         />
       );
 
@@ -240,7 +240,7 @@ describe('<TextArea /> component', () => {
         <ProvidedTextArea
           hasLabel={false}
           label='Textarea without label'
-          labelIcon={<Icon code='help' size='s' />}
+          labelIcon={<Icon code='help' size='small' />}
         />
       );
 
@@ -252,7 +252,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='Default variant with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           labelVariant='default'
         />
       );
@@ -267,7 +267,7 @@ describe('<TextArea /> component', () => {
         <ProvidedTextArea
           disabled
           label='Disabled textarea with icon'
-          labelIcon={<Icon code='lock' size='s' />}
+          labelIcon={<Icon code='lock' size='small' />}
         />
       );
 
@@ -281,7 +281,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='Readonly textarea with icon'
-          labelIcon={<Icon code='visibility' size='s' />}
+          labelIcon={<Icon code='visibility' size='small' />}
           readOnly
         />
       );
@@ -295,7 +295,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='Textarea with icon and counter'
-          labelIcon={<Icon code='edit' size='s' />}
+          labelIcon={<Icon code='edit' size='small' />}
           maxLength={100}
         />
       );
@@ -309,7 +309,7 @@ describe('<TextArea /> component', () => {
       render(
         <ProvidedTextArea
           label='Textarea with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           value='Initial value'
         />
       );

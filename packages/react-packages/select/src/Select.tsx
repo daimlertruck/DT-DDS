@@ -281,12 +281,19 @@ const Select = ({
               {isMulti && hasSelectedItems ? (
                 <Tooltip>
                   <IconButton onClick={clearSelection}>
-                    <Icon code='close' dataTestId='clear-selection' size='s' />
+                    <Icon
+                      code='close'
+                      dataTestId='clear-selection'
+                      size='small'
+                    />
                   </IconButton>
                   <Tooltip.Content>Clear all</Tooltip.Content>
                 </Tooltip>
               ) : null}
-              <Icon code={isOpen ? 'expand_less' : 'expand_more'} size='s' />
+              <Icon
+                code={isOpen ? 'expand_less' : 'expand_more'}
+                size='small'
+              />
             </SelectActionContainerStyled>
           </SelectContainerStyled>
         </SelectFieldStyled>

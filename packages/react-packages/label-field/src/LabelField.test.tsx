@@ -100,7 +100,7 @@ describe('<LabelField /> component', () => {
     const { getByTestId } = render(
       <ProvidedLabelField
         htmlFor={INPUT_ID}
-        icon={<Icon code='info' size='s' />}
+        icon={<Icon code='info' size='small' />}
         isActive
       >
         My Awesome Input

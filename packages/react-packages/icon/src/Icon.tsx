@@ -1,14 +1,14 @@
 import { Code } from '@dt-dds/icons';
-import { BaseProps } from '@dt-dds/react-core';
+import { BaseProps, ComponentSize } from '@dt-dds/react-core';
 import { useTheme } from '@emotion/react';
 
 import { IconStyled } from './Icon.styled';
-import { Size, Variant } from './types';
+import { Variant } from './types';
 
 export interface IconProps extends Omit<BaseProps, 'children'> {
   code: Code;
   color?: string;
-  size?: Size;
+  size?: ComponentSize;
   variant?: Variant;
 }
 
@@ -16,7 +16,7 @@ export const Icon = ({
   code,
   color,
   dataTestId,
-  size = 'l',
+  size = 'large',
   style,
   variant = 'outlined',
 }: IconProps) => {

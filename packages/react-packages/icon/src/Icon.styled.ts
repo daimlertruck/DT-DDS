@@ -1,19 +1,20 @@
+import { ComponentSize } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
 
-import { Size, Variant } from './types';
+import { Variant } from './types';
 
 interface IconStyledProps {
   color: string;
-  size: Size;
+  size: ComponentSize;
   variant: Variant;
 }
 
-export const fontSize: Record<Size, string> = {
-  xs: '12px',
-  s: '16px',
-  m: '20px',
-  l: '24px',
-  xl: '32px',
+export const fontSize: Record<ComponentSize, string> = {
+  'extra-small': '12px',
+  small: '16px',
+  medium: '20px',
+  large: '24px',
+  'extra-large': '32px',
 };
 
 export const IconStyled = styled.i<IconStyledProps>`

@@ -24,11 +24,11 @@ type TextFieldPropsWithExtrasProp = TextFieldProps & {
 };
 
 const extraPrefix: ExtraComponent = {
-  component: <Icon code='home_work' size='l' />,
+  component: <Icon code='home_work' size='large' />,
 };
 
 const extraSuffix: ExtraComponent = {
-  component: <Icon code='home_work' size='l' />,
+  component: <Icon code='home_work' size='large' />,
 };
 
 const meta: Meta<TextFieldPropsWithExtrasProp> = {
@@ -161,7 +161,7 @@ export const WithLabelIcon: StoryObj<TextFieldPropsWithExtrasProp> = {
     label: 'My label',
     labelIcon: (
       <Tooltip>
-        <Icon code='info' size='s' />
+        <Icon code='info' size='small' />
         <Tooltip.Content>Additional info about the field</Tooltip.Content>
       </Tooltip>
     ),

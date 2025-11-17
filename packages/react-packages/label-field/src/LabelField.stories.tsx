@@ -22,6 +22,6 @@ export const Default: StoryObj<LabelFieldProps> = {
     isRequired: false,
     hasError: false,
     isFloating: true,
-    icon: <Icon code='info' size='s' />,
+    icon: <Icon code='info' size='small' />,
   },
 };
