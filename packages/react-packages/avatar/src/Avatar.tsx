@@ -1,42 +1,57 @@
+import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
 import { useState } from 'react';
 
-import { AvatarThumbnail } from '../../../dt-dds-react/core';
-
-import { AvatarStyled, AvatarStyledProps } from './Avatar.styled';
-import { AvatarType, AvatarSize } from './constants';
+import { AvatarStyled } from './Avatar.styled';
+import { AvatarType } from './constants';
+import { AvatarProps } from './types';
 import { acronymGenerator } from './utils';
 
-export interface AvatarProps extends AvatarStyledProps {
-  title: string;
-  imageSrc?: string;
-  dataTestId?: string;
-  customInitials?: string;
-  hasTooltip?: boolean;
-  isActive?: boolean;
-}
-
-const Avatar = ({
+export const Avatar = ({
   title,
-  type = AvatarType.Primary,
-  size = AvatarSize.Medium,
+  type = AvatarType.Letter,
+  size = 'medium',
   imageSrc = '',
   dataTestId,
   customInitials,
-  hasTooltip = true,
-  isActive = false,
+  collapsedCount = '+1',
+  hasTooltip = false,
+  style,
 }: AvatarProps) => {
-  const [showThumbnail, setShowThumbnail] = useState(false);
+  const [hasImageError, setHasImageError] = useState(false);
 
   const handleImageError = () => {
-    setShowThumbnail(true);
+    setHasImageError(true);
   };
 
-  const renderProfileImage = () => {
-    if (showThumbnail) {
-      return <AvatarThumbnail />;
+  const shouldRenderPhotoFallback =
+    type === AvatarType.Photo && (hasImageError || !imageSrc);
+
+  const thumbnailIcon = (
+    <div>
+      <Icon code='person' color='primary' size={size} />
+    </div>
+  );
+
+  const renderImage = () => {
+    if (shouldRenderPhotoFallback) {
+      return thumbnailIcon;
     }
+
     return <img alt={title} onError={handleImageError} src={imageSrc} />;
+  };
+
+  const contentMap = {
+    [AvatarType.Photo]: renderImage(),
+    [AvatarType.Thumbnail]: thumbnailIcon,
+    [AvatarType.Collapsed]: <div>{collapsedCount.substring(0, 3)}</div>,
+    [AvatarType.Letter]: (
+      <div>
+        {customInitials
+          ? customInitials.substring(0, 2)
+          : acronymGenerator(title)}
+      </div>
+    ),
   };
 
   const renderAvatarContent = () => {
@@ -44,18 +59,10 @@ const Avatar = ({
       <AvatarStyled
         data-testid={dataTestId ?? 'avatar'}
         size={size}
-        type={type}
-        isActive={isActive}
+        style={style}
+        type={shouldRenderPhotoFallback ? AvatarType.Thumbnail : type}
       >
-        {type === AvatarType.Profile ? (
-          renderProfileImage()
-        ) : (
-          <div>
-            {customInitials
-              ? customInitials.substring(0, 2)
-              : acronymGenerator(title)}
-          </div>
-        )}
+        {contentMap[type]}
       </AvatarStyled>
     );
   };
@@ -69,5 +76,3 @@ const Avatar = ({
     renderAvatarContent()
   );
 };
-
-export default Avatar;

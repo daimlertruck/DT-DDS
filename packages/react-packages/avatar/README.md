@@ -2,20 +2,87 @@
 
 Avatars can be used to display circular user profile in user menu, tables etc.
 
+This component is purely presentational and for Interactivity it can be used with IconButton.
+
 ## Avatar Usage
 
+### Default
+
 ```jsx
-import { Avatar, AvatarType, AvatarSize } from '@dt-dds/react';
+import { Avatar } from '@dt-dds/react';
 
 export const App = () => {
   return (
-    <div>
-      <Avatar
-        type={AvatarType.Primary}
-        size={AvatarSize.Medium}
-        title='User Name'
-      />
-    </div>
+    <Avatar title='User Name' size='medium' />
+  );
+};
+```
+
+### With photo
+
+```jsx
+import { Avatar } from '@dt-dds/react';
+
+export const App = () => {
+  return (
+    <Avatar type='photo' imageSrc='/profile.png' size='medium' />
+  );
+};
+```
+
+### Collapsed
+
+```jsx
+import { Avatar } from '@dt-dds/react';
+
+export const App = () => {
+  return (
+    <Avatar type='collapsed' collapsedCount='+1' size='medium' />
+  );
+};
+```
+
+### Thumbnail
+
+```jsx
+import { Avatar } from '@dt-dds/react';
+
+export const App = () => {
+  return (
+    <Avatar type='thumbnail' size='medium' />
+  );
+};
+```
+
+### Sizes
+
+```jsx
+import { Avatar } from '@dt-dds/react';
+
+export const App = () => {
+  return (
+    <>
+      <Avatar title='User Name' size='small' />
+      <Avatar title='User Name' size='medium' />
+      <Avatar title='User Name' size='large' />
+    </>
+  );
+};
+```
+
+### Types with different sizes
+
+```jsx
+import { Avatar } from '@dt-dds/react';
+
+export const App = () => {
+  return (
+    <>
+      <Avatar type='letter' title='John Doe' size='large' />
+      <Avatar type='photo' imageSrc='/profile.png' size='small' />
+      <Avatar type='thumbnail' size='medium' />
+      <Avatar type='collapsed' collapsedCount='+4' size='medium' />
+    </>
   );
 };
 ```
@@ -26,14 +93,16 @@ export const App = () => {
 
 This component can contain upto two simple characters by passing a string in prop `title`
 
-| Property     | Type               | Default | Description                                                        |
-| ------------ | ------------------ | ------- | ------------------------------------------------------------------ |
-| `title`      | `ReactNode`        | -       | Letter characters shown in the avatar                              |
-| `type`       | `enum<AvatarType>` | primary | You can choose type of the Avatar you want for different use cases |
-| `size`       | `enum<AvatarSize>` | medium  | Sets the Avatar size given the available options                   |
-| `imageSrc`   | `string`           | -       | Optional profile image path (will only work with "Profile" type)   |
-| `dataTestId` | `string`           | avatar  | Avatar test identifier                                             |
-| `isActive`   | `Boolean`          | false   | Persist the Avatar active state                                    |
+| Property          | Type               | Default | Description                                                        |
+| ----------------- | ------------------ | ------- | ------------------------------------------------------------------ |
+| `title`           | `string`           | -       | Letter characters shown in the avatar                              |
+| `type`            | `AvatarType` | `'letter'`  | Selects which visual style the Avatar uses. Accepts: <br/>• `'letter'` – shows initials. <br/>• `'collapsed'` – shows "+N" for group overflow. <br/>• `'thumbnail'` – generic placeholder icon. <br/>• `'photo'` – uses `imageSrc` with automatic fallback to type thumbnail. |
+| `size`            | `AvatarSize` | `'medium'`  | Controls the Avatar dimensions. Accepts: <br/>• `'small'` – compact UI. <br/>• `'medium'` – default. <br/>• `'large'` – prominent/profile use. |
+| `imageSrc`        | `string`           | -       | Optional image path (will only work with "Photo" type)             |
+| `dataTestId`      | `string`           | avatar  | Avatar test identifier                                             |
+| `collapsedCount`  | `string`           | '+1'     | Number displayed inside a collapsed avatar (max 3 characters). Defaults to `'+1'` when `type="collapsed"`.  |
+| `customInitials`  | `string`           | -       | Custom initials to display (max 2 characters). Replaces `title` if present. |
+| `hasTooltip`      | `Boolean`          | false   | Shows tooltip when hovering on the Avatar                          |
 
 ## Stack
 

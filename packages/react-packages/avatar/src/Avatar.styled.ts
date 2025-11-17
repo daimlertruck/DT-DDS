@@ -1,15 +1,10 @@
 import styled from '@emotion/styled';
 
-import { AvatarType, AvatarSize } from './constants';
-
-export interface AvatarStyledProps {
-  type: AvatarType;
-  size: AvatarSize;
-  isActive?: boolean;
-}
+import { AvatarType } from './constants';
+import { AvatarSize, AvatarStyledProps } from './types';
 
 export const AvatarStyled = styled.div<AvatarStyledProps>`
-  ${({ theme, type, size, isActive }) => {
+  ${({ theme, type, size }) => {
     let styles = `
       & > * {
         width: 100%;
@@ -17,99 +12,63 @@ export const AvatarStyled = styled.div<AvatarStyledProps>`
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 700;
         text-transform: uppercase;
         border-radius: ${theme.radius.radius_500};
-        cursor: pointer;
       }
     `;
 
-    switch (size) {
-      case AvatarSize.Small:
-        styles += `
-          width: 16px;
-          height: 16px;
-          font-size: 8px;
-          line-height: 10px;
-          
-          & > * {
-            padding: 3px 2px 2px 2px;
-          }
-        `;
-        break;
+    const sizeStyles: Record<AvatarSize, string> = {
+      small: `
+        width: 20px;
+        height: 20px;
+        ${theme.fontStyles.bodyXsBold};
+      `,
+      medium: `
+        width: ${theme.spacing.spacing_60};
+        height: ${theme.spacing.spacing_60};
+        ${theme.fontStyles.bodyXsBold};
+      `,
+      large: `
+        width: ${theme.spacing.spacing_70};
+        height: ${theme.spacing.spacing_70};
+        ${theme.fontStyles.bodySmBold};
+      `,
+    };
 
-      case AvatarSize.Medium:
-        styles += `
-          width: 24px;
-          height: 24px;
-          font-size: 10px;
-          line-height: 14px;
-        `;
-        break;
-
-      case AvatarSize.Large:
-        styles += `
-          width: 32px;
-          height: 32px;
-          font-size: 12px;
-          line-height: 16px;
-        `;
-        break;
-    }
+    styles += sizeStyles[size];
 
     switch (type) {
-      case AvatarType.Primary:
+      case AvatarType.Letter:
         styles += `
           color: ${theme.palette.content.contrast};
           
           & > * {
-            background-color: ${
-              isActive
-                ? theme.palette.primary.dark
-                : theme.palette.primary.default
-            };
-
-            &:hover {
-              background-color: ${theme.palette.primary.dark};
-            }
+            background-color: ${theme.palette.primary.default};
           }
         `;
         break;
 
-      case AvatarType.Secondary:
+      case AvatarType.Collapsed:
         styles += `
-          color: ${theme.palette.content.contrast};
-          
-          & > * {
-            background-color: ${theme.palette.secondary.default};
-
-            &:hover {
-              background-color: ${theme.palette.secondary.dark};
-            }
-          }
-        `;
-        break;
-
-      case AvatarType.Tertiary:
-        styles += `
-          color: ${theme.palette.primary.default};
+          color: ${theme.palette.content.medium};
           
           & > * {
             background-color: ${theme.palette.content.contrast};
-
-            &:hover {
-              background-color: ${theme.palette.primary.light};
-            }
           }
         `;
         break;
 
-      case AvatarType.Profile:
+      case AvatarType.Thumbnail:
         styles += `
+          color: ${theme.palette.content.contrast};
+          
           & > * {
-            padding: initial;
+            background-color: ${theme.palette.primary.default};
           }
         `;
+        break;
+
+      case AvatarType.Photo:
         break;
     }
 

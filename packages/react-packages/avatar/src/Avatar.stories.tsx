@@ -1,8 +1,14 @@
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Meta, StoryObj } from '@storybook/react';
 
-import Avatar from './Avatar';
-import { AvatarType, AvatarSize } from './constants';
+import { Avatar } from './Avatar';
+import { AvatarType } from './constants';
 import avatarExampleImage from './images/example-avatar-image.png';
+
+const AvatarSizeOptions = {
+  Small: 'small',
+  Medium: 'medium',
+  Large: 'large',
+};
 
 const meta: Meta<typeof Avatar> = {
   title: 'Data Display/Avatar',
@@ -10,19 +16,24 @@ const meta: Meta<typeof Avatar> = {
   argTypes: {
     type: {
       mapping: AvatarType,
-      options: Object.values(AvatarType).filter((x) => typeof x === 'string'),
+      options: Object.values(AvatarType),
       control: { type: 'inline-radio' },
     },
     size: {
-      mapping: AvatarSize,
-      options: Object.values(AvatarSize).filter((x) => typeof x === 'string'),
-      control: { type: 'inline-radio' },
+      options: Object.values(AvatarSizeOptions),
+      control: { type: 'radio' },
     },
     hasTooltip: {
       control: { type: 'boolean' },
     },
-    isActive: {
-      control: { type: 'boolean' },
+    imageSrc: {
+      control: 'text',
+      description: 'URL of the image to display when type is Photo',
+    },
+    collapsedCount: {
+      control: 'text',
+      description:
+        'Number to display when type is Collapsed (max 3 characters)',
     },
   },
 };
@@ -33,19 +44,34 @@ export const Default: StoryObj<typeof Avatar> = {
   args: {
     customInitials: '',
     title: 'User Name',
-    type: AvatarType.Primary,
-    size: AvatarSize.Medium,
-    hasTooltip: true,
-    isActive: false,
+    type: AvatarType.Letter,
+    size: 'medium',
+    hasTooltip: false,
   },
 };
 
-export const WithProfileImage: StoryObj<typeof Avatar> = {
+export const WithPhoto: StoryObj<typeof Avatar> = {
   args: {
-    title: 'User Name',
-    type: AvatarType.Profile,
-    size: AvatarSize.Large,
+    type: AvatarType.Photo,
+    size: 'medium',
     imageSrc: avatarExampleImage,
+    hasTooltip: false,
+  },
+};
+
+export const Collapsed: StoryObj<typeof Avatar> = {
+  args: {
+    type: AvatarType.Collapsed,
+    size: 'medium',
+    collapsedCount: '+1',
     hasTooltip: true,
+  },
+};
+
+export const Thumbnail: StoryObj<typeof Avatar> = {
+  args: {
+    type: AvatarType.Thumbnail,
+    size: 'medium',
+    hasTooltip: false,
   },
 };

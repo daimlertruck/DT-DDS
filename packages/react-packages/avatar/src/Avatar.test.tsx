@@ -1,75 +1,61 @@
 import { withProviders } from '@dt-dds/react-core';
+import { theme } from '@dt-dds/themes';
 import { render, screen, within, fireEvent } from '@testing-library/react';
 
-import Avatar from './Avatar';
-import { AvatarType, AvatarSize } from './constants';
+import { Avatar } from './Avatar';
+import { AvatarType } from './constants';
 import avatarExampleImage from './images/example-avatar-image.png';
+import { AvatarSize } from './types';
 
 describe('<Avatar /> component', () => {
   const ProvidedAvatar = withProviders(Avatar);
 
-  const sizeStyles: Record<AvatarSize, string> = {
-    [AvatarSize.Large]:
-      'width: 32px; height: 32px; font-size: 12px; line-height: 16px;',
-    [AvatarSize.Medium]:
-      'width: 24px; height: 24px; font-size: 10px; line-height: 14px;',
-    [AvatarSize.Small]:
-      'width: 16px; height: 16px; font-size: 8px; line-height: 10px;',
-  };
-
   const typeStyles: Record<AvatarType, string> = {
-    [AvatarType.Primary]: 'color: #FFFFFF;',
-    [AvatarType.Secondary]: 'color: #FFFFFF;',
-    [AvatarType.Tertiary]: 'color: #000000',
-    [AvatarType.Profile]: 'padding: 0px',
+    [AvatarType.Letter]: `color: ${theme.palette.content.contrast};`,
+    [AvatarType.Collapsed]: `color: ${theme.palette.content.medium};`,
+    [AvatarType.Thumbnail]: `color: ${theme.palette.content.contrast};`,
+    [AvatarType.Photo]: '',
   };
 
-  it('renders span html element with the correct content', () => {
+  it('renders avatar element with the correct content', () => {
     const { container } = render(
-      <ProvidedAvatar
-        customInitials='AAAAA'
-        size={AvatarSize.Medium}
-        title='User Name'
-        type={AvatarType.Primary}
-      />
+      <ProvidedAvatar customInitials='AAAAA' title='User Name' />
     );
 
     expect(container).toMatchSnapshot();
   });
 
   it.each`
-    size
-    ${AvatarSize.Large}
-    ${AvatarSize.Medium}
-    ${AvatarSize.Small}
+    size        | expectedWidth
+    ${'small'}  | ${'20px'}
+    ${'medium'} | ${theme.spacing.spacing_60}
+    ${'large'}  | ${theme.spacing.spacing_70}
   `(
-    'should render a avatar with image  when size $size',
-    ({ size }: { size: AvatarSize }) => {
+    'should render avatar with correct size for $size',
+    ({ size, expectedWidth }: { size: AvatarSize; expectedWidth: string }) => {
       const { getByTestId } = render(
-        <ProvidedAvatar
-          imageSrc={avatarExampleImage}
-          size={size}
-          title='User Name'
-          type={AvatarType.Profile}
-        />
+        <ProvidedAvatar size={size} title='User Name' />
       );
 
-      expect(getByTestId('avatar')).toHaveStyle(sizeStyles[size]);
+      const avatar = getByTestId('avatar');
+      expect(avatar).toHaveStyle({
+        width: expectedWidth,
+        height: expectedWidth,
+      });
     }
   );
 
   it.each`
     type
-    ${AvatarType.Primary}
-    ${AvatarType.Secondary}
-    ${AvatarType.Tertiary}
+    ${AvatarType.Letter}
+    ${AvatarType.Collapsed}
+    ${AvatarType.Thumbnail}
   `(
     'should render a avatar when type $type',
     ({ type }: { type: AvatarType }) => {
       const { getByTestId } = render(
         <ProvidedAvatar
           imageSrc={avatarExampleImage}
-          size={AvatarSize.Medium}
           title='User Name'
           type={type}
         />
@@ -79,32 +65,43 @@ describe('<Avatar /> component', () => {
     }
   );
 
-  it('renders thumbnail image for profile type when imageSrc fails to load', () => {
-    render(
+  it('should fallback to thumbnail styling when photo fails to load', () => {
+    const { getByTestId } = render(
       <ProvidedAvatar
-        imageSrc=''
-        size={AvatarSize.Medium}
+        imageSrc={avatarExampleImage}
         title='User Name'
-        type={AvatarType.Profile}
+        type={AvatarType.Photo}
       />
     );
 
-    const thumbnailImage: HTMLImageElement = screen.getByAltText('User Name');
-    expect(thumbnailImage).toBeInTheDocument();
+    const avatarElement = getByTestId('avatar');
+    const imgElement = screen.getByAltText('User Name') as HTMLImageElement;
+
+    fireEvent.error(imgElement);
+
+    expect(avatarElement).toHaveStyle(typeStyles[AvatarType.Thumbnail]);
   });
 
-  it('renders successfully "avatarExampleImage" for profile type', () => {
+  it('should render thumbnail styling when photo type has no imageSrc', () => {
+    render(
+      <ProvidedAvatar imageSrc='' title='User Name' type={AvatarType.Photo} />
+    );
+
+    const avatarElement = screen.getByTestId('avatar');
+    expect(avatarElement).toHaveStyle(typeStyles[AvatarType.Thumbnail]);
+  });
+
+  it('renders successfully "avatarExampleImage" for photo type', () => {
     render(
       <ProvidedAvatar
         imageSrc={avatarExampleImage}
-        size={AvatarSize.Medium}
         title='User Name'
-        type={AvatarType.Profile}
+        type={AvatarType.Photo}
       />
     );
 
     const thumbnailImage: HTMLImageElement = screen.getByAltText('User Name');
-    expect(thumbnailImage).toBeInTheDocument();
+    expect(thumbnailImage).toBeVisible();
     expect(thumbnailImage.src).toContain(avatarExampleImage);
   });
 
@@ -113,56 +110,25 @@ describe('<Avatar /> component', () => {
       <ProvidedAvatar
         customInitials='AB'
         imageSrc={avatarExampleImage}
-        size={AvatarSize.Medium}
         title='User Name'
-        type={AvatarType.Primary}
       />
     );
 
-    expect(
-      within(screen.getByTestId('avatar')).getByText('AB')
-    ).toBeInTheDocument();
+    expect(within(screen.getByTestId('avatar')).getByText('AB')).toBeVisible();
 
     rerender(
       <ProvidedAvatar
         customInitials='ABCCC'
         imageSrc={avatarExampleImage}
-        size={AvatarSize.Medium}
         title='User Name'
-        type={AvatarType.Primary}
       />
     );
 
-    expect(
-      within(screen.getByTestId('avatar')).getByText('AB')
-    ).toBeInTheDocument();
+    expect(within(screen.getByTestId('avatar')).getByText('AB')).toBeVisible();
   });
 
-  it('renders avatar with tooltip by default', () => {
-    render(
-      <ProvidedAvatar
-        size={AvatarSize.Medium}
-        title='User Name'
-        type={AvatarType.Primary}
-      />
-    );
-
-    const avatarElement = screen.getByTestId('avatar');
-    fireEvent.mouseEnter(avatarElement);
-
-    const tooltipContainer = screen.getByTestId('tooltip-container');
-    expect(tooltipContainer).toBeInTheDocument();
-  });
-
-  it('does not render a tooltip when hasTooltip is false', () => {
-    render(
-      <ProvidedAvatar
-        hasTooltip={false}
-        size={AvatarSize.Medium}
-        title='User Name'
-        type={AvatarType.Primary}
-      />
-    );
+  it('does not render avatar with tooltip by default', () => {
+    render(<ProvidedAvatar size='medium' title='User Name' />);
 
     const avatarElement = screen.getByTestId('avatar');
     fireEvent.mouseEnter(avatarElement);
@@ -171,30 +137,35 @@ describe('<Avatar /> component', () => {
     expect(tooltipContainer).not.toBeInTheDocument();
   });
 
-  it.each`
-    type                  | isActive
-    ${AvatarType.Primary} | ${true}
-    ${AvatarType.Primary} | ${false}
-  `(
-    'should render avatar with type $type when isActive is $isActive',
-    ({ type, isActive }: { type: AvatarType; isActive: boolean }) => {
-      const { getByTestId } = render(
-        <ProvidedAvatar
-          isActive={isActive}
-          size={AvatarSize.Medium}
-          title='User Name'
-          type={type}
-        />
-      );
+  it('render avatar with tooltip', () => {
+    render(<ProvidedAvatar hasTooltip size='medium' title='User Name' />);
 
-      const avatar = getByTestId('avatar');
-      const innerElement = avatar.firstChild as HTMLElement;
+    const avatarElement = screen.getByTestId('avatar');
+    fireEvent.mouseEnter(avatarElement);
 
-      const expectedBackgroundColor = isActive ? '#3e3e3e' : '#000000';
+    const tooltipContainer = screen.getByTestId('tooltip-container');
+    expect(tooltipContainer).toBeVisible();
+  });
 
-      expect(innerElement).toHaveStyle(
-        `background-color: ${expectedBackgroundColor}`
-      );
-    }
-  );
+  it('renders avatar with collapsed count', () => {
+    const { rerender } = render(
+      <ProvidedAvatar
+        collapsedCount='+5'
+        title='5 users'
+        type={AvatarType.Collapsed}
+      />
+    );
+
+    expect(within(screen.getByTestId('avatar')).getByText('+5')).toBeVisible();
+
+    rerender(
+      <ProvidedAvatar
+        collapsedCount='+999'
+        title='9999 users'
+        type={AvatarType.Collapsed}
+      />
+    );
+
+    expect(within(screen.getByTestId('avatar')).getByText('+99')).toBeVisible();
+  });
 });

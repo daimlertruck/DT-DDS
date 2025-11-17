@@ -1,8 +1,8 @@
 import { IconButton, InfoOutlineIcon, MoreVerticalIcon } from '@dt-dds/react';
-import { Avatar, AvatarSize, AvatarType } from '@dt-dds/react-avatar';
+import { Avatar } from '@dt-dds/react-avatar';
 import { Tag, TagColor } from '@dt-dds/react-tag';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { TableHeadProps } from './components';
 import { default as Table, TableProps } from './Table';
@@ -69,7 +69,7 @@ const columnSizes: { [key: string]: string } = {
 
 const renderAvatarWithTitle = (title: string) => (
   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-    <Avatar size={AvatarSize.Small} title={title} type={AvatarType.Primary} />
+    <Avatar size='small' title={title} />
     {title}
   </div>
 );
