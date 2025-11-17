@@ -35,7 +35,7 @@ export const SegmentedControlOption = ({
       showLabel={isLabelVisible}
       type='button'
     >
-      {iconCode ? <Icon code={iconCode} size='s' /> : null}
+      {iconCode ? <Icon code={iconCode} size='small' /> : null}
       {isLabelVisible ? label : null}
     </SegmentedControlOptionStyled>
   );

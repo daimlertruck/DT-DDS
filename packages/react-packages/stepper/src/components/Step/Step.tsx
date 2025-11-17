@@ -66,7 +66,7 @@ const StepCounter = ({
       }}
     >
       {isCompleted ? (
-        <Icon code='check' color={theme.palette.surface.light} size='s' />
+        <Icon code='check' color={theme.palette.surface.light} size='small' />
       ) : (
         <Typography
           color={color === 'disabled' ? 'content.light' : `${color}.default`}

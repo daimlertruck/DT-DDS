@@ -34,7 +34,7 @@ export const ModalHeader = ({
         </Typography>
 
         <IconButton color='accent' dataTestId='close-button' onClick={onClose}>
-          <Icon code='close' size='l' />
+          <Icon code='close' size='large' />
         </IconButton>
       </Box>
       {subTitle ? (

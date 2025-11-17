@@ -69,7 +69,7 @@ export const TestAreaWithLabelIcon: StoryObj<TextAreaProps> = {
     label: 'My label',
     labelIcon: (
       <Tooltip>
-        <Icon code='info' size='s' />
+        <Icon code='info' size='small' />
         <Tooltip.Content>Additional info about the field</Tooltip.Content>
       </Tooltip>
     ),

@@ -513,7 +513,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField
           label='My input with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 
@@ -536,7 +536,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField
           label='My required input with icon'
-          labelIcon={<Icon code='warning' size='s' />}
+          labelIcon={<Icon code='warning' size='small' />}
           required
         />
       );
@@ -551,7 +551,7 @@ describe('<TextField /> component', () => {
         <ProvidedTextField
           isFloatingLabel
           label='My floating label with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 
@@ -569,7 +569,7 @@ describe('<TextField /> component', () => {
         <ProvidedTextField
           hasError
           label='My input with icon and error'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           message='Error message'
         />
       );
@@ -585,7 +585,7 @@ describe('<TextField /> component', () => {
         <ProvidedTextField
           disabled
           label='Disabled input with icon'
-          labelIcon={<Icon code='lock' size='s' />}
+          labelIcon={<Icon code='lock' size='small' />}
         />
       );
 
@@ -599,7 +599,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField
           label='Readonly input with icon'
-          labelIcon={<Icon code='visibility' size='s' />}
+          labelIcon={<Icon code='visibility' size='small' />}
           readOnly
         />
       );
@@ -613,7 +613,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField
           label='Password with icon'
-          labelIcon={<Icon code='password' size='s' />}
+          labelIcon={<Icon code='password' size='small' />}
           type='password'
         />
       );
@@ -627,7 +627,7 @@ describe('<TextField /> component', () => {
         <ProvidedTextField
           initialValue='Initial value'
           label='Input with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 
@@ -640,7 +640,7 @@ describe('<TextField /> component', () => {
         <ProvidedTextField
           isFloatingLabel={false}
           label='Non-floating label with icon'
-          labelIcon={<Icon code='help' size='s' />}
+          labelIcon={<Icon code='help' size='small' />}
         />
       );
 
@@ -652,7 +652,7 @@ describe('<TextField /> component', () => {
       render(
         <ProvidedTextField
           label='Search with icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
           type='search'
         />
       );
@@ -669,7 +669,7 @@ describe('<TextField /> component', () => {
             component: <Icon code='search' />,
           }}
           label='Input with prefix and label icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 
@@ -685,7 +685,7 @@ describe('<TextField /> component', () => {
             component: <Icon code='arrow_forward' />,
           }}
           label='Input with suffix and label icon'
-          labelIcon={<Icon code='info' size='s' />}
+          labelIcon={<Icon code='info' size='small' />}
         />
       );
 

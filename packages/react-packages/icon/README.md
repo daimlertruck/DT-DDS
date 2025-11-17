@@ -18,7 +18,7 @@ export const App = () => {
 | ------------ | ---------------------- | ---------- | ------------------------------------------------------------------------------------------ |
 | `code`       | `Code`                 | -          | Specifies the icon code for the desired symbol.                                            |
 | `color`      | `string`               | -          | Sets the color of the icon.                                                                |
-| `size`       | `Size`                 | 'l'        | Specifies the predefined icon sizes. Custom font-sizes are allowed through the style prop. |
+| `size`       | `ComponentSize`        | 'large'    | Specifies the predefined icon sizes. Custom font-sizes are allowed through the style prop. |
 | `variant`    | 'outlined' \| 'filled' | 'outlined' | Specifies the icon filling variant.                                                        |
 | `dataTestId` | `string`               | 'icon'     | Customizable test identifier.                                                              |
 | `style`      | `React.CSSProperties`  | -          | Additional styles to apply to the icon.                                                    |
