@@ -1,26 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Avatar /> component renders span html element with the correct content 1`] = `
+exports[`<Avatar /> component renders avatar element with the correct content 1`] = `
 .emotion-0 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-1 {
   width: 24px;
   height: 24px;
+  font-family: Daimler CS;
   font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
   line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
   color: #ffffff;
 }
 
-.emotion-1>* {
+.emotion-0>* {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -35,33 +29,22 @@ exports[`<Avatar /> component renders span html element with the correct content
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  font-weight: 700;
   text-transform: uppercase;
   border-radius: 100px;
-  cursor: pointer;
 }
 
-.emotion-1>* {
+.emotion-0>* {
   background-color: #000000;
-}
-
-.emotion-1>*:hover {
-  background-color: #3e3e3e;
 }
 
 <div>
   <div
-    class="emotion-0"
-    data-testid="tooltip-container"
+    class="emotion-0 emotion-1"
+    data-testid="avatar"
+    type="letter"
   >
-    <div
-      class="emotion-1 emotion-2"
-      data-testid="avatar"
-      type="primary"
-    >
-      <div>
-        AA
-      </div>
+    <div>
+      AA
     </div>
   </div>
 </div>

@@ -1,8 +1,8 @@
 export const AvatarType = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Profile: 'profile',
+  Letter: 'letter',
+  Collapsed: 'collapsed',
+  Thumbnail: 'thumbnail',
+  Photo: 'photo',
 } as const;
 
 export type AvatarType = (typeof AvatarType)[keyof typeof AvatarType];
