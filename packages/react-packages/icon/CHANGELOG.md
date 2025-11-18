@@ -1,5 +1,11 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.52
+
+### Patch Changes
+
+- refactor: use component size from core
+
 ## 1.0.0-beta.51
 
 ### Patch Changes

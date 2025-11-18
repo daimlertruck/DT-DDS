@@ -1,5 +1,13 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.51
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+
 ## 1.0.0-beta.50
 
 ### Patch Changes

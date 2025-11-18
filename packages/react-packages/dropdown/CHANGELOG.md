@@ -1,5 +1,15 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.68
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-icon@1.0.0-beta.52
+  - @dt-dds/react-box@1.0.0-beta.47
+
 ## 1.0.0-beta.67
 
 ### Patch Changes

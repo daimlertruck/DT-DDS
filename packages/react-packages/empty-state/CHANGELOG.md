@@ -1,5 +1,14 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.96
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.53
+  - @dt-dds/react-button@1.0.0-beta.76
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

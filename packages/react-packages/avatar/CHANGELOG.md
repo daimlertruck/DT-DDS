@@ -1,5 +1,14 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- refactor: use component size from core
+- refactor: avatar component
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+
 ## 1.0.0-beta.60
 
 ### Minor Changes

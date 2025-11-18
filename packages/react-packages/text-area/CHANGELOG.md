@@ -1,5 +1,16 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-icon@1.0.0-beta.52
+  - @dt-dds/react-label-field@1.0.0-beta.50
+  - @dt-dds/react-box@1.0.0-beta.47
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

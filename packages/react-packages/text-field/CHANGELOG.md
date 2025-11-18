@@ -1,5 +1,15 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+  - @dt-dds/react-label-field@1.0.0-beta.50
+  - @dt-dds/react-spinner@1.0.0-beta.81
+
 ## 1.0.0-beta.85
 
 ### Patch Changes

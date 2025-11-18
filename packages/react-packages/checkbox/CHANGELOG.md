@@ -1,5 +1,13 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

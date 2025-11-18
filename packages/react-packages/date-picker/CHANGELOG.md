@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.69
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.86
+
 ## 1.0.0-beta.68
 
 ### Patch Changes

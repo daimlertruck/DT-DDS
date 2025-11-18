@@ -1,5 +1,11 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.46
+
+### Patch Changes
+
+- refactor: avatar component
+
 ## 1.0.0-beta.45
 
 ### Patch Changes

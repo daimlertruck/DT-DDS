@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.31
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+
 ## 1.0.0-beta.30
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.76
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+  - @dt-dds/react-spinner@1.0.0-beta.81
+
 ## 1.0.0-beta.75
 
 ### Patch Changes

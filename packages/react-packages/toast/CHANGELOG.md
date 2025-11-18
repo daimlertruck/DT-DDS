@@ -1,5 +1,14 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.93
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+  - @dt-dds/react-button@1.0.0-beta.76
+
 ## 1.0.0-beta.92
 
 ### Patch Changes

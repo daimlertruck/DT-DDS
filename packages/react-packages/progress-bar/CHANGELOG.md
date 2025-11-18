@@ -1,5 +1,13 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- refactor: use component size from core
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.52
+
 ## 1.0.0-beta.44
 
 ### Patch Changes
