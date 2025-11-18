@@ -1,10 +1,10 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { MouseEvent } from 'react';
 
-import { useDropdownContext } from '../../context';
-import { DropdownFill, DropdownOptionValue } from '../../types';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { DropdownOptionStyled } from './DropdownOption.styled';
+import { useDropdownContext } from '../../context';
+import { DropdownFill, DropdownOptionValue } from '../../types';
 
 export interface DropdownOptionProps extends BaseProps {
   fill?: DropdownFill;

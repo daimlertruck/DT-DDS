@@ -1,7 +1,8 @@
+import { fireEvent, render } from '@testing-library/react';
+
 import { Button } from '@dt-dds/react-button';
 import { useMedia, withProviders } from '@dt-dds/react-core';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { fireEvent, render } from '@testing-library/react';
 
 import { Message } from './Message';
 import { MessageType, OMessageType } from './types';

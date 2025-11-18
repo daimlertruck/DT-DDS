@@ -1,6 +1,5 @@
 import { formatObject } from '../formatter';
 import { getTokenValue, validateRequiredTokens } from '../tokenUtils';
-
 import { TokenFile, TokenCategory } from './../../../types';
 
 /**

@@ -89,6 +89,7 @@ const config: StorybookConfig = {
         'tooltip',
         'spinner',
         'radio',
+        'app-header',
       ];
 
       config.resolve.alias = {

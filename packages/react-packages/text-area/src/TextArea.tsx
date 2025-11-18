@@ -1,8 +1,3 @@
-import { Box } from '@dt-dds/react-box';
-import { BaseProps } from '@dt-dds/react-core';
-import { LabelField } from '@dt-dds/react-label-field';
-import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
 import {
   ChangeEvent,
   ComponentPropsWithoutRef,
@@ -11,6 +6,13 @@ import {
   useEffect,
   useState,
 } from 'react';
+
+import { useTheme } from '@emotion/react';
+
+import { Box } from '@dt-dds/react-box';
+import { BaseProps } from '@dt-dds/react-core';
+import { LabelField } from '@dt-dds/react-label-field';
+import { Typography } from '@dt-dds/react-typography';
 
 import {
   TextAreaBackgroundFill,

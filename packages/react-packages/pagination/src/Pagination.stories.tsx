@@ -1,5 +1,4 @@
 import { BaseProps } from '@dt-dds/react-core';
-import type { Meta, StoryFn } from '@storybook/react-vite';
 
 import { usePagination } from './hooks';
 import {
@@ -8,6 +7,8 @@ import {
   PaginationInputProps,
   ContentProps,
 } from './Pagination';
+
+import type { Meta, StoryFn } from '@storybook/react-vite';
 
 type PaginationStoryProps = BaseProps & PaginationInputProps & ContentProps;
 

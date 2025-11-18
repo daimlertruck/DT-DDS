@@ -1,11 +1,11 @@
-import { Tooltip } from '@dt-dds/react-tooltip';
 import { useState } from 'react';
 
-import { AvatarThumbnail } from '../../../dt-dds-react/core';
+import { Tooltip } from '@dt-dds/react-tooltip';
 
 import { AvatarStyled, AvatarStyledProps } from './Avatar.styled';
 import { AvatarType, AvatarSize } from './constants';
 import { acronymGenerator } from './utils';
+import { AvatarThumbnail } from '../../../dt-dds-react/core';
 
 export interface AvatarProps extends AvatarStyledProps {
   title: string;
@@ -43,9 +43,9 @@ const Avatar = ({
     return (
       <AvatarStyled
         data-testid={dataTestId ?? 'avatar'}
+        isActive={isActive}
         size={size}
         type={type}
-        isActive={isActive}
       >
         {type === AvatarType.Profile ? (
           renderProfileImage()

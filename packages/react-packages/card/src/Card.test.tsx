@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Card } from './Card';
 

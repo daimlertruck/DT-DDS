@@ -1,7 +1,8 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 
 import { Toggle, ToggleProps } from './Toggle';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const ToggleComponent = (props: ToggleProps) => {
   const [isChecked, setIsChecked] = useState(false);

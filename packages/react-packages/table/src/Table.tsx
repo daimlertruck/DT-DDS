@@ -1,5 +1,6 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { useEffect, useRef, useState } from 'react';
+
+import { BaseProps } from '@dt-dds/react-core';
 
 import {
   TableBody,

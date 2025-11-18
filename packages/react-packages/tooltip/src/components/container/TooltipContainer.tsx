@@ -1,9 +1,9 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { MouseEvent } from 'react';
 
-import { useTooltipContext } from '../../context';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { TooltipContainerStyled } from './TooltipContainerStyled';
+import { useTooltipContext } from '../../context';
 
 export interface TooltipContainerProps extends BaseProps {
   hideDelay?: number;

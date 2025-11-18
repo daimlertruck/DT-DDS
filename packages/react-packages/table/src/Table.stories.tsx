@@ -1,8 +1,9 @@
+import { Meta, StoryObj } from '@storybook/react-vite';
+
 import { IconButton, InfoOutlineIcon, MoreVerticalIcon } from '@dt-dds/react';
 import { Avatar, AvatarSize, AvatarType } from '@dt-dds/react-avatar';
 import { Tag, TagColor } from '@dt-dds/react-tag';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { TableHeadProps } from './components';
 import { default as Table, TableProps } from './Table';

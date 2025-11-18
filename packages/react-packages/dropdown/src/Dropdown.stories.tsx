@@ -1,4 +1,3 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
 import { ComponentProps } from 'react';
 
 import {
@@ -7,6 +6,8 @@ import {
   DropdownOptionValue,
   DropdownVariant,
 } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const OPTIONS: DropdownOptionValue[] = [
   { text: 'Option 1', value: '1' },

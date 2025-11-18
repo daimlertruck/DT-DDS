@@ -1,9 +1,11 @@
+import { ReactNode } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { Box } from '@dt-dds/react-box';
 import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { Typography } from '@dt-dds/react-typography';
-import { useTheme } from '@emotion/react';
-import { ReactNode } from 'react';
 
 import { ToastType } from './constants';
 import {

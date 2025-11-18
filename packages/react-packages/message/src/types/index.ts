@@ -1,5 +1,6 @@
-import { BaseProps, Orientation } from '@dt-dds/react-core';
 import { ReactNode } from 'react';
+
+import { BaseProps, Orientation } from '@dt-dds/react-core';
 
 export const OMessageType = {
   Default: 'default',

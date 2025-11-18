@@ -1,5 +1,6 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { forwardRef } from 'react';
+
+import { BaseProps } from '@dt-dds/react-core';
 
 import { BackdropStyled } from './Backdrop.styled';
 import { BackdropType } from './constants';

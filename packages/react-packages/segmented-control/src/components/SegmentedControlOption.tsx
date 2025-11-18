@@ -4,7 +4,6 @@ import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
 
 import { useSegmentedControlContext } from '../context';
-
 import { SegmentedControlOptionStyled } from './SegmentedControlOption.styled';
 
 export interface SegmentedControlProps extends BaseProps {

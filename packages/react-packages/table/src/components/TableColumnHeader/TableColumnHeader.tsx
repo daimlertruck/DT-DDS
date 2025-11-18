@@ -1,10 +1,10 @@
-import { BaseProps } from '@dt-dds/react-core';
 import { DetailedHTMLProps, ThHTMLAttributes } from 'react';
 
-import { useTableContext } from '../../context';
-import { TextAlign } from '../../types';
+import { BaseProps } from '@dt-dds/react-core';
 
 import { ColumnHeaderStyled } from './TableColumnHeader.styled';
+import { useTableContext } from '../../context';
+import { TextAlign } from '../../types';
 
 export interface TableColumnHeaderProps
   extends BaseProps,

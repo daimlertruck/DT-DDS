@@ -1,5 +1,6 @@
-import { Icon } from '@dt-dds/react-icon';
 import { Meta, StoryFn } from '@storybook/react-vite';
+
+import { Icon } from '@dt-dds/react-icon';
 
 import { useTabs } from './hooks';
 import { Tabs, TabsProps } from './Tabs';

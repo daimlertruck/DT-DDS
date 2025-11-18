@@ -1,6 +1,7 @@
+import { render, screen } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { Colors, defaultTheme as theme } from '@dt-dds/themes';
-import { render, screen } from '@testing-library/react';
 
 import { Counter } from '.';
 

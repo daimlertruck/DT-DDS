@@ -1,5 +1,6 @@
-import { withProviders } from '@dt-dds/react-core';
 import { render, screen } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { Backdrop } from './Backdrop';
 import { BackdropType } from './constants';

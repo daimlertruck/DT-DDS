@@ -1,5 +1,6 @@
-import { MODAL_Z_INDEX } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { MODAL_Z_INDEX } from '@dt-dds/react-core';
 
 export const ModalStyled = styled.div`
   position: fixed;

@@ -1,6 +1,7 @@
+import { render, fireEvent, within } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { render, fireEvent, within } from '@testing-library/react';
 
 import { Select, SelectOptionValue } from '.';
 

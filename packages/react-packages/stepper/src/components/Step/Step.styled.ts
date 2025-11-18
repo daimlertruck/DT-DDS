@@ -1,5 +1,6 @@
-import { Colors } from '@dt-dds/react-core';
 import styled from '@emotion/styled';
+
+import { Colors } from '@dt-dds/react-core';
 
 export const StepStyled = styled.li`
   display: flex;

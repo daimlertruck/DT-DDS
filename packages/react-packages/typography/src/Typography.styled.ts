@@ -1,9 +1,10 @@
+import styled from '@emotion/styled';
+
 import {
   getContextualColor,
   CustomTheme as Theme,
   PaletteKeys,
 } from '@dt-dds/themes';
-import styled from '@emotion/styled';
 
 import { Colors } from './types';
 

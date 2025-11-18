@@ -1,6 +1,5 @@
 import { formatObject } from '../formatter';
 import { getTokenValue } from '../tokenUtils';
-
 import { TokenFile, NestedTokenCategory } from './../../../types';
 
 /**

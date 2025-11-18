@@ -1,6 +1,7 @@
+import { type Meta, type StoryObj } from '@storybook/react-vite';
+
 import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { type Meta, type StoryObj } from '@storybook/react-vite';
 
 import { ExtraComponent, TextField, TextFieldProps } from './TextField';
 

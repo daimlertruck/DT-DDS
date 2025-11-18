@@ -1,7 +1,9 @@
+import React from 'react';
+
+import { fireEvent, render, screen } from '@testing-library/react';
+
 import { Button } from '@dt-dds/react-button';
 import { Provider, withProviders } from '@dt-dds/react-core';
-import { fireEvent, render, screen } from '@testing-library/react';
-import React from 'react';
 
 import { Modal, Overlay } from './Modal';
 

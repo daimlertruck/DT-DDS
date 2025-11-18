@@ -1,6 +1,8 @@
-import { BaseProps, Portal } from '@dt-dds/react-core';
 import React, { useRef, useState, useLayoutEffect } from 'react';
 
+import { BaseProps, Portal } from '@dt-dds/react-core';
+
+import { TooltipContentStyled } from './TooltipContentStyled';
 import {
   TooltipBackground,
   OTooltipBackground,
@@ -9,8 +11,6 @@ import {
 } from '../../constants';
 import { useTooltipContext } from '../../context';
 import { useTooltipPosition } from '../../hooks/useTooltipPosition';
-
-import { TooltipContentStyled } from './TooltipContentStyled';
 
 export interface TooltipContentProps extends BaseProps {
   direction?: TooltipDirection;

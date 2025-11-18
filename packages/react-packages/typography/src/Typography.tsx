@@ -1,7 +1,9 @@
+import { forwardRef } from 'react';
+
+import { useTheme } from '@emotion/react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { CustomTheme as Theme } from '@dt-dds/themes';
-import { useTheme } from '@emotion/react';
-import { forwardRef } from 'react';
 
 import { Colors, Elements } from './types';
 import { TypographyStyled } from './Typography.styled';

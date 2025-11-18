@@ -1,9 +1,8 @@
+import { FormEvent, ReactNode } from 'react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { OTooltipDirection, Tooltip } from '@dt-dds/react-tooltip';
 import { Typography } from '@dt-dds/react-typography';
-import { FormEvent, ReactNode } from 'react';
-
-import { InfoIcon } from '../../../dt-dds-react/core';
 
 import {
   FormStyled,
@@ -11,6 +10,7 @@ import {
   GroupStyled,
   LabelStyled,
 } from './Form.styled';
+import { InfoIcon } from '../../../dt-dds-react/core';
 
 export interface GroupProps extends BaseProps {
   isDisabled?: boolean;

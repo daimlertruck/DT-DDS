@@ -1,5 +1,6 @@
-import { Box } from '@dt-dds/react-box';
 import { Children, cloneElement, ReactElement, useMemo } from 'react';
+
+import { Box } from '@dt-dds/react-box';
 
 import { RadioInputStyled, RadioLabelStyled } from './Radio.styled';
 import { RadioGroupProps, RadioProps } from './types';

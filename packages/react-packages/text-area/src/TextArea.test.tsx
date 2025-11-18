@@ -1,7 +1,8 @@
+import { fireEvent, render, screen } from '@testing-library/react';
+
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 import { defaultTheme as theme } from '@dt-dds/themes';
-import { fireEvent, render, screen } from '@testing-library/react';
 
 import { TextArea } from '.';
 

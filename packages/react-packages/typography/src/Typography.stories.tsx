@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
-
 import { Typography } from './Typography';
 import {
   availableColors,
   availableElements,
   availableFontStyles,
 } from './utils';
+
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type Story = StoryObj<typeof Typography>;
 
