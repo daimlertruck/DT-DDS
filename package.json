@@ -22,7 +22,8 @@
     "test": "turbo run test",
     "test:update": "turbo run test -- -u",
     "prepare": "husky",
-    "check-pkg-deps": "node scripts/check-pkg-deps/index.cjs"
+    "check-pkg-deps": "node scripts/check-pkg-deps/index.cjs",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
@@ -32,6 +33,7 @@
     "@turbo/gen": "^1.11.3",
     "eslint-config-custom": "*",
     "husky": "^9.1.7",
+    "patch-package": "^8.0.1",
     "prettier": "^2.8.0",
     "turbo": "^2.0.6"
   },
@@ -40,6 +42,7 @@
     "node": ">=22"
   },
   "resolutions": {
-    "esbuild": "^0.25.10"
+    "esbuild": "^0.25.10",
+    "js-yaml": "4.1.1"
   }
 }
