@@ -182,7 +182,7 @@ export const InputExtraSuffixStyled = styled.div<{ isClickable?: boolean }>`
     return `
     display: flex;
     cursor: ${isClickable ? 'pointer' : 'default'};
-    padding-right: ${theme.spacing.spacing_40}};
+    margin-right: ${theme.spacing.spacing_40}};
 
     &:focus-visible {
       outline: 2px solid ${theme.palette.border.dark};
