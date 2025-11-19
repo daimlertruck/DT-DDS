@@ -27,7 +27,8 @@ export const App = () => {
 | `dataTestId` | `string`                                                                    | typography | Customizable test identifier                                               |
 | `style`      | `React.CSSProperties`                                                       | -          | Customizable styles                                                        |
 | `ref`        | `RefObject`                                                                 | -          | Provides a way to access DOM node or React element reference.              |
-| `id`         | `Element id`                                                                | -          | You can set an id to the element                                           |
+| `...rest`    | `ComponentPropsWithoutRef<E>` & `BaseProps`                                 | —          | Additional native HTML attributes for the chosen `element`.                |
+|              |
 
 ## Stack
 

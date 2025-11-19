@@ -1,28 +1,27 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { CustomTheme as Theme } from '@dt-dds/themes';
 import { useTheme } from '@emotion/react';
-import { forwardRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from 'react';
 
 import { Colors, Elements } from './types';
 import { TypographyStyled } from './Typography.styled';
 
-export interface TypographyProps extends BaseProps {
+type TypographyBaseProps = {
   color?: Colors;
   fontStyles?: keyof Theme['fontStyles'];
-  element?: Elements;
-}
+} & BaseProps;
+
+type TypographyVariant<E extends Elements> = TypographyBaseProps & {
+  element?: E;
+} & ComponentPropsWithoutRef<E>;
+
+export type TypographyProps = {
+  [E in Elements]: TypographyVariant<E>;
+}[Elements];
 
 export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
   (
-    {
-      children,
-      element,
-      fontStyles,
-      color = 'grey_90',
-      dataTestId,
-      style,
-      id,
-    }: TypographyProps,
+    { children, element, fontStyles, color = 'grey_90', dataTestId, ...rest },
     ref
   ) => {
     const theme = useTheme();
@@ -35,9 +34,8 @@ export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
         color={color}
         data-testid={dataTestId ?? 'typography'}
         fontStyles={fonts}
-        id={id}
         ref={ref}
-        style={style}
+        {...(rest as ComponentPropsWithoutRef<'p'>)}
       >
         {children}
       </TypographyStyled>
