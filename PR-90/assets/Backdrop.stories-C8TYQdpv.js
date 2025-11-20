@@ -1,0 +1,7 @@
+var m=Object.defineProperty;var a=(r,t)=>m(r,"name",{value:t,configurable:!0});import{j as e}from"./jsx-runtime-Cgz2XvFB.js";import"./typography-B3nKKPHm.js";import"./index-B2NK8Htn.js";import{P as u}from"./z-index-BB_IPOEl.js";import{r as x}from"./index-CwbBKW39.js";import{B as n,a as l}from"./Backdrop-LSOK_13Z.js";import"./emotion-react.browser.esm-DSneuyqi.js";import"./emotion-styled.browser.esm-Cgg3GKEJ.js";import"./index-6Tx4pmSd.js";import"./iframe-PYkHMccE.js";import"./index-DV-VXEUn.js";const k=a(({...r})=>{const[t,d]=x.useState(!1),s=a(()=>d(!t),"toggleBackdrop");return e.jsxs(e.Fragment,{children:[e.jsx("button",{onClick:s,type:"button",children:"Open Backdrop"}),e.jsx(u,{isOpen:t,children:e.jsxs(l,{...r,isOpen:t,children:[e.jsx(e.Fragment,{children:r.children}),e.jsx("button",{onClick:s,type:"button",children:"Close Backdrop"})]})})]})},"Template"),o={args:{isOpen:!1,type:n.Dark,children:e.jsx("div",{children:"Example content."})}},C={title:"Data Display/Backdrop",component:l,render:k,argTypes:{type:{mapping:n,options:Object.values(n).filter(r=>typeof r=="string"),control:{type:"inline-radio"}},children:{table:{disable:!0}},isOpen:{table:{disable:!0}}}};var p,i,c;o.parameters={...o.parameters,docs:{...(p=o.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    isOpen: false,
+    type: BackdropType.Dark,
+    children: <div>Example content.</div>
+  }
+}`,...(c=(i=o.parameters)==null?void 0:i.docs)==null?void 0:c.source}}};const F=["Default"];export{o as Default,F as __namedExportsOrder,C as default};
