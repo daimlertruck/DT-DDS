@@ -231,22 +231,6 @@ exports[`<TextField /> component renders disabled input 1`] = `
   color: transparent;
 }
 
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-7:disabled {
   color: #a9a9a9;
 }
@@ -553,22 +537,6 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   color: transparent;
 }
 
-.emotion-10:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-10:disabled {
   color: #a9a9a9;
 }
@@ -604,7 +572,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
       >
         <div
           class="emotion-7 emotion-8"
-          data-testid="extra-preffix"
+          data-testid="extra-prefix"
         >
           <i
             class="emotion-9"
@@ -871,22 +839,6 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 
 .emotion-7::placeholder {
   color: transparent;
-}
-
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
-  color: #3e3e3e;
 }
 
 .emotion-7:disabled {
@@ -1156,22 +1108,6 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   color: transparent;
 }
 
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-7:disabled {
   color: #a9a9a9;
 }
@@ -1431,22 +1367,6 @@ exports[`<TextField /> component renders input without floating label 1`] = `
   color: #3e3e3e;
 }
 
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-7:disabled {
   color: #a9a9a9;
 }
@@ -1703,34 +1623,18 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-7::-webkit-input-placeholder {
-  color: transparent;
+  color: #3e3e3e;
 }
 
 .emotion-7::-moz-placeholder {
-  color: transparent;
+  color: #3e3e3e;
 }
 
 .emotion-7:-ms-input-placeholder {
-  color: transparent;
+  color: #3e3e3e;
 }
 
 .emotion-7::placeholder {
-  color: transparent;
-}
-
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
   color: #3e3e3e;
 }
 
@@ -2029,22 +1933,6 @@ exports[`<TextField /> component should render the TextField with info message 1
 
 .emotion-7::placeholder {
   color: transparent;
-}
-
-.emotion-7:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-7:focus::placeholder {
-  color: #3e3e3e;
 }
 
 .emotion-7:disabled {

@@ -243,22 +243,6 @@ exports[`<Form /> component renders simple form 1`] = `
   color: transparent;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-6:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-6:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-6:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-6:disabled {
   color: #a9a9a9;
 }
@@ -621,22 +605,6 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   color: transparent;
 }
 
-.emotion-10:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::placeholder {
-  color: #3e3e3e;
-}
-
 .emotion-10:disabled {
   color: #a9a9a9;
 }
@@ -972,22 +940,6 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 
 .emotion-10::placeholder {
   color: transparent;
-}
-
-.emotion-10:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-10:focus::placeholder {
-  color: #3e3e3e;
 }
 
 .emotion-10:disabled {
@@ -1383,22 +1335,6 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 
 .emotion-13::placeholder {
   color: transparent;
-}
-
-.emotion-13:focus::-webkit-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-13:focus::-moz-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-13:focus:-ms-input-placeholder {
-  color: #3e3e3e;
-}
-
-.emotion-13:focus::placeholder {
-  color: #3e3e3e;
 }
 
 .emotion-13:disabled {
