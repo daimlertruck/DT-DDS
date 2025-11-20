@@ -20,7 +20,7 @@ concurrency:
 jobs:
   check-fixups:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -58,7 +58,7 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     needs: lint
     steps:
       - name: Checkout repository
@@ -135,7 +135,7 @@ jobs:
 
   blackduck-scan:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     timeout-minutes: 30
     needs: tests
     env:
@@ -216,7 +216,7 @@ jobs:
 
   sonarqube-scan:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     needs: tests
     steps:
       - name: Checkout repository
@@ -297,7 +297,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'release:') }}
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
     needs: [blackduck-scan, sonarqube-scan]
     steps:
       - name: Checkout repository
@@ -314,7 +314,7 @@ jobs:
   generate-version-tag:
     needs: [check-fixups, lint, tests, blackduck-scan, sonarqube-scan, build]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'release:')
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
     steps:
       - name: Generate CI_BOT Token
         id: ci-bot-token
