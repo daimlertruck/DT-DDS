@@ -39,7 +39,7 @@ export const addTag = () => {
     }
 
     removePrereleaseChangesets();
-    execSync('git add -A && git commit -m "release: version packages"');
+    execSync('git add -A && git commit -m "chore(release): version packages"');
 
     const tagPackages = getPackagesSync(process.cwd()).packages.filter((pkg) =>
       tagPackagesNames.includes(pkg.packageJson.name)

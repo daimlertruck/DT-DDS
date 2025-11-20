@@ -115,53 +115,60 @@ export const getRepoRoot = () => {
     .replace(/\n|\r/g, '');
 };
 
+const isReleaseCommit = (message: string) =>
+  message.startsWith('chore(release):');
+
 export const conventionalMessagesWithCommitsToChangesets = (
   conventionalMessagesToCommits: ConventionalMessagesToCommits[],
   options: { ignoredFiles?: (string | RegExp)[]; packages: ManyPkgPackage[] }
 ) => {
   const { ignoredFiles = [], packages } = options;
-  return conventionalMessagesToCommits
-    .map((entry) => {
-      const filesChanged = getFilesChangedSince({
-        from: entry.commitHashes[0],
-        to: entry.commitHashes[entry.commitHashes.length - 1],
-      }).filter((file) => {
-        return ignoredFiles.every(
-          (ignoredPattern) => !file.match(ignoredPattern)
+  return (
+    conventionalMessagesToCommits
+      // Ignore release commits
+      .filter((entry) => !isReleaseCommit(entry.changelogMessage))
+      .map((entry) => {
+        const filesChanged = getFilesChangedSince({
+          from: entry.commitHashes[0],
+          to: entry.commitHashes[entry.commitHashes.length - 1],
+        }).filter((file) => {
+          return ignoredFiles.every(
+            (ignoredPattern) => !file.match(ignoredPattern)
+          );
+        });
+
+        const packagesChanged = packages.filter((pkg) => {
+          return filesChanged.some(
+            (file) =>
+              file.match(pkg.dir.replace(`${getRepoRoot()}/`, '')) ||
+              isBreakingChange(entry.changelogMessage)
+          );
+        });
+
+        const packagesChangedWithDependencies = getDependencyPackages(
+          packagesChanged,
+          packages
         );
-      });
 
-      const packagesChanged = packages.filter((pkg) => {
-        return filesChanged.some(
-          (file) =>
-            file.match(pkg.dir.replace(`${getRepoRoot()}/`, '')) ||
-            isBreakingChange(entry.changelogMessage)
-        );
-      });
-
-      const packagesChangedWithDependencies = getDependencyPackages(
-        packagesChanged,
-        packages
-      );
-
-      if (packagesChangedWithDependencies.length === 0) return null;
-      return {
-        releases: packagesChangedWithDependencies.map((pkg) => {
-          return {
-            name: pkg.packageJson.name,
-            type: isBreakingChange(entry.changelogMessage)
-              ? 'major'
-              : entry.changelogMessage.startsWith('feat')
-              ? 'minor'
-              : 'patch',
-          };
-        }),
-        commit: entry.commitHashes[0],
-        summary: entry.changelogMessage,
-        packagesChanged: packagesChangedWithDependencies,
-      };
-    })
-    .filter(Boolean) as Changeset[];
+        if (packagesChangedWithDependencies.length === 0) return null;
+        return {
+          releases: packagesChangedWithDependencies.map((pkg) => {
+            return {
+              name: pkg.packageJson.name,
+              type: isBreakingChange(entry.changelogMessage)
+                ? 'major'
+                : entry.changelogMessage.startsWith('feat')
+                ? 'minor'
+                : 'patch',
+            };
+          }),
+          commit: entry.commitHashes[0],
+          summary: entry.changelogMessage,
+          packagesChanged: packagesChangedWithDependencies,
+        };
+      })
+      .filter(Boolean) as Changeset[]
+  );
 };
 
 export const gitFetch = (branch: string) => {
