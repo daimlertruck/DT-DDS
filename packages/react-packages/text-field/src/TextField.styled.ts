@@ -15,6 +15,7 @@ export interface TextFieldStyledProps {
 export interface InputFieldStyledProps {
   isFloatingLabel: boolean;
   scale: Scale;
+  isFocused: boolean;
 }
 
 export interface InputWrapperStyledProps {
@@ -87,7 +88,7 @@ export const InputContainerStyled = styled.div<{
 `;
 
 export const InputFieldStyled = styled.input<InputFieldStyledProps>`
-  ${({ theme, isFloatingLabel, scale }) => `
+  ${({ theme, isFloatingLabel, scale, isFocused }) => `
     ${theme.fontStyles.bodyMdRegular}
     border: 0;
     outline: 0;
@@ -115,11 +116,11 @@ export const InputFieldStyled = styled.input<InputFieldStyledProps>`
     }
 
     &::placeholder {
-      color: ${isFloatingLabel ? 'transparent' : theme.palette.content.medium};
-    }
-
-    &:focus::placeholder {
-      color: ${theme.palette.content.medium}; 
+      color: ${
+        isFloatingLabel && !isFocused
+          ? 'transparent'
+          : theme.palette.content.medium
+      };
     }
 
     &:disabled {
