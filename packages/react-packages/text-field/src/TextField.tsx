@@ -7,6 +7,7 @@ import {
   ChangeEvent,
   ComponentPropsWithoutRef,
   FocusEvent,
+  forwardRef,
   ReactNode,
   RefObject,
   useEffect,
@@ -46,214 +47,233 @@ export interface TextFieldProps
   scale?: Scale;
   backgroundFill?: TextFieldBackgroundFill;
   onResetInput?: () => void;
+  isInputFocused?: boolean;
 }
 
-export const TextField = ({
-  dataTestId,
-  hasError = false,
-  extraPrefix,
-  extraSuffix,
-  label,
-  labelIcon,
-  isFloatingLabel = true,
-  name,
-  id,
-  required,
-  requiredMessage,
-  style,
-  children,
-  initialValue,
-  inputRef,
-  message: messageProp = '',
-  type = 'text',
-  variant = 'outlined',
-  scale = 'standard',
-  backgroundFill = 'default',
-  disabled = false,
-  onChange = () => null,
-  onResetInput = () => null,
-  ...rest
-}: TextFieldProps) => {
-  const [activeInput, setActiveInput] = useState(false);
-  const [inputValue, setInputValue] = useState('');
-  const [hasRequiredError, setHasRequiredError] = useState(false);
-  const textFieldId = id ?? label.replaceAll(' ', '-').toLowerCase();
-  const testId =
-    dataTestId ?? `${label.replaceAll(' ', '-').toLowerCase()}-text-field`;
+const EXTRA_SUFFIX_DATA_TEST_ID = 'extra-suffix';
 
-  useEffect(() => {
-    // Check if there's an initial value coming from props
-    if (!!initialValue) {
-      setInputValue(initialValue);
+export const TextField = forwardRef<HTMLDivElement, TextFieldProps>(
+  (
+    {
+      dataTestId,
+      hasError = false,
+      extraPrefix,
+      extraSuffix,
+      label,
+      labelIcon,
+      isFloatingLabel = true,
+      name,
+      id,
+      required,
+      requiredMessage,
+      style,
+      children,
+      initialValue,
+      inputRef,
+      isInputFocused,
+      message: messageProp = '',
+      type = 'text',
+      variant = 'outlined',
+      scale = 'standard',
+      backgroundFill = 'default',
+      disabled = false,
+      onChange = () => null,
+      onResetInput = () => null,
+
+      ...rest
+    },
+    ref
+  ) => {
+    const [activeInput, setActiveInput] = useState(false);
+    const [inputValue, setInputValue] = useState('');
+    const [hasRequiredError, setHasRequiredError] = useState(false);
+    const textFieldId = id ?? label.replaceAll(' ', '-').toLowerCase();
+    const testId =
+      dataTestId ?? `${label.replaceAll(' ', '-').toLowerCase()}-text-field`;
+
+    useEffect(() => {
+      // Check if there's an initial value coming from props
+      if (!!initialValue) {
+        setInputValue(initialValue);
+        setHasRequiredError(false);
+      } else {
+        setInputValue('');
+      }
+    }, [initialValue]);
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+      setInputValue(event.target.value);
       setHasRequiredError(false);
-    } else {
+
+      if (onChange) {
+        onChange(event);
+      }
+    };
+
+    const onFocus = (event: FocusEvent<HTMLInputElement>) => {
+      if (!rest.readOnly) {
+        setActiveInput(true);
+      }
+
+      if (rest.onFocus) {
+        rest.onFocus(event);
+      }
+    };
+
+    const onBlur = (event: FocusEvent<HTMLInputElement>) => {
+      setActiveInput(false);
+
+      const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
+      const isExtraSuffixClicked =
+        event.relatedTarget?.getAttribute('data-testid') ===
+        EXTRA_SUFFIX_DATA_TEST_ID;
+
+      if (isEmptyOrOnlySpaces && required && !isExtraSuffixClicked) {
+        setHasRequiredError(true);
+      }
+
+      if (rest.onBlur) {
+        rest.onBlur(event);
+      }
+    };
+
+    const handleResetInput = () => {
       setInputValue('');
-    }
-  }, [initialValue]);
+      setActiveInput(false);
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-    setHasRequiredError(false);
+      onResetInput();
+    };
 
-    if (onChange) {
-      onChange(event);
-    }
-  };
+    const handleExtraPrefixEnter = (
+      event: React.KeyboardEvent<HTMLInputElement>
+    ) =>
+      event.code === 'Enter' &&
+      extraPrefix?.onClick &&
+      extraPrefix.onClick(inputValue);
 
-  const onFocus = (event: FocusEvent<HTMLInputElement>) => {
-    if (!rest.readOnly) {
-      setActiveInput(true);
-    }
+    const handleExtraSuffixEnter = (
+      event: React.KeyboardEvent<HTMLInputElement>
+    ) =>
+      event.code === 'Enter' &&
+      extraSuffix?.onClick &&
+      extraSuffix.onClick(inputValue);
 
-    if (rest.onFocus) {
-      rest.onFocus(event);
-    }
-  };
+    const messageColor = disabled ? 'content.light' : 'content.medium';
+    const showError = hasError || hasRequiredError;
+    const message = hasRequiredError
+      ? requiredMessage ?? messageProp
+      : messageProp;
 
-  const onBlur = (event: FocusEvent<HTMLInputElement>) => {
-    setActiveInput(false);
+    const isActiveInput = isInputFocused || activeInput || !!inputValue.trim();
 
-    const isEmptyOrOnlySpaces = event.currentTarget.value.trim().length === 0;
-    if (isEmptyOrOnlySpaces && required) {
-      setHasRequiredError(true);
-    }
+    const isSearchType = type === 'search';
 
-    if (rest.onBlur) {
-      rest.onBlur(event);
-    }
-  };
+    const extraPrefixOnClick = extraPrefix?.onClick
+      ? extraPrefix.onClick
+      : null;
+    const extraSuffixOnClick = extraSuffix?.onClick
+      ? extraSuffix.onClick
+      : null;
 
-  const handleResetInput = () => {
-    setInputValue('');
-    setActiveInput(false);
-
-    onResetInput();
-  };
-
-  const handleExtraPreffixEnter = (
-    event: React.KeyboardEvent<HTMLInputElement>
-  ) =>
-    event.code === 'Enter' &&
-    extraPrefix?.onClick &&
-    extraPrefix.onClick(inputValue);
-
-  const handleExtraSuffixEnter = (
-    event: React.KeyboardEvent<HTMLInputElement>
-  ) =>
-    event.code === 'Enter' &&
-    extraSuffix?.onClick &&
-    extraSuffix.onClick(inputValue);
-
-  const messageColor = disabled ? 'content.light' : 'content.medium';
-  const showError = hasError || hasRequiredError;
-  const message = hasRequiredError
-    ? requiredMessage ?? messageProp
-    : messageProp;
-
-  const isActiveInput = activeInput || !!inputValue.trim();
-
-  const isSearchType = type === 'search';
-
-  const extraPreffixOnClick = extraPrefix?.onClick ? extraPrefix.onClick : null;
-  const extraSuffixOnClick = extraSuffix?.onClick ? extraSuffix.onClick : null;
-
-  return (
-    <TextFieldStyled
-      data-testid={testId}
-      hasPrefix={!!extraPrefix}
-      isFloatingLabel={isFloatingLabel}
-      style={style}
-    >
-      <InputContainerStyled isFloatingLabel={isFloatingLabel}>
-        <LabelField
-          hasError={showError}
-          htmlFor={textFieldId}
-          icon={labelIcon}
-          isActive={activeInput}
-          isCentered={!isActiveInput && isFloatingLabel}
-          isDisabled={disabled}
-          isFloating={isFloatingLabel}
-          isInputFilled={!!inputValue}
-          isRequired={required}
-          scale={scale}
-        >
-          {label}
-        </LabelField>
-
-        <InputWrapperStyled
-          backgroundFill={backgroundFill}
-          data-testid={`${testId}-wrapper`}
-          hasError={showError}
-          isFloatingLabel={isFloatingLabel}
-          variant={variant}
-        >
-          {extraPrefix?.component ? (
-            <InputExtraPrefixStyled
-              data-testid='extra-preffix'
-              {...(!!extraPreffixOnClick && {
-                tabIndex: 0,
-                onClick: () => extraPreffixOnClick(inputValue),
-                onKeyDown: handleExtraPreffixEnter,
-              })}
-            >
-              {extraPrefix.component}
-            </InputExtraPrefixStyled>
-          ) : null}
-
-          <InputFieldStyled
-            data-error={showError}
-            data-testid={`${testId}-input`}
-            disabled={disabled}
-            id={textFieldId}
-            isFloatingLabel={isFloatingLabel}
-            name={name ?? textFieldId}
-            ref={inputRef}
+    return (
+      <TextFieldStyled
+        data-testid={testId}
+        hasPrefix={!!extraPrefix}
+        isFloatingLabel={isFloatingLabel}
+        style={style}
+      >
+        <InputContainerStyled isFloatingLabel={isFloatingLabel} ref={ref}>
+          <LabelField
+            hasError={showError}
+            htmlFor={textFieldId}
+            icon={labelIcon}
+            isActive={isActiveInput}
+            isCentered={!isActiveInput && isFloatingLabel}
+            isDisabled={disabled}
+            isFloating={isFloatingLabel}
+            isInputFilled={!!inputValue}
+            isRequired={required}
             scale={scale}
-            type={type}
-            value={inputValue}
-            {...rest}
-            onBlur={onBlur}
-            onChange={handleChange}
-            onFocus={onFocus}
-          />
-
-          {isSearchType && !!inputValue ? (
-            <IconButton
-              dataTestId='reset-icon'
-              onClick={handleResetInput}
-              style={{ marginRight: 12 }}
-            >
-              <Icon code='close' />
-            </IconButton>
-          ) : null}
-
-          {extraSuffix?.component ? (
-            <InputExtraSuffixStyled
-              data-testid='extra-suffix'
-              {...(!!extraSuffixOnClick && {
-                tabIndex: 0,
-                onClick: () => extraSuffixOnClick(inputValue),
-                onKeyDown: handleExtraSuffixEnter,
-              })}
-            >
-              {extraSuffix.component}
-            </InputExtraSuffixStyled>
-          ) : null}
-        </InputWrapperStyled>
-      </InputContainerStyled>
-
-      {message ? (
-        <TextFieldMessageStyled>
-          <Typography
-            color={showError ? 'error.default' : messageColor}
-            fontStyles='bodySmRegular'
           >
-            {message}
-          </Typography>
-        </TextFieldMessageStyled>
-      ) : null}
+            {label}
+          </LabelField>
 
-      {children}
-    </TextFieldStyled>
-  );
-};
+          <InputWrapperStyled
+            backgroundFill={backgroundFill}
+            data-testid={`${testId}-wrapper`}
+            hasError={showError}
+            isFloatingLabel={isFloatingLabel}
+            variant={variant}
+          >
+            {extraPrefix?.component ? (
+              <InputExtraPrefixStyled
+                data-testid='extra-prefix'
+                {...(!!extraPrefixOnClick && {
+                  tabIndex: 0,
+                  onClick: () => !disabled && extraPrefixOnClick(inputValue),
+                  onKeyDown: handleExtraPrefixEnter,
+                })}
+              >
+                {extraPrefix.component}
+              </InputExtraPrefixStyled>
+            ) : null}
+
+            <InputFieldStyled
+              data-error={showError}
+              data-testid={`${testId}-input`}
+              disabled={disabled}
+              id={textFieldId}
+              isFloatingLabel={isFloatingLabel}
+              isFocused={isActiveInput}
+              name={name ?? textFieldId}
+              ref={inputRef}
+              scale={scale}
+              type={type}
+              value={inputValue}
+              {...rest}
+              onBlur={onBlur}
+              onChange={handleChange}
+              onFocus={onFocus}
+            />
+
+            {isSearchType && !!inputValue ? (
+              <IconButton
+                dataTestId='reset-icon'
+                onClick={handleResetInput}
+                style={{ marginRight: 12 }}
+              >
+                <Icon code='close' />
+              </IconButton>
+            ) : null}
+
+            {extraSuffix?.component ? (
+              <InputExtraSuffixStyled
+                data-testid={EXTRA_SUFFIX_DATA_TEST_ID}
+                {...(!!extraSuffixOnClick && {
+                  tabIndex: 0,
+                  onClick: () => !disabled && extraSuffixOnClick(inputValue),
+                  onKeyDown: handleExtraSuffixEnter,
+                })}
+              >
+                {extraSuffix.component}
+              </InputExtraSuffixStyled>
+            ) : null}
+          </InputWrapperStyled>
+        </InputContainerStyled>
+
+        {message ? (
+          <TextFieldMessageStyled>
+            <Typography
+              color={showError ? 'error.default' : messageColor}
+              fontStyles='bodySmRegular'
+            >
+              {message}
+            </Typography>
+          </TextFieldMessageStyled>
+        ) : null}
+
+        {children}
+      </TextFieldStyled>
+    );
+  }
+);
