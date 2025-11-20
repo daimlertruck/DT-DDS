@@ -6,15 +6,13 @@ import { AvatarSize, AvatarStyledProps } from './types';
 export const AvatarStyled = styled.div<AvatarStyledProps>`
   ${({ theme, type, size }) => {
     let styles = `
-      & > * {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        border-radius: ${theme.radius.radius_500};
-      }
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      border-radius: ${theme.radius.radius_500};
     `;
 
     const sizeStyles: Record<AvatarSize, string> = {
@@ -41,34 +39,32 @@ export const AvatarStyled = styled.div<AvatarStyledProps>`
       case AvatarType.Letter:
         styles += `
           color: ${theme.palette.content.contrast};
-          
-          & > * {
-            background-color: ${theme.palette.primary.default};
-          }
+          background-color: ${theme.palette.primary.default};
         `;
         break;
 
       case AvatarType.Collapsed:
         styles += `
           color: ${theme.palette.content.medium};
-          
-          & > * {
-            background-color: ${theme.palette.content.contrast};
-          }
+          background-color: ${theme.palette.content.contrast};
         `;
         break;
 
       case AvatarType.Thumbnail:
         styles += `
           color: ${theme.palette.content.contrast};
-          
-          & > * {
-            background-color: ${theme.palette.primary.default};
-          }
+          background-color: ${theme.palette.primary.default};
         `;
         break;
 
       case AvatarType.Photo:
+        styles += `
+          & > * {
+            width: 100%;
+            height: 100%;
+            border-radius: ${theme.radius.radius_500};
+          }
+        `;
         break;
     }
 

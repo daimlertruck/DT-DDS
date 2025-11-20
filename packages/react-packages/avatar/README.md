@@ -104,6 +104,59 @@ This component can contain upto two simple characters by passing a string in pro
 | `customInitials`  | `string`           | -       | Custom initials to display (max 2 characters). Replaces `title` if present. |
 | `hasTooltip`      | `Boolean`          | false   | Shows tooltip when hovering on the Avatar                          |
 
+### Default Avatar States Styling in IconButton
+
+When Avatar is composed with IconButton, the interactive states are handled by IconButton's styles. The following table shows the default appearance:
+
+| Avatar Type | Hover State | Disabled State |
+| ----------- | ----------- | -------------- |
+| Letter | `primary.dark` | `primary.light` |
+| Thumbnail | `primary.dark` | `primary.light`|
+| Collapsed | `primary.light` | `content.contrast` |
+| Photo | No change | 38% opacity |
+
+**Customization:** Use `cssOverrides` prop to override the default hover states or apply custom theme colors.
+
+### Avatar Data Attributes
+
+When using Avatar inside IconButton, target the following data attributes with cssOverrides:
+
+| Attribute | Avatar Type |
+| --------- | ----------- |
+| `[data-avatar-type='letter']` | letter |
+| `[data-avatar-type='thumbnail']` | thumbnail |
+| `[data-avatar-type='collapsed']` | collapsed |
+| `[data-avatar-type='photo']` | photo |
+
+The IconButton provides a cssOverrides prop that allows you to apply custom CSS styles to the IconButton and its children. 
+This enables full styling flexibility when used with Avatar.
+
+#### Example : Avatar with Custom Styling
+
+Target Avatar types using [data-avatar-type] attribute selectors to customize their interactive states:
+
+```jsx
+import { IconButton } from '@dt-dds/react-icon-button';
+import { Avatar } from '@dt-dds/react-avatar';
+import { css } from '@emotion/react';
+
+export const CustomAvatarButton = () => {
+  const avatarHoverStyles = css`
+    &:hover:not(:disabled) {
+      [data-avatar-type='letter'] {
+        background-color: #a020f0;
+      }
+    }
+  `;
+
+  return (
+    <IconButton ariaLabel='User' cssOverrides={avatarHoverStyles}>
+      <Avatar title='John Doe' type='letter' customInitials='JD' />
+    </IconButton>
+  );
+};
+```
+
 ## Stack
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking

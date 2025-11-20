@@ -1,4 +1,5 @@
 import { BaseProps, ComponentSize } from '@dt-dds/react-core';
+import { css } from '@emotion/react';
 import { ComponentPropsWithoutRef } from 'react';
 
 import { IconButtonVariant } from './constants';
@@ -12,6 +13,7 @@ export interface IconButtonProps
   ariaLabel?: string;
   variant?: IconButtonVariant;
   size?: ComponentSize;
+  cssOverrides?: ReturnType<typeof css>;
 }
 
 export const IconButton = ({
@@ -22,6 +24,7 @@ export const IconButton = ({
   variant,
   size,
   onClick,
+  cssOverrides,
   ...props
 }: IconButtonProps) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -37,6 +40,7 @@ export const IconButton = ({
   return (
     <IconButtonStyled
       aria-label={ariaLabel}
+      cssOverrides={cssOverrides}
       data-testid={dataTestId ? dataTestId : 'icon-button'}
       disabled={isDisabled}
       onClick={handleClick}
