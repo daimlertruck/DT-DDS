@@ -1,22 +1,62 @@
-import type { Meta, StoryObj } from '@storybook/react-vite';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ptBR } from 'react-day-picker/locale';
 
-import { DatePicker, DatePickerProps } from './DatePicker';
+import { DatePicker } from './DatePicker';
+import { DatePickerProps } from './types';
 
 const meta: Meta<DatePickerProps> = {
   title: 'Data Display/DatePicker',
   component: DatePicker,
-  argTypes: {},
-  render: ({ ...props }) => <DatePicker {...props} />,
+  argTypes: {
+    scale: {
+      options: ['compact', 'standard'],
+      control: { type: 'radio' },
+    },
+    backgroundFill: {
+      options: ['default', 'contrast', 'light'],
+      control: { type: 'select' },
+    },
+    mode: {
+      options: ['single', 'range'],
+      control: { type: 'radio' },
+    },
+  },
+  render: ({ ...props }) => (
+    <DatePicker {...props} onDateChanged={(date) => console.log(date)} />
+  ),
 };
 
 export default meta;
 
 export const Default: StoryObj<DatePickerProps> = {
   args: {
-    initialValue: '2023-02-02',
     required: true,
     label: 'Choose a date',
     min: '2023-03-30',
-    max: '2025-03-30',
+    max: '2028-03-30',
+    isMultiMonths: false,
+    weekStartDay: 0,
+    mode: 'single',
+    message: 'This is a message',
+    isDisabled: false,
+    backgroundFill: 'default',
+  },
+};
+
+export const DefaultValue: StoryObj<DatePickerProps> = {
+  args: {
+    isFloatingLabel: false,
+    label: 'Default Value',
+    mode: 'range',
+    initialValue: { from: new Date(2025, 1, 23), to: new Date(2025, 1, 25) },
+  },
+};
+
+export const Internationalization: StoryObj<DatePickerProps> = {
+  args: {
+    isFloatingLabel: false,
+    label: 'Default Value',
+    mode: 'single',
+    locale: ptBR,
   },
 };
