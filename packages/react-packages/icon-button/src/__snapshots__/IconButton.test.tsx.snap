@@ -1,5 +1,382 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<IconButton /> component IconButton with Avatar integration should apply correct styles for Avatar type collapsed 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.emotion-0>i {
+  font-size: 24px;
+  color: #252525;
+}
+
+.emotion-0:not(:disabled)>i:hover,
+.emotion-0:not(:disabled)>i:active {
+  color: #00677f;
+}
+
+.emotion-0:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #3e3e3e;
+  background-color: #ffffff;
+}
+
+<div>
+  <button
+    aria-label="test button"
+    class="emotion-0 emotion-1"
+    data-testid="icon-button"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-avatar-type="collapsed"
+      type="collapsed"
+    >
+      +1
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<IconButton /> component IconButton with Avatar integration should apply correct styles for Avatar type letter 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.emotion-0>i {
+  font-size: 24px;
+  color: #252525;
+}
+
+.emotion-0:not(:disabled)>i:hover,
+.emotion-0:not(:disabled)>i:active {
+  color: #00677f;
+}
+
+.emotion-0:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+<div>
+  <button
+    aria-label="test button"
+    class="emotion-0 emotion-1"
+    data-testid="icon-button"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-avatar-type="letter"
+      type="letter"
+    >
+      AB
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<IconButton /> component IconButton with Avatar integration should apply correct styles for Avatar type photo 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.emotion-0>i {
+  font-size: 24px;
+  color: #252525;
+}
+
+.emotion-0:not(:disabled)>i:hover,
+.emotion-0:not(:disabled)>i:active {
+  color: #00677f;
+}
+
+.emotion-0:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <button
+    aria-label="test button"
+    class="emotion-0 emotion-1"
+    data-testid="icon-button"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-avatar-type="photo"
+      type="photo"
+    />
+  </button>
+</div>
+`;
+
+exports[`<IconButton /> component IconButton with Avatar integration should apply correct styles for Avatar type thumbnail 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.emotion-0>i {
+  font-size: 24px;
+  color: #252525;
+}
+
+.emotion-0:not(:disabled)>i:hover,
+.emotion-0:not(:disabled)>i:active {
+  color: #00677f;
+}
+
+.emotion-0:focus-visible {
+  outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-2 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.emotion-4 {
+  font-family: DTUI-icons-outlined;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-variation-settings: 'FILL' 0;
+  color: contrast;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+<div>
+  <button
+    aria-label="test button"
+    class="emotion-0 emotion-1"
+    data-testid="icon-button"
+  >
+    <div
+      class="emotion-2 emotion-3"
+      data-avatar-type="thumbnail"
+      type="thumbnail"
+    >
+      <i
+        class="emotion-4"
+        color="contrast"
+        data-testid="icon"
+      >
+        person
+      </i>
+    </div>
+  </button>
+</div>
+`;
+
 exports[`<IconButton /> component should have style if variant is contrast and isDisabled is false 1`] = `
 .emotion-0 {
   display: -webkit-box;
@@ -15,7 +392,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   cursor: pointer;
 }
 
-.emotion-0 i {
+.emotion-0>i {
   font-size: 24px;
   color: #ffffff;
 }
@@ -27,6 +404,18 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-2 {
@@ -79,7 +468,7 @@ exports[`<IconButton /> component should have style if variant is contrast and i
   cursor: not-allowed;
 }
 
-.emotion-0 i {
+.emotion-0>i {
   font-size: 24px;
   color: #252525;
 }
@@ -91,6 +480,34 @@ exports[`<IconButton /> component should have style if variant is contrast and i
 
 .emotion-0:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0 [data-avatar-type='letter'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0 [data-avatar-type='collapsed'] {
+  background-color: #ffffff;
+}
+
+.emotion-0 [data-avatar-type='thumbnail'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0 [data-avatar-type='photo'] {
+  opacity: 0.38;
 }
 
 .emotion-2 {
@@ -144,7 +561,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   cursor: pointer;
 }
 
-.emotion-0 i {
+.emotion-0>i {
   font-size: 24px;
   color: #252525;
 }
@@ -156,6 +573,18 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-2 {
@@ -208,7 +637,7 @@ exports[`<IconButton /> component should have style if variant is default and is
   cursor: not-allowed;
 }
 
-.emotion-0 i {
+.emotion-0>i {
   font-size: 24px;
   color: #a9a9a9;
 }
@@ -220,6 +649,34 @@ exports[`<IconButton /> component should have style if variant is default and is
 
 .emotion-0:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-0 [data-avatar-type='letter'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0 [data-avatar-type='collapsed'] {
+  background-color: #ffffff;
+}
+
+.emotion-0 [data-avatar-type='thumbnail'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-0 [data-avatar-type='photo'] {
+  opacity: 0.38;
 }
 
 .emotion-2 {

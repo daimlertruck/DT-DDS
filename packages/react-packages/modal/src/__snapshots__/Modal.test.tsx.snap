@@ -155,7 +155,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
   cursor: pointer;
 }
 
-.emotion-7 i {
+.emotion-7>i {
   font-size: 24px;
   color: #252525;
 }
@@ -167,6 +167,18 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 
 .emotion-7:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-8 {
@@ -429,7 +441,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
   cursor: pointer;
 }
 
-.emotion-7 i {
+.emotion-7>i {
   font-size: 24px;
   color: #252525;
 }
@@ -441,6 +453,18 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 
 .emotion-7:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-7:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-8 {

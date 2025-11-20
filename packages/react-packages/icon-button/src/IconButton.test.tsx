@@ -1,8 +1,10 @@
 import { withProviders } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
+import { css } from '@emotion/react';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import { IconButton, IconButtonProps } from './IconButton';
+import { MockAvatar, MockAvatarType } from './mocks/MockAvatar';
 
 const handleClickMock = jest.fn();
 
@@ -89,4 +91,43 @@ describe('<IconButton /> component', () => {
       expect(container).toMatchSnapshot();
     }
   );
+
+  it('applies custom cssOverrides', () => {
+    const customCss = css`
+      border: 2px solid hotpink;
+      background-color: orange;
+    `;
+
+    render(
+      <ProvidedIconButton ariaLabel='override test' cssOverrides={customCss}>
+        <Icon code='edit' dataTestId='icon' />
+      </ProvidedIconButton>
+    );
+
+    const button = screen.getByTestId('icon-button');
+
+    expect(button).toHaveStyle('border: 2px solid hotpink');
+    expect(button).toHaveStyle('background-color: orange');
+  });
+
+  describe('IconButton with Avatar integration', () => {
+    it.each`
+      type           | mockText
+      ${'letter'}    | ${'AB'}
+      ${'collapsed'} | ${'+1'}
+      ${'thumbnail'} | ${''}
+      ${'photo'}     | ${''}
+    `(
+      'should apply correct styles for Avatar type $type',
+      ({ type, mockText }: { type: MockAvatarType; mockText: string }) => {
+        const { container } = render(
+          <ProvidedIconButton ariaLabel='test button'>
+            <MockAvatar text={mockText} type={type} />
+          </ProvidedIconButton>
+        );
+
+        expect(container).toMatchSnapshot();
+      }
+    );
+  });
 });

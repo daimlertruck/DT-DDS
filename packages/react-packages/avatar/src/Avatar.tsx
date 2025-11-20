@@ -27,11 +27,7 @@ export const Avatar = ({
   const shouldRenderPhotoFallback =
     type === AvatarType.Photo && (hasImageError || !imageSrc);
 
-  const thumbnailIcon = (
-    <div>
-      <Icon code='person' color='primary' size={size} />
-    </div>
-  );
+  const thumbnailIcon = <Icon code='person' color='primary' size={size} />;
 
   const renderImage = () => {
     if (shouldRenderPhotoFallback) {
@@ -44,23 +40,22 @@ export const Avatar = ({
   const contentMap = {
     [AvatarType.Photo]: renderImage(),
     [AvatarType.Thumbnail]: thumbnailIcon,
-    [AvatarType.Collapsed]: <div>{collapsedCount.substring(0, 3)}</div>,
-    [AvatarType.Letter]: (
-      <div>
-        {customInitials
-          ? customInitials.substring(0, 2)
-          : acronymGenerator(title)}
-      </div>
-    ),
+    [AvatarType.Collapsed]: collapsedCount.substring(0, 3),
+    [AvatarType.Letter]: customInitials
+      ? customInitials.substring(0, 2)
+      : acronymGenerator(title),
   };
 
   const renderAvatarContent = () => {
+    const avatarType = shouldRenderPhotoFallback ? AvatarType.Thumbnail : type;
+
     return (
       <AvatarStyled
+        data-avatar-type={avatarType}
         data-testid={dataTestId ?? 'avatar'}
         size={size}
         style={style}
-        type={shouldRenderPhotoFallback ? AvatarType.Thumbnail : type}
+        type={avatarType}
       >
         {contentMap[type]}
       </AvatarStyled>

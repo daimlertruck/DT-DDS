@@ -29,7 +29,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
   cursor: pointer;
 }
 
-.emotion-1 i {
+.emotion-1>i {
   font-size: 24px;
   color: #252525;
 }
@@ -41,6 +41,18 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 
 .emotion-1:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-2 {
@@ -263,7 +275,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
   cursor: pointer;
 }
 
-.emotion-1 i {
+.emotion-1>i {
   font-size: 24px;
   color: #252525;
 }
@@ -275,6 +287,18 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 
 .emotion-1:focus-visible {
   outline: 2px solid #000000;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='letter'] {
+  background-color: #3e3e3e;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='collapsed'] {
+  background-color: #c5c5c5;
+}
+
+.emotion-1:hover:not(:disabled) [data-avatar-type='thumbnail'] {
+  background-color: #3e3e3e;
 }
 
 .emotion-2 {
