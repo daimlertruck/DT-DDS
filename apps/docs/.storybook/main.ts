@@ -98,9 +98,26 @@ const config: StorybookConfig = {
           __dirname,
           `../../../packages/dt-dds-react/index.ts`
         ),
+        '@dt-dds/themes': path.resolve(
+          __dirname,
+          `../../../packages/themes/src/index.ts`
+        ),
         ...resolveComponentsPath(components),
       };
     }
+
+    config.esbuild = {
+      ...config.esbuild,
+      keepNames: true,
+    };
+
+    config.build = {
+      ...config.build,
+      minify: 'esbuild',
+      sourcemap: false,
+      chunkSizeWarningLimit: 1000,
+    };
+
     return config;
   },
 
