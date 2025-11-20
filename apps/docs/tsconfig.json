@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@dt-dds/react": ["../../packages/dt-dds-react/index.ts"],
+      "@dt-dds/themes": ["../../packages/themes/src/index.ts"],
+      "@dt-dds/react-*": ["../../packages/react-packages/*/index.ts"]
+    }
+  },
+  "include": ["src/**/*", ".storybook/**/*"]
+}
