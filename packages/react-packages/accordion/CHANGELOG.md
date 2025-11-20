@@ -1,5 +1,20 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.52
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-divider@1.0.0-beta.50
+  - @dt-dds/react-icon@1.0.0-beta.53
+
 ## 1.0.0-beta.51
 
 ### Patch Changes

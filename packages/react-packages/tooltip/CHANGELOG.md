@@ -1,5 +1,19 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.59
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-icon-button@1.0.0-beta.19
+
 ## 1.0.0-beta.58
 
 ### Patch Changes

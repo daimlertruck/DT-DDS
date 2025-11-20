@@ -1,5 +1,27 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.87
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- fix: text filed extra-suffix visual accessibility
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-label-field@1.0.0-beta.51
+  - @dt-dds/react-icon-button@1.0.0-beta.19
+  - @dt-dds/react-tooltip@1.0.0-beta.59
+  - @dt-dds/react-spinner@1.0.0-beta.82
+  - @dt-dds/react-typography@1.0.0-beta.42
+
 ## 1.0.0-beta.86
 
 ### Patch Changes

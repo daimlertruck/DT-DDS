@@ -1,5 +1,12 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.51
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
 ## 1.0.0-beta.50
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.19
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+
 ## 1.0.0-beta.18
 
 ### Patch Changes

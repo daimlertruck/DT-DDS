@@ -1,5 +1,20 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.40
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-tooltip@1.0.0-beta.59
+
 ## 1.0.0-beta.39
 
 ### Patch Changes

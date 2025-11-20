@@ -1,5 +1,22 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.32
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-typography@1.0.0-beta.42
+
 ## 1.0.0-beta.31
 
 ### Patch Changes

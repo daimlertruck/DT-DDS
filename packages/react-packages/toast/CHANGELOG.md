@@ -1,5 +1,23 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.94
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-button@1.0.0-beta.77
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-typography@1.0.0-beta.42
+
 ## 1.0.0-beta.93
 
 ### Patch Changes

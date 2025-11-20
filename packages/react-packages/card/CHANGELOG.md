@@ -1,5 +1,21 @@
 # @dt-ui/react-card
 
+## 1.0.0-beta.34
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-typography@1.0.0-beta.42
+
 ## 1.0.0-beta.33
 
 ### Patch Changes

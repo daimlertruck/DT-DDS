@@ -1,5 +1,23 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.82
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-typography@1.0.0-beta.42
+  - @dt-dds/react-box@1.0.0-beta.48
+
 ## 1.0.0-beta.81
 
 ### Patch Changes

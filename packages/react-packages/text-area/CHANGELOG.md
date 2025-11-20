@@ -1,5 +1,26 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.59
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-label-field@1.0.0-beta.51
+  - @dt-dds/react-tooltip@1.0.0-beta.59
+  - @dt-dds/react-typography@1.0.0-beta.42
+  - @dt-dds/react-box@1.0.0-beta.48
+
 ## 1.0.0-beta.58
 
 ### Patch Changes

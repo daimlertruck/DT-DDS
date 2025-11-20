@@ -1,5 +1,18 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.51
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

@@ -1,5 +1,20 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.64
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.51
+  - @dt-dds/react-box@1.0.0-beta.48
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

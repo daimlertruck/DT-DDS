@@ -1,5 +1,21 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.46
+
+### Minor Changes
+
+- feat: implement new Dropdown
+- feat: add native attributes to Typography
+- feat: implement new Select field
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.53
+  - @dt-dds/react-typography@1.0.0-beta.42
+
 ## 1.0.0-beta.45
 
 ### Patch Changes
