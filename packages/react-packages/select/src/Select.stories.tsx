@@ -6,15 +6,15 @@ import { SelectFill, SelectVariant } from './types';
 
 import { Select, SelectOptionValue } from '.';
 const options = [
-  { value: 'opt1', label: 'Option 1', disabled: false },
-  { value: 'opt2', label: 'Option 2', disabled: false },
+  { value: 'opt1', label: 'Option 1', isDisabled: false },
+  { value: 'opt2', label: 'Option 2', isDisabled: false },
   {
     value: 'opt3',
     label: 'A text message to see how big labels will be handled',
-    disabled: false,
+    isDisabled: false,
   },
-  { value: 'opt4', label: 'Option 3', disabled: true },
-  { value: 'opt5', label: 'Option 4', disabled: false },
+  { value: 'opt4', label: 'Option 3', isDisabled: true },
+  { value: 'opt5', label: 'Option 4', isDisabled: false },
 ];
 
 type Story = StoryObj<CustomSelectProps>;
@@ -53,7 +53,7 @@ const meta: Meta<CustomSelectProps> = {
         {options.map((item, index) => (
           <Select.Option
             index={index}
-            isDisabled={item.disabled}
+            isDisabled={item.isDisabled}
             key={item.value}
             value={item.value}
           >
@@ -103,7 +103,7 @@ export const Multi: StoryObj<CustomSelectProps> = {
         {options.map((opt, index) => (
           <Select.Option
             index={index}
-            isDisabled={opt.disabled}
+            isDisabled={opt.isDisabled}
             key={opt.value}
             value={opt.value}
           >
