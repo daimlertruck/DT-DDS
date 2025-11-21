@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.248
+
+### Patch Changes
+
+- fix: avoid Downshift CJS/ESM interop issue in Next build
+- refactor: change select storybook prop
+- Updated dependencies
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.61
+  - @dt-dds/react-box@1.0.0-beta.49
+  - @dt-dds/react-dropdown@1.0.0-beta.70
+  - @dt-dds/react-radio@1.0.0-beta.65
+  - @dt-dds/react-spinner@1.0.0-beta.83
+  - @dt-dds/react-tabs@1.0.0-beta.78
+  - @dt-dds/react-text-area@1.0.0-beta.60
+  - @dt-dds/react-button@1.0.0-beta.78
+  - @dt-dds/react-modal@1.0.0-beta.78
+  - @dt-dds/react-text-field@1.0.0-beta.88
+  - @dt-dds/react-empty-state@1.0.0-beta.98
+  - @dt-dds/react-link@1.0.0-beta.55
+  - @dt-dds/react-message@1.0.0-beta.94
+  - @dt-dds/react-toast@1.0.0-beta.95
+  - @dt-dds/react-date-picker@1.0.0-beta.71
+
 ## 1.0.0-beta.247
 
 ### Minor Changes

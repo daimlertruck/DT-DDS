@@ -1,5 +1,11 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.94
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.78
+
 ## 1.0.0-beta.93
 
 ### Minor Changes

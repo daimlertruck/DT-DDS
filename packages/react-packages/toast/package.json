@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-toast",
-  "version": "1.0.0-beta.94",
+  "version": "1.0.0-beta.95",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,7 +20,7 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-button": "1.0.0-beta.77",
+    "@dt-dds/react-button": "1.0.0-beta.78",
     "@dt-dds/react-core": "1.0.0-beta.51",
     "@dt-dds/react-icon": "1.0.0-beta.53",
     "@dt-dds/react-typography": "1.0.0-beta.42",

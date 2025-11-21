@@ -1,5 +1,15 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- fix: avoid Downshift CJS/ESM interop issue in Next build
+- refactor: change select storybook prop
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.49
+  - @dt-dds/react-dropdown@1.0.0-beta.70
+
 ## 1.0.0-beta.60
 
 ### Minor Changes
