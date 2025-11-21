@@ -5,7 +5,7 @@ import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
 import { LabelField } from '@dt-dds/react-label-field';
 import { Tooltip } from '@dt-dds/react-tooltip';
-import { useSelect } from 'downshift';
+import * as Downshift from 'downshift';
 import {
   Children,
   isValidElement,
@@ -53,6 +53,8 @@ interface MultiSelectProps extends BaseSelectProps {
 }
 
 export type SelectProps = SingleSelectProps | MultiSelectProps;
+
+const { useSelect } = Downshift;
 
 const helperTextId = 'helper-text-id';
 
