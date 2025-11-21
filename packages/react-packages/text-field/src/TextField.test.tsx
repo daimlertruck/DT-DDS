@@ -101,6 +101,35 @@ describe('<TextField /> component', () => {
     expect(container).toMatchSnapshot();
   });
 
+  it('should not call onClick if input is disabled', () => {
+    const handleClickPrefix = jest.fn();
+    const handleClickSuffix = jest.fn();
+
+    render(
+      <ProvidedTextField
+        disabled
+        extraPrefix={{
+          component: <Icon code='search' />,
+          onClick: handleClickPrefix,
+        }}
+        extraSuffix={{
+          component: <Icon code='search' />,
+          onClick: handleClickSuffix,
+        }}
+        label='Search for anything'
+        type='search'
+      />
+    );
+
+    fireEvent.click(screen.getByTestId('extra-prefix'));
+
+    expect(handleClickPrefix).toHaveBeenCalledTimes(0);
+
+    fireEvent.click(screen.getByTestId('extra-suffix'));
+
+    expect(handleClickSuffix).toHaveBeenCalledTimes(0);
+  });
+
   it('renders hidden text input', () => {
     render(<ProvidedTextField label='Hidden text' type='password' />);
 
@@ -276,7 +305,7 @@ describe('<TextField /> component', () => {
     expect(handleClick).toHaveBeenCalled();
   });
 
-  test('should call onClick when extra preffix is clicked', () => {
+  test('should call onClick when extra prefix is clicked', () => {
     const handleClick = jest.fn();
 
     render(
@@ -296,7 +325,7 @@ describe('<TextField /> component', () => {
       target: { value: 'search' },
     });
 
-    fireEvent.click(screen.getByTestId('extra-preffix'));
+    fireEvent.click(screen.getByTestId('extra-prefix'));
 
     expect(handleClick).toHaveBeenCalled();
   });
@@ -388,7 +417,7 @@ describe('<TextField /> component', () => {
     const input = screen.getByRole('textbox');
     fireEvent.change(input, { target: { value: 'test' } });
 
-    const extraPrefix = screen.getByTestId('extra-preffix');
+    const extraPrefix = screen.getByTestId('extra-prefix');
     fireEvent.keyDown(extraPrefix, { code: 'Enter' });
 
     expect(handleClick).toHaveBeenCalledWith('test');
@@ -446,7 +475,7 @@ describe('<TextField /> component', () => {
       />
     );
 
-    const extraPrefix = screen.getByTestId('extra-preffix');
+    const extraPrefix = screen.getByTestId('extra-prefix');
     fireEvent.keyDown(extraPrefix, { code: 'Space' });
 
     expect(handleClick).not.toHaveBeenCalled();
@@ -674,7 +703,7 @@ describe('<TextField /> component', () => {
       );
 
       expect(screen.getByTestId('label-field')).toBeInTheDocument();
-      expect(screen.getByTestId('extra-preffix')).toBeInTheDocument();
+      expect(screen.getByTestId('extra-prefix')).toBeInTheDocument();
       expect(screen.getAllByTestId('icon').length).toBeGreaterThanOrEqual(2);
     });
 
