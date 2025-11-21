@@ -154,24 +154,67 @@ jobs:
           git config --global user.email ${{ env.GIT_FAKE_EMAIL }}
           git config --global user.name ${{ env.GIT_FAKE_USER }}
 
+      - name: Find PR associated with commit
+        id: find_pr
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const commitSha = context.sha;
+
+            try {
+              // Get PRs associated with this commit
+              const { data: pulls } = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                commit_sha: commitSha,
+              });
+              
+              // Find the first closed PR
+              const closedPR = pulls.find(pr => pr.state === 'closed');
+              
+              if (closedPR) {
+                console.log(`Found closed PR #${closedPR.number} for commit ${commitSha}`);
+                return closedPR.number.toString();
+              } else {
+                console.log(`No closed PR found for commit ${commitSha}`);
+                return '';
+              }
+            } catch (error) {
+              console.log(`Error finding PR for commit ${commitSha}:`, error.message);
+              return '';
+            }
+
+      - name: Log if no PR found
+        if: steps.find_pr.outputs.result == ''
+        run: |
+          echo "No closed PR found for commit ${{ github.sha }}. Skipping preview deletion."
+
       - name: Delete Preview Environment
+        if: steps.find_pr.outputs.result != ''
         shell: bash
         run: |
-          COMMIT_HASH=$(git rev-parse HEAD)
-          FOUND_PR_NUMBER=$(curl --request GET --url "${{ github.server_url }}/api/v3/repos/${{ github.repository }}/commits/$COMMIT_HASH/pulls?state=closed" --header "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" | jq -r ".[].number")
+          PR_NUMBER="${{ steps.find_pr.outputs.result }}"
+          echo "Will delete preview environment for: PR-$PR_NUMBER"
 
-          if [ -z "$FOUND_PR_NUMBER" ]; then
-            echo "PR not found."
-            exit 0
-          else
-            echo "Will delete preview environment for: PR-$FOUND_PR_NUMBER"
+          git checkout -b gh-pages-${{ github.run_number }} origin/gh-pages
 
-            git checkout -b gh-pages-${{ github.run_number }} origin/gh-pages
-            rm -rf PR-$FOUND_PR_NUMBER
+          # Check if the PR preview directory exists before trying to delete
+          if [ -d "PR-$PR_NUMBER" ]; then
+            rm -rf PR-$PR_NUMBER
             git add . --all
 
-            git commit -m "chore: delete PR preview"
+            # Check if there are any changes to commit
+            if [[ -n $(git status -s) ]]; then
+              git commit -m "chore: delete PR preview for PR-$PR_NUMBER"
+              git checkout gh-pages
+              git merge gh-pages-${{ github.run_number }}
+              git push origin gh-pages
+            else
+              echo "No changes to commit. Preview directory may have already been deleted."
+              git checkout gh-pages
+            fi
+          else
+            echo "Preview directory PR-$PR_NUMBER does not exist. Nothing to delete."
             git checkout gh-pages
-            git merge gh-pages-${{ github.run_number }}
-            git push origin gh-pages
           fi
