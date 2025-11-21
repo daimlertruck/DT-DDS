@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.99
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.56
+  - @dt-dds/react-button@1.0.0-beta.79
+
 ## 1.0.0-beta.98
 
 ### Patch Changes

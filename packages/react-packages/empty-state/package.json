@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-empty-state",
-  "version": "1.0.0-beta.98",
+  "version": "1.0.0-beta.99",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,11 +20,11 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-button": "1.0.0-beta.78",
+    "@dt-dds/react-button": "1.0.0-beta.79",
     "@dt-dds/react-core": "1.0.0-beta.51",
     "@dt-dds/react-typography": "1.0.0-beta.42",
     "@dt-dds/themes": "1.0.0-beta.9",
-    "@dt-dds/react-link": "1.0.0-beta.55"
+    "@dt-dds/react-link": "1.0.0-beta.56"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

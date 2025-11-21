@@ -1,5 +1,20 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.71
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- chore: use CJS export for select and dropdown
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+  - @dt-dds/react-box@1.0.0-beta.50
+
 ## 1.0.0-beta.70
 
 ### Patch Changes

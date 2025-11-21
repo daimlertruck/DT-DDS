@@ -1,5 +1,11 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.54
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
 ## 1.0.0-beta.53
 
 ### Minor Changes

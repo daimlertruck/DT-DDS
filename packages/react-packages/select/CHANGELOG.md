@@ -1,5 +1,25 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.62
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- chore: use CJS export for select and dropdown
+- Updated dependencies
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+  - @dt-dds/react-checkbox@1.0.0-beta.52
+  - @dt-dds/react-dropdown@1.0.0-beta.71
+  - @dt-dds/react-label-field@1.0.0-beta.52
+  - @dt-dds/react-tooltip@1.0.0-beta.60
+  - @dt-dds/react-box@1.0.0-beta.50
+
 ## 1.0.0-beta.61
 
 ### Patch Changes

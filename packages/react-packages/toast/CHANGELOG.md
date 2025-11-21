@@ -1,5 +1,17 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.96
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-button@1.0.0-beta.79
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

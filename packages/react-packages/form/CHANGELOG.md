@@ -1,5 +1,16 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.44
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.60
+
 ## 1.0.0-beta.43
 
 ### Minor Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+
 ## 1.0.0-beta.46
 
 ### Minor Changes

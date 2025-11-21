@@ -1,5 +1,16 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.54
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.60
+
 ## 1.0.0-beta.53
 
 ### Minor Changes

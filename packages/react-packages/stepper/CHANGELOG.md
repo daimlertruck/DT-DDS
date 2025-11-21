@@ -1,5 +1,16 @@
 # @dt-ui/react-stepper
 
+## 1.0.0-beta.43
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+
 ## 1.0.0-beta.42
 
 ### Minor Changes

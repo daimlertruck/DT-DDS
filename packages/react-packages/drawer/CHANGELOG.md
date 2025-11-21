@@ -1,5 +1,16 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.58
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+
 ## 1.0.0-beta.57
 
 ### Minor Changes

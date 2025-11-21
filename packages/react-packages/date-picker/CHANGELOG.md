@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.72
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.89
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

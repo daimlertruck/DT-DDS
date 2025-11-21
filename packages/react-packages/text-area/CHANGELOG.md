@@ -1,5 +1,20 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.61
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-label-field@1.0.0-beta.52
+  - @dt-dds/react-tooltip@1.0.0-beta.60
+  - @dt-dds/react-box@1.0.0-beta.50
+
 ## 1.0.0-beta.60
 
 ### Patch Changes

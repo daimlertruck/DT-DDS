@@ -1,5 +1,16 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.53
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+
 ## 1.0.0-beta.52
 
 ### Minor Changes

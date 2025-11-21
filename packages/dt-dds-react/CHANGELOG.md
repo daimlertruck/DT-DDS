@@ -1,5 +1,48 @@
 # @dt-ui/react
 
+## 1.0.0-beta.249
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- chore: use CJS export for select and dropdown
+- Updated dependencies
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-avatar@1.0.0-beta.63
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+  - @dt-dds/react-modal@1.0.0-beta.79
+  - @dt-dds/react-tabs@1.0.0-beta.79
+  - @dt-dds/react-accordion@1.0.0-beta.53
+  - @dt-dds/react-breadcrumb@1.0.0-beta.63
+  - @dt-dds/react-checkbox@1.0.0-beta.52
+  - @dt-dds/react-select@1.0.0-beta.62
+  - @dt-dds/react-dropdown@1.0.0-beta.71
+  - @dt-dds/react-label-field@1.0.0-beta.52
+  - @dt-dds/react-text-area@1.0.0-beta.61
+  - @dt-dds/react-text-field@1.0.0-beta.89
+  - @dt-dds/react-date-picker@1.0.0-beta.72
+  - @dt-dds/react-link@1.0.0-beta.56
+  - @dt-dds/react-empty-state@1.0.0-beta.99
+  - @dt-dds/react-message@1.0.0-beta.95
+  - @dt-dds/react-pagination@1.0.0-beta.33
+  - @dt-dds/react-progress-bar@1.0.0-beta.47
+  - @dt-dds/react-segmented-control@1.0.0-beta.41
+  - @dt-dds/react-stepper@1.0.0-beta.43
+  - @dt-dds/react-toast@1.0.0-beta.96
+  - @dt-dds/react-drawer@1.0.0-beta.58
+  - @dt-dds/react-tooltip@1.0.0-beta.60
+  - @dt-dds/react-form@1.0.0-beta.44
+  - @dt-dds/react-tag@1.0.0-beta.54
+  - @dt-dds/react-box@1.0.0-beta.50
+  - @dt-dds/react-radio@1.0.0-beta.66
+  - @dt-dds/react-spinner@1.0.0-beta.84
+  - @dt-dds/react-button@1.0.0-beta.79
+
 ## 1.0.0-beta.248
 
 ### Patch Changes

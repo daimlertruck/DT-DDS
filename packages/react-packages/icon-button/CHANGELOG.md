@@ -1,5 +1,11 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.20
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
 ## 1.0.0-beta.19
 
 ### Minor Changes

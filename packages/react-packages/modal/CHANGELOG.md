@@ -1,5 +1,18 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.79
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+  - @dt-dds/react-spinner@1.0.0-beta.84
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

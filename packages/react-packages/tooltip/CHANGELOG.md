@@ -1,5 +1,16 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.60
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon-button@1.0.0-beta.20
+
 ## 1.0.0-beta.59
 
 ### Minor Changes

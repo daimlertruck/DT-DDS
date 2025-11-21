@@ -1,5 +1,16 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.33
+
+### Minor Changes
+
+- feat: avatar interactivity via icon-button
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.54
+
 ## 1.0.0-beta.32
 
 ### Minor Changes
