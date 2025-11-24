@@ -1,5 +1,12 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.91
+
+### Patch Changes
+
+- fix: text field label
+  - @dt-dds/react-spinner@1.0.0-beta.86
+
 ## 1.0.0-beta.90
 
 ### Minor Changes

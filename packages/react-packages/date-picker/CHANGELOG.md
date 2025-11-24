@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.74
+
+### Patch Changes
+
+- fix: text field label
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.91
+  - @dt-dds/react-dropdown@1.0.0-beta.73
+
 ## 1.0.0-beta.73
 
 ### Minor Changes
