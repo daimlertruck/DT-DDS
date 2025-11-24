@@ -24,12 +24,13 @@ export const DatePicker = ({
   min,
   name,
   label,
+  onChange,
   required,
   isDisabled,
   weekStartDay,
   initialValue,
-  onDateChanged,
   isMultiMonths,
+  onDateSelected,
   locale = enUS,
   mode = 'single',
   id = 'date-picker',
@@ -93,6 +94,7 @@ export const DatePicker = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.trim();
     setInputValue(value);
+    onChange?.(e);
 
     if (!value) {
       setSelectedDate(null);
@@ -126,7 +128,6 @@ export const DatePicker = ({
 
     setSelectedDate(parsedDate);
     setMonth(parsedDate);
-    onDateChanged?.(parsedDate);
   };
 
   const handleChangeRangeMode = (value: string) => {
@@ -180,7 +181,7 @@ export const DatePicker = ({
     const rangeDate = { from: parsedFrom as Date, to: parsedTo as Date };
 
     setSelectedDate(rangeDate);
-    onDateChanged?.(rangeDate);
+    onDateSelected?.(rangeDate);
     setMonth(parsedFrom as Date);
   };
 
@@ -190,7 +191,7 @@ export const DatePicker = ({
     setSelectedDate(date);
     setMonth(date);
     setInputValue(formatDate(date));
-    onDateChanged?.(date);
+    onDateSelected?.(date);
   };
 
   const handleRangeSelected = (date: DateRange) => {
@@ -224,7 +225,7 @@ export const DatePicker = ({
       }));
       setInputValue(`${formatDate(from)} - ${formatDate(to)}`);
       setIsDatePickerVisible(false);
-      onDateChanged?.(date);
+      onDateSelected?.(date);
 
       return;
     }

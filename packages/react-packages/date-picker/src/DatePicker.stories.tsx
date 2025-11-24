@@ -22,7 +22,7 @@ const meta: Meta<DatePickerProps> = {
     },
   },
   render: ({ ...props }) => (
-    <DatePicker {...props} onDateChanged={(date) => console.log(date)} />
+    <DatePicker {...props} onDateSelected={(date) => console.log(date)} />
   ),
 };
 
