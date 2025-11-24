@@ -28,7 +28,7 @@ import {
 import { SelectOptionValue, SelectFill, SelectVariant } from './types';
 
 interface BaseSelectProps extends BaseProps {
-  helperText?: string;
+  helperText?: ReactNode;
   hasError?: boolean;
   label: string;
   isRequired?: boolean;

@@ -50,7 +50,7 @@ export const App = () => {
 | `value`           | `string`                   | `string[]`                  | Controlled value. A string for single-select; an array of strings for multi-select. |
 | `onChange`        | `(value: string) => void`  | `(value: string[]) => void` | Called when the selection changes (string in single mode; array in multi mode).     |
 | `isMulti`         | `boolean`                  | `false`                     | Toggles between single and multiple selection.                                      |
-| `helperText`      | `string`                   | -                           | Helper text displayed below the field; associated via `aria-describedby`.           |
+| `helperText`      | `ReactNode`                | -                           | Helper text displayed below the field; associated via `aria-describedby`.           |
 | `hasError`        | `boolean`                  | `false`                     | Error state (applies `aria-invalid` and error styles).                              |
 | `isDisabled`      | `boolean`                  | `false`                     | Disables user interaction.                                                          |
 | `isRequired`      | `boolean`                  | —                           | Marks the field as required.                                                        |
