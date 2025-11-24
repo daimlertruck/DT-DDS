@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.77
+
+### Minor Changes
+
+- feat: add onchnage to date picker
+
+### Patch Changes
+
+- @dt-dds/react-dropdown@1.0.0-beta.76
+- @dt-dds/react-text-field@1.0.0-beta.94
+
 ## 1.0.0-beta.76
 
 ### Patch Changes

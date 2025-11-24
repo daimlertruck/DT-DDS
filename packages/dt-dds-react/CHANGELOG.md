@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.254
+
+### Minor Changes
+
+- feat: add onchnage to date picker
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-date-picker@1.0.0-beta.77
+  - @dt-dds/react-box@1.0.0-beta.55
+  - @dt-dds/react-dropdown@1.0.0-beta.76
+  - @dt-dds/react-radio@1.0.0-beta.71
+  - @dt-dds/react-select@1.0.0-beta.67
+  - @dt-dds/react-spinner@1.0.0-beta.89
+  - @dt-dds/react-tabs@1.0.0-beta.84
+  - @dt-dds/react-text-area@1.0.0-beta.66
+  - @dt-dds/react-button@1.0.0-beta.84
+  - @dt-dds/react-modal@1.0.0-beta.84
+  - @dt-dds/react-text-field@1.0.0-beta.94
+  - @dt-dds/react-empty-state@1.0.0-beta.104
+  - @dt-dds/react-link@1.0.0-beta.61
+  - @dt-dds/react-message@1.0.0-beta.100
+  - @dt-dds/react-toast@1.0.0-beta.101
+
 ## 1.0.0-beta.253
 
 ### Minor Changes
