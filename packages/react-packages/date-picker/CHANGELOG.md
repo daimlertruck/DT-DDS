@@ -1,5 +1,18 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.73
+
+### Minor Changes
+
+- feat: update date picker
+- feat: add ref to text field
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.90
+  - @dt-dds/react-dropdown@1.0.0-beta.72
+
 ## 1.0.0-beta.72
 
 ### Minor Changes

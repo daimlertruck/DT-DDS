@@ -1,5 +1,11 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.45
+
+### Minor Changes
+
+- feat: add ref to text field
+
 ## 1.0.0-beta.44
 
 ### Minor Changes

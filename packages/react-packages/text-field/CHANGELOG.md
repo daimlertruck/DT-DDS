@@ -1,5 +1,15 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.90
+
+### Minor Changes
+
+- feat: add ref to text field
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.85
+
 ## 1.0.0-beta.89
 
 ### Minor Changes

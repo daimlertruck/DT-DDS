@@ -1,5 +1,11 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.80
+
+### Patch Changes
+
+- @dt-dds/react-spinner@1.0.0-beta.85
+
 ## 1.0.0-beta.79
 
 ### Patch Changes
