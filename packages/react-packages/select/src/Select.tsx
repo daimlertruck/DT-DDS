@@ -44,13 +44,13 @@ interface BaseSelectProps extends BaseProps {
 interface SingleSelectProps extends BaseSelectProps {
   isMulti?: false;
   value?: string;
-  onChange: (value: string) => void;
+  onChange?: (value: string) => void;
 }
 
 interface MultiSelectProps extends BaseSelectProps {
   isMulti: true;
   value?: string[];
-  onChange: (value: string[]) => void;
+  onChange?: (value: string[]) => void;
 }
 
 export type SelectProps = SingleSelectProps | MultiSelectProps;
@@ -91,7 +91,7 @@ export const Select = ({
   ) => {
     e.stopPropagation();
 
-    isMulti && onChange([]);
+    isMulti && onChange?.([]);
   };
 
   const options: SelectOptionValue[] = useMemo(() => {
@@ -187,11 +187,11 @@ export const Select = ({
           ? currentValue.filter((v) => v !== selectedItem.value)
           : [...currentValue, selectedItem.value];
 
-        onChange(nextValue);
+        onChange?.(nextValue);
         return;
       }
 
-      onChange(selectedItem.value);
+      onChange?.(selectedItem.value);
     },
   });
 
