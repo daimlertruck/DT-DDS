@@ -69,6 +69,7 @@ export const App = () => {
 | ------------ | --------------------- | ------- | ------------------------------------------------------------ |
 | `children`   | `ReactNode`           | —       | Visible content of the option (the label shown to the user). |
 | `value`      | `string`              | —       | Option value.                                                |
+| `valueLabel` | `ReactNode`           | —       | This is a customizable option label on the input.            |
 | `index`      | `number`              | —       | Option index in the list (used internally by Downshift).     |
 | `isDisabled` | `boolean`             | `false` | Disables the option.                                         |
 | `style`      | `React.CSSProperties` | —       | Inline styles for the option.                                |

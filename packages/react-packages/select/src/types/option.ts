@@ -1,7 +1,9 @@
+import { ReactNode } from 'react';
+
 export type SelectOptionValue = {
   value: string;
   isDisabled?: boolean;
-  label?: string;
+  label?: ReactNode;
 };
 
 export type SelectVariant = 'outlined' | 'bottom-line';

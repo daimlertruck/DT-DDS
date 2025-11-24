@@ -100,7 +100,7 @@ export const Select = ({
         return {
           value: child.props.value,
           isDisabled: child.props.isDisabled,
-          label: child.props.children,
+          label: child.props?.valueLabel ?? child.props?.children,
         };
       }
 
