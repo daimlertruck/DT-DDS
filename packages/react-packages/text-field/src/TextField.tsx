@@ -164,7 +164,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>(
       ? requiredMessage ?? messageProp
       : messageProp;
 
-    const isActiveInput = isInputFocused || activeInput || !!inputValue.trim();
+    const isActiveInput = activeInput || !!inputValue.trim();
 
     const isSearchType = type === 'search';
 
@@ -187,7 +187,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>(
             hasError={showError}
             htmlFor={textFieldId}
             icon={labelIcon}
-            isActive={isActiveInput}
+            isActive={isInputFocused || activeInput}
             isCentered={!isActiveInput && isFloatingLabel}
             isDisabled={disabled}
             isFloating={isFloatingLabel}
