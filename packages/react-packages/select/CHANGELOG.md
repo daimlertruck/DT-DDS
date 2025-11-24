@@ -1,5 +1,17 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.66
+
+### Minor Changes
+
+- feat: make select helper text a ReactNode
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.54
+  - @dt-dds/react-dropdown@1.0.0-beta.75
+
 ## 1.0.0-beta.65
 
 ### Minor Changes

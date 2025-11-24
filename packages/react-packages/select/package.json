@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-select",
-  "version": "1.0.0-beta.65",
+  "version": "1.0.0-beta.66",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,10 +20,10 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-box": "1.0.0-beta.53",
+    "@dt-dds/react-box": "1.0.0-beta.54",
     "@dt-dds/react-checkbox": "1.0.0-beta.52",
     "@dt-dds/react-core": "1.0.0-beta.51",
-    "@dt-dds/react-dropdown": "1.0.0-beta.74",
+    "@dt-dds/react-dropdown": "1.0.0-beta.75",
     "@dt-dds/react-icon": "1.0.0-beta.54",
     "@dt-dds/react-icon-button": "1.0.0-beta.20",
     "@dt-dds/react-label-field": "1.0.0-beta.52",

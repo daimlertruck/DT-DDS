@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.253
+
+### Minor Changes
+
+- feat: make select helper text a ReactNode
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-select@1.0.0-beta.66
+  - @dt-dds/react-box@1.0.0-beta.54
+  - @dt-dds/react-dropdown@1.0.0-beta.75
+  - @dt-dds/react-radio@1.0.0-beta.70
+  - @dt-dds/react-spinner@1.0.0-beta.88
+  - @dt-dds/react-tabs@1.0.0-beta.83
+  - @dt-dds/react-text-area@1.0.0-beta.65
+  - @dt-dds/react-date-picker@1.0.0-beta.76
+  - @dt-dds/react-button@1.0.0-beta.83
+  - @dt-dds/react-modal@1.0.0-beta.83
+  - @dt-dds/react-text-field@1.0.0-beta.93
+  - @dt-dds/react-empty-state@1.0.0-beta.103
+  - @dt-dds/react-link@1.0.0-beta.60
+  - @dt-dds/react-message@1.0.0-beta.99
+  - @dt-dds/react-toast@1.0.0-beta.100
+
 ## 1.0.0-beta.252
 
 ### Minor Changes
