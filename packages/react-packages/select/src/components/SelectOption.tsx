@@ -1,7 +1,9 @@
 import { BaseProps } from '@dt-dds/react-core';
 import { Dropdown } from '@dt-dds/react-dropdown';
+import { ReactNode } from 'react';
 
 import { useSelectContext } from '../context';
+import { SelectOptionValue } from '../types';
 
 import { SelectCheckboxStyled } from './SelectOption.styled';
 
@@ -9,6 +11,7 @@ export interface SelectOptionProps extends BaseProps {
   value: string;
   index: number;
   isDisabled?: boolean;
+  valueLabel?: ReactNode;
 }
 
 export const SelectOption = ({
@@ -22,9 +25,9 @@ export const SelectOption = ({
   const { getItemProps, isItemHighlighted, isItemSelected, isMulti } =
     useSelectContext();
 
-  const item = { value, isDisabled };
+  const item: SelectOptionValue = { value, isDisabled };
 
-  const isSelected = isItemSelected(item);
+  const isSelected = isItemSelected(value);
   const isHighlighted = isItemHighlighted(index);
 
   return (

@@ -12,7 +12,7 @@ type SelectContextType = {
 
 interface SelectContextState {
   getItemProps: UseSelectReturnValue<SelectOptionValue>['getItemProps'];
-  isItemSelected: (item: SelectOptionValue) => boolean;
+  isItemSelected: (item: string) => boolean;
   isMulti: boolean;
   isItemHighlighted: (index: number) => boolean;
 }
@@ -36,10 +36,8 @@ export const SelectProvider = ({ children, value }: SelectProviderProps) => {
   const { highlightedIndex, selectedItems, ...rest } = value;
   const isItemHighlighted = (index: number) => index === highlightedIndex;
 
-  const isItemSelected = (item: SelectOptionValue) => {
-    return !!selectedItems.find(
-      (selectedItem) => selectedItem.value === item.value
-    );
+  const isItemSelected = (item: string) => {
+    return !!selectedItems.find((selectedItem) => selectedItem.value === item);
   };
 
   return (

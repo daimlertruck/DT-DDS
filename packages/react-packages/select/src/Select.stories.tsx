@@ -56,8 +56,9 @@ const meta: Meta<CustomSelectProps> = {
             isDisabled={item.isDisabled}
             key={item.value}
             value={item.value}
+            valueLabel={item.label}
           >
-            {item.label}
+            {item.label} {index === 0 ? '- This is the first option!' : ''}
           </Select.Option>
         ))}
       </Select>

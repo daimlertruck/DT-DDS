@@ -6,7 +6,13 @@ import { act, useState } from 'react';
 
 import { SelectOption as SelectOptionRaw } from './components/SelectOption';
 import { SelectProps, Select as SelectRaw } from './Select';
-type Item = { value: string; label: string; disabled?: boolean };
+
+type Item = {
+  value: string;
+  label: string;
+  disabled?: boolean;
+  valueLabel?: string;
+};
 
 const items: Item[] = [
   { value: 'opt1', label: 'Option 1', disabled: false },
@@ -17,7 +23,12 @@ const items: Item[] = [
     disabled: false,
   },
   { value: 'opt4', label: 'Option 3', disabled: true },
-  { value: 'opt5', label: 'Option 4', disabled: false },
+  {
+    value: 'opt5',
+    label: 'Option 4 on menu',
+    disabled: false,
+    valueLabel: 'Option 4 on input',
+  },
 ];
 
 const Select = withProviders(SelectRaw);
@@ -61,6 +72,7 @@ const SingleSelect = ({
             isDisabled={it.disabled}
             key={it.value}
             value={it.value}
+            {...(it?.valueLabel && { valueLabel: it?.valueLabel })}
           >
             {it.label}
           </SelectOption>
@@ -166,6 +178,18 @@ describe('<Select />', () => {
       expect(options()).toHaveLength(5);
 
       expect(menu()).not.toHaveAttribute('aria-multiselectable', 'true');
+    });
+
+    test('should have value label different from option on menu', () => {
+      const { options, value } = renderSelect();
+
+      const option = options()[4];
+
+      expect(option).toHaveTextContent('Option 4 on menu');
+
+      fireEvent.click(option);
+
+      expect(value()).toHaveTextContent('Option 4 on input');
     });
 
     test('should have placeholder and update selected values', () => {
