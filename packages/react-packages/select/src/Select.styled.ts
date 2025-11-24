@@ -1,4 +1,5 @@
 import { Scale } from '@dt-dds/react-core';
+import { Dropdown } from '@dt-dds/react-dropdown';
 import { Typography } from '@dt-dds/react-typography';
 import { CustomTheme as Theme } from '@dt-dds/themes';
 import styled from '@emotion/styled';
@@ -148,5 +149,16 @@ export const SelectActionContainerStyled = styled.div<SelectActionContainerStyle
 export const TypographyHelperTextStyled = styled(Typography)`
   ${({ theme }) => `
     padding-left: ${theme.spacing.spacing_40};
+  `}
+`;
+
+export const SelectDropdownStyled = styled(Dropdown)`
+  max-height: 200px;
+
+  ${({ theme }) => `
+    padding: ${theme.spacing.spacing_50} ${theme.spacing.spacing_0};
+    background-color: ${theme.palette.surface.contrast};
+    border-radius: ${theme.shape.dropdown};
+    border: 1px solid ${theme.palette.border.medium};
   `}
 `;

@@ -1,6 +1,5 @@
 import { Box } from '@dt-dds/react-box';
 import { BaseProps, Scale } from '@dt-dds/react-core';
-import { Dropdown } from '@dt-dds/react-dropdown';
 import { Icon } from '@dt-dds/react-icon';
 import { IconButton } from '@dt-dds/react-icon-button';
 import { LabelField } from '@dt-dds/react-label-field';
@@ -24,6 +23,7 @@ import {
   TypographyHelperTextStyled,
   SelectActionContainerStyled,
   TypographyValueStyled,
+  SelectDropdownStyled,
 } from './Select.styled';
 import { SelectOptionValue, SelectFill, SelectVariant } from './types';
 
@@ -297,17 +297,16 @@ export const Select = ({
           </TypographyHelperTextStyled>
         ) : null}
 
-        <Dropdown
+        <SelectDropdownStyled
           {...getMenuProps()}
           anchorRef={anchorRef}
           aria-multiselectable={isMulti}
           as='ul'
           isOpen={isOpen}
           onClose={closeMenu}
-          style={{ maxHeight: 200 }}
         >
           {children}
-        </Dropdown>
+        </SelectDropdownStyled>
       </Box>
     </SelectProvider>
   );
