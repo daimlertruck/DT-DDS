@@ -144,7 +144,7 @@ export const Select = ({
   } = useSelect<SelectOptionValue>({
     items: options,
     isItemDisabled(item) {
-      return !!item.isDisabled;
+      return !!item?.isDisabled;
     },
     defaultHighlightedIndex: isMulti || !selectedItems?.[0] ? 0 : undefined,
     selectedItem: !isMulti ? selectedItems?.[0] ?? null : null,
