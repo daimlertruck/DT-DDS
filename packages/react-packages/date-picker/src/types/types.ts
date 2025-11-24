@@ -5,7 +5,7 @@ type BaseDatePickerProps = {
   isDisabled?: boolean;
   isFloatingLabel?: boolean;
   locale?: Locale;
-  onDateChanged?: (date: Date | DateRange) => void;
+  onDateSelected?: (date: Date | DateRange) => void;
   isMultiMonths?: boolean;
   weekStartDay?: 0 | 1;
 } & Omit<TextFieldProps, 'type' | 'initialValue'>;
