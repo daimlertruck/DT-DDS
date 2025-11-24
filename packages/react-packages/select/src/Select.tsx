@@ -38,6 +38,7 @@ interface BaseSelectProps extends BaseProps {
   isFloatingLabel?: boolean;
   scale?: Scale;
   labelIcon?: ReactNode;
+  placeholder?: string;
 }
 
 interface SingleSelectProps extends BaseSelectProps {
@@ -74,6 +75,7 @@ export const Select = ({
   fill = 'default',
   isFloatingLabel = true,
   scale = 'standard',
+  placeholder = '',
   onChange,
 }: SelectProps) => {
   const anchorRef = useRef<HTMLDivElement | null>(null);
@@ -119,7 +121,13 @@ export const Select = ({
 
   const hasSelectedItems = !!selectedItems?.length;
 
-  const selectedValueContainerText = () => {
+  const isPlaceholderValue = !selectedItems.length && !isFloatingLabel;
+
+  const getSelectContainerText = () => {
+    if (isPlaceholderValue) {
+      return placeholder;
+    }
+
     return selectedItems.length > 1
       ? `${selectedItems.length} options selected`
       : selectedItems[0]?.label;
@@ -237,7 +245,7 @@ export const Select = ({
             variant={variant}
           >
             <TypographyValueStyled
-              color='content.default'
+              color={isPlaceholderValue ? 'content.medium' : 'content.default'}
               dataTestId='select-value'
               element='span'
               fontStyles='bodyMdRegular'
@@ -245,7 +253,7 @@ export const Select = ({
               scale={scale}
               {...(disabled && { color: 'content.light' })}
             >
-              {selectedValueContainerText()}
+              {getSelectContainerText()}
             </TypographyValueStyled>
 
             <SelectActionContainerStyled

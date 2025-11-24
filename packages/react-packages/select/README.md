@@ -45,7 +45,8 @@ export const App = () => {
 
 | Property          | Type                       | Default                     | Description                                                                         |
 | ----------------- | -------------------------- | --------------------------- | ----------------------------------------------------------------------------------- |
-| `label`           | `string`                   | —                           | Field label to give context to the selection.                                       |
+| `label`           | `string`                   | —                           | A label to help users understand the scope of the select field.                     |
+| `placeholder`     | `string`                   | —                           | A placeholder to help users understand the scope of the select field.               |
 | `value`           | `string`                   | `string[]`                  | Controlled value. A string for single-select; an array of strings for multi-select. |
 | `onChange`        | `(value: string) => void`  | `(value: string[]) => void` | Called when the selection changes (string in single mode; array in multi mode).     |
 | `isMulti`         | `boolean`                  | `false`                     | Toggles between single and multiple selection.                                      |
