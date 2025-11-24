@@ -78,6 +78,7 @@ export const Default: Story = {
     value: '',
     isFloatingLabel: true,
     scale: 'standard',
+    placeholder: 'Insert an option',
   },
 };
 

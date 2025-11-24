@@ -32,6 +32,7 @@ const SingleSelect = ({
   isFloatingLabel,
   label = 'Select label',
   scale = 'standard',
+  placeholder,
 }: Partial<SelectProps>) => {
   const [value, setValue] = useState(initialValue as string);
 
@@ -49,6 +50,7 @@ const SingleSelect = ({
       isRequired={isRequired}
       label={label}
       onChange={handleChange}
+      placeholder={placeholder}
       scale={scale}
       value={value}
     >
@@ -166,12 +168,19 @@ describe('<Select />', () => {
       expect(menu()).not.toHaveAttribute('aria-multiselectable', 'true');
     });
 
-    test('should update selected values', () => {
-      const { select, options, value } = renderSelect();
+    test('should have placeholder and update selected values', () => {
+      const { select, options, value } = renderSelect({
+        placeholder: 'Select an option',
+        isFloatingLabel: false,
+      });
+
+      expect(value()).toHaveTextContent('Select an option');
+      expect(value()).toHaveAttribute('color', 'content.medium');
 
       fireEvent.click(options()[0]);
 
       expect(value()).toHaveTextContent('Option 1');
+      expect(value()).toHaveAttribute('color', 'content.default');
 
       fireEvent.click(select());
 
