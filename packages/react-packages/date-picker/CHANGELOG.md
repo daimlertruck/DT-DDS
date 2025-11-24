@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.75
+
+### Minor Changes
+
+- feat: remove styles from Dropdown
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.74
+  - @dt-dds/react-text-field@1.0.0-beta.92
+
 ## 1.0.0-beta.74
 
 ### Patch Changes

@@ -1,5 +1,33 @@
 # @dt-ui/react
 
+## 1.0.0-beta.252
+
+### Minor Changes
+
+- feat: add placeholder to select
+- feat: remove styles from Dropdown
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-select@1.0.0-beta.65
+  - @dt-dds/react-date-picker@1.0.0-beta.75
+  - @dt-dds/react-dropdown@1.0.0-beta.74
+  - @dt-dds/react-box@1.0.0-beta.53
+  - @dt-dds/react-radio@1.0.0-beta.69
+  - @dt-dds/react-spinner@1.0.0-beta.87
+  - @dt-dds/react-tabs@1.0.0-beta.82
+  - @dt-dds/react-text-area@1.0.0-beta.64
+  - @dt-dds/react-button@1.0.0-beta.82
+  - @dt-dds/react-modal@1.0.0-beta.82
+  - @dt-dds/react-text-field@1.0.0-beta.92
+  - @dt-dds/react-empty-state@1.0.0-beta.102
+  - @dt-dds/react-link@1.0.0-beta.59
+  - @dt-dds/react-message@1.0.0-beta.98
+  - @dt-dds/react-toast@1.0.0-beta.99
+
 ## 1.0.0-beta.251
 
 ### Patch Changes
