@@ -179,7 +179,7 @@ exports[`<Select /> Single Select should render with correct styles 1`] = `
   <div
     class="emotion-0"
     data-testid="select"
-    style="align-items: start; gap: 4px;"
+    style="align-items: start; gap: 4px; width: 100%;"
   >
     <div
       class="emotion-1 emotion-2"

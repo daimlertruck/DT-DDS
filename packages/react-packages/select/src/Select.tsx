@@ -214,9 +214,9 @@ export const Select = ({
     >
       <Box
         dataTestId={dataTestId ?? 'select'}
-        style={{ alignItems: 'start', gap: 4 }}
+        style={{ alignItems: 'start', gap: 4, width: '100%', ...style }}
       >
-        <SelectStyled style={style}>
+        <SelectStyled>
           <LabelField
             {...getLabelProps()}
             hasError={hasError}
