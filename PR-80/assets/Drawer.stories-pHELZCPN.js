@@ -1,7 +1,0 @@
-import{j as e}from"./jsx-runtime-CB_V9I5Y.js";import"./index-D9dZuxfj.js";import"./index-BPv-v61o.js";import{P as h}from"./z-index-DWgeqfVW.js";import{r as x}from"./index-CTjT7uj6.js";import{D as r}from"./Drawer-BOSCoNBw.js";import"./emotion-react.browser.esm-Bwsi5GpN.js";import"./emotion-styled.browser.esm-DBghOYGd.js";import"./index-BAMY2Nnw.js";import"./iframe-D5uF8O2_.js";import"./index-XjDa9cP3.js";import"./Typography-Bb7lZ69m.js";import"./IconButton-C_mszqXk.js";import"./Close-BgpoXZkN.js";const w=({body:l,header:m,title:p,...c})=>{const[s,o]=x.useState(!1),d=()=>{o(D=>!D)};return e.jsxs(e.Fragment,{children:[e.jsx("button",{onClick:d,type:"button",children:"Open Drawer"}),e.jsx(h,{isOpen:s,children:e.jsxs(r,{...c,isVisible:s,setIsVisible:o,children:[e.jsxs(r.Header,{children:[e.jsx(r.Title,{title:p}),e.jsx("div",{children:m})]}),e.jsx(r.Body,{children:e.jsx("div",{children:l})})]})})]})},t={args:{body:"Drawer body content here.",header:"Drawer header content here.",title:"Drawer title"}},_={title:"Data Display/Drawer",component:r,render:w};var a,i,n;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  args: {
-    body: 'Drawer body content here.',
-    header: 'Drawer header content here.',
-    title: 'Drawer title'
-  }
-}`,...(n=(i=t.parameters)==null?void 0:i.docs)==null?void 0:n.source}}};const k=["Default"];export{t as Default,k as __namedExportsOrder,_ as default};
