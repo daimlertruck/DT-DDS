@@ -3,7 +3,8 @@ import { DayPicker } from 'react-day-picker';
 
 export const DatePickerStyled = styled(DayPicker)`
   ${({ theme }) => `
- 
+    background-color: ${theme.palette.surface.contrast};
+
     .rdp-months {
       border: 1px solid ${theme.palette.border.medium};
       padding: ${theme.spacing.spacing_50};
