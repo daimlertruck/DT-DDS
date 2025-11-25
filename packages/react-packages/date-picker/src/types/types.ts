@@ -8,6 +8,7 @@ type BaseDatePickerProps = {
   onDateSelected?: (date: Date | DateRange) => void;
   isMultiMonths?: boolean;
   weekStartDay?: 0 | 1;
+  onError?: (error: string) => void;
 } & Omit<TextFieldProps, 'type' | 'initialValue'>;
 
 type SingleModeProps = {
