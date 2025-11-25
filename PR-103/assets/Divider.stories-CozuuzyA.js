@@ -1,0 +1,3 @@
+var m=Object.defineProperty;var t=(e,i)=>m(e,"name",{value:i,configurable:!0});import{j as p}from"./jsx-runtime-Cgz2XvFB.js";import{D as n}from"./Divider.styled-DQDVdByA.js";import"./index-CwbBKW39.js";import"./emotion-styled.browser.esm-Cgg3GKEJ.js";const c=t(({style:e})=>p.jsx(n,{style:e}),"Divider"),x={title:"Data Display/Divider",component:c},r={args:{}};var s,a,o;r.parameters={...r.parameters,docs:{...(s=r.parameters)==null?void 0:s.docs,source:{originalSource:`{
+  args: {}
+}`,...(o=(a=r.parameters)==null?void 0:a.docs)==null?void 0:o.source}}};const g=["Default"];export{r as Default,g as __namedExportsOrder,x as default};
