@@ -8,47 +8,41 @@ describe('<DatePicker /> component', () => {
   const ProvidedDatePicker = withProviders(DatePicker);
 
   it('should open calendar after icon click', async () => {
-    const { getByTestId } = render(
-      <ProvidedDatePicker label='Choose a date' mode='single' />
-    );
+    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-    fireEvent.click(getByTestId('extra-suffix'));
+    fireEvent.click(screen.getByTestId('extra-suffix'));
 
-    expect(getByTestId('calendar')).toBeVisible();
+    expect(screen.getByTestId('calendar')).toBeVisible();
   });
 
   it('should close calendar after input click', async () => {
-    const { getByTestId } = render(
-      <ProvidedDatePicker label='Choose a date' mode='single' />
-    );
+    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-    fireEvent.click(getByTestId('extra-suffix'));
+    fireEvent.click(screen.getByTestId('extra-suffix'));
 
-    expect(getByTestId('calendar')).toBeVisible();
+    expect(screen.getByTestId('calendar')).toBeVisible();
 
-    fireEvent.click(getByTestId('choose-a-date-text-field-input'));
+    fireEvent.click(screen.getByTestId('choose-a-date-text-field-input'));
 
-    expect(getByTestId('calendar')).not.toBeVisible();
+    expect(screen.getByTestId('calendar')).not.toBeVisible();
   });
 
   it('should close calendar after click outside', async () => {
-    const { getByTestId } = render(
-      <ProvidedDatePicker label='Choose a date' mode='single' />
-    );
+    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-    fireEvent.click(getByTestId('extra-suffix'));
+    fireEvent.click(screen.getByTestId('extra-suffix'));
 
-    expect(getByTestId('calendar')).toBeVisible();
+    expect(screen.getByTestId('calendar')).toBeVisible();
 
     fireEvent.mouseDown(document.body);
     fireEvent.click(document.body);
 
-    expect(getByTestId('calendar')).not.toBeVisible();
+    expect(screen.getByTestId('calendar')).not.toBeVisible();
   });
 
   describe('Single Mode', () => {
     it('should have default value', () => {
-      const { getByTestId } = render(
+      render(
         <ProvidedDatePicker
           initialValue={new Date(2025, 1, 12)}
           label='Choose a date'
@@ -56,13 +50,67 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      expect(getByTestId('choose-a-date-text-field-input')).toHaveDisplayValue(
-        '02/12/2025'
+      expect(
+        screen.getByTestId('choose-a-date-text-field-input')
+      ).toHaveDisplayValue('02/12/2025');
+    });
+
+    it('should show error if min date changed', () => {
+      const { rerender } = render(
+        <ProvidedDatePicker
+          initialValue={new Date(2025, 1, 12)}
+          label='Choose a date'
+          mode='single'
+        />
       );
+
+      expect(
+        screen.queryByText('Please choose a date on or after 01/01/2026.')
+      ).toBeNull();
+
+      rerender(
+        <ProvidedDatePicker
+          initialValue={new Date(2025, 1, 12)}
+          label='Choose a date'
+          min='01/01/2026'
+          mode='single'
+        />
+      );
+
+      expect(
+        screen.getByText('Please choose a date on or after 01/01/2026.')
+      ).toBeVisible();
+    });
+
+    it('should show error if max date changed', () => {
+      const { rerender } = render(
+        <ProvidedDatePicker
+          initialValue={new Date(2025, 1, 12)}
+          label='Choose a date'
+          mode='single'
+        />
+      );
+
+      expect(
+        screen.queryByText('Please choose a date on or before 01/01/2023.')
+      ).toBeNull();
+
+      rerender(
+        <ProvidedDatePicker
+          initialValue={new Date(2025, 1, 12)}
+          label='Choose a date'
+          max='01/01/2023'
+          mode='single'
+        />
+      );
+
+      expect(
+        screen.getByText('Please choose a date on or before 01/01/2023.')
+      ).toBeVisible();
     });
 
     it('should show error if date is higher than max', () => {
-      const { getByTestId, getByText } = render(
+      render(
         <ProvidedDatePicker
           label='Choose a date'
           max='2024-01-12'
@@ -70,17 +118,17 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2026' },
       });
 
       expect(
-        getByText('Please choose a date on or before 01/12/2024.')
+        screen.getByText('Please choose a date on or before 01/12/2024.')
       ).toBeVisible();
     });
 
     it('should show error if date is lower than min', () => {
-      const { getByTestId, getByText } = render(
+      render(
         <ProvidedDatePicker
           label='Choose a date'
           min='2024-01-12'
@@ -88,17 +136,17 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2022' },
       });
 
       expect(
-        getByText('Please choose a date on or after 01/12/2024.')
+        screen.getByText('Please choose a date on or after 01/12/2024.')
       ).toBeVisible();
     });
 
     it('should show error if date is invalid', () => {
-      const { getByTestId, getByText } = render(
+      render(
         <ProvidedDatePicker
           label='Choose a date'
           min='2024-01-12'
@@ -106,27 +154,25 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05-05.' },
       });
 
-      expect(getByText('Invalid date format.')).toBeVisible();
+      expect(screen.getByText('Invalid date format.')).toBeVisible();
     });
 
     it('should show date selected ', async () => {
-      const { getByTestId, getByRole } = render(
-        <ProvidedDatePicker label='Choose a date' mode='single' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '12/12/2025' },
       });
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
-      const selectedDay = getByRole('gridcell', {
+      const selectedDay = screen.getByRole('gridcell', {
         name: '12',
       });
 
@@ -134,21 +180,20 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should select date and appear on input', () => {
-      const { getByTestId, getByRole } = render(
-        <ProvidedDatePicker label='Choose a date' mode='single' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
       fireEvent.click(
-        getByRole('gridcell', { name: '1' }).firstChild as HTMLButtonElement
+        screen.getByRole('gridcell', { name: '1' })
+          .firstChild as HTMLButtonElement
       );
 
-      expect(getByTestId('choose-a-date-text-field-input')).toHaveDisplayValue(
-        /01\//
-      );
+      expect(
+        screen.getByTestId('choose-a-date-text-field-input')
+      ).toHaveDisplayValue(/01\//);
     });
   });
 
@@ -172,7 +217,7 @@ describe('<DatePicker /> component', () => {
     };
 
     it('should have default value', () => {
-      const { getByTestId } = render(
+      render(
         <ProvidedDatePicker
           initialValue={{
             from: new Date(2025, 1, 12),
@@ -183,15 +228,81 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      const input = getByTestId(
+      const input = screen.getByTestId(
         'choose-a-date-text-field-input'
       ) as HTMLInputElement;
 
       expect(input.value).toBe('02/12/2025 - 02/12/2025');
     });
 
+    it('should show error if min date changed', () => {
+      const { rerender } = render(
+        <ProvidedDatePicker
+          initialValue={{
+            from: new Date(2025, 1, 12),
+            to: new Date(2025, 1, 12),
+          }}
+          label='Choose a date'
+          mode='range'
+        />
+      );
+
+      expect(
+        screen.queryByText('Please choose a date on or after 01/01/2026.')
+      ).toBeNull();
+
+      rerender(
+        <ProvidedDatePicker
+          initialValue={{
+            from: new Date(2025, 1, 12),
+            to: new Date(2025, 1, 13),
+          }}
+          label='Choose a date'
+          min='01/01/2026'
+          mode='range'
+        />
+      );
+
+      expect(
+        screen.getByText('Please choose a date on or after 01/01/2026.')
+      ).toBeVisible();
+    });
+
+    it('should show error if max date changed', () => {
+      const { rerender } = render(
+        <ProvidedDatePicker
+          initialValue={{
+            from: new Date(2025, 1, 12),
+            to: new Date(2025, 1, 12),
+          }}
+          label='Choose a date'
+          mode='range'
+        />
+      );
+
+      expect(
+        screen.queryByText('Please choose a date on or before 01/01/2025.')
+      ).toBeNull();
+
+      rerender(
+        <ProvidedDatePicker
+          initialValue={{
+            from: new Date(2024, 1, 12),
+            to: new Date(2025, 3, 12),
+          }}
+          label='Choose a date'
+          max='01/01/2025'
+          mode='range'
+        />
+      );
+
+      expect(
+        screen.getByText('Please choose a date on or before 01/01/2025.')
+      ).toBeVisible();
+    });
+
     it('should show error if date is higher than max', () => {
-      const { getByTestId, getByText } = render(
+      render(
         <ProvidedDatePicker
           label='Choose a date'
           max='2024-01-12'
@@ -199,17 +310,17 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2022-05/05/2026' },
       });
 
       expect(
-        getByText('Please choose a date on or before 01/12/2024.')
+        screen.getByText('Please choose a date on or before 01/12/2024.')
       ).toBeVisible();
     });
 
     it('should show error if date is lower than min', () => {
-      const { getByTestId, getByText } = render(
+      render(
         <ProvidedDatePicker
           label='Choose a date'
           min='2024-01-12'
@@ -217,82 +328,74 @@ describe('<DatePicker /> component', () => {
         />
       );
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2018-05/05/2026' },
       });
 
       expect(
-        getByText('Please choose a date on or after 01/12/2024.')
+        screen.getByText('Please choose a date on or after 01/12/2024.')
       ).toBeVisible();
     });
 
     it('should show error if date is invalid', () => {
-      const { getByTestId, getByText } = render(
-        <ProvidedDatePicker label='Choose a date' mode='range' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05.05.2018-' },
       });
 
-      expect(getByText('Invalid date format.')).toBeVisible();
+      expect(screen.getByText('Invalid date format.')).toBeVisible();
     });
 
     it('should show error if from date is than to date', () => {
-      const { getByTestId, getByText } = render(
-        <ProvidedDatePicker label='Choose a date' mode='range' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2023-05/05/2022' },
       });
 
-      expect(getByText('Please choose a correct range.')).toBeVisible();
+      expect(screen.getByText('Please choose a correct range.')).toBeVisible();
     });
 
     it('should show range selected', () => {
-      const { getByTestId, getByRole } = render(
-        <ProvidedDatePicker label='Choose a date' mode='range' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
 
-      fireEvent.change(getByTestId('choose-a-date-text-field-input'), {
+      fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/12/2025-05/14/2025' },
       });
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
       expect(
-        getByRole('gridcell', {
+        screen.getByRole('gridcell', {
           name: '12',
         })
       ).toHaveAttribute('aria-selected', 'true');
       expect(
-        getByRole('gridcell', {
+        screen.getByRole('gridcell', {
           name: '13',
         })
       ).toHaveAttribute('aria-selected', 'true');
       expect(
-        getByRole('gridcell', {
+        screen.getByRole('gridcell', {
           name: '14',
         })
       ).toHaveAttribute('aria-selected', 'true');
     });
 
     it('should select date and appear on input', () => {
-      const { getByTestId } = render(
-        <ProvidedDatePicker label='Choose a date' mode='range' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
       clickFirstToThirdDayRange();
 
-      expect(getByTestId('calendar')).not.toBeVisible();
+      expect(screen.getByTestId('calendar')).not.toBeVisible();
 
-      const input = getByTestId(
+      const input = screen.getByTestId(
         'choose-a-date-text-field-input'
       ) as HTMLInputElement;
       expect(input.value).toContain('01');
@@ -301,7 +404,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should change range after having default values', () => {
-      const { getByTestId } = render(
+      render(
         <ProvidedDatePicker
           initialValue={{
             from: new Date(2025, 8, 12),
@@ -312,19 +415,22 @@ describe('<DatePicker /> component', () => {
         />
       );
       expect(
-        (getByTestId('choose-a-date-text-field-input') as HTMLInputElement)
-          .value
+        (
+          screen.getByTestId(
+            'choose-a-date-text-field-input'
+          ) as HTMLInputElement
+        ).value
       ).toBe('09/12/2025 - 09/12/2025');
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
       clickFirstToThirdDayRange();
 
-      expect(getByTestId('calendar')).not.toBeVisible();
+      expect(screen.getByTestId('calendar')).not.toBeVisible();
 
-      const input = getByTestId(
+      const input = screen.getByTestId(
         'choose-a-date-text-field-input'
       ) as HTMLInputElement;
       expect(input.value).toContain('01');
@@ -335,41 +441,35 @@ describe('<DatePicker /> component', () => {
 
   describe('keyboard interaction', () => {
     it('should open calendar after icon enter click', async () => {
-      const { getByTestId } = render(
-        <ProvidedDatePicker label='Choose a date' mode='single' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-      fireEvent.keyDown(getByTestId('extra-suffix'), {
+      fireEvent.keyDown(screen.getByTestId('extra-suffix'), {
         key: 'Enter',
         code: 'Enter',
       });
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
     });
 
     it('should close calendar after escape click', async () => {
-      const { getByTestId } = render(
-        <ProvidedDatePicker label='Choose a date' mode='single' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
       fireEvent.keyDown(document, { key: 'Escape', code: 'Escape' });
 
-      expect(getByTestId('calendar')).not.toBeVisible();
+      expect(screen.getByTestId('calendar')).not.toBeVisible();
     });
 
     it('should select a date after enter click', async () => {
       const user = userEvent.setup();
-      const { getByTestId } = render(
-        <ProvidedDatePicker label='Choose a date' mode='single' />
-      );
+      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
 
-      fireEvent.click(getByTestId('extra-suffix'));
+      fireEvent.click(screen.getByTestId('extra-suffix'));
 
-      expect(getByTestId('calendar')).toBeVisible();
+      expect(screen.getByTestId('calendar')).toBeVisible();
 
       (
         await screen.findByRole('button', {
@@ -379,10 +479,10 @@ describe('<DatePicker /> component', () => {
 
       await user.keyboard('{Enter}');
 
-      expect(getByTestId('calendar')).not.toBeVisible();
-      expect(getByTestId('choose-a-date-text-field-input')).toHaveDisplayValue(
-        /15\//
-      );
+      expect(screen.getByTestId('calendar')).not.toBeVisible();
+      expect(
+        screen.getByTestId('choose-a-date-text-field-input')
+      ).toHaveDisplayValue(/15\//);
     });
   });
 });
