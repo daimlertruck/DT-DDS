@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-text-area",
-  "version": "1.0.0-beta.66",
+  "version": "1.0.0-beta.67",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,7 +20,7 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-box": "1.0.0-beta.55",
+    "@dt-dds/react-box": "1.0.0-beta.56",
     "@dt-dds/react-core": "1.0.0-beta.51",
     "@dt-dds/react-label-field": "1.0.0-beta.52",
     "@dt-dds/react-typography": "1.0.0-beta.42",

@@ -1,5 +1,37 @@
 # @dt-ui/react
 
+## 1.0.0-beta.255
+
+### Minor Changes
+
+- feat: make select onChange optional
+- feat: enable custom value label on Select
+
+### Patch Changes
+
+- style: add width 100% to select
+- fix: add optional chaining to isDisabled item
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-select@1.0.0-beta.68
+  - @dt-dds/react-box@1.0.0-beta.56
+  - @dt-dds/react-dropdown@1.0.0-beta.77
+  - @dt-dds/react-radio@1.0.0-beta.72
+  - @dt-dds/react-spinner@1.0.0-beta.90
+  - @dt-dds/react-tabs@1.0.0-beta.85
+  - @dt-dds/react-text-area@1.0.0-beta.67
+  - @dt-dds/react-date-picker@1.0.0-beta.78
+  - @dt-dds/react-button@1.0.0-beta.85
+  - @dt-dds/react-modal@1.0.0-beta.85
+  - @dt-dds/react-text-field@1.0.0-beta.95
+  - @dt-dds/react-empty-state@1.0.0-beta.105
+  - @dt-dds/react-link@1.0.0-beta.62
+  - @dt-dds/react-message@1.0.0-beta.101
+  - @dt-dds/react-toast@1.0.0-beta.102
+
 ## 1.0.0-beta.254
 
 ### Minor Changes

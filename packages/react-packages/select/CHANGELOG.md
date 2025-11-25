@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.68
+
+### Minor Changes
+
+- feat: make select onChange optional
+- feat: enable custom value label on Select
+
+### Patch Changes
+
+- style: add width 100% to select
+- fix: add optional chaining to isDisabled item
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.56
+  - @dt-dds/react-dropdown@1.0.0-beta.77
+
 ## 1.0.0-beta.67
 
 ### Patch Changes
