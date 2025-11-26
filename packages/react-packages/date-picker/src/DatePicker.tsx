@@ -2,7 +2,6 @@ import { Dropdown } from '@dt-dds/react-dropdown';
 import { Icon } from '@dt-dds/react-icon';
 import { TextField } from '@dt-dds/react-text-field';
 import { format, isValid, parse } from 'date-fns';
-import { FocusTrap } from 'focus-trap-react';
 import React, {
   useCallback,
   useEffect,
@@ -258,12 +257,6 @@ export const DatePicker = ({
 
   const handleClick = () => {
     setIsDatePickerVisible(false);
-    setTimeout(() => {
-      const input = anchorRef.current?.querySelector(
-        'input'
-      ) as HTMLInputElement | null;
-      input?.focus();
-    }, 10);
   };
 
   useEffect(() => {
@@ -379,47 +372,37 @@ export const DatePicker = ({
         {...rest}
       />
 
-      <FocusTrap
-        active={isDatePickerVisible}
-        focusTrapOptions={{
-          fallbackFocus: () => document.body,
-          escapeDeactivates: true,
-          onDeactivate: () => setIsDatePickerVisible(false),
-          allowOutsideClick: true,
+      <Dropdown
+        anchorRef={anchorRef}
+        dataTestId='calendar'
+        isOpen={isDatePickerVisible}
+        matchWidth={false}
+        onClose={() => setIsDatePickerVisible(false)}
+        style={{
+          padding: 0,
+          border: 0,
+          width: 'fit-content',
+          maxWidth: 'fit-content',
         }}
       >
-        <Dropdown
-          anchorRef={anchorRef}
-          dataTestId='calendar'
-          isOpen={isDatePickerVisible}
-          matchWidth={false}
-          onClose={() => setIsDatePickerVisible(false)}
-          style={{
-            padding: 0,
-            border: 0,
-            width: 'fit-content',
-            maxWidth: 'fit-content',
-          }}
-        >
-          {isSingleMode ? (
-            <DatePickerStyled
-              {...sharedProps}
-              mode='single'
-              onSelect={handleSingleDaySelected}
-              required
-              selected={selectedDate as Date}
-            />
-          ) : (
-            <DatePickerStyled
-              {...sharedProps}
-              mode='range'
-              onSelect={handleRangeSelected}
-              required
-              selected={selectedDate as DateRange}
-            />
-          )}
-        </Dropdown>
-      </FocusTrap>
+        {isSingleMode ? (
+          <DatePickerStyled
+            {...sharedProps}
+            mode='single'
+            onSelect={handleSingleDaySelected}
+            required
+            selected={selectedDate as Date}
+          />
+        ) : (
+          <DatePickerStyled
+            {...sharedProps}
+            mode='range'
+            onSelect={handleRangeSelected}
+            required
+            selected={selectedDate as DateRange}
+          />
+        )}
+      </Dropdown>
     </>
   );
 };

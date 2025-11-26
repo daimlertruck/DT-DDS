@@ -9,6 +9,7 @@ exports[`<DropdownOption />  should have correct styles 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
+  display: block;
   color: #252525;
   padding: 12px 16px;
   list-style: none;
@@ -34,6 +35,11 @@ exports[`<DropdownOption />  should have correct styles 1`] = `
   cursor: pointer;
 }
 
+.emotion-0:not([aria-disabled="true"]):focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: -2px;
+}
+
 .emotion-0[aria-disabled="true"] {
   color: #a9a9a9;
   cursor: not-allowed;
@@ -49,6 +55,8 @@ exports[`<DropdownOption />  should have correct styles 1`] = `
     class="emotion-0 emotion-1"
     data-highlighted="false"
     data-testid="dropdown-option"
+    role="option"
+    tabindex="0"
   >
     Hello dropdown
   </li>

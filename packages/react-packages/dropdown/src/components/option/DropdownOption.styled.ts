@@ -3,9 +3,10 @@ import styled from '@emotion/styled';
 export const DropdownOptionStyled = styled.li`
   ${({ theme }) => `
     ${theme.fontStyles.bodyMdRegular};
-    
+
+    display: block;
     color: ${theme.palette.content.default};
-    padding: ${theme.spacing.spacing_40} ${theme.spacing.spacing_50};
+    padding: ${theme.spacing.spacing_40} ${theme.spacing.spacing_50};   
     list-style: none;
     text-overflow: ellipsis;
     overflow-x: hidden;
@@ -19,6 +20,11 @@ export const DropdownOptionStyled = styled.li`
       &:hover, &[data-highlighted="true"] {
         background: ${theme.palette.accent.light};
         cursor: pointer;
+      }
+
+      &:focus-visible {
+        outline: 2px solid ${theme.palette.primary.default};
+        outline-offset: -2px; 
       }
     }
 
