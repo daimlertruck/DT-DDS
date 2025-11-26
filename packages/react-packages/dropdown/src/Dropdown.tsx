@@ -77,8 +77,9 @@ export const Dropdown = Object.assign(
           role='menu'
           style={{ ...floatingStyle, ...style }}
           {...rest}
-          aria-hidden={!isOpen}
-          onMouseDown={(e) => e.preventDefault()}
+          {...(!isFocusable && {
+            onMouseDown: (e) => e.preventDefault(),
+          })}
         >
           {children}
         </DropdownStyled>
@@ -97,6 +98,7 @@ export const Dropdown = Object.assign(
                 onDeactivate: () => {
                   onClose?.();
                 },
+                tabbableOptions: { displayCheck: 'none' },
               }}
             >
               {dropdownNode}
