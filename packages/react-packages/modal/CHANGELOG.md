@@ -1,5 +1,21 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.87
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- fix(icon-button): add missing @dt-dds/react-icon devDependency
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-backdrop@1.0.0-beta.54
+  - @dt-dds/react-core@1.0.0-beta.52
+  - @dt-dds/react-icon@1.0.0-beta.55
+  - @dt-dds/react-icon-button@1.0.0-beta.21
+  - @dt-dds/react-spinner@1.0.0-beta.92
+  - @dt-dds/react-typography@1.0.0-beta.43
+  - @dt-dds/themes@1.0.0-beta.10
+
 ## 1.0.0-beta.86
 
 ### Patch Changes

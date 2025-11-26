@@ -1,5 +1,16 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.74
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.52
+  - @dt-dds/themes@1.0.0-beta.10
+  - @dt-dds/react-box@1.0.0-beta.58
+
 ## 1.0.0-beta.73
 
 ### Patch Changes

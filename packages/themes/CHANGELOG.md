@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.10
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+
 ## 1.0.0-beta.9
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.21
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- fix(icon-button): add missing @dt-dds/react-icon devDependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.52
+  - @dt-dds/themes@1.0.0-beta.10
+
 ## 1.0.0-beta.20
 
 ### Minor Changes

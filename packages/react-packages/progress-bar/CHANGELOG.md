@@ -1,5 +1,17 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- fix(icon-button): add missing @dt-dds/react-icon devDependency
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.55
+  - @dt-dds/react-typography@1.0.0-beta.43
+  - @dt-dds/themes@1.0.0-beta.10
+
 ## 1.0.0-beta.47
 
 ### Minor Changes

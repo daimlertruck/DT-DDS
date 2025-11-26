@@ -1,5 +1,20 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.87
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- fix(icon-button): add missing @dt-dds/react-icon devDependency
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.52
+  - @dt-dds/react-icon@1.0.0-beta.55
+  - @dt-dds/react-icon-button@1.0.0-beta.21
+  - @dt-dds/themes@1.0.0-beta.10
+  - @dt-dds/react-box@1.0.0-beta.58
+
 ## 1.0.0-beta.86
 
 ### Patch Changes

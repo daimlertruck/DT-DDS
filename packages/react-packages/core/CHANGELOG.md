@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.52
+
+### Patch Changes
+
+- fix(config): update ESLint, TS, and Storybook config
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.10
+
 ## 1.0.0-beta.51
 
 ### Minor Changes
