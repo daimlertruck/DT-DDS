@@ -1,6 +1,7 @@
 import { withProviders } from '@dt-dds/react-core';
 import { render, screen } from '@testing-library/react';
-import { RefObject } from 'react';
+import userEvent from '@testing-library/user-event';
+import { RefObject, useRef, useState } from 'react';
 
 import { Dropdown as DropdownRaw } from './Dropdown';
 
@@ -26,6 +27,7 @@ jest.mock('@dt-dds/react-core', () => {
 });
 
 const Dropdown = withProviders(DropdownRaw);
+const DropdownOption = withProviders(DropdownRaw.Option);
 
 const dropdownTestId = 'dropdown';
 
@@ -88,5 +90,51 @@ describe('<Dropdown /> ', () => {
     const dropdown = screen.getByTestId(dropdownTestId);
 
     expect(dropdown).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  test('should navigate dropdown options', async () => {
+    const user = userEvent.setup();
+
+    const TestComponent = () => {
+      const anchorRef = useRef<HTMLButtonElement>(null);
+      const [isOpen, setIsOpen] = useState(false);
+      return (
+        <>
+          <button
+            onClick={() => setIsOpen((prev) => !prev)}
+            ref={anchorRef}
+            type='button'
+          >
+            Open Menu
+          </button>
+
+          <Dropdown
+            anchorRef={anchorRef}
+            isOpen={isOpen}
+            onClose={() => setIsOpen(false)}
+          >
+            <DropdownOption>Option1</DropdownOption>
+            <DropdownOption>Option2</DropdownOption>
+          </Dropdown>
+        </>
+      );
+    };
+
+    render(<TestComponent />);
+
+    const trigger = screen.getByRole('button', { name: 'Open Menu' });
+    const dropdownOptions = screen.getAllByTestId('dropdown-option');
+
+    trigger.focus();
+
+    await user.tab();
+
+    expect(dropdownOptions[0]).toHaveFocus();
+    expect(dropdownOptions[1]).not.toHaveFocus();
+
+    await user.tab();
+
+    expect(dropdownOptions[0]).not.toHaveFocus();
+    expect(dropdownOptions[1]).toHaveFocus();
   });
 });

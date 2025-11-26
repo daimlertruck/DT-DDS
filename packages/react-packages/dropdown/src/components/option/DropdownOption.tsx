@@ -1,17 +1,33 @@
 import { BaseProps } from '@dt-dds/react-core';
-import React, { forwardRef, MouseEvent } from 'react';
+import {
+  ComponentPropsWithoutRef,
+  ElementType,
+  ForwardedRef,
+  forwardRef,
+  MouseEvent,
+  ReactElement,
+  Ref,
+} from 'react';
 
 import { DropdownOptionStyled } from './DropdownOption.styled';
-export interface DropdownOptionProps
-  extends BaseProps,
-    React.LiHTMLAttributes<HTMLLIElement> {
+
+type DropdownOptionBaseProps = BaseProps & {
   isDisabled?: boolean;
   isSelected?: boolean;
   isHighlighted?: boolean;
   isMulti?: boolean;
-}
+};
 
-export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
+type DropdownOptionProps<E extends ElementType = 'li'> =
+  DropdownOptionBaseProps & {
+    as?: E;
+  } & ComponentPropsWithoutRef<E>;
+
+type DropdownOptionComponent = <E extends ElementType = 'li'>(
+  props: DropdownOptionProps<E> & { ref?: Ref<Element> }
+) => ReactElement | null;
+
+export const DropdownOption = forwardRef(
   (
     {
       dataTestId,
@@ -22,8 +38,8 @@ export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
       isHighlighted = false,
       onClick,
       ...rest
-    },
-    ref
+    }: DropdownOptionProps<ElementType>,
+    ref: ForwardedRef<HTMLLIElement>
   ) => {
     const testId = dataTestId ?? 'dropdown-option';
 
@@ -39,7 +55,9 @@ export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
 
     return (
       <DropdownOptionStyled
-        {...rest}
+        role='option'
+        tabIndex={isDisabled ? -1 : 0}
+        {...(rest as ComponentPropsWithoutRef<'li'>)}
         aria-disabled={isDisabled}
         aria-selected={isSelected}
         data-highlighted={isHighlighted}
@@ -52,4 +70,4 @@ export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
       </DropdownOptionStyled>
     );
   }
-);
+) as DropdownOptionComponent;

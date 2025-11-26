@@ -1,4 +1,5 @@
 import { BaseProps, Portal, useClickOutside } from '@dt-dds/react-core';
+import { FocusTrap } from 'focus-trap-react';
 import { forwardRef, RefObject, useCallback, useRef } from 'react';
 
 import { DropdownOption } from './components';
@@ -16,6 +17,7 @@ export interface DropdownProps extends BaseProps {
   onClose?: () => void;
   as?: keyof JSX.IntrinsicElements;
   placement?: DropdownPlacement;
+  isFocusable?: boolean;
 }
 
 export const Dropdown = Object.assign(
@@ -33,6 +35,7 @@ export const Dropdown = Object.assign(
         as = 'div',
         onClose,
         placement,
+        isFocusable = true,
         ...rest
       },
       forwardedRef
@@ -64,20 +67,41 @@ export const Dropdown = Object.assign(
         handler: () => onClose?.(),
       });
 
+      const dropdownNode = (
+        <DropdownStyled
+          as={as}
+          data-testid={dataTestId}
+          ref={setMenuRef}
+          role='menu'
+          style={{ ...floatingStyle, ...style }}
+          {...rest}
+          aria-hidden={!isOpen}
+          onMouseDown={(e) => e.preventDefault()}
+        >
+          {children}
+        </DropdownStyled>
+      );
+
       return (
         <Portal isOpen>
-          <DropdownStyled
-            as={as}
-            data-testid={dataTestId}
-            ref={setMenuRef}
-            role='menu'
-            style={{ ...floatingStyle, ...style }}
-            {...rest}
-            aria-hidden={!isOpen}
-            onMouseDown={(e) => e.preventDefault()}
-          >
-            {children}
-          </DropdownStyled>
+          {isFocusable ? (
+            <FocusTrap
+              active={isOpen}
+              focusTrapOptions={{
+                initialFocus: () => localMenuRef?.current ?? false,
+                fallbackFocus: () => document.body,
+                escapeDeactivates: true,
+                allowOutsideClick: true,
+                onDeactivate: () => {
+                  onClose?.();
+                },
+              }}
+            >
+              {dropdownNode}
+            </FocusTrap>
+          ) : (
+            dropdownNode
+          )}
         </Portal>
       );
     }

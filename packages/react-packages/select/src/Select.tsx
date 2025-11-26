@@ -302,6 +302,7 @@ export const Select = ({
           anchorRef={anchorRef}
           aria-multiselectable={isMulti}
           as='ul'
+          isFocusable={false}
           isOpen={isOpen}
           onClose={closeMenu}
         >
