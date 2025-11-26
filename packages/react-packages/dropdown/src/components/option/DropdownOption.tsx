@@ -3,30 +3,25 @@ import {
   ElementType,
   ForwardedRef,
   forwardRef,
+  KeyboardEvent,
   MouseEvent,
-  ReactElement,
-  Ref,
 } from 'react';
 
 import { BaseProps } from '@dt-dds/react-core';
 
 import { DropdownOptionStyled } from './DropdownOption.styled';
 
-type DropdownOptionBaseProps = BaseProps & {
+export type DropdownOptionBaseProps = BaseProps & {
   isDisabled?: boolean;
   isSelected?: boolean;
   isHighlighted?: boolean;
   isMulti?: boolean;
 };
 
-type DropdownOptionProps<E extends ElementType = 'li'> =
+export type DropdownOptionProps<E extends ElementType = 'li'> =
   DropdownOptionBaseProps & {
     as?: E;
   } & ComponentPropsWithoutRef<E>;
-
-type DropdownOptionComponent = <E extends ElementType = 'li'>(
-  props: DropdownOptionProps<E> & { ref?: Ref<Element> }
-) => ReactElement | null;
 
 export const DropdownOption = forwardRef(
   (
@@ -54,15 +49,24 @@ export const DropdownOption = forwardRef(
       onClick?.(e);
     };
 
+    const handleKeyDown = (e: KeyboardEvent<HTMLLIElement>) => {
+      if (e.code === 'Enter' || e.code === 'Space') {
+        e.preventDefault();
+        onClick?.(e);
+      }
+    };
+
     return (
       <DropdownOptionStyled
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
         tabIndex={isDisabled ? -1 : 0}
+        {...(!isSelected && { role: 'menuitem' })}
         {...(rest as ComponentPropsWithoutRef<'li'>)}
         aria-disabled={isDisabled}
         aria-selected={isSelected}
         data-highlighted={isHighlighted}
         data-testid={testId}
-        onClick={handleClick}
         ref={ref}
         style={style}
       >
@@ -70,4 +74,4 @@ export const DropdownOption = forwardRef(
       </DropdownOptionStyled>
     );
   }
-) as DropdownOptionComponent;
+);
