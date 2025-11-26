@@ -133,6 +133,59 @@ export const Select = ({
       : selectedItems[0]?.label;
   };
 
+  const selectStateReducer = (
+    state: Downshift.UseSelectState<SelectOptionValue>,
+    actionAndChanges: Downshift.UseSelectStateChangeOptions<SelectOptionValue>
+  ) => {
+    const { changes, type } = actionAndChanges;
+
+    switch (type) {
+      case useSelect.stateChangeTypes.ToggleButtonBlur:
+        return {
+          ...changes,
+          isOpen: false,
+          selectedItem: state.selectedItem,
+          highlightedIndex: state.highlightedIndex,
+        };
+      case useSelect.stateChangeTypes.ItemClick:
+      case useSelect.stateChangeTypes.ToggleButtonKeyDownEnter:
+      case useSelect.stateChangeTypes.ToggleButtonKeyDownSpaceButton:
+        return isMulti
+          ? {
+              ...changes,
+              isOpen: true,
+              highlightedIndex: state.highlightedIndex,
+            }
+          : changes;
+      default:
+        return changes;
+    }
+  };
+
+  const handleSelectedItemChange = ({
+    selectedItem,
+  }: {
+    selectedItem: SelectOptionValue | null;
+  }) => {
+    if (!selectedItem) {
+      return;
+    }
+
+    if (isMulti) {
+      const currentValue = Array.isArray(value) ? value : [];
+      const isSelectedItem = selectedOptionsSet.has(selectedItem.value);
+
+      const nextValue = isSelectedItem
+        ? currentValue.filter((v) => v !== selectedItem.value)
+        : [...currentValue, selectedItem.value];
+
+      onChange?.(nextValue);
+      return;
+    }
+
+    onChange?.(selectedItem.value);
+  };
+
   const {
     isOpen,
     closeMenu,
@@ -148,54 +201,19 @@ export const Select = ({
     },
     defaultHighlightedIndex: isMulti || !selectedItems?.[0] ? 0 : undefined,
     selectedItem: !isMulti ? selectedItems?.[0] ?? null : null,
-    stateReducer(state, actionAndChanges) {
-      const { changes, type } = actionAndChanges;
-
-      switch (type) {
-        case useSelect.stateChangeTypes.ToggleButtonBlur:
-          return {
-            ...changes,
-            isOpen: false,
-            selectedItem: state.selectedItem,
-            highlightedIndex: state.highlightedIndex,
-          };
-        case useSelect.stateChangeTypes.ItemClick:
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownEnter:
-        case useSelect.stateChangeTypes.ToggleButtonKeyDownSpaceButton:
-          return isMulti
-            ? {
-                ...changes,
-                isOpen: true,
-                highlightedIndex: state.highlightedIndex,
-              }
-            : changes;
-        default:
-          return changes;
-      }
-    },
-
-    onSelectedItemChange: ({ selectedItem }) => {
-      if (!selectedItem) {
-        return;
-      }
-
-      if (isMulti) {
-        const currentValue = Array.isArray(value) ? value : [];
-        const isSelectedItem = selectedOptionsSet.has(selectedItem.value);
-
-        const nextValue = isSelectedItem
-          ? currentValue.filter((v) => v !== selectedItem.value)
-          : [...currentValue, selectedItem.value];
-
-        onChange?.(nextValue);
-        return;
-      }
-
-      onChange?.(selectedItem.value);
-    },
+    stateReducer: selectStateReducer,
+    onSelectedItemChange: handleSelectedItemChange,
   });
 
   const disabled = isDisabled || options.length === 1;
+
+  const helperTextColor = (isDisabled: boolean, hasError: boolean) => {
+    if (isDisabled) {
+      return 'content.light';
+    }
+
+    return hasError ? 'error.default' : 'content.medium';
+  };
 
   const toggleProps = getToggleButtonProps({
     disabled,
@@ -281,13 +299,7 @@ export const Select = ({
 
         {helperText ? (
           <TypographyHelperTextStyled
-            color={
-              isDisabled
-                ? 'content.light'
-                : hasError
-                ? 'error.default'
-                : 'content.medium'
-            }
+            color={helperTextColor(!!isDisabled, hasError)}
             dataTestId='select-helper-text'
             element='span'
             fontStyles='bodySmRegular'

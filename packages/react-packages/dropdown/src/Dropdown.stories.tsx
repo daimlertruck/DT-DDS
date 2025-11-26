@@ -19,6 +19,47 @@ type CustomDropdownProps = Omit<
   options: Option[];
 };
 
+const DropdownDemo = ({
+  options,
+  as = 'ul',
+  matchWidth = true,
+  offsetX,
+  offsetY,
+  ...rest
+}: CustomDropdownProps) => {
+  const anchorRef = useRef<HTMLButtonElement | null>(null);
+  const [open, setOpen] = useState<boolean>(false);
+
+  return (
+    <div style={{ height: 320, padding: 16 }}>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        ref={anchorRef}
+        style={{ marginBottom: 12 }}
+        type='button'
+      >
+        {open ? 'Close' : 'Open'} dropdown
+      </button>
+      <Dropdown
+        {...rest}
+        anchorRef={anchorRef}
+        as={as}
+        isOpen={open}
+        matchWidth={matchWidth}
+        offsetX={offsetX}
+        offsetY={offsetY}
+        onClose={() => setOpen(false)}
+      >
+        {options.map((option) => (
+          <Dropdown.Option isDisabled={option.disabled} key={option.value}>
+            {option.text ?? option.value}
+          </Dropdown.Option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+
 const meta: Meta<CustomDropdownProps> = {
   title: 'Data Display/Dropdown',
   component: Dropdown,
@@ -41,47 +82,7 @@ const meta: Meta<CustomDropdownProps> = {
       control: { type: 'number' },
     },
   },
-  render: ({
-    options,
-    as = 'ul',
-    matchWidth = true,
-    offsetX,
-    offsetY,
-    ...rest
-  }) => {
-    const anchorRef = useRef<HTMLButtonElement | null>(null);
-    const [open, setOpen] = useState<boolean>(false);
-
-    return (
-      <div style={{ height: 320, padding: 16 }}>
-        <button
-          onClick={() => setOpen((v) => !v)}
-          ref={anchorRef}
-          style={{ marginBottom: 12 }}
-          type='button'
-        >
-          {open ? 'Close' : 'Open'} dropdown
-        </button>
-
-        <Dropdown
-          {...rest}
-          anchorRef={anchorRef}
-          as={as}
-          isOpen={open}
-          matchWidth={matchWidth}
-          offsetX={offsetX}
-          offsetY={offsetY}
-          onClose={() => setOpen(false)}
-        >
-          {options.map((option) => (
-            <Dropdown.Option isDisabled={option.disabled} key={option.value}>
-              {option.text ?? option.value}
-            </Dropdown.Option>
-          ))}
-        </Dropdown>
-      </div>
-    );
-  },
+  render: (args) => <DropdownDemo {...args} />,
 };
 
 export default meta;

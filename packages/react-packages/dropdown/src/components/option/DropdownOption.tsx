@@ -55,7 +55,6 @@ export const DropdownOption = forwardRef(
 
     return (
       <DropdownOptionStyled
-        role='option'
         tabIndex={isDisabled ? -1 : 0}
         {...(rest as ComponentPropsWithoutRef<'li'>)}
         aria-disabled={isDisabled}
