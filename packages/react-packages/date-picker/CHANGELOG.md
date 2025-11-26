@@ -1,5 +1,20 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.79
+
+### Minor Changes
+
+- feat: add accessibility to Dropdown
+
+### Patch Changes
+
+- fix: update date picker
+- refactor: fix sonar issues on Dropdown and Select
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.78
+  - @dt-dds/react-text-field@1.0.0-beta.96
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

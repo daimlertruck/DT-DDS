@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.69
+
+### Minor Changes
+
+- feat: add accessibility to Dropdown
+
+### Patch Changes
+
+- refactor: fix sonar issues on Dropdown and Select
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-dropdown@1.0.0-beta.78
+  - @dt-dds/react-box@1.0.0-beta.57
+
 ## 1.0.0-beta.68
 
 ### Minor Changes
