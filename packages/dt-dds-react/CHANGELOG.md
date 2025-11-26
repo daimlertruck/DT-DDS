@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.258
+
+### Minor Changes
+
+- feat: enable DropdownOption external customizations
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-dropdown@1.0.0-beta.80
+  - @dt-dds/react-date-picker@1.0.0-beta.81
+  - @dt-dds/react-select@1.0.0-beta.71
+  - @dt-dds/react-box@1.0.0-beta.59
+  - @dt-dds/react-radio@1.0.0-beta.75
+  - @dt-dds/react-spinner@1.0.0-beta.93
+  - @dt-dds/react-tabs@1.0.0-beta.88
+  - @dt-dds/react-text-area@1.0.0-beta.70
+  - @dt-dds/react-button@1.0.0-beta.88
+  - @dt-dds/react-modal@1.0.0-beta.88
+  - @dt-dds/react-text-field@1.0.0-beta.98
+  - @dt-dds/react-empty-state@1.0.0-beta.108
+  - @dt-dds/react-link@1.0.0-beta.65
+  - @dt-dds/react-message@1.0.0-beta.104
+  - @dt-dds/react-toast@1.0.0-beta.105
+
 ## 1.0.0-beta.257
 
 ### Patch Changes

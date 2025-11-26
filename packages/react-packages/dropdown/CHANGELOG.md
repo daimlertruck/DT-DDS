@@ -1,5 +1,16 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.80
+
+### Minor Changes
+
+- feat: enable DropdownOption external customizations
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.59
+
 ## 1.0.0-beta.79
 
 ### Patch Changes
