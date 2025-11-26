@@ -5,6 +5,7 @@ import { ComponentProps, useState } from 'react';
 import { SelectFill, SelectVariant } from './types';
 
 import { Select, SelectOptionValue } from '.';
+
 const options = [
   { value: 'opt1', label: 'Option 1', isDisabled: false },
   { value: 'opt2', label: 'Option 2', isDisabled: false },
@@ -83,7 +84,32 @@ export const Default: Story = {
   },
 };
 
-export const Multi: StoryObj<CustomSelectProps> = {
+const MultiSelectDemo = ({
+  options,
+  value: initialValue,
+  ...props
+}: CustomSelectProps) => {
+  const [value, setValue] = useState<string[]>(
+    (initialValue as string[]) || []
+  );
+
+  return (
+    <Select {...props} isMulti onChange={setValue} value={value}>
+      {options.map((opt, index) => (
+        <Select.Option
+          index={index}
+          isDisabled={opt.isDisabled}
+          key={opt.value}
+          value={opt.value}
+        >
+          {opt.label}
+        </Select.Option>
+      ))}
+    </Select>
+  );
+};
+
+export const Multi: Meta<CustomSelectProps> = {
   args: {
     options,
     label: 'My multi label',
@@ -97,22 +123,5 @@ export const Multi: StoryObj<CustomSelectProps> = {
     scale: 'compact',
     value: [],
   },
-  render: ({ options, ...props }: CustomSelectProps) => {
-    const [value, setValue] = useState<string[]>(props.value as string[]);
-
-    return (
-      <Select {...props} isMulti onChange={setValue} value={value}>
-        {options.map((opt, index) => (
-          <Select.Option
-            index={index}
-            isDisabled={opt.isDisabled}
-            key={opt.value}
-            value={opt.value}
-          >
-            {opt.label}
-          </Select.Option>
-        ))}
-      </Select>
-    );
-  },
+  render: (args) => <MultiSelectDemo {...args} />,
 };

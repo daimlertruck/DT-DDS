@@ -40,21 +40,25 @@ export const TypographyValueStyled = styled(Typography, {
   text-overflow: ellipsis;
   white-space: nowrap;
 
-  ${({ theme, scale, isFloatingLabel }) => `
-    ${
-      isFloatingLabel
-        ? `padding-top: ${
-            scale === 'standard'
-              ? theme.spacing.spacing_50
-              : theme.spacing.spacing_40
-          };`
-        : `padding-block: ${
-            scale === 'standard'
-              ? theme.spacing.spacing_30
-              : theme.spacing.spacing_20
-          };`
-    }
-  `}
+  ${({ theme, scale, isFloatingLabel }) => {
+    const paddingTop =
+      scale === 'standard'
+        ? theme.spacing.spacing_50
+        : theme.spacing.spacing_40;
+
+    const paddingBlock =
+      scale === 'standard'
+        ? theme.spacing.spacing_30
+        : theme.spacing.spacing_20;
+
+    return `
+      ${
+        isFloatingLabel
+          ? `padding-top: ${paddingTop};`
+          : `padding-block: ${paddingBlock};`
+      }
+  `;
+  }}
 `;
 
 export const SelectContainerStyled = styled.div<SelectContainerStyledProps>`

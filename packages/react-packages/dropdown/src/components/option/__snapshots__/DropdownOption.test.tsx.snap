@@ -55,7 +55,6 @@ exports[`<DropdownOption />  should have correct styles 1`] = `
     class="emotion-0 emotion-1"
     data-highlighted="false"
     data-testid="dropdown-option"
-    role="option"
     tabindex="0"
   >
     Hello dropdown
