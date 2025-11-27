@@ -1,5 +1,18 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-tooltip@1.0.0-beta.62
+  - @dt-dds/react-typography@1.0.0-beta.44
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.89
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-backdrop@1.0.0-beta.55
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-icon-button@1.0.0-beta.22
+  - @dt-dds/react-spinner@1.0.0-beta.94
+  - @dt-dds/react-typography@1.0.0-beta.44
+
 ## 1.0.0-beta.88
 
 ### Patch Changes

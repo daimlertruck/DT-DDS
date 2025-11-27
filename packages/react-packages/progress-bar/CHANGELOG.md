@@ -1,5 +1,17 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.49
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-typography@1.0.0-beta.44
+
 ## 1.0.0-beta.48
 
 ### Patch Changes

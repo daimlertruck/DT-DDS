@@ -1,5 +1,16 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.52
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+
 ## 1.0.0-beta.51
 
 ### Patch Changes

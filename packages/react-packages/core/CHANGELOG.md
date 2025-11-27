@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.53
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
 ## 1.0.0-beta.52
 
 ### Patch Changes

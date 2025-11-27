@@ -1,5 +1,16 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.44
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+
 ## 1.0.0-beta.43
 
 ### Patch Changes

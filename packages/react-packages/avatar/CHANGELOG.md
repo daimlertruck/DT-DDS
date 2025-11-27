@@ -1,5 +1,18 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.65
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-tooltip@1.0.0-beta.62
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

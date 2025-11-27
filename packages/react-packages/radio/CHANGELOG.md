@@ -1,5 +1,18 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.76
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-box@1.0.0-beta.60
+
 ## 1.0.0-beta.75
 
 ### Patch Changes

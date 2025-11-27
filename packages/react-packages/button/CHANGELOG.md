@@ -1,5 +1,17 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.89
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-spinner@1.0.0-beta.94
+
 ## 1.0.0-beta.88
 
 ### Patch Changes

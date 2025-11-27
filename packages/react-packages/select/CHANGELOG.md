@@ -1,5 +1,25 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.72
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-checkbox@1.0.0-beta.54
+  - @dt-dds/react-dropdown@1.0.0-beta.81
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-label-field@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.22
+  - @dt-dds/react-tooltip@1.0.0-beta.62
+  - @dt-dds/react-typography@1.0.0-beta.44
+  - @dt-dds/react-box@1.0.0-beta.60
+
 ## 1.0.0-beta.71
 
 ### Minor Changes

@@ -1,5 +1,22 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.99
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-label-field@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.22
+  - @dt-dds/react-tooltip@1.0.0-beta.62
+  - @dt-dds/react-spinner@1.0.0-beta.94
+  - @dt-dds/react-typography@1.0.0-beta.44
+
 ## 1.0.0-beta.98
 
 ### Patch Changes

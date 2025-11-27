@@ -1,5 +1,20 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.89
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-icon-button@1.0.0-beta.22
+  - @dt-dds/react-box@1.0.0-beta.60
+
 ## 1.0.0-beta.88
 
 ### Patch Changes

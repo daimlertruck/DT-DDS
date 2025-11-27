@@ -1,5 +1,17 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.54
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-icon@1.0.0-beta.56
+
 ## 1.0.0-beta.53
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.94
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-typography@1.0.0-beta.44
+  - @dt-dds/react-box@1.0.0-beta.60
+
 ## 1.0.0-beta.93
 
 ### Patch Changes

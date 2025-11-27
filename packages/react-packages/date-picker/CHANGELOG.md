@@ -1,5 +1,19 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.82
+
+### Minor Changes
+
+- feat(core): share responsive HOC from core package
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.53
+  - @dt-dds/react-dropdown@1.0.0-beta.81
+  - @dt-dds/react-icon@1.0.0-beta.56
+  - @dt-dds/react-text-field@1.0.0-beta.99
+
 ## 1.0.0-beta.81
 
 ### Minor Changes
