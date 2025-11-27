@@ -1,8 +1,9 @@
 import { ReactNode, HTMLAttributes } from 'react';
 
+import { withResponsive, type ResponsiveProps } from '@dt-dds/react-core';
+
 import { LogoContainer } from './Logo.styled';
 import { useAppHeaderContext } from '../../context';
-import { withResponsive, ResponsiveProps } from '../../utils/responsive';
 
 export interface LogoProps
   extends ResponsiveProps,

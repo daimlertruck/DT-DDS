@@ -4,7 +4,7 @@ import { withProviders, useMedia } from '@dt-dds/react-core';
 
 import { AppHeader } from './index';
 
-import type { ResponsiveProps } from './utils/responsive';
+import type { ResponsiveProps } from '@dt-dds/react-core';
 
 jest.mock('@dt-dds/react-core', () => {
   const actual = jest.requireActual('@dt-dds/react-core');

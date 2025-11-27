@@ -1,8 +1,9 @@
 import { ReactNode, HTMLAttributes } from 'react';
 
+import { withResponsive, type ResponsiveProps } from '@dt-dds/react-core';
+
 import { NavigationStyled } from './Navigation.styled';
 import { useAppHeaderContext } from '../../context';
-import { withResponsive, ResponsiveProps } from '../../utils/responsive';
 
 export type NavPosition = 'center' | 'left' | 'right';
 
