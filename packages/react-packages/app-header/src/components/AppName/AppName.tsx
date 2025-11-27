@@ -1,10 +1,10 @@
 import { ReactNode, HTMLAttributes } from 'react';
 
+import { withResponsive, type ResponsiveProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
 
 import { AppNameContainer } from './AppName.styled';
 import { useAppHeaderContext } from '../../context';
-import { withResponsive, ResponsiveProps } from '../../utils/responsive';
 
 export interface AppNameProps
   extends ResponsiveProps,

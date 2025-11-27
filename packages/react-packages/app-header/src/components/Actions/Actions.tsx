@@ -2,11 +2,14 @@ import { ReactNode, HTMLAttributes } from 'react';
 
 import { useTheme } from '@emotion/react';
 
-import { useMedia } from '@dt-dds/react-core';
+import {
+  useMedia,
+  withResponsive,
+  type ResponsiveProps,
+} from '@dt-dds/react-core';
 
 import { ActionsContainer } from './Actions.styled';
 import { useAppHeaderContext } from '../../context';
-import { withResponsive, ResponsiveProps } from '../../utils/responsive';
 
 export interface ActionsProps
   extends ResponsiveProps,
