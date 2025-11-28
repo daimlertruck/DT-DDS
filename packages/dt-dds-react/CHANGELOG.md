@@ -1,5 +1,33 @@
 # @dt-ui/react
 
+## 1.0.0-beta.260
+
+### Minor Changes
+
+- feat: enable HTML attrs on select props
+
+### Patch Changes
+
+- refactor: simplify dropdown types
+- Updated dependencies
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.73
+  - @dt-dds/react-box@1.0.0-beta.61
+  - @dt-dds/react-dropdown@1.0.0-beta.82
+  - @dt-dds/react-date-picker@1.0.0-beta.83
+  - @dt-dds/react-radio@1.0.0-beta.77
+  - @dt-dds/react-spinner@1.0.0-beta.95
+  - @dt-dds/react-tabs@1.0.0-beta.90
+  - @dt-dds/react-text-area@1.0.0-beta.72
+  - @dt-dds/react-button@1.0.0-beta.90
+  - @dt-dds/react-modal@1.0.0-beta.90
+  - @dt-dds/react-text-field@1.0.0-beta.100
+  - @dt-dds/react-empty-state@1.0.0-beta.110
+  - @dt-dds/react-link@1.0.0-beta.67
+  - @dt-dds/react-message@1.0.0-beta.106
+  - @dt-dds/react-toast@1.0.0-beta.107
+
 ## 1.0.0-beta.259
 
 ### Minor Changes

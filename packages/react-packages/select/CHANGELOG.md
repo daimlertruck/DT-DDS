@@ -1,5 +1,19 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.73
+
+### Minor Changes
+
+- feat: enable HTML attrs on select props
+
+### Patch Changes
+
+- refactor: simplify dropdown types
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.61
+  - @dt-dds/react-dropdown@1.0.0-beta.82
+
 ## 1.0.0-beta.72
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.82
+
+### Patch Changes
+
+- refactor: simplify dropdown types
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.61
+
 ## 1.0.0-beta.81
 
 ### Minor Changes

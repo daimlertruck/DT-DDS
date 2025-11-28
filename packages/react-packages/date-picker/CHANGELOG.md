@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.83
+
+### Patch Changes
+
+- refactor: simplify dropdown types
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.82
+  - @dt-dds/react-text-field@1.0.0-beta.100
+
 ## 1.0.0-beta.82
 
 ### Minor Changes
