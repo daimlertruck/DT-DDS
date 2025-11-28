@@ -1,4 +1,10 @@
-import { forwardRef, RefObject, useCallback, useRef } from 'react';
+import {
+  forwardRef,
+  HTMLAttributes,
+  RefObject,
+  useCallback,
+  useRef,
+} from 'react';
 
 import { FocusTrap } from 'focus-trap-react';
 
@@ -10,7 +16,7 @@ import { useFloatingPosition } from './hooks';
 import { DropdownPlacement } from './types';
 import { setRef } from './utils';
 
-export interface DropdownProps extends BaseProps {
+export interface DropdownProps extends BaseProps, HTMLAttributes<HTMLElement> {
   isOpen?: boolean;
   anchorRef: RefObject<HTMLElement | null>;
   matchWidth?: boolean;

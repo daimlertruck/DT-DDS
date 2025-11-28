@@ -40,20 +40,21 @@ export const App = () => {
 | `onClose`    | `() => void`                     | —          | Called when a click is detected outside the dropdown/anchor.                |
 | `as`         | `keyof JSX.IntrinsicElements`    | `"div"`    | Underlying HTML element (e.g., `"ul"` for list semantics).                  |
 | `placement`  | `DropdownPlacement`              | `bottom`   | Dropdown position.                                                          |
+| `...rest`    | `HTMLAttributes`                 | —          | Standard HTML attributes.                                                   |
 
 ### Dropdown.Option
 
-| Property        | Type                                                  | Default           | Description                                                             |
-| --------------- | ----------------------------------------------------- | ----------------- | ----------------------------------------------------------------------- |
-| `style`         | `React.CSSProperties`                                 | —                 | Inline styles for the option element.                                   |
-| `children`      | `ReactNode`                                           | —                 | Content of the option.                                                  |
-| `dataTestId`    | `string`                                              | `dropdown-option` | Customizable test identifier for the option element.                    |
-| `isDisabled`    | `boolean`                                             | `false`           | When `true`, sets `aria-disabled` and blocks click/keyboard activation. |
-| `isSelected`    | `boolean`                                             | `false`           | Reflects selection state via `aria-selected` and styling.               |
-| `isHighlighted` | `boolean`                                             | `false`           | Adds `data-highlighted="true"` for hover/active row styling.            |
-| `isMulti`       | `boolean`                                             | `false`           | Optional styling hint for multi-select contexts (no selection logic).   |
-| `onClick`       | `(event: MouseEvent<HTMLLIElement>) => void`          | —                 | Click handler.                                                          |
-| `...rest`       | `React.LiHTMLAttributes<HTMLLIElement>` & `BaseProps` | —                 | Additional LI attributes (e.g., `role="option"`, `tabIndex`, etc.).     |
+| Property        | Type                                         | Default           | Description                                                             |
+| --------------- | -------------------------------------------- | ----------------- | ----------------------------------------------------------------------- |
+| `style`         | `React.CSSProperties`                        | —                 | Inline styles for the option element.                                   |
+| `children`      | `ReactNode`                                  | —                 | Content of the option.                                                  |
+| `dataTestId`    | `string`                                     | `dropdown-option` | Customizable test identifier for the option element.                    |
+| `isDisabled`    | `boolean`                                    | `false`           | When `true`, sets `aria-disabled` and blocks click/keyboard activation. |
+| `isSelected`    | `boolean`                                    | `false`           | Reflects selection state via `aria-selected` and styling.               |
+| `isHighlighted` | `boolean`                                    | `false`           | Adds `data-highlighted="true"` for hover/active row styling.            |
+| `isMulti`       | `boolean`                                    | `false`           | Optional styling hint for multi-select contexts (no selection logic).   |
+| `onClick`       | `(event: MouseEvent<HTMLLIElement>) => void` | —                 | Click handler.                                                          |
+| `...rest`       | `HTMLAttributes`                             | —                 | Standard HTML attributes.                                               |
 
 ## Stack
 
