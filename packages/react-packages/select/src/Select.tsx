@@ -6,6 +6,7 @@ import {
   KeyboardEvent,
   useRef,
   ReactNode,
+  HTMLAttributes,
 } from 'react';
 
 import * as Downshift from 'downshift';
@@ -29,7 +30,9 @@ import {
 } from './Select.styled';
 import { SelectOptionValue, SelectFill, SelectVariant } from './types';
 
-interface BaseSelectProps extends BaseProps {
+interface BaseSelectProps
+  extends BaseProps,
+    Omit<HTMLAttributes<HTMLElement>, 'onChange'> {
   helperText?: ReactNode;
   hasError?: boolean;
   label: string;
@@ -79,6 +82,9 @@ export const Select = ({
   scale = 'standard',
   placeholder = '',
   onChange,
+  onBlur,
+  onFocus,
+  ...rest
 }: SelectProps) => {
   const anchorRef = useRef<HTMLDivElement | null>(null);
 
@@ -221,6 +227,8 @@ export const Select = ({
     disabled,
     tabIndex: disabled ? -1 : 0,
     ref: anchorRef,
+    onBlur,
+    onFocus,
   });
 
   return (
@@ -235,6 +243,7 @@ export const Select = ({
       <Box
         dataTestId={dataTestId ?? 'select'}
         style={{ alignItems: 'start', gap: 4, width: '100%', ...style }}
+        {...rest}
       >
         <SelectStyled>
           <LabelField
