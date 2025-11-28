@@ -46,6 +46,8 @@ const SingleSelect = ({
   label = 'Select label',
   scale = 'standard',
   placeholder,
+  onBlur,
+  onFocus,
 }: Partial<SelectProps>) => {
   const [value, setValue] = useState(initialValue as string);
 
@@ -62,7 +64,9 @@ const SingleSelect = ({
       isMulti={false}
       isRequired={isRequired}
       label={label}
+      onBlur={onBlur}
       onChange={handleChange}
+      onFocus={onFocus}
       placeholder={placeholder}
       scale={scale}
       value={value}
@@ -129,7 +133,10 @@ const MultiSelect = ({
   );
 };
 
-const renderSelect = (props: Partial<SelectProps> = {}) => {
+const renderSelect = (
+  props: Partial<SelectProps> = {},
+  isOpen: boolean = true
+) => {
   const { container } = render(<SingleSelect {...props} />);
 
   const select = () => screen.getByRole('combobox');
@@ -139,12 +146,15 @@ const renderSelect = (props: Partial<SelectProps> = {}) => {
   const helper = () => screen.getByTestId('select-helper-text');
   const value = () => within(select()).getByTestId('select-value');
 
-  fireEvent.click(select());
+  isOpen && fireEvent.click(select());
 
   return { container, select, menu, options, label, helper, value };
 };
 
-const renderMultiSelect = (props: Partial<SelectProps> = {}) => {
+const renderMultiSelect = (
+  props: Partial<SelectProps> = {},
+  isOpen: boolean = true
+) => {
   const { container } = render(<MultiSelect {...props} />);
 
   const select = () => screen.getByRole('combobox');
@@ -155,7 +165,7 @@ const renderMultiSelect = (props: Partial<SelectProps> = {}) => {
   const value = () => within(select()).getByTestId('select-value');
   const clear = () => within(select()).queryByTestId('clear-selection');
 
-  fireEvent.click(select());
+  isOpen && fireEvent.click(select());
 
   return { container, select, menu, options, label, helper, value, clear };
 };
@@ -277,11 +287,30 @@ describe('<Select />', () => {
       expect(label()).toHaveAttribute('id', labelledBy);
     });
 
+    test('should emit onBlur and onFocus when interacting with toggle', async () => {
+      const onBlurMock = jest.fn();
+      const onFocusMock = jest.fn();
+      const { select } = renderSelect(
+        {
+          label: 'select',
+          onBlur: onBlurMock,
+          onFocus: onFocusMock,
+        },
+        false
+      );
+
+      expect(onFocusMock).toHaveBeenCalledTimes(0);
+      fireEvent.focus(select());
+      expect(onFocusMock).toHaveBeenCalledTimes(1);
+
+      expect(onBlurMock).toHaveBeenCalledTimes(0);
+      fireEvent.blur(select());
+      expect(onBlurMock).toHaveBeenCalledTimes(1);
+    });
+
     describe('Keyboard navigation', () => {
       test('ArrowDown opens the menu and Enter selects the second option', async () => {
-        const { select, value } = renderSelect();
-
-        fireEvent.click(select());
+        const { select, value } = renderSelect({}, false);
 
         select().focus();
         expect(select()).toHaveAttribute('aria-expanded', 'false');
@@ -300,9 +329,7 @@ describe('<Select />', () => {
       });
 
       test('Space toggles and Enter selects; Tab closes without changing selection', async () => {
-        const { select, value } = renderSelect();
-
-        fireEvent.click(select());
+        const { select, value } = renderSelect({}, false);
 
         select().focus();
         expect(select()).toHaveAttribute('aria-expanded', 'false');
@@ -364,7 +391,7 @@ describe('<Select />', () => {
     });
 
     test('should clear selections when clicking clear all button', () => {
-      const { options, value, clear } = renderMultiSelect();
+      const { options, value, clear } = renderMultiSelect({}, false);
 
       fireEvent.click(options()[0]);
       fireEvent.click(options()[1]);
@@ -378,9 +405,7 @@ describe('<Select />', () => {
 
     describe('Keyboard navigation', () => {
       test('ArrowDown opens the menu and Enter selects options without closing the menu', async () => {
-        const { select, value } = renderMultiSelect();
-
-        fireEvent.click(select());
+        const { select, value } = renderMultiSelect({}, false);
 
         select().focus();
 
@@ -413,9 +438,7 @@ describe('<Select />', () => {
       });
 
       test('Enter clears the selection when clicking clear button', async () => {
-        const { select, value } = renderMultiSelect();
-
-        fireEvent.click(select());
+        const { select, value } = renderMultiSelect({}, false);
 
         select().focus();
 

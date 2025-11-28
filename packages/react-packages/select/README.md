@@ -62,6 +62,7 @@ export const App = () => {
 | `style`           | `React.CSSProperties`      | —                           | Inline styles applied to the Select wrapper.                                        |
 | `dataTestId`      | `string`                   | `'select'`                  | Test identifier applied to the component container.                                 |
 | `children`        | `ReactNode`                | —                           | Typically a list of `Select.Option`.                                                |
+| `...rest`         | `HTMLAttributes`           | —                           | Standard HTML attributes.                                                           |
 
 ### Select.Option
 
