@@ -6,34 +6,43 @@ They typically appear in forms and modal windows.
 ## DatePicker Usage
 
 ```jsx
-import { DatePicker } from '@dt-dds/react';
+import { useState } from 'react';
+import { DatePicker, format } from '@dt-dds/react';
 
 export const App = () => {
-  return <DatePicker label='Choose a date' />;
+  const [value setValue] = useState<string>('');
+
+  return
+    <DatePicker
+      label='Choose a date'
+      value={value}
+      onChange={(event) => setValue(event.target.value)}
+      onDateSelected={(date) => setValue(format(date))} />; // format date to specific locale
 };
 ```
 
 ## Properties
 
-| Property        | Type                | Default  | Description                                                                                                                                                                                                                                 |
-| --------------- | ------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`      | `ReactNode`         | -        | Child components to be rendered inside input field.                                                                                                                                                                                         |
-| `label`         | `string`            | -        | A label to help users understand the scope of the date picker.                                                                                                                                                                              |
-| `initialValue`  | `Date \| DateRange` | -        | Sets the initial value of the date picker.                                                                                                                                                                                                  |
-| `message`       | `string \| null`    | -        | The message to be displayed below the input field.                                                                                                                                                                                          |
-| `hasError`      | `boolean`           | -        | Set error state for text field.                                                                                                                                                                                                             |
-| `isDisabled`    | `boolean`           | -        | Determines the disabled state of input field.                                                                                                                                                                                               |
-| `name`          | `string`            | -        | The attribute to specify the name of the date picker.                                                                                                                                                                                       |
-| `required`      | `boolean`           | -        | Set error state with a message: "This field is required."                                                                                                                                                                                   |
-| `style`         | `CSSProperties`     | -        | Add css style directly to the text field.                                                                                                                                                                                                   |
-| `onDateChanged` | `function`          | -        | The triggered function when the date change.                                                                                                                                                                                                |
-| `min`           | `string`            | -        | Specifies the minimum date                                                                                                                                                                                                                  |
-| `max`           | `string`            | -        | Specifies the maximum date                                                                                                                                                                                                                  |
-| `weekStartDay`  | `number`            | `0`      | Specifies the day that the weeks starts on the calendar                                                                                                                                                                                     |
-| `isMultiMonth`  | `boolean`           | `false`  | Specifies the number of months appearing when calendar is shown                                                                                                                                                                             |
-| `mode`          | `single \| range`   | `single` | Specifies the mode of selection of teh date picker                                                                                                                                                                                          |
-| `locale`        | `Locale`            | `enUs`   | Specifies the localization settings used by the date picker, including language, date formatting rules, month names, weekday names, and cultural display preferences. This controls how dates are parsed, formatted, and shown to the user. |
-| `...rest`       | `TextFieldProps`    | -        | [TextField props](/packages/react-packages/text-field/README.md#properties)                                                                                                                                                                 |
+| Property         | Type              | Default  | Description                                                                                                                                                                                                                                |
+| ---------------- | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `children`       | `ReactNode`       | -        | Child components to be rendered inside input field.                                                                                                                                                                                        |
+| `label`          | `string`          | -        | A label to help users understand the scope of the date picker.                                                                                                                                                                             |
+| `value`          | `string`          | -        | Input value of the date picker. Needs to follow the format of the specific locale                                                                                                                                                          |
+| `message`        | `string \| null`  | -        | The message to be displayed below the input field.                                                                                                                                                                                         |
+| `hasError`       | `boolean`         | -        | Set error state for text field.                                                                                                                                                                                                            |
+| `isDisabled`     | `boolean`         | -        | Determines the disabled state of input field.                                                                                                                                                                                              |
+| `name`           | `string`          | -        | The attribute to specify the name of the date picker.                                                                                                                                                                                      |
+| `required`       | `boolean`         | -        | Set error state with a message: "This field is required."                                                                                                                                                                                  |
+| `style`          | `CSSProperties`   | -        | Add css style directly to the text field.                                                                                                                                                                                                  |
+| `onDateSelected` | `function`        | -        | The triggered function when the the user clicked on a day in calendar or when the date is valid when typing.                                                                                                                               |
+| `min`            | `string`          | -        | Specifies the minimum date                                                                                                                                                                                                                 |
+| `max`            | `string`          | -        | Specifies the maximum date                                                                                                                                                                                                                 |
+| `weekStartDay`   | `number`          | `0`      | Specifies the day that the weeks starts on the calendar                                                                                                                                                                                    |
+| `isMultiMonth`   | `boolean`         | `false`  | Specifies the number of months appearing when calendar is shown                                                                                                                                                                            |
+| `mode`           | `single \| range` | `single` | Specifies the mode of selection of teh date picker                                                                                                                                                                                         |
+| `onError`        | `function`        | -        | Triggered when an error is found.                                                                                                                                                                                                          |
+| `locale`         | `Locale`          | `enUs`   | Specifies the localization settings used by the date picker, including language, date formatting rules, month names, weekday names, and cultural display preferences. This controls how dates are parsed, formatted and shown to the user. |
+| `...rest`        | `TextFieldProps`  | -        | [TextField props](/packages/react-packages/text-field/README.md#properties)                                                                                                                                                                |
 
 ## Stack
 
@@ -48,6 +57,7 @@ export const App = () => {
 - [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
 - [Yarn](https://yarnpkg.com/) from managing packages
 - [React Day Picker](https://daypicker.dev/) for calendar
+- [date-fns](https://date-fns.org/) for date manipulation
 
 ## Commands
 
