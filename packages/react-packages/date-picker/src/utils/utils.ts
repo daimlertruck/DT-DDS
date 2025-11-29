@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { format, isMatch } from 'date-fns';
 import { Locale } from 'react-day-picker';
 
 import { DATE_FORMAT } from '../constants';
@@ -52,4 +52,8 @@ export const validateDateInRange = ({
     };
 
   return { valid: true };
+};
+
+export const isDateMatchingFormat = (value: string, dateFormat: string) => {
+  return isMatch(value, dateFormat) && value.length === dateFormat.length;
 };
