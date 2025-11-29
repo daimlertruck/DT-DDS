@@ -1,15 +1,68 @@
+import { useState } from 'react';
+
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { DateRange } from 'react-day-picker';
 
 import { withProviders } from '@dt-dds/react-core';
 
 import { DatePicker } from './DatePicker';
+import { DatePickerProps } from './types';
+
+import { enUS, format } from '.';
+
+const ProvidedDatePicker = withProviders(DatePicker);
+
+const SingleDatePicker = (props: Partial<DatePickerProps>) => {
+  const [value, setValue] = useState<string>(props.value ?? '');
+
+  return (
+    <ProvidedDatePicker
+      {...props}
+      label='Choose a date'
+      mode='single'
+      onChange={(event) => setValue(event.target.value)}
+      onDateSelected={(date) =>
+        setValue(
+          format(date as Date, 'P', {
+            locale: enUS,
+          })
+        )
+      }
+      value={value}
+    />
+  );
+};
+
+const RangeDatePicker = (props: Partial<DatePickerProps>) => {
+  const [value, setValue] = useState<string>(props.value ?? '');
+
+  return (
+    <ProvidedDatePicker
+      {...props}
+      label='Choose a date'
+      mode='range'
+      onChange={(event) => setValue(event.target.value)}
+      onDateSelected={(date) => {
+        const range = date as DateRange;
+        const { from, to } = range;
+
+        if (!from) return;
+
+        const formattedFrom = format(from, 'P', { locale: enUS });
+        const formattedTo = to ? format(to, 'P', { locale: enUS }) : '';
+
+        const dateValue = `${formattedFrom} - ${formattedTo}`;
+        setValue(dateValue);
+      }}
+      value={value}
+    />
+  );
+};
 
 describe('<DatePicker /> component', () => {
-  const ProvidedDatePicker = withProviders(DatePicker);
-
   it('should open calendar after icon click', async () => {
-    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+    render(<SingleDatePicker />);
 
     fireEvent.click(screen.getByTestId('extra-suffix'));
 
@@ -17,7 +70,7 @@ describe('<DatePicker /> component', () => {
   });
 
   it('should close calendar after input click', async () => {
-    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+    render(<SingleDatePicker />);
 
     fireEvent.click(screen.getByTestId('extra-suffix'));
 
@@ -29,7 +82,7 @@ describe('<DatePicker /> component', () => {
   });
 
   it('should close calendar after click outside', async () => {
-    render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+    render(<SingleDatePicker />);
 
     fireEvent.click(screen.getByTestId('extra-suffix'));
 
@@ -43,13 +96,7 @@ describe('<DatePicker /> component', () => {
 
   describe('Single Mode', () => {
     it('should have default value', () => {
-      render(
-        <ProvidedDatePicker
-          initialValue={new Date(2025, 1, 12)}
-          label='Choose a date'
-          mode='single'
-        />
-      );
+      render(<SingleDatePicker value='02/12/2025' />);
 
       expect(
         screen.getByTestId('choose-a-date-text-field-input')
@@ -57,26 +104,13 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if min date changed', () => {
-      const { rerender } = render(
-        <ProvidedDatePicker
-          initialValue={new Date(2025, 1, 12)}
-          label='Choose a date'
-          mode='single'
-        />
-      );
+      const { rerender } = render(<SingleDatePicker value='01/01/2025' />);
 
       expect(
         screen.queryByText('Please choose a date on or after 01/01/2026.')
       ).toBeNull();
 
-      rerender(
-        <ProvidedDatePicker
-          initialValue={new Date(2025, 1, 12)}
-          label='Choose a date'
-          min='01/01/2026'
-          mode='single'
-        />
-      );
+      rerender(<SingleDatePicker min='01/01/2026' />);
 
       expect(
         screen.getByText('Please choose a date on or after 01/01/2026.')
@@ -84,26 +118,13 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if max date changed', () => {
-      const { rerender } = render(
-        <ProvidedDatePicker
-          initialValue={new Date(2025, 1, 12)}
-          label='Choose a date'
-          mode='single'
-        />
-      );
+      const { rerender } = render(<SingleDatePicker value='01/02/2023' />);
 
       expect(
         screen.queryByText('Please choose a date on or before 01/01/2023.')
       ).toBeNull();
 
-      rerender(
-        <ProvidedDatePicker
-          initialValue={new Date(2025, 1, 12)}
-          label='Choose a date'
-          max='01/01/2023'
-          mode='single'
-        />
-      );
+      rerender(<SingleDatePicker max='01/01/2023' />);
 
       expect(
         screen.getByText('Please choose a date on or before 01/01/2023.')
@@ -111,13 +132,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is higher than max', () => {
-      render(
-        <ProvidedDatePicker
-          label='Choose a date'
-          max='2024-01-12'
-          mode='single'
-        />
-      );
+      render(<SingleDatePicker max='2024-01-12' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2026' },
@@ -129,13 +144,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is lower than min', () => {
-      render(
-        <ProvidedDatePicker
-          label='Choose a date'
-          min='2024-01-12'
-          mode='single'
-        />
-      );
+      render(<SingleDatePicker min='2024-01-12' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2022' },
@@ -147,13 +156,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is invalid', () => {
-      render(
-        <ProvidedDatePicker
-          label='Choose a date'
-          min='2024-01-12'
-          mode='single'
-        />
-      );
+      render(<SingleDatePicker min='2024-01-12' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05-05.' },
@@ -163,7 +166,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show date selected ', async () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+      render(<SingleDatePicker />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '12/12/2025' },
@@ -181,7 +184,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should select date and appear on input', () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+      render(<SingleDatePicker label='Choose a date' mode='single' />);
 
       fireEvent.click(screen.getByTestId('extra-suffix'));
 
@@ -218,16 +221,7 @@ describe('<DatePicker /> component', () => {
     };
 
     it('should have default value', () => {
-      render(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2025, 1, 12),
-            to: new Date(2025, 1, 12),
-          }}
-          label='Choose a date'
-          mode='range'
-        />
-      );
+      render(<RangeDatePicker value='02/12/2025 - 02/12/2025' />);
 
       const input = screen.getByTestId(
         'choose-a-date-text-field-input'
@@ -238,14 +232,7 @@ describe('<DatePicker /> component', () => {
 
     it('should show error if min date changed', () => {
       const { rerender } = render(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2025, 1, 12),
-            to: new Date(2025, 1, 12),
-          }}
-          label='Choose a date'
-          mode='range'
-        />
+        <RangeDatePicker value='02/12/2025 - 02/12/2025' />
       );
 
       expect(
@@ -253,15 +240,7 @@ describe('<DatePicker /> component', () => {
       ).toBeNull();
 
       rerender(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2025, 1, 12),
-            to: new Date(2025, 1, 13),
-          }}
-          label='Choose a date'
-          min='01/01/2026'
-          mode='range'
-        />
+        <RangeDatePicker min='01/01/2026' value='02/12/2025 - 02/13/2025' />
       );
 
       expect(
@@ -271,14 +250,7 @@ describe('<DatePicker /> component', () => {
 
     it('should show error if max date changed', () => {
       const { rerender } = render(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2025, 1, 12),
-            to: new Date(2025, 1, 12),
-          }}
-          label='Choose a date'
-          mode='range'
-        />
+        <RangeDatePicker value='02/12/2025 - 02/12/2025' />
       );
 
       expect(
@@ -286,15 +258,7 @@ describe('<DatePicker /> component', () => {
       ).toBeNull();
 
       rerender(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2024, 1, 12),
-            to: new Date(2025, 3, 12),
-          }}
-          label='Choose a date'
-          max='01/01/2025'
-          mode='range'
-        />
+        <RangeDatePicker max='01/01/2025' value='01/12/2024 - 04/12/2025' />
       );
 
       expect(
@@ -303,13 +267,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is higher than max', () => {
-      render(
-        <ProvidedDatePicker
-          label='Choose a date'
-          max='2024-01-12'
-          mode='range'
-        />
-      );
+      render(<RangeDatePicker max='2024-01-12' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2022-05/05/2026' },
@@ -321,13 +279,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is lower than min', () => {
-      render(
-        <ProvidedDatePicker
-          label='Choose a date'
-          min='2024-01-12'
-          mode='range'
-        />
-      );
+      render(<RangeDatePicker min='2024-01-12' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2018-05/05/2026' },
@@ -339,7 +291,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if date is invalid', () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
+      render(<RangeDatePicker label='Choose a date' mode='range' />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05.05.2018-' },
@@ -349,7 +301,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show error if from date is than to date', () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
+      render(<RangeDatePicker />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/05/2023-05/05/2022' },
@@ -359,7 +311,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should show range selected', () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
+      render(<RangeDatePicker />);
 
       fireEvent.change(screen.getByTestId('choose-a-date-text-field-input'), {
         target: { value: '05/12/2025-05/14/2025' },
@@ -386,7 +338,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should select date and appear on input', () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='range' />);
+      render(<RangeDatePicker />);
 
       fireEvent.click(screen.getByTestId('extra-suffix'));
 
@@ -405,16 +357,7 @@ describe('<DatePicker /> component', () => {
     });
 
     it('should change range after having default values', () => {
-      render(
-        <ProvidedDatePicker
-          initialValue={{
-            from: new Date(2025, 8, 12),
-            to: new Date(2025, 8, 12),
-          }}
-          label='Choose a date'
-          mode='range'
-        />
-      );
+      render(<RangeDatePicker value='09/12/2025 - 09/12/2025' />);
       expect(
         (
           screen.getByTestId(
@@ -442,33 +385,28 @@ describe('<DatePicker /> component', () => {
 
   describe('keyboard interaction', () => {
     it('should open calendar after icon enter click', async () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+      render(<SingleDatePicker />);
 
-      fireEvent.keyDown(screen.getByTestId('extra-suffix'), {
-        key: 'Enter',
-        code: 'Enter',
-      });
+      await userEvent.click(screen.getByTestId('extra-suffix'));
 
       expect(screen.getByTestId('calendar')).toBeVisible();
     });
 
     it('should close calendar after escape click', async () => {
-      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+      render(<SingleDatePicker />);
 
-      fireEvent.click(screen.getByTestId('extra-suffix'));
-
+      await userEvent.click(screen.getByTestId('extra-suffix'));
       expect(screen.getByTestId('calendar')).toBeVisible();
 
-      fireEvent.keyDown(document, { key: 'Escape', code: 'Escape' });
+      await userEvent.keyboard('{Escape}');
 
       expect(screen.getByTestId('calendar')).not.toBeVisible();
     });
 
     it('should select a date after enter click', async () => {
-      const user = userEvent.setup();
-      render(<ProvidedDatePicker label='Choose a date' mode='single' />);
+      render(<SingleDatePicker />);
 
-      fireEvent.click(screen.getByTestId('extra-suffix'));
+      await userEvent.click(screen.getByTestId('extra-suffix'));
 
       expect(screen.getByTestId('calendar')).toBeVisible();
 
@@ -478,7 +416,7 @@ describe('<DatePicker /> component', () => {
         })
       ).focus();
 
-      await user.keyboard('{Enter}');
+      await userEvent.keyboard('{Enter}');
 
       expect(screen.getByTestId('calendar')).not.toBeVisible();
       expect(

@@ -6,7 +6,7 @@ import React, {
   useState,
 } from 'react';
 
-import { format, isValid, parse } from 'date-fns';
+import { isValid, parse } from 'date-fns';
 import { DateRange, DayPickerProps, Matcher } from 'react-day-picker';
 import { enUS } from 'react-day-picker/locale';
 import 'react-day-picker/style.css';
@@ -24,7 +24,7 @@ import {
 } from './constants';
 import { DatePickerStyled } from './DatePicker.styled';
 import { DatePickerProps } from './types';
-import { validateDateInRange } from './utils';
+import { isDateMatchingFormat, validateDateInRange } from './utils';
 
 export const DatePicker = ({
   max,
@@ -36,7 +36,7 @@ export const DatePicker = ({
   required,
   isDisabled,
   weekStartDay,
-  initialValue,
+  value,
   isMultiMonths,
   onDateSelected,
   locale = enUS,
@@ -55,10 +55,6 @@ export const DatePicker = ({
   const [isDateInvalid, setIsDateInvalid] = useState(false);
 
   const [month, setMonth] = useState(new Date());
-  const [inputValue, setInputValue] = useState<string>('');
-  const [selectedDate, setSelectedDate] = useState<Date | DateRange | null>(
-    null
-  );
 
   const { minDate, maxDate } = useMemo(() => {
     return {
@@ -84,7 +80,7 @@ export const DatePicker = ({
       Chevron,
     },
     disabled: { before: minDate, after: maxDate } as Matcher,
-    locale: locale,
+    locale,
     month,
     navLayout: 'around',
     numberOfMonths: isMultiMonths ? 2 : 1,
@@ -95,30 +91,49 @@ export const DatePicker = ({
     endMonth: maxDate,
   };
 
-  const formatDate = useCallback(
-    (date: Date) =>
-      format(date, DATE_FORMAT, {
-        locale,
-      }),
+  const dryParse = useCallback(
+    (valueToParse: string) => {
+      return parse(valueToParse, DATE_FORMAT, new Date(), { locale });
+    },
     [locale]
   );
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.trim();
-    setInputValue(value);
-    onChange?.(e);
+  const parseValueToDate = () => {
+    if (!value) return null;
 
-    if (!value) {
-      onError?.('');
-      setIsDateInvalid(false);
+    if (isSingleMode) {
+      return dryParse(value);
+    }
+
+    const [from, to] = value.split(RANGE_SEPARATOR).map((s) => s.trim());
+
+    if (!from) return null;
+
+    if (!to) {
+      return { from: dryParse(from) };
+    }
+
+    return {
+      from: dryParse(from),
+      to: dryParse(to),
+    };
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange?.(e);
+  };
+
+  const handleChangeSingleMode = useCallback(() => {
+    const trimmedValue = value.trim();
+
+    if (!isDateMatchingFormat(trimmedValue, dateFormat)) {
+      setMessage(INVALID_FORMAT_MESSAGE);
+      setIsDateInvalid(true);
+      onError?.(INVALID_FORMAT_MESSAGE);
       return;
     }
 
-    isSingleMode ? handleChangeSingleMode(value) : handleChangeRangeMode(value);
-  };
-
-  const handleChangeSingleMode = (value: string) => {
-    const parsedDate = parse(value, DATE_FORMAT, new Date(), { locale });
+    const parsedDate = dryParse(trimmedValue);
 
     if (!isValid(parsedDate)) {
       setMessage(INVALID_FORMAT_MESSAGE);
@@ -141,22 +156,46 @@ export const DatePicker = ({
       return;
     }
 
-    setSelectedDate(parsedDate);
     onDateSelected?.(parsedDate);
     setMonth(parsedDate);
     setIsDateInvalid(false);
     onError?.('');
-  };
+  }, [
+    value,
+    dateFormat,
+    dryParse,
+    locale,
+    minDate,
+    maxDate,
+    onDateSelected,
+    onError,
+  ]);
 
-  const handleChangeRangeMode = (value: string) => {
+  const handleChangeRangeMode = useCallback(() => {
     const [inputFrom, inputTo] = value.split(RANGE_SEPARATOR);
 
-    const parsedFrom =
-      !!inputFrom &&
-      parse(inputFrom.trim(), DATE_FORMAT, new Date(), { locale });
+    if (!inputFrom || !inputTo) {
+      setMessage(INVALID_FORMAT_MESSAGE);
+      setIsDateInvalid(true);
+      onError?.(INVALID_FORMAT_MESSAGE);
+      return;
+    }
 
-    const parsedTo =
-      !!inputTo && parse(inputTo.trim(), DATE_FORMAT, new Date(), { locale });
+    const trimmedTo = inputTo.trim();
+    const trimmedFrom = inputFrom.trim();
+
+    const isFromNotMatching = !isDateMatchingFormat(trimmedFrom, dateFormat);
+    const isToNotMatching = !isDateMatchingFormat(trimmedTo, dateFormat);
+
+    if (isFromNotMatching || isToNotMatching) {
+      setMessage(INVALID_FORMAT_MESSAGE);
+      setIsDateInvalid(true);
+      onError?.(INVALID_FORMAT_MESSAGE);
+      return;
+    }
+
+    const parsedFrom = !!trimmedFrom && dryParse(trimmedFrom);
+    const parsedTo = !!trimmedTo && dryParse(trimmedTo);
 
     if (!isValid(parsedFrom) || !isValid(parsedTo)) {
       setMessage(INVALID_FORMAT_MESSAGE);
@@ -202,19 +241,24 @@ export const DatePicker = ({
 
     const rangeDate = { from: parsedFrom as Date, to: parsedTo as Date };
 
-    setSelectedDate(rangeDate);
     onDateSelected?.(rangeDate);
     setMonth(parsedFrom as Date);
     setIsDateInvalid(false);
     onError?.('');
-  };
+  }, [
+    value,
+    dateFormat,
+    dryParse,
+    locale,
+    minDate,
+    maxDate,
+    onDateSelected,
+    onError,
+  ]);
 
   const handleSingleDaySelected = (date: Date) => {
     setIsDatePickerVisible(false);
-
-    setSelectedDate(date);
     setMonth(date);
-    setInputValue(formatDate(date));
     onDateSelected?.(date);
     setIsDateInvalid(false);
     onError?.('');
@@ -224,31 +268,30 @@ export const DatePicker = ({
     const { to, from } = date;
 
     if (!to || !from) {
-      setInputValue('');
+      return;
+    }
+
+    if (!value) {
+      onDateSelected?.({ from });
       return;
     }
 
     const { from: selectedFrom, to: selectedTo } =
-      (selectedDate as DateRange) ?? {};
-
-    if (!selectedDate || (!selectedFrom && !selectedTo)) {
-      setSelectedDate({ from });
-      return;
-    }
+      parseValueToDate() as DateRange;
 
     if (selectedFrom && selectedTo) {
-      setSelectedDate({
-        from: selectedFrom !== from ? from : to,
+      onDateSelected?.({
+        from: selectedFrom.getTime() !== from.getTime() ? from : to,
       });
       return;
     }
 
     if (selectedFrom && !selectedTo) {
-      setSelectedDate(() => ({
+      onDateSelected?.({
         from,
         to,
-      }));
-      setInputValue(`${formatDate(from)} - ${formatDate(to)}`);
+      });
+
       setIsDatePickerVisible(false);
       onDateSelected?.(date);
       setIsDateInvalid(false);
@@ -268,82 +311,14 @@ export const DatePicker = ({
   }, [setMessage, hasError, messageProp]);
 
   useEffect(() => {
-    if (isSingleMode && initialValue instanceof Date) {
-      setInputValue(formatDate(initialValue));
-      setSelectedDate(initialValue);
-      setMonth(initialValue);
+    if (!value) {
+      onError?.('');
+      setIsDateInvalid(false);
       return;
     }
 
-    const range = initialValue as DateRange;
-
-    if (!!range && !!range.from && !!range.to) {
-      const { from, to } = range;
-
-      setSelectedDate(range);
-      setInputValue(`${formatDate(from)} - ${formatDate(to)}`);
-      setMonth(from);
-    }
-  }, [formatDate, initialValue, isSingleMode, locale]);
-
-  useEffect(() => {
-    if (!selectedDate) return;
-
-    let errorMessage = '';
-
-    if (isSingleMode && selectedDate instanceof Date) {
-      const validation = validateDateInRange({
-        date: selectedDate,
-        locale,
-        minDate,
-        maxDate,
-      });
-
-      if (!validation.valid) {
-        errorMessage = validation.message;
-      }
-    }
-
-    const range = selectedDate as DateRange;
-
-    if (!!range && !!range.from && !!range.to) {
-      const { from, to } = range;
-
-      if (from) {
-        const validation = validateDateInRange({
-          date: from,
-          locale,
-          minDate,
-          maxDate,
-        });
-        if (!validation.valid) {
-          errorMessage = validation.message;
-        }
-      }
-
-      if (to) {
-        const validation = validateDateInRange({
-          date: to,
-          locale,
-          minDate,
-          maxDate,
-        });
-        if (!validation.valid) {
-          errorMessage = validation.message;
-        }
-      }
-    }
-
-    setMessage((prev) => {
-      if (prev !== errorMessage && !!errorMessage) {
-        onError?.(errorMessage);
-        return errorMessage;
-      }
-
-      return prev;
-    });
-    setIsDateInvalid(() => !!errorMessage);
-  }, [minDate, maxDate]);
+    isSingleMode ? handleChangeSingleMode() : handleChangeRangeMode();
+  }, [minDate, maxDate, isSingleMode, value]);
 
   return (
     <>
@@ -355,7 +330,7 @@ export const DatePicker = ({
         }}
         hasError={hasError}
         id={id}
-        initialValue={inputValue}
+        initialValue={value}
         isFloatingLabel={isFloatingLabel}
         isInputFocused={isDatePickerVisible}
         label={label}
@@ -393,7 +368,7 @@ export const DatePicker = ({
             mode='single'
             onSelect={handleSingleDaySelected}
             required
-            selected={selectedDate as Date}
+            selected={parseValueToDate() as Date}
           />
         ) : (
           <DatePickerStyled
@@ -401,7 +376,7 @@ export const DatePicker = ({
             mode='range'
             onSelect={handleRangeSelected}
             required
-            selected={selectedDate as DateRange}
+            selected={parseValueToDate() as DateRange}
           />
         )}
       </Dropdown>

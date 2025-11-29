@@ -1,6 +1,6 @@
 import { enUS } from 'date-fns/locale';
 
-import { validateDateInRange } from './utils';
+import { isDateMatchingFormat, validateDateInRange } from './utils';
 
 describe('validateDateInRange', () => {
   const locale = enUS;
@@ -59,4 +59,18 @@ describe('validateDateInRange', () => {
       );
     }
   });
+});
+
+describe('isDateMatchingFormat', () => {
+  it.each([
+    [true, '12/12/2025', 'dd/MM/yyyy'],
+    [false, '12/12/202', 'dd/MM/yyyy'],
+    [false, '2/2/2025', 'dd/MM/yyyy'],
+    [false, '2025/22/22', 'dd/MM/yyyy'],
+  ])(
+    'should return %s for date "%s" with format "%s"',
+    (expected, date, format) => {
+      expect(isDateMatchingFormat(date, format)).toBe(expected);
+    }
+  );
 });
