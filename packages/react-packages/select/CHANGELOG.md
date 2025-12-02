@@ -1,5 +1,19 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.75
+
+### Minor Changes
+
+- feat: supress downshift ref error
+
+### Patch Changes
+
+- refactor: add anchor props to dropdown option
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-dropdown@1.0.0-beta.84
+  - @dt-dds/react-box@1.0.0-beta.63
+
 ## 1.0.0-beta.74
 
 ### Patch Changes

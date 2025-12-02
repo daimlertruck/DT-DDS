@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-modal",
-  "version": "1.0.0-beta.91",
+  "version": "1.0.0-beta.92",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -24,7 +24,7 @@
     "@dt-dds/react-core": "1.0.0-beta.54",
     "@dt-dds/react-icon": "1.0.0-beta.57",
     "@dt-dds/react-icon-button": "1.0.0-beta.23",
-    "@dt-dds/react-spinner": "1.0.0-beta.96",
+    "@dt-dds/react-spinner": "1.0.0-beta.97",
     "@dt-dds/react-typography": "1.0.0-beta.45",
     "@dt-dds/themes": "1.0.0-beta.10"
   },

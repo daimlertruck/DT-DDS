@@ -1,5 +1,13 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.84
+
+### Patch Changes
+
+- refactor: add anchor props to dropdown option
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.63
+
 ## 1.0.0-beta.83
 
 ### Patch Changes

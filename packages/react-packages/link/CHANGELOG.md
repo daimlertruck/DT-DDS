@@ -1,5 +1,11 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.69
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.92
+
 ## 1.0.0-beta.68
 
 ### Patch Changes

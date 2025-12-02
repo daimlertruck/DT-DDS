@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.85
+
+### Patch Changes
+
+- refactor: add anchor props to dropdown option
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.84
+  - @dt-dds/react-text-field@1.0.0-beta.102
+
 ## 1.0.0-beta.84
 
 ### Patch Changes
