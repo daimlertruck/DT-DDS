@@ -1,10 +1,45 @@
-import { ptBR } from 'react-day-picker/locale';
+import { useState } from 'react';
 
-import { DatePicker } from './DatePicker';
+import { DATE_FORMAT } from './constants';
+import { DatePicker as BaseDatePicker } from './DatePicker';
 import { DatePickerProps } from './types';
+
+import { DateRange, enUS, ptBR, format } from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
+const DatePicker = (props: DatePickerProps) => {
+  const [value, setValue] = useState<string>(props.value ?? '');
+
+  const formatDateToValue = (date: Date | DateRange) => {
+    if (date instanceof Date) {
+      setValue(format(date, DATE_FORMAT, { locale: props.locale ?? enUS }));
+      return;
+    }
+
+    const { from, to } = date;
+
+    if (!from) return;
+
+    const formattedFrom = format(from, DATE_FORMAT, {
+      locale: props.locale ?? enUS,
+    });
+    const formattedTo = to
+      ? format(to, DATE_FORMAT, { locale: props.locale ?? enUS })
+      : '';
+
+    setValue(`${formattedFrom}-${formattedTo}`);
+  };
+
+  return (
+    <BaseDatePicker
+      {...props}
+      onChange={(event) => setValue(event.target.value)}
+      onDateSelected={(date) => formatDateToValue(date)}
+      value={value}
+    />
+  );
+};
 const meta: Meta<DatePickerProps> = {
   title: 'Data Display/DatePicker',
   component: DatePicker,
@@ -22,9 +57,9 @@ const meta: Meta<DatePickerProps> = {
       control: { type: 'radio' },
     },
   },
-  render: ({ ...props }) => (
-    <DatePicker {...props} onDateSelected={(date) => console.log(date)} />
-  ),
+  render: ({ ...props }) => {
+    return <DatePicker {...props} />;
+  },
 };
 
 export default meta;
@@ -49,14 +84,14 @@ export const DefaultValue: StoryObj<DatePickerProps> = {
     isFloatingLabel: false,
     label: 'Default Value',
     mode: 'range',
-    initialValue: { from: new Date(2025, 1, 23), to: new Date(2025, 1, 25) },
+    value: '01/23/2025-01/25/2025',
   },
 };
 
 export const Internationalization: StoryObj<DatePickerProps> = {
   args: {
     isFloatingLabel: false,
-    label: 'Default Value',
+    label: 'Internationalization',
     mode: 'single',
     locale: ptBR,
   },
