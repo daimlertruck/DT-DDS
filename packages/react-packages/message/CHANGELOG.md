@@ -1,5 +1,16 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.107
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-button@1.0.0-beta.91
+  - @dt-dds/react-icon@1.0.0-beta.57
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.106
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.78
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-box@1.0.0-beta.62
+
 ## 1.0.0-beta.77
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-tooltip@1.0.0-beta.63
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.47
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+
 ## 1.0.0-beta.44
 
 ### Minor Changes

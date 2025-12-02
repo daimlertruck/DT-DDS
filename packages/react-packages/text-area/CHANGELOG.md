@@ -1,5 +1,19 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.73
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-icon@1.0.0-beta.57
+  - @dt-dds/react-label-field@1.0.0-beta.55
+  - @dt-dds/react-tooltip@1.0.0-beta.63
+  - @dt-dds/react-typography@1.0.0-beta.45
+  - @dt-dds/react-box@1.0.0-beta.62
+
 ## 1.0.0-beta.72
 
 ### Patch Changes

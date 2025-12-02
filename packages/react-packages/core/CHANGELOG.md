@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.54
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+
 ## 1.0.0-beta.53
 
 ### Minor Changes

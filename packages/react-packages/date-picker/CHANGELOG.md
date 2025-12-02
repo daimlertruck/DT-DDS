@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.84
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-dropdown@1.0.0-beta.83
+  - @dt-dds/react-icon@1.0.0-beta.57
+  - @dt-dds/react-text-field@1.0.0-beta.101
+
 ## 1.0.0-beta.83
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.63
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-icon-button@1.0.0-beta.23
+
 ## 1.0.0-beta.62
 
 ### Minor Changes

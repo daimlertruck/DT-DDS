@@ -1,5 +1,14 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.34
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.33
 
 ### Minor Changes

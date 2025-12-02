@@ -1,5 +1,14 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.57
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.49
 
 ### Minor Changes

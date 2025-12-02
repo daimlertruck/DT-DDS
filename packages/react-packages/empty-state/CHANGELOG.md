@@ -1,5 +1,16 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-button@1.0.0-beta.91
+  - @dt-dds/react-link@1.0.0-beta.68
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.110
 
 ### Patch Changes

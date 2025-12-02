@@ -1,5 +1,16 @@
 # @dt-dds/react-app-header
 
+## 0.1.0-beta.5
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-typography@1.0.0-beta.45
+  - @dt-dds/react-box@1.0.0-beta.62
+
 ## 0.1.0-beta.4
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.91
+
+### Patch Changes
+
+- fix: guard against SSR access to document.body
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.54
+  - @dt-dds/react-backdrop@1.0.0-beta.56
+  - @dt-dds/react-icon@1.0.0-beta.57
+  - @dt-dds/react-icon-button@1.0.0-beta.23
+  - @dt-dds/react-spinner@1.0.0-beta.96
+  - @dt-dds/react-typography@1.0.0-beta.45
+
 ## 1.0.0-beta.90
 
 ### Patch Changes
