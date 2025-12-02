@@ -1,7 +1,7 @@
 import {
+  AnchorHTMLAttributes,
   ElementType,
   forwardRef,
-  HTMLAttributes,
   KeyboardEvent,
   MouseEvent,
 } from 'react';
@@ -12,7 +12,7 @@ import { DropdownOptionStyled } from './DropdownOption.styled';
 
 export interface DropdownOptionProps
   extends BaseProps,
-    Omit<HTMLAttributes<HTMLElement>, 'onClick'> {
+    Omit<AnchorHTMLAttributes<HTMLElement>, 'onClick'> {
   isDisabled?: boolean;
   isSelected?: boolean;
   isHighlighted?: boolean;
