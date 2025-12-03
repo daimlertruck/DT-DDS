@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Stepper /> component render default Stepper should render with correct HTML elements 1`] = `
+exports[`<Stepper /> component should match snapshot with all features 1`] = `
 .emotion-0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9,32 +9,522 @@ exports[`<Stepper /> component render default Stepper should render with correct
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 32px;
-  list-style: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
-@media only screen and (min-width: undefinedpx) {
-  .emotion-0 {
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: visible;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: flex-start;
+  align-self: flex-start;
+  min-height: 56px;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: undefined;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-8 {
+  font-family: DTUI-icons-outlined;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-variation-settings: 'FILL' 0;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.emotion-9 {
+  position: absolute;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  top: 32px;
+  left: 12px;
+  width: 2px;
+  min-height: 24px;
+  background-color: #000000;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 112px;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding-top: 4px;
+}
+
+.emotion-11>* {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.emotion-13 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #1d1d1d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-15 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #696969;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  background-color: #c5c5c5;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-23 {
+  position: absolute;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  top: 32px;
+  left: 12px;
+  width: 1px;
+  min-height: 24px;
+  background-color: #c5c5c5;
+}
+
+.emotion-27 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #1d1d1d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-35 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  background-color: #fab700;
+  border: 1px solid transparent;
+  color: undefined;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-44 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #252525;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: visible;
+  gap: 8px;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding-bottom: 0;
+  cursor: not-allowed;
+}
+
+.emotion-48 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: flex-start;
+  align-self: flex-start;
+  min-height: 24px;
+}
+
+.emotion-50 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  background-color: #ffffff;
+  border: 1px solid #c5c5c5;
+  color: #a9a9a9;
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-54 {
+  font-family: Daimler CS;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a9a9a9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-56 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #a9a9a9;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 <div>
-  <ul
+  <div
     class="emotion-0 emotion-1"
-    data-testid="default-stepper"
+    data-testid="workflow-stepper"
+    orientation="vertical"
   >
-    <li>
-      Item 1
-    </li>
-    <li>
-      Item 2
-    </li>
-    <li>
-      Item 3
-    </li>
-  </ul>
+    <div
+      class="emotion-2 emotion-3"
+      orientation="vertical"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        data-testid="step-0"
+        orientation="vertical"
+      >
+        <div
+          class="emotion-6 emotion-7"
+          data-testid="step-indicator"
+        >
+          <i
+            class="emotion-8"
+            color="#ffffff"
+            data-testid="icon"
+          >
+            check
+          </i>
+        </div>
+        <span
+          class="emotion-9 emotion-10"
+          data-testid="trail-line"
+          orientation="vertical"
+        />
+      </div>
+      <div
+        class="emotion-11 emotion-12"
+        orientation="vertical"
+      >
+        <span
+          class="emotion-13 emotion-14"
+        >
+          Start
+        </span>
+        <span
+          class="emotion-15 emotion-16"
+        >
+          Begin the process
+        </span>
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+      orientation="vertical"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        data-testid="step-1"
+        orientation="vertical"
+      >
+        <div
+          class="emotion-21 emotion-7"
+          data-testid="step-indicator"
+        >
+          2
+        </div>
+        <span
+          class="emotion-23 emotion-10"
+          data-testid="trail-line"
+          orientation="vertical"
+        />
+      </div>
+      <div
+        class="emotion-11 emotion-12"
+        orientation="vertical"
+      >
+        <span
+          class="emotion-27 emotion-14"
+        >
+          In Progress
+        </span>
+        <span
+          class="emotion-15 emotion-16"
+        >
+          Currently working
+        </span>
+      </div>
+    </div>
+    <div
+      class="emotion-2 emotion-3"
+      orientation="vertical"
+    >
+      <div
+        class="emotion-4 emotion-5"
+        data-testid="step-2"
+        orientation="vertical"
+      >
+        <div
+          class="emotion-35 emotion-7"
+          data-testid="step-indicator"
+        >
+          <i
+            class="emotion-8"
+            color="#ffffff"
+            data-testid="icon"
+          >
+            warning
+          </i>
+        </div>
+        <span
+          class="emotion-23 emotion-10"
+          data-testid="trail-line"
+          orientation="vertical"
+        />
+      </div>
+      <div
+        class="emotion-11 emotion-12"
+        orientation="vertical"
+      >
+        <span
+          class="emotion-13 emotion-14"
+        >
+          Review
+        </span>
+        <span
+          class="emotion-44 emotion-16"
+        >
+          Needs review
+        </span>
+      </div>
+    </div>
+    <div
+      class="emotion-46 emotion-3"
+      orientation="vertical"
+    >
+      <div
+        class="emotion-48 emotion-5"
+        data-testid="step-3"
+        orientation="vertical"
+      >
+        <div
+          class="emotion-50 emotion-7"
+          data-testid="step-indicator"
+        >
+          4
+        </div>
+      </div>
+      <div
+        class="emotion-11 emotion-12"
+        orientation="vertical"
+      >
+        <span
+          class="emotion-54 emotion-14"
+        >
+          Complete
+        </span>
+        <span
+          class="emotion-56 emotion-16"
+        >
+          Finish up
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
 `;

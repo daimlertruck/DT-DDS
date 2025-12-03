@@ -6,15 +6,12 @@ interface StepperStyledProps {
   orientation?: Orientation;
 }
 
-export const StepperStyled = styled.ul<StepperStyledProps>`
+export const StepperStyled = styled.div<StepperStyledProps>`
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  list-style: none;
 
-  ${({ theme, orientation = 'vertical' }) => `
-    @media only screen and (min-width: ${theme.breakpoints.mq3d}px) {
-      flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'}
-    }
+  ${({ orientation = 'vertical' }) => `
+    flex-direction: ${orientation === 'horizontal' ? 'row' : 'column'};
+    width: ${orientation === 'horizontal' ? '100%' : 'fit-content'};
+    align-items: stretch;
   `}
 `;
