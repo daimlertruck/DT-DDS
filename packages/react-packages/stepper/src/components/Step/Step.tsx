@@ -1,122 +1,50 @@
-import { Children, cloneElement, ReactElement, useMemo } from 'react';
+import { StepContainer, StepIndicatorWrapper } from './Step.styled';
+import { StepProps } from '../../types';
+import { StepContent } from '../StepContent';
+import { StepIndicator } from '../StepIndicator';
+import { TrailLine } from '../TrailLine';
 
-import { useTheme } from '@emotion/react';
-
-import { BaseProps } from '@dt-dds/react-core';
-import { Icon } from '@dt-dds/react-icon';
-import { Typography } from '@dt-dds/react-typography';
-
-import { Counter } from '../Counter';
-import { LabelStyled, StepStyled } from './Step.styled';
-
-export interface BaseStepProps extends Pick<BaseProps, 'children'> {
-  isActive?: boolean;
-  isCompleted?: boolean;
-  isDisabled?: boolean;
-  isError?: boolean;
-}
-
-const Step = ({
-  children,
+export const Step = ({
+  index = 0,
+  title,
+  description,
+  state = 'incomplete',
   isActive = false,
-  isCompleted = false,
-  isDisabled = false,
-  isError = false,
-}: BaseStepProps) => {
-  const clonedChildren = useMemo(
-    () =>
-      Children.map(children as ReactElement<BaseStepProps>, (child) => {
-        return (
-          child &&
-          cloneElement(child, {
-            isActive,
-            isCompleted,
-            isDisabled,
-            isError,
-            ...child.props,
-          })
-        );
-      }),
-    [children, isActive, isCompleted, isDisabled, isError]
-  );
-
-  return <StepStyled>{clonedChildren}</StepStyled>;
-};
-
-const StepCounter = ({
-  children,
-  isActive = false,
-  isCompleted = false,
-  isDisabled = false,
-  isError = false,
-}: BaseStepProps) => {
-  const theme = useTheme();
-  const color = isError ? 'error' : isDisabled ? 'disabled' : 'primary';
-  const bgColor = isError
-    ? theme.palette.error.light
-    : theme.palette.primary.light;
-
+  variant = 'number',
+  icon,
+  isLast = false,
+  orientation,
+  dataTestId,
+}: StepProps) => {
   return (
-    <Counter
-      color={color}
-      isLarge
-      outlined={!isCompleted}
-      style={{
-        borderWidth: 1,
-        ...(isActive && { backgroundColor: bgColor }),
-      }}
+    <StepContainer
+      isDisabled={state === 'disabled'}
+      isLast={isLast}
+      orientation={orientation}
     >
-      {isCompleted ? (
-        <Icon code='check' color={theme.palette.surface.light} size='small' />
-      ) : (
-        <Typography
-          color={color === 'disabled' ? 'content.light' : `${color}.default`}
-          element='span'
-          fontStyles='bodyXsBold'
-          style={{
-            width: 24,
-            height: 24,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          {children}
-        </Typography>
-      )}
-    </Counter>
+      <StepIndicatorWrapper
+        data-testid={dataTestId ?? `step-${index}`}
+        isLast={isLast}
+        orientation={orientation}
+      >
+        <StepIndicator
+          icon={icon}
+          index={index}
+          isActive={isActive}
+          state={state}
+          variant={variant}
+        />
+
+        {!isLast && <TrailLine orientation={orientation} state={state} />}
+      </StepIndicatorWrapper>
+
+      <StepContent
+        description={description}
+        isActive={isActive}
+        orientation={orientation}
+        state={state}
+        title={title}
+      />
+    </StepContainer>
   );
 };
-
-Step.Counter = StepCounter;
-
-const labelColor = ({
-  isActive,
-  isError,
-  isDisabled,
-  isCompleted,
-}: Partial<BaseStepProps>) => {
-  if (isError) {
-    return 'error';
-  } else if (isActive || isCompleted) {
-    return 'primary';
-  } else if (isDisabled) {
-    return 'disabled';
-  } else {
-    return 'secondary';
-  }
-};
-
-Step.Label = ({
-  children,
-  isActive = false,
-  isCompleted = false,
-  isDisabled = false,
-  isError = false,
-}: BaseStepProps) => {
-  const color = labelColor({ isActive, isError, isDisabled, isCompleted });
-
-  return <LabelStyled color={color}>{children}</LabelStyled>;
-};
-
-export default Step;

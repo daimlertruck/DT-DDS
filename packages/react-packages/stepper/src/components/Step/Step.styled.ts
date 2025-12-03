@@ -1,24 +1,64 @@
 import styled from '@emotion/styled';
 
-import { Colors } from '@dt-dds/react-core';
+import { Orientation } from '@dt-dds/react-core';
 
-export const StepStyled = styled.li`
-  display: flex;
-  gap: 12px;
-  align-items: center;
-`;
+import {
+  STEP_MIN_WIDTH,
+  VERTICAL_STEP_INDICATOR_MIN_HEIGHT,
+  VERTICAL_LAST_STEP_INDICATOR_MIN_HEIGHT,
+} from '../../constants';
 
-interface LabelStyledProps {
-  color: Colors | 'disabled';
+interface StepContainerProps {
+  orientation?: Orientation;
+  isLast?: boolean;
+  isDisabled?: boolean;
 }
 
-export const LabelStyled = styled.span<LabelStyledProps>`
-  ${({ theme, color }) => `
-    ${theme.fontStyles.bodyMdRegularSmall};
-    color: ${
-      color === 'disabled'
-        ? theme.palette.content.light
-        : theme.palette[color].default
-    };
-  `}
+export const StepContainer = styled.div<StepContainerProps>`
+  display: flex;
+  position: relative;
+  overflow: visible;
+  gap: 8px;
+
+  ${({ orientation, isLast, isDisabled }) => {
+    if (orientation === 'horizontal') {
+      return `
+        flex-direction: column;
+        align-items: center;
+        flex: 1 1 0;
+        min-width: ${STEP_MIN_WIDTH}px;
+      `;
+    }
+
+    return `
+      flex-direction: row;
+      padding-bottom: ${isLast ? '0' : '8px'};
+      cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
+    `;
+  }}
+`;
+
+export const StepIndicatorWrapper = styled.div<StepContainerProps>`
+  display: flex;
+  position: relative;
+
+  ${({ orientation, isLast }) => {
+    if (orientation === 'horizontal') {
+      return `
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+      `;
+    }
+
+    return `
+      flex-direction: column;
+      align-self: flex-start;
+      min-height: ${
+        isLast
+          ? `${VERTICAL_LAST_STEP_INDICATOR_MIN_HEIGHT}px`
+          : `${VERTICAL_STEP_INDICATOR_MIN_HEIGHT}px`
+      };
+    `;
+  }}
 `;
