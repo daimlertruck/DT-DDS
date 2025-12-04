@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- fix: inject external css into datepicker bundle
+  - @dt-dds/react-dropdown@1.0.0-beta.85
+  - @dt-dds/react-text-field@1.0.0-beta.103
+
 ## 1.0.0-beta.85
 
 ### Patch Changes
