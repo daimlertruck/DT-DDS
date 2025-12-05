@@ -1,5 +1,11 @@
 # @dt-ui/react-stepper
 
+## 1.0.0-beta.47
+
+### Minor Changes
+
+- feat: refactor stepper
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @dt-dds/react-app-header
 
+## 0.1.0-beta.8
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.65
+
 ## 0.1.0-beta.7
 
 ### Patch Changes

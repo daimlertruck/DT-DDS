@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.264
+
+### Minor Changes
+
+- feat: refactor stepper
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-stepper@1.0.0-beta.47
+  - @dt-dds/react-box@1.0.0-beta.65
+  - @dt-dds/react-dropdown@1.0.0-beta.86
+  - @dt-dds/react-radio@1.0.0-beta.81
+  - @dt-dds/react-select@1.0.0-beta.77
+  - @dt-dds/react-spinner@1.0.0-beta.99
+  - @dt-dds/react-tabs@1.0.0-beta.94
+  - @dt-dds/react-text-area@1.0.0-beta.76
+  - @dt-dds/react-date-picker@1.0.0-beta.87
+  - @dt-dds/react-button@1.0.0-beta.94
+  - @dt-dds/react-modal@1.0.0-beta.94
+  - @dt-dds/react-text-field@1.0.0-beta.104
+  - @dt-dds/react-empty-state@1.0.0-beta.114
+  - @dt-dds/react-link@1.0.0-beta.71
+  - @dt-dds/react-message@1.0.0-beta.110
+  - @dt-dds/react-toast@1.0.0-beta.111
+
 ## 1.0.0-beta.263
 
 ### Patch Changes
