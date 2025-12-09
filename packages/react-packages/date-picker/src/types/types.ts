@@ -12,4 +12,4 @@ export type DatePickerProps = {
   onError?: (error: string) => void;
   value: string;
   mode: 'single' | 'range';
-} & Omit<TextFieldProps, 'type' | 'initialValue' | 'value'>;
+} & Omit<TextFieldProps, 'type' | 'initialValue' | 'value' | 'onError'>;
