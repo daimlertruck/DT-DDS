@@ -1,5 +1,16 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.57
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+
 ## 1.0.0-beta.56
 
 ### Patch Changes

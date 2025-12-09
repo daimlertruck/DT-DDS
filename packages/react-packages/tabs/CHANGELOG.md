@@ -1,5 +1,20 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.96
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-icon@1.0.0-beta.58
+  - @dt-dds/react-icon-button@1.0.0-beta.24
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.37
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-icon@1.0.0-beta.58
+  - @dt-dds/react-typography@1.0.0-beta.46
+
 ## 1.0.0-beta.36
 
 ### Patch Changes

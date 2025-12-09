@@ -1,5 +1,21 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.88
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-icon@1.0.0-beta.58
+  - @dt-dds/react-icon-button@1.0.0-beta.24
+  - @dt-dds/react-typography@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 1.0.0-beta.87
 
 ### Patch Changes

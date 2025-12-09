@@ -1,5 +1,18 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.83
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 1.0.0-beta.82
 
 ### Patch Changes

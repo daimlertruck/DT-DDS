@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.55
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
 ## 1.0.0-beta.54
 
 ### Patch Changes

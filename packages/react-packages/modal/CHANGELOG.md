@@ -1,5 +1,21 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.96
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-backdrop@1.0.0-beta.57
+  - @dt-dds/react-icon@1.0.0-beta.58
+  - @dt-dds/react-icon-button@1.0.0-beta.24
+  - @dt-dds/react-spinner@1.0.0-beta.101
+  - @dt-dds/react-typography@1.0.0-beta.46
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

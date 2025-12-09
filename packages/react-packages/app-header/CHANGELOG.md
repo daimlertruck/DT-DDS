@@ -1,5 +1,19 @@
 # @dt-dds/react-app-header
 
+## 0.1.0-beta.10
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-typography@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 0.1.0-beta.9
 
 ### Patch Changes

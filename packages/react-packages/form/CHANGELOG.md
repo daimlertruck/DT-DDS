@@ -1,5 +1,18 @@
 # @dt-ui/react-form
 
+## 1.0.0-beta.49
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-tooltip@1.0.0-beta.64
+  - @dt-dds/react-typography@1.0.0-beta.46
+
 ## 1.0.0-beta.48
 
 ### Patch Changes

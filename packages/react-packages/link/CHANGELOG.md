@@ -1,5 +1,18 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.73
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-button@1.0.0-beta.96
+  - @dt-dds/react-icon@1.0.0-beta.58
+
 ## 1.0.0-beta.72
 
 ### Patch Changes

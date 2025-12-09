@@ -1,5 +1,19 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.101
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-typography@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 1.0.0-beta.100
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.46
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+
 ## 1.0.0-beta.45
 
 ### Patch Changes

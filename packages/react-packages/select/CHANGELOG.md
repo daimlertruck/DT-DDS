@@ -1,5 +1,26 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.79
+
+### Minor Changes
+
+- feat: change downshift suppressRefError prop
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-tooltip@1.0.0-beta.64
+  - @dt-dds/react-checkbox@1.0.0-beta.56
+  - @dt-dds/react-dropdown@1.0.0-beta.88
+  - @dt-dds/react-icon@1.0.0-beta.58
+  - @dt-dds/react-label-field@1.0.0-beta.56
+  - @dt-dds/react-icon-button@1.0.0-beta.24
+  - @dt-dds/react-typography@1.0.0-beta.46
+  - @dt-dds/react-box@1.0.0-beta.67
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

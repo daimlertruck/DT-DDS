@@ -1,5 +1,18 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.62
+
+### Minor Changes
+
+- feat: increase dropdown z index
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.55
+  - @dt-dds/react-icon-button@1.0.0-beta.24
+  - @dt-dds/react-typography@1.0.0-beta.46
+
 ## 1.0.0-beta.61
 
 ### Patch Changes
