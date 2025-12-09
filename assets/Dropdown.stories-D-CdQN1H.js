@@ -1,0 +1,10 @@
+var b=Object.defineProperty;var o=(e,n)=>b(e,"name",{value:n,configurable:!0});import{j as r}from"./jsx-runtime-Cgz2XvFB.js";import{r as m}from"./index-CwbBKW39.js";import{D as a}from"./Dropdown-BO8T5nHb.js";import"./typography-B3nKKPHm.js";import"./index-C9s2RhT-.js";import"./emotion-react.browser.esm-DSneuyqi.js";import"./emotion-styled.browser.esm-Cgg3GKEJ.js";import"./index-6Tx4pmSd.js";import"./iframe-BE6Fw2vO.js";import"./z-index-DkKqHUUA.js";import"./index-DV-VXEUn.js";import"./useClickOutside-Cp2kQToC.js";const g=[{text:"Option 1",value:"1"},{text:"Option 2",value:"2"},{text:"Option 3 with a large text message label",value:"3"},{text:"Option 4",value:"4",disabled:!0}],y=o(({options:e,as:n="ul",matchWidth:f=!0,offsetX:x,offsetY:h,...O})=>{const p=m.useRef(null),[l,i]=m.useState(!1);return r.jsxs("div",{style:{height:320,padding:16},children:[r.jsxs("button",{onClick:o(()=>i(t=>!t),"onClick"),ref:p,style:{marginBottom:12},type:"button",children:[l?"Close":"Open"," dropdown"]}),r.jsx(a,{...O,anchorRef:p,as:n,isOpen:l,matchWidth:f,offsetX:x,offsetY:h,onClose:o(()=>i(!1),"onClose"),children:e.map(t=>r.jsx(a.Option,{isDisabled:t.disabled,children:t.text??t.value},t.value))})]})},"DropdownDemo"),N={title:"Data Display/Dropdown",component:a,argTypes:{placement:{options:["bottom","top","right","left"],control:{type:"select"}},as:{options:["div","ul"],control:{type:"select"}},matchWidth:{control:{type:"boolean"}},offsetX:{control:{type:"number"}},offsetY:{control:{type:"number"}}},render:o(e=>r.jsx(y,{...e}),"render")},s={args:{options:g,as:"ul",matchWidth:!0,offsetX:0,offsetY:4,placement:"bottom"}};var c,u,d;s.parameters={...s.parameters,docs:{...(c=s.parameters)==null?void 0:c.docs,source:{originalSource:`{
+  args: {
+    options: OPTIONS,
+    as: 'ul',
+    matchWidth: true,
+    offsetX: 0,
+    offsetY: 4,
+    placement: 'bottom'
+  }
+}`,...(d=(u=s.parameters)==null?void 0:u.docs)==null?void 0:d.source}}};const P=["Default"];export{s as Default,P as __namedExportsOrder,N as default};
