@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> renders with correct structure 1`] = `
+.emotion-0 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: calc(100% - 0px);
+  width: 250px;
+  background-color: #ffffff;
+  overflow: hidden;
+  top: 0px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  left: 0px;
+  border-right: 1px solid #e6e6e6;
+}
+
+<aside
+  aria-label="Navigation"
+  class="emotion-0 emotion-1"
+  data-testid="sidebar"
+>
+  <div>
+    Content
+  </div>
+</aside>
+`;
