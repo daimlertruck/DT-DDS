@@ -1,5 +1,11 @@
 # @dt-ui/react-stepper
 
+## 1.0.0-beta.49
+
+### Patch Changes
+
+- fix: step cursor style
+
 ## 1.0.0-beta.48
 
 ### Minor Changes

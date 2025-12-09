@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.90
+
+### Patch Changes
+
+- fix: omit onError prop
+  - @dt-dds/react-dropdown@1.0.0-beta.89
+  - @dt-dds/react-text-field@1.0.0-beta.107
+
 ## 1.0.0-beta.89
 
 ### Minor Changes

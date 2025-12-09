@@ -1,5 +1,12 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.97
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.68
+
 ## 1.0.0-beta.96
 
 ### Minor Changes

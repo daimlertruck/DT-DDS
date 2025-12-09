@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.267
+
+### Patch Changes
+
+- fix: step cursor style
+- fix: omit onError prop
+- Updated dependencies
+- Updated dependencies [223664b]
+- Updated dependencies
+  - @dt-dds/react-stepper@1.0.0-beta.49
+  - @dt-dds/react-box@1.0.0-beta.68
+  - @dt-dds/react-date-picker@1.0.0-beta.90
+  - @dt-dds/react-dropdown@1.0.0-beta.89
+  - @dt-dds/react-radio@1.0.0-beta.84
+  - @dt-dds/react-select@1.0.0-beta.80
+  - @dt-dds/react-spinner@1.0.0-beta.102
+  - @dt-dds/react-tabs@1.0.0-beta.97
+  - @dt-dds/react-text-area@1.0.0-beta.79
+  - @dt-dds/react-button@1.0.0-beta.97
+  - @dt-dds/react-modal@1.0.0-beta.97
+  - @dt-dds/react-text-field@1.0.0-beta.107
+  - @dt-dds/react-empty-state@1.0.0-beta.117
+  - @dt-dds/react-link@1.0.0-beta.74
+  - @dt-dds/react-message@1.0.0-beta.113
+  - @dt-dds/react-toast@1.0.0-beta.114
+
 ## 1.0.0-beta.266
 
 ### Minor Changes

@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-radio",
-  "version": "1.0.0-beta.83",
+  "version": "1.0.0-beta.84",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.55",
-    "@dt-dds/react-box": "1.0.0-beta.67",
+    "@dt-dds/react-box": "1.0.0-beta.68",
     "@dt-dds/themes": "1.0.0-beta.10"
   },
   "devDependencies": {
