@@ -30,7 +30,7 @@ exports[`<Stepper /> component should match snapshot with all features 1`] = `
   -ms-flex-direction: row;
   flex-direction: row;
   padding-bottom: 8px;
-  cursor: pointer;
+  cursor: auto;
 }
 
 .emotion-4 {

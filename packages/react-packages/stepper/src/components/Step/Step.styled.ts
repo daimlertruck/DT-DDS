@@ -33,7 +33,7 @@ export const StepContainer = styled.div<StepContainerProps>`
     return `
       flex-direction: row;
       padding-bottom: ${isLast ? '0' : '8px'};
-      cursor: ${isDisabled ? 'not-allowed' : 'pointer'};
+      cursor: ${isDisabled ? 'not-allowed' : 'auto'};
     `;
   }}
 `;
