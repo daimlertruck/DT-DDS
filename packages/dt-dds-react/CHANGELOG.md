@@ -1,5 +1,28 @@
 # @dt-ui/react
 
+## 1.0.0-beta.265
+
+### Patch Changes
+
+- refactor: move state outside of component
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-date-picker@1.0.0-beta.88
+  - @dt-dds/react-box@1.0.0-beta.66
+  - @dt-dds/react-dropdown@1.0.0-beta.87
+  - @dt-dds/react-radio@1.0.0-beta.82
+  - @dt-dds/react-select@1.0.0-beta.78
+  - @dt-dds/react-spinner@1.0.0-beta.100
+  - @dt-dds/react-tabs@1.0.0-beta.95
+  - @dt-dds/react-text-area@1.0.0-beta.77
+  - @dt-dds/react-button@1.0.0-beta.95
+  - @dt-dds/react-modal@1.0.0-beta.95
+  - @dt-dds/react-text-field@1.0.0-beta.105
+  - @dt-dds/react-empty-state@1.0.0-beta.115
+  - @dt-dds/react-link@1.0.0-beta.72
+  - @dt-dds/react-message@1.0.0-beta.111
+  - @dt-dds/react-toast@1.0.0-beta.112
+
 ## 1.0.0-beta.264
 
 ### Minor Changes

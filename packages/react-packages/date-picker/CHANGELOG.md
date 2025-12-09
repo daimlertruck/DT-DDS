@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.88
+
+### Patch Changes
+
+- refactor: move state outside of component
+  - @dt-dds/react-dropdown@1.0.0-beta.87
+  - @dt-dds/react-text-field@1.0.0-beta.105
+
 ## 1.0.0-beta.87
 
 ### Patch Changes
