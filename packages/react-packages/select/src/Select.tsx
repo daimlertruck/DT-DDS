@@ -321,7 +321,7 @@ export const Select = ({
         ) : null}
 
         <SelectDropdownStyled
-          {...getMenuProps({ suppressRefError: true })}
+          {...getMenuProps({}, { suppressRefError: true })}
           anchorRef={anchorRef}
           aria-multiselectable={isMulti}
           as='ul'
