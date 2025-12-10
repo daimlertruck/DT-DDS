@@ -11,7 +11,7 @@ export const palette: Theme['palette'] = {
   content: {
     default: '#252525',
     light: '#a9a9a9',
-    medium: '#3e3e3e',
+    medium: '#696969',
     dark: '#1d1d1d',
     contrast: '#ffffff',
   },
