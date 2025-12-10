@@ -175,6 +175,12 @@
         "$type": "dimension",
         "$value": "{Shape.shape-avatar}"
       }
+    },
+    "Stack": {
+      "border-avatar": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Border.border-medium}"
+      }
     }
   },
   "Backdrop": {
@@ -275,10 +281,6 @@
         "content-button-primary-solid-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Content.content-contrast}"
-        },
-        "shape-button-primary-solid": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Outlined": {
@@ -353,10 +355,6 @@
         "border-button-primary-outlined-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Primary.primary-light}"
-        },
-        "shape-button-primary-outlined": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Text": {
@@ -407,10 +405,6 @@
         "content-button-primary-text-positive-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Primary.primary-light}"
-        },
-        "shape-button-primary-text": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       }
     },
@@ -463,10 +457,6 @@
         "content-button-secondary-solid-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Content.content-contrast}"
-        },
-        "shape-button-secondary-solid": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Outlined": {
@@ -541,10 +531,6 @@
         "border-button-secondary-outlined-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Secondary.secondary-light}"
-        },
-        "shape-button-secondary-outlined": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Text": {
@@ -595,10 +581,6 @@
         "content-button-secondary-text-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Secondary.secondary-light}"
-        },
-        "shape-button-secondary-text": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       }
     },
@@ -651,10 +633,6 @@
         "content-button-destructive-solid-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Content.content-contrast}"
-        },
-        "shape-button-secondary-solid": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Outlined": {
@@ -729,10 +707,6 @@
         "stroke-button-destructive-outlined-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Error.error-light}"
-        },
-        "shape-button-secondary-outlined": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Text": {
@@ -783,10 +757,6 @@
         "content-button-destructive-text-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Error.error-light}"
-        },
-        "shape-button-destructive-text": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       }
     },
@@ -839,10 +809,6 @@
         "content-button-accent-solid-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Content.content-contrast}"
-        },
-        "shape-button-accent-solid": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Outlined": {
@@ -917,10 +883,6 @@
         "border-button-accent-outlined-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Accent.accent-light}"
-        },
-        "shape-button-secondary-outlined": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Text": {
@@ -971,10 +933,6 @@
         "content-button-accent-text-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Accent.accent-light}"
-        },
-        "shape-button-secondary-text": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       }
     },
@@ -1027,10 +985,6 @@
         "content-button-contrast-solid-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Secondary.secondary-medium}"
-        },
-        "shape-button-contrast-solid": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Outlined": {
@@ -1105,10 +1059,6 @@
         "stroke-button-contrast-outlined-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Secondary.secondary-medium}"
-        },
-        "shape-button-outlined-negative": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       },
       "Text": {
@@ -1159,12 +1109,12 @@
         "content-button-primary-text-negative-loading": {
           "$type": "color",
           "$value": "{Contextual_colors.Secondary.secondary-medium}"
-        },
-        "shape-button-primary-text": {
-          "$type": "dimension",
-          "$value": "{Shape.shape-button}"
         }
       }
+    },
+    "shape-button": {
+      "$type": "dimension",
+      "$value": "{Shape.shape-button}"
     }
   },
   "Breadcrumb": {
@@ -1354,6 +1304,14 @@
       "surface-checkbox-checked-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-light}"
+      },
+      "surface-checkbox-checked-error": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-default}"
+      },
+      "surface-checkbox-checked-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-dark}"
       }
     },
     "Checked:_False": {
@@ -1368,6 +1326,10 @@
       "surface-checkbox-unchecked-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-light}"
+      },
+      "surface-checkbox-unchecked-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-light}"
       },
       "stroke-checkbox-unchecked-default": {
         "$type": "color",
@@ -1396,7 +1358,7 @@
     },
     "content-checkbox-disabled": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-medium}"
+      "$value": "{Contextual_colors.Content.content-light}"
     },
     "shape-checkbox": {
       "$type": "dimension",
@@ -1414,6 +1376,14 @@
       "surface-checkbox-indeterminate-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-light}"
+      },
+      "surface-checkbox-indeterminate-error": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-default}"
+      },
+      "surface-checkbox-indeterminate-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-dark}"
       }
     }
   },
@@ -1464,7 +1434,7 @@
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-default}"
     },
-    "content-datepicker-hover": {
+    "content-datepicker-selected": {
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-contrast}"
     },
@@ -1472,9 +1442,13 @@
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-light}"
     },
-    "stroke-datepicker": {
+    "stroke-datepicker-today": {
       "$type": "color",
       "$value": "{Contextual_colors.Informative.info-default}"
+    },
+    "stroke-datepicker": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Border.border-medium}"
     },
     "shape-datepicker": {
       "$type": "dimension",
@@ -1624,11 +1598,11 @@
     },
     "content-link-hover": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-medium}"
+      "$value": "{Contextual_colors.Accent.accent-default}"
     },
     "content-link-active": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-dark}"
+      "$value": "{Contextual_colors.Accent.accent-default}"
     },
     "shape-header": {
       "$type": "dimension",
@@ -1672,19 +1646,19 @@
   "Link": {
     "content-link-primary-default": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-default}"
+      "$value": "{Contextual_colors.Primary.primary-default}"
     },
     "content-link-primary-hover": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-dark}"
+      "$value": "{Contextual_colors.Accent.accent-default}"
     },
     "content-link-primary-active": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-medium}"
+      "$value": "{Contextual_colors.Accent.accent-default}"
     },
     "content-link-primary-disabled": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-light}"
+      "$value": "{Contextual_colors.Primary.primary-light}"
     },
     "content-link-secondary-default": {
       "$type": "color",
@@ -1707,7 +1681,7 @@
     "Positive": {
       "surface-loadingSpinner-positive": {
         "$type": "color",
-        "$value": "{Contextual_colors.Surface.surface-default}"
+        "$value": "{Contextual_colors.Surface.surface-contrast}"
       },
       "content-loadingSpinner-positive": {
         "$type": "color",
@@ -1936,29 +1910,9 @@
     }
   },
   "Navigation_menu": {
-    "surface-navigationMenu": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Primary.primary-default}"
-    },
-    "content-navigationMenu-default": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Content.content-contrast}"
-    },
-    "content-navigationMenu-hover": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
-    },
-    "content-navigationMenu-active": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Content.content-contrast}"
-    },
     "stroke-navigationMenu": {
       "$type": "color",
-      "$value": "{Contextual_colors.Border.border-medium}"
-    },
-    "Content-NavigationMenu-Icon": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Content.content-contrast}"
+      "$value": "{Contextual_colors.Border.border-default}"
     },
     "shape-navigationMenu": {
       "$type": "dimension",
@@ -2008,7 +1962,7 @@
     },
     "content-navigationSidebar-negative-selected": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-light}"
+      "$value": "{Contextual_colors.Accent.accent-medium}"
     },
     "content-navigationSidebar-negative-disabled": {
       "$type": "color",
@@ -2028,7 +1982,7 @@
     },
     "stroke-navigationSidebar-negative": {
       "$type": "color",
-      "$value": "{Contextual_colors.Border.border-medium}"
+      "$value": "{Contextual_colors.Primary.primary-dark}"
     },
     "shape-navigationSidebar": {
       "$type": "dimension",
@@ -2054,7 +2008,7 @@
     },
     "content-numberField-label-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-numberField-label-active": {
       "$type": "color",
@@ -2094,7 +2048,7 @@
     },
     "content-numberField-text-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-numberField-text-disabled": {
       "$type": "color",
@@ -2106,7 +2060,7 @@
     },
     "content-numberFieldd-info-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-numberField-info-error": {
       "$type": "color",
@@ -2144,6 +2098,10 @@
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-light}"
     },
+    "content-numberField-info-icon": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
     "stroke-numberField": {
       "$type": "color",
       "$value": "{Contextual_colors.Border.border-medium}"
@@ -2152,13 +2110,17 @@
       "$type": "color",
       "$value": "{Contextual_colors.Informative.info-default}"
     },
+    "stroke-numberField-active": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Informative.info-default}"
+    },
     "stroke-numberField-error": {
       "$type": "color",
       "$value": "{Contextual_colors.Error.error-default}"
     },
-    "stroke-numberField-active": {
+    "stroke-numberField-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Informative.info-default}"
+      "$value": "{Contextual_colors.Border.border-default}"
     },
     "surface-numberField-controls-default": {
       "$type": "color",
@@ -2377,6 +2339,10 @@
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-default}"
       },
+      "surface-radioButton-selected-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Informative.info-dark}"
+      },
       "surface-radioButton-selected-checked-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Accent.accent-light}"
@@ -2384,6 +2350,10 @@
       "surface-radioButton-selected-error": {
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-default}"
+      },
+      "surface-radioButton-selected-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-dark}"
       }
     },
     "Selected:_False": {
@@ -2398,6 +2368,10 @@
       "surface-radioButton-unselected-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-light}"
+      },
+      "surface-radioButton-unselected-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-light}"
       },
       "stroke-radioButton-unselected-hover": {
         "$type": "color",
@@ -2489,6 +2463,10 @@
     "content-searchField-icons-disabled": {
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-light}"
+    },
+    "content-searchField-info-icon": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
     },
     "stroke-searchField": {
       "$type": "color",
@@ -2610,6 +2588,10 @@
       "$type": "color",
       "$value": "{Contextual_colors.Error.error-default}"
     },
+    "content-selectField-info-icon": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
     "stroke-selectField": {
       "$type": "color",
       "$value": "{Contextual_colors.Border.border-medium}"
@@ -2698,50 +2680,78 @@
     }
   },
   "Stepper": {
-    "stroke-stepper-default": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Border.border-medium}"
+    "Incomplete": {
+      "surface-stepper-incomplete-default": {
+        "$type": "color",
+        "$value": "{Contextual_colors.null}"
+      },
+      "surface-stepper-incomplete-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-light}"
+      },
+      "content-stepper-incomplete-indicator": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-default}"
+      },
+      "stroke-stepper-default": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-default}"
+      }
     },
-    "stroke-stepper-active": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Border.border-dark}"
-    },
-    "Default": {
+    "Active": {
       "surface-stepper-active-default": {
         "$type": "color",
         "$value": "{Contextual_colors.Primary.primary-light}"
       },
+      "surface-stepper-active-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-medium}"
+      },
+      "content-stepper-title-active": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-default}"
+      },
+      "content-stepper-indicator-active": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-default}"
+      },
+      "stroke-stepper-active": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Primary.primary-default}"
+      }
+    },
+    "Completed": {
       "surface-stepper-completed-default": {
         "$type": "color",
         "$value": "{Contextual_colors.Primary.primary-default}"
       },
-      "content-stepper-indicator-default": {
+      "surface-stepper-completed-hover": {
         "$type": "color",
-        "$value": "{Contextual_colors.Primary.primary-default}"
+        "$value": "{Contextual_colors.Primary.primary-medium}"
       },
-      "content-stepper-indicator-default-contrast": {
+      "content-stepper-completed-indicator": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-contrast}"
-      },
-      "content-stepper-label-default": {
-        "$type": "color",
-        "$value": "{Contextual_colors.Content.content-dark}"
-      },
-      "content-stepper-description-default": {
-        "$type": "color",
-        "$value": "{Contextual_colors.Content.content-default}"
       }
     },
+    "content-stepper-title": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-dark}"
+    },
+    "content-stepper-description": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-medium}"
+    },
     "Disabled": {
-      "content-stepper-disabled-indicator": {
+      "content-stepper-indicator-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-light}"
       },
-      "content-stepper-disabled-label": {
+      "content-stepper-title-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-light}"
       },
-      "content-stepper-disabled-description": {
+      "content-stepper-description-disabled": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-light}"
       },
@@ -2751,50 +2761,46 @@
       }
     },
     "Warning": {
-      "surface-stepper-warning": {
+      "surface-stepper-warning-default": {
         "$type": "color",
         "$value": "{Contextual_colors.Warning.warning-default}"
       },
-      "content-stepper-warning-indicator": {
+      "surface-stepper-warning-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Warning.warning-dark}"
+      },
+      "content-stepper-indicator-warning": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-contrast}"
-      },
-      "content-stepper-warning-label": {
-        "$type": "color",
-        "$value": "{Contextual_colors.Content.content-dark}"
-      },
-      "content-stepper-warning-description": {
-        "$type": "color",
-        "$value": "{Contextual_colors.Content.content-default}"
       }
     },
     "Error": {
-      "surface-stepper-error": {
+      "surface-stepper-error-default": {
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-default}"
       },
-      "content-stepper-error-indicator": {
+      "surface-stepper-error-hover": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-dark}"
+      },
+      "content-stepper-indicator-error": {
         "$type": "color",
         "$value": "{Contextual_colors.Content.content-contrast}"
       },
-      "content-stepper-error-label": {
+      "content-stepper-title-error": {
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-default}"
       },
-      "content-stepper-error-description": {
+      "content-stepper-description-error": {
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-default}"
       }
     }
   },
   "Skeleton": {
-    "surface-skeleton-step1": {
+    "surface-skeleton-bg": {
       "$type": "color",
       "$value": "{Contextual_colors.Surface.surface-default}"
-    },
-    "surface-skeleton-step2": {
-      "$type": "color",
-      "$value": "{Contextual_colors.Surface.surface-medium}"
     },
     "shape-skeleton": {
       "$type": "dimension",
@@ -3098,7 +3104,7 @@
     },
     "content-textField-label-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textField-label-error": {
       "$type": "color",
@@ -3134,7 +3140,7 @@
     },
     "content-textField-text-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textField-text-disabled": {
       "$type": "color",
@@ -3146,7 +3152,7 @@
     },
     "content-textField-info-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textField-info-error": {
       "$type": "color",
@@ -3180,6 +3186,10 @@
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-light}"
     },
+    "content-textField-info-icon": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
     "stroke-textField": {
       "$type": "color",
       "$value": "{Contextual_colors.Border.border-medium}"
@@ -3188,13 +3198,17 @@
       "$type": "color",
       "$value": "{Contextual_colors.Informative.info-default}"
     },
+    "stroke-textField-active": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Informative.info-default}"
+    },
     "stroke-textField-error": {
       "$type": "color",
       "$value": "{Contextual_colors.Error.error-default}"
     },
-    "stroke-textField-active": {
+    "stroke-textField-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Informative.info-default}"
+      "$value": "{Contextual_colors.Border.border-default}"
     },
     "shape-textField": {
       "$type": "dimension",
@@ -3220,7 +3234,7 @@
     },
     "content-textarea-label-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textarea-label-active": {
       "$type": "color",
@@ -3260,7 +3274,7 @@
     },
     "content-textarea-text-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textarea-text-disabled": {
       "$type": "color",
@@ -3272,7 +3286,7 @@
     },
     "content-textarea-info-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textarea-info-error": {
       "$type": "color",
@@ -3288,7 +3302,7 @@
     },
     "content-textarea-counter-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textarea-counter-error": {
       "$type": "color",
@@ -3322,9 +3336,17 @@
       "$type": "color",
       "$value": "{Contextual_colors.Content.content-light}"
     },
+    "content-textarea-info-icon": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
     "stroke-textarea": {
       "$type": "color",
       "$value": "{Contextual_colors.Border.border-medium}"
+    },
+    "stroke-textarea-readOnly": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Border.border-default}"
     },
     "stroke-textarea-hover": {
       "$type": "color",
@@ -3395,6 +3417,10 @@
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-dark}"
       },
+      "surface-toastMessages-info-actions": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Informative.info-medium}"
+      },
       "stroke-toastMessages-info": {
         "$type": "color",
         "$value": "{Contextual_colors.Informative.info-default}"
@@ -3432,6 +3458,10 @@
       "content-toastMessages-success-actions": {
         "$type": "color",
         "$value": "{Contextual_colors.Success.success-dark}"
+      },
+      "surface-toastMessages-success-actions": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Success.success-medium}"
       },
       "stroke-toastMessages-success": {
         "$type": "color",
@@ -3471,6 +3501,10 @@
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-dark}"
       },
+      "surface-toastMessages-error-actions": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Error.error-medium}"
+      },
       "stroke-toastMessages-error": {
         "$type": "color",
         "$value": "{Contextual_colors.Error.error-default}"
@@ -3508,6 +3542,10 @@
       "content-toastMessages-warning-actions": {
         "$type": "color",
         "$value": "{Contextual_colors.Warning.warning-dark}"
+      },
+      "surface-toastMessages-warning-actions": {
+        "$type": "color",
+        "$value": "{Contextual_colors.Warning.warning-medium}"
       },
       "stroke-toastMessages-warning": {
         "$type": "color",
@@ -4128,6 +4166,52 @@
           "$value": "0px"
         }
       }
+    }
+  },
+  "Spotlight": {
+    "surface-spotlight-positive": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Surface.surface-contrast}"
+    },
+    "content-spotlight-positive": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-contrast}"
+    },
+    "content-spotlight-step-positive": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-light}"
+    },
+    "content-spotlight-closeIcon-positive": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-contrast}"
+    },
+    "stroke-spotlight-positive": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Accent.accent-medium}"
+    },
+    "surface-spotlight-negative": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Surface.surface-dark}"
+    },
+    "content-spotlight-negative": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
+    "content-spotlight-step-negative": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-medium}"
+    },
+    "content-spotlight-closeIcon-negative": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Content.content-default}"
+    },
+    "stroke-spotlight-negative": {
+      "$type": "color",
+      "$value": "{Contextual_colors.Accent.accent-default}"
+    },
+    "shape-spotlight": {
+      "$type": "dimension",
+      "$value": "{Shape.shape-spotlight}"
     }
   }
 }

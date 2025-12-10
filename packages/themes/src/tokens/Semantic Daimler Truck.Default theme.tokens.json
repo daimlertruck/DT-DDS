@@ -1,9 +1,5 @@
 {
   "Contextual_colors": {
-    "null": {
-      "$type": "color",
-      "$value": "#ffffff00"
-    },
     "Surface": {
       "surface-contrast": {
         "$type": "color",
@@ -31,6 +27,10 @@
         "$description": "Base colors are used as the main background color for the system."
       }
     },
+    "null": {
+      "$type": "color",
+      "$value": "#ffffff00"
+    },
     "Content": {
       "content-contrast": {
         "$type": "color",
@@ -49,7 +49,7 @@
       },
       "content-medium": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-80}",
+        "$value": "{Core_colors.Grey.grey-60}",
         "$description": "Content colors are applied to texts, icons, etc."
       },
       "content-dark": {
@@ -277,15 +277,47 @@
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
+    "shape-definitionList": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
     "shape-emptyState": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
-    "shape-progressBar": {
+    "shape-footer": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-header": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-toast": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-tag-rounded": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-50}"
+    },
+    "shape-tab": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-switch": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
     "shape-messages": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-pagination": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-segmentedControl": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
@@ -297,23 +329,7 @@
       "$type": "dimension",
       "$value": "{Radius.radius-100}"
     },
-    "shape-timepicker": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-toast": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tag-squared": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tab": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-pagination": {
+    "shape-modal": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
@@ -321,31 +337,19 @@
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
-    "shape-segmentedControl": {
+    "shape-progressBar": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
-    "shape-switch": {
+    "shape-timepicker": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
-    "shape-tag-rounded": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-50}"
-    },
-    "shape-modal": {
+    "shape-tag-squared": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
     "shape-tooltip": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-definitionList": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-header": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
@@ -361,15 +365,15 @@
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
-    "shape-footer": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
     "shape-slider": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
     "shape-skeleton": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-0}"
+    },
+    "shape-spotlight": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     }
