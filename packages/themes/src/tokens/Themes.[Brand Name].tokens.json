@@ -85,7 +85,7 @@
       },
       "stroke-avatar-letter": {
         "$type": "color",
-        "$value": "{Contextual_colors.Border.border-contrast}"
+        "$value": "{Contextual_colors.Content.content-contrast}"
       },
       "shape-avatar-letter": {
         "$type": "dimension",
@@ -204,7 +204,7 @@
   "Badge": {
     "surface-badge-primary": {
       "$type": "color",
-      "$value": "{Contextual_colors.Informative.info-default}"
+      "$value": "{Contextual_colors.Primary.primary-default}"
     },
     "surface-badge-success": {
       "$type": "color",
@@ -1132,7 +1132,7 @@
     },
     "content-breadcrumb-previous-hover": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-medium}"
+      "$value": "{Contextual_colors.Accent.accent-dark}"
     },
     "content-breadcrumb-slash": {
       "$type": "color",
@@ -1564,7 +1564,7 @@
     },
     "content-footer-hover": {
       "$type": "color",
-      "$value": "{Contextual_colors.Accent.accent-default}"
+      "$value": "{Contextual_colors.Accent.accent-light}"
     },
     "shape-footer": {
       "$type": "dimension",
@@ -1640,7 +1640,7 @@
     },
     "content-icons-contrast-disabled": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-medium}"
+      "$value": "{Contextual_colors.Content.content-default}"
     }
   },
   "Link": {
@@ -1703,7 +1703,7 @@
       },
       "stroke-loadingSpinner-negative": {
         "$type": "color",
-        "$value": "{Contextual_colors.Surface.surface-light}"
+        "$value": "{Contextual_colors.Border.border-contrast}"
       }
     }
   },
@@ -1986,7 +1986,7 @@
     },
     "shape-navigationSidebar": {
       "$type": "dimension",
-      "$value": "{Shape.shape-navigationSidebar}"
+      "$value": "{Shape.shape-navigationMenu}"
     }
   },
   "Number_field": {
@@ -2341,7 +2341,7 @@
       },
       "surface-radioButton-selected-hover": {
         "$type": "color",
-        "$value": "{Contextual_colors.Informative.info-dark}"
+        "$value": "{Contextual_colors.Informative.info-default}"
       },
       "surface-radioButton-selected-checked-disabled": {
         "$type": "color",
@@ -2367,7 +2367,7 @@
       },
       "surface-radioButton-unselected-disabled": {
         "$type": "color",
-        "$value": "{Contextual_colors.Informative.info-light}"
+        "$value": "{Contextual_colors.Accent.accent-light}"
       },
       "surface-radioButton-unselected-error-hover": {
         "$type": "color",
@@ -2628,7 +2628,7 @@
     },
     "surface-slider-trackDot": {
       "$type": "color",
-      "$value": "{Contextual_colors.Surface.surface-medium}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "surface-slider-inactiveTrack": {
       "$type": "color",
@@ -3208,7 +3208,7 @@
     },
     "stroke-textField-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Border.border-default}"
+      "$value": "{Contextual_colors.Border.border-medium}"
     },
     "shape-textField": {
       "$type": "dimension",
@@ -3326,7 +3326,7 @@
     },
     "content-textarea-icons-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Content.content-light}"
+      "$value": "{Contextual_colors.Content.content-medium}"
     },
     "content-textarea-icons-error": {
       "$type": "color",
@@ -3346,7 +3346,7 @@
     },
     "stroke-textarea-readOnly": {
       "$type": "color",
-      "$value": "{Contextual_colors.Border.border-default}"
+      "$value": "{Contextual_colors.Border.border-medium}"
     },
     "stroke-textarea-hover": {
       "$type": "color",
@@ -3598,7 +3598,7 @@
   "Tooltip": {
     "surface-tooltip-default": {
       "$type": "color",
-      "$value": "{Contextual_colors.Primary.primary-dark}"
+      "$value": "{Contextual_colors.Secondary.secondary-default}"
     },
     "surface-tooltip-opacity": {
       "$type": "color",
@@ -3606,7 +3606,7 @@
     },
     "surface-tooltip-contrast-default": {
       "$type": "color",
-      "$value": "{Contextual_colors.Primary.primary-light}"
+      "$value": "{Contextual_colors.Secondary.secondary-light}"
     },
     "surface-tooltip-contrast-opacity": {
       "$type": "color",
@@ -3796,7 +3796,7 @@
     "Font-family": {
       "font-family-primary": {
         "$type": "string",
-        "$value": "{Fonts.daimlerTruck-primary}",
+        "$value": "{Fonts.[brandName]-primary}",
         "$description": "Font family"
       }
     },
@@ -4171,7 +4171,7 @@
   "Spotlight": {
     "surface-spotlight-positive": {
       "$type": "color",
-      "$value": "{Contextual_colors.Surface.surface-contrast}"
+      "$value": "{Contextual_colors.Content.content-contrast}"
     },
     "content-spotlight-positive": {
       "$type": "color",

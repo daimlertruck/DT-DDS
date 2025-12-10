@@ -20,11 +20,8 @@
         "Daimler Truck": [
           "Themes.Daimler Truck.tokens.json"
         ],
-        "DT-Companion": [
-          "Themes.DT-Companion.tokens.json"
-        ],
-        "TruckAPI": [
-          "Themes.TruckAPI.tokens.json"
+        "[Brand Name]": [
+          "Themes.[Brand Name].tokens.json"
         ]
       }
     },
@@ -44,17 +41,13 @@
         ]
       }
     },
-    "Semantic TruckAPI": {
+    "Semantic [Brand Name]": {
       "modes": {
-        "Default theme": [
-          "Semantic TruckAPI.Default theme.tokens.json"
-        ]
-      }
-    },
-    "Semantic DT-Companion": {
-      "modes": {
-        "Default theme": [
-          "Semantic DT-Companion.Default theme.tokens.json"
+        "Light mode": [
+          "Semantic [Brand Name].Light mode.tokens.json"
+        ],
+        "Dark mode": [
+          "Semantic [Brand Name].Dark mode.tokens.json"
         ]
       }
     }

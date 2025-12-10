@@ -285,63 +285,15 @@
       }
     }
   },
-  "Product_colors": {
-    "True_blue": {
-      "trueblue-00": {
-        "$type": "color",
-        "$value": "#007eca"
-      },
-      "trueblue-10": {
-        "$type": "color",
-        "$value": "#f6faff"
-      },
-      "trueblue-20": {
-        "$type": "color",
-        "$value": "#eaf4fe"
-      },
-      "trueblue-30": {
-        "$type": "color",
-        "$value": "#c7e2fb"
-      },
-      "trueblue-40": {
-        "$type": "color",
-        "$value": "#95c7f4"
-      },
-      "trueblue-50": {
-        "$type": "color",
-        "$value": "#63aae7"
-      },
-      "trueblue-60": {
-        "$type": "color",
-        "$value": "#2989d1"
-      },
-      "trueblue-70": {
-        "$type": "color",
-        "$value": "#0067b1"
-      },
-      "trueblue-80": {
-        "$type": "color",
-        "$value": "#004689"
-      },
-      "trueblue-90": {
-        "$type": "color",
-        "$value": "#002a5d"
-      },
-      "trueblue-100": {
-        "$type": "color",
-        "$value": "#001335"
-      }
-    }
-  },
   "Fonts": {
     "daimlerTruck-primary": {
       "$type": "string",
       "$value": "Daimler CS",
       "$description": "Font family"
     },
-    "[brand]-secondary": {
+    "[brandName]-primary": {
       "$type": "string",
-      "$value": "insert font name",
+      "$value": "Archivo",
       "$description": "Font family"
     }
   },
