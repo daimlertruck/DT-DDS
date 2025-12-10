@@ -1,109 +1,109 @@
 {
   "Contextual_colors": {
-    "null": {
-      "$type": "color",
-      "$value": "#ffffff00"
-    },
     "Surface": {
+      "surface-contrast": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-10}",
+        "$description": "Base colors are used as the main background color for the system."
+      },
       "surface-default": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-20}",
+        "$value": "{Core_colors.Grey.grey-100}",
         "$description": "Base colors are used as the main background color for the system."
       },
       "surface-light": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-10}",
+        "$value": "{Core_colors.Grey.grey-60}",
         "$description": "Base colors are used as the main background color for the system."
       },
       "surface-medium": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-30}",
+        "$value": "{Core_colors.Grey.grey-80}",
         "$description": "Base colors are used as the main background color for the system."
       },
       "surface-dark": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-100}",
-        "$description": "Base colors are used as the main background color for the system."
-      },
-      "surface-contrast": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-00}",
+        "$value": "{Core_colors.Grey.grey-120}",
         "$description": "Base colors are used as the main background color for the system."
       }
     },
+    "null": {
+      "$type": "color",
+      "$value": "#ffffff00"
+    },
     "Content": {
-      "content-default": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-90}",
-        "$description": "Content colors are applied to texts, icons, etc."
-      },
-      "content-light": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-50}",
-        "$description": "Content colors are applied to texts, icons, etc."
-      },
-      "content-medium": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-70}",
-        "$description": "Content colors are applied to texts, icons, etc."
-      },
-      "content-dark": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-100}",
-        "$description": "Content colors are applied to texts, icons, etc."
-      },
       "content-contrast": {
         "$type": "color",
         "$value": "{Core_colors.Grey.grey-00}",
         "$description": "Content colors are applied to texts, icons, etc."
+      },
+      "content-default": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-10}",
+        "$description": "Content colors are applied to texts, icons, etc."
+      },
+      "content-light": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-80}",
+        "$description": "Content colors are applied to texts, icons, etc."
+      },
+      "content-medium": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-50}",
+        "$description": "Content colors are applied to texts, icons, etc."
+      },
+      "content-dark": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-110}",
+        "$description": "Content colors are applied to texts, icons, etc."
       }
     },
     "Border": {
+      "border-contrast": {
+        "$type": "color",
+        "$value": "{Core_colors.Grey.grey-00}",
+        "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
+      },
       "border-default": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-20}",
+        "$value": "{Core_colors.Grey.grey-80}",
         "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
       },
       "border-light": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-10}",
+        "$value": "{Core_colors.Grey.grey-70}",
         "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
       },
       "border-medium": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-30}",
+        "$value": "{Core_colors.Grey.grey-90}",
         "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
       },
       "border-dark": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-100}",
-        "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
-      },
-      "border-contrast": {
-        "$type": "color",
-        "$value": "{Core_colors.Grey.grey-00}",
+        "$value": "{Core_colors.Grey.grey-110}",
         "$description": "Border colors are applied to the borders of components or containers, as well as to horizontal rules."
       }
     },
     "Primary": {
       "primary-default": {
         "$type": "color",
-        "$value": "{Product_colors.True_blue.trueblue-80}",
+        "$value": "{Core_colors.Petrol.petrol-60}",
         "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
       },
       "primary-light": {
         "$type": "color",
-        "$value": "{Product_colors.True_blue.trueblue-30}",
+        "$value": "{Core_colors.Petrol.petrol-30}",
         "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
       },
       "primary-medium": {
         "$type": "color",
-        "$value": "{Product_colors.True_blue.trueblue-60}",
+        "$value": "{Core_colors.Petrol.petrol-50}",
         "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
       },
       "primary-dark": {
         "$type": "color",
-        "$value": "{Product_colors.True_blue.trueblue-100}",
+        "$value": "{Core_colors.Petrol.petrol-90}",
         "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
       }
     },
@@ -115,7 +115,7 @@
       },
       "secondary-light": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-40}",
+        "$value": "{Core_colors.Grey.grey-30}",
         "$description": "The secondary color is used in secondary elements."
       },
       "secondary-medium": {
@@ -125,8 +125,30 @@
       },
       "secondary-dark": {
         "$type": "color",
-        "$value": "{Core_colors.Grey.grey-100}",
+        "$value": "{Core_colors.Grey.grey-110}",
         "$description": "The secondary color is used in secondary elements."
+      }
+    },
+    "Accent": {
+      "accent-default": {
+        "$type": "color",
+        "$value": "{Core_colors.Yellow.yellow-60}",
+        "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
+      },
+      "accent-light": {
+        "$type": "color",
+        "$value": "{Core_colors.Yellow.yellow-30}",
+        "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
+      },
+      "accent-medium": {
+        "$type": "color",
+        "$value": "{Core_colors.Yellow.yellow-40}",
+        "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
+      },
+      "accent-dark": {
+        "$type": "color",
+        "$value": "{Core_colors.Yellow.yellow-80}",
+        "$description": "The primary color is the most prominent color in the system. It’s used to bring attention to certain elements in the interface."
       }
     },
     "Informative": {
@@ -198,7 +220,7 @@
     "Error": {
       "error-default": {
         "$type": "color",
-        "$value": "{Core_colors.Error.error-60}",
+        "$value": "{Core_colors.Error.error-70}",
         "$description": "The warning color is used in error messages/notifications and buttons that can cause permanent data loss."
       },
       "error-light": {
@@ -233,93 +255,37 @@
     },
     "shape-button": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-20}"
     },
     "shape-card": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
     "shape-checkbox": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-10}"
     },
     "shape-container": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
     "shape-datepicker": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
     "shape-drawer": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-definitionList": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
     },
     "shape-emptyState": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
-    "shape-inputFields": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tag-squared": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-toggle": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-100}"
-    },
-    "shape-progressBar": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tab": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-segmentedControl": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-radioButton": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-500}"
-    },
-    "shape-pagination": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-toast": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-messages": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-switch": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-modal": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tag-rounded": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-50}"
-    },
-    "shape-timepicker": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-tooltip": {
-      "$type": "dimension",
-      "$value": "{Radius.radius-0}"
-    },
-    "shape-definitionList": {
+    "shape-footer": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
@@ -327,21 +293,37 @@
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
+    "shape-inputFields": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-messages": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-modal": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
     "shape-navigationMenu": {
       "$type": "dimension",
       "$value": "{Radius.radius-0}"
     },
     "shape-option": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
-    "shape-KPIcard": {
+    "shape-pagination": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
     },
-    "shape-footer": {
+    "shape-progressBar": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-segmentedControl": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
     },
     "shape-slider": {
       "$type": "dimension",
@@ -349,7 +331,43 @@
     },
     "shape-skeleton": {
       "$type": "dimension",
-      "$value": "{Radius.radius-0}"
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-switch": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-radioButton": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-500}"
+    },
+    "shape-tab": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-tag-squared": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-tag-rounded": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-50}"
+    },
+    "shape-timepicker": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-toast": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
+    },
+    "shape-toggle": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-100}"
+    },
+    "shape-tooltip": {
+      "$type": "dimension",
+      "$value": "{Radius.radius-30}"
     }
   }
 }

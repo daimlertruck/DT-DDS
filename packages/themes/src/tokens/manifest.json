@@ -3,74 +3,39 @@
   "collections": {
     "Semantic Daimler Truck": {
       "modes": {
-        "Default theme": [
-          "Semantic Daimler Truck.Default theme.tokens.json"
-        ]
+        "Default theme": ["Semantic Daimler Truck.Default theme.tokens.json"]
       }
     },
     "Primitives": {
       "modes": {
-        "Value": [
-          "Primitives.Value.tokens.json"
-        ]
+        "Value": ["Primitives.Value.tokens.json"]
       }
     },
     "Themes": {
       "modes": {
-        "Daimler Truck": [
-          "Themes.Daimler Truck.tokens.json"
-        ],
-        "DT-Companion": [
-          "Themes.DT-Companion.tokens.json"
-        ],
-        "TruckAPI": [
-          "Themes.TruckAPI.tokens.json"
-        ]
+        "Daimler Truck": ["Themes.Daimler Truck.tokens.json"],
+        "[Brand Name]": ["Themes.[Brand Name].tokens.json"]
       }
     },
     "Responsiveness": {
       "modes": {
-        "XL Desktop": [
-          "Responsiveness.XL Desktop.tokens.json"
-        ],
-        "Lg Desktop": [
-          "Responsiveness.Lg Desktop.tokens.json"
-        ],
-        "Md Tablet": [
-          "Responsiveness.Md Tablet.tokens.json"
-        ],
-        "Sm Mobile": [
-          "Responsiveness.Sm Mobile.tokens.json"
-        ]
+        "XL Desktop": ["Responsiveness.XL Desktop.tokens.json"],
+        "Lg Desktop": ["Responsiveness.Lg Desktop.tokens.json"],
+        "Md Tablet": ["Responsiveness.Md Tablet.tokens.json"],
+        "Sm Mobile": ["Responsiveness.Sm Mobile.tokens.json"]
       }
     },
-    "Semantic TruckAPI": {
+    "Semantic [Brand Name]": {
       "modes": {
-        "Default theme": [
-          "Semantic TruckAPI.Default theme.tokens.json"
-        ]
-      }
-    },
-    "Semantic DT-Companion": {
-      "modes": {
-        "Default theme": [
-          "Semantic DT-Companion.Default theme.tokens.json"
-        ]
+        "Light mode": ["Semantic [Brand Name].Light mode.tokens.json"],
+        "Dark mode": ["Semantic [Brand Name].Dark mode.tokens.json"]
       }
     }
   },
   "styles": {
-    "text": [
-      "text.styles.tokens.json"
-    ],
-    "effect": [
-      "effect.styles.tokens.json"
-    ],
-    "color": [
-      "color.styles.tokens.json"
-    ],
-    "grid": [
-      "grid.styles.tokens.json"
-    ]
+    "text": ["text.styles.tokens.json"],
+    "effect": ["effect.styles.tokens.json"],
+    "color": ["color.styles.tokens.json"],
+    "grid": ["grid.styles.tokens.json"]
   }
 }
