@@ -1,60 +1,32 @@
-import { Children, cloneElement, ReactElement, useMemo } from 'react';
+import { useTheme } from '@emotion/react';
 
 import { Box } from '@dt-dds/react-box';
 
 import { RadioInputStyled, RadioLabelStyled } from './Radio.styled';
-import { RadioGroupProps, RadioProps } from './types';
+import { RadioProps } from './types';
 
-export const RadioGroup = ({
-  children,
-  onChange,
-  dataTestId,
-  direction = 'row',
-  name,
-}: RadioGroupProps) => {
-  const clonedChildren = useMemo(
-    () =>
-      Children.map(children as ReactElement<RadioGroupProps>, (child) => {
-        return (
-          child &&
-          cloneElement(child, {
-            ...child.props,
-            onChange,
-            name,
-          })
-        );
-      }),
-    [children, onChange, name]
-  );
-
-  return (
-    <Box
-      data-testid={dataTestId ?? 'radio-group'}
-      style={{ flexDirection: direction, gap: 12 }}
-    >
-      {clonedChildren}
-    </Box>
-  );
-};
-
-const Radio = ({
+export const Radio = ({
   onChange,
   label,
   isDefaultChecked,
   isDisabled,
   name = 'radio-group-name',
   value,
+  hasError,
 }: RadioProps) => {
   const radioId = `${value}-id`;
+  const theme = useTheme();
+
   return (
     <Box
       style={{
         flexDirection: 'row',
-        gap: 8,
+        gap: theme.spacing.spacing_30,
         cursor: isDisabled ? 'not-allowed' : 'pointer',
       }}
     >
       <RadioInputStyled
+        data-error={hasError}
         defaultChecked={isDefaultChecked}
         disabled={isDisabled}
         id={radioId}
@@ -67,5 +39,3 @@ const Radio = ({
     </Box>
   );
 };
-
-export default Radio;
