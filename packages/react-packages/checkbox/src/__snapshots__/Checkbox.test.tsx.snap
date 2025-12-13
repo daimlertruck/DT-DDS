@@ -1,102 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CheckBox /> component renders checkbox checked 1`] = `
+exports[`<Checkbox /> component renders checkbox correctly 1`] = `
 .emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
   cursor: pointer;
-}
-
-.emotion-0>div {
-  border-radius: 0px;
-  border: none;
-  background-color: #00677f;
+  position: relative;
 }
 
 .emotion-2 {
-  height: 20px;
-  min-height: 20px;
-  width: 20px;
-  min-width: 20px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  cursor: inherit;
 }
 
-.emotion-4:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-6 {
-  font-family: DTUI-icons-outlined;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 20px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  font-variation-settings: 'FILL' 0;
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'liga';
-}
-
-<div>
-  <label
-    class="emotion-0 emotion-1"
-    data-testid="checkbox-id"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <input
-        checked=""
-        class="emotion-4 emotion-5"
-        type="checkbox"
-      />
-      <i
-        class="emotion-6"
-        color="#ffffff"
-        data-testid="icon"
-      >
-        check
-      </i>
-    </div>
-  </label>
-</div>
-`;
-
-exports[`<CheckBox /> component renders checkbox disabled 1`] = `
-.emotion-0 {
+.emotion-4 {
+  pointer-events: none;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -105,118 +38,26 @@ exports[`<CheckBox /> component renders checkbox disabled 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%;
-  cursor: not-allowed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 0px;
+  height: 24px;
+  min-height: 24px;
+  width: 24px;
+  min-width: 24px;
+  background-color: #ffffff;
+  border: 1px solid #00677f;
 }
 
-.emotion-0>div {
-  border-radius: 0px;
-  border: 1px solid #8ab9c4;
+label:hover .emotion-4 {
   background-color: #deeff2;
 }
 
-.emotion-2 {
-  height: 20px;
-  min-height: 20px;
-  width: 20px;
-  min-width: 20px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-}
-
-<div>
-  <label
-    class="emotion-0 emotion-1"
-    data-testid="checkbox-id"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <input
-        class="emotion-4 emotion-5"
-        disabled=""
-        type="checkbox"
-      />
-    </div>
-  </label>
-</div>
-`;
-
-exports[`<CheckBox /> component renders checkbox with label 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-0>div {
-  border-radius: 0px;
-  border: 1px solid #8ab9c4;
-  background-color: #ffffff;
-}
-
-.emotion-0:hover>div {
-  border: 1px solid #000000;
-}
-
-.emotion-2 {
-  height: 20px;
-  min-height: 20px;
-  width: 20px;
-  min-width: 20px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
+input:focus-visible+.emotion-4 {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
 }
 
 .emotion-6 {
@@ -224,16 +65,20 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-left: 8px;
   font-family: Daimler CS;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 0px;
-  line-height: 16px;
+  line-height: 20px;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #252525;
@@ -242,92 +87,22 @@ exports[`<CheckBox /> component renders checkbox with label 1`] = `
 <div>
   <label
     class="emotion-0 emotion-1"
-    data-testid="checkbox-id"
+    data-testid="checkbox"
+    for="checkbox"
   >
-    <div
+    <input
+      aria-invalid="false"
       class="emotion-2 emotion-3"
-    >
-      <input
-        class="emotion-4 emotion-5"
-        type="checkbox"
-      />
-    </div>
-    <span
+      id="checkbox"
+      type="checkbox"
+    />
+    <div
+      class="emotion-4 emotion-5"
+    />
+    <div
       class="emotion-6 emotion-7"
     >
       Label
-    </span>
-  </label>
-</div>
-`;
-
-exports[`<CheckBox /> component renders checkbox without label 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-}
-
-.emotion-0>div {
-  border-radius: 0px;
-  border: 1px solid #8ab9c4;
-  background-color: #ffffff;
-}
-
-.emotion-0:hover>div {
-  border: 1px solid #000000;
-}
-
-.emotion-2 {
-  height: 20px;
-  min-height: 20px;
-  width: 20px;
-  min-width: 20px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-4 {
-  cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.emotion-4:disabled {
-  cursor: not-allowed;
-}
-
-<div>
-  <label
-    class="emotion-0 emotion-1"
-    data-testid="checkbox-id"
-  >
-    <div
-      class="emotion-2 emotion-3"
-    >
-      <input
-        class="emotion-4 emotion-5"
-        type="checkbox"
-      />
     </div>
   </label>
 </div>

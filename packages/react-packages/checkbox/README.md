@@ -6,31 +6,57 @@ A checkbox toggles between checked and unchecked states, enabling users to make 
 
 ```jsx
 import { Checkbox } from '@dt-dds/react-checkbox';
+import { useState } from 'react';
 
 export const App = () => {
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = useState(false);
 
-  const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (evt) => {
     setChecked(evt.target.checked);
   };
 
   return (
-    <Checkbox isChecked={checked} onChange={handleChange}>
-      Label
+    <Checkbox checked={checked} onChange={handleChange}>
+      Accept terms and conditions
     </Checkbox>
   );
 };
 ```
 
+## Indeterminate State
+
+```jsx
+const [checkedItems, setCheckedItems] = useState([false, false, false]);
+
+const allChecked = checkedItems.every(Boolean);
+const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
+
+<Checkbox
+  checked={allChecked}
+  indeterminate={isIndeterminate}
+  onChange={(e) => setCheckedItems([e.target.checked, e.target.checked, e.target.checked])}
+>
+  Select all
+</Checkbox>
+```
+
 ## Properties
 
-| Property     | Type                                           | Default       | Description                                                                   |
-| ------------ | ---------------------------------------------- | ------------- | ----------------------------------------------------------------------------- |
-| `children`   | `ReactNode`                                    | -             | Child components to be rendered as the label.                                 |
-| `onChange`   | `(evt: ChangeEvent<HTMLInputElement>) => void` | -             | The triggered function when the input change.                                 |
-| `isDisabled` | `boolean`                                      | `false`       | Specifies if the element should be disabled.                                  |
-| `isChecked`  | `boolean`                                      | `false`       | Specifies if the element should be pre-selected (checked) when the page loads |
-| `dataTestId` | `string`                                       | `checkbox-id` | Customizable test identifier                                                  |
+| Property           | Type                                          | Default       | Description                                                                 |
+|--------------------|-----------------------------------------------|---------------|-----------------------------------------------------------------------------|
+| isChecked          | `boolean`                                     | —             | Controls the checked state                                                  |
+| onChange           | `(evt: ChangeEvent<HTMLInputElement>) => void`| —             | Callback fired when the state changes.                                      |
+| isDisabled         | `boolean`                                     | `false`       | If `true`, the checkbox is disabled.                                        |
+| isIndeterminate    | `boolean`                                     | `false`       | If `true`, the checkbox appears in an indeterminate state.                  |
+| hasError           | `boolean`                                     | `false`       | If `true`, the checkbox displays an error state.                            |
+| size               | `'small' \| 'large'`                          | `'large'`     | Size of the checkbox.                                                       |
+| label              | `ReactNode`                                   | —             | Text or elements to display as the label.                                   |
+| children           | `ReactNode`                                   | —             | Alternative way to provide label content.                                   |
+| dataTestId         | `string`                                      | `'checkbox'`  | Test identifier for testing libraries.                                      |
+| id                 | `string`                                      | —             | HTML `id` attribute for the input element.                                  |
+| aria-label         | `string`                                      | —             | Accessibility label (required if no `label` or `children` provided).       |
+| style              | `CSSProperties`                               | —             | Inline styles for the wrapper.                                              |
+| ref                | `Ref<HTMLInputElement>`                       | —             | Ref forwarded to the input element.                                         |
 
 ### Note
 

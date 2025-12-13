@@ -4,41 +4,22 @@ import { withProviders } from '@dt-dds/react-core';
 
 import { Checkbox } from './Checkbox';
 
-describe('<CheckBox /> component', () => {
+describe('<Checkbox /> component', () => {
   const ProvidedCheckBox = withProviders(Checkbox);
 
-  it('renders checkbox with label', () => {
+  it('renders checkbox correctly', () => {
     const { container } = render(
       <ProvidedCheckBox
         isChecked={false}
         isDisabled={false}
-        onChange={() => null}
-      >
-        Label
-      </ProvidedCheckBox>
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('renders checkbox without label', () => {
-    const { container } = render(
-      <ProvidedCheckBox
-        isChecked={false}
-        isDisabled={false}
+        label='Label'
         onChange={() => null}
       />
     );
     expect(container).toMatchSnapshot();
   });
 
-  it('renders checkbox checked', () => {
-    const { container } = render(
-      <ProvidedCheckBox isChecked isDisabled={false} onChange={() => null} />
-    );
-    expect(container).toMatchSnapshot();
-  });
-
-  it('onChange is triggered', () => {
+  it('calls onChange when clicked', () => {
     const onChangeMock = jest.fn();
     const { getByRole } = render(
       <ProvidedCheckBox
@@ -47,27 +28,57 @@ describe('<CheckBox /> component', () => {
         onChange={onChangeMock}
       />
     );
-    const checkBox = getByRole('checkbox');
 
-    expect(checkBox).toBeInTheDocument();
-
-    fireEvent.click(checkBox);
+    fireEvent.click(getByRole('checkbox'));
 
     expect(onChangeMock).toHaveBeenCalledTimes(1);
   });
 
-  it('renders checkbox disabled', () => {
+  it('does not call onChange when disabled', () => {
     const onChangeMock = jest.fn();
-    const { container, getByRole } = render(
+    const { getByRole } = render(
       <ProvidedCheckBox isChecked={false} isDisabled onChange={onChangeMock} />
     );
-    const checkBox = getByRole('checkbox');
 
-    expect(checkBox).toBeInTheDocument();
+    const checkbox = getByRole('checkbox');
+    fireEvent.click(checkbox);
 
-    fireEvent.click(checkBox);
+    expect(onChangeMock).not.toHaveBeenCalled();
+    expect(checkbox).toBeDisabled();
+  });
 
-    expect(onChangeMock).toHaveBeenCalledTimes(0);
-    expect(container).toMatchSnapshot();
+  it('sets indeterminate state correctly', () => {
+    const { getByRole } = render(
+      <ProvidedCheckBox
+        isChecked={false}
+        isIndeterminate
+        onChange={() => null}
+      />
+    );
+
+    const checkbox = getByRole('checkbox') as HTMLInputElement;
+
+    expect(checkbox.indeterminate).toBe(true);
+    expect(checkbox).toHaveAttribute('aria-checked', 'mixed');
+  });
+
+  it('sets error state correctly', () => {
+    const { getByRole } = render(
+      <ProvidedCheckBox hasError isChecked={false} onChange={() => null} />
+    );
+
+    expect(getByRole('checkbox')).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it('renders without label and uses aria-label', () => {
+    const { getByRole } = render(
+      <ProvidedCheckBox
+        aria-label='Custom label'
+        isChecked={false}
+        onChange={() => null}
+      />
+    );
+
+    expect(getByRole('checkbox')).toHaveAttribute('aria-label', 'Custom label');
   });
 });
