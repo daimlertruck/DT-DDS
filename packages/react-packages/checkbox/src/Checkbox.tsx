@@ -1,83 +1,101 @@
-import { ChangeEvent, ComponentPropsWithRef, forwardRef } from 'react';
+import { ChangeEvent, forwardRef, useEffect, useRef } from 'react';
 
 import { useTheme } from '@emotion/react';
 
-import { BaseProps } from '@dt-dds/react-core';
 import { Icon } from '@dt-dds/react-icon';
 
 import {
   CheckboxStyled,
   CheckboxInputStyled,
   CheckboxLabelStyled,
-  CheckBoxInputWrapper,
+  CheckboxBoxStyled,
 } from './Checkbox.styled';
+import { CheckboxProps } from './types';
+import { mergeRefs } from './utils';
 
-export interface CheckBoxProps
-  extends BaseProps,
-    ComponentPropsWithRef<'input'> {
-  onChange?: (evt: ChangeEvent<HTMLInputElement>) => void;
-  isChecked?: boolean;
-  isDisabled?: boolean;
-  className?: string;
-}
-
-export const Checkbox = forwardRef<HTMLInputElement, CheckBoxProps>(
+export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     {
-      dataTestId = 'checkbox-id',
+      dataTestId = 'checkbox',
       onChange,
-      children,
       isChecked = false,
       isDisabled = false,
+      isIndeterminate = false,
+      hasError = false,
+      size = 'large',
+      label,
+      children,
       style,
-      className,
+      id,
+      'aria-label': ariaLabel,
       ...rest
-    }: CheckBoxProps,
+    },
     ref
   ) => {
     const theme = useTheme();
+    const internalRef = useRef<HTMLInputElement | null>(null);
+    const mergedRef = mergeRefs(internalRef, ref);
 
-    const handleOnChangeTrigger = (
-      event: React.ChangeEvent<HTMLInputElement>
-    ) => {
-      if (isDisabled) {
-        return;
+    useEffect(() => {
+      if (internalRef.current) {
+        internalRef.current.indeterminate = isIndeterminate;
       }
+    }, [isIndeterminate]);
 
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+      if (isDisabled) return;
       onChange?.(event);
     };
 
+    const hasLabel = Boolean(label || children);
+    const inputId = id || (hasLabel ? dataTestId : undefined);
+    const iconCode = isIndeterminate ? 'remove' : isChecked ? 'check' : null;
+    const iconSize = size === 'small' ? 'medium' : 'large';
+
     return (
       <CheckboxStyled
-        className={className}
+        $disabled={isDisabled}
         data-testid={dataTestId}
-        isChecked={isChecked}
-        isDisabled={isDisabled}
+        htmlFor={inputId}
         style={style}
       >
-        <CheckBoxInputWrapper>
-          <CheckboxInputStyled
-            checked={isChecked}
-            disabled={isDisabled}
-            onChange={handleOnChangeTrigger}
-            ref={ref}
-            type='checkbox'
-            {...rest}
-          />
-          {isChecked ? (
+        <CheckboxInputStyled
+          aria-checked={isIndeterminate ? 'mixed' : undefined}
+          aria-invalid={hasError}
+          aria-label={!hasLabel ? ariaLabel || 'Checkbox' : undefined}
+          checked={isChecked}
+          disabled={isDisabled}
+          id={inputId}
+          onChange={handleChange}
+          ref={mergedRef}
+          type='checkbox'
+          {...rest}
+        />
+
+        <CheckboxBoxStyled
+          $checked={isChecked}
+          $disabled={isDisabled}
+          $error={hasError}
+          $indeterminate={isIndeterminate}
+          $size={size}
+        >
+          {iconCode ? (
             <Icon
-              code='check'
+              code={iconCode}
               color={theme.palette.content.contrast}
-              size='medium'
+              size={iconSize}
             />
           ) : null}
-        </CheckBoxInputWrapper>
-        {children ? (
-          <CheckboxLabelStyled isChecked={isChecked} isDisabled={isDisabled}>
-            {children}
+        </CheckboxBoxStyled>
+
+        {hasLabel ? (
+          <CheckboxLabelStyled $disabled={isDisabled} $size={size}>
+            {label || children}
           </CheckboxLabelStyled>
         ) : null}
       </CheckboxStyled>
     );
   }
 );
+
+Checkbox.displayName = 'Checkbox';
