@@ -1,5 +1,22 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.99
+
+### Minor Changes
+
+- feat: auto-generate themes from tokens
+
+### Patch Changes
+
+- chore(themes): package.json clean-up
+- chore(tokens): update token files
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.56
+  - @dt-dds/react-spinner@1.0.0-beta.104
+
 ## 1.0.0-beta.98
 
 ### Patch Changes

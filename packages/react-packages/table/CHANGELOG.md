@@ -1,5 +1,21 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.52
+
+### Minor Changes
+
+- feat: auto-generate themes from tokens
+
+### Patch Changes
+
+- chore(themes): package.json clean-up
+- chore(tokens): update token files
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.56
+
 ## 1.0.0-beta.51
 
 ### Minor Changes

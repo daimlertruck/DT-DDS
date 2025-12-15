@@ -1,5 +1,16 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.11
+
+### Minor Changes
+
+- feat: auto-generate themes from tokens
+
+### Patch Changes
+
+- chore(themes): package.json clean-up
+- chore(tokens): update token files
+
 ## 1.0.0-beta.10
 
 ### Patch Changes

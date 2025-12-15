@@ -1,5 +1,25 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.46
+
+### Minor Changes
+
+- feat: auto-generate themes from tokens
+
+### Patch Changes
+
+- chore(themes): package.json clean-up
+- test: update snapshots for token changes
+- chore(tokens): update token files
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.56
+  - @dt-dds/react-icon@1.0.0-beta.59
+  - @dt-dds/react-tooltip@1.0.0-beta.65
+
 ## 1.0.0-beta.45
 
 ### Minor Changes
