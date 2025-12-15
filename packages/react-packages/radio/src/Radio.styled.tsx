@@ -1,46 +1,106 @@
 import styled from '@emotion/styled';
 
-export const RadioInputStyled = styled.input`
-  ${({ theme }) => `
+import { RadioSize } from './types';
+
+const RADIO_SIZES: Record<
+  RadioSize,
+  {
+    outerCircle: number;
+    innerCircle: number;
+  }
+> = {
+  large: {
+    outerCircle: 24,
+    innerCircle: 10,
+  },
+  small: {
+    outerCircle: 20,
+    innerCircle: 8,
+  },
+};
+
+interface RadioInputStyledProps {
+  radioSize: RadioSize;
+}
+
+export const RadioInputStyled = styled.input<RadioInputStyledProps>`
+  ${({ theme, radioSize }) => `
     background: ${theme.palette.surface.contrast};
-    border: 1px solid ${theme.palette.border.default};
+    border: 1px solid ${theme.palette.informative.default};
     border-radius: 50%;
-    width: 24px;
-    height: 24px;
+    width: ${RADIO_SIZES[radioSize].outerCircle}px;
+    height: ${RADIO_SIZES[radioSize].outerCircle}px;
     appearance: none;
-    
-    &:disabled {
-      pointer-events: none;
-      cursor: not-allowed;
-    }
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
 
     &:disabled + label {
       color: ${theme.palette.content.light};
     }
 
-    &:checked {
-      border-width: 7px;
-      border-color: ${theme.palette.primary.default};
+    &:hover {
+      background: ${theme.palette.informative.light};
     }
 
-    &:checked:disabled {
-      border-color: ${theme.palette.primary.medium};
+    &:checked:not(:disabled):hover {
+      background: ${theme.palette.informative.dark};
+      border-color: ${theme.palette.informative.dark};
+    }
+
+    &:checked {
+      background: ${theme.palette.informative.default};
+    }
+
+    &:disabled {
+      pointer-events: none;
+      cursor: not-allowed;
+      border-color: ${theme.palette.informative.light};
+      background-color: ${theme.palette.informative.light};
     }
 
     &:checked:before {
-      content: '';
-      height: 10px;
-      width: 10px;
+      content: "";
+      width: ${RADIO_SIZES[radioSize].innerCircle}px;
+      height: ${RADIO_SIZES[radioSize].innerCircle}px;
+      background: ${theme.palette.surface.contrast};
       border-radius: 50%;
-      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
-  `}
-`;
 
-export const RadioLabelStyled = styled.label`
-  ${({ theme }) => `
-    ${theme.fontStyles.bodyMdRegular};
-    color: ${theme.palette.content.default};
-    cursor: inherit;
+    &[data-error="true"] {
+      border-color: ${theme.palette.error.default};
+    }
+
+    &[data-error="true"]:hover {
+      background-color: ${theme.palette.error.light};
+    }
+
+    &[data-error="true"]:disabled {
+      background-color: ${theme.palette.error.light};
+      border-color: ${theme.palette.error.light};
+    }
+
+    &[data-error="true"]:checked {
+      background-color: ${theme.palette.error.default};
+    }
+
+    &[data-error="true"]:checked:disabled {
+      background-color: ${theme.palette.error.light};
+      border-color: ${theme.palette.error.light};
+    }
+    
+    &[data-error="true"]:checked:not(:disabled):hover {
+      background-color: ${theme.palette.error.dark};
+      border-color: ${theme.palette.error.dark};
+    }
+
+    &:focus-visible {
+      outline: 2px solid ${theme.palette.primary.default};
+      outline-offset: 2px;
+    }
   `}
 `;
