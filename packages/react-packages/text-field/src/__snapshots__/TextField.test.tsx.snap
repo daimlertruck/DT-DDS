@@ -22,7 +22,7 @@ exports[`<TextField /> component renders disabled input 1`] = `
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -171,11 +171,11 @@ exports[`<TextField /> component renders disabled input 1`] = `
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -300,7 +300,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -330,7 +330,7 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -477,11 +477,11 @@ exports[`<TextField /> component renders input with extras suffix and prefix ele
 }
 
 .emotion-10:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10 input:-webkit-autofill,
@@ -632,7 +632,7 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -662,7 +662,7 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -781,11 +781,11 @@ exports[`<TextField /> component renders input with light background fill 1`] = 
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -903,7 +903,7 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -933,7 +933,7 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -1048,11 +1048,11 @@ exports[`<TextField /> component renders input with variant baseLine 1`] = `
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -1170,7 +1170,7 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0:has(input[readonly]:not([disabled]):focus) label {
@@ -1307,11 +1307,11 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -1352,19 +1352,19 @@ exports[`<TextField /> component renders input without floating label 1`] = `
 }
 
 .emotion-7::-webkit-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7::-moz-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7::placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:disabled {
@@ -1429,7 +1429,7 @@ exports[`<TextField /> component should render the TextField with error styles a
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -1578,11 +1578,11 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -1623,19 +1623,19 @@ exports[`<TextField /> component should render the TextField with error styles a
 }
 
 .emotion-7::-webkit-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7::-moz-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7::placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:disabled {
@@ -1726,7 +1726,7 @@ exports[`<TextField /> component should render the TextField with info message 1
 .emotion-0:has(input[readonly]:not(input[disabled])) i,
 .emotion-0:has(input[readonly]:not(input[disabled])) label,
 .emotion-0:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-0 false input[type="search"]::-webkit-search-decoration,
@@ -1756,7 +1756,7 @@ exports[`<TextField /> component should render the TextField with info message 1
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -1875,11 +1875,11 @@ exports[`<TextField /> component should render the TextField with info message 1
 }
 
 .emotion-7:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-7 input:-webkit-autofill,
@@ -1951,7 +1951,7 @@ exports[`<TextField /> component should render the TextField with info message 1
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
 }
 
 <div>

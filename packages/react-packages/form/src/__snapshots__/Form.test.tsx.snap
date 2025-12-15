@@ -34,7 +34,7 @@ exports[`<Form /> component renders simple form 1`] = `
 .emotion-2:has(input[readonly]:not(input[disabled])) i,
 .emotion-2:has(input[readonly]:not(input[disabled])) label,
 .emotion-2:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2 false input[type="search"]::-webkit-search-decoration,
@@ -64,7 +64,7 @@ exports[`<Form /> component renders simple form 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -183,11 +183,11 @@ exports[`<Form /> component renders simple form 1`] = `
 }
 
 .emotion-6:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-6:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-6 input:-webkit-autofill,
@@ -396,7 +396,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 .emotion-6:has(input[readonly]:not(input[disabled])) i,
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-6 false input[type="search"]::-webkit-search-decoration,
@@ -426,7 +426,7 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -545,11 +545,11 @@ exports[`<Form /> component with Form.Group should render a disabled form group 
 }
 
 .emotion-10:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10 input:-webkit-autofill,
@@ -733,7 +733,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 .emotion-6:has(input[readonly]:not(input[disabled])) i,
 .emotion-6:has(input[readonly]:not(input[disabled])) label,
 .emotion-6:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-6 false input[type="search"]::-webkit-search-decoration,
@@ -763,7 +763,7 @@ exports[`<Form /> component with Form.Group should render a form with display fl
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -882,11 +882,11 @@ exports[`<Form /> component with Form.Group should render a form with display fl
 }
 
 .emotion-10:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-10 input:-webkit-autofill,
@@ -1128,7 +1128,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 .emotion-9:has(input[readonly]:not(input[disabled])) i,
 .emotion-9:has(input[readonly]:not(input[disabled])) label,
 .emotion-9:has(input[readonly]:not(input[disabled])) label>span {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-9 false input[type="search"]::-webkit-search-decoration,
@@ -1158,7 +1158,7 @@ exports[`<Form /> component with Form.Group should render a form with group titl
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -1277,11 +1277,11 @@ exports[`<Form /> component with Form.Group should render a form with group titl
 }
 
 .emotion-13:-moz-read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-13:read-only {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-13 input:-webkit-autofill,

@@ -49,19 +49,19 @@ exports[`<TextArea /> component should render default text area 1`] = `
 }
 
 .emotion-2::-webkit-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2::-moz-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2:-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2::placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2:focus-within,
@@ -71,13 +71,13 @@ exports[`<TextArea /> component should render default text area 1`] = `
 
 .emotion-2:-moz-read-only:not(:disabled) {
   border-color: #e6e6e6;
-  color: #3e3e3e;
+  color: #696969;
   background-color: #f2f2f2;
 }
 
 .emotion-2:read-only:not(:disabled) {
   border-color: #e6e6e6;
-  color: #3e3e3e;
+  color: #696969;
   background-color: #f2f2f2;
 }
 
@@ -153,7 +153,7 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 12px;
@@ -194,19 +194,19 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
 }
 
 .emotion-2::-webkit-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2::-moz-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2:-ms-input-placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2::placeholder {
-  color: #3e3e3e;
+  color: #696969;
 }
 
 .emotion-2:focus-within,
@@ -216,13 +216,13 @@ exports[`<TextArea /> component should render text area with floating label 1`] 
 
 .emotion-2:-moz-read-only:not(:disabled) {
   border-color: #e6e6e6;
-  color: #3e3e3e;
+  color: #696969;
   background-color: #f2f2f2;
 }
 
 .emotion-2:read-only:not(:disabled) {
   border-color: #e6e6e6;
-  color: #3e3e3e;
+  color: #696969;
   background-color: #f2f2f2;
 }
 

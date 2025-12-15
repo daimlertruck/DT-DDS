@@ -36,7 +36,7 @@ exports[`<Select /> Single Select should render with correct styles 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   cursor: inherit;
   font-family: Daimler CS;
   font-size: 14px;
@@ -171,7 +171,7 @@ exports[`<Select /> Single Select should render with correct styles 1`] = `
   line-height: 16px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #3e3e3e;
+  color: #696969;
   padding-left: 12px;
 }
 
