@@ -21,14 +21,16 @@ export const App = () => {
 
 ### Radio
 
-| Property           | Type                                           | Default            | Description                                                                           |
-| ------------------ | ---------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------- |
-| `label`            | `string`                                       | -                  | A label to help users understand the scope of the radio.                              |
-| `onChange`         | `(evt: ChangeEvent<HTMLInputElement>) => void` | -                  | The triggered function when the input change.                                         |
-| `isDisabled`       | `boolean`                                      | `false`            | Specifies if the element should be disabled.                                          |
-| `isDefaultChecked` | `boolean`                                      | `false`            | If present, indicates that this radio button is the default selected one in the group |
-| `name`             | `string`                                       | 'radio-group-name' | Should represent the group name                                                       |
-| `value`            | `string`                                       | -                  | String containing the radio button's value                                            |
+| Property           | Type                                           | Default            | Description                                                                                                         |
+| ------------------ | ---------------------------------------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `label`            | `string`                                       | -                  | A label to help users understand the scope of the radio.                                                            |
+| `onChange`         | `(evt: ChangeEvent<HTMLInputElement>) => void` | -                  | The triggered function when the input change.                                                                       |
+| `isDisabled`       | `boolean`                                      | `false`            | Specifies if the element should be disabled.                                                                        |
+| `isDefaultChecked` | `boolean`                                      | `false`            | Indicates that this default radio button is selected one in the group.                                              |
+| `isChecked`        | `boolean`                                      | `false`            | Indicates that this radio button is selected one in the group. Used when the radio is controlled by another element |
+| `name`             | `string`                                       | `radio-group-name` | Should represent the group name                                                                                     |
+| `value`            | `string`                                       | -                  | String containing the radio button's value                                                                          |
+| `hasError`         | `boolean`                                      | `false`            | Indicates that the radio button has an error                                                                        |
 
 ### RadioGroup
 
@@ -39,6 +41,7 @@ export const App = () => {
 | `direction`  | "row" \| "column"                              | row     | Sets the flex direction of the group          |
 | `name`       | `string`                                       | -       | Should represent the group name               |
 | `onChange`   | `(evt: ChangeEvent<HTMLInputElement>) => void` | -       | The triggered function when the input change. |
+| `size`       | `"small" \| "large"                            | `large` | Sets the dimensions of the radio buttons      |
 
 ## Stack
 
