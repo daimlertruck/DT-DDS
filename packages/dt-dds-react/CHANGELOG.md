@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.268
+
+### Minor Changes
+
+- feat: add sidebar compound component
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [223664b]
+  - @dt-dds/react-sidebar@1.0.0-beta.1
+  - @dt-dds/react-box@1.0.0-beta.69
+  - @dt-dds/react-dropdown@1.0.0-beta.90
+  - @dt-dds/react-radio@1.0.0-beta.85
+  - @dt-dds/react-select@1.0.0-beta.81
+  - @dt-dds/react-spinner@1.0.0-beta.103
+  - @dt-dds/react-tabs@1.0.0-beta.98
+  - @dt-dds/react-text-area@1.0.0-beta.80
+  - @dt-dds/react-date-picker@1.0.0-beta.91
+  - @dt-dds/react-button@1.0.0-beta.98
+  - @dt-dds/react-modal@1.0.0-beta.98
+  - @dt-dds/react-text-field@1.0.0-beta.108
+  - @dt-dds/react-empty-state@1.0.0-beta.118
+  - @dt-dds/react-link@1.0.0-beta.75
+  - @dt-dds/react-message@1.0.0-beta.114
+  - @dt-dds/react-toast@1.0.0-beta.115
+
 ## 1.0.0-beta.267
 
 ### Patch Changes

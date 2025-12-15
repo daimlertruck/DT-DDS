@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-box",
-  "version": "1.0.0-beta.68",
+  "version": "1.0.0-beta.69",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
