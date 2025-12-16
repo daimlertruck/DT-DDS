@@ -58,9 +58,17 @@ export const conventionalCommitChangeset = async (
       ? changesets
       : difference(changesets, currentChangesets);
 
-  writePackageNamesToBeTagged(
-    newChangesets.map(({ releases }) => releases.map(({ name }) => name)).flat()
-  );
+  // Include packages from BOTH auto-generated AND existing manual changesets
+  const allAffectedPackages = [
+    ...newChangesets
+      .map(({ releases }) => releases.map(({ name }) => name))
+      .flat(),
+    ...currentChangesets
+      .map(({ releases }) => releases.map(({ name }) => name))
+      .flat(),
+  ];
+
+  writePackageNamesToBeTagged([...new Set(allAffectedPackages)]);
 
   newChangesets.forEach((changeset) => writeChangeset(changeset, cwd));
 };
