@@ -1,5 +1,20 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.19
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.74
+
 ## 1.0.0-beta.18
 
 ### Major Changes

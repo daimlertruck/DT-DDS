@@ -1,5 +1,16 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.80
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.103
+
 ## 1.0.0-beta.79
 
 ### Patch Changes

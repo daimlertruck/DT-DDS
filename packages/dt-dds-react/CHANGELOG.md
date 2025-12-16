@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.275
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-box@1.0.0-beta.74
+  - @dt-dds/react-radio@1.0.0-beta.90
+  - @dt-dds/react-app-header@1.0.0-beta.19
+  - @dt-dds/react-dropdown@1.0.0-beta.95
+  - @dt-dds/react-date-picker@1.0.0-beta.96
+  - @dt-dds/react-select@1.0.0-beta.86
+  - @dt-dds/react-spinner@1.0.0-beta.108
+  - @dt-dds/react-button@1.0.0-beta.103
+  - @dt-dds/react-empty-state@1.0.0-beta.123
+  - @dt-dds/react-link@1.0.0-beta.80
+  - @dt-dds/react-message@1.0.0-beta.119
+  - @dt-dds/react-toast@1.0.0-beta.120
+  - @dt-dds/react-modal@1.0.0-beta.103
+  - @dt-dds/react-text-field@1.0.0-beta.113
+  - @dt-dds/react-tabs@1.0.0-beta.103
+  - @dt-dds/react-text-area@1.0.0-beta.85
+
 ## 1.0.0-beta.274
 
 ### Patch Changes

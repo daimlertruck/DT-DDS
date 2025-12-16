@@ -1,5 +1,16 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.120
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.103
+
 ## 1.0.0-beta.119
 
 ### Patch Changes

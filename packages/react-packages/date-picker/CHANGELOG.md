@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.96
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.95
+  - @dt-dds/react-text-field@1.0.0-beta.113
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

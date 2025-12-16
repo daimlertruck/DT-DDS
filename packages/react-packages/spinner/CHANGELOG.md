@@ -1,5 +1,16 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.108
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.74
+
 ## 1.0.0-beta.107
 
 ### Patch Changes

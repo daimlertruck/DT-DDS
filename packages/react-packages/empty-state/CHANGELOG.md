@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.123
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.103
+  - @dt-dds/react-link@1.0.0-beta.80
+
 ## 1.0.0-beta.122
 
 ### Patch Changes

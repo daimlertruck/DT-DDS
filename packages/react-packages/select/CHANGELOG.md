@@ -1,5 +1,17 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.86
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.74
+  - @dt-dds/react-dropdown@1.0.0-beta.95
+
 ## 1.0.0-beta.85
 
 ### Patch Changes

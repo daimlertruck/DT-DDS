@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.103
+
+### Minor Changes
+
+- feat: add role to box
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.74
+
 ## 1.0.0-beta.102
 
 ### Patch Changes

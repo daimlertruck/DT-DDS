@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.74
+
+### Minor Changes
+
+- feat: add role to box
+
 ## 1.0.0-beta.73
 
 ### Patch Changes
