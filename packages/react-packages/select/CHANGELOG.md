@@ -1,5 +1,13 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.83
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.71
+  - @dt-dds/react-dropdown@1.0.0-beta.92
+
 ## 1.0.0-beta.82
 
 ### Minor Changes
