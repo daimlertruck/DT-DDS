@@ -17,6 +17,7 @@ const filterDtPackages = (packages) =>
 const createPackageInfo = (pkg) => ({
   name: pkg.packageJson.name,
   version: 'N/A',
+  path: pkg.dir.split('/packages/')[1],
 });
 
 // Pure function to fetch package version (returns a promise)
@@ -43,11 +44,8 @@ const updatePackageWithVersion = async (packageInfo) => ({
 });
 
 // Pure function to create table row
-const createTableRow = ({ name, version }) =>
-  `| [\`${name}\`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/${name.replace(
-    '@dt-dds/',
-    ''
-  )}) | ${version} |`;
+const createTableRow = ({ name, version, path }) =>
+  `| [\`${name}\`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/${path}) | ${version} |`;
 
 // Pure function to build markdown table
 const buildMarkdownTable = (packages) => {
