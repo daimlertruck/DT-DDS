@@ -27,6 +27,7 @@ export const App = () => {
 | `element`    | `React.ElementType`   | `div`   | HTML element to be rendered as parent |
 | `dataTestId` | `string`              | -       | Customizable test identifier          |
 | `style`      | `React.CSSProperties` | -       | Gives the Box specific css properties |
+| `role`       | `AriaRole`            | -       | Gives the Box specific role           |
 
 ### Stack
 
