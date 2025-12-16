@@ -35,6 +35,7 @@ export const RadioGroup = ({
   return (
     <Box
       data-testid={dataTestId ?? 'radio-group'}
+      role='radiogroup'
       style={{
         flexDirection: direction,
         gap: theme.spacing.spacing_40,
