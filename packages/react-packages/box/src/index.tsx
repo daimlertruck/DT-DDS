@@ -1,24 +1,23 @@
-import { ReactNode, ElementType, CSSProperties, AriaRole } from 'react';
+import { CSSProperties, ElementType, HTMLAttributes, ReactNode } from 'react';
 
 import { BoxStyled } from './Box.styled';
 
-export interface BoxProps {
+export interface BoxProps extends HTMLAttributes<HTMLElement> {
   element?: ElementType;
   children?: ReactNode;
   dataTestId?: string;
   style?: CSSProperties;
-  role?: AriaRole;
 }
 
 export const Box = ({
   dataTestId,
   children,
-  role,
   element = 'div',
   style,
+  ...rest
 }: BoxProps) => {
   return (
-    <BoxStyled as={element} data-testid={dataTestId} role={role} style={style}>
+    <BoxStyled as={element} data-testid={dataTestId} style={style} {...rest}>
       {children}
     </BoxStyled>
   );
