@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+.yarn
+.pnp.*
+
+# Build outputs
+.next
+out
+dist
+build
+
+# Generated files
+public/mockServiceWorker.js
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# Env files
+.env*
+
+# Logs
+*.log
