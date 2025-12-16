@@ -1,5 +1,11 @@
 # @dt-ui/react-stepper
 
+## 1.0.0-beta.51
+
+### Patch Changes
+
+- fix: stepper intractive story
+
 ## 1.0.0-beta.50
 
 ### Minor Changes

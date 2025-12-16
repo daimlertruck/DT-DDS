@@ -1,5 +1,31 @@
 # @dt-ui/react
 
+## 1.0.0-beta.272
+
+### Patch Changes
+
+- fix: stepper intractive story
+- Updated dependencies
+- Updated dependencies [90a92a2]
+- Updated dependencies [223664b]
+  - @dt-dds/react-stepper@1.0.0-beta.51
+  - @dt-dds/react-app-header@1.0.0-beta.16
+  - @dt-dds/react-box@1.0.0-beta.73
+  - @dt-dds/react-dropdown@1.0.0-beta.94
+  - @dt-dds/react-radio@1.0.0-beta.89
+  - @dt-dds/react-select@1.0.0-beta.85
+  - @dt-dds/react-spinner@1.0.0-beta.107
+  - @dt-dds/react-tabs@1.0.0-beta.102
+  - @dt-dds/react-text-area@1.0.0-beta.84
+  - @dt-dds/react-date-picker@1.0.0-beta.95
+  - @dt-dds/react-button@1.0.0-beta.102
+  - @dt-dds/react-modal@1.0.0-beta.102
+  - @dt-dds/react-text-field@1.0.0-beta.112
+  - @dt-dds/react-empty-state@1.0.0-beta.122
+  - @dt-dds/react-link@1.0.0-beta.79
+  - @dt-dds/react-message@1.0.0-beta.118
+  - @dt-dds/react-toast@1.0.0-beta.119
+
 ## 1.0.0-beta.271
 
 ### Minor Changes
