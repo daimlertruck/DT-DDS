@@ -1,5 +1,13 @@
 # @dt-ui/react
 
+## 1.0.0-beta.274
+
+### Patch Changes
+
+- chore: export app-header from dt-dds/react index.ts
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-app-header@1.0.0-beta.18
+
 ## 1.0.0-beta.273
 
 ### Patch Changes
