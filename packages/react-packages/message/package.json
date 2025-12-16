@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-message",
-  "version": "1.0.0-beta.116",
+  "version": "1.0.0-beta.117",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,7 +20,7 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-button": "1.0.0-beta.100",
+    "@dt-dds/react-button": "1.0.0-beta.101",
     "@dt-dds/react-core": "1.0.0-beta.56",
     "@dt-dds/react-icon": "1.0.0-beta.59",
     "@dt-dds/react-typography": "1.0.0-beta.47",

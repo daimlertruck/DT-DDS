@@ -1,5 +1,12 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.83
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.72
+
 ## 1.0.0-beta.82
 
 ### Patch Changes

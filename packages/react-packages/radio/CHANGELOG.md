@@ -1,5 +1,17 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.88
+
+### Minor Changes
+
+- feat: update radio button
+
+### Patch Changes
+
+- chore(react-radio): bump @dt-dds/react-typography patch
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.72
+
 ## 1.0.0-beta.87
 
 ### Patch Changes

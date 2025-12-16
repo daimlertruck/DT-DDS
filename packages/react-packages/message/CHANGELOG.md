@@ -1,5 +1,11 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.117
+
+### Patch Changes
+
+- @dt-dds/react-button@1.0.0-beta.101
+
 ## 1.0.0-beta.116
 
 ### Patch Changes

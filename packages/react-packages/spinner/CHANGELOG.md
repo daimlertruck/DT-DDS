@@ -1,5 +1,12 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.106
+
+### Patch Changes
+
+- Updated dependencies [223664b]
+  - @dt-dds/react-box@1.0.0-beta.72
+
 ## 1.0.0-beta.105
 
 ### Patch Changes

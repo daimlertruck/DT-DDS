@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-date-picker",
-  "version": "1.0.0-beta.93",
+  "version": "1.0.0-beta.94",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.56",
-    "@dt-dds/react-dropdown": "1.0.0-beta.92",
+    "@dt-dds/react-dropdown": "1.0.0-beta.93",
     "@dt-dds/react-icon": "1.0.0-beta.59",
-    "@dt-dds/react-text-field": "1.0.0-beta.110",
+    "@dt-dds/react-text-field": "1.0.0-beta.111",
     "@dt-dds/themes": "1.0.0-beta.11",
     "react-day-picker": "9.11.1"
   },
