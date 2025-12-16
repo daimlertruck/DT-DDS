@@ -1,5 +1,13 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.121
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.104
+
 ## 1.0.0-beta.120
 
 ### Minor Changes

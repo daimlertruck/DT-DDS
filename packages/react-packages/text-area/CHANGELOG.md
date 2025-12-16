@@ -1,5 +1,13 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.75
+
 ## 1.0.0-beta.85
 
 ### Minor Changes

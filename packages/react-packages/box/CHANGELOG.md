@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.75
+
+### Patch Changes
+
+- refactor: add html attrs to box
+
 ## 1.0.0-beta.74
 
 ### Minor Changes

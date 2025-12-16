@@ -1,5 +1,13 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.120
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.104
+
 ## 1.0.0-beta.119
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.96
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.75
+
 ## 1.0.0-beta.95
 
 ### Minor Changes

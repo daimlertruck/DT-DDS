@@ -1,5 +1,13 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.109
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.75
+
 ## 1.0.0-beta.108
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.97
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.96
+  - @dt-dds/react-text-field@1.0.0-beta.114
+
 ## 1.0.0-beta.96
 
 ### Minor Changes

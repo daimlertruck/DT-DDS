@@ -1,5 +1,13 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.104
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.109
+
 ## 1.0.0-beta.103
 
 ### Minor Changes

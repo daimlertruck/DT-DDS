@@ -1,5 +1,13 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.104
+
 ## 1.0.0-beta.80
 
 ### Minor Changes

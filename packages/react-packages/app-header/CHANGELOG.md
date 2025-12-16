@@ -1,5 +1,17 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.20
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- refactor: add html attrs to box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.75
+
 ## 1.0.0-beta.19
 
 ### Major Changes
