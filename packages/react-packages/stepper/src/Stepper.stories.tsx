@@ -275,7 +275,6 @@ export const InteractiveWithHook: Story = {
       handleNext,
       handleBack,
       markStepComplete,
-      isStepComplete,
     } = useStepper({ initialStep: 0, totalSteps: 4 });
 
     const steps = [
@@ -286,7 +285,10 @@ export const InteractiveWithHook: Story = {
     ];
 
     const getStepState = (idx: number): StepState => {
-      if (isStepComplete(idx)) return 'completed';
+      if (idx === activeStep) return 'incomplete';
+
+      if (idx < activeStep) return 'completed';
+
       return 'incomplete';
     };
 
