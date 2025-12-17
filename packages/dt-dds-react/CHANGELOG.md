@@ -1,5 +1,17 @@
 # @dt-ui/react
 
+## 1.0.0-beta.280
+
+### Patch Changes
+
+- docs: update license on dropdown and select
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-dropdown@1.0.0-beta.98
+  - @dt-dds/react-select@1.0.0-beta.89
+  - @dt-dds/react-date-picker@1.0.0-beta.99
+  - @dt-dds/react-app-header@1.0.0-beta.24
+
 ## 1.0.0-beta.279
 
 ### Patch Changes
