@@ -39,11 +39,11 @@ yarn add @dt-dds/react @emotion/css @emotion/react @emotion/styled
 <!-- PACKAGES_TABLE_START -->
 | Package | Version |
 |---------|---------|
-| [`@dt-dds/react`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/dt-dds-react) | 1.0.0-beta.279 |
+| [`@dt-dds/react`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/dt-dds-react) | 1.0.0-beta.280 |
 | [`@dt-dds/fonts`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/fonts) | 1.0.0-beta.5 |
 | [`@dt-dds/icons`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/icons) | 1.0.0-beta.5 |
 | [`@dt-dds/react-accordion`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/accordion) | 1.0.0-beta.58 |
-| [`@dt-dds/react-app-header`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/app-header) | 1.0.0-beta.23 |
+| [`@dt-dds/react-app-header`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/app-header) | 1.0.0-beta.24 |
 | [`@dt-dds/react-avatar`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/avatar) | 1.0.0-beta.68 |
 | [`@dt-dds/react-backdrop`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/backdrop) | 1.0.0-beta.58 |
 | [`@dt-dds/react-box`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/box) | 1.0.0-beta.76 |
@@ -52,10 +52,10 @@ yarn add @dt-dds/react @emotion/css @emotion/react @emotion/styled
 | [`@dt-dds/react-card`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/card) | 1.0.0-beta.39 |
 | [`@dt-dds/react-checkbox`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/checkbox) | 1.0.0-beta.57 |
 | [`@dt-dds/react-core`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/core) | 1.0.0-beta.56 |
-| [`@dt-dds/react-date-picker`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/date-picker) | 1.0.0-beta.98 |
+| [`@dt-dds/react-date-picker`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/date-picker) | 1.0.0-beta.99 |
 | [`@dt-dds/react-divider`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/divider) | 1.0.0-beta.55 |
 | [`@dt-dds/react-drawer`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/drawer) | 1.0.0-beta.63 |
-| [`@dt-dds/react-dropdown`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/dropdown) | 1.0.0-beta.97 |
+| [`@dt-dds/react-dropdown`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/dropdown) | 1.0.0-beta.98 |
 | [`@dt-dds/react-empty-state`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/empty-state) | 1.0.0-beta.125 |
 | [`@dt-dds/react-form`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/form) | 1.0.0-beta.50 |
 | [`@dt-dds/react-icon`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/icon) | 1.0.0-beta.59 |
@@ -68,7 +68,7 @@ yarn add @dt-dds/react @emotion/css @emotion/react @emotion/styled
 | [`@dt-dds/react-progress-bar`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/progress-bar) | 1.0.0-beta.52 |
 | [`@dt-dds/react-radio`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/radio) | 1.0.0-beta.93 |
 | [`@dt-dds/react-segmented-control`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/segmented-control) | 1.0.0-beta.46 |
-| [`@dt-dds/react-select`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/select) | 1.0.0-beta.88 |
+| [`@dt-dds/react-select`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/select) | 1.0.0-beta.89 |
 | [`@dt-dds/react-sidebar`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/sidebar) | 1.0.0-beta.2 |
 | [`@dt-dds/react-spinner`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/spinner) | 1.0.0-beta.110 |
 | [`@dt-dds/react-stepper`](https://github.com/daimlertruck/DT-DDS/tree/main/packages/react-packages/stepper) | 1.0.0-beta.51 |
