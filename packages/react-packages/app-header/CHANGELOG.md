@@ -1,5 +1,17 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.23
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.76
+
 ## 1.0.0-beta.22
 
 ### Major Changes

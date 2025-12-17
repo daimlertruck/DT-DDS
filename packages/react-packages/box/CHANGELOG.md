@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.76
+
+### Patch Changes
+
+- docs: update license for box
+
 ## 1.0.0-beta.75
 
 ### Patch Changes

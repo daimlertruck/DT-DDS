@@ -1,5 +1,13 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.122
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.105
+
 ## 1.0.0-beta.121
 
 ### Patch Changes

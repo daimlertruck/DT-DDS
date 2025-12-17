@@ -1,5 +1,13 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.105
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.76
+
 ## 1.0.0-beta.104
 
 ### Patch Changes

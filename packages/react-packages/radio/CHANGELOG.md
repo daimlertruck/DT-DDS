@@ -1,5 +1,13 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.93
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.76
+
 ## 1.0.0-beta.92
 
 ### Patch Changes

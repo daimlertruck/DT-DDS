@@ -1,5 +1,14 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.88
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.76
+  - @dt-dds/react-dropdown@1.0.0-beta.97
+
 ## 1.0.0-beta.87
 
 ### Patch Changes

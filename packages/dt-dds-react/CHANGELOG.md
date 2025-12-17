@@ -1,5 +1,29 @@
 # @dt-ui/react
 
+## 1.0.0-beta.279
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-box@1.0.0-beta.76
+  - @dt-dds/react-radio@1.0.0-beta.93
+  - @dt-dds/react-app-header@1.0.0-beta.23
+  - @dt-dds/react-dropdown@1.0.0-beta.97
+  - @dt-dds/react-date-picker@1.0.0-beta.98
+  - @dt-dds/react-select@1.0.0-beta.88
+  - @dt-dds/react-spinner@1.0.0-beta.110
+  - @dt-dds/react-button@1.0.0-beta.105
+  - @dt-dds/react-empty-state@1.0.0-beta.125
+  - @dt-dds/react-link@1.0.0-beta.82
+  - @dt-dds/react-message@1.0.0-beta.121
+  - @dt-dds/react-toast@1.0.0-beta.122
+  - @dt-dds/react-modal@1.0.0-beta.105
+  - @dt-dds/react-text-field@1.0.0-beta.115
+  - @dt-dds/react-tabs@1.0.0-beta.105
+  - @dt-dds/react-text-area@1.0.0-beta.87
+
 ## 1.0.0-beta.278
 
 ### Patch Changes

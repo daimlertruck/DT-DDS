@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.98
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.97
+  - @dt-dds/react-text-field@1.0.0-beta.115
+
 ## 1.0.0-beta.97
 
 ### Patch Changes

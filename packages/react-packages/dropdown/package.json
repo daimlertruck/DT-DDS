@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-dropdown",
-  "version": "1.0.0-beta.96",
+  "version": "1.0.0-beta.97",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,7 +20,7 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-box": "1.0.0-beta.75",
+    "@dt-dds/react-box": "1.0.0-beta.76",
     "@dt-dds/react-core": "1.0.0-beta.56",
     "@dt-dds/react-icon": "1.0.0-beta.59",
     "@dt-dds/react-icon-button": "1.0.0-beta.25",

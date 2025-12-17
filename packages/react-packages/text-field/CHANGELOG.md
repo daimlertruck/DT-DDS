@@ -1,5 +1,13 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.115
+
+### Patch Changes
+
+- docs: update license for box
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.110
+
 ## 1.0.0-beta.114
 
 ### Patch Changes
