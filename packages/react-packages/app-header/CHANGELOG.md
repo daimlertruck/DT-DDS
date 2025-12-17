@@ -1,5 +1,11 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.22
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
 ## 1.0.0-beta.21
 
 ### Major Changes

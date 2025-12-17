@@ -1,5 +1,15 @@
 # @dt-ui/react
 
+## 1.0.0-beta.278
+
+### Patch Changes
+
+- chore: test license for blackduck
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-radio@1.0.0-beta.92
+  - @dt-dds/react-app-header@1.0.0-beta.22
+
 ## 1.0.0-beta.277
 
 ### Patch Changes

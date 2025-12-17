@@ -1,5 +1,11 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.92
+
+### Patch Changes
+
+- chore: test license for blackduck
+
 ## 1.0.0-beta.91
 
 ### Patch Changes
