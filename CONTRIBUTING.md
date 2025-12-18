@@ -253,6 +253,30 @@ If you created custom components to import in the page or a lot of subpages, we 
 
 Note: On Storybook v6, documentation pages still use the `.stories.mdx` extension (otherwise they are not included). On v7 these pages can use `.mdx` extension.
 
+### 4.10. Prop Forwarding in Styled Components
+
+When using `@emotion/styled`, props passed to styled components are forwarded to the underlying DOM element by default. This can cause React warnings for non-standard DOM attributes and potential issues.
+
+Use the `$` prefix convention for `styling-only` props combined with shouldForwardProp to prevent them from being forwarded to the DOM.
+
+Recommended approach - Use `$` prefix with `shouldForwardProp`:
+
+```jsx
+import styled from '@emotion/styled';
+import isPropValid from '@emotion/is-prop-valid';
+
+interface ButtonProps {
+  $isDisabled: boolean;
+  $size: 'small' | 'large';
+}
+
+const Button = styled('button', {
+  shouldForwardProp: (prop) => isPropValid(prop) && !prop.startsWith('$'),
+})<ButtonProps>`
+  /* styles using $isDisabled, $size */
+`;
+```
+
 #### How to add component stories?
 
 In case you want to add documentation more complex than the usual component stories, add a `.stories.mdx` file alongside with the component inside `packages/react-packages/<component>`, or convert the current story in Component Story Format (CSF) to MDX format (see an example of the conversion on https://storybook.js.org/docs/6.5/react/writing-docs/mdx#mdx-flavored-csf).
