@@ -79,4 +79,19 @@ describe('useMedia', () => {
 
     expect(result.current).toBe(true);
   });
+
+  it('should handle initial render when matchMedia is not available', () => {
+    // Temporarily remove matchMedia to simulate environments where it might not be available
+    const originalMatchMedia = window.matchMedia;
+    // @ts-expect-error - Intentionally removing matchMedia for testing
+    delete window.matchMedia;
+
+    const { result } = renderHook(() => useMedia('(max-width: 768px)'));
+
+    // Should default to false when matchMedia is not available
+    expect(result.current).toBe(false);
+
+    // Restore matchMedia
+    window.matchMedia = originalMatchMedia;
+  });
 });
