@@ -23,7 +23,14 @@ export type TypographyProps = {
 
 export const Typography = forwardRef<HTMLParagraphElement, TypographyProps>(
   (
-    { children, element, fontStyles, color = 'grey_90', dataTestId, ...rest },
+    {
+      children,
+      element,
+      fontStyles,
+      color = 'content.default',
+      dataTestId,
+      ...rest
+    },
     ref
   ) => {
     const theme = useTheme();

@@ -18,16 +18,16 @@ export const App = () => {
 
 ## Properties
 
-| Property     | Type                                                                        | Default    | Description                                                                |
-| ------------ | --------------------------------------------------------------------------- | ---------- | -------------------------------------------------------------------------- |
-| `children`   | `ReactNode`                                                                 | -          | Child components to be rendered                                            |
-| `element`    | `Elements`                                                                  | p          | You can set the element tag                                                |
-| `color`      | `keyof Theme['colors']` \| `keyof Theme['palette']` \| 'unset' \| 'inherit' | `grey_300` | You can set the color of the element                                       |
-| `fontStyles` | `keyof Theme['fontStyles'];`                                                | -          | You can set the font style (weight, line height, font size) of the element |
-| `dataTestId` | `string`                                                                    | typography | Customizable test identifier                                               |
-| `style`      | `React.CSSProperties`                                                       | -          | Customizable styles                                                        |
-| `ref`        | `RefObject`                                                                 | -          | Provides a way to access DOM node or React element reference.              |
-| `...rest`    | `ComponentPropsWithoutRef<E>` & `BaseProps`                                 | —          | Additional native HTML attributes for the chosen `element`.                |
+| Property     | Type                                                                        | Default           | Description                                                                                             |
+| ------------ | --------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------- |
+| `children`   | `ReactNode`                                                                 | -                 | Child components to be rendered                                                                         |
+| `element`    | `Elements`                                                                  | p                 | HTML tag to be rendered                                                                                 |
+| `color`      | `keyof Theme['colors']` \| `keyof Theme['palette']` \| 'unset' \| 'inherit' | `content.default` | Sets the text color. Supports theme tokens (e.g., grey_100) or contextual keys (e.g., primary.default). |
+| `fontStyles` | `keyof Theme['fontStyles'];`                                                | -                 | Applies a predefined theme font style (e.g., 'h1', 'bodyLgBold').                                       |
+| `dataTestId` | `string`                                                                    | typography        | A test identifier applied to the element.                                                               |
+| `style`      | `React.CSSProperties`                                                       | -                 | Inline styles for custom overrides.                                                                     |
+| `ref`        | `RefObject`                                                                 | -                 | Reference to the underlying DOM node.                                                                   |
+| `...rest`    | `ComponentPropsWithoutRef<E>` & `BaseProps`                                 | —                 | Additional native HTML attributes for the chosen `element`.                                             |
 |              |
 
 ## Stack

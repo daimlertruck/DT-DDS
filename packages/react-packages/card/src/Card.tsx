@@ -10,7 +10,7 @@ export const Card = ({ children, dataTestId }: BaseProps) => (
 Card.Title = ({ children }: BaseProps) => {
   return (
     <CardTitleStyled>
-      <Typography element='h2' fontStyles='h4'>
+      <Typography color='grey_90' element='h2' fontStyles='h4'>
         {children}
       </Typography>
     </CardTitleStyled>
