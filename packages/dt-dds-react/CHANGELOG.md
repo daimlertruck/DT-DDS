@@ -1,5 +1,19 @@
 # @dt-ui/react
 
+## 1.0.0-beta.282
+
+### Minor Changes
+
+- feat: refactor checkbox
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-checkbox@1.0.0-beta.58
+  - @dt-dds/react-select@1.0.0-beta.90
+  - @dt-dds/react-app-header@1.0.0-beta.26
+
 ## 1.0.0-beta.281
 
 ### Patch Changes

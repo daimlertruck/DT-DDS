@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react",
-  "version": "1.0.0-beta.281",
+  "version": "1.0.0-beta.282",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js",
@@ -27,7 +27,7 @@
     "@dt-dds/react-breadcrumb": "1.0.0-beta.68",
     "@dt-dds/react-button": "1.0.0-beta.105",
     "@dt-dds/react-card": "1.0.0-beta.39",
-    "@dt-dds/react-checkbox": "1.0.0-beta.57",
+    "@dt-dds/react-checkbox": "1.0.0-beta.58",
     "@dt-dds/react-core": "1.0.0-beta.56",
     "@dt-dds/react-date-picker": "1.0.0-beta.99",
     "@dt-dds/react-divider": "1.0.0-beta.55",
@@ -44,7 +44,7 @@
     "@dt-dds/react-progress-bar": "1.0.0-beta.52",
     "@dt-dds/react-radio": "1.0.0-beta.93",
     "@dt-dds/react-segmented-control": "1.0.0-beta.46",
-    "@dt-dds/react-select": "1.0.0-beta.89",
+    "@dt-dds/react-select": "1.0.0-beta.90",
     "@dt-dds/react-spinner": "1.0.0-beta.110",
     "@dt-dds/react-stepper": "1.0.0-beta.51",
     "@dt-dds/react-table": "1.0.0-beta.52",
@@ -57,7 +57,7 @@
     "@dt-dds/react-tooltip": "1.0.0-beta.65",
     "@dt-dds/react-typography": "1.0.0-beta.47",
     "@dt-dds/react-sidebar": "1.0.0-beta.2",
-    "@dt-dds/react-app-header": "1.0.0-beta.25",
+    "@dt-dds/react-app-header": "1.0.0-beta.26",
     "@dt-dds/themes": "1.0.0-beta.11",
     "@emotion/server": "^11.4.0",
     "emotion-normalize": "^11.0.1"

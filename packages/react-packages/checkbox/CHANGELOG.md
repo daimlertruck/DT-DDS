@@ -1,5 +1,11 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.58
+
+### Minor Changes
+
+- feat: refactor checkbox
+
 ## 1.0.0-beta.57
 
 ### Minor Changes
