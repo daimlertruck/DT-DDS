@@ -87,6 +87,7 @@ input:focus-visible+.emotion-4 {
     class="emotion-0 emotion-1"
     data-testid="checkbox"
     for="checkbox"
+    style="align-items: center;"
   >
     <input
       aria-invalid="false"

@@ -212,3 +212,26 @@ export const AllSizesAndStates: Story = {
     </div>
   ),
 };
+
+export const LongLabelWrapping: Story = {
+  render: () => (
+    <div
+      style={{
+        width: 300,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
+      }}
+    >
+      <Checkbox
+        isChecked
+        label='This is a moderately long checkbox label that wraps in two lines'
+      />
+      <Checkbox
+        isChecked
+        label='Small checkbox with a long label that also wraps in two lines'
+        size='small'
+      />
+    </div>
+  ),
+};

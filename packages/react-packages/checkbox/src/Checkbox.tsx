@@ -1,4 +1,10 @@
-import { ChangeEvent, forwardRef, useEffect, useRef } from 'react';
+import {
+  ChangeEvent,
+  forwardRef,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from 'react';
 
 import { useTheme } from '@emotion/react';
 
@@ -10,6 +16,7 @@ import {
   CheckboxLabelStyled,
   CheckboxBoxStyled,
 } from './Checkbox.styled';
+import { LABEL_LINE_HEIGHT, LABEL_HEIGHT_BUFFER } from './constants';
 import { CheckboxProps } from './types';
 import { mergeRefs } from './utils';
 
@@ -35,12 +42,27 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     const theme = useTheme();
     const internalRef = useRef<HTMLInputElement | null>(null);
     const mergedRef = mergeRefs(internalRef, ref);
+    const labelRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
       if (internalRef.current) {
         internalRef.current.indeterminate = isIndeterminate;
       }
     }, [isIndeterminate]);
+
+    useLayoutEffect(() => {
+      if (!labelRef.current) return;
+
+      const labelContainer = labelRef.current.closest('label');
+      if (!labelContainer) return;
+
+      const el = labelRef.current;
+      const maxSingleLineHeight = LABEL_LINE_HEIGHT[size] + LABEL_HEIGHT_BUFFER;
+
+      const isWrapped = el.offsetHeight > maxSingleLineHeight;
+
+      labelContainer.style.alignItems = isWrapped ? 'flex-start' : 'center';
+    }, [label, children]);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
       if (isDisabled) return;
@@ -96,7 +118,11 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         </CheckboxBoxStyled>
 
         {hasLabel ? (
-          <CheckboxLabelStyled $disabled={isDisabled} $size={size}>
+          <CheckboxLabelStyled
+            $disabled={isDisabled}
+            $size={size}
+            ref={labelRef}
+          >
             {label || children}
           </CheckboxLabelStyled>
         ) : null}
