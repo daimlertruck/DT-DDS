@@ -38,7 +38,7 @@ export const Pagination = ({ children, dataTestId }: BaseProps) => {
 
 Pagination.Content = ({ totalPages, onClick }: ContentProps) => {
   return (
-    <Typography fontStyles='bodyXsRegular'>
+    <Typography color='grey_90' fontStyles='bodyXsRegular'>
       of{' '}
       <LastPageStyled
         data-testid='pagination-last-page'
