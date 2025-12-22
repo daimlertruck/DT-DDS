@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.12
+
+### Patch Changes
+
+- fix: change color logic on typography
+
 ## 1.0.0-beta.11
 
 ### Minor Changes

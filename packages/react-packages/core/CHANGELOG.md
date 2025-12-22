@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.57
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.12
+
 ## 1.0.0-beta.56
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.59
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.57
+
 ## 1.0.0-beta.58
 
 ### Minor Changes

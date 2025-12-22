@@ -1,5 +1,23 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.88
+
+### Minor Changes
+
+- feat: change Typo default color
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.48
+  - @dt-dds/react-label-field@1.0.0-beta.58
+  - @dt-dds/themes@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.57
+  - @dt-dds/react-icon@1.0.0-beta.60
+  - @dt-dds/react-tooltip@1.0.0-beta.66
+
 ## 1.0.0-beta.87
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.126
+
+### Minor Changes
+
+- feat: change Typo default color
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.48
+  - @dt-dds/react-button@1.0.0-beta.106
+  - @dt-dds/react-link@1.0.0-beta.83
+  - @dt-dds/themes@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.57
+
 ## 1.0.0-beta.125
 
 ### Patch Changes

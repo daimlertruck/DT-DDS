@@ -1,5 +1,14 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.56
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.57
+
 ## 1.0.0-beta.55
 
 ### Minor Changes

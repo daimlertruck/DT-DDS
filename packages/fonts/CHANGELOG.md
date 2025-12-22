@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.6
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.12
+
 ## 1.0.0-beta.5
 
 ### Minor Changes

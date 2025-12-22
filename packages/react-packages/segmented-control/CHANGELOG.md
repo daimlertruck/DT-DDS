@@ -1,5 +1,16 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.47
+
+### Patch Changes
+
+- fix: change color logic on typography
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.12
+  - @dt-dds/react-core@1.0.0-beta.57
+  - @dt-dds/react-icon@1.0.0-beta.60
+  - @dt-dds/react-tooltip@1.0.0-beta.66
+
 ## 1.0.0-beta.46
 
 ### Minor Changes
