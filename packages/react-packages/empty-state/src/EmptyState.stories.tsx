@@ -1,7 +1,7 @@
 import { Button } from '@dt-dds/react-button';
 import { Link } from '@dt-dds/react-link';
 
-import { NoDataIcon } from '../../../dt-dds-react/core';
+import { NoDataIcon } from './mocks';
 
 import { EmptyState, EmptyStateContentProps } from '.';
 

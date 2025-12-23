@@ -1,11 +1,11 @@
 import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { BaseProps } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 import { Tooltip, TooltipBackground } from '@dt-dds/react-tooltip';
 
 import { TagBorder, TagColor, TagSize, TagVariant } from './constants';
 import { TagStyled, TagButtonCloseStyled } from './Tag.styled';
-import { CloseIcon } from '../../../dt-dds-react/core/assets';
 
 export type TagProps = {
   variant?: TagVariant;
@@ -121,7 +121,7 @@ export const Tag = forwardRef<HTMLDivElement, TagProps>(
               onKeyDown={handleCloseOnEnterKey}
               tabIndex={0}
             >
-              <CloseIcon height={12} width={12} />
+              <Icon code='close' size='extra-small' />
             </TagButtonCloseStyled>
           ) : null}
         </TagStyled>

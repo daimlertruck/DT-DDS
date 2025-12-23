@@ -4,7 +4,7 @@ import { Button } from '@dt-dds/react-button';
 import { withProviders } from '@dt-dds/react-core';
 
 import { EmptyState } from './EmptyState';
-import { NoDataIcon } from '../../../dt-dds-react/core';
+import { NoDataIcon } from './mocks';
 
 describe('<EmptyState /> component', () => {
   const ProvidedEmptyState = withProviders(EmptyState);

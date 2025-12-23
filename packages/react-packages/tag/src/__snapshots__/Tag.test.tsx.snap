@@ -124,6 +124,25 @@ exports[`<Tag /> component should render the tag with variant solid, color error
   outline-offset: 1px;
 }
 
+.emotion-4 {
+  font-family: DTUI-icons-outlined;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-variation-settings: 'FILL' 0;
+  color: #252525;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
 <div
   aria-disabled="true"
   class="emotion-0 emotion-1"
@@ -141,18 +160,13 @@ exports[`<Tag /> component should render the tag with variant solid, color error
     disabled=""
     tabindex="0"
   >
-    <svg
-      fill="none"
-      height="12"
-      viewBox="0 0 24 24"
-      width="12"
-      xmlns="http://www.w3.org/2000/svg"
+    <i
+      class="emotion-4"
+      color="#252525"
+      data-testid="icon"
     >
-      <path
-        d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-        fill="currentColor"
-      />
-    </svg>
+      close
+    </i>
   </button>
 </div>
 `;
@@ -334,6 +348,25 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
   outline-offset: 1px;
 }
 
+.emotion-4 {
+  font-family: DTUI-icons-outlined;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 12px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  font-variation-settings: 'FILL' 0;
+  color: #252525;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
 <div
   aria-disabled="false"
   class="emotion-0 emotion-1"
@@ -350,18 +383,13 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
     data-testid="tag-close-button"
     tabindex="0"
   >
-    <svg
-      fill="none"
-      height="12"
-      viewBox="0 0 24 24"
-      width="12"
-      xmlns="http://www.w3.org/2000/svg"
+    <i
+      class="emotion-4"
+      color="#252525"
+      data-testid="icon"
     >
-      <path
-        d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
-        fill="currentColor"
-      />
-    </svg>
+      close
+    </i>
   </button>
 </div>
 `;

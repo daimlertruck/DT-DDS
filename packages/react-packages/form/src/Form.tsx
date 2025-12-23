@@ -1,6 +1,7 @@
 import { FormEvent, ReactNode } from 'react';
 
 import { BaseProps } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 import { OTooltipDirection, Tooltip } from '@dt-dds/react-tooltip';
 import { Typography } from '@dt-dds/react-typography';
 
@@ -10,7 +11,6 @@ import {
   GroupStyled,
   LabelStyled,
 } from './Form.styled';
-import { InfoIcon } from '../../../dt-dds-react/core';
 
 export interface GroupProps extends BaseProps {
   isDisabled?: boolean;
@@ -54,7 +54,7 @@ Form.Group = ({ children, isDisabled, title, tooltip }: GroupProps) => {
           </Typography>
           {tooltip ? (
             <Tooltip>
-              <InfoIcon height='16' width='16' />
+              <Icon code='info' size='small' />
               <Tooltip.Content
                 direction={OTooltipDirection.Right}
                 style={{ maxWidth: 250 }}

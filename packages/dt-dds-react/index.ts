@@ -1,8 +1,6 @@
 import '@emotion/react';
 
 import { CustomTheme } from '@dt-dds/themes';
-// Core styles
-export * from './core';
 
 //independent component packages
 export * from '@dt-dds/react-accordion';
