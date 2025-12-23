@@ -1,6 +1,7 @@
 import { Children, ReactNode, cloneElement, isValidElement } from 'react';
 
 import { BaseProps } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 import { Tooltip } from '@dt-dds/react-tooltip';
 
 import {
@@ -10,7 +11,6 @@ import {
   ItemContainerStyled,
 } from './Breadcrumb.styled';
 import { useCollapsedBreadcrumb } from './hooks/useCollapsedBreadcrumb';
-import { ArrowRightIcon } from '../../../dt-dds-react/core';
 
 const BREADCRUMB_CHARACTER_LIMIT = 30;
 
@@ -92,7 +92,7 @@ const withSeparator = (children: ReactNode, separator: BreadcrumbSeparator) => {
   const addSeparator = () =>
     ({
       slash: <span>/</span>,
-      arrow: <ArrowRightIcon />,
+      arrow: <Icon code='arrow_forward_ios' size='extra-small' />,
     }[separator]);
 
   const isLastBreadcrumb = (index: number) =>

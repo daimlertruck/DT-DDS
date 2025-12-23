@@ -12,8 +12,8 @@ import {
 import { useTheme } from '@emotion/react';
 
 import { useDebounceResize, useMedia } from '@dt-dds/react-core';
+import { Icon } from '@dt-dds/react-icon';
 
-import { MoreHorizontalIcon } from '../../../../dt-dds-react/core';
 import { Breadcrumb } from '../Breadcrumb';
 
 const isBreadcrumbRefValid = (
@@ -46,7 +46,7 @@ export const useCollapsedBreadcrumb = (children: ReactNode) => {
       const modifiedChildren = [
         childrenArray[0],
         <Breadcrumb.Item key='more-icon'>
-          <MoreHorizontalIcon />
+          <Icon code='more_horiz' />
         </Breadcrumb.Item>,
         isValidElement(lastChild)
           ? cloneElement(lastChild, {

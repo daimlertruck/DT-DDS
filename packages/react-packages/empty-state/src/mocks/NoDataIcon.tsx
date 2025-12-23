@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useTheme } from '@emotion/react';
 
-const NoData = (props: React.SVGProps<SVGSVGElement>) => {
+export const NoDataIcon = (props: React.SVGProps<SVGSVGElement>) => {
   const theme = useTheme();
 
   return (
@@ -117,5 +117,3 @@ const NoData = (props: React.SVGProps<SVGSVGElement>) => {
     </svg>
   );
 };
-
-export default NoData;
