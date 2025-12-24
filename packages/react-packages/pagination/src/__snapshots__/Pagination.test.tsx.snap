@@ -1,7 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Pagination /> component should render the pagination content 1`] = `
+exports[`<Pagination /> should match snapshot 1`] = `
 .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .emotion-0 {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  .emotion-0:has(> *:nth-of-type(2)) {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10,26 +44,94 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 8px;
-  margin-top: 48px;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 3px;
-  cursor: default;
+  gap: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .emotion-2 {
+    width: auto;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
 }
 
 .emotion-4 {
+  font-family: Daimler CS;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  position: relative;
+  background-color: transparent;
+  color: #252525;
+  cursor: pointer;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8:disabled i {
+  color: #a9a9a9;
+}
+
+.emotion-8:hover:not(:disabled) {
+  background-color: #deeff2;
+}
+
+.emotion-8:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+}
+
+.emotion-10 {
   font-family: DTUI-icons-outlined;
   font-weight: normal;
   font-style: normal;
@@ -48,107 +150,239 @@ exports[`<Pagination /> component should render the pagination content 1`] = `
   font-feature-settings: 'liga';
 }
 
-.emotion-5 {
-  text-align: center;
-  padding: 6px 8px;
-  margin: 0px;
-  width: 50px;
-  height: 32px;
-  background-color: #ffffff;
-  color: #252525;
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-}
-
-.emotion-5:focus {
-  border-bottom: 2px solid #000000;
-}
-
-.emotion-7 {
+.emotion-14 {
   font-family: Daimler CS;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0px;
   line-height: 14px;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #303030;
-}
-
-.emotion-8 {
-  background-color: transparent;
-  color: #000000;
-  border: none;
-  cursor: pointer;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background-color: #ffffff;
+  width: 24px;
+  height: 24px;
   border: none;
-  border-radius: 3px;
+  -webkit-transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+  background-color: transparent;
+  color: #252525;
   cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: default;
+}
+
+.emotion-14:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.emotion-14:hover {
+  background-color: #deeff2;
+}
+
+.emotion-14:hover {
+  background-color: #000000;
+}
+
+.emotion-16 {
+  font-family: Daimler CS;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  -webkit-transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,color 0.2s ease-in-out;
+  background-color: transparent;
+  color: #252525;
+  cursor: pointer;
+}
+
+.emotion-16:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: 1px;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.emotion-16:hover {
+  background-color: #deeff2;
+}
+
+.emotion-24 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 <div>
   <div
     class="emotion-0 emotion-1"
-    data-testid="pagination-wrapper"
+    data-testid="pagination"
   >
-    <button
+    <div
       class="emotion-2 emotion-3"
-      data-testid="pagination-previous-item"
-      disabled=""
-      title="Go to previous page"
     >
-      <i
-        class="emotion-4"
-        color="#252525"
-        data-testid="icon"
+      <span
+        class="emotion-4 emotion-5"
+        data-testid="pagination-items-info"
       >
-        arrow_back_ios
-      </i>
-    </button>
-    <input
-      class="emotion-5 emotion-6"
-      data-testid="pagination-input"
-      value="1"
-    />
-    <p
-      class="emotion-7"
-      color="grey_90"
-      data-testid="typography"
+        Showing 
+        <strong>
+          10
+        </strong>
+         of
+         
+        <strong>
+          50
+        </strong>
+         entries
+      </span>
+    </div>
+    <div
+      class="emotion-6 emotion-7"
     >
-      of
-       
       <button
+        aria-label="Go to first page"
         class="emotion-8 emotion-9"
-        data-testid="pagination-last-page"
-        title="Go to last page"
+        data-testid="pagination-first-page"
+        disabled=""
+      >
+        <i
+          class="emotion-10"
+          color="#252525"
+          data-testid="icon"
+        >
+          first_page
+        </i>
+      </button>
+      <button
+        aria-label="Go to previous page"
+        class="emotion-8 emotion-9"
+        data-testid="pagination-previous-page"
+        disabled=""
+      >
+        <i
+          class="emotion-10"
+          color="#252525"
+          data-testid="icon"
+        >
+          chevron_left
+        </i>
+      </button>
+      <button
+        aria-current="page"
+        aria-label="Go to page 1"
+        class="emotion-14 emotion-15"
+        data-testid="pagination-page-1"
+        title="Go to page 1"
+      >
+        1
+      </button>
+      <button
+        aria-label="Go to page 2"
+        class="emotion-16 emotion-15"
+        data-testid="pagination-page-2"
+        title="Go to page 2"
+      >
+        2
+      </button>
+      <button
+        aria-label="Go to page 3"
+        class="emotion-16 emotion-15"
+        data-testid="pagination-page-3"
+        title="Go to page 3"
       >
         3
       </button>
-    </p>
-    <button
-      class="emotion-10 emotion-3"
-      data-testid="pagination-next-item"
-      title="Go to next page"
-    >
-      <i
-        class="emotion-4"
-        color="#252525"
-        data-testid="icon"
+      <button
+        aria-label="Go to page 4"
+        class="emotion-16 emotion-15"
+        data-testid="pagination-page-4"
+        title="Go to page 4"
       >
-        arrow_forward_ios
-      </i>
-    </button>
+        4
+      </button>
+      <button
+        aria-label="Go to page 5"
+        class="emotion-16 emotion-15"
+        data-testid="pagination-page-5"
+        title="Go to page 5"
+      >
+        5
+      </button>
+      <div
+        class="emotion-24"
+        data-testid="tooltip-container"
+      >
+        <button
+          aria-label="Go to next page"
+          class="emotion-8 emotion-9"
+          data-testid="pagination-next-page"
+        >
+          <i
+            class="emotion-10"
+            color="#252525"
+            data-testid="icon"
+          >
+            chevron_right
+          </i>
+        </button>
+      </div>
+      <div
+        class="emotion-24"
+        data-testid="tooltip-container"
+      >
+        <button
+          aria-label="Go to last page"
+          class="emotion-8 emotion-9"
+          data-testid="pagination-last-page"
+        >
+          <i
+            class="emotion-10"
+            color="#252525"
+            data-testid="icon"
+          >
+            last_page
+          </i>
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 `;
