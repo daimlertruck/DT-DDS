@@ -1,119 +1,128 @@
-import React from 'react';
-
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-  renderHook,
-  act,
-  RenderHookResult,
-} from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { withProviders } from '@dt-dds/react-core';
 
-import { usePagination } from './hooks';
-import { Pagination, PaginationInput } from './Pagination';
+import { Pagination } from './Pagination';
 
-describe('<Pagination /> component', () => {
-  const totalPages = 3;
-  it('should render the pagination content', async () => {
-    const currentPage = 1;
-    const ProvidedPagination = withProviders(Pagination);
-    const onClick = jest.fn();
-    const { container } = render(
-      <ProvidedPagination>
-        <Pagination.PreviousItem disabled onClick={onClick} />
-        <PaginationInput
-          onChange={onClick}
-          onHandleKeyDown={onClick}
-          totalPages={totalPages}
-          value={currentPage}
-        />
-        <Pagination.Content onClick={onClick} totalPages={totalPages} />
-        <Pagination.NextItem onClick={onClick} />
-      </ProvidedPagination>
-    );
+const ProvidedPagination = withProviders(Pagination);
 
+describe('<Pagination />', () => {
+  const defaultProps = {
+    currentPage: 1,
+    totalPages: 5,
+    totalItems: 50,
+    itemsPerPage: 10,
+    onPageChange: jest.fn(),
+  };
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('should match snapshot', () => {
+    const { container } = render(<ProvidedPagination {...defaultProps} />);
     expect(container).toMatchSnapshot();
   });
 
-  describe('change page', () => {
-    let hook: RenderHookResult<
-      {
-        currentPage: number;
-        handleChange: (value: number) => void;
-        handleUserInput: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-      },
-      unknown
-    >;
-    beforeEach(() => {
-      hook = renderHook(() => usePagination());
-      const ProvidedPagination = withProviders(Pagination);
-      const { result } = hook;
+  it('should call onPageChange when navigating pages', () => {
+    const onPageChange = jest.fn();
+    render(
+      <ProvidedPagination {...defaultProps} onPageChange={onPageChange} />
+    );
 
-      render(
-        <ProvidedPagination>
-          <Pagination.PreviousItem
-            onClick={() =>
-              act(() => {
-                result.current.handleChange(result.current.currentPage - 1);
-              })
-            }
-          />
-          <PaginationInput
-            onChange={(value) => act(() => result.current.handleChange(value))}
-            onHandleKeyDown={(e) =>
-              act(() => {
-                result.current.handleUserInput(e);
-              })
-            }
-            totalPages={totalPages}
-            value={result.current.currentPage}
-          />
-          <Pagination.Content
-            onClick={() =>
-              act(() => {
-                result.current.handleChange(totalPages);
-              })
-            }
-            totalPages={totalPages}
-          />
-          <Pagination.NextItem
-            onClick={() =>
-              act(() => {
-                result.current.handleChange(result.current.currentPage + 1);
-              })
-            }
-          />
-        </ProvidedPagination>
-      );
-    });
+    fireEvent.click(screen.getByTestId('pagination-next-page'));
+    expect(onPageChange).toHaveBeenCalledWith(2);
 
-    it('should increase page number when next item is clicked', () => {
-      fireEvent.click(screen.getByTestId('pagination-next-item'));
-      expect(hook.result.current.currentPage).toEqual(2);
-    });
+    fireEvent.click(screen.getByTestId('pagination-last-page'));
+    expect(onPageChange).toHaveBeenCalledWith(5);
+  });
 
-    it('should decrease page number when previous item is clicked', () => {
-      act(() =>
-        hook.result.current.handleChange(hook.result.current.currentPage + 1)
-      );
+  it('should disable first/previous buttons on first page', () => {
+    render(<ProvidedPagination {...defaultProps} currentPage={1} />);
 
-      fireEvent.click(screen.getByTestId('pagination-previous-item'));
-      expect(hook.result.current.currentPage).toEqual(1);
-    });
+    expect(screen.getByTestId('pagination-first-page')).toBeDisabled();
+    expect(screen.getByTestId('pagination-previous-page')).toBeDisabled();
+  });
 
-    it('should change to last page when button is clicked', () => {
-      fireEvent.click(screen.getByTestId('pagination-last-page'));
-      expect(hook.result.current.currentPage).toEqual(3);
-    });
+  it('should disable next/last buttons on last page', () => {
+    render(<ProvidedPagination {...defaultProps} currentPage={5} />);
 
-    it('should change to page with number inserted on input', async () => {
-      fireEvent.change(screen.getByTestId('pagination-input'), {
-        target: { value: '2' },
-      });
-      await waitFor(() => expect(hook.result.current.currentPage).toEqual(2));
+    expect(screen.getByTestId('pagination-next-page')).toBeDisabled();
+    expect(screen.getByTestId('pagination-last-page')).toBeDisabled();
+  });
+
+  it('should call onPageChange when clicking page number', () => {
+    const onPageChange = jest.fn();
+    render(
+      <ProvidedPagination {...defaultProps} onPageChange={onPageChange} />
+    );
+
+    fireEvent.click(screen.getByTestId('pagination-page-3'));
+    expect(onPageChange).toHaveBeenCalledWith(3);
+  });
+
+  it('should not call onPageChange when clicking current page', () => {
+    const onPageChange = jest.fn();
+    render(
+      <ProvidedPagination
+        {...defaultProps}
+        currentPage={2}
+        onPageChange={onPageChange}
+      />
+    );
+
+    fireEvent.click(screen.getByTestId('pagination-page-2'));
+    expect(onPageChange).not.toHaveBeenCalled();
+  });
+
+  it('should display items info correctly', () => {
+    render(<ProvidedPagination {...defaultProps} showItemsInfo />);
+
+    expect(screen.getByTestId('pagination-items-info')).toHaveTextContent(
+      'Showing 10 of 50 entries'
+    );
+  });
+
+  it('should handle undefined totalItems', () => {
+    render(
+      <ProvidedPagination
+        {...defaultProps}
+        showItemsInfo
+        totalItems={undefined}
+      />
+    );
+
+    expect(
+      screen.queryByTestId('pagination-items-info')
+    ).not.toBeInTheDocument();
+  });
+
+  it('should render ellipsis for large page ranges', () => {
+    render(<ProvidedPagination {...defaultProps} totalPages={20} />);
+
+    expect(screen.getByTestId('pagination-ellipsis')).toBeVisible();
+  });
+
+  it('should render aria-label on navigation button', () => {
+    render(<ProvidedPagination {...defaultProps} currentPage={2} />);
+
+    const firstPageButton = screen.getByTestId('pagination-first-page');
+    expect(firstPageButton).toHaveAttribute('aria-label', 'Go to first page');
+  });
+
+  it('should use custom itemsPerPageOptions', () => {
+    const customOptions = [5, 15, 25];
+
+    render(
+      <ProvidedPagination
+        {...defaultProps}
+        itemsPerPageOptions={customOptions}
+        showItemsPerPage
+      />
+    );
+
+    customOptions.forEach((option) => {
+      expect(screen.getByText(`${option} per page`)).toBeInTheDocument();
     });
   });
 });

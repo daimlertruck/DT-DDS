@@ -1,62 +1,151 @@
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 
-interface ArrowStyledProps {
-  disabled?: boolean;
-}
+import { PAGINATION_BUTTON_SIZES, ITEMS_PER_PAGE_WIDTH } from './constants';
 
-interface InputStyledProps {
-  hasError?: boolean;
+interface PaginationPageButtonStyledProps {
+  $isActive?: boolean;
 }
 
 export const PaginationStyled = styled.div`
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  gap: 8px;
-  margin-top: 48px;
-`;
+  width: 100%;
+  gap: 12px;
 
-export const LastPageStyled = styled.button`
-  ${({ theme }) => `
-    background-color: transparent;
-    color: ${theme.palette.primary.default};
-    border: none;
-    cursor: pointer;
-  `}
-`;
-
-export const ArrowStyled = styled.button<ArrowStyledProps>`
-  ${({ theme, disabled }) => `
-    display: flex;
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mq3}px) {
+    flex-direction: row;
     justify-content: center;
-    background-color: ${theme.palette.surface.contrast};
+
+    &:has(> *:nth-of-type(2)) {
+      justify-content: space-between;
+    }
+  }
+`;
+
+export const InfoWrapperStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.mq3}px) {
+    width: auto;
+    flex-shrink: 0;
+  }
+`;
+
+export const NavigationWrapperStyled = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+`;
+
+export const PaginationButtonStyled = styled.button`
+  ${({ theme }) => `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${PAGINATION_BUTTON_SIZES}px;
+    height: ${PAGINATION_BUTTON_SIZES}px;
+    padding: 0;
     border: none;
-    border-radius: 3px;
-    cursor: ${disabled ? 'default' : 'pointer'};
+    position: relative;
+    background-color: transparent; 
+    color: ${theme.palette.content.default};
+    cursor: pointer;
+
+    &:disabled {
+      i {
+        color: ${theme.palette.content.light};
+      }
+      cursor: not-allowed;
+    }
+
+    &:hover:not(:disabled) {
+      background-color: ${theme.palette.informative.light};
+    }
+
+    &:focus-visible {
+      outline: 2px solid ${theme.palette.primary.default};
+      outline-offset: 1px;
+    }
   `}
 `;
 
-export const InputStyled = styled.input<InputStyledProps>`
-  ${({ theme, hasError }) => `
-    ${theme.fontStyles.bodyMdRegularXSmall};
-    text-align: center;
-    padding: 6px 8px;
-    margin: 0px;
-    width: 50px;
-    height: 32px;
-    background-color: ${theme.palette.surface.contrast};
+export const PaginationPageButtonStyled = styled('button', {
+  shouldForwardProp: (prop) => isPropValid(prop) && !prop.startsWith('$'),
+})<PaginationPageButtonStyledProps>`
+  ${({ theme, $isActive }) => `
+    ${theme.fontStyles.bodyXsBold};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${PAGINATION_BUTTON_SIZES}px;
+    height: ${PAGINATION_BUTTON_SIZES}px;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent; 
     color: ${theme.palette.content.default};
-    border: ${
-      hasError
-        ? `2px solid ${theme.palette.error.default}`
-        : `1px solid ${theme.palette.border.default}`
-    };
-    border-radius: 3px;
+    cursor: pointer;
 
-    &:focus {
-       ${
-         !hasError &&
-         `border-bottom: 2px solid ${theme.palette.primary.default}`
-       };
+    &:focus-visible {
+      outline: 2px solid ${theme.palette.primary.default};
+      outline-offset: 1px;
+      transition: none;
     }
+
+    &:hover {
+      background-color: ${theme.palette.informative.light};
+    }
+
+    ${
+      $isActive &&
+      `
+        background-color: ${theme.palette.primary.default};
+        color: ${theme.palette.content.contrast};
+        cursor: default;
+
+        &:hover {
+          background-color: ${theme.palette.primary.default};
+        }
+      `
+    }
+  `}
+`;
+
+export const TruncationTextStyled = styled.span`
+  ${({ theme }) => `
+    ${theme.fontStyles.bodyMdRegular};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: ${PAGINATION_BUTTON_SIZES}px;
+    height: ${PAGINATION_BUTTON_SIZES}px;
+    color: ${theme.palette.content.default};
+    user-select: none;
+  `}
+`;
+
+export const ItemsPerPageWrapperStyled = styled.div`
+  ${({ theme }) => `
+    label:empty {
+      display: none;
+    }
+
+    @media screen and (min-width: ${theme.breakpoints.mq3}px) {
+      min-width: ${ITEMS_PER_PAGE_WIDTH}px;
+    }
+  `}
+`;
+
+export const ItemsInfoTextStyled = styled.span`
+  ${({ theme }) => `
+    ${theme.fontStyles.bodySmRegular};
+    white-space: nowrap;
   `}
 `;

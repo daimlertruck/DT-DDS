@@ -1,77 +1,45 @@
 # Pagination Package
 
-The Pagination component enables the user to select a specific page from a range of pages.
+The Pagination component provides page navigation with optional items-per-page selection and item count information.
 
 ## Pagination Usage
 
 ```jsx
-import { Pagination, PaginationInput, usePagination } from '@dt-dds/react';
-const totalPages = 10;
+import { Pagination } from '@dt-dds/react';
 
-const { currentPage, handleChange, handleUserInput } = usePagination();
+const Example = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
-return (
-  <Pagination>
-    <Pagination.PreviousItem
-      disabled={currentPage <= 1 || currentPage > totalPages}
-      onClick={() => handleChange(currentPage - 1)}
+  return (
+    <Pagination
+      currentPage={currentPage}
+      totalPages={20}
+      totalItems={200}
+      itemsPerPage={itemsPerPage}
+      onPageChange={setCurrentPage}
+      onItemsPerPageChange={setItemsPerPage}
+      showItemsPerPage
+      showItemsInfo
     />
-    <PaginationInput
-      value={currentPage}
-      totalPages={totalPages}
-      onHandleKeyDown={handleUserInput}
-      onChange={handleChange}
-    />
-    <Pagination.Content
-      totalPages={totalPages}
-      onClick={() => handleChange(totalPages)}
-    />
-    <Pagination.NextItem
-      disabled={currentPage >= totalPages || currentPage < 1}
-      onClick={() => handleChange(currentPage + 1)}
-    />
-  </Pagination>
-);
+  );
+};
 ```
 
 ## Properties
 
-### Pagination
-
-| Property     | Type        | Default            | Description                     |
-| ------------ | ----------- | ------------------ | ------------------------------- |
-| `children`   | `ReactNode` | -                  | Child components to be rendered |
-| `dataTestId` | `string`    | pagination-wrapper | Customizable test identifier    |
-
-### Pagination.PreviousItem
-
-| Property   | Type       | Default | Description                                       |
-| ---------- | ---------- | ------- | ------------------------------------------------- |
-| `onClick`  | `function` | -       | The triggered function when clicked on the button |
-| `disabled` | `boolean`  | false   | Determines the disabled state of the button       |
-
-### Pagination.NextItem
-
-| Property   | Type       | Default | Description                                       |
-| ---------- | ---------- | ------- | ------------------------------------------------- |
-| `onClick`  | `function` | -       | The triggered function when clicked on the button |
-| `disabled` | `boolean`  | false   | Determines the disabled state of the button       |
-
-### Pagination.Content
-
-| Property     | Type       | Default | Description                                       |
-| ------------ | ---------- | ------- | ------------------------------------------------- |
-| `onClick`    | `function` | -       | The triggered function when clicked on the button |
-| `totalPages` | `number`   | -       | It will be the number displayed on the button     |
-
-### PaginationInput
-
-| Property          | Type       | Default | Description                                          |
-| ----------------- | ---------- | ------- | ---------------------------------------------------- |
-| `totalPages`      | `number`   | -       | Total number of pages                                |
-| `onChange`        | `function` | -       | Function to be executed when debounced value changes |
-| `onHandleKeyDown` | `function` | -       | Event fired when a key is pressed                    |
-| `value`           | `number`   | -       | Value to be displayed on the input                   |
+| Property               | Type                      | Default             | Description                                            |
+| ---------------------- | ------------------------- | ------------------- | ------------------------------------------------------ |
+| `currentPage`          | `number`                  | —                   | Currently selected page (1-based index)                |
+| `totalPages`           | `number`                  | —                   | Total number of available pages                        |
+| `totalItems`           | `number`                  | —                   | Total number of items across all pages                 |
+| `itemsPerPage`         | `number`                  | `10`                | Number of items displayed per page                     |
+| `onPageChange`         | `(page: number) => void`  | —                   | Callback fired when the current page changes           |
+| `onItemsPerPageChange` | `(items: number) => void` | —                   | Callback fired when items-per-page value changes       |
+| `showItemsPerPage`     | `boolean`                 | `false`             | Controls visibility of the items-per-page selector     |
+| `showItemsInfo`        | `boolean`                 | `true`              | Controls visibility of the items information text      |
+| `itemsPerPageOptions`  | `number[]`                | `[10, 20, 50, 100]` | Available options for items per page                   |
+| `dataTestId`           | `string`                  | `pagination`        | Custom test identifier for the pagination root element |
 
 ## Stack
 
