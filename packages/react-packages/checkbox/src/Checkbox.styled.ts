@@ -58,6 +58,25 @@ const getCheckboxColors = (theme: Theme) => ({
   },
 });
 
+const getCheckboxState = (
+  theme: Theme,
+  $checked: boolean,
+  $indeterminate: boolean,
+  $disabled: boolean,
+  $error: boolean
+) => {
+  const colors = getCheckboxColors(theme);
+  const isActive = $checked || $indeterminate;
+  const activeKey = isActive ? 'active' : 'inactive';
+
+  if ($disabled) {
+    return colors.disabled[activeKey];
+  }
+
+  const errorKey = $error ? 'error' : 'normal';
+  return colors.default[activeKey][errorKey];
+};
+
 export const CheckboxStyled = styled('label', {
   shouldForwardProp: (prop) => isPropValid(prop) && !prop.startsWith('$'),
 })<{ $disabled: boolean }>`
@@ -88,20 +107,18 @@ export const CheckboxBoxStyled = styled('div', {
   border-radius: ${({ theme }) => theme.shape.checkbox};
 
   ${({ theme, $checked, $indeterminate, $disabled, $error, $size }) => {
-    const colors = getCheckboxColors(theme);
-    const active = $checked || $indeterminate;
-
-    const state = $disabled
-      ? colors.disabled[active ? 'active' : 'inactive']
-      : colors.default[active ? 'active' : 'inactive'][
-          $error ? 'error' : 'normal'
-        ];
+    const state = getCheckboxState(
+      theme,
+      $checked,
+      $indeterminate,
+      $disabled,
+      $error
+    );
+    const boxSize = SIZES[$size];
 
     return `
-      height: ${SIZES[$size]}px;
-      min-height: ${SIZES[$size]}px;
-      width: ${SIZES[$size]}px;
-      min-width: ${SIZES[$size]}px;
+      height: ${boxSize}px;
+      width: ${boxSize}px;
 
       background-color: ${state.bg};
       border: 1px solid ${state.border};

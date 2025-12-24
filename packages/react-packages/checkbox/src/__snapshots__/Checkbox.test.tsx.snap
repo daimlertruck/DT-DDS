@@ -44,9 +44,7 @@ exports[`<Checkbox /> component renders checkbox correctly 1`] = `
   justify-content: center;
   border-radius: 0px;
   height: 24px;
-  min-height: 24px;
   width: 24px;
-  min-width: 24px;
   background-color: #ffffff;
   border: 1px solid #00677f;
 }
@@ -98,6 +96,7 @@ input:focus-visible+.emotion-4 {
     />
     <div
       class="emotion-4 emotion-5"
+      data-testid="checkbox-box"
     />
     <div
       class="emotion-6 emotion-7"

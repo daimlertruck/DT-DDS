@@ -47,9 +47,15 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       onChange?.(event);
     };
 
+    const getIconCode = () => {
+      if (isIndeterminate) return 'remove';
+      if (isChecked) return 'check';
+      return null;
+    };
+
     const hasLabel = Boolean(label || children);
     const inputId = id || (hasLabel ? dataTestId : undefined);
-    const iconCode = isIndeterminate ? 'remove' : isChecked ? 'check' : null;
+    const iconCode = getIconCode();
     const iconSize = size === 'small' ? 'medium' : 'large';
 
     return (
@@ -78,6 +84,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
           $error={hasError}
           $indeterminate={isIndeterminate}
           $size={size}
+          data-testid='checkbox-box'
         >
           {iconCode ? (
             <Icon

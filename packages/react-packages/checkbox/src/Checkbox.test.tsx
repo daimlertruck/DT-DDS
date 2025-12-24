@@ -1,4 +1,4 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { withProviders } from '@dt-dds/react-core';
 
@@ -17,6 +17,17 @@ describe('<Checkbox /> component', () => {
       />
     );
     expect(container).toMatchSnapshot();
+  });
+
+  it('renders with children instead of label', () => {
+    const { getByRole, getByText } = render(
+      <ProvidedCheckBox isChecked={false} onChange={() => null}>
+        <span>Child content</span>
+      </ProvidedCheckBox>
+    );
+
+    expect(getByText('Child content')).toBeVisible();
+    expect(getByRole('checkbox')).toBeInTheDocument();
   });
 
   it('calls onChange when clicked', () => {
@@ -80,5 +91,61 @@ describe('<Checkbox /> component', () => {
     );
 
     expect(getByRole('checkbox')).toHaveAttribute('aria-label', 'Custom label');
+  });
+
+  it('renders check icon when checked', () => {
+    const { container } = render(
+      <ProvidedCheckBox isChecked onChange={() => null} />
+    );
+
+    const iconElement = container.querySelector('i');
+    expect(iconElement).toBeVisible();
+  });
+
+  it('renders with small size', () => {
+    render(
+      <ProvidedCheckBox
+        isChecked={false}
+        label='Small checkbox'
+        onChange={() => null}
+        size='small'
+      />
+    );
+
+    const checkboxBox = screen.getByTestId('checkbox-box');
+
+    expect(checkboxBox).toHaveStyle({
+      height: '20px',
+      width: '20px',
+    });
+  });
+
+  it('applies custom style prop', () => {
+    const customStyle = { marginTop: '10px' };
+    const { getByTestId } = render(
+      <ProvidedCheckBox
+        isChecked={false}
+        onChange={() => null}
+        style={customStyle}
+      />
+    );
+
+    const label = getByTestId('checkbox');
+    expect(label).toHaveStyle('margin-top: 10px');
+  });
+
+  it('passes through additional props to input', () => {
+    const { getByRole } = render(
+      <ProvidedCheckBox
+        data-custom='test-value'
+        isChecked={false}
+        name='test-checkbox'
+        onChange={() => null}
+      />
+    );
+
+    const checkbox = getByRole('checkbox');
+    expect(checkbox).toHaveAttribute('name', 'test-checkbox');
+    expect(checkbox).toHaveAttribute('data-custom', 'test-value');
   });
 });
