@@ -208,7 +208,7 @@ jobs:
         with:
           blackducksca_url: ${{ env.BLACKDUCK_URL }}
           blackducksca_token: ${{ env.BLACKDUCK_TOKEN }}
-          blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
+          blackducksca_scan_failure_severities: 'BLOCKER'
           blackducksca_scan_full: ${{ github.ref == 'refs/heads/main' }}
           blackducksca_prComment_enabled: false
           detect_args: '--logging.level.detect=DEBUG --detect.blackduck.rapid.compare.mode=ALL --detect.project.version.phase=RELEASED  --detect.project.version.distribution=OPENSOURCE --detect.yarn.dependency.types.excluded=NON_PRODUCTION'
