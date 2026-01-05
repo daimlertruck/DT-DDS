@@ -41,7 +41,13 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
           destination:
             '{{ turbo.paths.root }}/packages/react-packages/{{packageName}}',
           base: 'new-component-package/templates/',
-          templateFiles: 'new-component-package/templates/**/!(*Component*)',
+          templateFiles:
+            'new-component-package/templates/**/!(*Component*|LICENSE.hbs)',
+        },
+        {
+          type: 'add',
+          path: '{{ turbo.paths.root }}/packages/react-packages/{{packageName}}/LICENSE',
+          templateFile: 'new-component-package/templates/LICENSE.hbs',
         },
         ...addComponentActions,
         ...modifyDTUIReacAddNewPackageAction,
