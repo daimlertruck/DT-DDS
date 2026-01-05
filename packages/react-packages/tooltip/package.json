@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-tooltip",
-  "version": "1.0.0-beta.66",
+  "version": "1.0.0-beta.67",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"

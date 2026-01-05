@@ -1,5 +1,11 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.60
+
+### Patch Changes
+
+- fix: sonarqube warnings
+
 ## 1.0.0-beta.59
 
 ### Patch Changes

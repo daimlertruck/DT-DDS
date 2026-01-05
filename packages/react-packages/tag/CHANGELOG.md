@@ -1,5 +1,13 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- refactor: remove custom icons
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+
 ## 1.0.0-beta.60
 
 ### Patch Changes

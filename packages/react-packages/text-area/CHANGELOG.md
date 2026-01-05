@@ -1,5 +1,13 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.89
+
+### Patch Changes
+
+- refactor: remove custom icons
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+
 ## 1.0.0-beta.88
 
 ### Minor Changes

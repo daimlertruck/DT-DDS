@@ -1,5 +1,11 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- refactor: remove custom icons
+
 ## 1.0.0-beta.64
 
 ### Minor Changes

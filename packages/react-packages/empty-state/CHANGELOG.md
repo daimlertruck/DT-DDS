@@ -1,5 +1,11 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.127
+
+### Patch Changes
+
+- refactor: remove custom icons
+
 ## 1.0.0-beta.126
 
 ### Minor Changes

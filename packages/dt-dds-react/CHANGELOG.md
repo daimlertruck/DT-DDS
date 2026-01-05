@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.285
+
+### Patch Changes
+
+- refactor: remove custom icons
+- fix: sonarqube warnings
+- Updated dependencies
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-breadcrumb@1.0.0-beta.70
+  - @dt-dds/react-drawer@1.0.0-beta.65
+  - @dt-dds/react-empty-state@1.0.0-beta.127
+  - @dt-dds/react-form@1.0.0-beta.52
+  - @dt-dds/react-table@1.0.0-beta.54
+  - @dt-dds/react-tag@1.0.0-beta.61
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+  - @dt-dds/react-avatar@1.0.0-beta.70
+  - @dt-dds/react-segmented-control@1.0.0-beta.48
+  - @dt-dds/react-select@1.0.0-beta.92
+  - @dt-dds/react-sidebar@1.0.0-beta.4
+  - @dt-dds/react-stepper@1.0.0-beta.53
+  - @dt-dds/react-text-area@1.0.0-beta.89
+  - @dt-dds/react-text-field@1.0.0-beta.117
+  - @dt-dds/react-date-picker@1.0.0-beta.101
+  - @dt-dds/react-app-header@1.0.0-beta.29
+  - @dt-dds/react-checkbox@1.0.0-beta.60
+
 ## 1.0.0-beta.284
 
 ### Minor Changes

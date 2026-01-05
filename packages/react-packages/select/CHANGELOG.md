@@ -1,5 +1,16 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.92
+
+### Patch Changes
+
+- refactor: remove custom icons
+- fix: sonarqube warnings
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+  - @dt-dds/react-checkbox@1.0.0-beta.60
+
 ## 1.0.0-beta.91
 
 ### Minor Changes

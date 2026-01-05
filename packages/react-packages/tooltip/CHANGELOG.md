@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.67
+
+### Patch Changes
+
+- refactor: remove custom icons
+
 ## 1.0.0-beta.66
 
 ### Patch Changes

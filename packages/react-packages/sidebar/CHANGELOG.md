@@ -1,5 +1,13 @@
 # @dt-dds/react-sidebar
 
+## 1.0.0-beta.4
+
+### Patch Changes
+
+- refactor: remove custom icons
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+
 ## 1.0.0-beta.3
 
 ### Minor Changes

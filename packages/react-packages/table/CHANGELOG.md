@@ -1,5 +1,11 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.54
+
+### Patch Changes
+
+- refactor: remove custom icons
+
 ## 1.0.0-beta.53
 
 ### Patch Changes

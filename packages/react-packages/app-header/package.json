@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-app-header",
-  "version": "1.0.0-beta.28",
+  "version": "1.0.0-beta.29",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -30,7 +30,7 @@
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
     "@babel/preset-typescript": "^7.23.3",
-    "@dt-dds/react-avatar": "1.0.0-beta.69",
+    "@dt-dds/react-avatar": "1.0.0-beta.70",
     "@dt-dds/react-icon": "1.0.0-beta.60",
     "@dt-dds/react-icon-button": "1.0.0-beta.26",
     "@emotion/babel-plugin": "^11.11.0",

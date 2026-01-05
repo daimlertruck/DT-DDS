@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.101
+
+### Patch Changes
+
+- refactor: remove custom icons
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.117
+
 ## 1.0.0-beta.100
 
 ### Minor Changes

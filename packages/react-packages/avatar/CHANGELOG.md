@@ -1,5 +1,13 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- refactor: remove custom icons
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.67
+
 ## 1.0.0-beta.69
 
 ### Patch Changes
