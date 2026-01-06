@@ -1,5 +1,14 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.55
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.54
 
 ### Patch Changes

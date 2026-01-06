@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.7
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.6
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-icon@1.0.0-beta.61
+  - @dt-dds/react-icon-button@1.0.0-beta.27
+  - @dt-dds/react-typography@1.0.0-beta.49
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

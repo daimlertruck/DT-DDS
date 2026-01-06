@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

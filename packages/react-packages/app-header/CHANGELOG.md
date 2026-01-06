@@ -1,5 +1,19 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.30
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-typography@1.0.0-beta.49
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.29
 
 ### Major Changes

@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.128
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.107
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-link@1.0.0-beta.84
+  - @dt-dds/react-typography@1.0.0-beta.49
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.127
 
 ### Patch Changes

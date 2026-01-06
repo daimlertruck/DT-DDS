@@ -1,5 +1,15 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.6
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.60
 
 ### Patch Changes

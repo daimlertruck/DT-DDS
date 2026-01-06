@@ -1,5 +1,16 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.49
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-icon@1.0.0-beta.61
+  - @dt-dds/react-tooltip@1.0.0-beta.68
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.48
 
 ### Patch Changes

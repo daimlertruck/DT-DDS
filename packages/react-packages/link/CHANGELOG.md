@@ -1,5 +1,17 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.84
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.6
+  - @dt-dds/react-button@1.0.0-beta.107
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-icon@1.0.0-beta.61
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.83
 
 ### Minor Changes

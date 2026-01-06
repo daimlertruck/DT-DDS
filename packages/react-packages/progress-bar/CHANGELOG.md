@@ -1,5 +1,15 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.54
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.61
+  - @dt-dds/react-typography@1.0.0-beta.49
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.53
 
 ### Minor Changes

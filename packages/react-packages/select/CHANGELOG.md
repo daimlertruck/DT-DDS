@@ -1,5 +1,21 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.93
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-checkbox@1.0.0-beta.61
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-icon@1.0.0-beta.61
+  - @dt-dds/react-icon-button@1.0.0-beta.27
+  - @dt-dds/react-label-field@1.0.0-beta.59
+  - @dt-dds/react-tooltip@1.0.0-beta.68
+  - @dt-dds/react-typography@1.0.0-beta.49
+  - @dt-dds/themes@1.0.0-beta.13
+  - @dt-dds/react-dropdown@1.0.0-beta.100
+
 ## 1.0.0-beta.92
 
 ### Patch Changes

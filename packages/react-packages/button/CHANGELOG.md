@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.107
+
+### Patch Changes
+
+- chore: standardise license file naming
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.58
+  - @dt-dds/react-spinner@1.0.0-beta.112
+  - @dt-dds/themes@1.0.0-beta.13
+
 ## 1.0.0-beta.106
 
 ### Minor Changes

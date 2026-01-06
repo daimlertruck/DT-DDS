@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.6
+
+### Patch Changes
+
+- chore: standardise license file naming
+
 ## 1.0.0-beta.5
 
 ### Minor Changes
