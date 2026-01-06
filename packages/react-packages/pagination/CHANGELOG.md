@@ -1,5 +1,15 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.41
+
+### Minor Changes
+
+- feat: refactor pagination
+
+### Patch Changes
+
+- fix: pagination dependency
+
 ## 1.0.0-beta.40
 
 ### Patch Changes

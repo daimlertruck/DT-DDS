@@ -1,5 +1,20 @@
 # @dt-ui/react
 
+## 1.0.0-beta.287
+
+### Minor Changes
+
+- feat: refactor pagination
+
+### Patch Changes
+
+- fix: pagination dependency
+- Updated dependencies
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-pagination@1.0.0-beta.41
+  - @dt-dds/react-app-header@1.0.0-beta.31
+
 ## 1.0.0-beta.286
 
 ### Patch Changes
