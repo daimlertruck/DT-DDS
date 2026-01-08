@@ -79,7 +79,7 @@ exports[`SegmentedControl renders without errors 1`] = `
 }
 
 .emotion-5 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;

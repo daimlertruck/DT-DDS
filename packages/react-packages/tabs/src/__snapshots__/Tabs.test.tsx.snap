@@ -56,7 +56,7 @@ exports[`<Tabs /> component should match the snapshot by displaying contained va
 }
 
 .emotion-2 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -302,7 +302,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 }
 
 .emotion-2 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
