@@ -182,7 +182,7 @@ exports[`<Modal/> Component handle loading state renders modal with loading over
 }
 
 .emotion-8 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -468,7 +468,7 @@ exports[`<Modal/> Component handle modal actions renders modal correctly 1`] = `
 }
 
 .emotion-8 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

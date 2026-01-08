@@ -630,7 +630,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 }
 
 .emotion-10 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -830,7 +830,7 @@ exports[`<ProgressBar /> component should render with different info prop should
 }
 
 .emotion-12 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;

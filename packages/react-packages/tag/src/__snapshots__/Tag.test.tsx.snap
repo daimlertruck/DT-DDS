@@ -125,7 +125,7 @@ exports[`<Tag /> component should render the tag with variant solid, color error
 }
 
 .emotion-4 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 12px;
@@ -349,7 +349,7 @@ exports[`<Tag /> component should render the tag with variant solid, color warni
 }
 
 .emotion-4 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 12px;

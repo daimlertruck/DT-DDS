@@ -47,7 +47,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-4 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -170,7 +170,7 @@ exports[`<Accordion /> component should render with correct style when hasBackgr
 }
 
 .emotion-4 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

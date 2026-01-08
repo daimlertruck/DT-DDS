@@ -82,7 +82,7 @@ exports[`<Stepper /> component should match snapshot with all features 1`] = `
 }
 
 .emotion-8 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;

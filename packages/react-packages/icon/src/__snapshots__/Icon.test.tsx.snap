@@ -2,7 +2,7 @@
 
 exports[`Icon component tests renders Icon component 1`] = `
 .emotion-0 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;

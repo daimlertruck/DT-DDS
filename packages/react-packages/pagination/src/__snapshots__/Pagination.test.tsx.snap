@@ -132,7 +132,7 @@ exports[`<Pagination /> should match snapshot 1`] = `
 }
 
 .emotion-10 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;

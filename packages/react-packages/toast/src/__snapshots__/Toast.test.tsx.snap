@@ -78,7 +78,7 @@ exports[`<Toast /> component should render toast with title & message for type e
 }
 
 .emotion-3 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -265,7 +265,7 @@ exports[`<Toast /> component should render toast with title & message for type i
 }
 
 .emotion-3 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -432,7 +432,7 @@ exports[`<Toast /> component should render toast with title & message for type s
 }
 
 .emotion-3 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -609,7 +609,7 @@ exports[`<Toast /> component should render toast with title & message for type w
 }
 
 .emotion-3 {
-  font-family: DTUI-icons-outlined;
+  font-family: DTUI-icons-sharp;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
