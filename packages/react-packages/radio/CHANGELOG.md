@@ -1,5 +1,18 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.96
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-core@1.0.0-beta.59
+  - @dt-dds/react-typography@1.0.0-beta.50
+
 ## 1.0.0-beta.95
 
 ### Patch Changes

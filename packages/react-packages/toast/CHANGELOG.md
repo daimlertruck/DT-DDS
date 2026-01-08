@@ -1,5 +1,20 @@
 # @dt-ui/react-toast
 
+## 1.0.0-beta.125
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.62
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-button@1.0.0-beta.108
+  - @dt-dds/react-core@1.0.0-beta.59
+  - @dt-dds/react-typography@1.0.0-beta.50
+
 ## 1.0.0-beta.124
 
 ### Patch Changes

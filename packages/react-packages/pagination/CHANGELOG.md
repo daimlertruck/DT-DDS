@@ -1,5 +1,23 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.42
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- fix: checkbox label alignment
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.62
+  - @dt-dds/react-select@1.0.0-beta.94
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-core@1.0.0-beta.59
+  - @dt-dds/react-tooltip@1.0.0-beta.69
+  - @dt-dds/react-typography@1.0.0-beta.50
+
 ## 1.0.0-beta.41
 
 ### Minor Changes

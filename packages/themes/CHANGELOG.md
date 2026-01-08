@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.14
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
 ## 1.0.0-beta.13
 
 ### Patch Changes

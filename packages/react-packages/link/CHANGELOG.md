@@ -1,5 +1,19 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.85
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.62
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-button@1.0.0-beta.108
+  - @dt-dds/react-core@1.0.0-beta.59
+
 ## 1.0.0-beta.84
 
 ### Patch Changes

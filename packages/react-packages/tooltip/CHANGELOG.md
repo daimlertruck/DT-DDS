@@ -1,5 +1,17 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.69
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-core@1.0.0-beta.59
+
 ## 1.0.0-beta.68
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.8
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.14
+
 ## 1.0.0-beta.7
 
 ### Patch Changes

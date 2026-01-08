@@ -1,5 +1,23 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.119
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.62
+  - @dt-dds/react-icon-button@1.0.0-beta.28
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-label-field@1.0.0-beta.60
+  - @dt-dds/react-core@1.0.0-beta.59
+  - @dt-dds/react-spinner@1.0.0-beta.113
+  - @dt-dds/react-tooltip@1.0.0-beta.69
+  - @dt-dds/react-typography@1.0.0-beta.50
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

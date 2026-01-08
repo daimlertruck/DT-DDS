@@ -1,5 +1,22 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.32
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Minor Changes
+
+- feat: change theme icons to sharp
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.14
+  - @dt-dds/react-core@1.0.0-beta.59
+  - @dt-dds/react-typography@1.0.0-beta.50
+
 ## 1.0.0-beta.31
 
 ### Major Changes

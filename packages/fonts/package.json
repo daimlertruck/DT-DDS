@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/fonts",
-  "version": "1.0.0-beta.7",
+  "version": "1.0.0-beta.8",
   "description": "DT-DDS Design System Fonts",
   "license": "MIT",
   "exports": {
@@ -23,7 +23,7 @@
     "lint": "eslint --cache ."
   },
   "dependencies": {
-    "@dt-dds/themes": "1.0.0-beta.13"
+    "@dt-dds/themes": "1.0.0-beta.14"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
