@@ -142,7 +142,11 @@ export const Pagination = ({
               $isActive={page === currentPage}
               aria-current={page === currentPage ? 'page' : undefined}
               aria-label={`Go to page ${page}`}
-              data-testid={`pagination-page-${page}`}
+              data-testid={
+                page === currentPage
+                  ? 'pagination-current-page'
+                  : `pagination-page-${page}`
+              }
               key={page}
               onClick={() => handlePageChange(page as number)}
               title={`Go to page ${page}`}
