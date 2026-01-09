@@ -309,7 +309,7 @@ exports[`<Pagination /> should match snapshot 1`] = `
         aria-current="page"
         aria-label="Go to page 1"
         class="emotion-14 emotion-15"
-        data-testid="pagination-page-1"
+        data-testid="pagination-current-page"
         title="Go to page 1"
       >
         1

@@ -71,7 +71,7 @@ describe('<Pagination />', () => {
       />
     );
 
-    fireEvent.click(screen.getByTestId('pagination-page-2'));
+    fireEvent.click(screen.getByTestId('pagination-current-page'));
     expect(onPageChange).not.toHaveBeenCalled();
   });
 
