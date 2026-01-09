@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-pagination",
-  "version": "1.0.0-beta.42",
+  "version": "1.0.0-beta.43",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"

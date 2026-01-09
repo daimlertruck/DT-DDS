@@ -1,5 +1,15 @@
 # @dt-ui/react
 
+## 1.0.0-beta.289
+
+### Patch Changes
+
+- fix: pagination button testid for current-page
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-pagination@1.0.0-beta.43
+  - @dt-dds/react-app-header@1.0.0-beta.33
+
 ## 1.0.0-beta.288
 
 ### Minor Changes

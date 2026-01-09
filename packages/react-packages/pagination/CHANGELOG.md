@@ -1,5 +1,11 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.43
+
+### Patch Changes
+
+- fix: pagination button testid for current-page
+
 ## 1.0.0-beta.42
 
 ### Minor Changes
