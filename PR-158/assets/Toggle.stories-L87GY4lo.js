@@ -1,0 +1,6 @@
+var u=Object.defineProperty;var s=(e,t)=>u(e,"name",{value:t,configurable:!0});import{j as o}from"./jsx-runtime-Cgz2XvFB.js";import{r as k}from"./index-CwbBKW39.js";import{T,a as j,b as y}from"./Toggle.styled-BufAp-yF.js";import"./emotion-styled.browser.esm-CIRWz9XU.js";const m=s(({dataTestId:e,label:t,isDisabled:r=!1,isChecked:l=!1,onClick:n})=>{const d=e??"toggle",f=`${d}-checkbox-id`,x=s(a=>{r||n(a)},"handleClick"),h=s(a=>{r||a.key==="Enter"&&(a.preventDefault(),n(a))},"handleEnterClick");return o.jsxs(T,{"data-testid":d,hasLabel:!!t,onClick:x,onKeyDown:h,children:[o.jsx(j,{checked:l,disabled:r,id:f,type:"checkbox"}),o.jsx(y,{}),o.jsx("span",{children:t})]})},"Toggle"),C=s(e=>{const[t,r]=k.useState(!1),l=s(()=>{r(n=>!n)},"handleClick");return o.jsx(m,{...e,isChecked:t,onClick:l})},"ToggleComponent"),w={title:"Data Display/Toggle",component:m,argTypes:{},render:s(({...e})=>o.jsx(C,{...e}),"render")},c={args:{isDisabled:!1,label:"Toggle"}};var i,g,p;c.parameters={...c.parameters,docs:{...(i=c.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  args: {
+    isDisabled: false,
+    label: 'Toggle'
+  }
+}`,...(p=(g=c.parameters)==null?void 0:g.docs)==null?void 0:p.source}}};const _=["Default"];export{c as Default,_ as __namedExportsOrder,w as default};
