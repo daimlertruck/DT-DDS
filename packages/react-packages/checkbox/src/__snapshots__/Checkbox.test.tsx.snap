@@ -43,6 +43,9 @@ exports[`<Checkbox /> component renders checkbox correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   border-radius: 0px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   height: 24px;
   width: 24px;
   background-color: #ffffff;
