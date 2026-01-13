@@ -105,6 +105,7 @@ export const CheckboxBoxStyled = styled('div', {
   align-items: center;
   justify-content: center;
   border-radius: ${({ theme }) => theme.shape.checkbox};
+  flex-shrink: 0;
 
   ${({ theme, $checked, $indeterminate, $disabled, $error, $size }) => {
     const state = getCheckboxState(
