@@ -1,5 +1,11 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.44
+
+### Patch Changes
+
+- docs: pagination license reference
+
 ## 1.0.0-beta.43
 
 ### Patch Changes

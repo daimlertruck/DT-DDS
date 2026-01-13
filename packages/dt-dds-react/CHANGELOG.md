@@ -1,5 +1,15 @@
 # @dt-ui/react
 
+## 1.0.0-beta.290
+
+### Patch Changes
+
+- docs: pagination license reference
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-app-header@1.0.0-beta.34
+  - @dt-dds/react-pagination@1.0.0-beta.44
+
 ## 1.0.0-beta.289
 
 ### Patch Changes
