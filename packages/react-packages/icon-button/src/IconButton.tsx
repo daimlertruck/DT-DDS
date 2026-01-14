@@ -54,3 +54,5 @@ export const IconButton = ({
     </IconButtonStyled>
   );
 };
+
+IconButton.displayName = 'IconButton';

@@ -46,7 +46,7 @@ describe('sidebarUtils', () => {
       expect(isIconElement(<MockIconButton />)).toBe(true);
 
       const MockToggle = () => <span>toggle</span>;
-      MockToggle.displayName = 'SidebarToggle';
+      MockToggle.displayName = 'Sidebar.Toggle';
       expect(isIconElement(<MockToggle />)).toBe(true);
     });
 
