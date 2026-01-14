@@ -102,7 +102,7 @@ export const isIconElement = (child: ReactNode): boolean => {
   if (
     componentType?.displayName === 'Icon' ||
     componentType?.displayName === 'IconButton' ||
-    componentType?.displayName === 'SidebarToggle'
+    componentType?.displayName === 'Sidebar.Toggle'
   )
     return true;
   if (
@@ -122,7 +122,7 @@ export const isSidebarToggleElement = (child: ReactNode): boolean => {
   if (!isValidElement(child)) return false;
 
   const componentType = child.type as ElementType & { displayName?: string };
-  if (componentType?.displayName === 'SidebarToggle') return true;
+  if (componentType?.displayName === 'Sidebar.Toggle') return true;
 
   if (typeof child.type === 'function' && child.type.name === 'SidebarToggle')
     return true;

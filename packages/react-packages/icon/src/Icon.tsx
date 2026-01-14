@@ -35,3 +35,5 @@ export const Icon = ({
     </IconStyled>
   );
 };
+
+Icon.displayName = 'Icon';
