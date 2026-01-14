@@ -1,5 +1,13 @@
 # @dt-ui/react-label-field
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+
 ## 1.0.0-beta.60
 
 ### Minor Changes

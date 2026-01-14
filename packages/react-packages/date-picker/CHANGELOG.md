@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.104
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+  - @dt-dds/react-dropdown@1.0.0-beta.102
+  - @dt-dds/react-text-field@1.0.0-beta.120
+
 ## 1.0.0-beta.103
 
 ### Minor Changes

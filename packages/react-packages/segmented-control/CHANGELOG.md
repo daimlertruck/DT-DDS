@@ -1,5 +1,13 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.51
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+
 ## 1.0.0-beta.50
 
 ### Minor Changes

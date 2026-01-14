@@ -1,5 +1,14 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.92
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+  - @dt-dds/react-label-field@1.0.0-beta.61
+
 ## 1.0.0-beta.91
 
 ### Minor Changes

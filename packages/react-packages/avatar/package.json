@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-avatar",
-  "version": "1.0.0-beta.72",
+  "version": "1.0.0-beta.73",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -22,7 +22,7 @@
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.59",
     "@dt-dds/react-tooltip": "1.0.0-beta.69",
-    "@dt-dds/react-icon": "1.0.0-beta.62",
+    "@dt-dds/react-icon": "1.0.0-beta.63",
     "@dt-dds/themes": "1.0.0-beta.14"
   },
   "devDependencies": {

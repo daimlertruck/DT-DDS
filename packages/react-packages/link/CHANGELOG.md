@@ -1,5 +1,13 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+
 ## 1.0.0-beta.85
 
 ### Minor Changes

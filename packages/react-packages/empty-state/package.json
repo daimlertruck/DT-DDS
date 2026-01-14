@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-empty-state",
-  "version": "1.0.0-beta.129",
+  "version": "1.0.0-beta.130",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -24,7 +24,7 @@
     "@dt-dds/react-core": "1.0.0-beta.59",
     "@dt-dds/react-typography": "1.0.0-beta.50",
     "@dt-dds/themes": "1.0.0-beta.14",
-    "@dt-dds/react-link": "1.0.0-beta.85"
+    "@dt-dds/react-link": "1.0.0-beta.86"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

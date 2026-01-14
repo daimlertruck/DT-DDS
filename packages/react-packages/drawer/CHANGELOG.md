@@ -1,5 +1,14 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.68
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+  - @dt-dds/react-icon-button@1.0.0-beta.29
+
 ## 1.0.0-beta.67
 
 ### Minor Changes

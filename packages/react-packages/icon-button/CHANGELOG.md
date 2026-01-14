@@ -1,5 +1,11 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.29
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+
 ## 1.0.0-beta.28
 
 ### Minor Changes

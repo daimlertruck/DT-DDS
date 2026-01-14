@@ -1,5 +1,14 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.46
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+  - @dt-dds/react-select@1.0.0-beta.96
+
 ## 1.0.0-beta.45
 
 ### Patch Changes

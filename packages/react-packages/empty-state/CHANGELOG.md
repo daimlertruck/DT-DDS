@@ -1,5 +1,13 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.130
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.86
+
 ## 1.0.0-beta.129
 
 ### Minor Changes

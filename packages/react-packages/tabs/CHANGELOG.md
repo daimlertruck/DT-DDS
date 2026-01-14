@@ -1,5 +1,14 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.109
+
+### Patch Changes
+
+- fix: add displayName to Icon and IconButton for production builds
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.63
+  - @dt-dds/react-icon-button@1.0.0-beta.29
+
 ## 1.0.0-beta.108
 
 ### Minor Changes
