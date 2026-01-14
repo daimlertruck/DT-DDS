@@ -1,5 +1,13 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.95
+
+### Patch Changes
+
+- fix: checkbox box width reduction on long label
+- Updated dependencies
+  - @dt-dds/react-checkbox@1.0.0-beta.63
+
 ## 1.0.0-beta.94
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.63
+
+### Patch Changes
+
+- fix: checkbox box width reduction on long label
+
 ## 1.0.0-beta.62
 
 ### Minor Changes

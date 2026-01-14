@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- fix: checkbox box width reduction on long label
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.95
+
 ## 1.0.0-beta.44
 
 ### Patch Changes
