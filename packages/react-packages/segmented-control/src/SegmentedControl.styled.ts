@@ -5,7 +5,7 @@ export const SegmentedControlStyled = styled.div`
     display: inline-flex;
     align-items: center;
     padding: ${theme.spacing.spacing_20};
-    border: 1px solid ${theme.palette.border.default};
+    border: 1px solid ${theme.palette.border.medium};
     border-radius: ${theme.shape.segmentedControl};
   `}
 `;

@@ -11,7 +11,7 @@ exports[`SegmentedControl renders without errors 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding: 4px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #c5c5c5;
   border-radius: 0px;
 }
 
@@ -28,8 +28,8 @@ exports[`SegmentedControl renders without errors 1`] = `
 
 .emotion-3 {
   font-family: Daimler CS;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 0px;
   line-height: 16px;
   -webkit-text-decoration: none;
@@ -45,23 +45,22 @@ exports[`SegmentedControl renders without errors 1`] = `
   gap: 4px;
   cursor: pointer;
   background-color: #ffffff;
-  color: #252525;
+  color: #00677f;
   border: none;
   border-radius: 0px;
   padding: 4px 4px;
 }
 
-.emotion-3:not(:disabled):hover {
-  background-color: #c5c5c5;
-  color: #252525;
+.emotion-3 i {
+  color: #00677f;
 }
 
-.emotion-3:not(:disabled):hover i {
-  color: #1d1d1d;
+.emotion-3:not(:disabled):hover {
+  background-color: #deeff2;
 }
 
 .emotion-3:not(:disabled)[aria-pressed="true"] {
-  background-color: #000000;
+  background-color: #00677f;
   color: #ffffff;
 }
 
