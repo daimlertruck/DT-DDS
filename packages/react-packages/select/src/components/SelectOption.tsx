@@ -36,13 +36,13 @@ export const SelectOption = ({
       isDisabled={isDisabled}
       isHighlighted={isHighlighted}
       isSelected={isSelected}
-      style={{ ...style, ...(isMulti ? { padding: 0 } : {}) }}
+      style={{ ...style, ...(isMulti ? { padding: 16 } : {}) }}
       {...getItemProps({ item, index })}
     >
       {isMulti ? (
         <SelectCheckboxStyled
-          checked={isSelected}
-          disabled={isDisabled}
+          isChecked={isSelected}
+          isDisabled={isDisabled}
           tabIndex={-1}
         >
           {children}
