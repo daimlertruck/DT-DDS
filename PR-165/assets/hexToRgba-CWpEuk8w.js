@@ -1,1 +1,0 @@
-var s=Object.defineProperty;var t=(a,r)=>s(a,"name",{value:r,configurable:!0});const b=t((a,r=1)=>{const[e,g,n]=(a.match(/\w\w/g)||[]).map(o=>parseInt(o,16));return`rgba(${e},${g},${n},${r})`},"hexToRgba");export{b as h};
