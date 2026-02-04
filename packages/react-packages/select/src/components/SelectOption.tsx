@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+import { useTheme } from '@emotion/react';
+
 import { BaseProps } from '@dt-dds/react-core';
 import { Dropdown } from '@dt-dds/react-dropdown';
 
@@ -22,6 +24,7 @@ export const SelectOption = ({
   value,
   isDisabled = false,
 }: SelectOptionProps) => {
+  const { spacing } = useTheme();
   const { getItemProps, isItemHighlighted, isItemSelected, isMulti } =
     useSelectContext();
 
@@ -36,13 +39,19 @@ export const SelectOption = ({
       isDisabled={isDisabled}
       isHighlighted={isHighlighted}
       isSelected={isSelected}
-      style={{ ...style, ...(isMulti ? { padding: 0 } : {}) }}
+      style={{
+        ...style,
+        ...(isMulti
+          ? { paddingY: spacing.spacing_40, paddingX: spacing.spacing_50 }
+          : {}),
+      }}
       {...getItemProps({ item, index })}
     >
       {isMulti ? (
         <SelectCheckboxStyled
-          checked={isSelected}
-          disabled={isDisabled}
+          isChecked={isSelected}
+          isDisabled={isDisabled}
+          size='small'
           tabIndex={-1}
         >
           {children}
