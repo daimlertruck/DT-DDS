@@ -13,7 +13,7 @@ export const DropdownOptionStyled = styled.li`
     text-wrap: nowrap;
 
     &:not([aria-disabled="true"]) {
-      &[aria-selected="true"], &[aria-selected="true"] span {
+      &[aria-selected="true"], &[aria-selected="true"] div {
         ${theme.fontStyles.bodyMdBold};
       }
 
