@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.293
+
+### Patch Changes
+
+- fix: multi select option styling
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-dropdown@1.0.0-beta.103
+  - @dt-dds/react-select@1.0.0-beta.97
+  - @dt-dds/react-date-picker@1.0.0-beta.105
+  - @dt-dds/react-pagination@1.0.0-beta.47
+  - @dt-dds/react-app-header@1.0.0-beta.37
+
 ## 1.0.0-beta.292
 
 ### Patch Changes

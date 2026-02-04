@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.47
+
+### Patch Changes
+
+- fix: multi select option styling
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.97
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

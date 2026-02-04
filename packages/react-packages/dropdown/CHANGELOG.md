@@ -1,5 +1,11 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.103
+
+### Patch Changes
+
+- fix: multi select option styling
+
 ## 1.0.0-beta.102
 
 ### Patch Changes

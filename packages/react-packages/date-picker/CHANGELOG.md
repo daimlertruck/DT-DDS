@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.105
+
+### Patch Changes
+
+- fix: multi select option styling
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.103
+
 ## 1.0.0-beta.104
 
 ### Patch Changes
