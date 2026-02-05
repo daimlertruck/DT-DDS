@@ -1,39 +1,71 @@
 import { getPageNumbers } from '../getPageNumbers';
 
 describe('getPageNumbers', () => {
-  it('returns all pages when total pages <= 5', () => {
-    expect(getPageNumbers(1, 5)).toEqual([1, 2, 3, 4, 5]);
-    expect(getPageNumbers(3, 3)).toEqual([1, 2, 3]);
+  describe('When the current page is on the first two pages ', () => {
+    it('should return the first three pages and ellipsis and the last page', () => {
+      expect(getPageNumbers(1, 10)).toStrictEqual({
+        pages: [1, 2, 3],
+        shouldRenderFirstPage: false,
+        shouldRenderLastPage: true,
+        shouldRenderLeftEllipsis: false,
+        shouldRenderRightEllipsis: true,
+      });
+
+      expect(getPageNumbers(2, 10)).toStrictEqual({
+        pages: [1, 2, 3],
+        shouldRenderFirstPage: false,
+        shouldRenderLastPage: true,
+        shouldRenderLeftEllipsis: false,
+        shouldRenderRightEllipsis: true,
+      });
+    });
   });
 
-  it('returns first 3 pages, ellipsis, and last page when on page 1-3', () => {
-    expect(getPageNumbers(1, 10)).toEqual([1, 2, 3, 'ellipsis', 10]);
-    expect(getPageNumbers(3, 20)).toEqual([1, 2, 3, 'ellipsis', 20]);
+  describe('When the current page is on the middle pages ', () => {
+    it('should return the correct pages an ellipsis to the right and the last page', () => {
+      expect(getPageNumbers(3, 10)).toStrictEqual({
+        pages: [2, 3, 4],
+        shouldRenderFirstPage: false,
+        shouldRenderLastPage: true,
+        shouldRenderLeftEllipsis: false,
+        shouldRenderRightEllipsis: true,
+      });
+
+      expect(getPageNumbers(5, 10)).toStrictEqual({
+        pages: [4, 5, 6],
+        shouldRenderFirstPage: false,
+        shouldRenderLastPage: true,
+        shouldRenderLeftEllipsis: false,
+        shouldRenderRightEllipsis: true,
+      });
+
+      expect(getPageNumbers(7, 10)).toStrictEqual({
+        pages: [6, 7, 8],
+        shouldRenderFirstPage: false,
+        shouldRenderLastPage: true,
+        shouldRenderLeftEllipsis: false,
+        shouldRenderRightEllipsis: true,
+      });
+    });
   });
 
-  it('returns first page, ellipsis, and last 3 pages when near the end', () => {
-    expect(getPageNumbers(9, 10)).toEqual([1, 'ellipsis', 8, 9, 10]);
-    expect(getPageNumbers(18, 20)).toEqual([1, 'ellipsis', 18, 19, 20]);
-  });
+  describe('When the current page is on the last two pages ', () => {
+    it('should return the last three pages an ellipsis to the left and the first page', () => {
+      expect(getPageNumbers(9, 10)).toStrictEqual({
+        pages: [8, 9, 10],
+        shouldRenderFirstPage: true,
+        shouldRenderLastPage: false,
+        shouldRenderLeftEllipsis: true,
+        shouldRenderRightEllipsis: false,
+      });
 
-  it('returns first, ellipsis, middle 3 pages, ellipsis, and last when in the middle', () => {
-    expect(getPageNumbers(5, 10)).toEqual([
-      1,
-      'ellipsis',
-      4,
-      5,
-      6,
-      'ellipsis',
-      10,
-    ]);
-    expect(getPageNumbers(10, 20)).toEqual([
-      1,
-      'ellipsis',
-      9,
-      10,
-      11,
-      'ellipsis',
-      20,
-    ]);
+      expect(getPageNumbers(10, 10)).toStrictEqual({
+        pages: [8, 9, 10],
+        shouldRenderFirstPage: true,
+        shouldRenderLastPage: false,
+        shouldRenderLeftEllipsis: true,
+        shouldRenderRightEllipsis: false,
+      });
+    });
   });
 });
