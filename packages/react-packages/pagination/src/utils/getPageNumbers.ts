@@ -1,34 +1,49 @@
-const PAGINATION_THRESHOLD = 5;
-const START_BOUNDARY = 3;
-const END_OFFSET = 2;
-const NEIGHBOR_COUNT = 1;
+import { FIRST_PAGE } from '../constants';
+
+interface PageRenderData {
+  shouldRenderFirstPage: boolean;
+  shouldRenderLastPage: boolean;
+  shouldRenderLeftEllipsis: boolean;
+  shouldRenderRightEllipsis: boolean;
+  pages: number[];
+}
 
 export const getPageNumbers = (
   currentPage: number,
-  totalPages: number
-): (number | 'ellipsis')[] => {
-  if (totalPages <= PAGINATION_THRESHOLD) {
-    return Array.from({ length: totalPages }, (_, i) => i + 1);
+  lastPage: number
+): PageRenderData => {
+  const firstPage = FIRST_PAGE;
+  let shouldRenderFirstPage: boolean;
+  let shouldRenderLastPage: boolean;
+  let shouldRenderLeftEllipsis: boolean;
+  let shouldRenderRightEllipsis: boolean;
+  const cursor = Math.min(currentPage, lastPage);
+  let pages = [cursor - 1, cursor, cursor + 1];
+
+  if (pages.includes(firstPage)) {
+    pages = [firstPage, firstPage + 1, firstPage + 2];
+    shouldRenderFirstPage = false;
+    shouldRenderLastPage = true;
+    shouldRenderLeftEllipsis = false;
+    shouldRenderRightEllipsis = lastPage > 4;
+  } else if (pages.includes(lastPage - 1)) {
+    pages = [lastPage - 2, lastPage - 1, lastPage];
+    shouldRenderFirstPage = true;
+    shouldRenderLastPage = false;
+    shouldRenderLeftEllipsis = true;
+    shouldRenderRightEllipsis = false;
+  } else {
+    shouldRenderFirstPage = false;
+    shouldRenderLastPage = true;
+    shouldRenderLeftEllipsis = false;
+    shouldRenderRightEllipsis = lastPage - pages[2] > 1;
   }
 
-  const showLeftEllipsis = currentPage > START_BOUNDARY;
-  const showRightEllipsis = currentPage < totalPages - END_OFFSET;
-
-  if (!showLeftEllipsis && showRightEllipsis) {
-    return [1, 2, 3, 'ellipsis', totalPages];
-  }
-
-  if (showLeftEllipsis && !showRightEllipsis) {
-    return [1, 'ellipsis', totalPages - 2, totalPages - 1, totalPages];
-  }
-
-  return [
-    1,
-    'ellipsis',
-    currentPage - NEIGHBOR_COUNT,
-    currentPage,
-    currentPage + NEIGHBOR_COUNT,
-    'ellipsis',
-    totalPages,
-  ];
+  return {
+    pages,
+    shouldRenderFirstPage,
+    shouldRenderLastPage,
+    shouldRenderLeftEllipsis,
+    shouldRenderRightEllipsis,
+  };
 };
