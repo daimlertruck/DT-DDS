@@ -1,4 +1,4 @@
-import { useMemo, useCallback } from 'react';
+import { useCallback } from 'react';
 
 import { Select } from '@dt-dds/react-select';
 
@@ -16,6 +16,26 @@ import {
 import { PaginationProps } from './types';
 import { getPageNumbers } from './utils';
 
+const renderPage = (
+  page: number,
+  isThisPage: boolean,
+  handleClick: (page: number) => void
+) => (
+  <PaginationPageButtonStyled
+    $isActive={isThisPage}
+    aria-current={isThisPage ? 'page' : false}
+    aria-label={`Go to page ${page}`}
+    data-testid={
+      isThisPage ? 'pagination-current-page' : `pagination-page-${page}`
+    }
+    key={page}
+    onClick={() => handleClick(page)}
+    title={`Go to page ${page}`}
+  >
+    {page}
+  </PaginationPageButtonStyled>
+);
+
 export const Pagination = ({
   currentPage,
   totalPages,
@@ -28,14 +48,16 @@ export const Pagination = ({
   itemsPerPageOptions = ITEMS_PER_PAGE_OPTIONS,
   dataTestId,
 }: PaginationProps) => {
-  const pageNumbers = useMemo(
-    () => getPageNumbers(currentPage, totalPages),
-    [currentPage, totalPages]
-  );
-
+  const LAST_PAGE = totalPages;
+  const isLastPage = currentPage === LAST_PAGE;
   const isFirstPage = currentPage === FIRST_PAGE;
-  const isLastPage = currentPage === totalPages;
-
+  const {
+    pages,
+    shouldRenderFirstPage,
+    shouldRenderLastPage,
+    shouldRenderLeftEllipsis,
+    shouldRenderRightEllipsis,
+  } = getPageNumbers(currentPage, totalPages);
   const itemsBeforeCurrentPage = (currentPage - FIRST_PAGE) * itemsPerPage;
   const remainingItems = Math.max(
     0,
@@ -125,36 +147,35 @@ export const Pagination = ({
           tooltipLabel='Previous page'
         />
 
-        {pageNumbers.map((page) => {
-          if (page === 'ellipsis') {
-            return (
-              <TruncationTextStyled
-                data-testid='pagination-ellipsis'
-                key={`ellipsis-${page}`}
-              >
-                ...
-              </TruncationTextStyled>
-            );
-          }
+        {shouldRenderFirstPage
+          ? renderPage(FIRST_PAGE, isFirstPage, handlePageChange)
+          : null}
 
-          return (
-            <PaginationPageButtonStyled
-              $isActive={page === currentPage}
-              aria-current={page === currentPage ? 'page' : undefined}
-              aria-label={`Go to page ${page}`}
-              data-testid={
-                page === currentPage
-                  ? 'pagination-current-page'
-                  : `pagination-page-${page}`
-              }
-              key={page}
-              onClick={() => handlePageChange(page as number)}
-              title={`Go to page ${page}`}
-            >
-              {page}
-            </PaginationPageButtonStyled>
-          );
-        })}
+        {shouldRenderLeftEllipsis ? (
+          <TruncationTextStyled
+            data-testid='pagination-ellipsis'
+            key='ellipsis-left'
+          >
+            ...
+          </TruncationTextStyled>
+        ) : null}
+
+        {pages.map((page) =>
+          renderPage(page, page === currentPage, handlePageChange)
+        )}
+
+        {shouldRenderRightEllipsis ? (
+          <TruncationTextStyled
+            data-testid='pagination-ellipsis'
+            key='ellipsis-right'
+          >
+            ...
+          </TruncationTextStyled>
+        ) : null}
+
+        {shouldRenderLastPage
+          ? renderPage(LAST_PAGE, isLastPage, handlePageChange)
+          : null}
 
         <PaginationNavButton
           ariaLabel='Go to next page'
