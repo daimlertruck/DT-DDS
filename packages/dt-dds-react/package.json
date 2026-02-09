@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react",
-  "version": "1.0.0-beta.293",
+  "version": "1.0.0-beta.294",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js",
@@ -38,7 +38,7 @@
     "@dt-dds/react-icon": "1.0.0-beta.63",
     "@dt-dds/react-icon-button": "1.0.0-beta.29",
     "@dt-dds/react-label-field": "1.0.0-beta.61",
-    "@dt-dds/react-message": "1.0.0-beta.125",
+    "@dt-dds/react-message": "1.0.0-beta.126",
     "@dt-dds/react-modal": "1.0.0-beta.109",
     "@dt-dds/react-pagination": "1.0.0-beta.47",
     "@dt-dds/react-progress-bar": "1.0.0-beta.56",
@@ -57,7 +57,7 @@
     "@dt-dds/react-tooltip": "1.0.0-beta.69",
     "@dt-dds/react-typography": "1.0.0-beta.50",
     "@dt-dds/react-sidebar": "1.0.0-beta.7",
-    "@dt-dds/react-app-header": "1.0.0-beta.37",
+    "@dt-dds/react-app-header": "1.0.0-beta.38",
     "@dt-dds/themes": "1.0.0-beta.14",
     "@emotion/server": "^11.4.0",
     "emotion-normalize": "^11.0.1"

@@ -1,5 +1,11 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.126
+
+### Patch Changes
+
+- fix: message icon alignment
+
 ## 1.0.0-beta.125
 
 ### Patch Changes

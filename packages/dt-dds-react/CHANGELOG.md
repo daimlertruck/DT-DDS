@@ -1,5 +1,15 @@
 # @dt-ui/react
 
+## 1.0.0-beta.294
+
+### Patch Changes
+
+- fix: message icon alignment
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-message@1.0.0-beta.126
+  - @dt-dds/react-app-header@1.0.0-beta.38
+
 ## 1.0.0-beta.293
 
 ### Patch Changes
