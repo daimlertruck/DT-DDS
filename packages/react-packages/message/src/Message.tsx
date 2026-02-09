@@ -59,12 +59,14 @@ export const Message = ({
       style={style}
     >
       {!isDefault && (
-        <Icon
-          code={MESSAGE_ICONS[type] as Code}
-          color={theme.palette[type].dark}
-          data-testid='message-icon'
-          dataTestId='message-icon'
-        />
+        <Box style={{ justifyContent: 'center', alignItems: 'flex-start' }}>
+          <Icon
+            code={MESSAGE_ICONS[type] as Code}
+            color={theme.palette[type].dark}
+            data-testid='message-icon'
+            dataTestId='message-icon'
+          />
+        </Box>
       )}
 
       <Box
