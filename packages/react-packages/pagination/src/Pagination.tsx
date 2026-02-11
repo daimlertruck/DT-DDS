@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { Select } from '@dt-dds/react-select';
 
@@ -18,15 +18,15 @@ import { getPageNumbers } from './utils';
 
 const renderPage = (
   page: number,
-  isThisPage: boolean,
+  isCurrentPage: boolean,
   handleClick: (page: number) => void
 ) => (
   <PaginationPageButtonStyled
-    $isActive={isThisPage}
-    aria-current={isThisPage ? 'page' : false}
+    $isActive={isCurrentPage}
+    aria-current={isCurrentPage ? 'page' : false}
     aria-label={`Go to page ${page}`}
     data-testid={
-      isThisPage ? 'pagination-current-page' : `pagination-page-${page}`
+      isCurrentPage ? 'pagination-current-page' : `pagination-page-${page}`
     }
     key={page}
     onClick={() => handleClick(page)}
@@ -49,6 +49,16 @@ export const Pagination = ({
   dataTestId,
 }: PaginationProps) => {
   const LAST_PAGE = totalPages;
+  const previousPageRef = useRef(currentPage);
+  const paginationDirection =
+    currentPage < previousPageRef.current ? 'BACKWARD' : 'FORWARD';
+
+  useEffect(() => {
+    if (currentPage < 2 || currentPage > LAST_PAGE - 1) {
+      previousPageRef.current = currentPage;
+    }
+  }, [currentPage, LAST_PAGE]);
+
   const isLastPage = currentPage === LAST_PAGE;
   const isFirstPage = currentPage === FIRST_PAGE;
   const {
@@ -57,7 +67,7 @@ export const Pagination = ({
     shouldRenderLastPage,
     shouldRenderLeftEllipsis,
     shouldRenderRightEllipsis,
-  } = getPageNumbers(currentPage, totalPages);
+  } = getPageNumbers(currentPage, LAST_PAGE, paginationDirection);
   const itemsBeforeCurrentPage = (currentPage - FIRST_PAGE) * itemsPerPage;
   const remainingItems = Math.max(
     0,
@@ -72,13 +82,13 @@ export const Pagination = ({
   const handlePageChange = useCallback(
     (page: number) => {
       const canNavigateToPage =
-        page !== currentPage && page >= FIRST_PAGE && page <= totalPages;
+        page !== currentPage && page >= FIRST_PAGE && page <= LAST_PAGE;
 
       if (canNavigateToPage) {
         onPageChange(page);
       }
     },
-    [currentPage, totalPages, onPageChange]
+    [currentPage, LAST_PAGE, onPageChange]
   );
 
   const handleItemsPerPageChange = useCallback(
