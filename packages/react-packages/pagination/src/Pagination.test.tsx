@@ -19,6 +19,18 @@ describe('<Pagination />', () => {
     jest.clearAllMocks();
   });
 
+  const getRenderedPaginationTokens = () =>
+    screen
+      .getByTestId('pagination')
+      .querySelectorAll(
+        '[data-testid="pagination-current-page"], [data-testid^="pagination-page-"], [data-testid="pagination-ellipsis"]'
+      );
+
+  const getRenderedPaginationTokenTexts = () =>
+    Array.from(getRenderedPaginationTokens()).map(
+      (element) => element.textContent?.trim() ?? ''
+    );
+
   it('should match snapshot', () => {
     const { container } = render(<ProvidedPagination {...defaultProps} />);
     expect(container).toMatchSnapshot();
@@ -101,6 +113,183 @@ describe('<Pagination />', () => {
     render(<ProvidedPagination {...defaultProps} totalPages={20} />);
 
     expect(screen.getByTestId('pagination-ellipsis')).toBeVisible();
+  });
+
+  it('should render the ascending sequence near the start', () => {
+    render(
+      <ProvidedPagination {...defaultProps} currentPage={2} totalPages={10} />
+    );
+
+    expect(screen.getByTestId('pagination-current-page')).toHaveTextContent(
+      '2'
+    );
+    expect(screen.getAllByTestId('pagination-ellipsis')).toHaveLength(1);
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '2',
+      '3',
+      '...',
+      '10',
+    ]);
+  });
+
+  it('should render sliding window pages with one right ellipsis', () => {
+    render(
+      <ProvidedPagination {...defaultProps} currentPage={5} totalPages={10} />
+    );
+
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '4',
+      '5',
+      '6',
+      '...',
+      '10',
+    ]);
+    expect(getRenderedPaginationTokens()).toHaveLength(5);
+  });
+
+  it('should keep right ellipsis for page 7 before switching to last three pages', () => {
+    render(
+      <ProvidedPagination {...defaultProps} currentPage={7} totalPages={10} />
+    );
+
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '6',
+      '7',
+      '8',
+      '...',
+      '10',
+    ]);
+
+    expect(getRenderedPaginationTokens()).toHaveLength(5);
+  });
+
+  it('should render first page and last three pages near the end', () => {
+    render(
+      <ProvidedPagination {...defaultProps} currentPage={9} totalPages={10} />
+    );
+
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '8',
+      '9',
+      '10',
+    ]);
+    expect(getRenderedPaginationTokens()).toHaveLength(5);
+  });
+
+  it('should follow descending sequence when navigating from last page to first page', () => {
+    const { rerender } = render(
+      <ProvidedPagination {...defaultProps} currentPage={10} totalPages={10} />
+    );
+
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '8',
+      '9',
+      '10',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={9} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '8',
+      '9',
+      '10',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={8} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '7',
+      '8',
+      '9',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={7} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '6',
+      '7',
+      '8',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={6} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '5',
+      '6',
+      '7',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={5} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '4',
+      '5',
+      '6',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={4} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '...',
+      '3',
+      '4',
+      '5',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={3} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '2',
+      '3',
+      '...',
+      '10',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={2} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '2',
+      '3',
+      '...',
+      '10',
+    ]);
+
+    rerender(
+      <ProvidedPagination {...defaultProps} currentPage={1} totalPages={10} />
+    );
+    expect(getRenderedPaginationTokenTexts()).toEqual([
+      '1',
+      '2',
+      '3',
+      '...',
+      '10',
+    ]);
   });
 
   it('should render aria-label on navigation button', () => {
