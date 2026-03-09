@@ -23,7 +23,7 @@
     "test:update": "turbo run test -- -u",
     "prepare": "husky",
     "check-pkg-deps": "node scripts/check-pkg-deps/index.cjs",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package && yarn-deduplicate --packages minimatch --strategy highest"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
@@ -34,6 +34,7 @@
     "eslint-config-custom": "*",
     "husky": "^9.1.7",
     "patch-package": "^8.0.1",
+    "yarn-deduplicate": "^6.0.2",
     "prettier": "^2.8.0",
     "turbo": "^2.0.6"
   },
@@ -43,6 +44,14 @@
   },
   "resolutions": {
     "esbuild": "^0.25.10",
-    "js-yaml": "4.1.1"
+    "js-yaml": "4.1.1",
+    "@eslint/config-array/minimatch": "3.1.4",
+    "@eslint/eslintrc/minimatch": "3.1.4",
+    "@humanwhocodes/config-array/minimatch": "3.1.4",
+    "eslint-plugin-import/minimatch": "3.1.4",
+    "eslint-plugin-jsx-a11y/minimatch": "3.1.4",
+    "eslint-plugin-react/minimatch": "3.1.4",
+    "eslint/minimatch": "3.1.4",
+    "glob/minimatch": "3.1.4"
   }
 }
