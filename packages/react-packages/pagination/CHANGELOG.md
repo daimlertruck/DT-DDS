@@ -1,5 +1,12 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- fix: pagination render
+- refactor: backwards and forward pagination
+
 ## 1.0.0-beta.47
 
 ### Patch Changes

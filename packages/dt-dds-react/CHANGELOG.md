@@ -1,5 +1,17 @@
 # @dt-ui/react
 
+## 1.0.0-beta.297
+
+### Patch Changes
+
+- fix: pagination render
+- refactor: backwards and forward pagination
+- Updated dependencies
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-pagination@1.0.0-beta.48
+  - @dt-dds/react-app-header@1.0.0-beta.41
+
 ## 1.0.0-beta.296
 
 ### Patch Changes
