@@ -118,19 +118,6 @@ export const PaginationPageButtonStyled = styled('button', {
   `}
 `;
 
-export const TruncationTextStyled = styled.span`
-  ${({ theme }) => `
-    ${theme.fontStyles.bodyMdRegular};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: ${PAGINATION_BUTTON_SIZES}px;
-    height: ${PAGINATION_BUTTON_SIZES}px;
-    color: ${theme.palette.content.default};
-    user-select: none;
-  `}
-`;
-
 export const ItemsPerPageWrapperStyled = styled.div`
   ${({ theme }) => `
     label:empty {

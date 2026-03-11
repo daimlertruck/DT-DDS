@@ -3,11 +3,11 @@ import { useCallback, useEffect, useRef } from 'react';
 import { Select } from '@dt-dds/react-select';
 
 import { PaginationNavButton } from './components';
+import { Buffer } from './components/Buffer/Buffer';
 import { FIRST_PAGE, ITEMS_PER_PAGE_OPTIONS } from './constants';
 import {
   PaginationStyled,
   PaginationPageButtonStyled,
-  TruncationTextStyled,
   ItemsInfoTextStyled,
   ItemsPerPageWrapperStyled,
   InfoWrapperStyled,
@@ -162,12 +162,11 @@ export const Pagination = ({
           : null}
 
         {shouldRenderLeftEllipsis ? (
-          <TruncationTextStyled
-            data-testid='pagination-ellipsis'
-            key='ellipsis-left'
-          >
-            ...
-          </TruncationTextStyled>
+          <Buffer
+            lowerLimit={FIRST_PAGE}
+            onClick={handlePageChange}
+            upperLimit={pages[0]}
+          />
         ) : null}
 
         {pages.map((page) =>
@@ -175,12 +174,11 @@ export const Pagination = ({
         )}
 
         {shouldRenderRightEllipsis ? (
-          <TruncationTextStyled
-            data-testid='pagination-ellipsis'
-            key='ellipsis-right'
-          >
-            ...
-          </TruncationTextStyled>
+          <Buffer
+            lowerLimit={pages[pages.length - 1]}
+            onClick={handlePageChange}
+            upperLimit={LAST_PAGE}
+          />
         ) : null}
 
         {shouldRenderLastPage
