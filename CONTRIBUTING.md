@@ -77,7 +77,7 @@ For more information on how to commit, read the following documentation and blog
 
 ### 3.1. Name Convention
 
-Pull Requests (PRs) should be opened with the following title structure `{ticket}: {description}`, for example: `DTUI-XXX: PR description`. The project already includes a PR template (see it under the folder `.github`) that should be correcly filled in.
+Pull Requests (PRs) should be opened with the following title structure `{ticket}: {description}`, for example: `DTUI-XXX: PR description`. The project already includes a PR template (see it under the folder `.github`) that should be correctly filled in.
 
 ### 3.2. Preview Link
 
