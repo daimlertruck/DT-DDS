@@ -1,6 +1,6 @@
 # Tooltip Package
 
-This package displays information when the user moves the mouse pointer over an trigger element.
+This package displays information when the user moves the mouse pointer over a trigger element.
 
 ## Tooltip Usage
 
@@ -26,7 +26,7 @@ export const App = () => {
 | Property     | Type                  | Default             | Description                                                 |
 | ------------ | --------------------- | ------------------- | ----------------------------------------------------------- |
 | `children`   | `ReactNode`           | -                   | Child components to be rendered                             |
-| `style`      | `React.CSSProperties` | -                   | Gives the Tooltip containter css properties                 |
+| `style`      | `React.CSSProperties` | -                   | Gives the Tooltip container css properties                 |
 | `dataTestId` | `string`              | `tooltip-container` | Customizable test identifier                                |
 | `hideDelay`  | `number`              | `0ms`               | Delay to hide tooltip when mouse leaving the target element |
 
