@@ -111,7 +111,7 @@ We provide a default Daimler Truck theme, available under the package `react-cor
 ### Prerequisites
 
 - Node.js >= v22
-- Yarn
+- Yarn v1
 
 ### 📓 Installation
 
@@ -162,17 +162,19 @@ This Turborepo includes the following packages and applications:
 
 ### Contributing
 
-See the [contributing guidelines](CONTRIBUTING.md).
+Before opening a Pull Request, please create an issue. You can use one of the templates mentioned below, for bugs and features, or use the blank one for questions or other topics.
 
-### Bug Reports
+See the [contributing guidelines](CONTRIBUTING.md) for more details on the GitHub Workflow and Coding standards and guidelines.
+
+#### Bug Reports
 
 If you've encountered a bug in our project, please follow these steps to report it:
 
 1. **Search Existing Issues:** Before creating a new issue, please search the [existing issues](https://github.com/daimlertruck/DT-DDS/issues) to check if the bug has already been reported. If you find a similar issue, you can add a comment to provide additional details.
 
-2. **Create a New Issue:** If you couldn't find an existing issue, [create a new issue](https://github.com/daimlertruck/DT-DDS/issues/new/choose) and use the "Bug Report" template. Provide as much detail as possible, including steps to reproduce, expected behavior, and actual behavior. Screenshots, error messages, and relevant code snippets are highly appreciated.
+2. **Create a New Issue:** If you couldn't find an existing issue, [create a new issue](https://github.com/daimlertruck/DT-DDS/issues/new/choose) and use the "Bug report" template. Provide as much detail as possible, including steps to reproduce, expected behavior, and actual behavior. Screenshots, error messages, and relevant code snippets are highly appreciated.
 
-### Feature Requests
+#### Feature Requests
 
 To propose a new feature:
 
@@ -180,7 +182,7 @@ To propose a new feature:
 
 2. **Create a New Issue:** If your feature idea hasn't been proposed yet, [create a new issue](https://github.com/daimlertruck/DT-DDS/issues/new/choose) and use the "Feature request" template.
 
-### Issue Etiquette
+#### Issue Etiquette
 
 - Be respectful and considerate when commenting on issues.
 - Please **do not** post comments consisting solely of "+1" or ":thumbsup:".
