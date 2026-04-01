@@ -1,4 +1,4 @@
-import { ComponentProps, useRef, useState } from 'react';
+import { createRef, useState, useRef } from 'react';
 
 import { Dropdown } from '.';
 
@@ -13,64 +13,12 @@ const OPTIONS: Option[] = [
   { text: 'Option 4', value: '4', disabled: true },
 ];
 
-type CustomDropdownProps = Omit<
-  ComponentProps<typeof Dropdown>,
-  'isOpen' | 'anchorRef' | 'onClose' | 'children'
-> & {
-  options: Option[];
-};
-
-const DropdownDemo = ({
-  options,
-  as = 'ul',
-  matchWidth = true,
-  offsetX,
-  offsetY,
-  ...rest
-}: CustomDropdownProps) => {
-  const anchorRef = useRef<HTMLButtonElement | null>(null);
-  const [open, setOpen] = useState<boolean>(false);
-
-  return (
-    <div style={{ height: 320, padding: 16 }}>
-      <button
-        onClick={() => setOpen((v) => !v)}
-        ref={anchorRef}
-        style={{ marginBottom: 12 }}
-        type='button'
-      >
-        {open ? 'Close' : 'Open'} dropdown
-      </button>
-      <Dropdown
-        {...rest}
-        anchorRef={anchorRef}
-        as={as}
-        isOpen={open}
-        matchWidth={matchWidth}
-        offsetX={offsetX}
-        offsetY={offsetY}
-        onClose={() => setOpen(false)}
-      >
-        {options.map((option) => (
-          <Dropdown.Option isDisabled={option.disabled} key={option.value}>
-            {option.text ?? option.value}
-          </Dropdown.Option>
-        ))}
-      </Dropdown>
-    </div>
-  );
-};
-
-const meta: Meta<CustomDropdownProps> = {
+const meta = {
   title: 'Data Display/Dropdown',
   component: Dropdown,
   argTypes: {
     placement: {
       options: ['bottom', 'top', 'right', 'left'],
-      control: { type: 'select' },
-    },
-    as: {
-      options: ['div', 'ul'],
       control: { type: 'select' },
     },
     matchWidth: {
@@ -82,19 +30,57 @@ const meta: Meta<CustomDropdownProps> = {
     offsetY: {
       control: { type: 'number' },
     },
+    isFocusable: {
+      control: { type: 'boolean' },
+    },
   },
-  render: (args) => <DropdownDemo {...args} />,
-};
+  render: function Render(args) {
+    const [isOpen, setIsOpen] = useState(false);
+    const ref = useRef<HTMLButtonElement | null>(null);
+
+    return (
+      <div style={{ height: 200, padding: 16 }}>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          ref={ref}
+          style={{ marginBottom: 12 }}
+          type='button'
+        >
+          {isOpen ? 'Close' : 'Open'} dropdown
+        </button>
+        <Dropdown
+          {...args}
+          anchorRef={ref}
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+        >
+          {OPTIONS.map((option) => (
+            <Dropdown.Option
+              isDisabled={option.disabled}
+              key={option.value}
+              onClick={() => console.log(`${option.text} clicked`)}
+            >
+              {option.text}
+            </Dropdown.Option>
+          ))}
+        </Dropdown>
+      </div>
+    );
+  },
+} satisfies Meta<typeof Dropdown>;
 
 export default meta;
 
-export const Default: StoryObj<CustomDropdownProps> = {
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
   args: {
-    options: OPTIONS,
+    anchorRef: createRef<HTMLButtonElement>(),
     as: 'ul',
-    matchWidth: true,
+    matchWidth: false,
     offsetX: 0,
     offsetY: 4,
     placement: 'bottom',
+    isFocusable: false,
   },
 };
