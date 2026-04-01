@@ -73,3 +73,5 @@ export const DropdownOption = forwardRef<HTMLLIElement, DropdownOptionProps>(
     );
   }
 );
+
+DropdownOption.displayName = 'Dropdown.Option';

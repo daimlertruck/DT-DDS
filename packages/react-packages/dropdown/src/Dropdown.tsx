@@ -120,3 +120,5 @@ export const Dropdown = Object.assign(
     Option: DropdownOption,
   }
 );
+
+Dropdown.displayName = 'Dropdown';
