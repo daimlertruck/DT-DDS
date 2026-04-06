@@ -317,7 +317,12 @@ export const DatePicker = ({
       return;
     }
 
-    isSingleMode ? handleChangeSingleMode() : handleChangeRangeMode();
+    if (isSingleMode) {
+      handleChangeSingleMode();
+    } else {
+      handleChangeRangeMode();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [minDate, maxDate, isSingleMode, value]);
 
   return (

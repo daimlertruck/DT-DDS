@@ -177,6 +177,7 @@ export function validateShadows(themeName: string, tokens: TokenFile): void {
  * Validates shapes for a theme
  */
 export function validateShapes(themeName: string, tokens: TokenFile): void {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const shapes = tokens.Shape as any;
   if (!shapes) {
     console.warn(`⚠️  No shape tokens found for theme '${themeName}'`);

@@ -9,6 +9,7 @@ export function generateBreakpoints(
   tokens: TokenFile,
   themeName: string
 ): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const gridTokens = tokens.Grid as any;
 
   if (!gridTokens) {

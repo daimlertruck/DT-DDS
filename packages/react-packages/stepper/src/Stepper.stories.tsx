@@ -275,7 +275,7 @@ export const InteractiveWithHook: Story = {
       handleNext,
       handleBack,
       markStepComplete,
-    } = useStepper({ initialStep: 0, totalSteps: 4 });
+    } = useStepper({ initialStep: 0, totalSteps: 4 }); // eslint-disable-line react-hooks/rules-of-hooks
 
     const steps = [
       { title: 'Personal Info', description: 'Enter your details' },

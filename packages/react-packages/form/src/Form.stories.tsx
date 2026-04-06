@@ -28,7 +28,7 @@ const TemplateFormGroup: StoryFn<GroupProps> = ({
   isDisabled,
   title,
   tooltip,
-}) => (
+}: GroupProps) => (
   <Form>
     <Form.Group title={title} tooltip={tooltip}>
       <TextField label='label 1' />

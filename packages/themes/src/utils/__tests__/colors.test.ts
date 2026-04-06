@@ -168,6 +168,7 @@ describe('colors generator', () => {
     });
 
     it('should skip categories that are missing from contextual colors', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const partialContextualTokens: any = {
         Contextual_colors: {
           Surface: contextualColorTokens.Contextual_colors!.Surface,

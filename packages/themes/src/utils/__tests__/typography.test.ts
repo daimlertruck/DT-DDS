@@ -17,21 +17,25 @@ describe('typography generator', () => {
             Body: {
               medium: { $type: 'dimension', $value: '14px' },
             },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } as any,
           Weight: {
             Body: {
               'medium-regular': { $type: 'string', $value: 'Regular' },
             },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } as any,
           'Line-height': {
             Body: {
               medium: { $type: 'dimension', $value: '20px' },
             },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } as any,
           'Letter-spacing': {
             Body: {
               medium: { $type: 'dimension', $value: '0px' },
             },
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
           } as any,
         },
       };

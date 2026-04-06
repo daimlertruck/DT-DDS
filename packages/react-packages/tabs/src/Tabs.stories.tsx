@@ -9,7 +9,10 @@ type TabsStoryProps = TabsProps & {
   firstTabLabel: string;
 };
 
-const Template: StoryFn<TabsStoryProps> = ({ firstTabLabel, variant }) => {
+const Template: StoryFn<TabsStoryProps> = ({
+  firstTabLabel,
+  variant,
+}: TabsStoryProps) => {
   const { activeTab, handleChange } = useTabs(0);
 
   return (

@@ -13,9 +13,11 @@ export const DrawerBody = ({ children, style, dataTestId }: BaseProps) => {
   const handleScrollClass = (isSectionScrollable: boolean) => {
     const sectionElement = scrollableSectionObserverRef.current?.parentElement;
     if (sectionElement) {
-      isSectionScrollable
-        ? sectionElement.classList.add('hasScroll')
-        : sectionElement.classList.remove('hasScroll');
+      if (isSectionScrollable) {
+        sectionElement.classList.add('hasScroll');
+      } else {
+        sectionElement.classList.remove('hasScroll');
+      }
     }
   };
 

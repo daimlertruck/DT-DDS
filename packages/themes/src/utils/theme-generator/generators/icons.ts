@@ -6,6 +6,7 @@ import { TokenFile } from './../../../types';
  * Generates icons.ts file content
  */
 export function generateIcons(tokens: TokenFile, themeName: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const iconSizeTokens = tokens.Icon_size as any;
 
   if (!iconSizeTokens) {

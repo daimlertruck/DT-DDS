@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { withProviders } from '@dt-dds/react-core';
+import { ComponentSize, withProviders } from '@dt-dds/react-core';
 
 import { Spinner } from './Spinner';
 
@@ -27,7 +27,7 @@ describe('<Spinner /> component', () => {
     ['large', '50px'],
     ['extra-large', '58px'],
   ])('should render %s size with correct dimensions', (size, expectedSize) => {
-    render(<ProvidedSpinner size={size as any} />);
+    render(<ProvidedSpinner size={size as ComponentSize} />);
 
     const spinnerElement = screen.getByTestId('spinner-element');
     const styles = window.getComputedStyle(spinnerElement);

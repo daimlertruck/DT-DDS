@@ -19,7 +19,7 @@ const Template: StoryFn<DrawerStoryProps> = ({
   header,
   title,
   ...props
-}) => {
+}: DrawerStoryProps) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
   const toggleDrawer = () => {
     setIsDrawerVisible((prevState) => !prevState);

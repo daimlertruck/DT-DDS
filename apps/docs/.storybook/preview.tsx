@@ -1,15 +1,17 @@
 import React from 'react';
+
+import { withThemeFromJSXProvider } from '@storybook/addon-themes';
+import { themes } from '@storybook/theming';
+
 import { Global } from '@emotion/react';
 
-import type { Preview } from '@storybook/react';
-import { themes } from '@storybook/theming';
-import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-
-import { theme as defaultTheme, Provider } from '@dt-dds/react';
 import '@dt-dds/icons/index.css';
+import { theme as defaultTheme, Provider } from '@dt-dds/react';
 
 import { greenlaneTheme, truckAPITheme } from './themes';
 import { webFonts } from './webFonts';
+
+import type { Preview } from '@storybook/react';
 
 const GlobalStyles = () => <Global styles={[...webFonts]} />;
 

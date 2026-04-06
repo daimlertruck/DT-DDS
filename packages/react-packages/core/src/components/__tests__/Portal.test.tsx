@@ -1,9 +1,10 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { render, screen } from '@testing-library/react';
 
 import { Portal } from '../Portal';
 
 jest.mock('react-dom', () => ({
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   createPortal: jest.fn((children: any) => children),
 }));
 

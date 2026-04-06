@@ -9,6 +9,7 @@ export function generateTypography(
   tokens: TokenFile,
   themeName: string
 ): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const typographyTokens = tokens.Typography as any;
   if (!typographyTokens) {
     throw new Error(`Missing Typography tokens for theme '${themeName}'`);

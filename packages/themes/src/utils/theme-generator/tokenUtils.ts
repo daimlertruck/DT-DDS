@@ -45,6 +45,7 @@ export function resolveTokenReference(
   const parts = cleanReference.split('.');
 
   // Navigate through the token structure
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let current: any = tokens;
   for (const part of parts) {
     if (current && typeof current === 'object' && part in current) {

@@ -46,7 +46,7 @@ export const fontStyles = {
   h3XsRegular: `font-family: Roboto; ${getTextStyles(400, '24px', '28px')}`,
   h4XsRegular: `font-family: Roboto; ${getTextStyles(400, '20px', '24px')}`,
   h5XsRegular: `font-family: Roboto; ${getTextStyles(400, '16px', '20px')}`,
-  h6XsRegular: `inherit`,
+  h6XsRegular: 'inherit',
   h1XsBold: `font-family: Roboto; ${getTextStyles(700, '40px', '48px')}`,
   h2XsBold: `font-family: Roboto; ${getTextStyles(700, '32px', '40px')}`,
   h3XsBold: `font-family: Roboto; ${getTextStyles(700, '24px', '28px')}`,

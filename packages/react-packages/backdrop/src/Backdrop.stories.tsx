@@ -7,7 +7,7 @@ import { Portal } from '@dt-dds/react-core';
 import { Backdrop, BackdropProps } from './Backdrop';
 import { BackdropType } from './constants';
 
-const Template: StoryFn<typeof Backdrop> = ({ ...props }) => {
+const Template: StoryFn<typeof Backdrop> = ({ ...props }: BackdropProps) => {
   const [isBackdropOpen, setIsBackdropOpen] = useState(false);
 
   const toggleBackdrop = () => setIsBackdropOpen(!isBackdropOpen);
