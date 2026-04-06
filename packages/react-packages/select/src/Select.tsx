@@ -99,7 +99,9 @@ export const Select = ({
   ) => {
     e.stopPropagation();
 
-    isMulti && onChange?.([]);
+    if (isMulti) {
+      onChange?.([]);
+    }
   };
 
   const options: SelectOptionValue[] = useMemo(() => {

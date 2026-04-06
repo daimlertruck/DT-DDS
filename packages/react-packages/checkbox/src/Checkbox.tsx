@@ -62,7 +62,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       const isWrapped = el.offsetHeight > maxSingleLineHeight;
 
       labelContainer.style.alignItems = isWrapped ? 'flex-start' : 'center';
-    }, [label, children]);
+    }, [label, children, size]);
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
       if (isDisabled) return;

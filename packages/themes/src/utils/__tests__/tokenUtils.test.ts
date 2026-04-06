@@ -85,6 +85,7 @@ describe('tokenUtils', () => {
     });
 
     it('should handle non-string references', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect(() => resolveTokenReference(mockTokens, 123 as any)).toThrow();
     });
 
@@ -154,6 +155,7 @@ describe('tokenUtils', () => {
     });
 
     it('should return undefined for malformed tokens', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const categoryTokens: any = {
         'malformed-token': {
           $type: 'string',
@@ -171,7 +173,9 @@ describe('tokenUtils', () => {
     });
 
     it('should handle null/undefined category', () => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect(() => getTokenValue(null as any, 'any-token')).toThrow();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       expect(() => getTokenValue(undefined as any, 'any-token')).toThrow();
     });
   });

@@ -15,10 +15,12 @@ export function generateColors(tokens: TokenFile): string {
     )) {
       const groupName = colorGroup.toLowerCase();
       for (const [colorName, colorToken] of Object.entries(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         colorTokens as any
       )) {
         const cleanName = colorName.replace(`${groupName}-`, '');
         const key = `${groupName}_${cleanName}`;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         colors[key] = (colorToken as any).$value;
       }
     }
@@ -31,11 +33,13 @@ export function generateColors(tokens: TokenFile): string {
     )) {
       const groupName = colorGroup.toLowerCase().replace(/_/g, '');
       for (const [colorName, colorToken] of Object.entries(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         colorTokens as any
       )) {
         // Remove the prefix from the color name (e.g., "brightyellow-00" -> "00")
         const cleanName = colorName.replace(`${groupName}-`, '');
         const key = `${groupName}_${cleanName}`;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         colors[key] = (colorToken as any).$value;
       }
     }
@@ -130,10 +134,14 @@ function resolveTokenValue(tokens: TokenFile, tokenValue: string): string {
  */
 function processCategory(
   category: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   mappings: any,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   categoryTokens: any,
   tokens: TokenFile
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
 ): any {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const result: any = {
     default: resolveTokenValue(
       tokens,
@@ -160,11 +168,13 @@ function processCategory(
  * Generates palette.ts file content
  */
 export function generatePalette(tokens: TokenFile, themeName: string): string {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const contextualColors = tokens.Contextual_colors as any;
   if (!contextualColors) {
     throw new Error(`Missing Contextual_colors for theme '${themeName}'`);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const palette: any = {};
   const categoryMappings = getCategoryMappings();
 

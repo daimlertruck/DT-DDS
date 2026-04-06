@@ -52,6 +52,5 @@ export * from '@dt-dds/react-sidebar';
 export * from '@dt-dds/react-app-header';
 
 declare module '@emotion/react' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
   export interface Theme extends CustomTheme {}
 }

@@ -48,6 +48,7 @@ const meta: Meta<CustomSelectProps> = {
     },
   },
   render: ({ options, ...props }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [{ value }, updateArgs] = useArgs();
     const handleChange = (v: string) => updateArgs({ value: v });
 

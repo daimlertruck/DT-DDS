@@ -146,7 +146,9 @@ const renderSelect = (
   const helper = () => screen.getByTestId('select-helper-text');
   const value = () => within(select()).getByTestId('select-value');
 
-  isOpen && fireEvent.click(select());
+  if (isOpen) {
+    fireEvent.click(select());
+  }
 
   return { container, select, menu, options, label, helper, value };
 };
@@ -165,7 +167,9 @@ const renderMultiSelect = (
   const value = () => within(select()).getByTestId('select-value');
   const clear = () => within(select()).queryByTestId('clear-selection');
 
-  isOpen && fireEvent.click(select());
+  if (isOpen) {
+    fireEvent.click(select());
+  }
 
   return { container, select, menu, options, label, helper, value, clear };
 };

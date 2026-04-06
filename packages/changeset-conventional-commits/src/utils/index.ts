@@ -39,7 +39,6 @@ const defaultCommitTypes = [
 export const isBreakingChange = (commit: string) => {
   return (
     commit.includes('BREAKING CHANGE:') ||
-    // eslint-disable-next-line no-useless-escape
     defaultCommitTypes.some((commitType) =>
       commit.match(new RegExp(`^${commitType.type}(?:\(.*\))?!:`))
     )
@@ -47,7 +46,6 @@ export const isBreakingChange = (commit: string) => {
 };
 
 export const isConventionalCommit = (commit: string) => {
-  // eslint-disable-next-line no-useless-escape
   return defaultCommitTypes.some((commitType) =>
     commit.match(new RegExp(`^${commitType.type}(?:\(.*\))?!?:`))
   );
@@ -188,7 +186,7 @@ export const getCommitsSinceRef = (branch: string) => {
   if (currentBranch === branch) {
     try {
       sinceRef = execSync('git describe --tags --abbrev=0').toString();
-    } catch (e) {
+    } catch {
       console.log(
         "No git tags found, using repo's first commit for automated change detection. Note: this may take a while."
       );

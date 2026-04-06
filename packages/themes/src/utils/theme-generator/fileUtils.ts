@@ -83,7 +83,7 @@ export function readTokenFile(filePath: string): TokenFile | null {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(content);
-  } catch (error) {
+  } catch {
     console.warn(`⚠️  Could not read token file: ${filePath}`);
     return null;
   }

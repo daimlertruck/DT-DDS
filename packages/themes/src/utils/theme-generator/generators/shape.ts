@@ -54,6 +54,7 @@ export function generateShape(tokens: TokenFile, themeName: string): string {
 
   validateRequiredTokens(themeName, shapeTokens, requiredShapeTokens);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const shape: any = {
     // Existing shapes
     button: resolveTokenReference(

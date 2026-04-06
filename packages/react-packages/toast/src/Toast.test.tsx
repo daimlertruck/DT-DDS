@@ -311,7 +311,7 @@ describe('<Toaster /> props', () => {
         useTheme: () => ({ breakpoints: { s: 600 } }),
       }));
 
-      // eslint-disable-next-line @typescript-eslint/no-var-requires
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
       const module = require('./Toaster');
       ToasterComp = module.default as React.ComponentType<
         Partial<ToasterProps>

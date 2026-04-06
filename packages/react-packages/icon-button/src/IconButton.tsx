@@ -36,7 +36,7 @@ export const IconButton = ({
 
     e.preventDefault();
     e.stopPropagation();
-    onClick && onClick(e);
+    onClick?.(e);
   };
 
   return (

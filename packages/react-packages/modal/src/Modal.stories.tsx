@@ -26,7 +26,7 @@ const Template: StoryFn<ModalStoryProps> = ({
   hasFooterBorder,
   hasFooterBackgroundColor,
   isLoading,
-}) => {
+}: ModalStoryProps) => {
   const { isModalOpen, toggleModal } = useModal();
 
   return (

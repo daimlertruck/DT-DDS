@@ -1,5 +1,7 @@
 import path, { join, dirname } from 'path';
+
 import { InlineConfig } from 'vite';
+
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const getAbsolutePath = (value: string) => {
@@ -98,11 +100,11 @@ const config: StorybookConfig = {
         '@storybook/blocks': getAbsolutePath('@storybook/blocks'),
         '@dt-dds/react': path.resolve(
           __dirname,
-          `../../../packages/dt-dds-react/index.ts`
+          '../../../packages/dt-dds-react/index.ts'
         ),
         '@dt-dds/themes': path.resolve(
           __dirname,
-          `../../../packages/themes/src/index.ts`
+          '../../../packages/themes/src/index.ts'
         ),
         ...resolveComponentsPath(components),
       };
