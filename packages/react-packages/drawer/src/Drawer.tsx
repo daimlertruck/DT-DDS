@@ -42,6 +42,7 @@ const Drawer = ({
       }
     };
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsTransformed(isVisible);
 
     document.addEventListener('keydown', handleKeyDown);

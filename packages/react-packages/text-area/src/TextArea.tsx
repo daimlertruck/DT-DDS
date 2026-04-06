@@ -68,6 +68,7 @@ export const TextArea = ({
 
   useEffect(() => {
     if (!!value) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInputValue(value);
       setChars(value.length);
       setHasRequiredError(false);

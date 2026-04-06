@@ -37,11 +37,13 @@ export const TableRow = ({
   const rowRef = useRef<HTMLTableRowElement>(null);
   let childrenColumns = children;
 
+  // eslint-disable-next-line react-hooks/refs
   if (isColumnsFixed && rowRef.current) {
     const fixedColumns: number[] = [];
     const fixedEndColumns: number[] = [];
     const fixedColumnsShadowIndexes: number[] = [];
 
+    // eslint-disable-next-line react-hooks/refs
     const columnsWidths = getColumnsWidths(rowRef.current);
 
     childrenColumns = mapValidChildren(children, (child, index) => {

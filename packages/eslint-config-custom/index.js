@@ -7,6 +7,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import importPlugin from 'eslint-plugin-import-x';
+import { fixupPluginRules } from '@eslint/compat';
 
 export default tseslint.config(
   // Global ignores
@@ -61,9 +62,9 @@ export default tseslint.config(
   // React
   {
     plugins: {
-      react: reactPlugin,
+      react: fixupPluginRules(reactPlugin),
       'react-hooks': reactHooksPlugin,
-      'jsx-a11y': jsxA11yPlugin,
+      'jsx-a11y': fixupPluginRules(jsxA11yPlugin),
     },
     rules: {
       ...reactPlugin.configs.recommended.rules,

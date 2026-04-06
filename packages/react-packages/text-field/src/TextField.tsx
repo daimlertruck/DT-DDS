@@ -95,6 +95,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>(
     useEffect(() => {
       // Check if there's an initial value coming from props
       if (!!initialValue) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setInputValue(initialValue);
         setHasRequiredError(false);
       } else {

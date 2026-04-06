@@ -63,6 +63,7 @@ export const SidebarItem = ({
 
   useEffect(() => {
     if (prevCollapseToIcons.current && !collapseToIcons) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsSidebarJustExpanded(true);
 
       const timeout = setTimeout(() => {

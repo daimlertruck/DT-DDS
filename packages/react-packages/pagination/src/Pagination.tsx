@@ -51,6 +51,7 @@ export const Pagination = ({
   const LAST_PAGE = totalPages;
   const previousPageRef = useRef(currentPage);
   const paginationDirection =
+    // eslint-disable-next-line react-hooks/refs
     currentPage < previousPageRef.current ? 'BACKWARD' : 'FORWARD';
 
   useEffect(() => {

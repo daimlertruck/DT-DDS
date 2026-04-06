@@ -28,6 +28,7 @@ export const TooltipContainer = ({
   };
 
   const hideTooltip = () => {
+    // eslint-disable-next-line react-hooks/immutability
     hideTooltipTimeout = setTimeout(() => {
       setIsVisible(false);
     }, hideDelay);

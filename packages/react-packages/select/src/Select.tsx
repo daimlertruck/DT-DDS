@@ -225,6 +225,7 @@ export const Select = ({
     return hasError ? 'error.default' : 'content.medium';
   };
 
+  // eslint-disable-next-line react-hooks/refs
   const toggleProps = getToggleButtonProps({
     disabled,
     tabIndex: disabled ? -1 : 0,

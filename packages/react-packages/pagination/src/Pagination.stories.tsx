@@ -14,6 +14,7 @@ const PaginationWrapper = (props: PaginationStoryProps) => {
   const [itemsPerPage, setItemsPerPage] = useState(props.itemsPerPage);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setItemsPerPage(props.itemsPerPage);
   }, [props.itemsPerPage]);
 

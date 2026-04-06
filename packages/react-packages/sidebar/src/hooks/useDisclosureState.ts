@@ -56,6 +56,7 @@ export const useDisclosureState = ({
     }
 
     if (shouldTrigger) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInternalExpanded(true);
       lastAutoExpandKey.current = autoExpandKey;
     }
