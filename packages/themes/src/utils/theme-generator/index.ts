@@ -53,7 +53,7 @@ export const theme: CustomTheme = {
   responsiveFontStyles,
   shape,
   iconSizes,
-  icons: 'outlined',
+  icons: 'sharp',
 };
 
 export default theme;
