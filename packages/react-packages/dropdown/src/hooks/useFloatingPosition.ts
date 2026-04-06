@@ -65,6 +65,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
   useLayoutEffect(() => {
     if (!open || !anchorEl?.current) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setStyle({
         visibility: 'hidden',
         position: 'fixed',

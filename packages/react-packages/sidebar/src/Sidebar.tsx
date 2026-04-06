@@ -71,6 +71,7 @@ export const Sidebar = ({
     }
 
     if (!isMobile) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsBackdropVisible(false);
       setShouldShowSidebar(isExpanded);
       return;
