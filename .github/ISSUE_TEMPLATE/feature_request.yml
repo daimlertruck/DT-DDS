@@ -1,0 +1,80 @@
+name: Feature Request / RFC
+description: Propose a new feature or technical change to DT-DDS
+title: '[Feature Request]: '
+labels: ['type:feature', 'status:triage']
+projects: ['daimlertruck/1']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement to DT-DDS! This template also works as an RFC — the more details you provide, the easier it will be for the community to review and implement your proposal.
+
+  - type: textarea
+    id: overview
+    attributes:
+      label: Overview
+      description: Provide a brief description of the feature you would like to see added to the UI component library.
+      placeholder: 'Ex: Addition of a Skeleton component for loading states.'
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: Explain WHY this should be added to DT-DDS.
+      placeholder: |
+        Ex: Currently, when data is loading, consumers are forced to implement their own ad-hoc loading states, leading to inconsistent UX across products. DT-DDS has no standardized way to handle this pattern.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Clearly explain how you envision the new feature to work and what changes it will bring to the UI component library. If possible, describe the properties and possible states of the new/updated component.
+      placeholder: |
+        Ex: Add a <Skeleton /> component that accepts width, height, and variant (text | circle | rect) props. It should integrate with the existing theme tokens for color and animation duration.
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Include any additional information, links, or references that might be helpful to understand the feature request.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: What is the priority of this feature request?
+      options:
+        - 'P0 - Critical change / Architecture change'
+        - 'P1 - High (Impacts functionality or urgently needed by a product)'
+        - 'P2 - Medium (Design updates, tokens, features not yet requested by any product)'
+        - 'P3 - Low (Nice to have / Small improvements)'
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-justification
+    attributes:
+      label: Priority Justification
+      description: Justify the priority level selected above.
+      placeholder: |
+        Ex: Most product teams consuming DT-DDS have already requested loading state patterns independently. A standardized Skeleton component would have high adoption and low implementation risk, as it requires no breaking changes to existing components.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Initial Checklist
+      options:
+        - label: 'I have checked that there is no similar open feature request or RFC.'
+          required: true
+        - label: 'This proposal follows the project design standards.'
+          required: true
