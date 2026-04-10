@@ -1,43 +1,64 @@
-# Coding Standards and Guidelines
+# 1. GitHub Workflow
+
+## 1.1. Issue creation
+
+Who can create issues? Everyone, since it's following the correct template for the desired request.
+
+**Issues created should strictly follow the templates, the required fields are mandatory and can invalidate the issue if not present.**
+
+## 1.2. The Board structure
+
+Our [project board](https://github.com/orgs/daimlertruck/projects/1) acts as the single source of truth for the status of all work items.
+
+| **Column**            | **Description**                                                                                                                                                                                                                                                                                                                                                                  | **Owner**                      |
+|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|
+| **No Status (Inbox)** | **The Landing Zone.** All new issues arrive here automatically. They may be labelled as bug, feature, or question based on the template used.                                                                                                                                                                                                                                    | **Maintainers & Contributors** |
+| **Backlog**           | **To Be Refined.** Validated issues that need prioritization or scoping. Work does not start here.                                                                                                                                                                                                                                                                               | **Maintainers Only**           |
+| **Ready**             | **Ready to be picked up.** Issues with clear requirements and approved scope. Contributors can assign themselves to these tasks.                                                                                                                                                                                                                                                 | **Maintainers & Contributors** |
+| **In Progress**       | **Active Work.** Tasks currently being worked on.                                                                                                                                                                                                                                                                                                                                | **Assignee**                   |
+| **In Review**         | **PR Open.** Automatically moved here when a Pull Request is linked to the issue.<br><br>⭐️ Good practices:<br>- Target review time is 2 - 3 business days<br>- Required approvals: 2 developers, at least 1 of them is a maintainer<br>- Check the PR list and contribute with your review before taking a new task to work<br>- Contributors reviews are welcome and encouraged | **Reviewers**                  |
+| **Done**              | **Shipped.** Automatically moved here when the PR is merged.                                                                                                                                                                                                                                                                                                                     | **System**                     |
+
+## 1.3. Triage & Refinement process
+
+To ensure high quality and clarity, every issue goes through a strict triage process before code is written.
+
+Please only pickup issues with the label "status:ready" and in the "Ready" column of the board.
+Change the issue label to "status:in progress" (remove "status:ready") and assign to you, when picking it up.
+
+## 1.4. Pull Request Lifecycle
+
+- **In Review**: When you open a Pull Request, ensure you link it to the issue (e.g., "Closes #123"). Change the issue label to "status:in review".
+- **Done**: Once the PR is merged into the main branch, the issue automatically moves to Done.
+
+## 1.5. Visual Management (Labels vs. Board)
+
+To ensure visibility for both Maintainers (who use the Board) and Contributors (who browse the Issues List), we use a **Label-State Synchronization** system.
+
+Every column on the Board corresponds to a specific status label on the issue.
+
+| **Board Column**      | **Issue Label**       | **Description**                                                                              | **Who Acts?**              |
+|-----------------------|-----------------------|----------------------------------------------------------------------------------------------|----------------------------|
+| **No Status (Inbox)** | status: triage 🟤      | **The Landing Zone.** Needs categorization to be done manually                                | Maintainers                |
+| **Backlog**           | status: backlog 🟠     | **To Be Refined.** Validated issues waiting for prioritization and/or clear scope.           | Maintainers                |
+| **Ready**             | status: ready 🟢       | **Ready to be picked up.** Issues with clear requirements and approved scope. Ready for dev. | Contributors & Maintainers |
+| **In Progress**       | status: in progress 🔵 | **Active Work.** Someone is currently working on this.                                       | Assignee                   |
+| **In Review**         | status: in review 🟣   | **PR Open.** A Pull Request is linked and under review.                                      | Reviewers                  |
+| **Done**              | (No status label)     | **Shipped.** The issue is closed.                                                            | System                     |
+
+# 2. Coding Standards and Guidelines
 
 This guide is intended to support the developers by providing a set of programming conventions, style and best practices to follow on DT-DDS.
 
-- [Coding Standards and Guidelines](#coding-standards-and-guidelines)
-  - [1. Branch Naming Convention](#1-branch-naming-convention)
-  - [2. Commits](#2-commits)
-    - [2.1. Developer Certificate of Origin (DCO)](#21-developer-certificate-of-origin-dco)
-    - [2.2. Message Convention](#21-message-convention)
-    - [2.3. Strategy](#22-strategy)
-    - [2.4. References](#23-references)
-  - [3. Pull Requests](#3-pull-requests)
-    - [3.1. Name Convention](#31-name-convention)
-    - [3.2. Preview Link](#32-preview-link)
-    - [3.3. Work in Progress](#33-work-in-progress)
-    - [3.4. Code Reviews](#34-code-reviews)
-      - [3.4.1 Continuation of Pull Request](#341-continuation-of-pull-request)
-      - [3.4.2 Merging the Pull Request](#342-merging-the-pull-request)
-  - [4. Code Standards & Good Practices](#4-code-standards--good-practices)
-    - [4.1. Start developing on DT-DDS](#41-start-developing-on-DT-DDS)
-    - [4.2. Library Compilation](#42-library-compilation)
-    - [4.3. How to build a component from scratch](#43-how-to-build-a-component-from-scratch)
-    - [4.4. When to use Types / Interfaces](#44-when-to-use-types--interfaces)
-    - [4.5. Compound components pattern](#45-compound-components-pattern)
-    - [4.6. Enum vs String literals unions](#46-enum-vs-string-literals-unions)
-    - [4.7. Enum vs Objects with as const](#47-enum-vs-objects-with-as-const)
-    - [4.8. Named Exports vs Default Exports](#48-named-exports-vs-default-exports)
-    - [4.9. Developer Documentation](#49-developer-documentation)
-    - [4.10. How to add component stories?](#410-how-to-add-component-stories)
-  - [5. Versioning & Publishing Packages](#5-versioning-&-publishing-packages)
-
-## 1. Branch Naming Convention
+## 2.1. Branch Naming Convention
 
 New branches should follow the name pattern `{type}/{ticket}/{description-in-kebab-case}` (example: `feature/DTUI-XXX/new-feature`). When there is no JIRA ticket, replace `{ticket}` for `NO-ISSUE`.
 
 **Note:** The rule should be to always have a JIRA ticket created for each task.
 
-## 2. Commits
+## 2.2. Commits
 
-### 2.1. Developer Certificate of Origin (DCO)
+### 2.2.1. Developer Certificate of Origin (DCO)
 
 A [Developer Certificate of Origin (DCO)](https://developercertificate.org/) is a simple mechanism that authors use to affirm they have the right to contribute their code under the project’s license.
 
@@ -45,7 +66,7 @@ Every Commit you submit needs a `Signed-off-by: Your Name <you@example.com>` tra
 
 By submitting commits with a valid `Signed-off-by` line, you agree that your contribution is covered by the MIT license.
 
-### 2.2 Message Convention
+### 2.2.2 Message Convention
 
 All commit messages should follow [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) specification.  
 The message should be structured as follows:
@@ -60,12 +81,12 @@ The commit title has a limit of 50 characters. **Description** should be written
 
 Even though the **body** is optional, the developer should always consider adding one so that the project has a more clear and detailed commit history for anyone to follow. Each line of **body** should be wrapped at 72 characters.
 
-### 2.3. Strategy
+### 2.2.3. Strategy
 
 - Avoid mixing concerns, commits should be “atomic”. For example, creating two different components should produce two separate commits.
 - Commits should never crash the application. For example, a refactor that changed a payload of a request, needs to be applied to all places in the same commit. It's the same for tests, should be added in the same commit of the feature/fix, etc.
 
-### 2.4. References
+### 2.2.4. References
 
 For more information on how to commit, read the following documentation and blog posts:
 
@@ -73,21 +94,21 @@ For more information on how to commit, read the following documentation and blog
 - [Git Commit Best Practices](https://gist.github.com/luismts/495d982e8c5b1a0ced4a57cf3d93cf60)
 - [Help him!! Help your code reviewer.](https://leidsoncruz.github.io/post/help-him-help-your-code-reviewer/)
 
-## 3. Pull Requests
+## 2.3. Pull Requests
 
-### 3.1. Name Convention
+### 2.3.1. Name Convention
 
 Pull Requests (PRs) should be opened with the following title structure `{ticket}: {description}`, for example: `DTUI-XXX: PR description`. The project already includes a PR template (see it under the folder `.github`) that should be correcly filled in.
 
-### 3.2. Preview Link
+### 2.3.2. Preview Link
 
 After a PR is opened, a deploy to the github pages gets triggered and a Preview Link is added to the PR description. This will enable developers and designers to see the changes and review accordingly.
 
-### 3.3. Work in Progress
+### 2.3.3. Work in Progress
 
 When creating a PR that is not ready to be reviewed, open it as a [Draft Pull Request](https://github.blog/2019-02-14-introducing-draft-pull-requests/). Furthermore, the PR title should include the `[WIP]` tag in the beginning, for example: `[WIP] DTUI-XXX: PR description`.
 
-### 3.4. Code Reviews
+### 2.3.4. Code Reviews
 
 Every PR should be reviewed and approved by at least two reviewers before being merged to the main branch.
 
@@ -95,13 +116,13 @@ As a contributor organise yourself and try to ideally review the pending PR's in
 
 After each review, and every time the developer need to perform a fix on a branch, fixes related to a commit should reference the same commit using [fixup commit](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt). This allows the reviewers to track the changes easier and keeps clean and clear commit history.
 
-#### 3.4.1 Continuation of Pull Request
+#### 2.3.4.1 Continuation of Pull Request
 
 As a rule of thumb the code author is also the PR assignee. "Assignees are responsible for making sure the pull request is not blocked. They are responsible for making sure the pull request progresses."
 
 Check it out the [useful PR guidelines by MDN](https://developer.mozilla.org/en-US/docs/MDN/Community/Pull_requests)
 
-#### 3.4.2 Merging the Pull Request
+#### 2.3.4.2 Merging the Pull Request
 
 After the review process is completed and before merging the branch, all discussions **must** be resolved by the one that opened them. This way, everyone is aware if the discussion is finished or if there is something pending. Besides that, and after merging the branch, the developer should also rebase the branch with the main/develop branch using the `autosquash` commit, so that all fixups' commits are squashed with its respective parent commit.
 
@@ -109,11 +130,11 @@ Even if the PR is approved by the assignees, the comments made by other contribu
 
 After all of this, the branch is ready to be merged using `rebase and merge`.
 
-## 4. Code Standards & Good Practices
+## 2.4. Code Standards & Good Practices
 
 It is important to follow certain coding guidelines and standards to maintain consistency across the project's code base.
 
-### 4.1. Start developing on DT-DDS
+### 2.4.1. Start developing on DT-DDS
 
 Only create a new component if the design specification is ready and approved in the contributors sync, the component spec's to be found on [Figma](https://www.figma.com/file/HMNEjcZa01vPjEaBbB0vtF/DT_UI?type=design&node-id=48%3A8967&mode=design&t=UTbLy7JmqDqrFuWC-1).
 
@@ -121,7 +142,7 @@ Challenge the specification, raise concerns and your point of view to have great
 
 There is a case where you don't have the specification ready but the component is urgent for your product, it should be created in the scope of your product at first;
 
-### 4.2 Library Compilation
+### 2.4.2 Library Compilation
 
 To make the core library code work across all browsers, we need to compile the raw TypeScript and React code to plain JavaScript. We can accomplish this with `tsup`, which uses `esbuild` to greatly improve performance.
 
@@ -139,7 +160,7 @@ dt-dds-react
     ...
 ```
 
-### 4.3. How to build a component from scratch
+### 2.4.3. How to build a component from scratch
 
 Components are independent packages that should be created in the workspace `packages/react-packages/**`
 
@@ -151,7 +172,7 @@ Components are independent packages that should be created in the workspace `pac
 
 4. All the integration with storybook and `dt-dds-react` main library will be provided automatically.
 
-### 4.4. When to use Types / Interfaces
+### 2.4.4. When to use Types / Interfaces
 
 Types and interfaces are very similar, in the last versions of typescript almost all features of an interface are available in type.
 
@@ -176,7 +197,7 @@ interface MyInterface {
 }
 ```
 
-### 4.5. Compound components pattern
+### 2.4.5. Compound components pattern
 
 We must use this pattern when creating components that are composable, not all the cases will apply this pattern, but for example cases where we have a main component that depends on other parts such as:
 
@@ -192,7 +213,7 @@ Compound components manage their own internal state, which they share among the 
 When importing a compound component, we don’t have to explicitly import the child components that are available on that component.
 Reference: https://www.patterns.dev/react/compound-pattern/
 
-### 4.6. Enum vs String literals unions
+### 2.4.6. Enum vs String literals unions
 
 We encourage and see as a good practice using String literal unions rather than Enum to define a set of values, there are still some cases where enum's can be used, but for sure it will be an exception.
 
@@ -220,7 +241,7 @@ enum DecodedCategory {
 
 Reference: https://contra.com/p/W3ol7m3o-enums-vs-string-literal-unions-in-type-script
 
-### 4.7. Enum vs Objects with as const
+### 2.4.7. Enum vs Objects with as const
 
 Given the objects keeps the base code aligned with the state of JavaScript we are in favor of this approach instead of using enums.
 
@@ -228,7 +249,7 @@ The biggest argument in favour of this format over TypeScript’s enum is that i
 
 Reference: https://www.typescriptlang.org/docs/handbook/enums.html#objects-vs-enums
 
-### 4.8. Named Exports vs Default Exports
+### 2.4.8. Named Exports vs Default Exports
 
 **We should always use named exports for components and utility functions**, as default exports have many downsides.
 Default exports were introduced mostly for easier interoperability with thousands CommonJS modules that were exporting single values. They don’t bring many benefits when used internally in our codebase.
@@ -237,7 +258,7 @@ We want to be clear and objective about which components we provide in an assert
 
 Reference: https://stackoverflow.com/a/68665805
 
-### 4.9. Developer Documentation
+### 2.4.9. Developer Documentation
 
 DT-DDS developer documentation is built with Storybook. Storybook documentation is composed by:
 
@@ -253,7 +274,7 @@ If you created custom components to import in the page or a lot of subpages, we 
 
 Note: On Storybook v6, documentation pages still use the `.stories.mdx` extension (otherwise they are not included). On v7 these pages can use `.mdx` extension.
 
-### 4.10. Prop Forwarding in Styled Components
+### 2.4.10. Prop Forwarding in Styled Components
 
 When using `@emotion/styled`, props passed to styled components are forwarded to the underlying DOM element by default. This can cause React warnings for non-standard DOM attributes and potential issues.
 
@@ -293,7 +314,7 @@ For more information on Storybook and Docs, read the following documentation and
 - https://storybook.js.org/tutorials/design-systems-for-developers/react/en/document/
 - https://storybook.js.org/blog/structuring-your-storybook/
 
-## 5. Versioning & Publishing Packages
+## 2.5. Versioning & Publishing Packages
 
 New changes should be tracked using the [Semantic Versioning](https://semver.org/).
 
