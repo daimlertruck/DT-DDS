@@ -22,6 +22,29 @@ const dropdownTestId = 'dropdown';
 
 const onClickMock = jest.fn();
 
+const makeRect = ({
+  left,
+  top,
+  width,
+  height,
+}: {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}): DOMRect =>
+  ({
+    x: left,
+    y: top,
+    left,
+    top,
+    width,
+    height,
+    right: left + width,
+    bottom: top + height,
+    toJSON: () => ({}),
+  } as DOMRect);
+
 const TestComponent = () => {
   const anchorRef = useRef<HTMLButtonElement>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -111,14 +134,37 @@ describe('<Dropdown /> ', () => {
     });
   });
 
+  test('should not render portal content when anchor is outside viewport', () => {
+    const anchor = document.createElement('div');
+    document.body.appendChild(anchor);
+    jest
+      .spyOn(anchor, 'getBoundingClientRect')
+      .mockImplementation(() =>
+        makeRect({ left: 10, top: 1200, width: 100, height: 40 })
+      );
+
+    const anchorRef = { current: anchor } as RefObject<HTMLElement>;
+
+    render(
+      <Dropdown anchorRef={anchorRef} dataTestId={dropdownTestId} isOpen>
+        <div data-testid='content'>hello</div>
+      </Dropdown>
+    );
+
+    const el = screen.getByTestId(dropdownTestId);
+
+    expect(el).toHaveStyle({
+      visibility: 'hidden',
+      position: 'fixed',
+    });
+  });
+
   test('should navigate dropdown options if not disabled and trigger onClick', async () => {
     const user = userEvent.setup();
 
     render(<TestComponent />);
 
     const trigger = screen.getByRole('button', { name: 'Open Menu' });
-    const [optionOne, optionTwoDisabled, optionThreeReadonly, optionFour] =
-      screen.getAllByTestId('dropdown-option');
 
     trigger.focus();
 
@@ -126,7 +172,10 @@ describe('<Dropdown /> ', () => {
       await user.keyboard('{Enter}');
     });
 
-    await user.tab();
+    const [optionOne, optionTwoDisabled, optionThreeReadonly, optionFour] =
+      screen.getAllByTestId('dropdown-option');
+
+    optionOne.focus();
 
     expect(optionOne).toHaveFocus();
     expect(optionTwoDisabled).not.toHaveFocus();

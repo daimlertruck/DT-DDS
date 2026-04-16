@@ -62,6 +62,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     visibility: 'hidden',
     position: 'fixed',
   });
+  const [isAnchorInViewport, setIsAnchorInViewport] = useState(true);
 
   useLayoutEffect(() => {
     if (!open || !anchorEl?.current) {
@@ -70,6 +71,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
         visibility: 'hidden',
         position: 'fixed',
       });
+      setIsAnchorInViewport(false);
       return;
     }
 
@@ -82,6 +84,23 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
       const anchor = anchorElement.getBoundingClientRect();
       const menuRect = menuElement?.getBoundingClientRect();
+
+      const isOutOfViewport =
+        anchor.bottom < 0 ||
+        anchor.right < 0 ||
+        anchor.top >= vh ||
+        anchor.left >= vw;
+
+      if (isOutOfViewport) {
+        setIsAnchorInViewport(false);
+        setStyle({
+          visibility: 'hidden',
+          position: 'fixed',
+        });
+        return;
+      }
+
+      setIsAnchorInViewport(true);
 
       const menuWidth = matchWidth
         ? anchor.width
@@ -155,5 +174,5 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     minViewportPadding,
   ]);
 
-  return { style };
+  return { style, isAnchorInViewport };
 }
