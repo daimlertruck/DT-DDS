@@ -126,18 +126,23 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
     ro.observe(anchorElement);
 
-    if (anchorElement) {
-      ro.observe(anchorElement);
+    if (menuElement) {
+      ro.observe(menuElement);
     }
 
-    const opts: AddEventListenerOptions = { passive: true };
-    window.addEventListener('scroll', updatePosition, opts);
-    window.addEventListener('resize', updatePosition, opts);
+    // Capture allows updates on nested scroll containers, not only window.
+    const scrollOpts: AddEventListenerOptions = {
+      passive: true,
+      capture: true,
+    };
+    const resizeOpts: AddEventListenerOptions = { passive: true };
+    window.addEventListener('scroll', updatePosition, scrollOpts);
+    window.addEventListener('resize', updatePosition, resizeOpts);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener('scroll', updatePosition, opts);
-      window.removeEventListener('resize', updatePosition, opts);
+      window.removeEventListener('scroll', updatePosition, scrollOpts);
+      window.removeEventListener('resize', updatePosition, resizeOpts);
     };
   }, [
     menuRef,
