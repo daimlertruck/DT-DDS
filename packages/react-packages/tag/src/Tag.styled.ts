@@ -37,7 +37,7 @@ export const TagStyled = styled.div<TagStyledProps>(
     borderRadius: theme.radius[border === 'rounded' ? 'radius_70' : 'radius_0'],
     width: '150px',
 
-    ['> :first-child']: {
+    ['> span:first-of-type']: {
       whiteSpace: 'nowrap',
       display: 'block',
       overflow: 'hidden',
