@@ -86,7 +86,7 @@ export const TextField = forwardRef<HTMLDivElement, TextFieldProps>(
     ref
   ) => {
     const [activeInput, setActiveInput] = useState(false);
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState(initialValue ?? '');
     const [hasRequiredError, setHasRequiredError] = useState(false);
     const textFieldId = id ?? label.replaceAll(' ', '-').toLowerCase();
     const testId =

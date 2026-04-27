@@ -105,7 +105,7 @@ export const Default: StoryObj<TextFieldPropsWithExtrasProp> = {
     label: 'My label',
     id: '',
     message: 'Additional info',
-    initialValue: '',
+    initialValue: 'Initial value',
     maxLength: undefined,
     required: false,
     requiredMessage: '',
