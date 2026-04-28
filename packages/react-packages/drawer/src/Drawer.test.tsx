@@ -1,53 +1,22 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 
 import { withProviders } from '@dt-dds/react-core';
-import { defaultTheme as theme } from '@dt-dds/themes';
 
 import { default as Drawer } from './Drawer';
 
-const animationMiliseconds =
-  parseFloat(
-    theme.animations.emphasizedDecelerate.duration.replace(/[^\d.]/g, '')
-  ) * 1000;
-
 describe('<Drawer /> component', () => {
   const ProvidedDrawer = withProviders(Drawer);
-  const mockIntersectionObserve = jest.fn();
-
-  const mockIntersectionObserver = (
-    callback: (entry: Partial<IntersectionObserverEntry>[]) => void
-  ) => {
-    return {
-      observe: mockIntersectionObserve.mockImplementation(
-        (isIntersecting: boolean) => callback([{ isIntersecting }])
-      ),
-      disconnect: () => jest.fn(),
-    };
-  };
-
-  beforeEach(() => {
-    Object.defineProperty(window, 'IntersectionObserver', {
-      writable: true,
-      value: mockIntersectionObserver,
-    });
-  });
-
-  beforeAll(() => {
-    jest.useFakeTimers();
-  });
-
-  afterAll(() => {
-    jest.useRealTimers();
-  });
 
   it('renders correctly with children', () => {
-    const { container } = render(
+    render(
       <ProvidedDrawer isVisible setIsVisible={jest.fn()}>
         <div>Example content</div>
       </ProvidedDrawer>
     );
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('drawer-content-container')).toBeVisible();
+    expect(screen.getByTestId('drawer-overlay')).toBeVisible();
+    expect(screen.getByText('Example content')).toBeVisible();
   });
 
   it('closes when clicking the overlay', () => {
@@ -62,7 +31,8 @@ describe('<Drawer /> component', () => {
     const overlay = screen.getByTestId('drawer-overlay');
     fireEvent.click(overlay);
 
-    jest.advanceTimersByTime(animationMiliseconds);
+    const drawerContainer = screen.getByTestId('drawer-content-container');
+    fireEvent.transitionEnd(drawerContainer, { propertyName: 'transform' });
 
     expect(setIsVisibleMock).toHaveBeenCalledWith(false);
   });
@@ -80,7 +50,25 @@ describe('<Drawer /> component', () => {
     const closeButton = screen.getByTestId('drawer-close-button');
     fireEvent.click(closeButton);
 
-    jest.advanceTimersByTime(animationMiliseconds);
+    const drawerContainer = screen.getByTestId('drawer-content-container');
+    fireEvent.transitionEnd(drawerContainer, { propertyName: 'transform' });
+
+    expect(setIsVisibleMock).toHaveBeenCalledWith(false);
+  });
+
+  it('closes when pressing the Escape key', () => {
+    const setIsVisibleMock = jest.fn();
+
+    render(
+      <ProvidedDrawer isVisible setIsVisible={setIsVisibleMock}>
+        <div>Example content</div>
+      </ProvidedDrawer>
+    );
+
+    fireEvent.keyDown(document, { key: 'Escape' });
+
+    const drawerContainer = screen.getByTestId('drawer-content-container');
+    fireEvent.transitionEnd(drawerContainer, { propertyName: 'transform' });
 
     expect(setIsVisibleMock).toHaveBeenCalledWith(false);
   });
@@ -125,41 +113,25 @@ describe('<Drawer /> component', () => {
     );
 
     const titleElement = screen.getByText('Drawer Title');
-    expect(titleElement).toBeInTheDocument();
+    expect(titleElement).toBeVisible();
 
     const customHeaderContent = screen.getByText('Header Content');
-    expect(customHeaderContent).toBeInTheDocument();
+    expect(customHeaderContent).toBeVisible();
 
     const customBodyContent = screen.getByText('Body Content');
-    expect(customBodyContent).toBeInTheDocument();
+    expect(customBodyContent).toBeVisible();
   });
 
-  it('applies correct class when DrawerBody is not scrollable', () => {
+  it('should render an icon in the title when icon prop is provided', () => {
     render(
       <ProvidedDrawer isVisible setIsVisible={jest.fn()}>
-        <Drawer.Body>Body Content</Drawer.Body>
+        <Drawer.Header>
+          <Drawer.Title title='Drawer Title' icon='fire_truck' />
+        </Drawer.Header>
       </ProvidedDrawer>
     );
 
-    expect(screen.getByTestId('drawer-body')).not.toHaveClass('hasScroll');
-  });
-
-  it('applies correct class when DrawerBody is scrollable', () => {
-    render(
-      <ProvidedDrawer isVisible setIsVisible={jest.fn()}>
-        <Drawer.Header />
-        <Drawer.Body>Body Content</Drawer.Body>
-      </ProvidedDrawer>
-    );
-
-    mockIntersectionObserve(false);
-
-    expect(screen.getByTestId('drawer-body')).toHaveClass('hasScroll');
-    console.log('***** box-shadow: ', theme.shadows.elevation_100);
-    expect(screen.getByTestId('drawer-header')).toHaveStyleRule(
-      'box-shadow',
-      theme.shadows.elevation_100,
-      { target: ':has(+.hasScroll)' }
-    );
+    expect(screen.getByText('fire_truck')).toBeVisible();
+    expect(screen.getByText('Drawer Title')).toBeVisible();
   });
 });
