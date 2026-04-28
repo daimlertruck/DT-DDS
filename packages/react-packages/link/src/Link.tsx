@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { ElementType, forwardRef } from 'react';
 
 import { Code } from '@dt-dds/icons';
 import { BaseProps } from '@dt-dds/react-core';
@@ -6,15 +6,17 @@ import { Icon } from '@dt-dds/react-icon';
 
 import { LinkStyled } from './Link.styled';
 
-import { LinkSize, LinkColor, LinkVariant } from '.';
+import { LinkSize, LinkColor, LinkFontWeight, LinkVariant } from '.';
 
 export interface LinkProps
   extends BaseProps,
     React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  as?: ElementType;
   isDisabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
   size?: LinkSize;
   color?: LinkColor;
+  fontWeight?: LinkFontWeight;
   icon?: Code;
   variant?: LinkVariant;
 }
@@ -28,6 +30,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       dataTestId,
       onClick,
       variant,
+      fontWeight = 'regular',
       href,
       style,
       icon,
@@ -38,13 +41,14 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   ) => {
     return (
       <LinkStyled
-        color={color}
+        $color={color}
         data-testid={dataTestId ?? 'link'}
-        disabled={isDisabled}
+        $disabled={isDisabled}
+        $fontWeight={fontWeight}
         ref={ref}
-        size={size}
+        $size={size}
         style={style}
-        variant={variant}
+        $variant={variant}
         {...(!isDisabled && { href, onClick })}
         {...rest}
       >

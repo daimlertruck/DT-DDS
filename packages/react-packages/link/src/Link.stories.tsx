@@ -24,9 +24,14 @@ const meta: Meta<LinkProps> = {
       description: 'Sets the link disabled',
     },
     color: {
-      options: ['accent', 'secondary'],
+      options: ['primary', 'secondary'],
       control: { type: 'select' },
       description: 'Sets the link color',
+    },
+    fontWeight: {
+      options: ['regular', 'bold'],
+      control: { type: 'select' },
+      description: 'Sets the font weight',
     },
     variant: {
       options: ['standalone', 'inline'],
@@ -50,10 +55,34 @@ export const Default: StoryObj<LinkProps> = {
   args: {
     children: 'Redirect to',
     href: 'https://www.google.com/',
-    target: '_blank',
+
     size: 'medium',
     isDisabled: false,
-    color: 'accent',
+    color: 'primary',
     variant: 'standalone',
+  },
+};
+
+export const Inline: StoryObj<LinkProps> = {
+  args: {
+    children: 'link example',
+    href: 'https://www.google.com/',
+    size: 'medium',
+    isDisabled: false,
+    fontWeight: 'regular',
+    variant: 'inline',
+  },
+};
+
+export const Standalone: StoryObj<LinkProps> = {
+  args: {
+    children: 'Link',
+    href: 'https://www.google.com/',
+    size: 'medium',
+    isDisabled: false,
+    color: 'primary',
+    fontWeight: 'bold',
+    variant: 'standalone',
+    icon: 'arrow_forward',
   },
 };
