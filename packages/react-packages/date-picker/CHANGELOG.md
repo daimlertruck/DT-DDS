@@ -1,5 +1,23 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.106
+
+### Patch Changes
+
+- fix: dropdown documentation
+- chore: update to ESLint 10
+- chore: update to ESLint 9
+- fix: default icon type in themes
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.104
+  - @dt-dds/react-core@1.0.0-beta.60
+  - @dt-dds/react-text-field@1.0.0-beta.121
+  - @dt-dds/react-icon@1.0.0-beta.64
+  - @dt-dds/themes@1.0.0-beta.15
+
 ## 1.0.0-beta.105
 
 ### Patch Changes

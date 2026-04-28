@@ -1,5 +1,19 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- chore: update to ESLint 10
+- chore: update to ESLint 9
+- fix: default icon type in themes
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.7
+  - @dt-dds/react-core@1.0.0-beta.60
+  - @dt-dds/themes@1.0.0-beta.15
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

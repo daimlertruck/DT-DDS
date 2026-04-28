@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.77
+
+### Patch Changes
+
+- chore: update to ESLint 9
+
 ## 1.0.0-beta.76
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.7
+
+### Patch Changes
+
+- chore: update to ESLint 10
+- chore: update to ESLint 9
+
 ## 1.0.0-beta.6
 
 ### Patch Changes

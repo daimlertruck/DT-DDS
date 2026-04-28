@@ -1,5 +1,26 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.131
+
+### Minor Changes
+
+- feat: implement new Link design variants
+
+### Patch Changes
+
+- chore: update to ESLint 10
+- chore: update to ESLint 9
+- fix: default icon type in themes
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.60
+  - @dt-dds/react-link@1.0.0-beta.87
+  - @dt-dds/react-button@1.0.0-beta.109
+  - @dt-dds/react-typography@1.0.0-beta.51
+  - @dt-dds/themes@1.0.0-beta.15
+
 ## 1.0.0-beta.130
 
 ### Patch Changes

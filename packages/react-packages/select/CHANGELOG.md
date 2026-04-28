@@ -1,5 +1,28 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.98
+
+### Patch Changes
+
+- fix: dropdown documentation
+- chore: update to ESLint 10
+- chore: update to ESLint 9
+- fix: default icon type in themes
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.104
+  - @dt-dds/react-core@1.0.0-beta.60
+  - @dt-dds/react-tooltip@1.0.0-beta.70
+  - @dt-dds/react-icon@1.0.0-beta.64
+  - @dt-dds/react-checkbox@1.0.0-beta.65
+  - @dt-dds/react-label-field@1.0.0-beta.62
+  - @dt-dds/react-icon-button@1.0.0-beta.30
+  - @dt-dds/react-typography@1.0.0-beta.51
+  - @dt-dds/react-box@1.0.0-beta.77
+  - @dt-dds/themes@1.0.0-beta.15
+
 ## 1.0.0-beta.97
 
 ### Patch Changes

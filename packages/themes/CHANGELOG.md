@@ -1,5 +1,12 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.15
+
+### Patch Changes
+
+- chore: update to ESLint 9
+- fix: default icon type in themes
+
 ## 1.0.0-beta.14
 
 ### Minor Changes
