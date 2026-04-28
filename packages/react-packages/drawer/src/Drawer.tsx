@@ -1,21 +1,20 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { useTheme, Global } from '@emotion/react';
+import { Global } from '@emotion/react';
 
-import { DrawerTitle, DrawerHeader, DrawerBody } from './components';
+import { BaseProps } from '@dt-dds/react-core';
+
+import { DrawerBody, DrawerHeader, DrawerTitle } from './components';
 import { DrawerContextProvider } from './context/DrawerProvider';
 import {
-  GlobalStyle,
   DrawerStyled,
-  DrawerBaseProps,
-  OverlayStyled,
+  GlobalStyle,
   MainContainerStyled,
+  OverlayStyled,
 } from './Drawer.styled';
 
-const animationToMiliseconds = (duration: string) =>
-  parseFloat(duration.replace(/[^\d.]/g, '')) * 1000;
-
-export interface DrawerProps extends DrawerBaseProps {
+export interface DrawerProps extends BaseProps {
+  isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -26,14 +25,16 @@ const Drawer = ({
   dataTestId,
 }: DrawerProps) => {
   const [isTransformed, setIsTransformed] = useState<boolean>(false);
-  const theme = useTheme();
 
   const handleClose = useCallback(() => {
     setIsTransformed(false);
-    setTimeout(() => {
+  }, []);
+
+  const handleTransitionEnd = useCallback(() => {
+    if (!isTransformed) {
       setIsVisible(false);
-    }, animationToMiliseconds(theme.animations.emphasizedDecelerate.timingFunction));
-  }, [setIsVisible, theme.animations.emphasizedDecelerate.timingFunction]);
+    }
+  }, [isTransformed, setIsVisible]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -59,13 +60,14 @@ const Drawer = ({
 
         <OverlayStyled
           data-testid='drawer-overlay'
-          isVisible={isTransformed}
+          $isVisible={isTransformed}
           onClick={handleClose}
         />
 
         <DrawerStyled
           data-testid={dataTestId ?? 'drawer-content-container'}
-          isVisible={isTransformed}
+          $isVisible={isTransformed}
+          onTransitionEnd={handleTransitionEnd}
         >
           {children}
         </DrawerStyled>

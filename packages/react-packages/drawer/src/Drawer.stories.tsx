@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
-import { Meta, StoryFn } from '@storybook/react-vite';
+import { Meta, StoryFn } from '@storybook/react';
 
+import { Code, codes } from '@dt-dds/icons';
 import { Portal } from '@dt-dds/react-core';
 
 import { DrawerProps } from './Drawer';
@@ -9,15 +10,15 @@ import { DrawerProps } from './Drawer';
 import { Drawer } from '.';
 
 interface DrawerStoryProps extends DrawerProps {
-  body: string;
-  header: string;
+  body: ReactNode;
   title: string;
+  icon?: Code;
 }
 
 const Template: StoryFn<DrawerStoryProps> = ({
   body,
-  header,
   title,
+  icon,
   ...props
 }: DrawerStoryProps) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
@@ -36,8 +37,7 @@ const Template: StoryFn<DrawerStoryProps> = ({
           setIsVisible={setIsDrawerVisible}
         >
           <Drawer.Header>
-            <Drawer.Title title={title} />
-            <div>{header}</div>
+            <Drawer.Title icon={icon} title={title} />
           </Drawer.Header>
           <Drawer.Body>
             <div>{body}</div>
@@ -49,14 +49,20 @@ const Template: StoryFn<DrawerStoryProps> = ({
 };
 export const Default = {
   args: {
-    body: 'Drawer body content here.',
-    header: 'Drawer header content here.',
+    body: 'This is the body of the drawer.',
     title: 'Drawer title',
+    icon: null,
   },
 };
 const meta: Meta<DrawerStoryProps> = {
   title: 'Data Display/Drawer',
   component: Drawer,
+  argTypes: {
+    icon: {
+      options: Object.keys(codes),
+      control: { type: 'select' },
+    },
+  },
   render: Template,
 };
 

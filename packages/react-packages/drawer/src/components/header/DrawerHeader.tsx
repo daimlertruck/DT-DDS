@@ -10,7 +10,7 @@ export const DrawerHeader = ({ children }: BaseProps) => {
 
   return (
     <HeaderStyled data-testid='drawer-header'>
-      <div>{children}</div>
+      {children}
       <IconButton
         color='default'
         dataTestId='drawer-close-button'
