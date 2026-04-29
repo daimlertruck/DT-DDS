@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.300
+
+### Minor Changes
+
+- feat: update drawer design
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-drawer@1.0.0-beta.70
+  - @dt-dds/react-app-header@1.0.0-beta.44
+
 ## 1.0.0-beta.299
 
 ### Patch Changes

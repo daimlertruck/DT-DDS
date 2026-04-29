@@ -1,5 +1,11 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.70
+
+### Minor Changes
+
+- feat: update drawer design
+
 ## 1.0.0-beta.69
 
 ### Patch Changes
