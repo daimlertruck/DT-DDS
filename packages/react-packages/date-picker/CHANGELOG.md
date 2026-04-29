@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.107
+
+### Patch Changes
+
+- fix: missing readonly bottomLine styles
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.122
+
 ## 1.0.0-beta.106
 
 ### Patch Changes

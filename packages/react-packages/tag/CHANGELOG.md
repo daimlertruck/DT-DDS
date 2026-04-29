@@ -1,5 +1,11 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- fix: change tag first-child to first-of-type
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

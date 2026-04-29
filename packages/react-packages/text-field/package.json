@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-text-field",
-  "version": "1.0.0-beta.121",
+  "version": "1.0.0-beta.122",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"

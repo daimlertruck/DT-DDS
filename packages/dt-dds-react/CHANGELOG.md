@@ -1,5 +1,19 @@
 # @dt-ui/react
 
+## 1.0.0-beta.299
+
+### Patch Changes
+
+- fix: missing readonly bottomLine styles
+- fix: change tag first-child to first-of-type
+- Updated dependencies
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.122
+  - @dt-dds/react-date-picker@1.0.0-beta.107
+  - @dt-dds/react-app-header@1.0.0-beta.43
+  - @dt-dds/react-tag@1.0.0-beta.66
+
 ## 1.0.0-beta.298
 
 ### Minor Changes
