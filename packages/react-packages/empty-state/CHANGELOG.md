@@ -1,5 +1,16 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.132
+
+### Minor Changes
+
+- feat: prevent transient props from leaking on Link
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.88
+
 ## 1.0.0-beta.131
 
 ### Minor Changes

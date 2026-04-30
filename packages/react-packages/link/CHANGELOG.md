@@ -1,5 +1,11 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.88
+
+### Minor Changes
+
+- feat: prevent transient props from leaking on Link
+
 ## 1.0.0-beta.87
 
 ### Minor Changes

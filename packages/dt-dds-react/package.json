@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react",
-  "version": "1.0.0-beta.302",
+  "version": "1.0.0-beta.303",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js",
@@ -19,7 +19,7 @@
     "lint": "eslint --cache ."
   },
   "dependencies": {
-    "@dt-dds/react-link": "1.0.0-beta.87",
+    "@dt-dds/react-link": "1.0.0-beta.88",
     "@dt-dds/react-accordion": "1.0.0-beta.63",
     "@dt-dds/react-avatar": "1.0.0-beta.74",
     "@dt-dds/react-backdrop": "1.0.0-beta.62",
@@ -33,7 +33,7 @@
     "@dt-dds/react-divider": "1.0.0-beta.59",
     "@dt-dds/react-drawer": "1.0.0-beta.70",
     "@dt-dds/react-dropdown": "1.0.0-beta.104",
-    "@dt-dds/react-empty-state": "1.0.0-beta.131",
+    "@dt-dds/react-empty-state": "1.0.0-beta.132",
     "@dt-dds/react-form": "1.0.0-beta.56",
     "@dt-dds/react-icon": "1.0.0-beta.64",
     "@dt-dds/react-icon-button": "1.0.0-beta.30",
@@ -57,7 +57,7 @@
     "@dt-dds/react-tooltip": "1.0.0-beta.70",
     "@dt-dds/react-typography": "1.0.0-beta.51",
     "@dt-dds/react-sidebar": "1.0.0-beta.8",
-    "@dt-dds/react-app-header": "1.0.0-beta.46",
+    "@dt-dds/react-app-header": "1.0.0-beta.47",
     "@dt-dds/themes": "1.0.0-beta.15",
     "@emotion/server": "^11.4.0",
     "emotion-normalize": "^11.0.1"

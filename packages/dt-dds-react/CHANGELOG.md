@@ -1,5 +1,19 @@
 # @dt-ui/react
 
+## 1.0.0-beta.303
+
+### Minor Changes
+
+- feat: prevent transient props from leaking on Link
+
+### Patch Changes
+
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-app-header@1.0.0-beta.47
+  - @dt-dds/react-link@1.0.0-beta.88
+  - @dt-dds/react-empty-state@1.0.0-beta.132
+
 ## 1.0.0-beta.302
 
 ### Patch Changes
