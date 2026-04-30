@@ -1,3 +1,4 @@
+import isPropValid from '@emotion/is-prop-valid';
 import styled from '@emotion/styled';
 
 import { CustomTheme as Theme } from '@dt-dds/themes';
@@ -61,7 +62,9 @@ const colorMap = (
   },
 });
 
-export const LinkStyled = styled.a<LinkStyledProps>`
+export const LinkStyled = styled('a', {
+  shouldForwardProp: (prop) => isPropValid(prop) && !prop.startsWith('$'),
+})<LinkStyledProps>`
   ${({
     theme,
     $disabled,
