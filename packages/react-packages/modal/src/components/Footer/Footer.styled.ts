@@ -10,6 +10,7 @@ export const FooterStyled = styled.div<FooterProps>`
   justify-content: end;
   align-items: center;
   border-radius: inherit;
+  margin-top: auto;
 
   ${({ theme, hasBackgroundColor, hasBorder }) => `
       background-color: ${
