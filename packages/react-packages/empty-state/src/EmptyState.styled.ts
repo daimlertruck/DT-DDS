@@ -1,8 +1,14 @@
 import styled from '@emotion/styled';
 
+export const EmptyStateContainerStyled = styled.div`
+  container-type: inline-size;
+  width: 100%;
+  height: 100%;
+`;
+
 export const EmptyStateStyled = styled.div`
   ${({ theme }) => `
-    padding: ${theme.spacing.l} ${theme.spacing.s};
+    padding: ${theme.spacing.spacing_70} ${theme.spacing.spacing_90};
     background-color: ${theme.palette.surface.light};
     flex-direction: column;
     display: flex;
@@ -13,9 +19,9 @@ export const EmptyStateStyled = styled.div`
     width: 100%;
     height: 100%;
     gap: ${theme.spacing.xs};
-    
-    @media only screen and (min-width: ${theme.breakpoints.mq3}px) {
-      padding: ${theme.spacing.spacing_200} ${theme.spacing.spacing_500};
+
+    @container (min-width: ${theme.breakpoints.mq3}px) {
+      padding: ${theme.spacing.spacing_90} ${theme.spacing.spacing_500};
     }
   `}
 `;
@@ -29,7 +35,7 @@ export const EmptyStateContentStyled = styled.div`
   ${({ theme }) => `
       gap: ${theme.spacing.spacing_30};
 
-      @media only screen and (min-width: ${theme.breakpoints.mq3}px) {
+      @container (min-width: ${theme.breakpoints.mq3}px) {
         gap: ${theme.spacing.spacing_40};
       }
   `}
