@@ -3,7 +3,11 @@ import { ReactNode } from 'react';
 import { BaseProps } from '@dt-dds/react-core';
 import { Typography } from '@dt-dds/react-typography';
 
-import { EmptyStateStyled, EmptyStateContentStyled } from './EmptyState.styled';
+import {
+  EmptyStateContainerStyled,
+  EmptyStateStyled,
+  EmptyStateContentStyled,
+} from './EmptyState.styled';
 
 export interface EmptyStateContentProps extends Omit<BaseProps, 'children'> {
   title: string;
@@ -11,9 +15,11 @@ export interface EmptyStateContentProps extends Omit<BaseProps, 'children'> {
 }
 
 export const EmptyState = ({ children, dataTestId, style }: BaseProps) => (
-  <EmptyStateStyled data-testid={dataTestId ?? 'empty-state'} style={style}>
-    {children}
-  </EmptyStateStyled>
+  <EmptyStateContainerStyled>
+    <EmptyStateStyled data-testid={dataTestId ?? 'empty-state'} style={style}>
+      {children}
+    </EmptyStateStyled>
+  </EmptyStateContainerStyled>
 );
 
 EmptyState.Content = ({
