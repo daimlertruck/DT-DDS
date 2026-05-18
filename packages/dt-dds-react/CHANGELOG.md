@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.304
+
+### Patch Changes
+
+- fix: empty state adapt to container sizes
+- fix: removes centered modal content by default
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-empty-state@1.0.0-beta.133
+  - @dt-dds/react-modal@1.0.0-beta.111
+  - @dt-dds/react-app-header@1.0.0-beta.48
+
 ## 1.0.0-beta.303
 
 ### Minor Changes

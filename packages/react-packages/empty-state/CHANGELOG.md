@@ -1,5 +1,11 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.133
+
+### Patch Changes
+
+- fix: empty state adapt to container sizes
+
 ## 1.0.0-beta.132
 
 ### Minor Changes

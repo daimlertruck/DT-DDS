@@ -1,5 +1,11 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- fix: removes centered modal content by default
+
 ## 1.0.0-beta.110
 
 ### Patch Changes
