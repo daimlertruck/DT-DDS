@@ -470,5 +470,19 @@ describe('<Select />', () => {
         expect(value()).toHaveTextContent('');
       });
     });
+
+    test('should render unique checkbox ids for each option', () => {
+      renderMultiSelect();
+
+      const checkboxInputs = document.querySelectorAll(
+        'input[type="checkbox"]'
+      );
+      const ids = Array.from(checkboxInputs).map((input) => input.id);
+
+      expect(ids.length).toBeGreaterThan(1);
+
+      const uniqueIds = new Set(ids);
+      expect(uniqueIds.size).toBe(ids.length);
+    });
   });
 });

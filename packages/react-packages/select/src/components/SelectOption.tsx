@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useId } from 'react';
 
 import { useTheme } from '@emotion/react';
 
@@ -27,6 +27,7 @@ export const SelectOption = ({
   const { spacing } = useTheme();
   const { getItemProps, isItemHighlighted, isItemSelected, isMulti } =
     useSelectContext();
+  const checkboxId = useId();
 
   const item: SelectOptionValue = { value, isDisabled };
 
@@ -49,6 +50,7 @@ export const SelectOption = ({
     >
       {isMulti ? (
         <SelectCheckboxStyled
+          id={checkboxId}
           isChecked={isSelected}
           isDisabled={isDisabled}
           size='small'
