@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.50
+
+### Patch Changes
+
+- fix: pass id to checkbox option
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.99
+
 ## 1.0.0-beta.49
 
 ### Patch Changes

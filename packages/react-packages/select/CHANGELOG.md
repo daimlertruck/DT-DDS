@@ -1,5 +1,11 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.99
+
+### Patch Changes
+
+- fix: pass id to checkbox option
+
 ## 1.0.0-beta.98
 
 ### Patch Changes
