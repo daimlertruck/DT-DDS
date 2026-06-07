@@ -15,7 +15,7 @@
     "@emotion/css": "^11.13.5",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "next": "16.0.10",
+    "next": "16.2.7",
     "react": "19.2.1",
     "react-dom": "19.2.1"
   },
@@ -24,7 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^10",
-    "eslint-config-next": "16.0.10",
+    "eslint-config-next": "16.2.7",
     "eslint-config-prettier": "^10.1.8",
     "prettier": "^3.7.4",
     "typescript": "^5"
