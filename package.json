@@ -43,6 +43,7 @@
   "resolutions": {
     "esbuild": "^0.25.10",
     "js-yaml": "4.1.1",
-    "@typescript-eslint/utils": "^8.34.0"
+    "@typescript-eslint/utils": "^8.34.0",
+    "tmp": "^0.2.7"
   }
 }
