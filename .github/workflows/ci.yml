@@ -1,4 +1,4 @@
-name: Continuous Integration & Version and Tag
+name: Continuous Integration
 
 env:
   GIT_FAKE_EMAIL: dt-dds@daimlertruck.com
@@ -12,6 +12,9 @@ on:
   pull_request:
     branches:
       - main
+
+permissions:
+  contents: read
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
@@ -116,7 +119,7 @@ jobs:
           if [ -f "$consolidated_file" ]; then
               lines=$(wc -l < "$consolidated_file")
               echo "Total lines in consolidated report: $lines"
-              
+
               # Show first few lines
               echo "First 10 lines:"
               head -10 "$consolidated_file"
@@ -133,90 +136,12 @@ jobs:
           name: sonar-coverage
           path: sonar-coverage/**
 
-  blackduck-scan:
-    runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
-    timeout-minutes: 30
-    needs: tests
-    env:
-      BLACKDUCK_URL: ${{ vars.BLACKDUCK_URL }}
-      BLACKDUCK_PROJECT: ${{ vars.BLACKDUCK_PROJECT_NAME }}
-      BLACKDUCK_TOKEN: ${{ secrets.BLACKDUCK_TOKEN }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup node and yarn
-        uses: './.github/actions/yarn-node-install'
-        with:
-          CACHE_FILE_NAME: 'global'
-
-      - name: Set up Java 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: temurin
-
-      - name: Extract version
-        id: pkg
-        run: |
-          echo "VERSION=$(jq -r .version packages/dt-dds-react/package.json)" >> $GITHUB_OUTPUT
-
-      - name: Versions Cleanup
-        run: |
-          # Get the bearer token to communicate with the API
-          echo "Fetching bearer token..."
-          bearer_token=$(
-            curl -s -X POST \
-              -H "Authorization: token $BLACKDUCK_TOKEN" \
-              $BLACKDUCK_URL/api/tokens/authenticate |
-              jq -er .bearerToken
-          )
-
-          # Get the project base URL
-          echo "Fetching base project URL for $BLACKDUCK_PROJECT..."
-          base_url=$(
-            curl -s -X GET \
-              -H "Authorization: Bearer ${bearer_token}" \
-              "$BLACKDUCK_URL/api/projects?q=name:$BLACKDUCK_PROJECT" |
-              jq -er ".items[0]._meta.href"
-          )
-
-          # List the versions and maybe delete the oldest one if needed
-          echo "Base project URL for $BLACKDUCK_PROJECT is ${base_url}, now listing versions..."
-          version_to_delete=$(
-            curl -s -X GET \
-              -H "Authorization: Bearer ${bearer_token}" \
-              "${base_url}/versions" |
-              jq -r '.items |= sort_by(.createdAt) | if .totalCount >= 10 then .items[0]._meta.href else "" end'
-          )
-
-          if [[ -z $version_to_delete ]]; then
-            echo "No version to delete, doing nothing."
-          else
-            echo "The limit of versions has been reached, going to delete version ${version_to_delete}."
-            curl -s -X DELETE \
-              -H "Authorization: Bearer ${bearer_token}" \
-              "${version_to_delete}"
-          fi
-
-      - name: Run Blackduck Scan
-        uses: blackduck-inc/black-duck-security-scan@v2
-        env:
-          DETECT_PROJECT_NAME: ${{ env.BLACKDUCK_PROJECT }}
-          DETECT_PROJECT_VERSION_NAME: ${{ steps.pkg.outputs.VERSION }}
-        with:
-          blackducksca_url: ${{ env.BLACKDUCK_URL }}
-          blackducksca_token: ${{ env.BLACKDUCK_TOKEN }}
-          blackducksca_scan_failure_severities: 'BLOCKER'
-          blackducksca_scan_full: ${{ github.ref == 'refs/heads/main' }}
-          blackducksca_prComment_enabled: false
-          detect_args: '--logging.level.detect=DEBUG --detect.blackduck.rapid.compare.mode=ALL --detect.project.version.phase=RELEASED  --detect.project.version.distribution=OPENSOURCE --detect.yarn.dependency.types.excluded=NON_PRODUCTION'
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
   sonarqube-scan:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    if: >-
+      !contains(github.event.head_commit.message, 'chore(release):') &&
+      (github.event_name == 'push' ||
+      github.event.pull_request.head.repo.full_name == github.repository)
     needs: tests
     steps:
       - name: Checkout repository
@@ -277,18 +202,18 @@ jobs:
             echo ""
             echo "Quality Gate Failed: $gate_status"
             echo "======================================"
-            
+
             echo "Quality Gate Conditions:"
             echo "$gate_response" | jq -r '.projectStatus.conditions[] | "  \(.metricKey): \(.status) (\(.actualValue)/\(.errorThreshold))"'
-            
+
             echo "Issues causing the failure:"
             echo "============================"
-            
+
             curl -s -u "${{ secrets.SONAR_TOKEN }}:" \
               "${{ secrets.SONAR_URL }}/api/issues/search?componentKeys=${{ secrets.SONAR_PROJECT_KEY }}&severities=BLOCKER,CRITICAL,MAJOR" \
               | jq -r '.issues[] | "\(.severity): \(.message) [\(.component):\(.line)]"' \
               | head -20
-            
+
             exit 1
           else
             echo "Quality Gate Passed!"
@@ -298,7 +223,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
-    needs: [blackduck-scan, sonarqube-scan]
+    needs: [sonarqube-scan]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -310,41 +235,3 @@ jobs:
 
       - name: Run Build
         run: yarn run turbo build --filter='./packages/*'
-
-  generate-version-tag:
-    needs: [check-fixups, lint, tests, blackduck-scan, sonarqube-scan, build]
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
-    steps:
-      - name: Generate CI_BOT Token
-        id: ci-bot-token
-        uses: actions/create-github-app-token@v2
-        with:
-          app-id: ${{ secrets.CI_BOT_ID }}
-          private-key: ${{ secrets.CI_BOT_PRIVATE_KEY }}
-
-      - name: Checkout branch
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref }}
-          fetch-depth: 0
-          token: ${{ steps.ci-bot-token.outputs.token }}
-
-      - name: Setup node and yarn
-        uses: './.github/actions/yarn-node-install'
-        with:
-          CACHE_FILE_NAME: 'global'
-
-      - name: Setup fake credentials
-        run: |
-          git config --global user.email ${{ env.GIT_FAKE_EMAIL }}
-          git config --global user.name ${{ env.GIT_FAKE_USER }}
-
-      - name: Run build for changeset plugin
-        run: yarn run turbo build --filter=changeset-conventional-commits
-
-      - name: Bump affected packages version and tag
-        run: |
-          yarn changesets:ci
-          git push origin ${{ github.ref }}
-          git push origin --tags
