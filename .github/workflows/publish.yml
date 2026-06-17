@@ -18,6 +18,8 @@ jobs:
   gather-changed-packages:
     if: ${{ contains(github.event.head_commit.message, 'chore(release):') || github.event_name == 'workflow_dispatch' }}
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     outputs:
       matrix: ${{ steps.filter-unpublished-packages.outputs.result }}
     steps:
@@ -108,6 +110,8 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     needs: [gather-changed-packages]
     strategy:
       matrix:
@@ -162,6 +166,9 @@ jobs:
 
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     needs: [publish]
     if: always() && needs.publish.result == 'success'
     steps:

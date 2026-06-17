@@ -1,0 +1,57 @@
+name: Version and Tag
+
+env:
+  GIT_FAKE_EMAIL: dt-dds@daimlertruck.com
+  GIT_FAKE_USER: dt-dds
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  generate-version-tag:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+    permissions:
+      contents: write
+    steps:
+      - name: Generate CI_BOT Token
+        id: ci-bot-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.CI_BOT_ID }}
+          private-key: ${{ secrets.CI_BOT_PRIVATE_KEY }}
+
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+          token: ${{ steps.ci-bot-token.outputs.token }}
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+        with:
+          CACHE_FILE_NAME: 'global'
+
+      - name: Setup fake credentials
+        run: |
+          git config --global user.email ${{ env.GIT_FAKE_EMAIL }}
+          git config --global user.name ${{ env.GIT_FAKE_USER }}
+
+      - name: Run build for changeset plugin
+        run: yarn run turbo build --filter=changeset-conventional-commits
+
+      - name: Bump affected packages version and tag
+        run: |
+          yarn changesets:ci
+          git push origin ${{ github.ref }}
+          git push origin --tags

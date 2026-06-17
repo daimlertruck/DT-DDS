@@ -1,0 +1,108 @@
+name: Security Scans
+
+env:
+  GIT_FAKE_EMAIL: dt-dds@daimlertruck.com
+  GIT_FAKE_USER: dt-dds
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  blackduck-scan:
+    runs-on: ubuntu-latest
+    if: >-
+      !contains(github.event.head_commit.message, 'chore(release):') &&
+      (github.event_name == 'push' ||
+      github.event.pull_request.head.repo.full_name == github.repository)
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+    env:
+      BLACKDUCK_URL: ${{ vars.BLACKDUCK_URL }}
+      BLACKDUCK_PROJECT: ${{ vars.BLACKDUCK_PROJECT_NAME }}
+      BLACKDUCK_TOKEN: ${{ secrets.BLACKDUCK_TOKEN }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+        with:
+          CACHE_FILE_NAME: 'global'
+
+      - name: Set up Java 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: temurin
+
+      - name: Extract version
+        id: pkg
+        run: |
+          echo "VERSION=$(jq -r .version packages/dt-dds-react/package.json)" >> $GITHUB_OUTPUT
+
+      - name: Versions Cleanup
+        run: |
+          # Get the bearer token to communicate with the API
+          echo "Fetching bearer token..."
+          bearer_token=$(
+            curl -s -X POST \
+              -H "Authorization: token $BLACKDUCK_TOKEN" \
+              $BLACKDUCK_URL/api/tokens/authenticate |
+              jq -er .bearerToken
+          )
+
+          # Get the project base URL
+          echo "Fetching base project URL for $BLACKDUCK_PROJECT..."
+          base_url=$(
+            curl -s -X GET \
+              -H "Authorization: Bearer ${bearer_token}" \
+              "$BLACKDUCK_URL/api/projects?q=name:$BLACKDUCK_PROJECT" |
+              jq -er ".items[0]._meta.href"
+          )
+
+          # List the versions and maybe delete the oldest one if needed
+          echo "Base project URL for $BLACKDUCK_PROJECT is ${base_url}, now listing versions..."
+          version_to_delete=$(
+            curl -s -X GET \
+              -H "Authorization: Bearer ${bearer_token}" \
+              "${base_url}/versions" |
+              jq -r '.items |= sort_by(.createdAt) | if .totalCount >= 10 then .items[0]._meta.href else "" end'
+          )
+
+          if [[ -z $version_to_delete ]]; then
+            echo "No version to delete, doing nothing."
+          else
+            echo "The limit of versions has been reached, going to delete version ${version_to_delete}."
+            curl -s -X DELETE \
+              -H "Authorization: Bearer ${bearer_token}" \
+              "${version_to_delete}"
+          fi
+
+      - name: Run Blackduck Scan
+        uses: blackduck-inc/black-duck-security-scan@v2
+        env:
+          DETECT_PROJECT_NAME: ${{ env.BLACKDUCK_PROJECT }}
+          DETECT_PROJECT_VERSION_NAME: ${{ steps.pkg.outputs.VERSION }}
+        with:
+          blackducksca_url: ${{ env.BLACKDUCK_URL }}
+          blackducksca_token: ${{ env.BLACKDUCK_TOKEN }}
+          blackducksca_scan_failure_severities: 'BLOCKER'
+          blackducksca_scan_full: ${{ github.ref == 'refs/heads/main' }}
+          blackducksca_prComment_enabled: false
+          detect_args: '--logging.level.detect=DEBUG --detect.blackduck.rapid.compare.mode=ALL --detect.project.version.phase=RELEASED  --detect.project.version.distribution=OPENSOURCE --detect.yarn.dependency.types.excluded=NON_PRODUCTION'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
