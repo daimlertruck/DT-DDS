@@ -1,5 +1,14 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.51
+
+### Patch Changes
+
+- docs: fixed multiple typos in markdown files.
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.71
+  - @dt-dds/react-select@1.0.0-beta.100
+
 ## 1.0.0-beta.50
 
 ### Patch Changes

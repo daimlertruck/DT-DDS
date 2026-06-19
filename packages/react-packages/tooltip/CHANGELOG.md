@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.71
+
+### Patch Changes
+
+- docs: fixed multiple typos in markdown files.
+
 ## 1.0.0-beta.70
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.108
+
+### Patch Changes
+
+- docs: fixed multiple typos in markdown files.
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.123
+
 ## 1.0.0-beta.107
 
 ### Patch Changes

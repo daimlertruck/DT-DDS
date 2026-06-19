@@ -1,5 +1,27 @@
 # @dt-ui/react
 
+## 1.0.0-beta.313
+
+### Patch Changes
+
+- docs: fixed multiple typos in markdown files.
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-date-picker@1.0.0-beta.108
+  - @dt-dds/react-tooltip@1.0.0-beta.71
+  - @dt-dds/react-avatar@1.0.0-beta.75
+  - @dt-dds/react-breadcrumb@1.0.0-beta.75
+  - @dt-dds/react-form@1.0.0-beta.57
+  - @dt-dds/react-pagination@1.0.0-beta.51
+  - @dt-dds/react-segmented-control@1.0.0-beta.53
+  - @dt-dds/react-select@1.0.0-beta.100
+  - @dt-dds/react-sidebar@1.0.0-beta.9
+  - @dt-dds/react-stepper@1.0.0-beta.58
+  - @dt-dds/react-tag@1.0.0-beta.67
+  - @dt-dds/react-text-area@1.0.0-beta.94
+  - @dt-dds/react-text-field@1.0.0-beta.123
+  - @dt-dds/react-app-header@1.0.0-beta.57
+
 ## 1.0.0-beta.312
 
 ### Patch Changes

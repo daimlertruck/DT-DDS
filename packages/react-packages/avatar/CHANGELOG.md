@@ -1,5 +1,13 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.75
+
+### Patch Changes
+
+- docs: fixed multiple typos in markdown files.
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.71
+
 ## 1.0.0-beta.74
 
 ### Patch Changes
