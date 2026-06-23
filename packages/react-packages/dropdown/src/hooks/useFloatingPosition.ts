@@ -62,6 +62,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     visibility: 'hidden',
     position: 'fixed',
   });
+  const [isAnchorInViewport, setIsAnchorInViewport] = useState(true);
 
   useLayoutEffect(() => {
     if (!open || !anchorEl?.current) {
@@ -70,6 +71,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
         visibility: 'hidden',
         position: 'fixed',
       });
+      setIsAnchorInViewport(false);
       return;
     }
 
@@ -82,6 +84,23 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
       const anchor = anchorElement.getBoundingClientRect();
       const menuRect = menuElement?.getBoundingClientRect();
+
+      const isOutOfViewport =
+        anchor.bottom < 0 ||
+        anchor.right < 0 ||
+        anchor.top >= vh ||
+        anchor.left >= vw;
+
+      if (isOutOfViewport) {
+        setIsAnchorInViewport(false);
+        setStyle({
+          visibility: 'hidden',
+          position: 'fixed',
+        });
+        return;
+      }
+
+      setIsAnchorInViewport(true);
 
       const menuWidth = matchWidth
         ? anchor.width
@@ -126,18 +145,23 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
     ro.observe(anchorElement);
 
-    if (anchorElement) {
-      ro.observe(anchorElement);
+    if (menuElement) {
+      ro.observe(menuElement);
     }
 
-    const opts: AddEventListenerOptions = { passive: true };
-    window.addEventListener('scroll', updatePosition, opts);
-    window.addEventListener('resize', updatePosition, opts);
+    // Capture allows updates on nested scroll containers, not only window.
+    const scrollOpts: AddEventListenerOptions = {
+      passive: true,
+      capture: true,
+    };
+    const resizeOpts: AddEventListenerOptions = { passive: true };
+    window.addEventListener('scroll', updatePosition, scrollOpts);
+    window.addEventListener('resize', updatePosition, resizeOpts);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener('scroll', updatePosition, opts);
-      window.removeEventListener('resize', updatePosition, opts);
+      window.removeEventListener('scroll', updatePosition, scrollOpts);
+      window.removeEventListener('resize', updatePosition, resizeOpts);
     };
   }, [
     menuRef,
@@ -150,5 +174,5 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     minViewportPadding,
   ]);
 
-  return { style };
+  return { style, isAnchorInViewport };
 }

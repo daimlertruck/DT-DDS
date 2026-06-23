@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { ComponentProps, useRef } from 'react';
 
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
@@ -82,6 +82,12 @@ const Menu = ({
   );
 };
 
+const defaultMenuProps = (): ComponentProps<typeof Menu> => ({
+  anchorRect: makeRect({ left: 10, top: 10, width: 100, height: 40 }),
+  menuRect: makeRect({ left: 0, top: 0, width: 120, height: 60 }),
+  open: true,
+});
+
 describe('useFloatingPosition', () => {
   beforeEach(() => {
     Object.defineProperty(window, 'innerWidth', {
@@ -92,6 +98,7 @@ describe('useFloatingPosition', () => {
       value: 800,
       configurable: true,
     });
+    jest.restoreAllMocks();
   });
 
   test('should return hidden and fixed style if closed', () => {
@@ -195,5 +202,48 @@ describe('useFloatingPosition', () => {
 
     // left = 10 - 5 - 100 = -95 -> clamp to 16; top 5, below padding -> clamp to 16
     expect(menu).toHaveStyle({ left: '16px', top: '16px' });
+  });
+
+  test('subscribes to window scroll in capture phase and removes it on unmount', () => {
+    const addSpy = jest.spyOn(window, 'addEventListener');
+    const removeSpy = jest.spyOn(window, 'removeEventListener');
+
+    const { unmount } = render(<Menu {...defaultMenuProps()} />);
+
+    expect(addSpy).toHaveBeenCalledWith('scroll', expect.any(Function), {
+      passive: true,
+      capture: true,
+    });
+
+    unmount();
+
+    expect(removeSpy).toHaveBeenCalledWith('scroll', expect.any(Function), {
+      passive: true,
+      capture: true,
+    });
+  });
+
+  test('observes both anchor and menu elements with ResizeObserver', () => {
+    const originalResizeObserver = globalThis.ResizeObserver;
+    const observeMock = jest.fn();
+
+    const resizeObserverMock = jest.fn().mockImplementation(() => ({
+      observe: observeMock,
+      disconnect: jest.fn(),
+    }));
+
+    Object.assign(globalThis, { ResizeObserver: resizeObserverMock });
+
+    try {
+      render(<Menu {...defaultMenuProps()} />);
+
+      expect(observeMock).toHaveBeenCalledTimes(2);
+      expect(observeMock).toHaveBeenCalledWith(screen.getByTestId('anchor'));
+      expect(observeMock).toHaveBeenCalledWith(screen.getByTestId(menuTestId));
+    } finally {
+      Object.assign(globalThis, {
+        ResizeObserver: originalResizeObserver,
+      });
+    }
   });
 });

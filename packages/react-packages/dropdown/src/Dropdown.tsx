@@ -58,17 +58,14 @@ export const Dropdown = Object.assign(
         [forwardedRef]
       );
 
-      const { style: floatingStyle } = useFloatingPosition<HTMLElement>(
-        anchorRef,
-        isOpen,
-        {
+      const { style: floatingStyle, isAnchorInViewport } =
+        useFloatingPosition<HTMLElement>(anchorRef, isOpen, {
           matchWidth,
           offsetX,
           offsetY,
           placement,
           menuRef: localMenuRef,
-        }
-      );
+        });
 
       useClickOutside({
         refs: [localMenuRef, anchorRef],
@@ -95,7 +92,7 @@ export const Dropdown = Object.assign(
         <Portal isOpen>
           {isFocusable ? (
             <FocusTrap
-              active={isOpen}
+              active={isOpen && isAnchorInViewport}
               focusTrapOptions={{
                 initialFocus: () => localMenuRef?.current ?? false,
                 fallbackFocus: () => document.body,
