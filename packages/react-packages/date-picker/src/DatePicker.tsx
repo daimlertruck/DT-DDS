@@ -126,7 +126,7 @@ export const DatePicker = ({
   const handleChangeSingleMode = useCallback(() => {
     const trimmedValue = value.trim();
 
-    if (!isDateMatchingFormat(trimmedValue, dateFormat)) {
+    if (!isDateMatchingFormat(trimmedValue, dateFormat, locale)) {
       setMessage(INVALID_FORMAT_MESSAGE);
       setIsDateInvalid(true);
       onError?.(INVALID_FORMAT_MESSAGE);
@@ -184,8 +184,16 @@ export const DatePicker = ({
     const trimmedTo = inputTo.trim();
     const trimmedFrom = inputFrom.trim();
 
-    const isFromNotMatching = !isDateMatchingFormat(trimmedFrom, dateFormat);
-    const isToNotMatching = !isDateMatchingFormat(trimmedTo, dateFormat);
+    const isFromNotMatching = !isDateMatchingFormat(
+      trimmedFrom,
+      dateFormat,
+      locale
+    );
+    const isToNotMatching = !isDateMatchingFormat(
+      trimmedTo,
+      dateFormat,
+      locale
+    );
 
     if (isFromNotMatching || isToNotMatching) {
       setMessage(INVALID_FORMAT_MESSAGE);

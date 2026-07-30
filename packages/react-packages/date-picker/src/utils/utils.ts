@@ -54,6 +54,15 @@ export const validateDateInRange = ({
   return { valid: true };
 };
 
-export const isDateMatchingFormat = (value: string, dateFormat: string) => {
-  return isMatch(value, dateFormat) && value.length === dateFormat.length;
+export const isDateMatchingFormat = (
+  value: string,
+  dateFormat: string,
+  locale: Locale
+) => {
+  const sampleFormatted = format(new Date(2000, 0, 15), dateFormat, { locale });
+
+  return (
+    isMatch(value, dateFormat, { locale }) &&
+    value.length === sampleFormatted.length
+  );
 };
