@@ -1,5 +1,11 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.109
+
+### Patch Changes
+
+- fix: change date formating check
+
 ## 1.0.0-beta.108
 
 ### Patch Changes

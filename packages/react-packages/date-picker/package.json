@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-date-picker",
-  "version": "1.0.0-beta.108",
+  "version": "1.0.0-beta.109",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"

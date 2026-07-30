@@ -1,5 +1,15 @@
 # @dt-ui/react
 
+## 1.0.0-beta.314
+
+### Patch Changes
+
+- fix: change date formating check
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-date-picker@1.0.0-beta.109
+  - @dt-dds/react-app-header@1.0.0-beta.58
+
 ## 1.0.0-beta.313
 
 ### Patch Changes
