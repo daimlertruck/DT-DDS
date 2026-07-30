@@ -2,8 +2,9 @@ import { enUS } from 'date-fns/locale';
 
 import { isDateMatchingFormat, validateDateInRange } from './utils';
 
+const locale = enUS;
+
 describe('validateDateInRange', () => {
-  const locale = enUS;
   it('should return valid when is within min and max range', () => {
     const result = validateDateInRange({
       date: new Date('2024-01-10'),
@@ -70,7 +71,7 @@ describe('isDateMatchingFormat', () => {
   ])(
     'should return %s for date "%s" with format "%s"',
     (expected, date, format) => {
-      expect(isDateMatchingFormat(date, format)).toBe(expected);
+      expect(isDateMatchingFormat(date, format, locale)).toBe(expected);
     }
   );
 });
