@@ -1,11 +1,68 @@
-# {{ componentName }} Package
+# {{ componentName }}
 
-Component package description
+> One-sentence description of what this component does and why it exists in the design system.
 
-## {{ componentName }} Usage
+## Overview
 
-```jsx
-import { {{ componentName }} } from '@dt-dds/react-{{packageName}}';
+A brief 2-3 sentence description of the component, its primary purpose, and the problem it solves.
+
+## Figma Reference
+
+[Link to Figma designs]
+
+## Anatomy
+
+```
+{{ componentName }}
+├── SubElement1
+├── SubElement2
+│   └── NestedElement
+└── SubElement3
+```
+
+## States & Variants
+
+| State / Variant | Description |
+| --------------- | ----------- |
+| `default`       |             |
+| `hover`         |             |
+| `active`        |             |
+| `disabled`      |             |
+| `error`         |             |
+
+## API
+
+### Props
+
+| Prop       | Type        | Default | Required | Description |
+| ---------- | ----------- | ------- | -------- | ----------- |
+| `children` | `ReactNode` | —       | No       |             |
+
+### Events
+
+| Event     | Signature    | Description |
+| --------- | ------------ | ----------- |
+| `onClick` | `() => void` |             |
+
+### Methods
+
+_Document imperative methods exposed via `ref`, or remove this section if none._
+
+| Method | Signature | Description |
+| ------ | --------- | ----------- |
+
+### Types
+
+```tsx
+// Export any relevant TypeScript types / interfaces here
+```
+
+## Usage
+
+### Basic
+
+```tsx
+import { {{componentName}} } from '@dt-dds/react-{{packageName}}';
 
 export const App = () => {
   return (
@@ -14,12 +71,59 @@ export const App = () => {
 };
 ```
 
-## Properties
+### Integration notes
 
-| Property     | Type                  | Default | Description                           |
-| ------------ | --------------------- | ------- | ------------------------------------- |
-|              |                       | -       |                                       |
+> How the component fits into a larger context — things like: which layout wrapper it expects,
+> whether it needs a provider, known incompatibilities with other components, or caveats when using
+> it inside specific containers (e.g. "must be a direct child of X", "requires ThemeProvider in the tree").
 
+- ...
+
+## Behavior
+
+### Interaction patterns
+
+- **Mouse / Touch:** How the component responds to pointer interactions
+- **Keyboard:** Keyboard navigation and shortcuts (Tab, Enter, Escape, etc.)
+- **Focus management:** How focus is handled within and around the component
+
+### State transitions
+
+Describe how the component moves between states (e.g. idle → loading → success → error).
+
+### Responsive behavior
+
+How the component adapts to different screen sizes and viewports.
+
+## Accessibility
+
+### Keyboard navigation
+
+| Key          | Action |
+| ------------ | ------ |
+| `Tab`        |        |
+| `Enter`      |        |
+| `Space`      |        |
+| `Arrow keys` |        |
+| `Escape`     |        |
+
+### Screen reader
+
+Describe how screen readers announce and interact with the component.
+
+## Dependencies
+
+### Depends on
+
+| Component / Token | How it's used |
+| ----------------- | ------------- |
+
+### Related components
+
+| Component | Relationship |
+| --------- | ------------ |
+
+---
 
 ## Stack
 
