@@ -41,7 +41,7 @@
     "node": ">=22"
   },
   "resolutions": {
-    "esbuild": "^0.25.10",
+    "esbuild": "0.28.2",
     "js-yaml": "4.1.1",
     "@typescript-eslint/utils": "^8.34.0",
     "tmp": "^0.2.7"
