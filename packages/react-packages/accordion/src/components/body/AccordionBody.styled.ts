@@ -1,19 +1,19 @@
 import styled from '@emotion/styled';
 
 interface BodyStyledProps {
-  isOpenState: boolean;
+  isOpen: boolean;
 }
 
 export const BodyStyled = styled.div<BodyStyledProps>`
-  ${({ theme, isOpenState }) => `
+  ${({ theme, isOpen }) => `
     ${theme.fontStyles.bodyLgRegular};
     display: grid;
-    grid-template-rows: ${isOpenState ? '1fr' : '0fr'};
+    grid-template-rows: ${isOpen ? '1fr' : '0fr'};
     transition: grid-template-rows 0.3s ease-in-out, padding 0.3s ease-in-out;
     color: ${theme.palette.content.dark};
     
     padding: 0 ${theme.spacing.spacing_50} ${
-    isOpenState ? theme.spacing.spacing_50 : 0
+    isOpen ? theme.spacing.spacing_50 : 0
   };
       
     & > div {

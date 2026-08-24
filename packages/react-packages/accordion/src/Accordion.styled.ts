@@ -1,18 +1,26 @@
 import styled from '@emotion/styled';
 
+import { CustomTheme } from '@dt-dds/themes';
+
+import { Background } from './Accordion';
+
 interface AccordionStyledProps {
   isDisabled: boolean;
-  hasBackground?: boolean;
+  background: Background;
   hasBorderBottom?: boolean;
 }
 
+const backgroundColorMap: Record<Background, (theme: CustomTheme) => string> = {
+  transparent: () => 'transparent',
+  light: (theme) => theme.palette.surface.light,
+  contrast: (theme) => theme.palette.surface.contrast,
+};
+
 export const AccordionStyled = styled.div<AccordionStyledProps>`
-  ${({ theme, hasBackground, isDisabled, hasBorderBottom }) => `
+  ${({ theme, background, isDisabled, hasBorderBottom }) => `
     position: relative;
     width: 100%;
-    background-color: ${
-      hasBackground ? theme.palette.surface.light : 'transparent'
-    };
+    background-color: ${backgroundColorMap[background](theme)};
     border-bottom: ${
       hasBorderBottom ? `1px solid ${theme.palette.border.default}` : 'none'
     };
@@ -20,7 +28,6 @@ export const AccordionStyled = styled.div<AccordionStyledProps>`
     ${
       isDisabled
         ? `
-          background-color: ${theme.palette.surface.light};
           color: ${theme.palette.content.light};
 
           * {

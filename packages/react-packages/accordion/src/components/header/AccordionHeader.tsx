@@ -10,14 +10,14 @@ import { HeaderStyled } from './AccordionHeader.styled';
 export interface AccordionHeaderProps extends BaseProps {
   handleHeaderClick: () => void;
   handleHeaderKeyPress: (e: KeyboardEvent<HTMLDivElement>) => void;
-  isOpenState: boolean;
+  isOpen: boolean;
   isDisabled: boolean;
 }
 
 export const AccordionHeader = ({
   handleHeaderClick,
   handleHeaderKeyPress,
-  isOpenState,
+  isOpen,
   isDisabled,
   children,
   dataTestId,
@@ -28,6 +28,7 @@ export const AccordionHeader = ({
   return (
     <HeaderStyled
       aria-disabled={isDisabled}
+      aria-expanded={isOpen}
       data-testid={dataTestId ?? 'accordion-header'}
       onClick={handleHeaderClick}
       onKeyDown={handleHeaderKeyPress}
@@ -37,7 +38,7 @@ export const AccordionHeader = ({
     >
       {children}
       <Icon
-        code={isOpenState ? 'unfold_less' : 'unfold_more'}
+        code={isOpen ? 'unfold_less' : 'unfold_more'}
         color={theme.palette.content.dark}
         size='large'
       />
