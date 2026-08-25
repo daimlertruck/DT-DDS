@@ -3,8 +3,11 @@ import styled from '@emotion/styled';
 
 import { DRAWER_Z_INDEX } from '@dt-dds/react-core';
 
+import { DrawerPosition } from './constants';
+
 interface DrawerTransientProps {
   $isVisible: boolean;
+  $position?: DrawerPosition;
 }
 
 export const GlobalStyle = css`
@@ -38,18 +41,25 @@ export const DrawerStyled = styled.div<DrawerTransientProps>`
   height: 100%;
   position: absolute;
   top: 0;
-  right: 0;
 
-  ${({ theme, $isVisible }) => `
-    padding: ${theme.spacing.spacing_70} 0;
-    background-color: ${theme.palette.surface.contrast};
-    transform: ${$isVisible ? 'translateX(0)' : 'translateX(100%)'};
-    transition: transform ${theme.animations.emphasizedDecelerate.duration}
-      ${theme.animations.emphasizedDecelerate.timingFunction};
+  ${({ theme, $isVisible, $position }) => {
+    const isPositionRight = $position === DrawerPosition.Right;
+    const hiddenTranslateX = isPositionRight ? '100%' : '-100%';
 
-    @media only screen and (min-width: ${theme.breakpoints.mq3}px) {
-      width: 500px;
-      border-left: 1px solid ${theme.palette.border.default};
-    }
-  `}
+    return `
+      ${isPositionRight ? 'right: 0;' : 'left: 0;'}
+      padding: ${theme.spacing.spacing_70} 0;
+      background-color: ${theme.palette.surface.contrast};
+      transform: translateX(${$isVisible ? '0' : hiddenTranslateX});
+      transition: transform ${theme.animations.emphasizedDecelerate.duration}
+        ${theme.animations.emphasizedDecelerate.timingFunction};
+
+      @media only screen and (min-width: ${theme.breakpoints.mq3}px) {
+        width: 500px;
+        ${isPositionRight ? 'border-left' : 'border-right'}: 1px solid ${
+      theme.palette.border.default
+    };
+      }
+    `;
+  }}
 `;

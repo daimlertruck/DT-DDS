@@ -5,6 +5,7 @@ import { Global } from '@emotion/react';
 import { BaseProps } from '@dt-dds/react-core';
 
 import { DrawerBody, DrawerHeader, DrawerTitle } from './components';
+import { DrawerPosition } from './constants';
 import { DrawerContextProvider } from './context/DrawerProvider';
 import {
   DrawerStyled,
@@ -16,11 +17,13 @@ import {
 export interface DrawerProps extends BaseProps {
   isVisible: boolean;
   setIsVisible: React.Dispatch<React.SetStateAction<boolean>>;
+  position?: DrawerPosition;
 }
 
 const Drawer = ({
   isVisible,
   setIsVisible,
+  position = DrawerPosition.Right,
   children,
   dataTestId,
 }: DrawerProps) => {
@@ -67,6 +70,7 @@ const Drawer = ({
         <DrawerStyled
           data-testid={dataTestId ?? 'drawer-content-container'}
           $isVisible={isTransformed}
+          $position={position}
           onTransitionEnd={handleTransitionEnd}
         >
           {children}

@@ -5,6 +5,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { Code, codes } from '@dt-dds/icons';
 import { Portal } from '@dt-dds/react-core';
 
+import { DrawerPosition } from './constants';
 import { DrawerProps } from './Drawer';
 
 import { Drawer } from '.';
@@ -52,6 +53,7 @@ export const Default = {
     body: 'This is the body of the drawer.',
     title: 'Drawer title',
     icon: null,
+    position: 'right',
   },
 };
 const meta: Meta<DrawerStoryProps> = {
@@ -60,6 +62,10 @@ const meta: Meta<DrawerStoryProps> = {
   argTypes: {
     icon: {
       options: Object.keys(codes),
+      control: { type: 'select' },
+    },
+    position: {
+      options: Object.values(DrawerPosition),
       control: { type: 'select' },
     },
   },

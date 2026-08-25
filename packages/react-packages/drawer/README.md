@@ -38,12 +38,13 @@ export const App = () => {
 
 ### Drawer
 
-| Property       | Type        | Default | Description                                                                  |
-| -------------- | ----------- | ------- | ---------------------------------------------------------------------------- |
-| `isVisible`    | `boolean`   | false   | State function boolean value to define if the drawer is being shown or not   |
-| `setIsVisible` | `function`  | -       | State function set to handle the drawer open and close via its boolean value |
-| `children`     | `ReactNode` | -       | Child component to be rendered on the drawer body                            |
-| `dataTestId`   | `string`    | drawer  | Drawer test identifier                                                       |
+| Property       | Type             | Default | Description                                                                  |
+| -------------- | ---------------- | ------- | ---------------------------------------------------------------------------- |
+| `isVisible`    | `boolean`        | false   | State function boolean value to define if the drawer is being shown or not   |
+| `setIsVisible` | `function`       | -       | State function set to handle the drawer open and close via its boolean value |
+| `position`     | `DrawerPosition` | right   | Property that sets the opening position of the Drawer                        |
+| `children`     | `ReactNode`      | -       | Child component to be rendered on the drawer body                            |
+| `dataTestId`   | `string`         | drawer  | Drawer test identifier                                                       |
 
 ### Drawer.Title
 
