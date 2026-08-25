@@ -1,5 +1,11 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.71
+
+### Minor Changes
+
+- feat: implement Drawer position
+
 ## 1.0.0-beta.70
 
 ### Minor Changes

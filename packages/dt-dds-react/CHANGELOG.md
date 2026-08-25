@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.319
+
+### Minor Changes
+
+- feat: implement Drawer position
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-drawer@1.0.0-beta.71
+  - @dt-dds/react-app-header@1.0.0-beta.63
+
 ## 1.0.0-beta.318
 
 ### Patch Changes
