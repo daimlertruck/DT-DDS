@@ -1,5 +1,11 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.64
+
+### Minor Changes
+
+- feat: add controlled version of accordion
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

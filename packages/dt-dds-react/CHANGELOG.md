@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.317
+
+### Minor Changes
+
+- feat: add controlled version of accordion
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-accordion@1.0.0-beta.64
+  - @dt-dds/react-app-header@1.0.0-beta.61
+
 ## 1.0.0-beta.316
 
 ### Patch Changes
