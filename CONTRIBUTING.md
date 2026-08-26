@@ -45,7 +45,6 @@
       - [Workflow](#workflow)
       - [Releasing](#releasing)
 
-
 # Prerequisites
 
 - Node.js >= v22
@@ -142,14 +141,14 @@ To propose a new feature:
 
 Our [project board](https://github.com/orgs/daimlertruck/projects/1) acts as the single source of truth for the status of all work items.
 
-| **Column**            | **Description**                                                                                                                                                                                                                                                                                                                                                                    | **Owner**                      |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| **No Status (Inbox)** | **The Landing Zone.** All new issues arrive here automatically. They may be labelled as bug, feature, or question based on the template used.                                                                                                                                                                                                                                      | **Maintainers & Contributors** |
-| **Backlog**           | **To Be Refined.** Validated issues that need prioritization or scoping. Work does not start here.                                                                                                                                                                                                                                                                                 | **Maintainers Only**           |
-| **Ready**             | **Ready to be picked up.** Issues with clear requirements and approved scope. Contributors can assign themselves to these tasks.                                                                                                                                                                                                                                                   | **Maintainers & Contributors** |
-| **In Progress**       | **Active Work.** Tasks currently being worked on.                                                                                                                                                                                                                                                                                                                                  | **Assignee**                   |
-| **In Review**         | **PR Open.** Automatically moved here when a Pull Request is linked to the issue.<br><br>⭐️ Good practices:<br>- Target review time is 2 - 3 business days<br>- Required approvals: 2 developers, at least 1 of them is a maintainer<br>- Check the PR list and contribute with your review before taking a new task to work<br>- Contributors reviews are welcome and encouraged | **Reviewers**                  |
-| **Done**              | **Shipped.** Automatically moved here when the PR is merged.                                                                                                                                                                                                                                                                                                                       | **System**                     |
+| **Column**      | **Description**                                                                                                                                                                                                                                                                                                                                                                    | **Owner**                      |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| **Triage**      | **The Landing Zone.** All new issues arrive here automatically. They may be labelled as bug, feature, or question based on the template used.                                                                                                                                                                                                                                      | **Maintainers & Contributors** |
+| **Backlog**     | **To Be Refined.** Validated issues that need prioritization or scoping. Work does not start here.                                                                                                                                                                                                                                                                                 | **Maintainers Only**           |
+| **Ready**       | **Ready to be picked up.** Issues with clear requirements and approved scope. Contributors can assign themselves to these tasks.                                                                                                                                                                                                                                                   | **Maintainers & Contributors** |
+| **In Progress** | **Active Work.** Tasks currently being worked on.                                                                                                                                                                                                                                                                                                                                  | **Assignee**                   |
+| **In Review**   | **PR Open.** Automatically moved here when a Pull Request is linked to the issue.<br><br>⭐️ Good practices:<br>- Target review time is 2 - 3 business days<br>- Required approvals: 2 developers, at least 1 of them is a maintainer<br>- Check the PR list and contribute with your review before taking a new task to work<br>- Contributors reviews are welcome and encouraged | **Reviewers**                  |
+| **Done**        | **Shipped.** Automatically moved here when the PR is merged.                                                                                                                                                                                                                                                                                                                       | **System**                     |
 
 ## Triage & Refinement process
 
@@ -199,14 +198,14 @@ To ensure visibility for both Maintainers (who use the Board) and Contributors (
 
 Every column on the Board corresponds to a specific status label on the issue.
 
-| **Board Column**      | **Issue Label**        | **Description**                                                                              | **Who Acts?**              |
-| --------------------- | ---------------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
-| **No Status (Inbox)** | status: triage 🟤      | **The Landing Zone.** Needs categorization to be done manually                               | Maintainers                |
-| **Backlog**           | status: backlog 🟠     | **To Be Refined.** Validated issues waiting for prioritization and/or clear scope.           | Maintainers                |
-| **Ready**             | status: ready 🟢       | **Ready to be picked up.** Issues with clear requirements and approved scope. Ready for dev. | Contributors & Maintainers |
-| **In Progress**       | status: in progress 🔵 | **Active Work.** Someone is currently working on this.                                       | Assignee                   |
-| **In Review**         | status: in review 🟣   | **PR Open.** A Pull Request is linked and under review.                                      | Reviewers                  |
-| **Done**              | (No status label)      | **Shipped.** The issue is closed.                                                            | System                     |
+| **Board Column** | **Issue Label**        | **Description**                                                                              | **Who Acts?**              |
+| ---------------- | ---------------------- | -------------------------------------------------------------------------------------------- | -------------------------- |
+| **Triage**       | status: triage 🟤      | **The Landing Zone.** Needs categorization to be done manually                               | Maintainers                |
+| **Backlog**      | status: backlog 🟠     | **To Be Refined.** Validated issues waiting for prioritization and/or clear scope.           | Maintainers                |
+| **Ready**        | status: ready 🟢       | **Ready to be picked up.** Issues with clear requirements and approved scope. Ready for dev. | Contributors & Maintainers |
+| **In Progress**  | status: in progress 🔵 | **Active Work.** Someone is currently working on this.                                       | Assignee                   |
+| **In Review**    | status: in review 🟣   | **PR Open.** A Pull Request is linked and under review.                                      | Reviewers                  |
+| **Done**         | (No status label)      | **Shipped.** The issue is closed.                                                            | System                     |
 
 ### Labels Categorization
 
