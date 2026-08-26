@@ -56,7 +56,7 @@ To ensure high quality and clarity, every issue goes through a strict triage pro
 
 ### Phase 1: Initial Triage
 
-**Location:** _No Status_
+**Location:** _Triage_
 
 - **Questions:** If an issue is a `question`, Maintainers (or community members) answer it directly in the thread and close the issue. It does **not** continue in the board flow.
 - **Invalid Bugs:** If a bug is actually a user error or a misunderstanding provide feedback and close the issue.
