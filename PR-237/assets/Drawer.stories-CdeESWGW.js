@@ -1,0 +1,8 @@
+var D=Object.defineProperty;var i=(o,s)=>D(o,"name",{value:s,configurable:!0});import{j as r}from"./jsx-runtime-Cgz2XvFB.js";import{r as x}from"./index-CwbBKW39.js";import{c as b}from"./codes-CmbLmPPF.js";import"./typography-B3nKKPHm.js";import"./index-D-7FPK0U.js";import{P as j}from"./z-index-BPuITISp.js";import{D as t,a as f}from"./Drawer-CTxNCURp.js";import"./emotion-react.browser.esm-BHtS0gci.js";import"./emotion-styled.browser.esm-DNXn-wKZ.js";import"./index-6Tx4pmSd.js";import"./iframe-iwlaSXkM.js";import"./index-DLLwJ4dj.js";import"./index-DjK96f-n.js";import"./Icon-Cizr_oyr.js";import"./Typography-DXnuNw4S.js";import"./IconButton-DzFaQPvx.js";const w=i(({body:o,title:s,icon:m,...d})=>{const[a,n]=x.useState(!1),h=i(()=>{n(u=>!u)},"toggleDrawer");return r.jsxs(r.Fragment,{children:[r.jsx("button",{onClick:h,type:"button",children:"Open Drawer"}),r.jsx(j,{isOpen:a,children:r.jsxs(t,{...d,isVisible:a,setIsVisible:n,children:[r.jsx(t.Header,{children:r.jsx(t.Title,{icon:m,title:s})}),r.jsx(t.Body,{children:r.jsx("div",{children:o})})]})})]})},"Template"),e={args:{body:"This is the body of the drawer.",title:"Drawer title",icon:null,position:"right"}},q={title:"Data Display/Drawer",component:t,argTypes:{icon:{options:Object.keys(b),control:{type:"select"}},position:{options:Object.values(f),control:{type:"select"}}},render:w};var p,l,c;e.parameters={...e.parameters,docs:{...(p=e.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    body: 'This is the body of the drawer.',
+    title: 'Drawer title',
+    icon: null,
+    position: 'right'
+  }
+}`,...(c=(l=e.parameters)==null?void 0:l.docs)==null?void 0:c.source}}};const z=["Default"];export{e as Default,z as __namedExportsOrder,q as default};
