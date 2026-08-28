@@ -5,6 +5,20 @@ import { TextField } from '@dt-dds/react-text-field';
 
 import { Form } from './Form';
 
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query: string) => ({
+    matches: true,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
 describe('<Form /> component', () => {
   const ProvidedForm = withProviders(Form);
 

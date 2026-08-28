@@ -18,7 +18,15 @@ export const TooltipContainer = ({
 
   let hideTooltipTimeout: ReturnType<typeof setTimeout>;
 
+  const hasHover = window.matchMedia(
+    '(hover: hover) and (pointer: fine)'
+  ).matches;
+
   const showTooltip = (e: MouseEvent<HTMLDivElement>) => {
+    if (!hasHover) {
+      return;
+    }
+
     clearTimeout(hideTooltipTimeout);
     const { top, left, height, width } =
       e.currentTarget.getBoundingClientRect();
@@ -28,6 +36,10 @@ export const TooltipContainer = ({
   };
 
   const hideTooltip = () => {
+    if (!hasHover) {
+      return;
+    }
+
     // eslint-disable-next-line react-hooks/immutability
     hideTooltipTimeout = setTimeout(() => {
       setIsVisible(false);
