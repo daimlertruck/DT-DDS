@@ -1,5 +1,12 @@
 # @dt-ui/react
 
+## 1.0.0-beta.327
+
+### Patch Changes
+
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-app-header@1.0.0-beta.71
+
 ## 1.0.0-beta.326
 
 ### Patch Changes
