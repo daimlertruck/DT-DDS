@@ -41,7 +41,7 @@
     "node": ">=22"
   },
   "resolutions": {
-    "js-yaml": "4.1.1",
+    "js-yaml": "4.3.0",
     "@typescript-eslint/utils": "^8.34.0",
     "tmp": "^0.2.7",
     "@dt-dds/docs/vite/esbuild": "0.28.2",
