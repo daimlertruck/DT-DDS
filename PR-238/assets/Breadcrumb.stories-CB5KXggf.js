@@ -1,5 +1,0 @@
-var n=Object.defineProperty;var o=(s,a)=>n(s,"name",{value:a,configurable:!0});import{t as m}from"./src-Cgsrikn0.js";import{t as p}from"./jsx-runtime-Br4tQxt1.js";import"./icon-BVKwuEsa.js";import{t}from"./Breadcrumb-158-gBp3.js";var r=p(),i=[{name:"Name 1",showIcon:!0},{name:"Second page has a long text to describe its path"},{name:"Name 3"},{name:"Last page has a long text to describe its path"}],x={title:"Data Display/Breadcrumb",component:t,render:o(({separator:s})=>(0,r.jsx)(t,{separator:s,children:i.map(a=>(0,r.jsxs)(t.Item,{children:[a.showIcon?(0,r.jsx)(m,{code:"view_agenda",color:"primary"}):null,(0,r.jsx)("a",{href:"/",children:a.name})]},a.name))}),"render"),argTypes:{separator:{options:["slash","arrow"],control:{type:"radio"}}}},e={args:{separator:"slash"}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {
-    separator: 'slash'
-  }
-}`,...e.parameters?.docs?.source}}};var g=["Default"];export{e as Default,g as __namedExportsOrder,x as default};
