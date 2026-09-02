@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.16
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+
 ## 1.0.0-beta.15
 
 ### Patch Changes

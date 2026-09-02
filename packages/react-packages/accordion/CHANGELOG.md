@@ -1,5 +1,16 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.61
+  - @dt-dds/react-divider@1.0.0-beta.60
+  - @dt-dds/react-icon@1.0.0-beta.65
+
 ## 1.0.0-beta.64
 
 ### Minor Changes

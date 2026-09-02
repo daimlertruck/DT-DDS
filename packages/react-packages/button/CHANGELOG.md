@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.110
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.61
+  - @dt-dds/react-spinner@1.0.0-beta.115
+
 ## 1.0.0-beta.109
 
 ### Patch Changes

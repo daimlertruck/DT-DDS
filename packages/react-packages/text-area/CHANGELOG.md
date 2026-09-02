@@ -1,5 +1,18 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.95
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.61
+  - @dt-dds/react-icon@1.0.0-beta.65
+  - @dt-dds/react-label-field@1.0.0-beta.63
+  - @dt-dds/react-tooltip@1.0.0-beta.72
+  - @dt-dds/react-typography@1.0.0-beta.52
+
 ## 1.0.0-beta.94
 
 ### Patch Changes

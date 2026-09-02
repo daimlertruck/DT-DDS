@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.61
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+
 ## 1.0.0-beta.60
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.98
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.61
+  - @dt-dds/react-typography@1.0.0-beta.52
+
 ## 1.0.0-beta.97
 
 ### Patch Changes

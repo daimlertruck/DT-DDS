@@ -1,5 +1,14 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+  - @dt-dds/react-core@1.0.0-beta.61
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

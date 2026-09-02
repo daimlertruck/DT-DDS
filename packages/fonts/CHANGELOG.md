@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.10
+
+### Patch Changes
+
+- chore(theme): move tsx to dev dependencies
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.16
+
 ## 1.0.0-beta.9
 
 ### Patch Changes
