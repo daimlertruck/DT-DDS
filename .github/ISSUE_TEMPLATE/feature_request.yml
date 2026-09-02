@@ -39,6 +39,14 @@ body:
       required: true
 
   - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the conditions that must be met for this feature to be considered complete. If possible, use Gerkin syntax (Given, When, Then).
+    validations:
+      required: false
+
+  - type: textarea
     id: additional-info
     attributes:
       label: Additional Information
