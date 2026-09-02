@@ -3,7 +3,7 @@
 **Author(s):** [Name(s)]  
 **Created:** YYYY-MM-DD  
 **Updated:** YYYY-MM-DD
-**RFC PR:** <link to PR>
+**Component spec:** <link to component spec, if existing>
 **Component issue:** <link to issue>
 
 ## Overview
@@ -13,19 +13,23 @@ A brief 2-3 sentence overview of the component being proposed, its primary purpo
 ## Motivation
 
 ### Problem Statement
+
 What user or business problem does this component solve? What gaps in the current design system does it fill?
 
 ### Use Cases (optional)
+
 - **Use Case 1:** Description of primary use case
 - **Use Case 2:** Description of secondary use case
 - **Use Case 3:** Additional scenarios where this component applies
 
 ### Goals
+
 - Goal 1: What we want to achieve
 - Goal 2: Success criteria
 - Goal 3: Performance or accessibility targets
 
 ### Non-Goals
+
 - What this component explicitly will NOT do
 - Features intentionally left out of scope
 
@@ -34,13 +38,17 @@ What user or business problem does this component solve? What gaps in the curren
 ### Visual Design
 
 #### Variants (if applicable)
+
 List all visual variants the component will support:
+
 - **Variant Name:** Description and when to use
 - **Size variants:** small, medium, large, etc.
 - **State variants:** default, hover, active, disabled, error, etc.
 
 #### Anatomy
+
 Describe the component structure and its sub-parts:
+
 ```
 ComponentName
 ├── SubElement1
@@ -50,7 +58,9 @@ ComponentName
 ```
 
 #### Design Tokens
+
 Which design tokens will this component use?
+
 - **Colors:** token names and usage
 - **Typography:** token names and usage
 - **Spacing:** token names and usage
@@ -58,6 +68,7 @@ Which design tokens will this component use?
 - **Border radius:** token names and usage
 
 #### Figma Reference
+
 [Link to Figma designs]
 
 ### Component API
@@ -115,21 +126,25 @@ Which design tokens will this component use?
 ### Behavior
 
 #### Interaction Patterns
+
 - **Mouse/Touch:** How the component responds to pointer interactions
 - **Keyboard:** Keyboard navigation and shortcuts (e.g., Tab, Enter, Escape)
 - **Focus Management:** How focus is handled within and around the component
 
 #### State Management
+
 - **Internal State:** What state the component manages internally
 - **External State:** What state must be provided/controlled externally
 - **State Transitions:** How the component moves between states
 
 #### Responsive Behavior
+
 How does the component adapt to different screen sizes and viewports?
 
 ### Accessibility
 
 #### ARIA Roles & Attributes to have into consideration
+
 ```html
 <div role="..." aria-label="..." aria-describedby="...">
   <!-- Component markup with ARIA -->
@@ -137,30 +152,40 @@ How does the component adapt to different screen sizes and viewports?
 ```
 
 #### Keyboard Navigation
-| Key | Action |
-|-----|--------|
-| Tab | Description |
+
+| Key         | Action      |
+| ----------- | ----------- |
+| Tab         | Description |
 | Enter/Space | Description |
-| Arrow Keys | Description |
-| Escape | Description |
+| Arrow Keys  | Description |
+| Escape      | Description |
 
 #### Screen Reader Experience
+
 How will screen readers announce and interact with this component?
+
+## Acceptance Criteria
+
+- Define the conditions that must be met for this change to be considered complete.
+- If possible, use Gerkin syntax (Given, When, Then).
 
 ## Documentation
 
 ### Migration Guide (if replacing existing component)
+
 How do teams migrate from the old component to this new one?
 
 ## Alternatives Considered (optional)
 
 ### Alternative 1: [Name]
+
 **Description:** What was considered  
 **Pros:** Benefits  
 **Cons:** Drawbacks  
 **Why not chosen:** Reasoning
 
 ### Alternative 2: [Name]
+
 **Description:** What was considered  
 **Pros:** Benefits  
 **Cons:** Drawbacks  
@@ -169,21 +194,26 @@ How do teams migrate from the old component to this new one?
 ## Dependencies & Related Components (optional)
 
 ### Depends On
+
 - **Component/Token Name:** How it's used
 
 ### Used By
+
 - **Component/Token Name:** How it's used
 
 ### Related Components
+
 - **Component Name:** How they relate or differ
 
 ## Appendix
 
 ### References
+
 - Links to research
 - Design inspiration
 - Related RFCs
 - External documentation
 
 ### Glossary
+
 - **Term:** Definition
