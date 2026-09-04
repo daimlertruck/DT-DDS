@@ -3,6 +3,8 @@
 - [⚙️ DT-DDS current stack](#️-dt-dds-current-stack)
   - [Useful Commands](#useful-commands)
 - [Apps \& Packages](#apps--packages)
+- [Documentation](#documentation)
+  - [ADRs vs. RFCs vs. Component specs](#adrs-vs-rfcs-vs-component-specs)
 - [GitHub Workflow](#github-workflow)
   - [Issue creation](#issue-creation)
     - [Bug Reports](#bug-reports)
@@ -97,6 +99,20 @@ This Turborepo includes the following packages and applications:
 - `packages/eslint-config-custom`: ESLint preset
 - `packages/jest-config`: Shared jest configuration file
 - `packages/changeset-conventional-commits`: Changeset plugin used to automatically generate changesets and tagging versions
+
+# Documentation
+
+## ADRs vs. RFCs vs. Component specs
+
+ADRs refers to "Architecture Decision Records" and document architecture decisions, comparing different options to solve a specific problem.
+They live under [docs/adrs](./docs/adrs/) directory, with the [template](./docs/adrs/0000-adr-template.md) and the numbered ADRs.
+
+RFCs refers to "Request for Change" and document a new component request or a request to change a current component of the Design System.
+Each RFC is a delta to the previous RFCs, so they document the history of changes to a specific component and the correspondent decisions.
+They live under [docs/rfcs](./docs/rfcs/) directory, with the [template](./docs/rfcs/0000-template.md) and the numbered RFCs.
+
+Component specs are the living specification of the components and they should be updated every time the component is updated, impacting structure, properties, behaviour, etc. (i.e., impacts any section of the component spec).
+They live in each component package, as `README.md` file, and use the [README template](./turbo/generators/new-component-package/templates/README.md.hbs) available in the component generator templates.
 
 # GitHub Workflow
 
