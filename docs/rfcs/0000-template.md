@@ -177,6 +177,8 @@ How do teams migrate from the old component to this new one?
 
 ## Alternatives Considered (optional)
 
+An ADR can also be linked, in case the description of alternatives is extensive or it needs more extensive discussion.
+
 ### Alternative 1: [Name]
 
 **Description:** What was considered  
@@ -211,6 +213,7 @@ How do teams migrate from the old component to this new one?
 
 - Links to research
 - Design inspiration
+- Related ADRs
 - Related RFCs
 - External documentation
 
