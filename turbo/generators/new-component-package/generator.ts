@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+
 import { PlopTypes } from '@turbo/gen';
 
 import {
@@ -5,6 +8,16 @@ import {
   modifyDTUIReacAddNewPackageAction,
   modifyStorybookComponentsPathAction,
 } from './actions';
+
+const readWorkspaceVersion = (root: string, packageDir: string): string => {
+  const { version }: { version?: unknown } = JSON.parse(
+    readFileSync(path.join(root, packageDir, 'package.json'), 'utf8')
+  );
+  if (typeof version !== 'string') {
+    throw new Error(`${packageDir}/package.json has no version`);
+  }
+  return version;
+};
 
 export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
   plop.setGenerator('new-component-package', {
@@ -33,7 +46,14 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
         data
       );
 
-      data!.packageVersion = '0.1.0-beta.0';
+      data!.packageVersion = '1.0.0-beta.0';
+
+      const root = plop.renderString('{{ turbo.paths.root }}', data);
+      data!.reactCoreVersion = readWorkspaceVersion(
+        root,
+        'packages/react-packages/core'
+      );
+      data!.themesVersion = readWorkspaceVersion(root, 'packages/themes');
 
       return [
         {
