@@ -1,3 +1,7 @@
+import { execSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+
 import { PlopTypes } from '@turbo/gen';
 
 const componentFileName =
@@ -18,14 +22,24 @@ export const addComponentActions: PlopTypes.AddActionConfig[] = [
   addComponentAction('tsx'),
 ];
 
-export const modifyStorybookComponentsPathAction: PlopTypes.ModifyActionConfig =
-  {
-    type: 'modify',
-    path: '{{ turbo.paths.root }}/apps/docs/.storybook/main.ts',
-    pattern: 'const components = [',
-    template: "const components = ['{{packageName}}', ",
-    templateFile: '',
-  };
+export const modifyStorybookComponentsPathAction = (
+  root: string,
+  packageName: string
+): PlopTypes.ModifyActionConfig => ({
+  type: 'modify',
+  path: '{{ turbo.paths.root }}/apps/docs/.storybook/main.ts',
+  pattern: 'const components = [',
+  template: "const components = [\n        '{{packageName}}',",
+  templateFile: '',
+  skip: () =>
+    /const components = \[([\s\S]*?)\]/
+      .exec(
+        readFileSync(path.join(root, 'apps/docs/.storybook/main.ts'), 'utf8')
+      )?.[1]
+      .includes(`'${packageName}',`)
+      ? `'${packageName}' is already a Storybook alias`
+      : undefined,
+});
 
 export const modifyDTUIReacAddNewPackageAction: PlopTypes.ModifyActionConfig[] =
   [
@@ -46,3 +60,20 @@ export const modifyDTUIReacAddNewPackageAction: PlopTypes.ModifyActionConfig[] =
         '$1\n    "@dt-dds/react-{{ packageName }}": "{{ packageVersion }}",$2$3',
     },
   ];
+
+export const formatPackageAction =
+  (root: string, packageName: string): PlopTypes.CustomActionFunction =>
+  () => {
+    execSync(
+      `yarn --silent prettier --loglevel warn --write "packages/react-packages/${packageName}/**/*.{js,ts,tsx}"`,
+      { cwd: root, stdio: 'inherit' }
+    );
+    return `formatted packages/react-packages/${packageName}`;
+  };
+
+export const installDependenciesAction =
+  (root: string): PlopTypes.CustomActionFunction =>
+  () => {
+    execSync('yarn install', { cwd: root, stdio: 'inherit' });
+    return 'yarn install';
+  };
