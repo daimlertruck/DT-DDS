@@ -41,8 +41,8 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
           destination:
             '{{ turbo.paths.root }}/packages/react-packages/{{packageName}}',
           base: 'new-component-package/templates/',
-          templateFiles:
-            'new-component-package/templates/**/!(*Component*|LICENSE.hbs)',
+          templateFiles: 'new-component-package/templates/**/*.hbs',
+          globOptions: { ignore: ['**/*Component*', '**/LICENSE.hbs'] },
         },
         {
           type: 'add',
