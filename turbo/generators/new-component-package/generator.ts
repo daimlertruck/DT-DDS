@@ -5,6 +5,8 @@ import { PlopTypes } from '@turbo/gen';
 
 import {
   addComponentActions,
+  formatPackageAction,
+  installDependenciesAction,
   modifyDTUIReacAddNewPackageAction,
   modifyStorybookComponentsPathAction,
 } from './actions';
@@ -71,7 +73,9 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
         },
         ...addComponentActions,
         ...modifyDTUIReacAddNewPackageAction,
-        modifyStorybookComponentsPathAction,
+        modifyStorybookComponentsPathAction(root, data!.packageName),
+        formatPackageAction(root, data!.packageName),
+        installDependenciesAction(root),
       ];
     },
   });
