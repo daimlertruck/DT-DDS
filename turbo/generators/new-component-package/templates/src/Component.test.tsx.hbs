@@ -1,11 +1,21 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+
+import { withProviders } from '@dt-dds/react-core';
 
 import { {{componentName}} } from './{{componentName}}';
 
 describe('<{{componentName}} /> component', () => {
-  it('should render {{componentName}}', () => {
-    const { container } = render(<{{componentName}} />);
+  const Provided{{componentName}} = withProviders({{componentName}});
 
-    expect(container).toMatchSnapshot();
+  it('renders its content', () => {
+    render(<Provided{{componentName}} />);
+
+    expect(screen.getByText('{{componentName}} works!')).toBeInTheDocument();
+  });
+
+  it('sets data-testid from dataTestId', () => {
+    render(<Provided{{componentName}} dataTestId='{{packageName}}' />);
+
+    expect(screen.getByTestId('{{packageName}}')).toBeInTheDocument();
   });
 });
