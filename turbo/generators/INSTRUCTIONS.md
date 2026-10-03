@@ -45,4 +45,6 @@ If you want to add another custom generator to the DT-DDS Design System, follow 
 
 For technical documentation about how to implement a custom generator to meet your goal please check the [plop's offical documentation](https://plopjs.com/documentation/).
 
-⚠️ In the package.json template, the "@dt-dds/react-core" package has the "\*" wildcard which does not work for pre-releases. When generating a new package, this version should be updated with the latest one of react-core.
+The `new-component-package` generator pins `@dt-dds/react-core` and `@dt-dds/themes` in the generated `package.json` to their workspace versions at generation time.
+
+After scaffolding, the `new-component-package` generator formats the new package with the repository's Prettier and runs `yarn install` from the repository root. If either step fails, the generator stops there and still exits with code 0, so look for `>>> Error` in its output. Then run `yarn prettier --write "packages/react-packages/<name>/**/*.{js,ts,tsx}"` and `yarn install` from the repository root.

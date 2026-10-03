@@ -1,10 +1,25 @@
+import { readFileSync } from 'node:fs';
+import path from 'node:path';
+
 import { PlopTypes } from '@turbo/gen';
 
 import {
   addComponentActions,
+  formatPackageAction,
+  installDependenciesAction,
   modifyDTUIReacAddNewPackageAction,
   modifyStorybookComponentsPathAction,
 } from './actions';
+
+const readWorkspaceVersion = (root: string, packageDir: string): string => {
+  const { version }: { version?: unknown } = JSON.parse(
+    readFileSync(path.join(root, packageDir, 'package.json'), 'utf8')
+  );
+  if (typeof version !== 'string') {
+    throw new Error(`${packageDir}/package.json has no version`);
+  }
+  return version;
+};
 
 export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
   plop.setGenerator('new-component-package', {
@@ -33,7 +48,14 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
         data
       );
 
-      data!.packageVersion = '0.1.0-beta.0';
+      data!.packageVersion = '1.0.0-beta.0';
+
+      const root = plop.renderString('{{ turbo.paths.root }}', data);
+      data!.reactCoreVersion = readWorkspaceVersion(
+        root,
+        'packages/react-packages/core'
+      );
+      data!.themesVersion = readWorkspaceVersion(root, 'packages/themes');
 
       return [
         {
@@ -41,8 +63,8 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
           destination:
             '{{ turbo.paths.root }}/packages/react-packages/{{packageName}}',
           base: 'new-component-package/templates/',
-          templateFiles:
-            'new-component-package/templates/**/!(*Component*|LICENSE.hbs)',
+          templateFiles: 'new-component-package/templates/**/*.hbs',
+          globOptions: { ignore: ['**/*Component*', '**/LICENSE.hbs'] },
         },
         {
           type: 'add',
@@ -51,7 +73,9 @@ export const newComponentPackageGenerator = (plop: PlopTypes.NodePlopAPI) =>
         },
         ...addComponentActions,
         ...modifyDTUIReacAddNewPackageAction,
-        modifyStorybookComponentsPathAction,
+        modifyStorybookComponentsPathAction(root, data!.packageName),
+        formatPackageAction(root, data!.packageName),
+        installDependenciesAction(root),
       ];
     },
   });
