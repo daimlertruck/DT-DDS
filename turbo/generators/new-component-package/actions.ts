@@ -1,8 +1,13 @@
 import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
-import path from 'node:path';
+import path, { join } from 'node:path';
 
 import { PlopTypes } from '@turbo/gen';
+
+type ComponentPackageData = {
+  packageName: string;
+  turbo: { paths: { root: string } };
+};
 
 const componentFileName =
   '{{ turbo.paths.root }}/packages/react-packages/{{packageName}}/src/{{componentName}}';
@@ -50,6 +55,18 @@ export const modifyDTUIReacAddNewPackageAction: PlopTypes.ModifyActionConfig[] =
       pattern:
         /(\/\/independent component packages\s*\n)(export[\s\S]*?)\n\s*\n/,
       template: "$1$2\nexport * from '@dt-dds/react-{{ packageName }}';\n\n",
+      skip: (data: ComponentPackageData) => {
+        const content = readFileSync(
+          join(data.turbo.paths.root, 'packages/dt-dds-react/index.ts'),
+          'utf8'
+        );
+
+        return content.includes(
+          `export * from '@dt-dds/react-${data.packageName}';`
+        )
+          ? `'${data.packageName}' is already an export`
+          : false;
+      },
     },
     {
       type: 'modify',
@@ -58,6 +75,21 @@ export const modifyDTUIReacAddNewPackageAction: PlopTypes.ModifyActionConfig[] =
       pattern: /("dependencies":\s*{)([\s\S]*?)(\n\s*}\n)/,
       template:
         '$1\n    "@dt-dds/react-{{ packageName }}": "{{ packageVersion }}",$2$3',
+      skip: (data: ComponentPackageData) => {
+        const packageJson = JSON.parse(
+          readFileSync(
+            join(data.turbo.paths.root, 'packages/dt-dds-react/package.json'),
+            'utf8'
+          )
+        );
+
+        return Object.prototype.hasOwnProperty.call(
+          packageJson.dependencies,
+          `@dt-dds/react-${data.packageName}`
+        )
+          ? `'${data.packageName}' is already an dependency`
+          : false;
+      },
     },
   ];
 
