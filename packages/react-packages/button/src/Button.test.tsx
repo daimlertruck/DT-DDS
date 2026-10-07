@@ -76,7 +76,7 @@ describe('<Button /> component', () => {
     const button = screen.getByTestId('error-button');
     fireEvent.click(button);
 
-    expect(callbackFn).toBeCalledTimes(1);
+    expect(callbackFn).toHaveBeenCalledTimes(1);
   });
 
   describe('when loading is true', () => {

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Tooltip /> component renders a tooltip with the direction as bottom and background as full 1`] = `
 .emotion-0 {

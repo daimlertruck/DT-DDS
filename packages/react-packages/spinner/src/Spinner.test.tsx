@@ -62,7 +62,10 @@ describe('<Spinner /> component', () => {
     render(<ProvidedSpinner style={customStyle} />);
 
     const spinner = screen.getByTestId('spinner');
-    expect(spinner).toHaveStyle({ backgroundColor: 'red', padding: '20px' });
+    expect(spinner).toHaveStyle({
+      'background-color': 'rgb(255, 0, 0)',
+      padding: '20px',
+    });
   });
 
   it('should have animation applied to spinner element', () => {

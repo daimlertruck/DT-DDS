@@ -1,3 +1,5 @@
+/** @jest-environment node */
+
 import { getCurrentPath, getHrefPath, isCurrentUrl } from '../urlUtils';
 
 const mockLocation = ({
@@ -11,6 +13,24 @@ const mockLocation = ({
 }) => ({ pathname, href, origin } as Location);
 
 describe('urlUtils', () => {
+  beforeEach(() => {
+    Object.defineProperty(globalThis, 'window', {
+      value: {
+        location: mockLocation({
+          pathname: '/',
+          href: 'http://localhost/',
+          origin: 'http://localhost',
+        }),
+      },
+      writable: true,
+      configurable: true,
+    });
+  });
+
+  afterEach(() => {
+    Reflect.deleteProperty(globalThis, 'window');
+  });
+
   describe('getCurrentPath', () => {
     it('returns current pathname from window.location', () => {
       const locationMock = mockLocation({
@@ -67,7 +87,7 @@ describe('urlUtils', () => {
     });
 
     it('handles invalid URLs by falling back to normalized path', () => {
-      const originalURL = window.URL;
+      const originalURL = globalThis.URL;
       class ThrowingURL {
         constructor() {
           throw new TypeError('invalid url');
@@ -75,18 +95,18 @@ describe('urlUtils', () => {
       }
 
       // @ts-expect-error - override for test
-      window.URL = ThrowingURL;
+      globalThis.URL = ThrowingURL;
 
       try {
         expect(getHrefPath('invalid')).toBe('/invalid');
         expect(getHrefPath('/already-valid')).toBe('/already-valid');
       } finally {
-        window.URL = originalURL;
+        globalThis.URL = originalURL;
       }
     });
 
     it('handles relative paths without leading slash', () => {
-      const originalURL = window.URL;
+      const originalURL = globalThis.URL;
       class ThrowingURL {
         constructor() {
           throw new TypeError('invalid url');
@@ -94,12 +114,12 @@ describe('urlUtils', () => {
       }
 
       // @ts-expect-error - override for test
-      window.URL = ThrowingURL;
+      globalThis.URL = ThrowingURL;
 
       try {
         expect(getHrefPath('dashboard')).toBe('/dashboard');
       } finally {
-        window.URL = originalURL;
+        globalThis.URL = originalURL;
       }
     });
 

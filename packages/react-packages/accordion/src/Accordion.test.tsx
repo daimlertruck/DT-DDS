@@ -118,9 +118,7 @@ describe('<Accordion /> component', () => {
       ({ background, color }) => {
         const { container } = renderUncontrolledAccordion({ background });
 
-        expect(container.firstChild).toHaveStyle({
-          backgroundColor: color,
-        });
+        expect(container.firstChild).toHaveStyleRule('background-color', color);
       }
     );
   });
