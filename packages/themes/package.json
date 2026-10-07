@@ -33,7 +33,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^20.0.0",
     "eslint-config-custom": "*",
-    "jest": "^29.0.0",
+    "jest": "^30.0.0",
     "ts-jest": "^29.4.0",
     "tsup": "^8.5.0",
     "tsx": "^4.0.0",

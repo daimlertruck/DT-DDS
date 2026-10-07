@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Tabs /> component should match the snapshot by displaying contained variant 1`] = `
 .emotion-0 {
@@ -416,7 +416,7 @@ exports[`<Tabs /> component should match the snapshot by displaying default vari
 <div>
   <div
     class="emotion-0"
-    style="flex-direction: row; border-bottom: 1px solid #e6e6e6;"
+    style="flex-direction: row; border-bottom: 1px solid rgb(230, 230, 230);"
   >
     <button
       class="emotion-1"

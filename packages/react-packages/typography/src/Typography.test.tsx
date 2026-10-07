@@ -81,7 +81,7 @@ describe('<Typography /> component', () => {
 
     const pElement = container.querySelector('p');
     expect(pElement).toBeInTheDocument();
-    expect(pElement).toHaveStyle({ color: 'unset' });
+    expect(pElement).toHaveStyleRule('color', 'unset');
   });
 
   it('should handle inherit color', () => {

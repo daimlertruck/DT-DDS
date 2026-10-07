@@ -4,26 +4,22 @@ import * as urlUtils from '../../utils/urlUtils';
 import { useLocationPath } from '../useLocationPath';
 
 describe('useLocationPath', () => {
-  let locationMock: Location;
+  let getCurrentPathSpy: jest.SpyInstance;
+  let currentPath: string;
 
   beforeEach(() => {
-    // Create a mock location object
-    locationMock = {
-      pathname: '/',
-      href: 'http://localhost/',
-      origin: 'http://localhost',
-    } as Location;
+    currentPath = '/';
+    getCurrentPathSpy = jest
+      .spyOn(urlUtils, 'getCurrentPath')
+      .mockImplementation(() => currentPath);
+  });
 
-    // Mock window.location
-    Object.defineProperty(window, 'location', {
-      value: locationMock,
-      writable: true,
-      configurable: true,
-    });
+  afterEach(() => {
+    getCurrentPathSpy.mockRestore();
   });
 
   it('returns current pathname on initial render', () => {
-    locationMock.pathname = '/dashboard';
+    currentPath = '/dashboard';
 
     const { result } = renderHook(() => useLocationPath());
 
@@ -36,7 +32,7 @@ describe('useLocationPath', () => {
     expect(result.current).toBe('/');
 
     act(() => {
-      locationMock.pathname = '/settings';
+      currentPath = '/settings';
       window.dispatchEvent(new PopStateEvent('popstate'));
     });
 
@@ -49,7 +45,7 @@ describe('useLocationPath', () => {
     expect(result.current).toBe('/');
 
     act(() => {
-      locationMock.pathname = '/dashboard';
+      currentPath = '/dashboard';
       window.dispatchEvent(new HashChangeEvent('hashchange'));
     });
 
@@ -62,14 +58,14 @@ describe('useLocationPath', () => {
     expect(result.current).toBe('/');
 
     act(() => {
-      locationMock.pathname = '/page1';
+      currentPath = '/page1';
       window.dispatchEvent(new PopStateEvent('popstate'));
     });
 
     expect(result.current).toBe('/page1');
 
     act(() => {
-      locationMock.pathname = '/page2';
+      currentPath = '/page2';
       window.dispatchEvent(new PopStateEvent('popstate'));
     });
 
@@ -107,21 +103,11 @@ describe('useLocationPath', () => {
   });
 
   it('handles SSR environment gracefully', () => {
-    const originalWindow = globalThis.window;
-
-    // Mock getCurrentPath to return empty string (SSR behavior)
-    const getCurrentPathSpy = jest
-      .spyOn(urlUtils, 'getCurrentPath')
-      .mockReturnValue('');
+    getCurrentPathSpy.mockReturnValue('');
 
     const { result } = renderHook(() => useLocationPath());
 
-    // Should return empty string in SSR
     expect(result.current).toBe('');
-
-    // Restore
-    getCurrentPathSpy.mockRestore();
-    globalThis.window = originalWindow;
   });
 
   it('maintains independent state across multiple hook instances', () => {
@@ -132,11 +118,10 @@ describe('useLocationPath', () => {
     expect(result2.current).toBe('/');
 
     act(() => {
-      locationMock.pathname = '/page1';
+      currentPath = '/page1';
       window.dispatchEvent(new PopStateEvent('popstate'));
     });
 
-    // Both should update independently
     expect(result1.current).toBe('/page1');
     expect(result2.current).toBe('/page1');
   });

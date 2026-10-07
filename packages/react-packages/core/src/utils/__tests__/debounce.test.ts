@@ -8,10 +8,10 @@ describe('debounce', () => {
     const delayedFunction = debounce(callback, 200);
 
     delayedFunction();
-    expect(callback).not.toBeCalled();
+    expect(callback).not.toHaveBeenCalled();
 
     jest.advanceTimersByTime(199);
-    expect(callback).not.toBeCalled();
+    expect(callback).not.toHaveBeenCalled();
   });
 
   it('should execute callback after right time has passed', () => {
@@ -19,9 +19,9 @@ describe('debounce', () => {
     const delayedFunction = debounce(callback, 200);
 
     delayedFunction();
-    expect(callback).not.toBeCalled();
+    expect(callback).not.toHaveBeenCalled();
 
     jest.advanceTimersByTime(200);
-    expect(callback).toBeCalled();
+    expect(callback).toHaveBeenCalled();
   });
 });

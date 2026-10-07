@@ -109,7 +109,7 @@ describe('<IconButton /> component', () => {
     const button = screen.getByTestId('icon-button');
 
     expect(button).toHaveStyle('border: 2px solid hotpink');
-    expect(button).toHaveStyle('background-color: orange');
+    expect(button).toHaveStyle('background-color: rgb(255, 165, 0)');
   });
 
   describe('IconButton with Avatar integration', () => {

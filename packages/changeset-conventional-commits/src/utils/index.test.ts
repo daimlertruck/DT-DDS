@@ -169,13 +169,13 @@ describe('get-repo-root', () => {
   it('correctly gets the repo root', () => {
     execSync.mockReturnValueOnce('/project-root-path/dt-dds');
     expect(getRepoRoot().endsWith('dt-dds')).toBeTruthy();
-    expect(execSync).toBeCalledWith('git rev-parse --show-toplevel');
+    expect(execSync).toHaveBeenCalledWith('git rev-parse --show-toplevel');
   });
 });
 
 describe('git-fetch', () => {
   it('correctly  fetches', () => {
     gitFetch('main');
-    expect(execSync).toBeCalledWith('git fetch origin main');
+    expect(execSync).toHaveBeenCalledWith('git fetch origin main');
   });
 });

@@ -233,24 +233,6 @@ describe('sidebarItemUtils', () => {
   });
 
   describe('containsActiveSidebarItem', () => {
-    let locationMock: Location;
-
-    beforeEach(() => {
-      // Create a mock location object
-      locationMock = {
-        pathname: '/dashboard',
-        href: 'http://localhost/dashboard',
-        origin: 'http://localhost',
-      } as Location;
-
-      // Mock window.location
-      Object.defineProperty(window, 'location', {
-        value: locationMock,
-        writable: true,
-        configurable: true,
-      });
-    });
-
     it('returns true when SidebarItem href matches current path', () => {
       const node = <SidebarItem href='/dashboard'>Dashboard</SidebarItem>;
 

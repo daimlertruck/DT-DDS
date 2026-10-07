@@ -53,21 +53,21 @@ describe('<Modal/> Component', () => {
       const closeBtn = screen.getByTestId('close-button');
       fireEvent.click(closeBtn);
 
-      expect(handleClick).toBeCalledTimes(1);
+      expect(handleClick).toHaveBeenCalledTimes(1);
     });
 
     it('fires the mock close function when clicking on cancel', () => {
       const cancelBtn = screen.getByTestId('cancel-button');
       fireEvent.click(cancelBtn);
 
-      expect(handleClick).toBeCalledTimes(1);
+      expect(handleClick).toHaveBeenCalledTimes(1);
     });
 
     it('fires the mock action function when clicking on action', () => {
       const actionBtn = screen.getByTestId('action-button');
       fireEvent.click(actionBtn);
 
-      expect(handleClick).toBeCalledTimes(1);
+      expect(handleClick).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -94,7 +94,7 @@ describe('<Modal/> Component', () => {
 
       fireEvent.mouseDown(screen.getAllByText('outside')[0]);
 
-      expect(handleClick).toBeCalledTimes(1);
+      expect(handleClick).toHaveBeenCalledTimes(1);
     });
 
     it('should not fire handle close function when clicking outside', () => {
@@ -109,7 +109,7 @@ describe('<Modal/> Component', () => {
 
       fireEvent.mouseDown(screen.getAllByText('outside')[0]);
 
-      expect(handleClick).toBeCalledTimes(0);
+      expect(handleClick).toHaveBeenCalledTimes(0);
     });
   });
 
@@ -148,7 +148,7 @@ describe('<Modal/> Component', () => {
     it('should fire handle close function when clicking outside', () => {
       fireEvent.mouseDown(screen.getAllByText('outside')[0]);
 
-      expect(handleClick).toBeCalledTimes(1);
+      expect(handleClick).toHaveBeenCalledTimes(1);
     });
   });
 });

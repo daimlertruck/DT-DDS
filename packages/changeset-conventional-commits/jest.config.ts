@@ -1,7 +1,10 @@
+import { createRequire } from 'node:module';
+
 import type { Config } from 'jest';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const baseConfig = require('jest-config/jest.config.js');
+const baseConfig: Config = createRequire(`${process.cwd()}/package.json`)(
+  'jest-config/jest.config.js'
+);
 
 const config: Config = {
   ...baseConfig,

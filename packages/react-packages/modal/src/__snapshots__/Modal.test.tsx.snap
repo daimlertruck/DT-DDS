@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Modal/> Component handle loading state renders modal with loading overlay correctly 1`] = `
 @keyframes animation-0 {

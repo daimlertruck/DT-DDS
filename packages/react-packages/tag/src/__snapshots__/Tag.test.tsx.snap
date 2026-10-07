@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Tag /> component should render the tag with variant outlined, color secondary, border squared, size small, isClickable as true, isDisabled as false, onClick and onClose 1`] = `
 .emotion-0 {

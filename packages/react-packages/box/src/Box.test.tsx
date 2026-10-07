@@ -64,7 +64,7 @@ describe('<Box /> component', () => {
 
     const boxElement = container.firstChild as HTMLElement;
     expect(boxElement).toHaveStyle({
-      backgroundColor: 'red',
+      'background-color': 'rgb(255, 0, 0)',
       padding: '10px',
       margin: '5px',
     });
