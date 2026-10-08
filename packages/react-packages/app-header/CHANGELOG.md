@@ -1,5 +1,20 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.82
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.78
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.81
 
 ### Major Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.53
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-icon@1.0.0-beta.66
+  - @dt-dds/react-select@1.0.0-beta.102
+  - @dt-dds/react-tooltip@1.0.0-beta.73
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.52
 
 ### Patch Changes

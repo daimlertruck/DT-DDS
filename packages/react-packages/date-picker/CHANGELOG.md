@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-dropdown@1.0.0-beta.106
+  - @dt-dds/react-icon@1.0.0-beta.66
+  - @dt-dds/react-text-field@1.0.0-beta.125
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.110
 
 ### Patch Changes

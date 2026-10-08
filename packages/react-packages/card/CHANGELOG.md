@@ -1,5 +1,15 @@
 # @dt-ui/react-card
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.44
 
 ### Patch Changes

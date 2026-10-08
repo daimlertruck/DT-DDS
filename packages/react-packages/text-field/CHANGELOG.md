@@ -1,5 +1,20 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.125
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-icon@1.0.0-beta.66
+  - @dt-dds/react-icon-button@1.0.0-beta.32
+  - @dt-dds/react-label-field@1.0.0-beta.64
+  - @dt-dds/react-spinner@1.0.0-beta.116
+  - @dt-dds/react-tooltip@1.0.0-beta.73
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.124
 
 ### Patch Changes

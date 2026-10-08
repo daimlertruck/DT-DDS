@@ -1,5 +1,14 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.53
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.52
 
 ### Patch Changes

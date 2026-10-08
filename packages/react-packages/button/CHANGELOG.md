@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-spinner@1.0.0-beta.116
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.110
 
 ### Patch Changes

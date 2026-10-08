@@ -1,5 +1,17 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.129
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.111
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-icon@1.0.0-beta.66
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+
 ## 1.0.0-beta.128
 
 ### Patch Changes

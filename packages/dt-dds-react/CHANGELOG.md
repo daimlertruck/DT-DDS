@@ -1,5 +1,53 @@
 # @dt-ui/react
 
+## 1.0.0-beta.338
+
+### Patch Changes
+
+- chore: remove inflight dependency
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-accordion@1.0.0-beta.66
+  - @dt-dds/react-app-header@1.0.0-beta.82
+  - @dt-dds/react-avatar@1.0.0-beta.77
+  - @dt-dds/react-backdrop@1.0.0-beta.64
+  - @dt-dds/react-box@1.0.0-beta.78
+  - @dt-dds/react-breadcrumb@1.0.0-beta.77
+  - @dt-dds/react-button@1.0.0-beta.111
+  - @dt-dds/react-card@1.0.0-beta.45
+  - @dt-dds/react-checkbox@1.0.0-beta.67
+  - @dt-dds/react-core@1.0.0-beta.62
+  - @dt-dds/react-divider@1.0.0-beta.61
+  - @dt-dds/react-dropdown@1.0.0-beta.106
+  - @dt-dds/react-empty-state@1.0.0-beta.135
+  - @dt-dds/react-form@1.0.0-beta.59
+  - @dt-dds/react-icon@1.0.0-beta.66
+  - @dt-dds/react-icon-button@1.0.0-beta.32
+  - @dt-dds/react-label-field@1.0.0-beta.64
+  - @dt-dds/react-modal@1.0.0-beta.113
+  - @dt-dds/react-pagination@1.0.0-beta.53
+  - @dt-dds/react-progress-bar@1.0.0-beta.59
+  - @dt-dds/react-segmented-control@1.0.0-beta.55
+  - @dt-dds/react-select@1.0.0-beta.102
+  - @dt-dds/react-sidebar@1.0.0-beta.11
+  - @dt-dds/react-spinner@1.0.0-beta.116
+  - @dt-dds/react-stepper@1.0.0-beta.60
+  - @dt-dds/react-table@1.0.0-beta.59
+  - @dt-dds/react-tabs@1.0.0-beta.112
+  - @dt-dds/react-tag@1.0.0-beta.69
+  - @dt-dds/react-text-area@1.0.0-beta.96
+  - @dt-dds/react-text-field@1.0.0-beta.125
+  - @dt-dds/react-toast@1.0.0-beta.129
+  - @dt-dds/react-toggle@1.0.0-beta.42
+  - @dt-dds/react-tooltip@1.0.0-beta.73
+  - @dt-dds/react-typography@1.0.0-beta.53
+  - @dt-dds/themes@1.0.0-beta.17
+  - @dt-dds/react-drawer@1.0.0-beta.73
+  - @dt-dds/react-radio@1.0.0-beta.99
+  - @dt-dds/react-link@1.0.0-beta.90
+  - @dt-dds/react-message@1.0.0-beta.129
+  - @dt-dds/react-date-picker@1.0.0-beta.111
+
 ## 1.0.0-beta.337
 
 ### Patch Changes
