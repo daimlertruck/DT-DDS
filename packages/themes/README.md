@@ -58,12 +58,14 @@ Includes a GitHub Actions workflow (`.github/workflows/theme-generation.yml`) th
 #### How it works:
 
 1. **Trigger**: The workflow runs when a PR is opened, updated, or reopened and contains changes to:
+
    - `packages/themes/src/tokens/**/*.json`
    - `packages/themes/src/utils/theme-generator/**/*`
    - `packages/themes/src/types/theme.ts`
    - `packages/themes/package.json`
 
 2. **Process**:
+
    - Checks out the PR branch
    - Installs dependencies
    - Runs `yarn build:theme`
@@ -269,4 +271,4 @@ To add support for new components:
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

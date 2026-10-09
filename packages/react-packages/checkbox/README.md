@@ -34,10 +34,12 @@ const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 <Checkbox
   checked={allChecked}
   indeterminate={isIndeterminate}
-  onChange={(e) => setCheckedItems([e.target.checked, e.target.checked, e.target.checked])}
+  onChange={(e) =>
+    setCheckedItems([e.target.checked, e.target.checked, e.target.checked])
+  }
 >
   Select all
-</Checkbox>
+</Checkbox>;
 ```
 
 ## Properties
@@ -105,4 +107,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

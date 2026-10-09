@@ -1,6 +1,6 @@
 # Stepper Package
 
-Steppers convey progress through numbered, bullet, or icon-based sequential steps. 
+Steppers convey progress through numbered, bullet, or icon-based sequential steps.
 
 They support various states including completed, incomplete, warning, error, and disabled.
 
@@ -217,4 +217,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

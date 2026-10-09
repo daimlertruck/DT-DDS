@@ -12,9 +12,7 @@ This component is purely presentational and for Interactivity it can be used wit
 import { Avatar } from '@dt-dds/react';
 
 export const App = () => {
-  return (
-    <Avatar title='User Name' size='medium' />
-  );
+  return <Avatar title='User Name' size='medium' />;
 };
 ```
 
@@ -24,9 +22,7 @@ export const App = () => {
 import { Avatar } from '@dt-dds/react';
 
 export const App = () => {
-  return (
-    <Avatar type='photo' imageSrc='/profile.png' size='medium' />
-  );
+  return <Avatar type='photo' imageSrc='/profile.png' size='medium' />;
 };
 ```
 
@@ -36,9 +32,7 @@ export const App = () => {
 import { Avatar } from '@dt-dds/react';
 
 export const App = () => {
-  return (
-    <Avatar type='collapsed' collapsedCount='+1' size='medium' />
-  );
+  return <Avatar type='collapsed' collapsedCount='+1' size='medium' />;
 };
 ```
 
@@ -48,9 +42,7 @@ export const App = () => {
 import { Avatar } from '@dt-dds/react';
 
 export const App = () => {
-  return (
-    <Avatar type='thumbnail' size='medium' />
-  );
+  return <Avatar type='thumbnail' size='medium' />;
 };
 ```
 
@@ -200,4 +192,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)
