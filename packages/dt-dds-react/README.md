@@ -5,4 +5,4 @@ This makes it possible to import all the components react-packages as a single d
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

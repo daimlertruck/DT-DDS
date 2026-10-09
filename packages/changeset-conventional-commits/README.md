@@ -104,4 +104,4 @@ Actually the changeset has a cli command for tagging, but it tags every single p
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

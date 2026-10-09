@@ -55,4 +55,4 @@ export const App = () => {
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

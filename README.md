@@ -111,4 +111,4 @@ See the [contributing guidelines](CONTRIBUTING.md) on how to contribute to this 
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

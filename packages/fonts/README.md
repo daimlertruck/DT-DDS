@@ -23,6 +23,7 @@ import { fonts } from '@dt-dds/fonts';
 ```
 
 Additionally, the fonts are also directly accessible on the package:
+
 - @dt-dds/fonts/DaimlerCS-Regular.woff
 - @dt-dds/fonts/DaimlerCS-Regular.woff2
 - @dt-dds/fonts/DaimlerCS-Bold.woff
@@ -63,4 +64,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

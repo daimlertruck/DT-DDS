@@ -14,10 +14,7 @@ export const App = () => {
   const handleClick = () => console.log('Edit clicked');
 
   return (
-    <IconButton 
-      onClick={handleClick}
-      ariaLabel="Edit profile"
-    >
+    <IconButton onClick={handleClick} ariaLabel='Edit profile'>
       <Icon code='edit' />
     </IconButton>
   );
@@ -136,4 +133,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)

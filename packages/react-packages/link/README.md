@@ -14,18 +14,18 @@ export const App = () => {
 
 ## Properties
 
-| Property     | Type             | Default      | Description                                     |
-| ------------ | ---------------- | ------------ | ----------------------------------------------- |
+| Property     | Type             | Default      | Description                                          |
+| ------------ | ---------------- | ------------ | ---------------------------------------------------- |
 | `as`         | `ElementType`    | `a`          | Renders the link as a different element or component |
-| `children`   | `ReactNode`      | -            | Child components to be rendered                 |
-| `dataTestId` | `string`         | `link`       | Customizable test identifier                    |
-| `onClick`    | `function`       | -            | The triggered function when the Link is clicked |
-| `isDisabled` | `boolean`        | `false`      | Specifies if the element should be disabled     |
-| `size`       | `LinkSize`       | `medium`     | Specifies the text size of the element          |
-| `variant`    | `LinkVariant`    | `standalone` | Specifies the type of link                      |
-| `color`      | `LinkColor`      | `primary`    | Specifies the color of the link                 |
-| `fontWeight` | `LinkFontWeight` | `regular`    | Specifies the font weight of the link           |
-| `icon`       | `Code`           | -            | Adds an icon next to the link text              |
+| `children`   | `ReactNode`      | -            | Child components to be rendered                      |
+| `dataTestId` | `string`         | `link`       | Customizable test identifier                         |
+| `onClick`    | `function`       | -            | The triggered function when the Link is clicked      |
+| `isDisabled` | `boolean`        | `false`      | Specifies if the element should be disabled          |
+| `size`       | `LinkSize`       | `medium`     | Specifies the text size of the element               |
+| `variant`    | `LinkVariant`    | `standalone` | Specifies the type of link                           |
+| `color`      | `LinkColor`      | `primary`    | Specifies the color of the link                      |
+| `fontWeight` | `LinkFontWeight` | `regular`    | Specifies the font weight of the link                |
+| `icon`       | `Code`           | -            | Adds an icon next to the link text                   |
 
 This component inherits all native anchor properties. [Learn more](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a).
 
@@ -72,4 +72,4 @@ Follows [semantic versioning](https://semver.org/)
 
 ## &copy; License
 
-Licensed under [MIT License](LICENSE.md)
+Licensed under [MIT License](LICENSE)
