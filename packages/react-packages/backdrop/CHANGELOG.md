@@ -1,5 +1,14 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.18
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.67
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.8
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.18
+
 ## 1.0.0-beta.66
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.8
+
+### Patch Changes
+
+- docs: fix link to license file
+
 ## 1.0.0-beta.7
 
 ### Patch Changes

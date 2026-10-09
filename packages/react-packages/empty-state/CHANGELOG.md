@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.136
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.112
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/react-link@1.0.0-beta.91
+  - @dt-dds/react-typography@1.0.0-beta.54
+  - @dt-dds/themes@1.0.0-beta.18
+
 ## 1.0.0-beta.135
 
 ### Patch Changes

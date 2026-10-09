@@ -1,5 +1,52 @@
 # @dt-ui/react
 
+## 1.0.0-beta.340
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-accordion@1.0.0-beta.67
+  - @dt-dds/react-app-header@1.0.0-beta.84
+  - @dt-dds/react-avatar@1.0.0-beta.78
+  - @dt-dds/react-backdrop@1.0.0-beta.65
+  - @dt-dds/react-breadcrumb@1.0.0-beta.78
+  - @dt-dds/react-button@1.0.0-beta.112
+  - @dt-dds/react-card@1.0.0-beta.46
+  - @dt-dds/react-checkbox@1.0.0-beta.68
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/react-date-picker@1.0.0-beta.112
+  - @dt-dds/react-divider@1.0.0-beta.62
+  - @dt-dds/react-drawer@1.0.0-beta.74
+  - @dt-dds/react-empty-state@1.0.0-beta.136
+  - @dt-dds/react-form@1.0.0-beta.60
+  - @dt-dds/react-icon@1.0.0-beta.67
+  - @dt-dds/react-icon-button@1.0.0-beta.33
+  - @dt-dds/react-label-field@1.0.0-beta.65
+  - @dt-dds/react-link@1.0.0-beta.91
+  - @dt-dds/react-message@1.0.0-beta.130
+  - @dt-dds/react-modal@1.0.0-beta.114
+  - @dt-dds/react-progress-bar@1.0.0-beta.60
+  - @dt-dds/react-segmented-control@1.0.0-beta.56
+  - @dt-dds/react-sidebar@1.0.0-beta.12
+  - @dt-dds/react-spinner@1.0.0-beta.117
+  - @dt-dds/react-stepper@1.0.0-beta.61
+  - @dt-dds/react-table@1.0.0-beta.60
+  - @dt-dds/react-tabs@1.0.0-beta.113
+  - @dt-dds/react-tag@1.0.0-beta.70
+  - @dt-dds/react-text-area@1.0.0-beta.97
+  - @dt-dds/react-text-field@1.0.0-beta.126
+  - @dt-dds/react-toast@1.0.0-beta.130
+  - @dt-dds/react-toggle@1.0.0-beta.43
+  - @dt-dds/react-tooltip@1.0.0-beta.74
+  - @dt-dds/react-typography@1.0.0-beta.54
+  - @dt-dds/themes@1.0.0-beta.18
+  - @dt-dds/react-pagination@1.0.0-beta.54
+  - @dt-dds/react-select@1.0.0-beta.103
+  - @dt-dds/react-dropdown@1.0.0-beta.107
+  - @dt-dds/react-radio@1.0.0-beta.100
+
 ## 1.0.0-beta.339
 
 ### Patch Changes

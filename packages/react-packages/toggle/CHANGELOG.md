@@ -1,5 +1,15 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.43
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/react-typography@1.0.0-beta.54
+  - @dt-dds/themes@1.0.0-beta.18
+
 ## 1.0.0-beta.42
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.12
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.18
+
 ## 1.0.0-beta.11
 
 ### Patch Changes

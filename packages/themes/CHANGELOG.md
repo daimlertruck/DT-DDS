@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.18
+
+### Patch Changes
+
+- docs: fix link to license file
+
 ## 1.0.0-beta.17
 
 ### Patch Changes

@@ -1,5 +1,21 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.103
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/react-checkbox@1.0.0-beta.68
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/react-icon@1.0.0-beta.67
+  - @dt-dds/react-icon-button@1.0.0-beta.33
+  - @dt-dds/react-label-field@1.0.0-beta.65
+  - @dt-dds/react-tooltip@1.0.0-beta.74
+  - @dt-dds/react-typography@1.0.0-beta.54
+  - @dt-dds/themes@1.0.0-beta.18
+  - @dt-dds/react-dropdown@1.0.0-beta.107
+
 ## 1.0.0-beta.102
 
 ### Patch Changes

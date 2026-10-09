@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.112
+
+### Patch Changes
+
+- docs: fix link to license file
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.63
+  - @dt-dds/react-icon@1.0.0-beta.67
+  - @dt-dds/react-text-field@1.0.0-beta.126
+  - @dt-dds/themes@1.0.0-beta.18
+  - @dt-dds/react-dropdown@1.0.0-beta.107
+
 ## 1.0.0-beta.111
 
 ### Patch Changes
