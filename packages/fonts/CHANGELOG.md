@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.13
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+
 ## 1.0.0-beta.12
 
 ### Patch Changes

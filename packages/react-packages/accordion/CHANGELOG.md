@@ -1,5 +1,16 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.68
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-divider@1.0.0-beta.63
+  - @dt-dds/react-icon@1.0.0-beta.68
+
 ## 1.0.0-beta.67
 
 ### Patch Changes

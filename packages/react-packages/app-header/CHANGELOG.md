@@ -1,5 +1,19 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.85
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-typography@1.0.0-beta.55
+
 ## 1.0.0-beta.84
 
 ### Major Changes

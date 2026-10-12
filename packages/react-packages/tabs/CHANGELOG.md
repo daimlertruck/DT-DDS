@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.114
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-icon@1.0.0-beta.68
+  - @dt-dds/react-icon-button@1.0.0-beta.34
+
 ## 1.0.0-beta.113
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.19
+
+### Patch Changes
+
+- fix: resolve types without build
+
 ## 1.0.0-beta.18
 
 ### Patch Changes

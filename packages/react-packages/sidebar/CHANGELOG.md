@@ -1,5 +1,18 @@
 # @dt-dds/react-sidebar
 
+## 1.0.0-beta.13
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-icon@1.0.0-beta.68
+  - @dt-dds/react-icon-button@1.0.0-beta.34
+  - @dt-dds/react-tooltip@1.0.0-beta.75
+  - @dt-dds/react-typography@1.0.0-beta.55
+
 ## 1.0.0-beta.12
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.113
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-dropdown@1.0.0-beta.108
+  - @dt-dds/react-icon@1.0.0-beta.68
+  - @dt-dds/react-text-field@1.0.0-beta.127
+
 ## 1.0.0-beta.112
 
 ### Patch Changes

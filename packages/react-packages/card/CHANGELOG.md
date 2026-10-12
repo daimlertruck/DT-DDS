@@ -1,5 +1,15 @@
 # @dt-ui/react-card
 
+## 1.0.0-beta.47
+
+### Patch Changes
+
+- fix: resolve types without build
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.19
+  - @dt-dds/react-core@1.0.0-beta.64
+  - @dt-dds/react-typography@1.0.0-beta.55
+
 ## 1.0.0-beta.46
 
 ### Patch Changes
