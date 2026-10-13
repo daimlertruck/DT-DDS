@@ -5,7 +5,7 @@ import { useStepper } from './hooks';
 
 import { Stepper, StepperProps, StepState, StepVariant } from './';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const OrientationOptions: Record<string, Orientation> = {
   Vertical: 'vertical',

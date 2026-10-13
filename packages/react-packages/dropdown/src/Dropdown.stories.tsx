@@ -2,7 +2,7 @@ import { createRef, useState, useRef } from 'react';
 
 import { Dropdown } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type Option = { text: string; value: string; disabled?: boolean };
 

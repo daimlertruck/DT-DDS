@@ -8,7 +8,7 @@ import Toast from './Toast';
 
 import { emitToast, Toaster } from './';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type Story = StoryObj<typeof Toast>;
 

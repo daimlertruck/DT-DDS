@@ -2,7 +2,7 @@ import { codes } from '@dt-dds/icons';
 
 import { Link, LinkProps } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const TEXT_SIZES = ['small', 'medium', 'large'];
 

@@ -2,6 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node", "jest", "@testing-library/jest-dom", "vite/client"],
     "baseUrl": ".",
     "paths": {
       "@dt-dds/react": ["../../packages/dt-dds-react/index.ts"],

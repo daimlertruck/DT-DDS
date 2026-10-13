@@ -8,7 +8,7 @@ import { theme } from '@dt-dds/themes';
 
 import { AppHeader, type AppHeaderProps, type NavPosition } from './index';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 interface AppHeaderStory extends AppHeaderProps {
   appName?: string;

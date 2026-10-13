@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import { themes } from '@storybook/theming';
+import { themes } from 'storybook/theming';
 
 import { Global } from '@emotion/react';
 
@@ -11,7 +11,7 @@ import { theme as defaultTheme, Provider } from '@dt-dds/react';
 import { greenlaneTheme, truckAPITheme } from './themes';
 import { webFonts } from './webFonts';
 
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 
 const GlobalStyles = () => <Global styles={[...webFonts]} />;
 

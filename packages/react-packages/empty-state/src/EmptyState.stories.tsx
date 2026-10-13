@@ -5,7 +5,7 @@ import { NoDataIcon } from './mocks';
 
 import { EmptyState, EmptyStateContentProps } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type EmptyStateProps = EmptyStateContentProps & { addActionButton?: boolean };
 
