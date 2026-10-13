@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
-    "eslint-plugin-storybook": "^9.1.0",
+    "eslint-plugin-storybook": "10.6.2",
     "tsconfig": "*",
     "typescript": "^4.5.3"
   }
