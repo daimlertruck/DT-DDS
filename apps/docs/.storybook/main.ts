@@ -1,9 +1,12 @@
-import path, { join, dirname } from 'path';
+import path, { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 import type { StorybookConfig } from '@storybook/react-vite';
 
+const configDirectory = dirname(fileURLToPath(import.meta.url));
+
 const getAbsolutePath = (value: string) => {
-  return dirname(require.resolve(join(value, 'package.json')));
+  return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
 };
 
 type PathAlias = {
@@ -16,7 +19,7 @@ const resolveComponentsPath = (components: string[]): PathAlias =>
     return {
       ...acc,
       [keyName]: path.resolve(
-        __dirname,
+        configDirectory,
         `../../../packages/react-packages/${curr}/index.ts`
       ),
     };
@@ -46,62 +49,63 @@ const config: StorybookConfig = {
   },
 
   viteFinal: async (config) => {
-    if (config.resolve) {
-      const components = [
-        'link',
-        'icon-button',
-        'pagination',
-        'form',
-        'toggle',
-        'date-picker',
-        'text-area',
-        'dropdown',
-        'segmented-control',
-        'modal',
-        'card',
-        'stepper',
-        'select',
-        'progress-bar',
-        'button',
-        'label-field',
-        'text-field',
-        'table',
-        'typography',
-        'avatar',
-        'accordion',
-        'breadcrumb',
-        'checkbox',
-        'tag',
-        'backdrop',
-        'box',
-        'core',
-        'divider',
-        'drawer',
-        'empty-state',
-        'icon',
-        'message',
-        'tabs',
-        'toast',
-        'tooltip',
-        'spinner',
-        'radio',
-        'app-header',
-        'sidebar',
-      ];
+    const components = [
+      'link',
+      'icon-button',
+      'pagination',
+      'form',
+      'toggle',
+      'date-picker',
+      'text-area',
+      'dropdown',
+      'segmented-control',
+      'modal',
+      'card',
+      'stepper',
+      'select',
+      'progress-bar',
+      'button',
+      'label-field',
+      'text-field',
+      'table',
+      'typography',
+      'avatar',
+      'accordion',
+      'breadcrumb',
+      'checkbox',
+      'tag',
+      'backdrop',
+      'box',
+      'core',
+      'divider',
+      'drawer',
+      'empty-state',
+      'icon',
+      'message',
+      'tabs',
+      'toast',
+      'tooltip',
+      'spinner',
+      'radio',
+      'app-header',
+      'sidebar',
+    ];
 
-      config.resolve.alias = {
-        ...config.resolve.alias,
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve?.alias,
         '@dt-dds/react': path.resolve(
-          __dirname,
+          configDirectory,
           '../../../packages/dt-dds-react/index.ts'
         ),
         '@dt-dds/themes': path.resolve(
-          __dirname,
+          configDirectory,
           '../../../packages/themes/src/index.ts'
         ),
         ...resolveComponentsPath(components),
-      };
-    }
+      },
+    };
 
     config.esbuild = {
       ...config.esbuild,
@@ -120,6 +124,16 @@ const config: StorybookConfig = {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      tsconfigPath: path.resolve(configDirectory, '../tsconfig.json'),
+      include: [
+        path.resolve(
+          configDirectory,
+          '../../../packages/react-packages/*/src/**/*.tsx'
+        ),
+      ],
+      exclude: ['**/*.stories.tsx', '**/*.test.tsx', '**/__tests__/**'],
+    },
   },
 };
 

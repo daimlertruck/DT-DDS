@@ -12,5 +12,9 @@
       "@dt-dds/react-*": ["../../packages/react-packages/*/index.ts"]
     }
   },
-  "include": ["src/**/*", ".storybook/**/*"]
+  "include": [
+    "src/**/*",
+    ".storybook/**/*",
+    "../../packages/react-packages/*/src/**/*"
+  ]
 }
