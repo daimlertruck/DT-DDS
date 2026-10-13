@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import { Box } from '@dt-dds/react-box';
 import { Button } from '@dt-dds/react-button';

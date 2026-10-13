@@ -6,7 +6,7 @@ import { DatePickerProps } from './types';
 
 import { DateRange, enUS, ptBR, format } from '.';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const DatePicker = (props: DatePickerProps) => {
   const [value, setValue] = useState<string>(props.value ?? '');

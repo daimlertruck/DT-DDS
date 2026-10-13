@@ -14,7 +14,7 @@ import { SIDEBAR_WIDTH, SIDEBAR_WIDTH_MINI } from './constants';
 import { useSidebar } from './hooks';
 import { type SidebarProps, Sidebar } from './Sidebar';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 interface SidebarStory extends Omit<SidebarProps, 'isExpanded'> {
   isExpanded?: boolean;

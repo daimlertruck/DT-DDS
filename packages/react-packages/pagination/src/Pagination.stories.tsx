@@ -5,7 +5,7 @@ import { BaseProps } from '@dt-dds/react-core';
 import { Pagination } from './Pagination';
 import { PaginationProps } from './types';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type PaginationStoryProps = PaginationProps & BaseProps;
 

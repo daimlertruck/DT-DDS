@@ -3,7 +3,7 @@ import { Tooltip } from '@dt-dds/react-tooltip';
 
 import { TextArea, TextAreaProps } from './TextArea';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<TextAreaProps> = {
   title: 'Data Display/TextArea',

@@ -1,7 +1,5 @@
 import path, { join, dirname } from 'path';
 
-import { InlineConfig } from 'vite';
-
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const getAbsolutePath = (value: string) => {
@@ -32,9 +30,8 @@ const config: StorybookConfig = {
 
   addons: [
     getAbsolutePath('@storybook/addon-links'),
-    getAbsolutePath('@storybook/addon-essentials'),
-    getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-themes'),
+    getAbsolutePath('@storybook/addon-docs'),
   ],
 
   framework: {
@@ -48,7 +45,7 @@ const config: StorybookConfig = {
     defaultName: 'Specs',
   },
 
-  viteFinal: async (config: InlineConfig) => {
+  viteFinal: async (config) => {
     if (config.resolve) {
       const components = [
         'link',
@@ -94,7 +91,6 @@ const config: StorybookConfig = {
 
       config.resolve.alias = {
         ...config.resolve.alias,
-        '@storybook/blocks': getAbsolutePath('@storybook/blocks'),
         '@dt-dds/react': path.resolve(
           __dirname,
           '../../../packages/dt-dds-react/index.ts'

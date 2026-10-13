@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Checkbox } from './Checkbox';
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 type Story = StoryObj<typeof Checkbox>;
 

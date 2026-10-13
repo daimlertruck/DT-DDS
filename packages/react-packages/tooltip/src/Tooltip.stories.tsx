@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 
 import styled from '@emotion/styled';
 
@@ -20,11 +20,11 @@ const meta: Meta<TooltipProps> = {
   title: 'Data Display/Tooltip',
   argTypes: {
     background: {
-      options: OTooltipBackground,
+      options: Object.values(OTooltipBackground),
       control: { type: 'radio' },
     },
     direction: {
-      options: OTooltipDirection,
+      options: Object.values(OTooltipDirection),
       control: { type: 'select' },
     },
     children: {
