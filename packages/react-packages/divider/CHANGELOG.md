@@ -1,5 +1,11 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

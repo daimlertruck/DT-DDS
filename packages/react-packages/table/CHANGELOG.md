@@ -1,5 +1,11 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.62
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.61
 
 ### Patch Changes

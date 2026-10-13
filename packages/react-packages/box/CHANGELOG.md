@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.79
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

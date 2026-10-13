@@ -1,5 +1,15 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.138
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.114
+  - @dt-dds/react-link@1.0.0-beta.93
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.137
 
 ### Patch Changes

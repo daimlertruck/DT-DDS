@@ -1,5 +1,11 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.56
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.55
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.69
+
 ## 1.0.0-beta.69
 
 ### Patch Changes

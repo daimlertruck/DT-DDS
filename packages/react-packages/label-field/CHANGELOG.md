@@ -1,5 +1,14 @@
 # @dt-ui/react-label-field
 
+## 1.0.0-beta.67
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.66
 
 ### Patch Changes

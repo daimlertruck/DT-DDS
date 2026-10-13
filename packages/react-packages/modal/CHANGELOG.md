@@ -1,5 +1,17 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.116
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-backdrop@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-icon-button@1.0.0-beta.35
+  - @dt-dds/react-spinner@1.0.0-beta.119
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.115
 
 ### Patch Changes

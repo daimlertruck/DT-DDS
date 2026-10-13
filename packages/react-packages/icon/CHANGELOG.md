@@ -1,5 +1,11 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.69
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.68
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-card
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.47
 
 ### Patch Changes

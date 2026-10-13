@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.76
+
+### Patch Changes
+
+- chore: update storybook to v9
+
 ## 1.0.0-beta.75
 
 ### Patch Changes

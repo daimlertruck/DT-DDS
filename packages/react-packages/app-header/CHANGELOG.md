@@ -1,5 +1,18 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.86
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.79
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.85
 
 ### Major Changes

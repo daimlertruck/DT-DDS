@@ -1,5 +1,14 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-tooltip@1.0.0-beta.76
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

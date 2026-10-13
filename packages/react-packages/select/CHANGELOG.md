@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.105
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.79
+  - @dt-dds/react-checkbox@1.0.0-beta.70
+  - @dt-dds/react-dropdown@1.0.0-beta.109
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-icon-button@1.0.0-beta.35
+  - @dt-dds/react-label-field@1.0.0-beta.67
+  - @dt-dds/react-tooltip@1.0.0-beta.76
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.104
 
 ### Patch Changes

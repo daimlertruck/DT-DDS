@@ -1,5 +1,15 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.115
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.79
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-icon-button@1.0.0-beta.35
+
 ## 1.0.0-beta.114
 
 ### Patch Changes

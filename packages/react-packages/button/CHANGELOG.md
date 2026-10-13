@@ -1,5 +1,13 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.114
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.119
+
 ## 1.0.0-beta.113
 
 ### Patch Changes

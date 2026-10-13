@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.114
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.109
+  - @dt-dds/react-icon@1.0.0-beta.69
+  - @dt-dds/react-text-field@1.0.0-beta.128
+
 ## 1.0.0-beta.113
 
 ### Patch Changes

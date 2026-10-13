@@ -1,5 +1,14 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.79
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

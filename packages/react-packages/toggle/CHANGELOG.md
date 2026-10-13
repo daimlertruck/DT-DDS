@@ -1,5 +1,13 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.45
+
+### Patch Changes
+
+- chore: update storybook to v9
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.56
+
 ## 1.0.0-beta.44
 
 ### Patch Changes
