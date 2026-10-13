@@ -1,3 +1,0 @@
-var n=Object.defineProperty;var a=(e,o)=>n(e,"name",{value:o,configurable:!0});import{t as m}from"./jsx-runtime-CPdzY0Ku.js";import{t as s}from"./src-D8J0l-L9.js";var t=m(),l={title:"Data Display/Box",component:s,argTypes:{element:{control:"text"}},render:a(({...e})=>(0,t.jsxs)(s,{...e,children:[(0,t.jsx)("p",{children:"Content 1"}),(0,t.jsx)("p",{children:"Content 2"})]}),"render")},r={args:{}};r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...r.parameters?.docs?.source}}};var d=["Default"];export{r as Default,d as __namedExportsOrder,l as default};
