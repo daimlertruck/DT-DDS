@@ -9,6 +9,7 @@
     "dev": "storybook dev -p 6006",
     "lint": "eslint --cache .",
     "test-storybook": "vitest run --project=storybook",
+    "test-storybook:ci": "yarn test-storybook --reporter=default --reporter=json --outputFile=test-results/storybook.json",
     "preview-storybook": "vite storybook-static"
   },
   "dependencies": {

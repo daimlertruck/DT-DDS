@@ -136,6 +136,41 @@ jobs:
           name: sonar-coverage
           path: sonar-coverage/**
 
+  storybook-tests:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'chore(release):') }}
+    needs: lint
+    timeout-minutes: 20
+    env:
+      STORYBOOK_DISABLE_TELEMETRY: '1'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+        with:
+          CACHE_FILE_NAME: 'global'
+
+      - name: Install Chromium
+        run: yarn workspace @dt-dds/docs playwright install --with-deps chromium
+
+      - name: Run Storybook tests and accessibility scans
+        run: yarn workspace @dt-dds/docs test-storybook:ci
+
+      - name: Summarise accessibility results
+        if: ${{ !cancelled() && hashFiles('apps/docs/test-results/storybook.json') != '' }}
+        run: jq -r -f apps/docs/scripts/a11y-summary.jq apps/docs/test-results/storybook.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload Storybook test reports
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: storybook-test-results
+          path: apps/docs/test-results/storybook.json
+          if-no-files-found: warn
+          retention-days: 14
+
   sonarqube-scan:
     runs-on: ubuntu-latest
     if: >-
