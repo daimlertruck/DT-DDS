@@ -40,6 +40,7 @@ const preview: Preview = {
   ],
 
   parameters: {
+    a11y: { test: 'todo' },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {

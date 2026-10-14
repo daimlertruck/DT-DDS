@@ -4,6 +4,7 @@ node_modules
 # testing
 coverage
 **/jest-coverage
+apps/docs/test-results/
 
 # misc
 .DS_Store
