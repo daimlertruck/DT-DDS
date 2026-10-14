@@ -8,6 +8,7 @@
     "clean": "rm -rf .turbo && rm -rf node_modules",
     "dev": "storybook dev -p 6006",
     "lint": "eslint --cache .",
+    "test-storybook": "vitest run --project=storybook",
     "preview-storybook": "vite storybook-static"
   },
   "dependencies": {
@@ -18,8 +19,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@storybook/addon-docs": "10.6.2",
     "@storybook/addon-links": "10.6.2",
     "@storybook/addon-themes": "10.6.2",
+    "@storybook/addon-vitest": "10.6.2",
     "@storybook/react-vite": "10.6.2",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint-config-custom": "*",
@@ -30,6 +33,9 @@
     "vite": "^8.2.2",
     "vite-plugin-node-polyfills": "^0.28.0",
     "vite-tsconfig-paths": "^4.3.1",
-    "@storybook/addon-docs": "10.6.2"
+    "vitest": "^5.0.4",
+    "@vitest/browser-playwright": "^5.0.4",
+    "@vitest/coverage-v8": "^5.0.4",
+    "playwright": "^1.64.0"
   }
 }
