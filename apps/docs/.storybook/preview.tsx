@@ -29,6 +29,16 @@ export const decorators = [
 ];
 
 const preview: Preview = {
+  // Icon ligatures read as text to axe until the font is loaded.
+  loaders: [
+    async () => {
+      await Promise.all([
+        document.fonts.load('24px DTUI-icons-outlined'),
+        document.fonts.load('24px DTUI-icons-sharp'),
+      ]);
+    },
+  ],
+
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
