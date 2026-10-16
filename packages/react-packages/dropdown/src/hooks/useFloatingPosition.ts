@@ -46,6 +46,22 @@ function basePos({
   }
 }
 
+const STYLE_KEYS = [
+  'position',
+  'top',
+  'left',
+  'width',
+  'maxWidth',
+  'boxSizing',
+  'zIndex',
+  'visibility',
+] as const;
+
+// Keeps the previous style object when nothing changed, so observing the
+// menu cannot loop: set style → menu resizes → same values → no re-render.
+const isSameStyle = (a: React.CSSProperties, b: React.CSSProperties) =>
+  STYLE_KEYS.every((key) => a[key] === b[key]);
+
 export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
   anchorEl: RefObject<HTMLElement | null | undefined>,
   open: boolean,
@@ -109,7 +125,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
       left = Math.max(minViewportPadding, Math.min(left, maxLeft));
       top = Math.max(minViewportPadding, Math.min(top, maxTop));
 
-      setStyle({
+      const next: React.CSSProperties = {
         position: 'fixed',
         top,
         left,
@@ -117,7 +133,9 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
         maxWidth: matchWidth ? anchor.width : 300,
         boxSizing: 'border-box',
         zIndex: DROPDOWN_MENU_Z_INDEX,
-      });
+      };
+
+      setStyle((prev) => (isSameStyle(prev, next) ? prev : next));
     };
 
     updatePosition();
@@ -126,8 +144,8 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
     ro.observe(anchorElement);
 
-    if (anchorElement) {
-      ro.observe(anchorElement);
+    if (menuElement) {
+      ro.observe(menuElement);
     }
 
     const opts: AddEventListenerOptions = { passive: true };

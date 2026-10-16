@@ -143,4 +143,31 @@ describe('<Dropdown /> ', () => {
     await user.keyboard('{Enter}');
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
+
+  describe('resize observation', () => {
+    const originalResizeObserver = window.ResizeObserver;
+    const observe = jest.fn();
+
+    beforeEach(() => {
+      window.ResizeObserver = jest.fn().mockImplementation(() => ({
+        observe,
+        unobserve: jest.fn(),
+        disconnect: jest.fn(),
+      }));
+    });
+
+    afterEach(() => {
+      window.ResizeObserver = originalResizeObserver;
+    });
+
+    test('AC4: observes the menu element after the dropdown opens', async () => {
+      const user = userEvent.setup();
+
+      render(<TestComponent />);
+
+      await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+
+      expect(observe).toHaveBeenCalledWith(screen.getByTestId(dropdownTestId));
+    });
+  });
 });
