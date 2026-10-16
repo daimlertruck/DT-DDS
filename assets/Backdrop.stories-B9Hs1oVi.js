@@ -1,0 +1,7 @@
+var m=Object.defineProperty;var n=(r,t)=>m(r,"name",{value:t,configurable:!0});import{n as u}from"./rolldown-runtime-CzYk_CEw.js";import{t as k}from"./react-HNhQAnN4.js";import{t as _}from"./jsx-runtime-Br4tQxt1.js";import{t as f,u as x}from"./core-iT5y2qo8.js";import{i as y,n as B,r as i,t as o}from"./Backdrop-BXb0MCLw.js";var p,e,c,a,h,g;function d(){return(d=u((()=>{p=k(),f(),B(),y(),e=_(),c=n(({...r})=>{const[t,l]=(0,p.useState)(!1),s=n(()=>l(!t),"toggleBackdrop");return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)("button",{onClick:s,type:"button",children:"Open Backdrop"}),(0,e.jsx)(x,{isOpen:t,children:(0,e.jsxs)(o,{...r,isOpen:t,children:[(0,e.jsx)(e.Fragment,{children:r.children}),(0,e.jsx)("button",{onClick:s,type:"button",children:"Close Backdrop"})]})})]})},"Template"),a={args:{isOpen:!1,type:i.Dark,children:(0,e.jsx)("div",{children:"Example content."})}},h={title:"Data Display/Backdrop",component:o,render:c,argTypes:{type:{mapping:i,options:Object.values(i).filter(r=>typeof r=="string"),control:{type:"inline-radio"}},children:{table:{disable:!0}},isOpen:{table:{disable:!0}}}},g=["Default"],a.parameters={...a.parameters,docs:{...a.parameters?.docs,source:{originalSource:`{
+  args: {
+    isOpen: false,
+    type: BackdropType.Dark,
+    children: <div>Example content.</div>
+  }
+}`,...a.parameters?.docs?.source}}}})))()}n(d,"init_Backdrop_stories");d();export{a as Default,g as __namedExportsOrder,h as default};

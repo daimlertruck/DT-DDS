@@ -45,10 +45,10 @@
       window.LOGLEVEL = 'info';
       window.FRAMEWORK_OPTIONS = {};
       window.CHANNEL_OPTIONS = {};
-      window.FEATURES = {"argTypeTargetsV7":true,"legacyDecoratorFileOrder":false,"disallowImplicitActionsInRenderV8":true,"viewport":true,"highlight":true,"controls":true,"interactions":true,"actions":true,"backgrounds":true,"outline":true,"measure":true};
+      window.FEATURES = {"actions":true,"argTypeTargetsV7":true,"babelRemoveBugfixes":false,"backgrounds":true,"changeDetection":true,"componentsManifest":true,"controls":true,"disallowImplicitActionsInRenderV8":true,"highlight":true,"interactions":true,"legacyDecoratorFileOrder":false,"measure":true,"outline":true,"menuOnboardingChecklist":true,"sidebarOnboardingChecklist":true,"viewport":true};
       window.STORIES = [{"titlePrefix":"","directory":"../../packages/react-packages","files":"**/*.stories.@(js|jsx|ts|tsx)","importPathMatcher":"^(?:\\.\\.\\/\\.\\.\\/packages\\/react-packages(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.stories\\.(js|jsx|ts|tsx))$"},{"titlePrefix":"","directory":"./src","files":"**/*.mdx","importPathMatcher":"^\\.[\\\\/](?:src(?:\\/(?!\\.)(?:(?:(?!(?:^|\\/)\\.).)*?)\\/|\\/|$)(?!\\.)(?=.)[^/]*?\\.mdx)$"}];
       window.DOCS_OPTIONS = {"defaultName":"Specs","docsMode":true};
-      window.TAGS_OPTIONS = {"dev-only":{"excludeFromDocsStories":true},"docs-only":{"excludeFromSidebar":true},"test-only":{"excludeFromSidebar":true,"excludeFromDocsStories":true}};
+      window.TAGS_OPTIONS = {};
 
       
 
@@ -169,7 +169,13 @@
     margin: auto;
     padding: 30px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.03);
+    background: rgb(247, 247, 247);
+    color: rgb(46, 52, 56);
+  }
+
+  .sb-nopreview_main * {
+    background: rgb(247, 247, 247);
+    color: rgb(46, 52, 56);
   }
 
   .sb-nopreview_heading {
@@ -183,49 +189,6 @@
     width: 100vw;
     min-height: 100vh;
     box-sizing: border-box;
-
-    & ol {
-      padding-left: 18px;
-      margin: 0;
-    }
-
-    & h1 {
-      font-family: Nunito Sans;
-      font-size: 22px;
-      font-weight: 400;
-      line-height: 30px;
-      font-weight: normal;
-      margin: 0;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        background: #ff4400;
-        border-radius: 50%;
-        margin-right: 8px;
-      }
-    }
-
-    & p,
-    & ol {
-      font-family: Nunito Sans;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 19px;
-      margin: 0;
-    }
-
-    & li + li {
-      margin: 0;
-      padding: 0;
-      padding-top: 12px;
-    }
-
-    & a {
-      color: currentColor;
-    }
   }
 
   .sb-errordisplay_main {
@@ -239,12 +202,68 @@
     width: 100%;
     border-radius: 6px;
     background: white;
+    color: black;
     border: 1px solid #ff0000;
     box-shadow: 0 0 64px rgba(0, 0, 0, 0.1);
     gap: 24px;
   }
 
-  .sb-errordisplay_code {
+  .sb-errordisplay_main ol {
+    padding-left: 18px;
+    margin: 0;
+  }
+
+  /* Redefine colors to ensure readability regardless of user-provided * selectors. */
+  .sb-errordisplay_main * {
+    background: white;
+    color: black;
+  }
+
+  /* Exclude error code block from the universal reset to preserve ANSI colors and dark theme */
+  .sb-errordisplay_main .sb-errordisplay_code,
+  .sb-errordisplay_main .sb-errordisplay_code * {
+    background: #242424;
+    color: #c6c6c6;
+  }
+
+  .sb-errordisplay_main h1 {
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  .sb-errordisplay_main h1::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #ff4400;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .sb-errordisplay_main p,
+  .sb-errordisplay_main ol {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 0;
+  }
+
+  .sb-errordisplay_main li + li {
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+  }
+
+  .sb-errordisplay_main a {
+    color: currentColor;
+  }
+
+  .sb-errordisplay_main .sb-errordisplay_code {
     padding: 10px;
     flex: 1;
     background: #242424;
@@ -263,9 +282,13 @@
     overflow: auto;
   }
 
-  .sb-errordisplay pre {
+  .sb-errordisplay_main .sb-errordisplay_code code {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  .sb-errordisplay_main .sb-errordisplay_code {
     white-space: pre-wrap;
-    white-space: revert;
   }
 
   @-webkit-keyframes sb-rotate360 {
@@ -531,63 +554,73 @@
 <link rel="preload" href="./fonts/daimler-cs/DaimlerCS-Bold.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="./fonts/daimler-cs/DaimlerCS-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
-    <script type="module" crossorigin src="./assets/iframe-QR4HU1Ek.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/preload-helper-DhB_op97.js">
-    <link rel="modulepreload" crossorigin href="./assets/dist-CRBXG1Gd.js">
-    <link rel="modulepreload" crossorigin href="./assets/react-Cv64OdzP.js">
-    <link rel="modulepreload" crossorigin href="./assets/emotion-styled.browser.esm-YTZgSpOx.js">
-    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-CPdzY0Ku.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-DQoSsMZn.js">
-    <link rel="modulepreload" crossorigin href="./assets/icon-DhOkWClN.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-QXsAq41S.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-CIbK0PmT.js">
-    <link rel="modulepreload" crossorigin href="./assets/react-dom-knKIDgbC.js">
-    <link rel="modulepreload" crossorigin href="./assets/core-DRZ7abR7.js">
-    <link rel="modulepreload" crossorigin href="./assets/Tooltip-C-JSQzch.js">
-    <link rel="modulepreload" crossorigin href="./assets/tooltip-BtQECjo8.js">
-    <link rel="modulepreload" crossorigin href="./assets/Typography-CS3NCxJQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/Avatar-CX5f_yUN.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-D8J0l-L9.js">
-    <link rel="modulepreload" crossorigin href="./assets/box-urSjHwr1.js">
-    <link rel="modulepreload" crossorigin href="./assets/typography-D_Go94-A.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-D1Qh05WX.js">
-    <link rel="modulepreload" crossorigin href="./assets/hexToRgba-D41tBJLG.js">
-    <link rel="modulepreload" crossorigin href="./assets/Backdrop-BhdaYJhj.js">
-    <link rel="modulepreload" crossorigin href="./assets/IconButton-BE7TQeEH.js">
-    <link rel="modulepreload" crossorigin href="./assets/icon-button-B_sQRfEN.js">
-    <link rel="modulepreload" crossorigin href="./assets/Spinner-DXfboVRA.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-nouKxEiA.js">
-    <link rel="modulepreload" crossorigin href="./assets/hooks-BuHhZVFw.js">
-    <link rel="modulepreload" crossorigin href="./assets/Breadcrumb-6G8QFR63.js">
-    <link rel="modulepreload" crossorigin href="./assets/Divider-CISBFUYO.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-B9Om6pUv.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-OU3XgJFE.js">
-    <link rel="modulepreload" crossorigin href="./assets/link-D2TqXT6u.js">
-    <link rel="modulepreload" crossorigin href="./assets/LabelField-CWsUQMgQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/label-field-xVQl9czj.js">
-    <link rel="modulepreload" crossorigin href="./assets/Message-D6ulE3rT.js">
-    <link rel="modulepreload" crossorigin href="./assets/hooks-DHPQM1eK.js">
-    <link rel="modulepreload" crossorigin href="./assets/Tag-iXyqX-Db.js">
-    <link rel="modulepreload" crossorigin href="./assets/button-BXRX0Bcp.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-BWQqKnhK.js">
-    <link rel="modulepreload" crossorigin href="./assets/Checkbox-Dl0STaCk.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-DDyrhpyf.js">
-    <link rel="modulepreload" crossorigin href="./assets/dropdown-CL-owEoe.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-CinwjrCQ.js">
-    <link rel="modulepreload" crossorigin href="./assets/TextField-7WDcPiyI.js">
-    <link rel="modulepreload" crossorigin href="./assets/text-field-UpcgPajt.js">
-    <link rel="modulepreload" crossorigin href="./assets/ProgressBar-Byo2hXsg.js">
-    <link rel="modulepreload" crossorigin href="./assets/Pagination-C2wNhsH9.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-H6_uN_tb.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-Brw_npQd.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-3JVM9xNB.js">
-    <link rel="modulepreload" crossorigin href="./assets/SegmentedControl-DdHdTE0j.js">
-    <link rel="modulepreload" crossorigin href="./assets/Toggle-DrC8kltR.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-CZZawNG_.js">
-    <link rel="modulepreload" crossorigin href="./assets/TextArea-DeDxPD-O.js">
-    <link rel="modulepreload" crossorigin href="./assets/src-BFniuRCG.js">
-    <link rel="modulepreload" crossorigin href="./assets/app-header-p3NRLjIo.js">
-    <link rel="modulepreload" crossorigin href="./assets/dt-dds-react-Z4OTEK7q.js">
+    <script type="module" crossorigin src="./assets/iframe-KxYJHKYh.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CzYk_CEw.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-DKtw7Q4A.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BnNmkiFH.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-Cu6qZ-Q2.js">
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-CAdrw1R-.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-HNhQAnN4.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-7PIQR4A3-BEn2iH6p.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-DRQKCCAG-DUTWVTIm.js">
+    <link rel="modulepreload" crossorigin href="./assets/esm-Xjy5IHdh.js">
+    <link rel="modulepreload" crossorigin href="./assets/chunk-UAWMPV5J-fhoOHjgV.js">
+    <link rel="modulepreload" crossorigin href="./assets/theming-D7iYm3xf.js">
+    <link rel="modulepreload" crossorigin href="./assets/emotion-styled.browser.esm-Wn4chyPq.js">
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-Br4tQxt1.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-CxSihfGl.js">
+    <link rel="modulepreload" crossorigin href="./assets/icon-DNJaxs4J.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-q9-bJ3BO.js">
+    <link rel="modulepreload" crossorigin href="./assets/themes-BrpzLIB1.js">
+    <link rel="modulepreload" crossorigin href="./assets/Typography-nGlOdhX5.js">
+    <link rel="modulepreload" crossorigin href="./assets/hexToRgba-BfvTWa29.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-B2m5VJda.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-DRgAHUez.js">
+    <link rel="modulepreload" crossorigin href="./assets/core-iT5y2qo8.js">
+    <link rel="modulepreload" crossorigin href="./assets/Tooltip-CCspxkTm.js">
+    <link rel="modulepreload" crossorigin href="./assets/tooltip-DSUrrcOu.js">
+    <link rel="modulepreload" crossorigin href="./assets/Avatar-DmSgbckF.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-CYYpCRzL.js">
+    <link rel="modulepreload" crossorigin href="./assets/box-Dhy-LEcB.js">
+    <link rel="modulepreload" crossorigin href="./assets/typography-Dq-PyVOH.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-BbqZ_gYz.js">
+    <link rel="modulepreload" crossorigin href="./assets/Backdrop-BXb0MCLw.js">
+    <link rel="modulepreload" crossorigin href="./assets/IconButton-yXF3faAu.js">
+    <link rel="modulepreload" crossorigin href="./assets/icon-button-DemP2Y7v.js">
+    <link rel="modulepreload" crossorigin href="./assets/Spinner-DosNGkDc.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-Cpm86LIu.js">
+    <link rel="modulepreload" crossorigin href="./assets/hooks-BD9yyuLn.js">
+    <link rel="modulepreload" crossorigin href="./assets/Breadcrumb-BwiBlw8y.js">
+    <link rel="modulepreload" crossorigin href="./assets/Divider-Chyk3QAv.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-Byf_1GsM.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-ZKQooDc1.js">
+    <link rel="modulepreload" crossorigin href="./assets/link-DNc8QcFX.js">
+    <link rel="modulepreload" crossorigin href="./assets/LabelField-BdMpeKgX.js">
+    <link rel="modulepreload" crossorigin href="./assets/label-field-CRJV5g0U.js">
+    <link rel="modulepreload" crossorigin href="./assets/Message-9C5C_N15.js">
+    <link rel="modulepreload" crossorigin href="./assets/hooks-BhEXSrE7.js">
+    <link rel="modulepreload" crossorigin href="./assets/Tag-BgvsvZI5.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-7XW4RpJZ.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-BowACzTw.js">
+    <link rel="modulepreload" crossorigin href="./assets/Checkbox--UY-HrMq.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-DtClAHO8.js">
+    <link rel="modulepreload" crossorigin href="./assets/dropdown-C85QIW2p.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-I8KwluY5.js">
+    <link rel="modulepreload" crossorigin href="./assets/TextField-BforJ7Fm.js">
+    <link rel="modulepreload" crossorigin href="./assets/text-field-Cq0gLYal.js">
+    <link rel="modulepreload" crossorigin href="./assets/ProgressBar-DIG5X3K2.js">
+    <link rel="modulepreload" crossorigin href="./assets/Pagination-BNvSa06v.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-ChsMlj43.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-Cg4Oljs1.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-C3jXdyoN.js">
+    <link rel="modulepreload" crossorigin href="./assets/SegmentedControl-1rzosk7N.js">
+    <link rel="modulepreload" crossorigin href="./assets/Toggle-Bf2IHlHR.js">
+    <link rel="modulepreload" crossorigin href="./assets/DatePicker.stories-Ba2ouznY.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-FTVyOlBs.js">
+    <link rel="modulepreload" crossorigin href="./assets/TextArea-B1aaTs-H.js">
+    <link rel="modulepreload" crossorigin href="./assets/src-CJLcNpWN.js">
+    <link rel="modulepreload" crossorigin href="./assets/app-header-DxSCBSnP.js">
+    <link rel="modulepreload" crossorigin href="./assets/dt-dds-react-CpKUOyDB.js">
     <link rel="stylesheet" crossorigin href="./assets/src-B3hq5rUH.css">
     <link rel="stylesheet" crossorigin href="./assets/iframe-CvToBiHH.css">
   </head>
@@ -721,10 +754,10 @@
         if (hostname !== 'localhost' && globalThis.CONFIG_TYPE === 'DEVELOPMENT') {
           const message = `Failed to load the Storybook preview file 'vite-app.js':
 
-It looks like you're visiting the Storybook development server on another hostname than localhost: '${hostname}', but you haven't configured the necessary security features to support this.
-Please re-run your Storybook development server with the '--host ${hostname}' flag, or manually configure your Vite allowedHosts configuration with viteFinal.
+      It looks like you're visiting the Storybook development server on another hostname than localhost: '${hostname}', but you haven't configured the necessary security features to support this.
+      Please re-run your Storybook development server with the '--host ${hostname}' flag, or manually configure your Vite allowedHosts configuration with viteFinal.
 
-See:`;
+      See:`;
           const docs = [
             'https://storybook.js.org/docs/api/cli-options#dev',
             'https://storybook.js.org/docs/api/main-config/main-config-vite-final',
@@ -736,7 +769,7 @@ See:`;
             `<p style="color: red; max-width: 70ch">${message.replaceAll(
               '\n',
               '<br/>'
-            )}<ul>${docs.map((doc) => `<li><a href='${doc}' target='_blank'>${doc}</a></li>`).join('')}<ul></p>`;
+            )}<ul>${docs.map((doc) => `<li><a href='${doc}' target='_blank'>${doc}</a></li>`).join('')}</ul></p>`;
           return;
         }
       }
