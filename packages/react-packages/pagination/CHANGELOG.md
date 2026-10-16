@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.107
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

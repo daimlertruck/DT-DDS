@@ -1,5 +1,11 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

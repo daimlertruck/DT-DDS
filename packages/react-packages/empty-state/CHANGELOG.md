@@ -1,5 +1,13 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.140
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.95
+
 ## 1.0.0-beta.139
 
 ### Patch Changes

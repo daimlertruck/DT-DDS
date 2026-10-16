@@ -1,5 +1,11 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.95
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+
 ## 1.0.0-beta.94
 
 ### Patch Changes

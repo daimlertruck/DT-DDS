@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-select",
-  "version": "1.0.0-beta.106",
+  "version": "1.0.0-beta.107",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@dt-dds/react-box": "1.0.0-beta.80",
-    "@dt-dds/react-checkbox": "1.0.0-beta.71",
+    "@dt-dds/react-checkbox": "1.0.0-beta.72",
     "@dt-dds/react-core": "1.0.0-beta.65",
     "@dt-dds/react-dropdown": "1.0.0-beta.110",
     "@dt-dds/react-icon": "1.0.0-beta.70",

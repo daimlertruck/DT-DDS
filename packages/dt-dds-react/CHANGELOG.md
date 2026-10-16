@@ -1,5 +1,19 @@
 # @dt-ui/react
 
+## 1.0.0-beta.344
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-checkbox@1.0.0-beta.72
+  - @dt-dds/react-link@1.0.0-beta.95
+  - @dt-dds/react-pagination@1.0.0-beta.58
+  - @dt-dds/react-select@1.0.0-beta.107
+  - @dt-dds/react-empty-state@1.0.0-beta.140
+  - @dt-dds/react-app-header@1.0.0-beta.88
+
 ## 1.0.0-beta.343
 
 ### Patch Changes

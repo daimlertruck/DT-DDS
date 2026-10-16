@@ -1,5 +1,13 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.107
+
+### Patch Changes
+
+- fix: declare is-prop-valid dependency
+- Updated dependencies
+  - @dt-dds/react-checkbox@1.0.0-beta.72
+
 ## 1.0.0-beta.106
 
 ### Patch Changes
