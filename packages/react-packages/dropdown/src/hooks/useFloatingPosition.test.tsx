@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 
 import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
 
@@ -26,7 +26,63 @@ function spyRect(el: HTMLElement, rect: DOMRect) {
   return jest.spyOn(el, 'getBoundingClientRect').mockImplementation(() => rect);
 }
 
+interface FakeResizeObserver {
+  callback: ResizeObserverCallback;
+  observe: jest.Mock;
+  unobserve: jest.Mock;
+  disconnect: jest.Mock;
+  targets: Set<Element>;
+  disconnected: boolean;
+}
+
+const originalResizeObserver = window.ResizeObserver;
+
+function installResizeObserver() {
+  const instances: FakeResizeObserver[] = [];
+
+  class ResizeObserverFake {
+    constructor(callback: ResizeObserverCallback) {
+      const instance: FakeResizeObserver = {
+        callback,
+        targets: new Set(),
+        disconnected: false,
+        observe: jest.fn((target: Element) => {
+          instance.targets.add(target);
+        }),
+        unobserve: jest.fn((target: Element) => {
+          instance.targets.delete(target);
+        }),
+        disconnect: jest.fn(() => {
+          instance.targets.clear();
+          instance.disconnected = true;
+        }),
+      };
+      instances.push(instance);
+      return instance as unknown as ResizeObserverFake;
+    }
+  }
+
+  window.ResizeObserver =
+    ResizeObserverFake as unknown as typeof ResizeObserver;
+
+  // Invokes the callback of every live observer that watches `target`,
+  // as the browser does when that element changes size.
+  const fire = (target: Element) => {
+    instances
+      .filter((ro) => !ro.disconnected && ro.targets.has(target))
+      .forEach((ro) =>
+        ro.callback(
+          [{ target } as ResizeObserverEntry],
+          ro as unknown as ResizeObserver
+        )
+      );
+  };
+
+  return { instances, fire };
+}
+
 type MenuProps = {
+  onRender?: (style: React.CSSProperties) => void;
   open?: boolean;
   placement?: 'bottom' | 'top' | 'left' | 'right';
   matchWidth?: boolean;
@@ -40,6 +96,7 @@ type MenuProps = {
 const menuTestId = 'menu';
 
 const Menu = ({
+  onRender,
   open = true,
   placement = 'bottom',
   matchWidth = true,
@@ -60,6 +117,8 @@ const Menu = ({
     minViewportPadding,
     menuRef,
   });
+
+  onRender?.(style);
 
   return (
     <div>
@@ -92,6 +151,10 @@ describe('useFloatingPosition', () => {
       value: 800,
       configurable: true,
     });
+  });
+
+  afterEach(() => {
+    window.ResizeObserver = originalResizeObserver;
   });
 
   test('should return hidden and fixed style if closed', () => {
@@ -195,5 +258,99 @@ describe('useFloatingPosition', () => {
 
     // left = 10 - 5 - 100 = -95 -> clamp to 16; top 5, below padding -> clamp to 16
     expect(menu).toHaveStyle({ left: '16px', top: '16px' });
+  });
+
+  describe('when the menu resizes after open (matchWidth=false)', () => {
+    const anchorRect = makeRect({ left: 600, top: 10, width: 100, height: 40 });
+    // First measurement: the menu still spans the viewport (width: 100%).
+    const wideMenuRect = makeRect({ left: 0, top: 0, width: 1000, height: 80 });
+    // After maxWidth: 300 applies, the menu shrinks.
+    const cappedMenuRect = makeRect({
+      left: 0,
+      top: 0,
+      width: 300,
+      height: 80,
+    });
+
+    const renderResizingMenu = (onRender?: MenuProps['onRender']) => {
+      const ro = installResizeObserver();
+      const props = {
+        anchorRect,
+        matchWidth: false,
+        offsetX: -200,
+        onRender,
+        open: true,
+        placement: 'bottom' as const,
+      };
+      const utils = render(<Menu {...props} menuRect={wideMenuRect} />);
+      const menu = screen.getByTestId(menuTestId);
+
+      // left = 600 - 200 = 400; maxLeft = max(8, 1000 - 1000 - 8) = 8
+      expect(menu).toHaveStyle({ left: '8px' });
+
+      utils.rerender(<Menu {...props} menuRect={cappedMenuRect} />);
+      expect(menu).toHaveStyle({ left: '8px' });
+
+      act(() => ro.fire(menu));
+
+      return { ...utils, ro, menu, props };
+    };
+
+    test('AC1: recomputes left when the menu resizes after open (matchWidth=false)', () => {
+      const { menu } = renderResizingMenu();
+
+      // left = 400; maxLeft = 1000 - 300 - 8 = 692; top = 50 + 4 = 54
+      expect(menu).toHaveStyle({ left: '400px', top: '54px' });
+    });
+
+    test('AC2: keeps maxWidth 300px after the menu resizes', () => {
+      const { menu } = renderResizingMenu();
+
+      expect(menu).toHaveStyle({ maxWidth: '300px' });
+      expect(menu.style.width).toBe('');
+    });
+
+    test('AC3: does not update style again when the menu size is stable', () => {
+      const styles = new Set<React.CSSProperties>();
+      const { menu, ro } = renderResizingMenu((style) => styles.add(style));
+
+      expect(menu).toHaveStyle({ left: '400px' });
+      const distinctStyles = styles.size;
+
+      act(() => ro.fire(menu));
+      act(() => ro.fire(menu));
+
+      expect(styles.size).toBe(distinctStyles);
+      expect(menu).toHaveStyle({ left: '400px', top: '54px' });
+    });
+
+    test('AC4: observes the menu and the anchor, and disconnects on close and unmount', () => {
+      const ro = installResizeObserver();
+      const props = {
+        anchorRect,
+        matchWidth: false,
+        menuRect: cappedMenuRect,
+        offsetX: -200,
+      };
+      const { rerender, unmount } = render(<Menu {...props} open />);
+      const menu = screen.getByTestId(menuTestId);
+      const anchor = screen.getByTestId('anchor');
+
+      expect(ro.instances).toHaveLength(1);
+      const [first] = ro.instances;
+      expect(first.observe).toHaveBeenCalledTimes(2);
+      expect(first.observe).toHaveBeenCalledWith(menu);
+      expect(first.observe).toHaveBeenCalledWith(anchor);
+
+      rerender(<Menu {...props} open={false} />);
+      expect(first.disconnect).toHaveBeenCalledTimes(1);
+
+      rerender(<Menu {...props} open />);
+      expect(ro.instances).toHaveLength(2);
+      const second = ro.instances[1];
+
+      unmount();
+      expect(second.disconnect).toHaveBeenCalledTimes(1);
+    });
   });
 });
