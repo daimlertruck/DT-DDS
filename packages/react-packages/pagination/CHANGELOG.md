@@ -1,5 +1,18 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.57
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+  - @dt-dds/react-select@1.0.0-beta.106
+  - @dt-dds/react-tooltip@1.0.0-beta.77
+  - @dt-dds/react-typography@1.0.0-beta.57
+
 ## 1.0.0-beta.56
 
 ### Patch Changes

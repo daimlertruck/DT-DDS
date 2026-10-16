@@ -1,5 +1,16 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.133
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.115
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+  - @dt-dds/react-typography@1.0.0-beta.57
+
 ## 1.0.0-beta.132
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dt-dds/react-sidebar
 
+## 1.0.0-beta.15
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+  - @dt-dds/react-icon-button@1.0.0-beta.36
+  - @dt-dds/react-tooltip@1.0.0-beta.77
+  - @dt-dds/react-typography@1.0.0-beta.57
+
 ## 1.0.0-beta.14
 
 ### Patch Changes

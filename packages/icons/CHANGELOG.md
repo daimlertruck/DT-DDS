@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.9
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+
 ## 1.0.0-beta.8
 
 ### Patch Changes

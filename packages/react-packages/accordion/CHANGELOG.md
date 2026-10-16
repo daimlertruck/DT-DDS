@@ -1,5 +1,15 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-divider@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+
 ## 1.0.0-beta.69
 
 ### Patch Changes

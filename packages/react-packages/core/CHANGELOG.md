@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

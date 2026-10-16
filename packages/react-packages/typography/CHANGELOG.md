@@ -1,5 +1,13 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.57
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+
 ## 1.0.0-beta.56
 
 ### Patch Changes

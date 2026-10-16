@@ -1,5 +1,15 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+  - @dt-dds/react-tooltip@1.0.0-beta.77
+
 ## 1.0.0-beta.80
 
 ### Patch Changes

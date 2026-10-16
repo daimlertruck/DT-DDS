@@ -1,5 +1,14 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.9
+  - @dt-dds/react-core@1.0.0-beta.65
+
 ## 1.0.0-beta.69
 
 ### Patch Changes

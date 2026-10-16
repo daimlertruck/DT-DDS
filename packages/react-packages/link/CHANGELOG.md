@@ -1,5 +1,16 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.94
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.9
+  - @dt-dds/react-button@1.0.0-beta.115
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+
 ## 1.0.0-beta.93
 
 ### Patch Changes

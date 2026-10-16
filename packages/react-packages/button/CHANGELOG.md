@@ -1,5 +1,14 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.115
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-spinner@1.0.0-beta.120
+
 ## 1.0.0-beta.114
 
 ### Patch Changes

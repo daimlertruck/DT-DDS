@@ -1,5 +1,13 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.65
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

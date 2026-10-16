@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.116
+
+### Patch Changes
+
+- chore: upgrade storybook to v10
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.80
+  - @dt-dds/react-core@1.0.0-beta.65
+  - @dt-dds/react-icon@1.0.0-beta.70
+  - @dt-dds/react-icon-button@1.0.0-beta.36
+
 ## 1.0.0-beta.115
 
 ### Patch Changes
