@@ -16,6 +16,36 @@ type Item = {
   valueLabel?: string;
 };
 
+const makeRect = ({
+  left,
+  top,
+  width,
+  height,
+}: {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}): DOMRect =>
+  ({
+    x: left,
+    y: top,
+    left,
+    top,
+    width,
+    height,
+    right: left + width,
+    bottom: top + height,
+    toJSON: () => ({}),
+  } as DOMRect);
+
+const mockVisibleAnchorRect = (anchor: HTMLElement) =>
+  jest
+    .spyOn(anchor, 'getBoundingClientRect')
+    .mockImplementation(() =>
+      makeRect({ left: 10, top: 10, width: 200, height: 40 })
+    );
+
 const items: Item[] = [
   { value: 'opt1', label: 'Option 1', disabled: false },
   { value: 'opt2', label: 'Option 2', disabled: false },
@@ -146,8 +176,10 @@ const renderSelect = (
   const helper = () => screen.getByTestId('select-helper-text');
   const value = () => within(select()).getByTestId('select-value');
 
+  mockVisibleAnchorRect(select());
+
   if (isOpen) {
-    fireEvent.click(select());
+    fireEvent.keyDown(select(), { key: 'ArrowDown', code: 'ArrowDown' });
   }
 
   return { container, select, menu, options, label, helper, value };
@@ -167,6 +199,8 @@ const renderMultiSelect = (
   const value = () => within(select()).getByTestId('select-value');
   const clear = () => within(select()).queryByTestId('clear-selection');
 
+  mockVisibleAnchorRect(select());
+
   if (isOpen) {
     fireEvent.click(select());
   }
@@ -177,6 +211,7 @@ const renderMultiSelect = (
 describe('<Select />', () => {
   afterEach(() => {
     jest.clearAllMocks();
+    jest.restoreAllMocks();
   });
 
   describe('Single Select', () => {
@@ -357,51 +392,99 @@ describe('<Select />', () => {
   });
 
   describe('MultiSelect', () => {
-    test('should allow multiple selections, show “2 options selected”', () => {
-      const { select, menu, options, value } = renderMultiSelect();
+    test('should allow multiple selections, show “2 options selected”', async () => {
+      const user = userEvent.setup();
+      const { select, value } = renderMultiSelect({}, false);
 
-      fireEvent.click(options()[0]);
+      await user.click(select());
+      let currentOptions = within(
+        await screen.findByRole('listbox')
+      ).getAllByRole('option');
+
+      await user.click(currentOptions[0]);
       expect(value()).toHaveTextContent('Option 1');
 
-      fireEvent.click(select());
+      let listbox = screen.queryByRole('listbox');
 
-      fireEvent.click(options()[1]);
+      if (!listbox) {
+        select().focus();
+        await user.keyboard('{ArrowDown}');
+        listbox = await screen.findByRole('listbox');
+      }
+
+      currentOptions = within(listbox).getAllByRole('option');
+
+      await user.click(currentOptions[1]);
 
       expect(value()).toHaveTextContent('2 options selected');
 
-      fireEvent.click(select());
+      select().focus();
+      await user.keyboard('{ArrowDown}');
 
-      expect(menu()).toHaveAttribute('aria-multiselectable', 'true');
+      expect(await screen.findByRole('listbox')).toHaveAttribute(
+        'aria-multiselectable',
+        'true'
+      );
     });
 
-    test('should be able to deselect options', () => {
-      const { select, options, value } = renderMultiSelect();
+    test('should be able to deselect options', async () => {
+      const user = userEvent.setup();
+      const { select, value } = renderMultiSelect({}, false);
 
-      fireEvent.click(options()[0]);
-      fireEvent.click(select());
-      fireEvent.click(options()[1]);
+      await user.click(select());
+      let currentOptions = within(
+        await screen.findByRole('listbox')
+      ).getAllByRole('option');
+
+      await user.click(currentOptions[0]);
+      select().focus();
+      await user.keyboard('{ArrowDown}');
+
+      currentOptions = within(await screen.findByRole('listbox')).getAllByRole(
+        'option'
+      );
+
+      await user.click(currentOptions[1]);
 
       expect(value()).toHaveTextContent('2 options selected');
 
-      fireEvent.click(select());
-      fireEvent.click(options()[1]);
+      select().focus();
+      await user.keyboard('{ArrowDown}');
+
+      currentOptions = within(await screen.findByRole('listbox')).getAllByRole(
+        'option'
+      );
+
+      await user.click(currentOptions[1]);
 
       expect(value()).toHaveTextContent('Option 1');
 
-      fireEvent.click(select());
-      fireEvent.click(options()[0]);
+      select().focus();
+      await user.keyboard('{ArrowDown}');
+
+      currentOptions = within(await screen.findByRole('listbox')).getAllByRole(
+        'option'
+      );
+
+      await user.click(currentOptions[0]);
 
       expect(value()).toHaveTextContent('');
     });
 
-    test('should clear selections when clicking clear all button', () => {
-      const { options, value, clear } = renderMultiSelect({}, false);
+    test('should clear selections when clicking clear all button', async () => {
+      const user = userEvent.setup();
+      const { select, value, clear } = renderMultiSelect({}, false);
 
-      fireEvent.click(options()[0]);
-      fireEvent.click(options()[1]);
+      await user.click(select());
+      const currentOptions = within(
+        await screen.findByRole('listbox')
+      ).getAllByRole('option');
+
+      await user.click(currentOptions[0]);
+      await user.click(currentOptions[1]);
       expect(value()).toHaveTextContent('2 options selected');
 
-      fireEvent.click(clear()!);
+      await user.click(clear()!);
 
       expect(value()).toHaveTextContent('');
       expect(clear()).toBeNull();
