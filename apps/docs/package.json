@@ -27,7 +27,7 @@
     "@storybook/addon-themes": "10.6.2",
     "@storybook/addon-vitest": "10.6.2",
     "@storybook/react-vite": "10.6.2",
-    "@vitejs/plugin-react-swc": "^3.5.0",
+    "@vitejs/plugin-react-swc": "^4.3.3",
     "@vitest/browser-playwright": "^5.0.4",
     "@vitest/coverage-v8": "^5.0.4",
     "eslint-config-custom": "*",
