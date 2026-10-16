@@ -34,7 +34,7 @@
     "husky": "^9.1.7",
     "patch-package": "^8.0.1",
     "prettier": "^2.8.0",
-    "turbo": "^2.0.6"
+    "turbo": "^2.9.14"
   },
   "packageManager": "yarn@1.22.19",
   "engines": {
