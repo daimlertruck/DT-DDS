@@ -4,6 +4,7 @@ import {
   RefObject,
   useCallback,
   useRef,
+  useState,
 } from 'react';
 
 import { FocusTrap } from 'focus-trap-react';
@@ -49,10 +50,13 @@ export const Dropdown = Object.assign(
       forwardedRef
     ) => {
       const localMenuRef = useRef<HTMLElement | null>(null);
+      // State, not a ref: Portal mounts the menu after our layout effects.
+      const [menuElement, setMenuElement] = useState<HTMLElement | null>(null);
 
       const setMenuRef = useCallback(
         (node: HTMLElement | null) => {
           localMenuRef.current = node;
+          setMenuElement(node);
           setRef(forwardedRef, node);
         },
         [forwardedRef]
@@ -66,7 +70,7 @@ export const Dropdown = Object.assign(
           offsetX,
           offsetY,
           placement,
-          menuRef: localMenuRef,
+          menuElement,
         }
       );
 

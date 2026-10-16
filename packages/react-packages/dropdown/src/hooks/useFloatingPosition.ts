@@ -10,7 +10,7 @@ type UseFloatingPositionProps<T> = {
   matchWidth?: boolean;
   minViewportPadding?: number;
   placement?: DropdownPlacement;
-  menuRef?: RefObject<T>;
+  menuElement?: T | null;
 };
 
 function basePos({
@@ -55,7 +55,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     matchWidth = true,
     minViewportPadding = 8,
     placement = 'bottom',
-    menuRef,
+    menuElement,
   }: UseFloatingPositionProps<T> = {}
 ) {
   const [style, setStyle] = useState<React.CSSProperties>({
@@ -74,7 +74,6 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
     }
 
     const anchorElement = anchorEl?.current;
-    const menuElement = menuRef?.current;
 
     const updatePosition = () => {
       const vw = window.innerWidth;
@@ -126,8 +125,8 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
 
     ro.observe(anchorElement);
 
-    if (anchorElement) {
-      ro.observe(anchorElement);
+    if (menuElement) {
+      ro.observe(menuElement);
     }
 
     const opts: AddEventListenerOptions = { passive: true };
@@ -140,7 +139,7 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
       window.removeEventListener('resize', updatePosition, opts);
     };
   }, [
-    menuRef,
+    menuElement,
     anchorEl,
     open,
     placement,

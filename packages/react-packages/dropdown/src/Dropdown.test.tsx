@@ -143,4 +143,88 @@ describe('<Dropdown /> ', () => {
     await user.keyboard('{Enter}');
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
+
+  describe('resize observation', () => {
+    const originalResizeObserver = window.ResizeObserver;
+    const observe = jest.fn();
+
+    beforeEach(() => {
+      window.ResizeObserver = jest.fn().mockImplementation(() => ({
+        observe,
+        unobserve: jest.fn(),
+        disconnect: jest.fn(),
+      }));
+    });
+
+    afterEach(() => {
+      window.ResizeObserver = originalResizeObserver;
+    });
+
+    test('should observe the menu element after the dropdown opens', async () => {
+      const user = userEvent.setup();
+
+      render(<TestComponent />);
+
+      await user.click(screen.getByRole('button', { name: 'Open Menu' }));
+
+      expect(observe).toHaveBeenCalledWith(screen.getByTestId(dropdownTestId));
+    });
+  });
+
+  describe('mounted open', () => {
+    let rectSpy: jest.SpyInstance;
+
+    const toRect = (left: number, top: number, width: number, height: number) =>
+      ({
+        x: left,
+        y: top,
+        left,
+        top,
+        width,
+        height,
+        right: left + width,
+        bottom: top + height,
+        toJSON: () => ({}),
+      } as DOMRect);
+
+    beforeEach(() => {
+      rectSpy = jest
+        .spyOn(HTMLElement.prototype, 'getBoundingClientRect')
+        .mockImplementation(function (this: HTMLElement) {
+          return this.getAttribute('role') === 'menu'
+            ? toRect(0, 0, 250, 120)
+            : toRect(100, 300, 120, 32);
+        });
+    });
+
+    afterEach(() => {
+      rectSpy.mockRestore();
+    });
+
+    const OpenOnMount = () => {
+      const anchorRef = useRef<HTMLButtonElement>(null);
+      return (
+        <>
+          <button ref={anchorRef} type='button'>
+            Anchor
+          </button>
+          <Dropdown
+            anchorRef={anchorRef}
+            isFocusable={false}
+            isOpen
+            placement='top'
+          >
+            <DropdownOption>Option1</DropdownOption>
+          </Dropdown>
+        </>
+      );
+    };
+
+    test("should position a Dropdown mounted open from the menu's measured height", () => {
+      render(<OpenOnMount />);
+
+      // top = 300 - 4 - 120 = 176 (296 if the menu were never measured)
+      expect(screen.getByTestId(dropdownTestId)).toHaveStyle({ top: '176px' });
+    });
+  });
 });
