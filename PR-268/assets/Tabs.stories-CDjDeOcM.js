@@ -1,0 +1,6 @@
+var b=Object.defineProperty;var i=(r,s)=>b(r,"name",{value:s,configurable:!0});import{n as u}from"./rolldown-runtime-CzYk_CEw.js";import{n as c}from"./src-B6S6ZdJg.js";import{t as p}from"./jsx-runtime-Br4tQxt1.js";import{t as T}from"./icon-BV7DH5LK.js";import{a as d,i as e,r as f,t as _}from"./hooks-CEKA6YdA.js";var a,n,t,x,j;function o(){return(o=u((()=>{T(),_(),d(),a=p(),n=i(({firstTabLabel:r,variant:s})=>{const{activeTab:l,handleChange:m}=f(0);return(0,a.jsxs)(e,{activeTab:l,handleChange:m,variant:s,children:[(0,a.jsx)(e.Item,{icon:(0,a.jsx)(c,{code:"menu",color:"inherit"}),label:r}),(0,a.jsx)(e.Item,{label:"Tab 2"}),(0,a.jsx)(e.Item,{label:"Tab 3"}),(0,a.jsx)(e.Item,{isDisabled:!0,label:"Tab 4"}),(0,a.jsx)(e.Item,{label:"Tab 5"}),(0,a.jsx)(e.Item,{label:"Tab 6"}),(0,a.jsx)(e.Item,{label:"Tab 7"})]})},"Template"),t={args:{firstTabLabel:"Tab 1",variant:"default"}},x={title:"Data Display/Tabs",component:e,render:n,parameters:{backgrounds:{default:"light"}},argTypes:{variant:{options:["default","contained"],control:{type:"radio"}}}},j=["Default"],t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
+  args: {
+    firstTabLabel: 'Tab 1',
+    variant: 'default'
+  }
+}`,...t.parameters?.docs?.source}}}})))()}i(o,"init_Tabs_stories");o();export{t as Default,j as __namedExportsOrder,x as default};

@@ -1,0 +1,1 @@
+var a=Object.defineProperty;var n=(i,t)=>a(i,"name",{value:t,configurable:!0});import{n as _}from"./rolldown-runtime-CzYk_CEw.js";import{a as e,n as o,o as m,s,t as f}from"./chunk-DRQKCCAG-DUTWVTIm.js";var c;function r(){return(r=_((()=>{f(),m(),c=(0,e(o(),1).default)(2)(async(i,t)=>i===!1?t:s(t))})))()}n(r,"init_formatter_L2YTDE3Q");r();export{c as formatter};
