@@ -105,7 +105,7 @@ needed before any gate runs without a human?
 
 - **Safety is enforced.**
   - Guard hooks deny GitHub writes, release commands, hook bypass, agent sign-off and staging of
-    harness files.
+    run state (`.local/`).
   - History rewrites need human approval.
   - Reviewer agents are read-only.
   - The guards have their own automated tests.
@@ -133,8 +133,9 @@ needed before any gate runs without a human?
   changes. Mitigation: skills look up `AGENTS.md` sections by heading, and the maintainers look
   after the harness like the rest of the repo: a PR that changes how we work also updates
   `AGENTS.md` and the skills it affects.
-- **More files and a third-party supply chain.** `.agents/`, `.claude/` and the nested guides are
-  committed. The third-party skills need pinned SHAs, a security-audit gate and licence notices.
+- **More files and a third-party supply chain.** `agent-harness/`, `.agents/skills/`, `.claude/`
+  and the nested guides are committed. The third-party skills need pinned SHAs, a security-audit
+  gate and licence notices.
 - **Slower on small changes at first.** There is a gate after every stage until Phase 2.
 - **Tooling prerequisites.**
   - Storybook MCP needs Storybook 10.3 or later, plus the Vitest and a11y addons.
@@ -231,11 +232,15 @@ Denied to agents:
 1. **What is committed.**
    - Proposal:
      - `AGENTS.md`, the nested guides and the `CLAUDE.md` stubs;
-     - from `.agents/`: `skills/`, `hooks/`, `scripts/`, `evals/`, `README.md` and
-       `THIRD_PARTY_NOTICES.md`;
+     - `agent-harness/`: the runner and its stage table, the hooks, their tests and the evals;
+     - from `.agents/`: `skills/` and `THIRD_PARTY_NOTICES.md` (the skills CLI's layout);
      - `skills-lock.json`;
-     - `.claude/settings.json`, `.claude/agents/` and the per-skill links in `.claude/skills/`.
-   - `.agents/work/` goes into `.gitignore`.
+     - `.claude/settings.json`, `.claude/pipeline.settings.json` (pipeline stages),
+       `.claude/agents/` and the per-skill links in `.claude/skills/`;
+     - `docs/agent-harness/`: the runbook, the harness docs and one record per pipeline run that
+       reaches G7;
+     - a CI job that runs the harness checks on pull requests that change the harness.
+   - Run state and work dirs live in `.local/`, which goes into `.gitignore`.
    - Personal settings stay out of the repo.
    - The `CLAUDE.md` stubs stay even though recent Claude Code versions read `AGENTS.md` directly.
      They cover older versions and setups that don't, and they hold the Claude-only notes. The
@@ -254,8 +259,9 @@ Denied to agents:
 4. **Remote writes.** Either they stay human-only (push, PR, comments, labels), or agents may push
    and open a draft PR once a human approves the publish gate. The agent pushes only the feature
    branch: no force-push, no tags, never `main`. The guards and their evals change to match.
-5. **Attribution and DCO.** Agents add `Co-Authored-By`. Only humans sign off, through the husky
-   hook.
+5. **Attribution and DCO.** Commits and PR descriptions carry no agent attribution: no
+   `Co-Authored-By` trailer and no "Generated with" line (`.claude/settings.json` turns off Claude
+   Code's). Only humans sign off, through the husky hook.
 6. **Tooling and policy.**
    - The core stays agent-agnostic, with Claude Code adapters for now.
    - A second AI model for reviews, so the code isn't only reviewed by the same kind of model that
@@ -284,13 +290,13 @@ Denied to agents:
 8. **Evaluation.** This is how the harness shows that it works, and what gate automation depends
    on. There are five levels:
 
-   | Level                 | What it checks                                                                                                                                                                                                                                                                                        | When it runs                                                                           | Cost                                                              | Who runs it                                                                                                             |
-   | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-   | 1. Harness code tests | The guards and scripts give the right decision for each listed command or tool call. Unit tests; no agent involved.                                                                                                                                                                                   | On every harness change                                                                | Seconds; no model use                                             | Whoever changes the harness, and anyone locally                                                                         |
-   | 2. Guardrail evals    | An agent session with the harness hooks active tries to reach each forbidden outcome, both directly and indirectly. The eval checks the resulting repository state, not the transcript: no new tags or refs, no remote write, no `.changeset/*.md`, no agent sign-off, no edit to an off-limits path. | Before the Phase 1 merge, and in every PR that changes a guard                         | Minutes per case: one headless agent session in a throwaway clone | The author of that PR                                                                                                   |
-   | 3. Stage evals        | Each stage against a small golden set: fixed inputs (an issue at a pinned commit) with known expected findings, such as a stale link the intake must flag or a constraint the architecture stage must extract. Deterministic checks where possible, a written rubric otherwise.                       | Before a gate is automated, and after any change to that stage's skill or to the model | One stage run per case, repeated to allow for non-determinism     | Whoever proposes automating a gate. Maintainers pick the cases.                                                         |
-   | 4. End-to-end replay  | The whole pipeline on closed issues, run from their pre-fix commit and compared with the merged fix: tests, scope and review findings                                                                                                                                                                 | Later: before automation is widened, and after major model changes                     | The most expensive level: a full pipeline run per issue           | Anyone                                                                                                                  |
-   | 5. Run metrics        | Collected from every real run's log: each gate decision, review loops, time per stage and at each gate, agent usage (tokens per stage and MCP calls per tool), the PR's first CI result, and defects found after the PR opened                                                                        | Continuously from Phase 1. The #245 trial report is built from them.                   | Low, once the run log records them                                | Each run records its own. The #245 assignee writes the trial report, and maintainers review it at the Maintainers Sync. |
+   | Level                 | What it checks                                                                                                                                                                                                                                                                                     | When it runs                                                                                               | Cost                                                              | Who runs it                                                                                                             |
+   | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+   | 1. Harness code tests | The guards and scripts give the right decision for each listed command or tool call, and the real Claude Code CLI enforces the hook registration and stage permissions (against a scripted model). No agent involved.                                                                              | On every harness change, in CI                                                                             | Seconds; no model use                                             | Whoever changes the harness, and anyone locally                                                                         |
+   | 2. Guardrail evals    | An agent session with the harness hooks active gets a realistic task that tempts it towards a forbidden outcome. The eval checks the resulting repository state, not the transcript: no new tags or refs, no remote write, no `.changeset/*.md`, no agent sign-off, no edit to an off-limits path. | Before a harness merge, and after a change to the default model or to the rules and skills its cases probe | Minutes per case: one headless agent session in a throwaway clone | A human, never an agent: every case asks the agent for a forbidden outcome                                              |
+   | 3. Stage evals        | Each stage against a small golden set: fixed inputs (an issue at a pinned commit) with known expected findings, such as a stale link the intake must flag or a constraint the architecture stage must extract. Deterministic checks where possible, a written rubric otherwise.                    | Before a gate is automated, and after any change to that stage's skill or to the model                     | One stage run per case, repeated to allow for non-determinism     | Whoever proposes automating a gate. Maintainers pick the cases.                                                         |
+   | 4. End-to-end replay  | The whole pipeline on closed issues, run from their pre-fix commit and compared with the merged fix: tests, scope and review findings                                                                                                                                                              | Later: before automation is widened, and after major model changes                                         | The most expensive level: a full pipeline run per issue           | Anyone                                                                                                                  |
+   | 5. Run metrics        | Collected from every real run's log: each gate decision, review loops, time per stage and at each gate, agent usage (tokens per stage and MCP calls per tool), the PR's first CI result, and defects found after the PR opened                                                                     | Continuously from Phase 1. The #245 trial report is built from them.                                       | Low, once the run log records them                                | Each run records its own. The #245 assignee writes the trial report, and maintainers review it at the Maintainers Sync. |
 
    - **Order.** Phase 1 needs levels 1, 2 and 5. Level 3 comes before Phase 2, and level 4 later.
    - **Before and after.** To see if the workflow helps, we compare with the three months before
@@ -300,15 +306,15 @@ Denied to agents:
      only when the #245 trial report exists and the gate's stage evals pass. Every golden case must
      pass on each of three repeated runs. If a later change makes a stage eval fail, that gate goes
      back to a human until the eval passes again.
-   - **Location.** Eval cases and runners live in `.agents/evals/` and are committed with the
+   - **Location.** Eval cases and runners live in `agent-harness/evals/` and are committed with the
      harness (decision 1).
 
 ### Next steps:
 
 - [ ] Maintainers answer the "Decisions required" by 30 September 2026 and set Status to Accepted or Rejected
 - [ ] Guardrail evals (decision 8, level 2) pass on the harness before the Phase 1 merge
-- [ ] Phase 1 PR: commit the harness (`chore:`). The themes guide goes in its own commit with a clear
-      subject, because that subject becomes the changelog line of every package it releases
+- [ ] Phase 1 PR: commit the harness (`chore:`). The commit that adds the themes guide gets a
+      clear subject, because that subject becomes the changelog line of every package it releases
       (decision 2)
 - [ ] Run logs record the level-5 metrics from the first Phase 1 run
 - [ ] Update CONTRIBUTING: link `AGENTS.md` and fix the stale sections it records

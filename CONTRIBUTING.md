@@ -5,6 +5,7 @@
 - [Apps \& Packages](#apps--packages)
 - [Documentation](#documentation)
   - [ADRs vs. RFCs vs. Component specs](#adrs-vs-rfcs-vs-component-specs)
+- [Agentic workflow](#agentic-workflow)
 - [GitHub Workflow](#github-workflow)
   - [Issue creation](#issue-creation)
     - [Bug Reports](#bug-reports)
@@ -116,6 +117,10 @@ ADRs document a decision, and RFCs promote a bigger discussion on how a change w
 
 Component specs are the living specification of the components and they should be updated every time the component is updated, impacting structure, properties, behaviour, etc. (i.e., impacts any section of the component spec).
 They live in each component package, as `README.md` file, and use the [README template](./turbo/generators/new-component-package/templates/README.md.hbs) available in the component generator templates.
+
+# Agentic workflow
+
+AI coding agents in this repo follow [AGENTS.md](./AGENTS.md). To run the agent pipeline on an issue, or to use the review, audit and PR-comment skills, follow the [agentic workflow runbook](./docs/agent-harness/workflow.md).
 
 # GitHub Workflow
 
