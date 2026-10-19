@@ -1,1 +1,0 @@
-var o=Object.defineProperty;var i=(r,e)=>o(r,"name",{value:e,configurable:!0});import{n}from"./rolldown-runtime-CzYk_CEw.js";import{n as _}from"./LabelField-DSWGELHl.js";function t(){return(t=n((()=>{_()})))()}i(t,"init_src");function a(){return(a=n((()=>{t()})))()}i(a,"init_label_field");export{a as t};
