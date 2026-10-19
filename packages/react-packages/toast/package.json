@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-toast",
-  "version": "1.0.0-beta.133",
+  "version": "1.0.0-beta.134",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,10 +20,10 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-button": "1.0.0-beta.115",
-    "@dt-dds/react-core": "1.0.0-beta.65",
-    "@dt-dds/react-icon": "1.0.0-beta.70",
-    "@dt-dds/react-typography": "1.0.0-beta.57",
+    "@dt-dds/react-button": "1.0.0-beta.116",
+    "@dt-dds/react-core": "1.0.0-beta.66",
+    "@dt-dds/react-icon": "1.0.0-beta.71",
+    "@dt-dds/react-typography": "1.0.0-beta.58",
     "@dt-dds/themes": "1.0.0-beta.19",
     "react-hot-toast": "^2.3.0"
   },

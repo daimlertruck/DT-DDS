@@ -1,5 +1,14 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.116
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-spinner@1.0.0-beta.121
+
 ## 1.0.0-beta.115
 
 ### Patch Changes

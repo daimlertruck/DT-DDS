@@ -1,5 +1,16 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.141
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-button@1.0.0-beta.116
+  - @dt-dds/react-link@1.0.0-beta.96
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.140
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.89
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.88
 
 ### Major Changes

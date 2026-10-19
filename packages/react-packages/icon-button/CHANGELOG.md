@@ -1,5 +1,13 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.37
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+
 ## 1.0.0-beta.36
 
 ### Patch Changes

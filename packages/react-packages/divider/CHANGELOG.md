@@ -1,5 +1,13 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

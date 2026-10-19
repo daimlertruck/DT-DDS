@@ -1,5 +1,14 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

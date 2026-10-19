@@ -1,5 +1,14 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.47
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.46
 
 ### Patch Changes

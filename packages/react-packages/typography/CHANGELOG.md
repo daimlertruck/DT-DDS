@@ -1,5 +1,13 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.58
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+
 ## 1.0.0-beta.57
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.82
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-tooltip@1.0.0-beta.78
+
 ## 1.0.0-beta.81
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.121
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.120
 
 ### Patch Changes

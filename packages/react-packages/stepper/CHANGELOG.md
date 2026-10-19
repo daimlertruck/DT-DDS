@@ -1,5 +1,16 @@
 # @dt-ui/react-stepper
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-tooltip@1.0.0-beta.78
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

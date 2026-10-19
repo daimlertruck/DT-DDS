@@ -1,5 +1,18 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.118
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-backdrop@1.0.0-beta.69
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-icon-button@1.0.0-beta.37
+  - @dt-dds/react-spinner@1.0.0-beta.121
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.117
 
 ### Patch Changes

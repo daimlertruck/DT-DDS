@@ -1,5 +1,13 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.78
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+
 ## 1.0.0-beta.77
 
 ### Patch Changes

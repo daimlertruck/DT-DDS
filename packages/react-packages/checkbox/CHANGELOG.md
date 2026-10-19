@@ -1,5 +1,14 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.73
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-icon@1.0.0-beta.71
+
 ## 1.0.0-beta.72
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.116
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-dropdown@1.0.0-beta.111
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-text-field@1.0.0-beta.130
+
 ## 1.0.0-beta.115
 
 ### Patch Changes

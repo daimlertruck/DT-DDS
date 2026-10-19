@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.108
+
+### Patch Changes
+
+- fix: declare @emotion/server dependency
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.66
+  - @dt-dds/react-checkbox@1.0.0-beta.73
+  - @dt-dds/react-dropdown@1.0.0-beta.111
+  - @dt-dds/react-icon@1.0.0-beta.71
+  - @dt-dds/react-label-field@1.0.0-beta.69
+  - @dt-dds/react-icon-button@1.0.0-beta.37
+  - @dt-dds/react-tooltip@1.0.0-beta.78
+  - @dt-dds/react-typography@1.0.0-beta.58
+
 ## 1.0.0-beta.107
 
 ### Patch Changes
