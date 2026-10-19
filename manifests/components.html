@@ -620,13 +620,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">77 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/77 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">78 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/78 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note ok" style="margin-bottom: 16px;">
-              Using <code>react-docgen-typescript</code>. Generation took <strong>5.0s</strong>.
+              Using <code>react-docgen-typescript</code>. Generation took <strong>4.5s</strong>.
             </div>
     <h2 class="section-title">Components</h2>
     <div class="grid" role="list">
@@ -2297,7 +2297,7 @@ import { Portal } from '@dt-dds/react-core';</code></pre>
       <div class="badges">
         <label for="c-12-data-display-dropdown-props" class="badge ok as-toggle">12 prop types</label>
         <label for="c-12-data-display-dropdown-info" class="badge info as-toggle">1 info</label>
-        <label for="c-12-data-display-dropdown-stories" class="badge ok as-toggle">1 story</label>
+        <label for="c-12-data-display-dropdown-stories" class="badge ok as-toggle">2 stories</label>
         
         
       </div>
@@ -2370,6 +2370,8 @@ style?: CSSProperties</code></pre>
                   <span class="ex-name">Imports</span>
                 </div>
                 <pre><code>import { Dropdown } from '@dt-dds/react-dropdown';
+import { Icon } from '@dt-dds/react-icon';
+import { Typography } from '@dt-dds/react-typography';
 import { createRef } from 'react';</code></pre>
               </div>
           
@@ -2417,6 +2419,22 @@ import { createRef } from 'react';</code></pre>
         &lt;/div&gt;
     );
 };</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">With Icon And Ellipsis</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const WithIconAndEllipsis = () =&gt; &lt;WithIconAndEllipsisDemo
+    anchorRef={createRef&lt;HTMLButtonElement&gt;()}
+    as=&quot;ul&quot;
+    matchWidth={false}
+    offsetY={4}
+    placement=&quot;bottom&quot;
+    isFocusable={false} /&gt;;</code></pre>
               
             </div>
         </div>

@@ -3020,9 +3020,14 @@
           "id": "data-display-dropdown--default",
           "name": "Default",
           "snippet": "const Default = () => {\n    const [isOpen, setIsOpen] = useState(false);\n    const ref = useRef<HTMLButtonElement | null>(null);\n\n    return (\n        <div style={{ height: 200, padding: 16 }}>\n            <button\n                onClick={() => setIsOpen(!isOpen)}\n                ref={ref}\n                style={{ marginBottom: 12 }}\n                type='button'>\n                {isOpen ? 'Close' : 'Open'}dropdown\n                        </button>\n            <Dropdown\n                as=\"ul\"\n                matchWidth={false}\n                offsetX={0}\n                offsetY={4}\n                placement=\"bottom\"\n                isFocusable={false}\n                anchorRef={ref}\n                isOpen={isOpen}\n                onClose={() => setIsOpen(false)}>\n                {OPTIONS.map((option) => (\n                  <Dropdown.Option\n                    isDisabled={option.disabled}\n                    key={option.value}\n                    onClick={() => console.log(`${option.text} clicked`)}\n                  >\n                    {option.text}\n                  </Dropdown.Option>\n                ))}\n            </Dropdown>\n        </div>\n    );\n};"
+        },
+        {
+          "id": "data-display-dropdown--with-icon-and-ellipsis",
+          "name": "With Icon And Ellipsis",
+          "snippet": "const WithIconAndEllipsis = () => <WithIconAndEllipsisDemo\n    anchorRef={createRef<HTMLButtonElement>()}\n    as=\"ul\"\n    matchWidth={false}\n    offsetY={4}\n    placement=\"bottom\"\n    isFocusable={false} />;"
         }
       ],
-      "import": "import { Dropdown } from '@dt-dds/react-dropdown';\nimport { createRef } from 'react';"
+      "import": "import { Dropdown } from '@dt-dds/react-dropdown';\nimport { Icon } from '@dt-dds/react-icon';\nimport { Typography } from '@dt-dds/react-typography';\nimport { createRef } from 'react';"
     },
     "data-display-emptystate": {
       "id": "data-display-emptystate",
@@ -29488,6 +29493,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 5007
+    "durationMs": 4543
   }
 }
