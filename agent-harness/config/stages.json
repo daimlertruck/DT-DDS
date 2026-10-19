@@ -1,0 +1,251 @@
+{
+  "schema": 1,
+  "about": "Harness-neutral stage table for run.mts. Stages say what runs: the skill, the model tier, effort, maxTurns, tools by capability, the artifact. Lanes say in which order, where the gates are and the run's dollar cap. maxToolCalls caps one session's tool calls (budget-guard), so a loop or a re-run gets its own allowance; a lane's tool calls per pass are the sum over its steps. An adapter (agent-harness/scripts/runner/adapters/<harness>.mts) turns a stage into one harness session. Tiers: haiku, sonnet, opus. Capabilities: read, search, shell, write, edit, delegate. writes: work-dir (artifacts only; tracked files must not change), fixups (work-dir plus fixup!/amend! commits on the feature branch) or branch (commits on the feature branch). autosquash (a step key): run.mts folds the run's own fixup!/amend! commits before or after that step when autosquash.mts's checks allow (no PR, no remote branch).",
+  "lowConfidence": 0.7,
+  "healthChecks": [
+    {
+      "name": "lockfile-markers",
+      "about": "no conflict markers in yarn.lock",
+      "run": [
+        "node",
+        "-e",
+        "process.exit(/^(<{7}|={7}|>{7})/m.test(require('fs').readFileSync('yarn.lock','utf8')) ? 1 : 0)"
+      ]
+    },
+    {
+      "name": "clean-tree",
+      "about": "working tree clean; ignored files such as .local/ do not count",
+      "run": [
+        "sh",
+        "-c",
+        "s=$(git status --porcelain); test -z \"$s\" || { printf '%s\\n' \"$s\"; exit 1; }"
+      ]
+    },
+    {
+      "name": "frozen-lockfile",
+      "about": "installed dependencies match the lockfile",
+      "run": ["yarn", "--frozen-lockfile", "--silent"]
+    },
+    {
+      "name": "check-pkg-deps",
+      "about": "internal versions match workspace versions",
+      "run": ["yarn", "check-pkg-deps"]
+    }
+  ],
+  "stages": {
+    "gather-context": {
+      "number": 1,
+      "skill": "ds-gather-context",
+      "artifact": "context-bundle.md",
+      "tier": "sonnet",
+      "effort": "medium",
+      "maxTurns": 20,
+      "maxToolCalls": 60,
+      "tools": ["read", "search", "shell", "write"],
+      "writes": "work-dir"
+    },
+    "check-architecture": {
+      "number": 2,
+      "skill": "ds-check-architecture",
+      "artifact": "architecture-notes.md",
+      "tier": "opus",
+      "effort": "high",
+      "maxTurns": 40,
+      "maxToolCalls": 80,
+      "tools": ["read", "search", "shell", "write"],
+      "writes": "work-dir"
+    },
+    "plan": {
+      "number": 3,
+      "skill": "ds-plan-implementation",
+      "preload": ["ds-commit-message", "ds-implement-from-design"],
+      "artifact": "implementation-plan.md",
+      "tier": "opus",
+      "effort": "high",
+      "maxTurns": 40,
+      "maxToolCalls": 140,
+      "tools": ["read", "search", "shell", "write"],
+      "writes": "work-dir"
+    },
+    "implement": {
+      "number": 4,
+      "skill": "ds-implement-plan",
+      "preload": ["ds-commit-message", "ds-implement-from-design"],
+      "artifact": "commits.txt",
+      "tier": "opus",
+      "effort": "high",
+      "maxTurns": 120,
+      "maxToolCalls": 240,
+      "tools": ["read", "search", "shell", "write", "edit"],
+      "writes": "branch",
+      "health": true
+    },
+    "verify": {
+      "number": 5,
+      "skill": "ds-verify-changes",
+      "preload": ["ds-commit-message"],
+      "artifact": "validation-report.md",
+      "tier": "sonnet",
+      "effort": "high",
+      "maxTurns": 60,
+      "maxToolCalls": 100,
+      "tools": ["read", "search", "shell", "write"],
+      "writes": "fixups",
+      "failLoopsTo": "implement"
+    },
+    "review": {
+      "number": 6,
+      "skill": "ds-code-review",
+      "preload": ["test-design-reviewer"],
+      "artifact": "code-review-report.md",
+      "tier": "opus",
+      "effort": "high",
+      "maxTurns": 30,
+      "maxToolCalls": 120,
+      "tools": ["read", "search", "shell", "write", "delegate"],
+      "writes": "work-dir",
+      "failLoopsTo": "implement"
+    },
+    "pr-draft": {
+      "number": 7,
+      "skill": "ds-pr-describe-draft",
+      "artifact": "pr-draft.md",
+      "tier": "sonnet",
+      "effort": "medium",
+      "maxTurns": 15,
+      "maxToolCalls": 30,
+      "tools": ["read", "search", "shell", "write"],
+      "writes": "work-dir"
+    },
+    "express": {
+      "number": 0,
+      "skill": "ds-express",
+      "preload": ["ds-commit-message"],
+      "artifact": "express-plan.md",
+      "tier": "sonnet",
+      "effort": "medium",
+      "maxTurns": 25,
+      "maxToolCalls": 30,
+      "tools": ["read", "search", "shell", "write", "edit"],
+      "writes": "work-dir"
+    }
+  },
+  "lanes": {
+    "0": {
+      "name": "Express",
+      "maxUsd": 3,
+      "steps": [
+        {
+          "stage": "express",
+          "part": "plan",
+          "gate": "G1+G3",
+          "brief": "Part 1 of 2: intake, the three-line architecture check and the exact diff. Write express-plan.md, then stop for the combined G1+G3 gate. Do not edit tracked files."
+        },
+        {
+          "stage": "express",
+          "part": "apply",
+          "resume": true,
+          "writes": "branch",
+          "health": true,
+          "maxTurns": 45,
+          "maxToolCalls": 60,
+          "artifact": "pr-draft.md",
+          "gate": "G7",
+          "brief": "Part 2 of 2: the human approved express-plan.md. Implement it on the branch, verify, and write pr-draft.md.",
+          "autosquash": "after"
+        }
+      ]
+    },
+    "1": {
+      "name": "Standard",
+      "maxUsd": 10,
+      "steps": [
+        {
+          "stage": "gather-context",
+          "gate": "G1",
+          "maxToolCalls": 40
+        },
+        {
+          "stage": "plan",
+          "preload": ["ds-check-architecture"],
+          "maxTurns": 40,
+          "gate": "G3",
+          "brief": "Lane 1: no separate architecture stage and no architecture-notes.md. Run ds-check-architecture inside the plan (its Fast path when the bundle's Route is bug, its Procedure otherwise) and record the result in the plan's `## Constraints (architecture check)` section."
+        },
+        {
+          "stage": "implement",
+          "effort": "medium",
+          "maxTurns": 70,
+          "maxToolCalls": 200,
+          "gate": "G4"
+        },
+        {
+          "stage": "verify",
+          "effort": "medium",
+          "maxTurns": 40,
+          "maxToolCalls": 60,
+          "gate": "G5"
+        },
+        {
+          "stage": "review",
+          "tier": "sonnet",
+          "effort": "medium",
+          "maxTurns": 25,
+          "maxToolCalls": 90,
+          "gate": "G6",
+          "brief": "Lane 1: ds-code-review's Lane 1 lens rule applies (lane.json says lane 1)."
+        },
+        {
+          "stage": "pr-draft",
+          "effort": "low",
+          "maxTurns": 10,
+          "gate": "G7",
+          "autosquash": "before"
+        }
+      ]
+    },
+    "2": {
+      "name": "Full",
+      "maxUsd": 30,
+      "steps": [
+        {
+          "stage": "gather-context",
+          "effort": "high",
+          "maxTurns": 40,
+          "gate": "G1"
+        },
+        {
+          "stage": "check-architecture",
+          "gate": "G2"
+        },
+        {
+          "stage": "plan",
+          "effort": "xhigh",
+          "gate": "G3"
+        },
+        {
+          "stage": "implement",
+          "gate": "G4"
+        },
+        {
+          "stage": "verify",
+          "gate": "G5"
+        },
+        {
+          "stage": "review",
+          "gate": "G6"
+        },
+        {
+          "stage": "pr-draft",
+          "gate": "G7",
+          "autosquash": "before"
+        }
+      ]
+    },
+    "escalate": {
+      "name": "Escalate",
+      "maxUsd": 0.5,
+      "steps": []
+    }
+  }
+}
