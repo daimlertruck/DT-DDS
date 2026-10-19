@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "skills": {
+    "grilling": {
+      "source": "mattpocock/skills",
+      "ref": "85f83d3fde1d3a90d5c9a657f6998c79a6c37308",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "computedHash": "4dd886b0196bf43729d954ae326016f2bd9f5f79d892500b407c33a753362f14"
+    },
+    "test-design-reviewer": {
+      "source": "citypaul/.dotfiles",
+      "ref": "8f1ebbc67094ecfe47f49a474eeaf87becd8114f",
+      "sourceType": "github",
+      "skillPath": "claude/.claude/skills/test-design-reviewer/SKILL.md",
+      "computedHash": "75b8cd169df35871c436f7525a7e3a7a1be0a75f1f187e54262d5b213abf42ac"
+    }
+  }
+}
