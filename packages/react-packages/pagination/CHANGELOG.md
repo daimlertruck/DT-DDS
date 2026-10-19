@@ -1,5 +1,15 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.60
+
+### Patch Changes
+
+- fix(dropdown): measure menu on mount and resize
+- docs(dropdown): add icon and ellipsis option story
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.109
+
 ## 1.0.0-beta.59
 
 ### Patch Changes

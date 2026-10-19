@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.117
+
+### Patch Changes
+
+- fix(dropdown): measure menu on mount and resize
+- docs(dropdown): add icon and ellipsis option story
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.112
+
 ## 1.0.0-beta.116
 
 ### Patch Changes

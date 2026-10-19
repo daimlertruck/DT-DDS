@@ -1,5 +1,20 @@
 # @dt-ui/react
 
+## 1.0.0-beta.346
+
+### Patch Changes
+
+- fix(dropdown): measure menu on mount and resize
+- docs(dropdown): add icon and ellipsis option story
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-dropdown@1.0.0-beta.112
+  - @dt-dds/react-date-picker@1.0.0-beta.117
+  - @dt-dds/react-select@1.0.0-beta.109
+  - @dt-dds/react-pagination@1.0.0-beta.60
+  - @dt-dds/react-app-header@1.0.0-beta.90
+
 ## 1.0.0-beta.345
 
 ### Patch Changes

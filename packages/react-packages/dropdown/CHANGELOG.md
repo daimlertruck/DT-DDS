@@ -1,5 +1,12 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.112
+
+### Patch Changes
+
+- fix(dropdown): measure menu on mount and resize
+- docs(dropdown): add icon and ellipsis option story
+
 ## 1.0.0-beta.111
 
 ### Patch Changes
