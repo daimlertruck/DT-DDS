@@ -1,0 +1,1 @@
+../packages/changeset-conventional-commits/AGENTS.md
