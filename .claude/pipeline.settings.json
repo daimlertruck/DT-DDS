@@ -1,0 +1,45 @@
+{
+  "model": "sonnet",
+  "effortLevel": "medium",
+  "permissions": {
+    "deny": [
+      "Artifact",
+      "Workflow",
+      "ScheduleWakeup",
+      "SendFeedback",
+      "ReportFindings",
+      "ListAgents"
+    ]
+  },
+  "enabledPlugins": {
+    "codex@openai-codex": false,
+    "web-quality-skills@addy-web-quality-skills": false
+  },
+  "disableClaudeAiConnectors": true,
+  "claudeMdExcludes": ["**/.claude/CLAUDE.md"],
+  "env": {
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4-5",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5-5",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-5-5",
+    "CLAUDE_CODE_PROMPT_CACHE_TTL": "5m",
+    "CLAUDE_CODE_SUBAGENT_PROMPT_CACHE_TTL": "5m",
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1"
+  },
+  "disableAllHooks": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/hooks/budget-guard.mts\"",
+            "timeout": 10,
+            "statusMessage": "DT-DDS run budget",
+            "onFailure": "block"
+          }
+        ]
+      }
+    ]
+  }
+}
