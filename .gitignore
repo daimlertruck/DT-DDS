@@ -39,3 +39,20 @@ tag-packages.json
 
 # Idea
 .idea
+
+# Agent harness: run state, work dirs and local run records
+/.local/
+
+# Claude Code: personal settings and runtime state
+.claude/settings.local.json
+CLAUDE.local.md
+**/.claude/scheduled_tasks.lock
+**/.claude/scheduled_tasks.json
+**/.claude/routines/.state/
+**/.claude/worktrees/
+**/.claude/checkpoints/
+**/.claude/mailbox/
+**/.claude/agent-registry.json
+**/.claude/agent-memory-local
+**/.claude/first-run
+**/.claude/assistant-daemon-state.json
