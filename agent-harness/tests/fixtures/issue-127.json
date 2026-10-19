@@ -1,0 +1,76 @@
+{
+  "assignees": [],
+  "body": "## Description\n\nThe `Dropdown` component's internal `useFloatingPosition` hook does not react to content dimension changes when `DropdownOption` contains multiple children (e.g., Icon + Typography) with text-overflow styles (ellipsis, truncation). This causes the dropdown positioning to be calculated incorrectly on initial render and prevents proper layout of truncated text content.\n\n## Root Cause\n\nWhen a `DropdownOption` contains:\n1. Multiple children (flexbox layout with Icon + Typography)\n2. Typography with `overflow: hidden`, `textOverflow: ellipsis`, `whiteSpace: nowrap`\n\nThe `useFloatingPosition` hook calculates the dropdown width **before** the browser applies the ellipsis truncation. This initial width calculation doesn't account for the final rendered dimensions after CSS truncation is applied, leading to:\n- Incorrect positioning (especially with `offsetX` for right-alignment)\n- Text not truncating properly because the container expands beyond the intended width\n- No recalculation when the content dimensions change\n\n## Steps to reproduce\n\n<!-- Provide a step-by-step guide on how to reproduce the bug. Include code snippets, if applicable, to help demonstrate the issue. -->\n\n1. Create a Dropdown with `matchWidth={false}` and custom `offsetX` positioning\n2. Add DropdownOptions with multiple children in a flex layout:\n```\n<Dropdown\n  isOpen={isOpen}\n  anchorRef={anchorRef}\n  matchWidth={false}\n  offsetX={offsetX}\n>\n  <StyledDropdownOption> // flex layout\n    <Icon code='user_attributes' size='medium' />\n    <Typography\n      fontStyles='bodyMdRegular'\n      style={{\n        overflow: 'hidden',\n        textOverflow: 'ellipsis',\n        whiteSpace: 'nowrap',\n      }}\n    >\n      Very long text that should be truncated with ellipsis but extends beyond the intended width\n    </Typography>\n  </StyledDropdownOption>\n</Dropdown>\n```\n\n3. Observe that:\n   - The Typography doesn't truncate properly\n   - The dropdown width is calculated incorrectly\n   - The positioning doesn't update after the content renders\n\n## Expected Behavior\n\n<!-- Describe what you expected the UI component library to do. -->\nThe useFloatingPosition hook should:\n- Correctly calculate dropdown width when DropdownOption contains multiple children\n- Allow proper text ellipsis on child elements without requiring manual intervention\n- Handle the timing between layout calculation and width measurement correctly\n- Work seamlessly without requiring external ResizeObserver workarounds\n\n## Actual Behavior\n\n<!-- Describe what actually happened when you encountered the bug. -->\nThe useFloatingPosition hook calculates menuRect?.width via getBoundingClientRect() before the layout has fully stabilized with multiple children. This causes:\n\n- Incorrect width calculation: The menuRect?.width doesn't reflect the actual rendered width when children have complex layouts\n- Text ellipsis failure: Text with overflow: hidden; text-overflow: ellipsis; white-space: nowrap does not truncate properly\n- Positioning issues: The dropdown may be incorrectly positioned due to inaccurate width measurements\n\n### Workaround from our codebase:\n\n```\n// Custom hook to manually recalculate width using ResizeObserver\nconst useDropdownRightAlign = ({ open, anchorRef, menuRef }) => {\n  const [offsetX, setOffsetX] = useState(0);\n\n  useLayoutEffect(() => {\n    if (!open || !anchorRef.current || !menuRef.current) return;\n\n    const updateOffset = () => {\n      const anchorWidth = anchorRef.current?.offsetWidth ?? 0;\n      const menuWidth = menuRef.current?.offsetWidth ?? 0;\n      setOffsetX(anchorWidth - menuWidth);\n    };\n\n    updateOffset();\n\n    const ro = new ResizeObserver(updateOffset);\n    ro.observe(anchorRef.current);\n    ro.observe(menuRef.current);\n    window.addEventListener('resize', updateOffset);\n\n    return () => {\n      ro.disconnect();\n      window.removeEventListener('resize', updateOffset);\n    };\n  }, [open, anchorRef, menuRef]);\n\n  return offsetX;\n};\n\n// Then manually override the offsetX\nconst offsetX = useDropdownRightAlign({ open: isOpen, anchorRef, menuRef });\n\n<Dropdown\n        isOpen={isOpen}\n        anchorRef={anchorRef}\n        onClose={handleClose}\n        matchWidth={false}\n        offsetX={offsetX}\n        ref={menuRef}\n      >\n        <StyledDropdownOption //flex layout\n          onClick={handleMyProfileClick}\n        >\n          <Icon code='user_attributes' size='medium' />\n          <Typography\n            fontStyles='bodyMdRegular'\n            color='content.default'\n            style={{\n              overflow: 'hidden',\n              textOverflow: 'ellipsis',\n              whiteSpace: 'nowrap',\n            }}\n          >\n            {t('userMenu.myProfile')}\n          </Typography>\n        </StyledDropdownOption>\n</Dropdown>\n```\n\n## Screenshots\n\n<!-- If applicable, add screenshots that illustrate the problem. -->\n\n<img width=\"342\" height=\"172\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/5ef8b49c-2412-4538-8d08-a46142d5f9db\" />\n\n## Environment\n\n- **Package version(s)**: @dt-dds/react@1.0.0-beta.263\n- **Operating System**: macOS 14.1.0 (darwin 24.1.0)\n- **Browser name and version**: Chromium: 142.0.7444.163\n\n## Possible solution\n\n<!-- If you have any ideas or suggestions for how to fix the bug, you can mention them here. -->",
+  "comments": [
+    {
+      "id": "IC_kwDOPCWvEs7aQqHR",
+      "author": { "login": "maintainer-1" },
+      "authorAssociation": "MEMBER",
+      "body": "Hello @reporter , did you test the `Typography` with the `ellipsis` CSS styles? I checked your steps to reproduce and it does not have the necessary styles to have the overflow",
+      "createdAt": "2025-12-16T18:11:13Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/daimlertruck/DT-DDS/issues/127#issuecomment-3661799889",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOPCWvEs72Dp7F",
+      "author": { "login": "maintainer-2" },
+      "authorAssociation": "MEMBER",
+      "body": "@maintainer-1 this issue still valid?",
+      "createdAt": "2026-03-25T16:49:32Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/daimlertruck/DT-DDS/issues/127#issuecomment-4128153285",
+      "viewerDidAuthor": false
+    },
+    {
+      "id": "IC_kwDOPCWvEs72WZai",
+      "author": { "login": "maintainer-1" },
+      "authorAssociation": "MEMBER",
+      "body": "@maintainer-2 I believe the way the reporter did it does introduce the bug, if I remember correctly this is still valid. \nIf we initiate the component in a different way, it does work. So it is not critical but we need to fix it",
+      "createdAt": "2026-03-26T09:33:53Z",
+      "includesCreatedEdit": false,
+      "isMinimized": false,
+      "minimizedReason": "",
+      "reactionGroups": [],
+      "url": "https://github.com/daimlertruck/DT-DDS/issues/127#issuecomment-4133066402",
+      "viewerDidAuthor": false
+    }
+  ],
+  "labels": [
+    {
+      "id": "LA_kwDOPCWvEs8AAAACQ21o3A",
+      "name": "type:bug",
+      "description": "Something is not working as expected (runtime error, incorrect behavior, build/CI failure)",
+      "color": "6cd46e"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACQ23CUQ",
+      "name": "area:component",
+      "description": "Issues related to UI components (Button, TextField, Avatar, etc.) including API, a11y, tests.",
+      "color": "836110"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACceDIDA",
+      "name": "status:ready",
+      "description": "Clarified issues that are ready to be developed.",
+      "color": "00fc5c"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACceKlKQ",
+      "name": "priority:p3",
+      "description": "Low (Nice to have / Small improvements)",
+      "color": "c2e0c6"
+    }
+  ],
+  "milestone": null,
+  "number": 127,
+  "state": "OPEN",
+  "title": "[Bug] useFloatingPosition: Incorrect width calculation when DropdownOption contains multiple children",
+  "url": "https://github.com/daimlertruck/DT-DDS/issues/127"
+}

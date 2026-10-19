@@ -1,0 +1,72 @@
+{
+  "disableAllHooks": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/hooks/guard-bash.mts\"",
+            "timeout": 10,
+            "statusMessage": "DT-DDS harness guard",
+            "onFailure": "block"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*[Gg][Ii][Tt][Hh][Uu][Bb].*__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/hooks/guard-mcp.mts\"",
+            "timeout": 10,
+            "statusMessage": "DT-DDS harness guard (GitHub MCP)",
+            "onFailure": "block"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*[Ff]igma.*__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/hooks/guard-mcp.mts\"",
+            "timeout": 10,
+            "statusMessage": "DT-DDS harness guard (Figma MCP, read-only)",
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/hooks/format-harness.mts\"",
+            "timeout": 60,
+            "statusMessage": "Formatting harness code"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/agent-harness/scripts/sync-skills.mts\" --fix --json --root \"$CLAUDE_PROJECT_DIR\"",
+            "timeout": 15,
+            "statusMessage": "Syncing harness skills"
+          }
+        ]
+      }
+    ]
+  }
+}
