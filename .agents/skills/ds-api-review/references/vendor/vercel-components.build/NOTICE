@@ -1,0 +1,13 @@
+components.build — "building-components" skill references (subset)
+Copyright 2023 Vercel, Inc.
+Licensed under the Apache License, Version 2.0 (see LICENSE in this directory; the full licence text
+is reproduced in .agents/THIRD_PARTY_NOTICES.md).
+
+Source: https://github.com/vercel/components.build/tree/787c75a5ca81167e70825cc3fdcfa2ddb46b23f2/skills/building-components/references
+Retrieved 2026-09-25 by the DT-DDS agent harness.
+
+Files included, unmodified: state.mdx, composition.mdx, types.mdx, as-child.mdx, polymorphism.mdx,
+data-attributes.mdx. The other upstream references (accessibility, definitions, design-tokens, docs,
+marketplaces, npm, principles, registry, styling) and the upstream SKILL.md are not included.
+DT-DDS-specific guidance on how to apply this material lives in ../../../SKILL.md, which is not a
+derivative of these files.
