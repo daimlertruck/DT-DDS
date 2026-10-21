@@ -1,0 +1,1 @@
+var p=Object.defineProperty;var n=(i,o)=>p(i,"name",{value:o,configurable:!0});import{n as r}from"./rolldown-runtime-CzYk_CEw.js";import{n as a}from"./Typography-DXBiZdRz.js";function t(){return(t=r((()=>{a()})))()}n(t,"init_src");function m(){return(m=r((()=>{t()})))()}n(m,"init_typography");export{m as t};
