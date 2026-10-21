@@ -1,0 +1,1 @@
+var r=Object.defineProperty;var i=(t,n)=>r(t,"name",{value:n,configurable:!0});import{n as o}from"./rolldown-runtime-CzYk_CEw.js";import{t as m}from"./src-DD0MdID1.js";function s(){return(s=o((()=>{m()})))()}i(s,"init_icon");export{s as t};
