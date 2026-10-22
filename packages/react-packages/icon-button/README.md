@@ -2,6 +2,12 @@
 
 This component allows the user to take action by clicking on an Icon. It is a flexible button component that renders an icon and can be composed with any child element through CSS overrides for advanced styling customization.
 
+## Figma Reference
+
+[Figma - Clickable Icons](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=14048-6232&t=Q2vzJQbSCO9jHwxx-4)
+[Figma - Functional icon states](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=18323-267&t=Q2vzJQbSCO9jHwxx-4)
+[Figma - Contrast states](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=17306-1978&t=Q2vzJQbSCO9jHwxx-4)
+
 ## Usage
 
 ### With Icon
@@ -30,14 +36,10 @@ import { Avatar } from '@dt-dds/react-avatar';
 export const AvatarButton = () => {
   return (
     <IconButton
-      ariaLabel="User profile"
+      ariaLabel='User profile'
       onClick={() => console.log('Avatar clicked')}
     >
-      <Avatar
-        title="John Doe"
-        type="letter"
-        size="medium"
-      />
+      <Avatar title='John Doe' type='letter' size='medium' />
     </IconButton>
   );
 };
@@ -73,15 +75,15 @@ export const CustomButton = () => {
 
 ### IconButton
 
-| Property     | Type                | Default   | Description                                       |
-| ------------ | ------------------- | --------- | ------------------------------------------------- |
-| `children`   | `ReactNode`         | -         | Icon component to be rendered                     |
-| `onClick`    | `function`          | -         | The triggered function when clicked on the button |
-| `dataTestId` | `string`            | button    | Customizable test identifier                      |
-| `isDisabled` | `boolean`           | false     | Determines the disabled state of the button       |
-| `variant`    | `IconButtonVariant` | `default` | Determines the variant of the icon                |
-| `size`       | `ComponentSize`     | `large`   | Determines the size of the icon                   |
-| `cssOverrides`| `ReturnType<typeof css>`| -   | Emotion CSS to apply custom styles to the button and its children |
+| Property       | Type                     | Default   | Description                                                       |
+| -------------- | ------------------------ | --------- | ----------------------------------------------------------------- |
+| `children`     | `ReactNode`              | -         | Icon component to be rendered                                     |
+| `onClick`      | `function`               | -         | The triggered function when clicked on the button                 |
+| `dataTestId`   | `string`                 | button    | Customizable test identifier                                      |
+| `isDisabled`   | `boolean`                | false     | Determines the disabled state of the button                       |
+| `variant`      | `IconButtonVariant`      | `default` | Determines the variant of the icon                                |
+| `size`         | `ComponentSize`          | `large`   | Determines the size of the icon                                   |
+| `cssOverrides` | `ReturnType<typeof css>` | -         | Emotion CSS to apply custom styles to the button and its children |
 
 ### Accessibility
 

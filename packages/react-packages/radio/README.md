@@ -1,6 +1,10 @@
-# Radio Package
+# Radio
 
-The Radio package allows to select one option from a set.
+The Radio component allows to select one option from a set.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11779-6684&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

@@ -1,6 +1,10 @@
-# Drawer Package
+# Drawer
 
 A drawer is a component that slides in from the side of the screen. It is typically used to display additional content, such as a detail view or a list of options.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=6177-223006&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

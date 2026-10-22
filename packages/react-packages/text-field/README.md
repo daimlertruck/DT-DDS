@@ -1,6 +1,11 @@
-# TextField Package
+# TextField
 
 TextField allows users to enter and edit text. They typically appear in forms and modal windows.
+
+## Figma Reference
+
+[Figma - Text field](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=8913-60394&t=Q2vzJQbSCO9jHwxx-4)
+[Figma - Number field](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=15578-3005&t=Q2vzJQbSCO9jHwxx-4)
 
 ## TextField Usage
 
@@ -14,33 +19,33 @@ export const App = () => {
 
 ## Properties
 
-| Property          | Type                         | Default    | Description                                                                                           |
-| ----------------- | ---------------------------- | ---------- | ----------------------------------------------------------------------------------------------------- |
-| `children`        | `ReactNode`                  | -          | Child components to be rendered inside input field.                                                   |
-| `label`           | `string`                     | -          | A label to help users understand the scope of the text field.                                         |
-| `labelIcon`       | `ReactNode`                  | -          | Sets icon for label to provide guidance about the scope of the field.                            |
-| `initialValue`    | `string`                     | -          | Sets the initial value of the text field.                                                             |
-| `message`         | `string`                     | -          | The message to be displayed below the input field. Useful for hints or to display errors.             |
-| `hasError`        | `boolean`                    | -          | Set error state for text field.                                                                       |
-| `disabled`        | `boolean`                    | -          | Determines the disabled state of input field.                                                         |
-| `name`            | `string`                     | -          | The attribute to specify the name of the text field.                                                  |
-| `required`        | `boolean`                    | -          | Set error state with a message defined in `requiredMessage`                                           |
-| `requiredMessage` | `string`                     | -          | The error message to show when the required validation is triggered                                   |
-| `style`           | `CSSProperties`              | -          | Add css style directly to the text field.                                                             |
-| `inputRef`        | `RefObject`                  | -          | Provides a way to access DOM node or React element reference.                                         |
-| `maxLength`       | `number`                     | -          | The maximum number of characters that user can enter.                                                 |
-| `type`            | `HTMLInputTypeAttribute`     | `text`     | Used to specify the type of element to display.                                                       |
-| `onChange`        | `function`                   | -          | The triggered function when the input change.                                                         |
-| `onResetInput`    | `function`                   | -          | The triggered function when clicked on the cross icon, when type is search                            |
-| `variant`         | `[outlined, bottomLine]`     | `outlined` | Styles the input with outlined or with bottom line                                                    |
-| `scale`           | `[compact, standard]`        | `standard` | Sets the spacing and size of the text field                                                               |
-| `backgroundFill`  | `[default, contrast, light]` | `default`  | Styles the input with background color                                                                |
-| `isFloatingLabel` | `boolean`                    | `false`    | Sets the label floating or traditional on top of the input                                            |
-| `extraPrefix`     | `ExtraComponent`             | -          | Component to be rendered on the left side inside the input field                                      |
-| `extraSuffix`     | `ExtraComponent`             | -          | Component to be rendered on the right side inside the input field                                     |
-| `id`              | `string`                     | -          | The unique identifier used to link the element to the corresponding element via the htmlFor attribute |
-| `dataTestId`      | `string`                     | `label`-text-field | Customizable test identifier                                                                  |
-| `...`             | `InputHTMLAttributes`        | -          | All available attributes from native html input                                                       |
+| Property          | Type                         | Default            | Description                                                                                           |
+| ----------------- | ---------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------- |
+| `children`        | `ReactNode`                  | -                  | Child components to be rendered inside input field.                                                   |
+| `label`           | `string`                     | -                  | A label to help users understand the scope of the text field.                                         |
+| `labelIcon`       | `ReactNode`                  | -                  | Sets icon for label to provide guidance about the scope of the field.                                 |
+| `initialValue`    | `string`                     | -                  | Sets the initial value of the text field.                                                             |
+| `message`         | `string`                     | -                  | The message to be displayed below the input field. Useful for hints or to display errors.             |
+| `hasError`        | `boolean`                    | -                  | Set error state for text field.                                                                       |
+| `disabled`        | `boolean`                    | -                  | Determines the disabled state of input field.                                                         |
+| `name`            | `string`                     | -                  | The attribute to specify the name of the text field.                                                  |
+| `required`        | `boolean`                    | -                  | Set error state with a message defined in `requiredMessage`                                           |
+| `requiredMessage` | `string`                     | -                  | The error message to show when the required validation is triggered                                   |
+| `style`           | `CSSProperties`              | -                  | Add css style directly to the text field.                                                             |
+| `inputRef`        | `RefObject`                  | -                  | Provides a way to access DOM node or React element reference.                                         |
+| `maxLength`       | `number`                     | -                  | The maximum number of characters that user can enter.                                                 |
+| `type`            | `HTMLInputTypeAttribute`     | `text`             | Used to specify the type of element to display.                                                       |
+| `onChange`        | `function`                   | -                  | The triggered function when the input change.                                                         |
+| `onResetInput`    | `function`                   | -                  | The triggered function when clicked on the cross icon, when type is search                            |
+| `variant`         | `[outlined, bottomLine]`     | `outlined`         | Styles the input with outlined or with bottom line                                                    |
+| `scale`           | `[compact, standard]`        | `standard`         | Sets the spacing and size of the text field                                                           |
+| `backgroundFill`  | `[default, contrast, light]` | `default`          | Styles the input with background color                                                                |
+| `isFloatingLabel` | `boolean`                    | `false`            | Sets the label floating or traditional on top of the input                                            |
+| `extraPrefix`     | `ExtraComponent`             | -                  | Component to be rendered on the left side inside the input field                                      |
+| `extraSuffix`     | `ExtraComponent`             | -                  | Component to be rendered on the right side inside the input field                                     |
+| `id`              | `string`                     | -                  | The unique identifier used to link the element to the corresponding element via the htmlFor attribute |
+| `dataTestId`      | `string`                     | `label`-text-field | Customizable test identifier                                                                          |
+| `...`             | `InputHTMLAttributes`        | -                  | All available attributes from native html input                                                       |
 
 ## Stack
 

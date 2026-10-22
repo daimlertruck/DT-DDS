@@ -1,6 +1,10 @@
-# Spinner Package
+# Spinner
 
-The spinner package works as a progress indicator to inform users about the status of ongoing processes.
+The spinner works as a progress indicator to inform users about the status of ongoing processes.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=5298-115373&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

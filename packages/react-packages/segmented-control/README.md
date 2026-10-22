@@ -1,6 +1,10 @@
-# SegmentedControl Package
+# SegmentedControl
 
 Segmented Control is frequently used to let users toggle between different formatting or to filter, like a grid view and a table view.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=15712-3897&t=Q2vzJQbSCO9jHwxx-4)
 
 ## SegmentedControl Usage
 

@@ -1,6 +1,10 @@
-# Sidebar Package
+# Sidebar
 
 A compound component for building navigation sidebars with collapsible sections, nested items, and responsive behavior.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=17654-448&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

@@ -1,6 +1,10 @@
-# Divider Package
+# Divider
 
-This package defines a divider between components
+This component defines a divider between components.
+
+## Figma Reference
+
+Not available, as this is a component to fulfill technical needs only.
 
 ## Usage
 

@@ -1,8 +1,12 @@
-# EmptyState Package
+# EmptyState
 
-This package fills the width of the container where is placed and its height varies depending on the content in it.
-The usage of this package is to show a message to the user when there is no data to display.
+This component fills the width of the container where is placed and its height varies depending on the content in it.
+It's used to show a message to the user when there is no data to display.
 Furthermore, it can be used to show additional information like a button, a link or an image as children.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=5298-113552&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

@@ -1,6 +1,10 @@
-# AppHeader Package
+# AppHeader
 
 AppHeader is a flexible compound component that provides a complete application header with support for multiple layouts, responsive behavior, and customizable sections including logo, app name, navigation, and action buttons.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11724-4514&t=Q2vzJQbSCO9jHwxx-4)
 
 ## AppHeader Usage
 

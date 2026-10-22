@@ -1,6 +1,11 @@
-# Icon Package
+# Icon
 
 This package provides a customizable and stylized Icon component for use in React applications.
+
+## Figma Reference
+
+[Figma - Sharp Icons](https://www.figma.com/design/X9q9y9ZvKNW5zBewMjJuqT/%E2%86%B3-1.-Daimler-Truck-DDS--MUI-Symbols---Sharp-?node-id=10-18572&t=8tMtE9VkA6XLnspn-4)
+[Figma - Outlined Icons](https://www.figma.com/design/sNHUUcE9jU5wgJYY3zd3wh/%E2%86%B3-1.-Daimler-Truck-DDS--MUI-Symbols---Outlined-?node-id=1-830&t=BixoVOp6Ts6C22Jo-4)
 
 ## Icon Usage
 

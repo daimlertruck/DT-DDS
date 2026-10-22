@@ -1,6 +1,10 @@
-# Breadcrumb Package
+# Breadcrumb
 
-This component allows the user to configure its history navigation using breadcrumbs
+This component allows the user to configure its history navigation using breadcrumbs.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=4614-7597&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

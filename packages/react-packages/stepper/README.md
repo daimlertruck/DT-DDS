@@ -1,8 +1,12 @@
-# Stepper Package
+# Stepper
 
 Steppers convey progress through numbered, bullet, or icon-based sequential steps.
 
 They support various states including completed, incomplete, warning, error, and disabled.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=21077-21455&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Stepper Usage
 
@@ -12,31 +16,31 @@ import { Stepper } from '@dt-dds/react-stepper';
 export const App = () => {
   return (
     <Stepper>
-      <Stepper.Step 
-        title="Completed Step" 
-        description="This step is done"
-        state="completed" 
+      <Stepper.Step
+        title='Completed Step'
+        description='This step is done'
+        state='completed'
       />
-      <Stepper.Step 
-        title="Current Step" 
-        description="Working on this"
-        state="incomplete"
+      <Stepper.Step
+        title='Current Step'
+        description='Working on this'
+        state='incomplete'
         isActive={true}
       />
-      <Stepper.Step 
-        title="Warning Step" 
-        description="Needs attention"
-        state="warning" 
+      <Stepper.Step
+        title='Warning Step'
+        description='Needs attention'
+        state='warning'
       />
-      <Stepper.Step 
-        title="Error Step" 
-        description="Something went wrong"
-        state="error" 
+      <Stepper.Step
+        title='Error Step'
+        description='Something went wrong'
+        state='error'
       />
-      <Stepper.Step 
-        title="Disabled Step" 
-        description="Not available yet"
-        state="disabled" 
+      <Stepper.Step
+        title='Disabled Step'
+        description='Not available yet'
+        state='disabled'
       />
     </Stepper>
   );
@@ -48,20 +52,20 @@ export const App = () => {
 ### Number Variant (Default)
 
 ```jsx
-<Stepper variant="number">
-  <Stepper.Step title="Step 1" />
-  <Stepper.Step title="Step 2" />
-  <Stepper.Step title="Step 3" />
+<Stepper variant='number'>
+  <Stepper.Step title='Step 1' />
+  <Stepper.Step title='Step 2' />
+  <Stepper.Step title='Step 3' />
 </Stepper>
 ```
 
 ### Bullet Variant
 
 ```jsx
-<Stepper variant="bullet">
-  <Stepper.Step title="Step 1" />
-  <Stepper.Step title="Step 2" />
-  <Stepper.Step title="Step 3" />
+<Stepper variant='bullet'>
+  <Stepper.Step title='Step 1' />
+  <Stepper.Step title='Step 2' />
+  <Stepper.Step title='Step 3' />
 </Stepper>
 ```
 
@@ -70,20 +74,14 @@ export const App = () => {
 ```jsx
 import { Icon } from '@dt-dds/react-icon';
 
-<Stepper variant="icon">
-  <Stepper.Step 
-    title="Upload" 
-    icon={<Icon code="upload" size="small" />}
+<Stepper variant='icon'>
+  <Stepper.Step title='Upload' icon={<Icon code='upload' size='small' />} />
+  <Stepper.Step title='Process' icon={<Icon code='settings' size='small' />} />
+  <Stepper.Step
+    title='Complete'
+    icon={<Icon code='check_circle' size='small' />}
   />
-  <Stepper.Step 
-    title="Process" 
-    icon={<Icon code="settings" size="small" />}
-  />
-  <Stepper.Step 
-    title="Complete" 
-    icon={<Icon code="check_circle" size="small" />}
-  />
-</Stepper>
+</Stepper>;
 ```
 
 ## Using the useStepper Hook
@@ -94,25 +92,20 @@ The useStepper hook provides a complete state management solution for steppers, 
 import { useStepper } from '@dt-dds/react-stepper';
 
 export const ControlledStepper = () => {
-  const {
-    activeStep,
-    handleNext,
-    handleBack,
-    canGoNext,
-    canGoBack,
-  } = useStepper({
-    initialStep: 0,
-    totalSteps: 3,
-  });
+  const { activeStep, handleNext, handleBack, canGoNext, canGoBack } =
+    useStepper({
+      initialStep: 0,
+      totalSteps: 3,
+    });
 
   return (
     <>
       <Stepper activeStep={activeStep}>
-        <Stepper.Step title="Step 1" description="First step" />
-        <Stepper.Step title="Step 2" description="Second step" />
-        <Stepper.Step title="Step 3" description="Third step" />
+        <Stepper.Step title='Step 1' description='First step' />
+        <Stepper.Step title='Step 2' description='Second step' />
+        <Stepper.Step title='Step 3' description='Third step' />
       </Stepper>
-      
+
       <button onClick={handleBack} disabled={!canGoBack}>
         Back
       </button>
@@ -128,51 +121,51 @@ export const ControlledStepper = () => {
 
 ### Options
 
-| Option          | Type     | Default | Description                           |
-|-----------------|----------|---------|---------------------------------------|
-| `initialStep`   | `number` | `0`     | The initial active step (0-based)     |
-| `totalSteps`    | `number` | —       | Total number of steps (for boundary checks) |
+| Option        | Type     | Default | Description                                 |
+| ------------- | -------- | ------- | ------------------------------------------- |
+| `initialStep` | `number` | `0`     | The initial active step (0-based)           |
+| `totalSteps`  | `number` | —       | Total number of steps (for boundary checks) |
 
 ### useStepper Return Values
 
-| Property                     | Type                                  | Description                                      |
-|-----------------------------|----------------------------------------|--------------------------------------------------|
-| `activeStep`                | `number`                               | Current active step index                        |
-| `isFirstStep`               | `boolean`                              | Whether currently on the first step              |
-| `isLastStep`                | `boolean`                              | Whether currently on the last step               |
-| `canGoNext`                 | `boolean`                              | Whether navigation to the next step is allowed   |
-| `canGoBack`                 | `boolean`                              | Whether navigation to the previous step is allowed |
-| `completedSteps`            | `Set<number>`                          | Set of completed step indices                    |
-| `handleNext`                | `() => void`                           | Navigate to the next step                        |
-| `handleBack`                | `() => void`                           | Navigate to the previous step                    |
-| `handleChangeStep`          | `(step: number) => void`               | Navigate to a specific step                      |
-| `handleReset`               | `() => void`                           | Reset to initial step and clear completed steps  |
-| `markStepComplete`          | `(step: number) => void`               | Mark a specific step as completed                |
-| `markStepIncomplete`        | `(step: number) => void`               | Mark a specific step as incomplete               |
-| `isStepComplete`            | `(step: number) => boolean`            | Check if a specific step is completed            |
+| Property             | Type                        | Description                                        |
+| -------------------- | --------------------------- | -------------------------------------------------- |
+| `activeStep`         | `number`                    | Current active step index                          |
+| `isFirstStep`        | `boolean`                   | Whether currently on the first step                |
+| `isLastStep`         | `boolean`                   | Whether currently on the last step                 |
+| `canGoNext`          | `boolean`                   | Whether navigation to the next step is allowed     |
+| `canGoBack`          | `boolean`                   | Whether navigation to the previous step is allowed |
+| `completedSteps`     | `Set<number>`               | Set of completed step indices                      |
+| `handleNext`         | `() => void`                | Navigate to the next step                          |
+| `handleBack`         | `() => void`                | Navigate to the previous step                      |
+| `handleChangeStep`   | `(step: number) => void`    | Navigate to a specific step                        |
+| `handleReset`        | `() => void`                | Reset to initial step and clear completed steps    |
+| `markStepComplete`   | `(step: number) => void`    | Mark a specific step as completed                  |
+| `markStepIncomplete` | `(step: number) => void`    | Mark a specific step as incomplete                 |
+| `isStepComplete`     | `(step: number) => boolean` | Check if a specific step is completed              |
 
 ## Properties
 
 ### Stepper Props
 
-| Property      | Type                             | Default   | Description                              |
-| ------------- | -------------------------------- | --------- | ---------------------------------------- |
-| `children`    | `ReactNode`                      | —         | Step components to be rendered           |
-| `orientation` | `"vertical" \| "horizontal"`     | `vertical`| Direction of the stepper                 |
-| `variant`     | `"number" \| "bullet" \| "icon"` | `number`  | Visual style of step indicators          |
-| `activeStep`  | `number`                         | —         | Index of the active step (0-based)       |
-| `dataTestId`  | `string`                         | `stepper` | Test identifier for the stepper container|
+| Property      | Type                             | Default    | Description                               |
+| ------------- | -------------------------------- | ---------- | ----------------------------------------- |
+| `children`    | `ReactNode`                      | —          | Step components to be rendered            |
+| `orientation` | `"vertical" \| "horizontal"`     | `vertical` | Direction of the stepper                  |
+| `variant`     | `"number" \| "bullet" \| "icon"` | `number`   | Visual style of step indicators           |
+| `activeStep`  | `number`                         | —          | Index of the active step (0-based)        |
+| `dataTestId`  | `string`                         | `stepper`  | Test identifier for the stepper container |
 
 ### Step Props
 
-| Property     | Type                                                            | Default        | Description                                  |
-|--------------|-----------------------------------------------------------------|----------------|----------------------------------------------|
-| `title`      | `string`                                                        | —              | Title text for the step                      |
-| `description`| `string`                                                        | —              | Description text for the step                |
-| `state`      | `"completed" \| "warning" \| "error" \| "disabled" \| "incomplete"` | `incomplete` | Visual state of the step                     |
-| `isActive`   | `boolean`                                                       | `false`        | Whether the step is currently active         |
-| `icon`       | `ReactNode`                                                     | —              | Custom icon for the icon variant             |
-| `dataTestId` | `string`                                                        | `step-{index}` | Test identifier for the step                 |
+| Property      | Type                                                                | Default        | Description                          |
+| ------------- | ------------------------------------------------------------------- | -------------- | ------------------------------------ |
+| `title`       | `string`                                                            | —              | Title text for the step              |
+| `description` | `string`                                                            | —              | Description text for the step        |
+| `state`       | `"completed" \| "warning" \| "error" \| "disabled" \| "incomplete"` | `incomplete`   | Visual state of the step             |
+| `isActive`    | `boolean`                                                           | `false`        | Whether the step is currently active |
+| `icon`        | `ReactNode`                                                         | —              | Custom icon for the icon variant     |
+| `dataTestId`  | `string`                                                            | `step-{index}` | Test identifier for the step         |
 
 ## Stack
 

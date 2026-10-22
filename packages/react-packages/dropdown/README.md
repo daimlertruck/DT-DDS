@@ -1,6 +1,11 @@
-# Dropdown Package
+# Dropdown
 
 The Dropdown Menu provides the users with a box that can receive any content. It also provides an Option component.
+
+## Figma Reference
+
+[Figma - Dropdown](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=12039-3754&t=Q2vzJQbSCO9jHwxx-4)
+[Figma - Option](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=5140-16285&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Dropdown Usage
 

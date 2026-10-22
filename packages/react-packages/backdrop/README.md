@@ -1,6 +1,10 @@
-# Backdrop Package
+# Backdrop
 
 Backdrops can be used when an application is being loaded or when the user opens a modal.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=4614-5919&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Backdrop Usage
 

@@ -1,6 +1,10 @@
-# Checkbox Package
+# Checkbox
 
 A checkbox toggles between checked and unchecked states, enabling users to make binary choices in forms and settings.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=4973-18002&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Checkbox Usage
 
@@ -44,21 +48,21 @@ const isIndeterminate = checkedItems.some(Boolean) && !allChecked;
 
 ## Properties
 
-| Property           | Type                                          | Default       | Description                                                                 |
-|--------------------|-----------------------------------------------|---------------|-----------------------------------------------------------------------------|
-| isChecked          | `boolean`                                     | —             | Controls the checked state                                                  |
-| onChange           | `(evt: ChangeEvent<HTMLInputElement>) => void`| —             | Callback fired when the state changes.                                      |
-| isDisabled         | `boolean`                                     | `false`       | If `true`, the checkbox is disabled.                                        |
-| isIndeterminate    | `boolean`                                     | `false`       | If `true`, the checkbox appears in an indeterminate state.                  |
-| hasError           | `boolean`                                     | `false`       | If `true`, the checkbox displays an error state.                            |
-| size               | `'small' \| 'large'`                          | `'large'`     | Size of the checkbox.                                                       |
-| label              | `ReactNode`                                   | —             | Text or elements to display as the label.                                   |
-| children           | `ReactNode`                                   | —             | Alternative way to provide label content.                                   |
-| dataTestId         | `string`                                      | `'checkbox'`  | Test identifier for testing libraries.                                      |
-| id                 | `string`                                      | —             | HTML `id` attribute for the input element.                                  |
-| aria-label         | `string`                                      | —             | Accessibility label (required if no `label` or `children` provided).       |
-| style              | `CSSProperties`                               | —             | Inline styles for the wrapper.                                              |
-| ref                | `Ref<HTMLInputElement>`                       | —             | Ref forwarded to the input element.                                         |
+| Property        | Type                                           | Default      | Description                                                          |
+| --------------- | ---------------------------------------------- | ------------ | -------------------------------------------------------------------- |
+| isChecked       | `boolean`                                      | —            | Controls the checked state                                           |
+| onChange        | `(evt: ChangeEvent<HTMLInputElement>) => void` | —            | Callback fired when the state changes.                               |
+| isDisabled      | `boolean`                                      | `false`      | If `true`, the checkbox is disabled.                                 |
+| isIndeterminate | `boolean`                                      | `false`      | If `true`, the checkbox appears in an indeterminate state.           |
+| hasError        | `boolean`                                      | `false`      | If `true`, the checkbox displays an error state.                     |
+| size            | `'small' \| 'large'`                           | `'large'`    | Size of the checkbox.                                                |
+| label           | `ReactNode`                                    | —            | Text or elements to display as the label.                            |
+| children        | `ReactNode`                                    | —            | Alternative way to provide label content.                            |
+| dataTestId      | `string`                                       | `'checkbox'` | Test identifier for testing libraries.                               |
+| id              | `string`                                       | —            | HTML `id` attribute for the input element.                           |
+| aria-label      | `string`                                       | —            | Accessibility label (required if no `label` or `children` provided). |
+| style           | `CSSProperties`                                | —            | Inline styles for the wrapper.                                       |
+| ref             | `Ref<HTMLInputElement>`                        | —            | Ref forwarded to the input element.                                  |
 
 ### Note
 
