@@ -1,6 +1,10 @@
-# Toggle Package
+# Toggle
 
 Toggle switch gives control over a feature or option that can be turned on or off.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11846-432&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Toggle Usage
 

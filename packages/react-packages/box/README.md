@@ -1,8 +1,12 @@
-# Box Package
+# Box
 
 <!-- temp: fix publish version bump, drop comment afterwards -->
 
-This package serves as a wrapper for most of the CSS utility needs.
+This component serves as a wrapper for most of the CSS utility needs.
+
+## Figma Reference
+
+Not available, as this is a component to fulfill technical needs only.
 
 ## Box Usage
 

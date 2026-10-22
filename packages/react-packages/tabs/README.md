@@ -1,7 +1,11 @@
-# Tabs Package
+# Tabs
 
 The Tabs component allows different views/information to be switched easily.
 If the Tabs run out of space, it will appear horizontal scroll.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=12035-19989&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

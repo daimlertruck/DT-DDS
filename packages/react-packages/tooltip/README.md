@@ -1,6 +1,10 @@
-# Tooltip Package
+# Tooltip
 
-This package displays information when the user moves the mouse pointer over a trigger element.
+This component displays information when the user moves the mouse pointer over a trigger element.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11846-91703&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Tooltip Usage
 
@@ -26,7 +30,7 @@ export const App = () => {
 | Property     | Type                  | Default             | Description                                                 |
 | ------------ | --------------------- | ------------------- | ----------------------------------------------------------- |
 | `children`   | `ReactNode`           | -                   | Child components to be rendered                             |
-| `style`      | `React.CSSProperties` | -                   | Gives the Tooltip container css properties                 |
+| `style`      | `React.CSSProperties` | -                   | Gives the Tooltip container css properties                  |
 | `dataTestId` | `string`              | `tooltip-container` | Customizable test identifier                                |
 | `hideDelay`  | `number`              | `0ms`               | Delay to hide tooltip when mouse leaving the target element |
 

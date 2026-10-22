@@ -1,6 +1,10 @@
-# Tag Package
+# Tag
 
 Tags can be used to display states (Active, Cancelled...) in lists, tables, etc.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=12029-15112&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Tag Usage
 

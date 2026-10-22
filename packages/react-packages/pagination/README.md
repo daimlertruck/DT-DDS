@@ -1,6 +1,10 @@
-# Pagination Package
+# Pagination
 
 The Pagination component provides page navigation with optional items-per-page selection and item count information.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=5298-130353&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Pagination Usage
 

@@ -1,6 +1,10 @@
-# LabelField Package
+# LabelField
 
 The `<label>` represents a caption for an item in a user interface.
+
+## Figma Reference
+
+Not available, as this is a component to fulfill technical needs only.
 
 ## LabelField Usage
 
@@ -24,19 +28,19 @@ export const App = () => {
 
 The component that displays the caption for the user.
 
-| Property        | Type            | Default     | Description                                                                                                                           |
-| --------------- | --------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `children`      | `ReactNode`     | -           | Child components to be rendered                                                                                                       |
-| `forId`         | `string`        | -           | It refers to the input control that this label is for. Its value must be the same as the value of the input control’s “id” attribute. |
-| `isActive`      | `boolean`       | false       | Apply styles to change the label behaviour                                                                                            |
-| `isDisabled`    | `boolean`       | false       | Apply different styles based on this value                                                                                            |
-| `dataTestId`    | `string`        | label-field | Textarea test identifier                                                                                                              |
-| `style`         | `CSSProperties` | -           | Styles to apply to the label field                                                                                                    |
-| `isRequired`    | `boolean`       | false       | Apply required state to the label field                                                                                               |
-| `hasError`      | `boolean`       | false       | Apply error styles to the label field                                                                                                 |
-| `isInputFilled` | `boolean`       | false       | Apply styles on the floating label field                                                                                              |
-| `icon`          | `ReactNode`     | -           | Sets icon for label to provide guidance about the scope of the field.                                                                 |
-| `scale`         | `[compact, standard]` | `standard`| Sets the spacing in the field that label is used                                                                                  |
+| Property        | Type                  | Default     | Description                                                                                                                           |
+| --------------- | --------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `children`      | `ReactNode`           | -           | Child components to be rendered                                                                                                       |
+| `forId`         | `string`              | -           | It refers to the input control that this label is for. Its value must be the same as the value of the input control’s “id” attribute. |
+| `isActive`      | `boolean`             | false       | Apply styles to change the label behaviour                                                                                            |
+| `isDisabled`    | `boolean`             | false       | Apply different styles based on this value                                                                                            |
+| `dataTestId`    | `string`              | label-field | Textarea test identifier                                                                                                              |
+| `style`         | `CSSProperties`       | -           | Styles to apply to the label field                                                                                                    |
+| `isRequired`    | `boolean`             | false       | Apply required state to the label field                                                                                               |
+| `hasError`      | `boolean`             | false       | Apply error styles to the label field                                                                                                 |
+| `isInputFilled` | `boolean`             | false       | Apply styles on the floating label field                                                                                              |
+| `icon`          | `ReactNode`           | -           | Sets icon for label to provide guidance about the scope of the field.                                                                 |
+| `scale`         | `[compact, standard]` | `standard`  | Sets the spacing in the field that label is used                                                                                      |
 
 ## Stack
 

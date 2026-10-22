@@ -1,8 +1,12 @@
-# Avatar Package
+# Avatar
 
 Avatars can be used to display circular user profile in user menu, tables etc.
 
 This component is purely presentational and for Interactivity it can be used with IconButton.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11114-41478&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Avatar Usage
 
@@ -85,27 +89,27 @@ export const App = () => {
 
 This component can contain upto two simple characters by passing a string in prop `title`
 
-| Property          | Type               | Default | Description                                                        |
-| ----------------- | ------------------ | ------- | ------------------------------------------------------------------ |
-| `title`           | `string`           | -       | Letter characters shown in the avatar                              |
-| `type`            | `AvatarType` | `'letter'`  | Selects which visual style the Avatar uses. Accepts: <br/>• `'letter'` – shows initials. <br/>• `'collapsed'` – shows "+N" for group overflow. <br/>• `'thumbnail'` – generic placeholder icon. <br/>• `'photo'` – uses `imageSrc` with automatic fallback to type thumbnail. |
-| `size`            | `AvatarSize` | `'medium'`  | Controls the Avatar dimensions. Accepts: <br/>• `'small'` – compact UI. <br/>• `'medium'` – default. <br/>• `'large'` – prominent/profile use. |
-| `imageSrc`        | `string`           | -       | Optional image path (will only work with "Photo" type)             |
-| `dataTestId`      | `string`           | avatar  | Avatar test identifier                                             |
-| `collapsedCount`  | `string`           | '+1'     | Number displayed inside a collapsed avatar (max 3 characters). Defaults to `'+1'` when `type="collapsed"`.  |
-| `customInitials`  | `string`           | -       | Custom initials to display (max 2 characters). Replaces `title` if present. |
-| `hasTooltip`      | `Boolean`          | false   | Shows tooltip when hovering on the Avatar                          |
+| Property         | Type         | Default    | Description                                                                                                                                                                                                                                                                   |
+| ---------------- | ------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`          | `string`     | -          | Letter characters shown in the avatar                                                                                                                                                                                                                                         |
+| `type`           | `AvatarType` | `'letter'` | Selects which visual style the Avatar uses. Accepts: <br/>• `'letter'` – shows initials. <br/>• `'collapsed'` – shows "+N" for group overflow. <br/>• `'thumbnail'` – generic placeholder icon. <br/>• `'photo'` – uses `imageSrc` with automatic fallback to type thumbnail. |
+| `size`           | `AvatarSize` | `'medium'` | Controls the Avatar dimensions. Accepts: <br/>• `'small'` – compact UI. <br/>• `'medium'` – default. <br/>• `'large'` – prominent/profile use.                                                                                                                                |
+| `imageSrc`       | `string`     | -          | Optional image path (will only work with "Photo" type)                                                                                                                                                                                                                        |
+| `dataTestId`     | `string`     | avatar     | Avatar test identifier                                                                                                                                                                                                                                                        |
+| `collapsedCount` | `string`     | '+1'       | Number displayed inside a collapsed avatar (max 3 characters). Defaults to `'+1'` when `type="collapsed"`.                                                                                                                                                                    |
+| `customInitials` | `string`     | -          | Custom initials to display (max 2 characters). Replaces `title` if present.                                                                                                                                                                                                   |
+| `hasTooltip`     | `Boolean`    | false      | Shows tooltip when hovering on the Avatar                                                                                                                                                                                                                                     |
 
 ### Default Avatar States Styling in IconButton
 
 When Avatar is composed with IconButton, the interactive states are handled by IconButton's styles. The following table shows the default appearance:
 
-| Avatar Type | Hover State | Disabled State |
-| ----------- | ----------- | -------------- |
-| Letter | `primary.dark` | `primary.light` |
-| Thumbnail | `primary.dark` | `primary.light`|
-| Collapsed | `primary.light` | `content.contrast` |
-| Photo | No change | 38% opacity |
+| Avatar Type | Hover State     | Disabled State     |
+| ----------- | --------------- | ------------------ |
+| Letter      | `primary.dark`  | `primary.light`    |
+| Thumbnail   | `primary.dark`  | `primary.light`    |
+| Collapsed   | `primary.light` | `content.contrast` |
+| Photo       | No change       | 38% opacity        |
 
 **Customization:** Use `cssOverrides` prop to override the default hover states or apply custom theme colors.
 
@@ -113,14 +117,14 @@ When Avatar is composed with IconButton, the interactive states are handled by I
 
 When using Avatar inside IconButton, target the following data attributes with cssOverrides:
 
-| Attribute | Avatar Type |
-| --------- | ----------- |
-| `[data-avatar-type='letter']` | letter |
-| `[data-avatar-type='thumbnail']` | thumbnail |
-| `[data-avatar-type='collapsed']` | collapsed |
-| `[data-avatar-type='photo']` | photo |
+| Attribute                        | Avatar Type |
+| -------------------------------- | ----------- |
+| `[data-avatar-type='letter']`    | letter      |
+| `[data-avatar-type='thumbnail']` | thumbnail   |
+| `[data-avatar-type='collapsed']` | collapsed   |
+| `[data-avatar-type='photo']`     | photo       |
 
-The IconButton provides a cssOverrides prop that allows you to apply custom CSS styles to the IconButton and its children. 
+The IconButton provides a cssOverrides prop that allows you to apply custom CSS styles to the IconButton and its children.
 This enables full styling flexibility when used with Avatar.
 
 #### Example : Avatar with Custom Styling

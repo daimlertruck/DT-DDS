@@ -1,6 +1,10 @@
-# TextArea Package
+# TextArea
 
 Textarea is an input that provides the same features as the text field, but accepts multiple lines of text.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=8587-27497&t=Q2vzJQbSCO9jHwxx-4)
 
 ## TextArea Usage
 
@@ -29,7 +33,7 @@ export const App = () => {
 | `message`        | `string`                    | -                | The message to be displayed below the input field. Useful for hints or to display errors. |
 | `labelVariant`   | `[default, floating]`       | `default`        | Sets the label floating or traditional on top of the input                                |
 | `hasLabel`       | `boolean`                   | `true`           | Show/hide the label                                                                       |
-| `labelIcon`      | `ReactNode`.      | -                | Sets an element for label to provide guidance about the scope of the field.                     |
+| `labelIcon`      | `ReactNode`.                | -                | Sets an element for label to provide guidance about the scope of the field.               |
 
 ## Stack
 

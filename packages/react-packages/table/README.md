@@ -1,6 +1,10 @@
-# Table Package
+# Table
 
 Table is used to organize and display data efficiently and can be fully customized.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=12043-6623&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Table Usage
 

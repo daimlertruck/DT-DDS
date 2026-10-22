@@ -1,6 +1,11 @@
-# Link Package
+# Link
 
 The link component is used as a navigational element to navigate users to another location and it allows to easily customize anchor elements.
+
+## Figma Reference
+
+[Figma - Standalone link](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=16583-5320&t=Q2vzJQbSCO9jHwxx-4)
+[Figma - Inline link](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=18748-92289&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Link Usage
 

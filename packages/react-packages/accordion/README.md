@@ -8,7 +8,7 @@ The Accordion component displays a header that expands or collapses an associate
 
 ## Figma Reference
 
-[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=3500-62929&p=f&t=UkGgOHRtujZlgYM4-0)
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11545-7089&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Anatomy
 

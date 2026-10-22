@@ -1,6 +1,10 @@
-# Modal Package
+# Modal
 
-This package appears in front of the app content to provide critical information or ask for a decision.
+This component appears in front of the app content to provide critical information or ask for a decision.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=7171-37846&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

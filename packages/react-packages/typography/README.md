@@ -1,6 +1,10 @@
-# Typography Package
+# Typography
 
 Typography is an essential aspect of design, influencing how users perceive and interact with content. In digital interfaces, a well-crafted typography component plays a crucial role in enhancing readability, accessibility, and overall user experience.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=17018-94462&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Typography Usage
 

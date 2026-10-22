@@ -2,6 +2,10 @@
 
 The Form component is used to gather user input and submit it to the backend. It supports various form controls and can group multiple fields using Form.Group. Each group can have a title, be disabled, and include a tooltip for extra information. The form's onSubmit function handles form submissions, and additional customization can be applied through the style and dataTestId properties.
 
+## Figma Reference
+
+Not available, as this is a component to fulfill technical needs only.
+
 ## Usage
 
 ```jsx

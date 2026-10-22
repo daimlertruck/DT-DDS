@@ -1,6 +1,10 @@
-# Toast Package
+# Toast
 
 Toast is a pop-up message used to display relevant information to our users.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11943-5835&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

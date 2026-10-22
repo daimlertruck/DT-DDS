@@ -1,8 +1,12 @@
-# Message Package
+# Message
 
 This component fills the width of the container where is placed and its height varies depending on the content in it.
 The usage of this component is to show a message to call attention to something, be it useful information or a warning message. They should be used to provide context in proximity to a piece of content.
 Furthermore, it can be used to add an action like a link, by passing it as a children.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11171-1973&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Usage
 

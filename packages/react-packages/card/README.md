@@ -2,6 +2,10 @@
 
 Cards contains content and actions about a single subject.
 
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=4760-25348&t=Q2vzJQbSCO9jHwxx-4)
+
 ## Usage
 
 ```jsx

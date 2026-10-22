@@ -1,7 +1,11 @@
-# DatePicker Package
+# DatePicker
 
 Date picker enables users to input or choose a particular date or a range of dates.
 They typically appear in forms and modal windows.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=8913-79477&t=Q2vzJQbSCO9jHwxx-4)
 
 ## DatePicker Usage
 

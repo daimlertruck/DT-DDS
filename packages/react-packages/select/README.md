@@ -1,6 +1,10 @@
-# Select Package
+# Select
 
 A Select is designed to gather input from users by offering a selection from a predefined list of choices, allowing for single selection and multiple selections.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=12098-5335&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Select Usage
 

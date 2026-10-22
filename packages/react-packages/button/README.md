@@ -1,6 +1,10 @@
-# Button Package
+# Button
 
 This component allows the user to take action, by clicking on it.
+
+## Figma Reference
+
+[Figma](https://www.figma.com/design/kMk36nv0ZT4AHhBbw9jq0S/%E2%86%B3-1.-Daimler-Truck-DDS--Beta-?node-id=11109-5912&t=Q2vzJQbSCO9jHwxx-4)
 
 ## Button Usage
 
