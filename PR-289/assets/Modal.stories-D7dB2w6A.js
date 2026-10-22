@@ -1,0 +1,13 @@
+var b=Object.defineProperty;var n=(s,a)=>b(s,"name",{value:a,configurable:!0});import{n as k}from"./rolldown-runtime-CzYk_CEw.js";import{t as B}from"./jsx-runtime-Br4tQxt1.js";import{a as y,i as o,o as C,r as _,t as x}from"./hooks-DG8UMWej.js";import{n as d}from"./src-TTVFmIo0.js";import{t as j}from"./button-CaFdLMji.js";var e,i,T,r,F;function c(){return(c=k((()=>{j(),x(),C(),e=B(),i=n(({actionTitle:s,content:a,title:u,subTitle:m,hasHeaderBorder:p,hasFooterBorder:f,hasFooterBackgroundColor:h,isLoading:l})=>{const{isModalOpen:g,toggleModal:t}=_();return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)("button",{onClick:t,type:"button",children:"Click me"}),(0,e.jsx)(y,{isOpen:g,children:(0,e.jsxs)(o,{onClickOutside:t,children:[(0,e.jsx)(o.Header,{hasBorder:p,onClose:t,subTitle:m,title:u}),a?(0,e.jsx)(o.Content,{isLoading:l,children:(0,e.jsx)("p",{children:a})}):null,(0,e.jsxs)(o.Footer,{hasBackgroundColor:h,hasBorder:f,children:[(0,e.jsx)(d,{color:"secondary",dataTestId:"cancel",onClick:t,variant:"outlined",children:"Cancel"}),(0,e.jsx)(d,{dataTestId:"action",isDisabled:l,onClick:n(()=>null,"onClick"),children:s})]})]})})]})},"Template"),T={title:"Data Display/Modal",component:o,render:i,argTypes:{hasHeaderBorder:{control:{type:"boolean"},defaultValue:{summary:!1},description:"Add bottom border to Header"},hasHeaderBackgroundColor:{control:{type:"boolean"},defaultValue:{summary:!1},description:"Add background color to Header"},hasFooterBorder:{control:{type:"boolean"},defaultValue:{summary:!1},description:"Add top border to footer"},hasFooterBackgroundColor:{control:{type:"boolean"},defaultValue:{summary:!1},description:"Add background color to Footer"},onClickOutside:{description:"Enables click outside to trigger close an action"},isLoading:{control:{type:"boolean"},defaultValue:{summary:!1},description:"Adds loading spinner and overlay"}}},r={args:{actionTitle:"Action",content:"Some content here",title:"Title",subTitle:"Some random Subtitle here",hasHeaderBorder:!1,hasHeaderBackgroundColor:!1,hasFooterBorder:!1,hasFooterBackgroundColor:!1,isLoading:!1}},F=["Default"],r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
+  args: {
+    actionTitle: 'Action',
+    content: 'Some content here',
+    title: 'Title',
+    subTitle: 'Some random Subtitle here',
+    hasHeaderBorder: false,
+    hasHeaderBackgroundColor: false,
+    hasFooterBorder: false,
+    hasFooterBackgroundColor: false,
+    isLoading: false
+  }
+}`,...r.parameters?.docs?.source}}}})))()}n(c,"init_Modal_stories");c();export{r as Default,F as __namedExportsOrder,T as default};
