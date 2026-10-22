@@ -3,15 +3,6 @@ name: Setup node and yarn
 description: Action to setup Node.js, yarn and install dependencies
 
 inputs:
-  CACHE_FILE_NAME:
-    description: A string to differentiate the cache creation for whole repo or specific app
-    required: true
-  TBLX_NPM_ARTIFACT_TOKEN:
-    description: Artifactory technical user token
-    required: true
-  TBLX_NPM_ARTIFACT_USERNAME:
-    description: Artifactory technical user username
-    required: true
   NODE_VERSION:
     description: The node version to be installed
     required: false
@@ -19,6 +10,10 @@ inputs:
   NPM_TOKEN:
     description: NPM token for publishing to npmjs.org
     required: false
+  TURBO_CACHE:
+    description: Persist the local turbo cache (.turbo/cache) between runs of the same job
+    required: false
+    default: 'false'
 
 runs:
   using: composite
@@ -46,21 +41,37 @@ runs:
         npm install -g yarn
         npm install turbo --global
 
-    # Create a cache from yarn.lock so we can skip the dependency installation if needed
-    - id: cache-node_modules
+    # Yarn v1 doesn't record workspace packages in yarn.lock, so the key also hashes every
+    # package.json. Install always runs on top of the restored tree to relink workspace packages.
+    - name: Restore node_modules cache
       uses: actions/cache@v4
       with:
-        # A list of files, directories, and wildcard patterns to cache and restore
         path: |
-          ~/.yarn
           **/node_modules
-        # An explicit key for restoring and saving the cache
-        key: ${{ inputs.CACHE_FILE_NAME }}-node-v${{ inputs.NODE_VERSION }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}-${{ hashFiles('packages/dt-dds-react/package.json') }}
+          !**/node_modules/.cache
+        key: node-modules-${{ runner.os }}-node-v${{ inputs.NODE_VERSION }}-${{ hashFiles('yarn.lock', '**/package.json', '!**/node_modules/**', '!examples/**') }}
         restore-keys: |
-          ${{ inputs.CACHE_FILE_NAME }}-node-v${{ inputs.NODE_VERSION }}-deps-
+          node-modules-${{ runner.os }}-node-v${{ inputs.NODE_VERSION }}-
 
-    # Install dependencies if there isn't a hit on the cache
     - name: Install dependencies
-      # if: steps.cache-node_modules.outputs.cache-hit != 'true'
       shell: bash
-      run: yarn --frozen-lockfile
+      run: yarn install --frozen-lockfile --non-interactive
+
+    # Turbo hashes the task inputs (source files included), so a restored cache can't replay stale outputs
+    - name: Restore turbo cache
+      if: inputs.TURBO_CACHE == 'true'
+      uses: actions/cache@v4
+      with:
+        path: .turbo/cache
+        key: turbo-${{ runner.os }}-${{ github.job }}-${{ github.sha }}
+        restore-keys: |
+          turbo-${{ runner.os }}-${{ github.job }}-
+
+    # Restored entries keep their mtime, so this bounds the cache size across runs
+    - name: Prune stale turbo cache entries
+      if: inputs.TURBO_CACHE == 'true'
+      shell: bash
+      run: |
+        if [ -d .turbo/cache ]; then
+          find .turbo/cache -type f -mtime +7 -delete
+        fi

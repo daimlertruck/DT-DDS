@@ -39,8 +39,6 @@ jobs:
 
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
-        with:
-          CACHE_FILE_NAME: 'global'
 
       - name: Setup fake credentials
         run: |
