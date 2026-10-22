@@ -54,7 +54,10 @@ jobs:
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
         with:
-          CACHE_FILE_NAME: 'global'
+          TURBO_CACHE: 'true'
+
+      - name: Check internal package versions
+        run: yarn check-pkg-deps
 
       - name: Run Lint
         run: yarn lint
@@ -70,7 +73,7 @@ jobs:
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
         with:
-          CACHE_FILE_NAME: 'global'
+          TURBO_CACHE: 'true'
 
       - name: Run Tests
         run: yarn test
@@ -149,8 +152,6 @@ jobs:
 
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
-        with:
-          CACHE_FILE_NAME: 'global'
 
       - name: Install Chromium
         run: yarn workspace @dt-dds/docs playwright install --with-deps chromium
@@ -186,8 +187,6 @@ jobs:
 
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
-        with:
-          CACHE_FILE_NAME: 'global'
 
       - name: Download Coverage Artifact
         uses: actions/download-artifact@v4
@@ -266,7 +265,7 @@ jobs:
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
         with:
-          CACHE_FILE_NAME: 'global'
+          TURBO_CACHE: 'true'
 
       - name: Run Build
         run: yarn run turbo build --filter='./packages/*'

@@ -128,7 +128,6 @@ jobs:
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
         with:
-          CACHE_FILE_NAME: ${{ matrix.packages }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Set package directory and version
@@ -188,7 +187,6 @@ jobs:
       - name: Setup node and yarn
         uses: './.github/actions/yarn-node-install'
         with:
-          CACHE_FILE_NAME: readme-update
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Update README with package list
