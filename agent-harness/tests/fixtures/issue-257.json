@@ -1,0 +1,36 @@
+{
+  "assignees": [{ "id": "", "login": "contributor", "name": "A Contributor" }],
+  "body": "### Description\n\n`@dt-dds/react-checkbox`, `@dt-dds/react-link` and `@dt-dds/react-pagination` import\n`@emotion/is-prop-valid`, but none of them lists it in its `package.json`:\n\n- `packages/react-packages/checkbox/src/Checkbox.styled.ts:1`\n- `packages/react-packages/link/src/Link.styled.ts:1`\n- `packages/react-packages/pagination/src/Pagination.styled.ts:1`\n\nThe build keeps every `@emotion/*` package external (`tsup.config.ts`), so the published bundles\n`require(\"@emotion/is-prop-valid\")` when they load.\n\nWith npm or Yarn 1 this works by accident: `@emotion/styled` depends on `@emotion/is-prop-valid`,\nand the package manager hoists it to the top of `node_modules`. With a strict install (pnpm with\n`hoist=false`, or Yarn Plug'n'Play) the import fails. The umbrella `@dt-dds/react` does not declare\nit either, and in a strict install a package cannot see the umbrella's dependencies anyway. So the\ndocumented install fails too: Link and Checkbox, loaded from inside it, fail the same way.\n\nA scan of every package's build found one other undeclared runtime import: `@dt-dds/react-core`\nimports `@emotion/server`. That one is reported separately.\n\n### Steps to reproduce\n\n1. In an empty folder, turn off pnpm's hoisting: `printf 'hoist=false\\n' > .npmrc`\n2. `pnpm add @dt-dds/react-link@1.0.0-beta.89 @dt-dds/react-checkbox@1.0.0-beta.66 @emotion/react@^11 @emotion/styled@^11 @emotion/css@^11 react@18 react-dom@18`\n3. `node -e \"require('@dt-dds/react-link')\"`, then the same for `@dt-dds/react-checkbox`\n\n### Expected Behavior\n\n- Checkbox, Link and Pagination declare `@emotion/is-prop-valid` in `dependencies`.\n- Under a strict install, `require('@dt-dds/react-checkbox')` and `require('@dt-dds/react-link')`\n  load without a missing-module error.\n- Under a strict install, `require('@dt-dds/react-pagination')` no longer fails on\n  `@emotion/is-prop-valid`. Until the core issue is fixed, install `@emotion/server` by hand to get\n  past it.\n- Link still keeps `$`-prefixed props off the DOM when rendered with `as` (for example\n  `as={NextLink}`), as it does today.\n\n### Actual Behavior\n\nSteps 1 to 3 print `Error: Cannot find module '@emotion/is-prop-valid'` for both packages.\nPagination stops earlier, on `Cannot find module '@emotion/server/create-instance'` (the core\nissue).\n\n### Package version(s)\n\n`@dt-dds/react-checkbox@1.0.0-beta.66`, `@dt-dds/react-link@1.0.0-beta.89`,\n`@dt-dds/react-pagination@1.0.0-beta.52`, `@dt-dds/react@1.0.0-beta.337` (latest on npm,\n2026-10-06)\n\n### Operating System\n\nAny. It depends on the package manager, not the OS.\n\n### Browser name and version\n\nNot browser-specific: the import fails when the package loads (Node or the bundler).\n\n### Possible solution\n\nAdd `\"@emotion/is-prop-valid\": \"^1.3.0\"` to `dependencies` in the three packages. `^1.3.0` is the\nrange `@emotion/styled` 11 already uses, so `yarn.lock` keeps the version it has.\n\nKeep the explicit `shouldForwardProp`. Link added it on purpose in `aa92f279b` (2026-04-30):\nwith `as`, Emotion stops filtering props, and `$`-prefixed props reached the DOM.\n",
+  "comments": [],
+  "labels": [
+    {
+      "id": "LA_kwDOPCWvEs8AAAACQ21o3A",
+      "name": "type:bug",
+      "description": "Something is not working as expected (runtime error, incorrect behavior, build/CI failure)",
+      "color": "6cd46e"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACQ23CUQ",
+      "name": "area:component",
+      "description": "Issues related to UI components (Button, TextField, Avatar, etc.) including API, a11y, tests.",
+      "color": "836110"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACceDZzg",
+      "name": "status:in progress",
+      "description": "Ongoing development.",
+      "color": "0052cc"
+    },
+    {
+      "id": "LA_kwDOPCWvEs8AAAACceKlKQ",
+      "name": "priority:p3",
+      "description": "Low (Nice to have / Small improvements)",
+      "color": "c2e0c6"
+    }
+  ],
+  "milestone": null,
+  "number": 257,
+  "state": "OPEN",
+  "title": "[Bug]: Checkbox, Link and Pagination import @emotion/is-prop-valid without declaring it",
+  "url": "https://github.com/daimlertruck/DT-DDS/issues/257"
+}

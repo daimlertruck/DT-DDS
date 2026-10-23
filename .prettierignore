@@ -1,0 +1,8 @@
+# Agent skills (and their .claude/skills links): third-party ones are hash-pinned in
+# skills-lock.json, and table padding costs tokens every time an agent loads a skill.
+.agents/skills/
+.claude/skills/
+# Third-party licence texts, kept verbatim.
+.agents/THIRD_PARTY_NOTICES.md
+# Local run state and records (gitignored).
+/.local/

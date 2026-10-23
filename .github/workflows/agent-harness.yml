@@ -1,0 +1,56 @@
+name: Agent Harness
+
+# The agent harness's deterministic checks: types, lint, format, the unit tests, the run.mts end-to-end
+# tests and the real Claude Code CLI tests. The CLI tests answer Claude Code from a scripted model on
+# localhost, so the job needs no key and makes no model calls. The paid behavioural evals never run
+# here (docs/agent-harness/testing.md).
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'agent-harness/**'
+      - '.agents/**'
+      - '.claude/**'
+      - '**/AGENTS.md'
+      - '**/CLAUDE.md'
+      - 'skills-lock.json'
+      - 'package.json'
+      - 'yarn.lock'
+      - 'packages/eslint-config-custom/**'
+      - '.github/workflows/agent-harness.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  harness-checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # The version the integration tests were last verified on. Bump it on purpose: hook semantics
+      # (fail-open, ask in print mode, frontmatter hooks) can change between releases.
+      CLAUDE_CODE_VERSION: 2.1.303
+      DISABLE_AUTOUPDATER: '1'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+        with:
+          CACHE_FILE_NAME: 'global'
+
+      - name: Install Claude Code
+        run: npm install --global "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
+
+      - name: Harness checks
+        run: node agent-harness/scripts/check.mts
+
+      - name: Hook health check
+        run: node agent-harness/hooks/check-hooks.mts

@@ -1,0 +1,35 @@
+{
+  "retrieved": "2026-10-10",
+  "source": "Anthropic list prices, https://platform.claude.com/docs/en/about-claude/pricing. Cache writes cost 1.25x input for 5 minutes and 2x for 1 hour. Haiku 5.5 is left out: it is priced in tiers by prompt size.",
+  "unit": "USD per million tokens",
+  "models": {
+    "claude-opus-5-5": {
+      "input": 4,
+      "output": 20,
+      "cache_write_5m": 5,
+      "cache_write_1h": 8,
+      "cache_read": 0.2
+    },
+    "claude-sonnet-5-5": {
+      "input": 2,
+      "output": 10,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4,
+      "cache_read": 0.1
+    },
+    "claude-sonnet-5": {
+      "input": 2,
+      "output": 10,
+      "cache_write_5m": 2.5,
+      "cache_write_1h": 4,
+      "cache_read": 0.2
+    },
+    "claude-haiku-4-5": {
+      "input": 1,
+      "output": 5,
+      "cache_write_5m": 1.25,
+      "cache_write_1h": 2,
+      "cache_read": 0.1
+    }
+  }
+}
