@@ -232,3 +232,56 @@ export const WithIconAndEllipsis: Story = {
   },
   render: (args) => <WithIconAndEllipsisDemo {...args} />,
 };
+
+// The anchor sits in an inner scroll container (not the page): scrolling
+// it must move the open menu along with the button.
+const InScrollableContainerDemo = (args: DropdownProps) => {
+  const theme = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+  const ref = useRef<HTMLButtonElement | null>(null);
+
+  return (
+    <div
+      style={{
+        height: 200,
+        overflow: 'auto',
+        background: theme.palette.surface.light,
+      }}
+    >
+      <div style={{ paddingBlock: theme.spacing.spacing_500 }}>
+        <button onClick={() => setIsOpen(!isOpen)} ref={ref} type='button'>
+          {isOpen ? 'Close' : 'Open'} dropdown
+        </button>
+      </div>
+      <Dropdown
+        {...args}
+        anchorRef={ref}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        {OPTIONS.map((option) => (
+          <Dropdown.Option
+            isDisabled={option.disabled}
+            key={option.value}
+            onClick={() => console.log(`${option.text} clicked`)}
+          >
+            {option.text}
+          </Dropdown.Option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+
+export const InScrollableContainer: Story = {
+  args: {
+    anchorRef: createRef<HTMLButtonElement>(),
+    as: 'ul',
+    matchWidth: false,
+    offsetX: 0,
+    offsetY: 4,
+    placement: 'bottom',
+    isFocusable: false,
+  },
+  render: (args) => <InScrollableContainerDemo {...args} />,
+};
