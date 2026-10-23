@@ -1,5 +1,18 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.94
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.81
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.93
 
 ### Major Changes

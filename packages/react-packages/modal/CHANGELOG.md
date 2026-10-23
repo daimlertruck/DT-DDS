@@ -1,5 +1,17 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-backdrop@1.0.0-beta.70
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-icon-button@1.0.0-beta.38
+  - @dt-dds/react-spinner@1.0.0-beta.122
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

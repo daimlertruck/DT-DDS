@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.79
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

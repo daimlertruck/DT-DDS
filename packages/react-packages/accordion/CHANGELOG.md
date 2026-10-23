@@ -1,5 +1,14 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-divider@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.72
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

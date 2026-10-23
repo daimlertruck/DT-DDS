@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.80
 
 ### Patch Changes

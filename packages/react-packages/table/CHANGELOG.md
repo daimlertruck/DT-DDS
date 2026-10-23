@@ -1,5 +1,11 @@
 # @dt-ui/react-table
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

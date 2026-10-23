@@ -1,5 +1,11 @@
 # @dt-ui/react-divider
 
+## 1.0.0-beta.67
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.66
 
 ### Patch Changes

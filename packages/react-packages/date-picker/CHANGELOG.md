@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.118
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.113
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-text-field@1.0.0-beta.131
+
 ## 1.0.0-beta.117
 
 ### Patch Changes

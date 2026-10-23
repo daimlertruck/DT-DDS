@@ -1,5 +1,15 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.118
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.81
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-icon-button@1.0.0-beta.38
+
 ## 1.0.0-beta.117
 
 ### Patch Changes

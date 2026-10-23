@@ -1,5 +1,11 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.59
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.58
 
 ### Patch Changes

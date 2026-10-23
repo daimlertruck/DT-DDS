@@ -1,5 +1,13 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.74
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.72
+
 ## 1.0.0-beta.73
 
 ### Patch Changes

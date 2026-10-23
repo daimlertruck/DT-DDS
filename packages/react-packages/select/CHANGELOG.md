@@ -1,5 +1,20 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.110
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.81
+  - @dt-dds/react-checkbox@1.0.0-beta.74
+  - @dt-dds/react-dropdown@1.0.0-beta.113
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-icon-button@1.0.0-beta.38
+  - @dt-dds/react-label-field@1.0.0-beta.70
+  - @dt-dds/react-tooltip@1.0.0-beta.79
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.109
 
 ### Patch Changes

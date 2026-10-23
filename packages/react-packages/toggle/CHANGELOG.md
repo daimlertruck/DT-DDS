@@ -1,5 +1,13 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.48
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.47
 
 ### Patch Changes

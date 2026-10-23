@@ -1,5 +1,13 @@
 # @dt-ui/react-card
 
+## 1.0.0-beta.51
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.50
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-avatar
 
+## 1.0.0-beta.83
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-tooltip@1.0.0-beta.79
+
 ## 1.0.0-beta.82
 
 ### Patch Changes

@@ -1,5 +1,17 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.102
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.81
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-label-field@1.0.0-beta.70
+  - @dt-dds/react-tooltip@1.0.0-beta.79
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.101
 
 ### Patch Changes

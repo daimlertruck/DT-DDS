@@ -1,5 +1,11 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

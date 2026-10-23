@@ -1,5 +1,13 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.117
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.122
+
 ## 1.0.0-beta.116
 
 ### Patch Changes

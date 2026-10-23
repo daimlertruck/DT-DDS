@@ -1,5 +1,14 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.122
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.81
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.121
 
 ### Patch Changes

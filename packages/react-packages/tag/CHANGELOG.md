@@ -1,5 +1,14 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.75
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-tooltip@1.0.0-beta.79
+
 ## 1.0.0-beta.74
 
 ### Patch Changes

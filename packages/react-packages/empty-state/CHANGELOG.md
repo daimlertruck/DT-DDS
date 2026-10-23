@@ -1,5 +1,15 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.142
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.117
+  - @dt-dds/react-link@1.0.0-beta.97
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.141
 
 ### Patch Changes

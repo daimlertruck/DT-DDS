@@ -1,5 +1,16 @@
 # @dt-dds/react-sidebar
 
+## 1.0.0-beta.17
+
+### Patch Changes
+
+- docs: add Figma reference to all components READMEs
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.72
+  - @dt-dds/react-icon-button@1.0.0-beta.38
+  - @dt-dds/react-tooltip@1.0.0-beta.79
+  - @dt-dds/react-typography@1.0.0-beta.59
+
 ## 1.0.0-beta.16
 
 ### Patch Changes
