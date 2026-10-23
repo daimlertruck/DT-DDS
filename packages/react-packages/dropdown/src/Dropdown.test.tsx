@@ -1,6 +1,6 @@
 import { act, RefObject, useRef, useState } from 'react';
 
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { withProviders } from '@dt-dds/react-core';
@@ -225,6 +225,32 @@ describe('<Dropdown /> ', () => {
 
       // top = 300 - 4 - 120 = 176 (296 if the menu were never measured)
       expect(screen.getByTestId(dropdownTestId)).toHaveStyle({ top: '176px' });
+    });
+
+    const ScrollableOpenOnMount = () => (
+      <div data-testid='scroll-container' style={{ overflow: 'auto' }}>
+        <OpenOnMount />
+      </div>
+    );
+
+    test('should follow its anchor when a scrollable ancestor scrolls', () => {
+      render(<ScrollableOpenOnMount />);
+
+      const menu = screen.getByTestId(dropdownTestId);
+      expect(menu).toHaveStyle({ top: '176px' });
+
+      rectSpy.mockImplementation(function (this: HTMLElement) {
+        return this.getAttribute('role') === 'menu'
+          ? toRect(0, 0, 250, 120)
+          : toRect(100, 200, 120, 32);
+      });
+
+      act(() => {
+        fireEvent.scroll(screen.getByTestId('scroll-container'));
+      });
+
+      // top = 200 - 4 - 120 = 76
+      expect(menu).toHaveStyle({ top: '76px' });
     });
   });
 });
