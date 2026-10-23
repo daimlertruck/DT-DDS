@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import '@testing-library/jest-dom';
-import { act, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 
 import { DROPDOWN_MENU_Z_INDEX } from '@dt-dds/react-core';
 
@@ -138,7 +138,7 @@ const Menu = ({
   onRender?.(style);
 
   return (
-    <div>
+    <div data-testid='scroll-container' style={{ overflow: 'auto' }}>
       <div
         data-testid='anchor'
         ref={(n) => {
@@ -400,6 +400,104 @@ describe('useFloatingPosition', () => {
 
       unmount();
       expect(second.disconnect).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('when the page scrolls while open', () => {
+    const anchorRect = makeRect({ left: 10, top: 10, width: 100, height: 40 });
+    const movedAnchorRect = makeRect({
+      left: 30,
+      top: 150,
+      width: 100,
+      height: 40,
+    });
+
+    const renderOpenThenMoveAnchor = () => {
+      const utils = render(<Menu anchorRect={anchorRect} open />);
+      const menu = screen.getByTestId(menuTestId);
+
+      // top = 10 + 40 + 4 = 54
+      expect(menu).toHaveStyle({ top: '54px', left: '10px' });
+
+      utils.rerender(<Menu anchorRect={movedAnchorRect} open />);
+      // No recompute without a scroll.
+      expect(menu).toHaveStyle({ top: '54px', left: '10px' });
+
+      return { ...utils, menu };
+    };
+
+    test('should update the position when a scrollable ancestor scrolls', () => {
+      const { menu } = renderOpenThenMoveAnchor();
+
+      act(() => {
+        fireEvent.scroll(screen.getByTestId('scroll-container'));
+      });
+
+      // top = 150 + 40 + 4 = 194
+      expect(menu).toHaveStyle({ top: '194px', left: '30px' });
+    });
+
+    test('should update the position when the window scrolls', () => {
+      const { menu } = renderOpenThenMoveAnchor();
+
+      act(() => {
+        fireEvent.scroll(window);
+      });
+
+      expect(menu).toHaveStyle({ top: '194px', left: '30px' });
+    });
+
+    test('should stop repositioning after close', () => {
+      const { rerender } = render(<Menu anchorRect={anchorRect} open />);
+      const menu = screen.getByTestId(menuTestId);
+
+      rerender(<Menu anchorRect={movedAnchorRect} open={false} />);
+
+      act(() => {
+        fireEvent.scroll(screen.getByTestId('scroll-container'));
+      });
+
+      expect(menu).toHaveStyle({ visibility: 'hidden', position: 'fixed' });
+    });
+
+    describe('listener registration', () => {
+      let addSpy: jest.SpyInstance;
+      let removeSpy: jest.SpyInstance;
+
+      beforeEach(() => {
+        addSpy = jest.spyOn(window, 'addEventListener');
+        removeSpy = jest.spyOn(window, 'removeEventListener');
+      });
+
+      afterEach(() => {
+        addSpy.mockRestore();
+        removeSpy.mockRestore();
+      });
+
+      test('should remove the capture scroll listener on unmount', () => {
+        const { unmount } = render(<Menu anchorRect={anchorRect} open />);
+
+        const scrollCall = addSpy.mock.calls.find(
+          ([type]) => type === 'scroll'
+        );
+        expect(scrollCall).toBeDefined();
+        const [, handler, options] = scrollCall as [
+          string,
+          EventListener,
+          AddEventListenerOptions
+        ];
+        expect(options).toEqual(
+          expect.objectContaining({ capture: true, passive: true })
+        );
+
+        unmount();
+
+        expect(removeSpy).toHaveBeenCalledWith(
+          'scroll',
+          handler,
+          expect.objectContaining({ capture: true })
+        );
+      });
     });
   });
 });

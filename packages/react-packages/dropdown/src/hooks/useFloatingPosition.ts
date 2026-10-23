@@ -129,14 +129,19 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
       ro.observe(menuElement);
     }
 
-    const opts: AddEventListenerOptions = { passive: true };
-    window.addEventListener('scroll', updatePosition, opts);
-    window.addEventListener('resize', updatePosition, opts);
+    // Scroll does not bubble: capture on window sees every scrolling ancestor.
+    const scrollOpts: AddEventListenerOptions = {
+      passive: true,
+      capture: true,
+    };
+    const resizeOpts: AddEventListenerOptions = { passive: true };
+    window.addEventListener('scroll', updatePosition, scrollOpts);
+    window.addEventListener('resize', updatePosition, resizeOpts);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener('scroll', updatePosition, opts);
-      window.removeEventListener('resize', updatePosition, opts);
+      window.removeEventListener('scroll', updatePosition, scrollOpts);
+      window.removeEventListener('resize', updatePosition, resizeOpts);
     };
   }, [
     menuElement,
