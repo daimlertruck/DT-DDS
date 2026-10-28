@@ -40,8 +40,8 @@
     - [Enum vs String literals unions](#enum-vs-string-literals-unions)
     - [Enum vs Objects with as const](#enum-vs-objects-with-as-const)
     - [Named Exports vs Default Exports](#named-exports-vs-default-exports)
-    - [Developer Documentation](#developer-documentation)
     - [Prop Forwarding in Styled Components](#prop-forwarding-in-styled-components)
+    - [Developer Documentation](#developer-documentation)
       - [How to add component stories?](#how-to-add-component-stories)
   - [Versioning \& Publishing Packages](#versioning--publishing-packages)
       - [Workflow](#workflow)
@@ -443,22 +443,6 @@ We want to be clear and objective about which components we provide in an assert
 
 Reference: https://stackoverflow.com/a/68665805
 
-### Developer Documentation
-
-DT-DDS developer documentation is built with Storybook. Storybook documentation is composed by:
-
-- Documentation pages
-- Component stories
-
-Both supports [MDX](https://github.com/mdx-js/mdx), which allows you to use Markdown syntax and JSX for more advanced components.
-
-Add a file with `.stories.mdx` extension inside `apps/docs` directory, following the instructions on https://storybook.js.org/docs/6.5/react/writing-docs/mdx#documentation-only-mdx.
-Afterwards, the page is included automatically in the documentation.
-
-If you created custom components to import in the page or a lot of subpages, we recommend to create a sub-directory for all the files related to the page and subpages, including the MDX file(s). The page(s) will still be included automatically.
-
-Note: On Storybook v6, documentation pages still use the `.stories.mdx` extension (otherwise they are not included). On v7 these pages can use `.mdx` extension.
-
 ### Prop Forwarding in Styled Components
 
 When using `@emotion/styled`, props passed to styled components are forwarded to the underlying DOM element by default. This can cause React warnings for non-standard DOM attributes and potential issues.
@@ -486,21 +470,27 @@ const Button =
 `;
 ```
 
+### Developer Documentation
+
+DT-DDS developer documentation is built with Storybook. Storybook documentation is composed by:
+
+- Documentation pages
+- Component stories
+
+Both uses [Autodocs](https://storybook.js.org/docs/writing-docs/autodocs), to generate the documentation automatically, and supports [MDX](https://github.com/mdx-js/mdx), which allows you to use Markdown syntax and JSX for more advanced components.
+
+Add a file with `.mdx` extension inside `apps/docs` directory, following the instructions on https://storybook.js.org/docs/writing-docs/mdx#working-with-standalone-documentation-pages.
+Afterwards, the page is included automatically in the documentation.
+
+If you created custom components to import in the page or a lot of subpages, we recommend to create a sub-directory for all the files related to the page and subpages, including the MDX file(s). The page(s) will still be included automatically.
+
 #### How to add component stories?
 
-In case you want to add documentation more complex than the usual component stories, add a `.stories.mdx` file alongside with the component inside `packages/react-packages/<component>`, or convert the current story in Component Story Format (CSF) to MDX format (see an example of the conversion on https://storybook.js.org/docs/6.5/react/writing-docs/mdx#mdx-flavored-csf).
+In case you want to add documentation more complex than the usual component stories, add a `.mdx` file alongside with the component inside `packages/react-packages/<component>`, or convert the current story in Component Story Format (CSF) to MDX format or extend it (example: https://storybook.js.org/docs/writing-docs/mdx#anatomy-of-mdx).
 
-For more information on how to write MDX stories see https://storybook.js.org/docs/6.5/react/writing-docs/mdx#writing-stories.
+For more information on how to write MDX stories see https://storybook.js.org/docs/writing-docs/mdx.
 
-Note: MDX and CSF stories can't coexist in the same directory.
-
-For more information on Storybook and Docs, read the following documentation and blog posts:
-
-- https://storybook.js.org/addons/@storybook/addon-docs
-- https://storybook.js.org/docs/6.5/react/writing-docs/introduction
-- https://medium.com/storybookjs/storybook-docs-sneak-peak-5be78445094a
-- https://storybook.js.org/tutorials/design-systems-for-developers/react/en/document/
-- https://storybook.js.org/blog/structuring-your-storybook/
+For more information on Storybook and Docs, check https://storybook.js.org/docs/writing-docs.
 
 ## Versioning & Publishing Packages
 
