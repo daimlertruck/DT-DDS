@@ -1,0 +1,261 @@
+{
+  "schema": 1,
+  "issue": 226,
+  "lane": {
+    "lane": "2",
+    "name": "Full",
+    "decidedBy": "human (--lane)",
+    "confidence": 0.6
+  },
+  "base": "b6328365333ceb0201cce9a26fdc852104cb13ff",
+  "harness": {
+    "commit": "ab910b21f22f23b184bc9f39b5cd528aef9f2332",
+    "dirty": false,
+    "claudeCode": [
+      "2.1.312"
+    ]
+  },
+  "started": "2026-10-28T18:23:59Z",
+  "handedOff": "2026-10-28T23:33:49Z",
+  "totals": {
+    "listUsd": 13.866829,
+    "reportedUsd": 13.866829,
+    "requests": 617,
+    "uncachedIn": 624,
+    "cacheWrite": 1281685,
+    "cacheRead": 18535814,
+    "output": 253720,
+    "stageSeconds": 3100,
+    "toolCalls": 610
+  },
+  "stages": [
+    {
+      "stage": "gather-context",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.283471,
+      "reportedUsd": 0.283471,
+      "seconds": 117,
+      "requests": 40,
+      "uncachedIn": 24,
+      "cacheWrite": 50663,
+      "cacheRead": 298458,
+      "output": 12692
+    },
+    {
+      "stage": "check-architecture",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.659912,
+      "reportedUsd": 0.659912,
+      "seconds": 115,
+      "requests": 31,
+      "uncachedIn": 40,
+      "cacheWrite": 55176,
+      "cacheRead": 781861,
+      "output": 11375
+    },
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 2.965735,
+      "reportedUsd": 2.965735,
+      "seconds": 988,
+      "requests": 73,
+      "uncachedIn": 48,
+      "cacheWrite": 241013,
+      "cacheRead": 1632590,
+      "output": 71698
+    },
+    {
+      "stage": "implement",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 5.850721,
+      "reportedUsd": 5.850721,
+      "seconds": 1035,
+      "requests": 266,
+      "uncachedIn": 302,
+      "cacheWrite": 411129,
+      "cacheRead": 11031539,
+      "output": 79378
+    },
+    {
+      "stage": "verify",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.735145,
+      "reportedUsd": 0.735145,
+      "seconds": 271,
+      "requests": 73,
+      "uncachedIn": 60,
+      "cacheWrite": 156141,
+      "cacheRead": 1330028,
+      "output": 21167
+    },
+    {
+      "stage": "review",
+      "models": [
+        "claude-opus-5-5",
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 3.193971,
+      "reportedUsd": 3.193971,
+      "seconds": 539,
+      "requests": 117,
+      "uncachedIn": 138,
+      "cacheWrite": 321982,
+      "cacheRead": 3306064,
+      "output": 52573
+    },
+    {
+      "stage": "pr-draft",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.177874,
+      "reportedUsd": 0.177874,
+      "seconds": 35,
+      "requests": 17,
+      "uncachedIn": 12,
+      "cacheWrite": 45581,
+      "cacheRead": 155274,
+      "output": 4837
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 117
+    },
+    {
+      "gate": "G2",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 2022
+    },
+    {
+      "gate": "G3",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 382
+    },
+    {
+      "gate": "G4",
+      "iteration": 1,
+      "decision": "stop",
+      "waitSeconds": 233
+    },
+    {
+      "gate": "G4",
+      "iteration": 2,
+      "decision": "revise",
+      "waitSeconds": 167
+    },
+    {
+      "gate": "G4",
+      "iteration": 3,
+      "decision": "stop",
+      "waitSeconds": 94
+    },
+    {
+      "gate": "G4",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 57
+    },
+    {
+      "gate": "G5",
+      "iteration": 1,
+      "decision": "stop",
+      "waitSeconds": 1039
+    },
+    {
+      "gate": "G5",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 201
+    },
+    {
+      "gate": "G6",
+      "iteration": 1,
+      "decision": "stop",
+      "waitSeconds": 168
+    },
+    {
+      "gate": "G6",
+      "iteration": 2,
+      "decision": "revise",
+      "waitSeconds": 22
+    },
+    {
+      "gate": "G6",
+      "iteration": 3,
+      "decision": "stop",
+      "waitSeconds": 83
+    },
+    {
+      "gate": "G6",
+      "iteration": 4,
+      "decision": "revise",
+      "waitSeconds": 77
+    },
+    {
+      "gate": "G6",
+      "iteration": 5,
+      "decision": "loop",
+      "waitSeconds": 310
+    },
+    {
+      "gate": "G4",
+      "iteration": 5,
+      "decision": "loop",
+      "waitSeconds": 315
+    },
+    {
+      "gate": "G4",
+      "iteration": 6,
+      "decision": "revise",
+      "waitSeconds": 181
+    },
+    {
+      "gate": "G4",
+      "iteration": 7,
+      "decision": "approve",
+      "waitSeconds": 386
+    },
+    {
+      "gate": "G5",
+      "iteration": 3,
+      "decision": "stop",
+      "waitSeconds": 126
+    },
+    {
+      "gate": "G5",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 91
+    },
+    {
+      "gate": "G6",
+      "iteration": 6,
+      "decision": "approve",
+      "waitSeconds": 120
+    },
+    {
+      "gate": "G7",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 73
+    }
+  ],
+  "humanActions": 13
+}
