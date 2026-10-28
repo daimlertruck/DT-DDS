@@ -5,7 +5,6 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "types": ["node", "jest", "@testing-library/jest-dom", "vite/client"],
-    "baseUrl": ".",
     "paths": {
       "@dt-dds/react": ["../../packages/dt-dds-react/index.ts"],
       "@dt-dds/themes": ["../../packages/themes/src/index.ts"],
