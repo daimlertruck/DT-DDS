@@ -1,5 +1,14 @@
 # @dt-ui/react-typography
 
+## 1.0.0-beta.60
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+
 ## 1.0.0-beta.59
 
 ### Patch Changes

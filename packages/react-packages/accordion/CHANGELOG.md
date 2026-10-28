@@ -1,5 +1,16 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.73
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-divider@1.0.0-beta.68
+  - @dt-dds/react-icon@1.0.0-beta.73
+
 ## 1.0.0-beta.72
 
 ### Patch Changes

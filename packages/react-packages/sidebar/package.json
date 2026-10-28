@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-sidebar",
-  "version": "1.0.0-beta.17",
+  "version": "1.0.0-beta.18",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -20,12 +20,12 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.66",
-    "@dt-dds/react-icon": "1.0.0-beta.72",
-    "@dt-dds/themes": "1.0.0-beta.19",
-    "@dt-dds/react-tooltip": "1.0.0-beta.79",
-    "@dt-dds/react-typography": "1.0.0-beta.59",
-    "@dt-dds/react-icon-button": "1.0.0-beta.38"
+    "@dt-dds/react-core": "1.0.0-beta.67",
+    "@dt-dds/react-icon": "1.0.0-beta.73",
+    "@dt-dds/themes": "1.0.0-beta.20",
+    "@dt-dds/react-tooltip": "1.0.0-beta.80",
+    "@dt-dds/react-typography": "1.0.0-beta.60",
+    "@dt-dds/react-icon-button": "1.0.0-beta.39"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

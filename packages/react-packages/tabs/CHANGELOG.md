@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-icon-button@1.0.0-beta.39
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

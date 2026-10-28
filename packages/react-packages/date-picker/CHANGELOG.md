@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-dropdown@1.0.0-beta.114
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-text-field@1.0.0-beta.132
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

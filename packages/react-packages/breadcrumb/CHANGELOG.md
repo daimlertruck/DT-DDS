@@ -1,5 +1,16 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.84
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-tooltip@1.0.0-beta.80
+
 ## 1.0.0-beta.83
 
 ### Patch Changes

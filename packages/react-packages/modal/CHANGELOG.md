@@ -1,5 +1,19 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.120
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-backdrop@1.0.0-beta.71
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-icon-button@1.0.0-beta.39
+  - @dt-dds/react-spinner@1.0.0-beta.123
+  - @dt-dds/react-typography@1.0.0-beta.60
+
 ## 1.0.0-beta.119
 
 ### Patch Changes

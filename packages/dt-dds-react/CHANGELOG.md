@@ -1,5 +1,52 @@
 # @dt-ui/react
 
+## 1.0.0-beta.355
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-accordion@1.0.0-beta.73
+  - @dt-dds/react-app-header@1.0.0-beta.99
+  - @dt-dds/react-avatar@1.0.0-beta.84
+  - @dt-dds/react-backdrop@1.0.0-beta.71
+  - @dt-dds/react-modal@1.0.0-beta.120
+  - @dt-dds/react-breadcrumb@1.0.0-beta.84
+  - @dt-dds/react-button@1.0.0-beta.118
+  - @dt-dds/react-empty-state@1.0.0-beta.143
+  - @dt-dds/react-link@1.0.0-beta.98
+  - @dt-dds/react-message@1.0.0-beta.136
+  - @dt-dds/react-toast@1.0.0-beta.136
+  - @dt-dds/react-card@1.0.0-beta.52
+  - @dt-dds/react-checkbox@1.0.0-beta.75
+  - @dt-dds/react-select@1.0.0-beta.111
+  - @dt-dds/react-pagination@1.0.0-beta.62
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-date-picker@1.0.0-beta.119
+  - @dt-dds/react-divider@1.0.0-beta.68
+  - @dt-dds/react-drawer@1.0.0-beta.80
+  - @dt-dds/react-dropdown@1.0.0-beta.114
+  - @dt-dds/react-form@1.0.0-beta.66
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-label-field@1.0.0-beta.71
+  - @dt-dds/react-text-area@1.0.0-beta.103
+  - @dt-dds/react-text-field@1.0.0-beta.132
+  - @dt-dds/react-progress-bar@1.0.0-beta.66
+  - @dt-dds/react-segmented-control@1.0.0-beta.62
+  - @dt-dds/react-sidebar@1.0.0-beta.18
+  - @dt-dds/react-stepper@1.0.0-beta.67
+  - @dt-dds/react-tabs@1.0.0-beta.119
+  - @dt-dds/react-tag@1.0.0-beta.76
+  - @dt-dds/react-icon-button@1.0.0-beta.39
+  - @dt-dds/react-radio@1.0.0-beta.106
+  - @dt-dds/react-spinner@1.0.0-beta.123
+  - @dt-dds/react-table@1.0.0-beta.66
+  - @dt-dds/react-toggle@1.0.0-beta.49
+  - @dt-dds/react-tooltip@1.0.0-beta.80
+  - @dt-dds/react-typography@1.0.0-beta.60
+
 ## 1.0.0-beta.354
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.103
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-icon@1.0.0-beta.73
+  - @dt-dds/react-label-field@1.0.0-beta.71
+  - @dt-dds/react-tooltip@1.0.0-beta.80
+  - @dt-dds/react-typography@1.0.0-beta.60
+
 ## 1.0.0-beta.102
 
 ### Patch Changes

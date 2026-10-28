@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.14
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+
 ## 1.0.0-beta.13
 
 ### Patch Changes

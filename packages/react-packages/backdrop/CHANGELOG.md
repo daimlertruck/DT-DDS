@@ -1,5 +1,14 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.71
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-core@1.0.0-beta.67
+
 ## 1.0.0-beta.70
 
 ### Patch Changes

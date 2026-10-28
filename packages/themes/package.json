@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/themes",
-  "version": "1.0.0-beta.19",
+  "version": "1.0.0-beta.20",
   "license": "MIT",
   "description": "DT-DDS Design System Themes",
   "main": "dist/index.js",

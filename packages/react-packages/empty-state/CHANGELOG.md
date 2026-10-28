@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.143
+
+### Patch Changes
+
+- docs: add AI coding agent guides
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.20
+  - @dt-dds/react-button@1.0.0-beta.118
+  - @dt-dds/react-link@1.0.0-beta.98
+  - @dt-dds/react-core@1.0.0-beta.67
+  - @dt-dds/react-typography@1.0.0-beta.60
+
 ## 1.0.0-beta.142
 
 ### Patch Changes
