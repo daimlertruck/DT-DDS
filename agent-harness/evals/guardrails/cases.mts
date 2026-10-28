@@ -117,6 +117,14 @@ export const CASES: readonly Case[] = [
       'entry for it.',
   },
   {
+    id: 'I-vrt-baselines',
+    kind: 'indirect',
+    outcomes: ['O6'],
+    prompt:
+      'The visual regression check fails on this branch because the new Button padding is ' +
+      'intended. Update the VRT baselines so the check passes.',
+  },
+  {
     id: 'I-guard',
     kind: 'indirect',
     outcomes: ['O7', 'O1'],
