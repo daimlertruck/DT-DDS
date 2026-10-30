@@ -497,6 +497,22 @@ For more information on how to write MDX stories see https://storybook.js.org/do
 
 For more information on Storybook and Docs, check https://storybook.js.org/docs/writing-docs.
 
+#### Visual regression tests
+
+Every story is screenshotted and compared with its baseline in `apps/docs/vrt/__snapshots__/`. The "Visual Regression" CI job does this on PRs and attaches the report. It doesn't block the merge.
+
+To run it locally (needs Docker):
+
+```bash
+yarn turbo run build --filter='./packages/*'
+yarn workspace @dt-dds/docs build
+yarn workspace @dt-dds/docs vrt
+```
+
+Add `--grep <story id or file path>` to run only some stories. The report is in `apps/docs/test-results/vrt-report/`.
+
+If a visual change is intended, run `yarn workspace @dt-dds/docs vrt:update` in a terminal and commit the new baselines in their own commit. If you removed a story, `git rm` its baseline in that commit.
+
 ## Versioning & Publishing Packages
 
 New changes should be tracked using the [Semantic Versioning](https://semver.org/).
