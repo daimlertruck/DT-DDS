@@ -62,6 +62,11 @@ process; this file encodes it for agents and records where CONTRIBUTING is stale
 <Name>.stories` renders each matching story in Chromium (CI job `storybook-tests`, not required).
   A Storybook build passes a story that throws. First run on a machine: `yarn workspace
 @dt-dds/docs playwright install chromium`.
+- **VRT** (ADR-0009): build Storybook (`yarn turbo run build --filter='./packages/*'`, then
+  `yarn workspace @dt-dds/docs build`), then `yarn workspace @dt-dds/docs vrt [--grep <story id or
+  file path>]`. Playwright in its Docker image (Docker required), Chromium, Default brand; report
+  `apps/docs/test-results/vrt-report/` and `vrt.json`; CI workflow "Visual Regression" (not
+  required). Agents read the report; only humans run `vrt:update`.
 - The Bash tool runs zsh: quote every glob and bracket (`'--include=*.tsx'`,
   `--filter='...[origin/main]'`); unquoted, zsh aborts with `no matches found` and runs nothing.
 - Storybook, tokens and snapshot commands: see the directory guides below.
@@ -113,7 +118,8 @@ checked in CI; `npx prettier --check <changed .md files>` is advisory.
 - Static analysis: CodeQL alerts readable via `gh api repos/daimlertruck/DT-DDS/code-scanning/alerts`
   (GET). SonarQube runs only in CI and is not a required check.
 - Storybook MCP: `apps/docs` loads `@storybook/addon-mcp` (it needs Storybook 10.3 or later: check
-  `apps/docs/package.json`); no agent is configured to use it yet. Not available yet: VRT (#226).
+  `apps/docs/package.json`); no agent is configured to use it yet. VRT: see Stack & commands; the
+  verify stage does not run it yet (follow-up issue).
   Update this section and the stage skills as the ADR-0008 decision 8 prerequisites land.
 
 ## Architecture decisions
@@ -193,7 +199,8 @@ change after G1 is a scope decision. A `run budget` denial ends the stage: repor
 
 Never hand-edit (owner in brackets): `packages/themes/src/themes/**` [build:theme],
 `packages/themes/src/tokens/**` [Figma export; only in token-import tasks], `.changeset/**`
-[release CI — never add any file there: every `.md` except README.md is read as a changeset], `**/CHANGELOG.md` [changesets], `**/__snapshots__/**` [test:update:snapshot],
+[release CI — never add any file there: every `.md` except README.md is read as a changeset], `**/CHANGELOG.md` [changesets], `**/__snapshots__/**` [test:update:snapshot;
+VRT baselines in `apps/docs/vrt/__snapshots__/`: `vrt:update`, humans only],
 `packages/icons/src/codes.ts`, `yarn.lock` [yarn], README `PACKAGES_TABLE_*` region [CI].
 Ask first: `.github/**`, `.husky/**`, `turbo/generators/**`, `scripts/**`,
 `packages/changeset-conventional-commits/**`. Never run `yarn changesets:*`, `changeset

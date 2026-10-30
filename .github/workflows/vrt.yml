@@ -1,0 +1,60 @@
+name: Visual Regression
+
+# Screenshots every story of the built Storybook in Playwright's Docker image and compares them with
+# the baselines in apps/docs/vrt/__snapshots__/ (ADR-0009). Not a required check: a red run reports
+# visual changes without blocking the merge. Baselines change only through `vrt:update`, run by a
+# human.
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/react-packages/**'
+      - 'packages/dt-dds-react/**'
+      - 'packages/themes/**'
+      - 'packages/icons/**'
+      - 'apps/docs/**'
+      - 'yarn.lock'
+      - '.github/workflows/vrt.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  vrt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      STORYBOOK_DISABLE_TELEMETRY: '1'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+
+      - name: Build packages
+        run: yarn turbo run build --filter='./packages/*'
+
+      - name: Build Storybook
+        run: yarn workspace @dt-dds/docs build
+
+      - name: Run visual regression tests
+        run: yarn workspace @dt-dds/docs vrt
+
+      - name: Upload visual regression report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: vrt-report
+          path: |
+            apps/docs/test-results/vrt-report/
+            apps/docs/test-results/vrt.json
+            apps/docs/test-results/vrt/
+          if-no-files-found: warn
+          retention-days: 14
