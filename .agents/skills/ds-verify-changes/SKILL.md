@@ -45,8 +45,34 @@ verdict is `BLOCKER: verdict FAIL — <gates>` (the human answers `loop:`).
      <Name>.stories` for each changed stories file; its per-story PASS is the evidence that a story
      renders (a Storybook build and its `index.json` pass a story that throws). A failing story is a
      `FAIL` gate. First run on a machine: `yarn workspace @dt-dds/docs playwright install chromium`.
-   - Storybook build when `apps/docs` changed, or a Storybook checklist is handed over (its URLs come
-     from the build): `yarn turbo run build --filter='./packages/*' && (cd apps/docs && yarn build)`
+   - Storybook build when `apps/docs` changed, VRT runs, or a Storybook checklist is handed over
+     (its URLs come from the build): `yarn turbo run build --filter='./packages/*' && (cd apps/docs && yarn build)`
+   - **VRT:** the files in `git diff --name-only origin/main...HEAD` pick the case:
+     - Under `packages/themes/`, `packages/icons/`, `packages/fonts/` or `apps/docs/`: every story,
+       with `yarn workspace @dt-dds/docs vrt`.
+     - Otherwise under `packages/react-packages/`: each changed package and its dependents, with
+       `yarn workspace @dt-dds/docs vrt --grep 'packages/react-packages/<a>/|packages/react-packages/<b>/'`.
+       The paths are the `packages/react-packages/` lines of
+       `yarn --silent turbo run build --filter='...[origin/main]' --dry=json | jq -r '.tasks[].directory'`.
+     - Neither: record `N/A`.
+
+     Build Storybook first, because `vrt/run.mts` accepts a stale `storybook-static/`. Run VRT once,
+     because each run overwrites the report, and allow it 10 minutes.
+
+     Record the exit code, the `stats` of `apps/docs/test-results/vrt.json`, each failed story id, the
+     report (`apps/docs/test-results/vrt-report/`) and the diff images (`apps/docs/test-results/vrt/`).
+     Afterwards `git status --short apps/docs/vrt/__snapshots__` must print nothing.
+
+     A missing `vrt.json`, or a `stats.startTime` from before this run, means Docker never started:
+     record `BLOCKED-BY-ENV`, the error and the command for the human to run.
+
+     A failed test (a diff, a missing baseline, a story that errors) is a finding for the human, not a
+     `FAIL` gate. Record `HUMAN-RUN-PENDING` (judgement), and list each failed story id, its reason and
+     its diff image in the report and in `gate-summary.md`. The run stops at G5, where the human runs
+     `vrt:update` in one commit for an intended change, or answers `loop:`.
+
+     Baselines belong to the human: no `vrt:update`, no `--update-snapshots`, no edit under
+     `vrt/__snapshots__/`, no fixup to make a test pass.
    - tokens changed: `yarn workspace @dt-dds/themes type-check` + `build:theme` diff is clean
 5. **e2e gate:** not configured — record `N/A`.
 6. **Behavioural confirmation.** Record one status per behaviour an AC names. Who runs each check
@@ -100,6 +126,7 @@ version as stale evidence.
 | Unit pass | `turbo run test` reports 0 failures, coverage thresholds met | a previous run |
 | Versions OK | `check-pkg-deps` exits 0 | package.json looks right |
 | Commits OK | commitlint exits 0 and every commit has the human sign-off | hook ran once |
+| VRT clean | `vrt` exits 0 and `vrt.json` `stats.startTime` is from this run | an earlier report; a Storybook build from before the change |
 | Behavioural OK | agent-run evidence from this run, or `PASS (human-run …)` for a check routed to the human: the checklist confirmed, or the simulation log says PASS | every gate passed; the script looks right |
 | Bug fixed | the original symptom's test now passes | the code changed |
 
@@ -110,8 +137,8 @@ Environment gaps are not code failures.
 
 Per-gate result with commands and quoted failures; release-impact table; the human checklist or
 simulation section; final verdict `PASS` / `FAIL` from the blocking gates, with the behavioural
-status beside it. G5 is clean only if no AC-linked behaviour is `HUMAN-RUN-PENDING` or
-`BLOCKED-BY-ENV`.
+status beside it. G5 is clean only if no AC-linked behaviour and no VRT result is
+`HUMAN-RUN-PENDING` or `BLOCKED-BY-ENV`.
 
 Each pass rewrites the report for the current attempt; only the Attempt log carries history
 (earlier attempts stay in `.local/agent-harness/work/<N>/snapshots/`).
