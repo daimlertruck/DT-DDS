@@ -1,0 +1,162 @@
+{
+  "schema": 1,
+  "issue": 297,
+  "lane": {
+    "lane": "1",
+    "name": "Standard",
+    "decidedBy": "human (--lane)",
+    "confidence": 0.8
+  },
+  "base": "00ba90470a345dae28cbcdcf2689d818d3c8b92a",
+  "harness": {
+    "commit": "0042ece91d9d049b947914f483884e077647f8dc",
+    "dirty": false,
+    "claudeCode": [
+      "2.1.316"
+    ]
+  },
+  "started": "2026-11-02T10:23:03Z",
+  "handedOff": "2026-11-02T11:33:10Z",
+  "totals": {
+    "listUsd": 2.363921,
+    "reportedUsd": 2.363921,
+    "requests": 159,
+    "uncachedIn": 112,
+    "cacheWrite": 280155,
+    "cacheRead": 1593010,
+    "output": 62314,
+    "stageSeconds": 600,
+    "toolCalls": 152
+  },
+  "stages": [
+    {
+      "stage": "gather-context",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.191337,
+      "reportedUsd": 0.191337,
+      "seconds": 63,
+      "requests": 23,
+      "uncachedIn": 24,
+      "cacheWrite": 39194,
+      "cacheRead": 262141,
+      "output": 6709
+    },
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 1.531058,
+      "reportedUsd": 1.531058,
+      "seconds": 386,
+      "requests": 67,
+      "uncachedIn": 30,
+      "cacheWrite": 108120,
+      "cacheRead": 831291,
+      "output": 41204
+    },
+    {
+      "stage": "implement",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.230681,
+      "reportedUsd": 0.230681,
+      "seconds": 26,
+      "requests": 22,
+      "uncachedIn": 12,
+      "cacheWrite": 29446,
+      "cacheRead": 124816,
+      "output": 2922
+    },
+    {
+      "stage": "verify",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.125586,
+      "reportedUsd": 0.125586,
+      "seconds": 49,
+      "requests": 21,
+      "uncachedIn": 20,
+      "cacheWrite": 28941,
+      "cacheRead": 189735,
+      "output": 3422
+    },
+    {
+      "stage": "review",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.127607,
+      "reportedUsd": 0.127607,
+      "seconds": 28,
+      "requests": 10,
+      "uncachedIn": 8,
+      "cacheWrite": 35034,
+      "cacheRead": 70964,
+      "output": 3291
+    },
+    {
+      "stage": "pr-draft",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.157652,
+      "reportedUsd": 0.157652,
+      "seconds": 48,
+      "requests": 16,
+      "uncachedIn": 18,
+      "cacheWrite": 39420,
+      "cacheRead": 114063,
+      "output": 4766
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 92
+    },
+    {
+      "gate": "G3",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 1826
+    },
+    {
+      "gate": "G4",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 46
+    },
+    {
+      "gate": "G5",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 929
+    },
+    {
+      "gate": "G6",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 80
+    },
+    {
+      "gate": "G7",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 322
+    },
+    {
+      "gate": "G7",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 310
+    }
+  ],
+  "humanActions": 4
+}
