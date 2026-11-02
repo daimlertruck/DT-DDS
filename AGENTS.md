@@ -119,7 +119,8 @@ checked in CI; `npx prettier --check <changed .md files>` is advisory.
   (GET). SonarQube runs only in CI and is not a required check.
 - Storybook MCP: `apps/docs` loads `@storybook/addon-mcp` (it needs Storybook 10.3 or later: check
   `apps/docs/package.json`); no agent is configured to use it yet. VRT: see Stack & commands; the
-  verify stage does not run it yet (follow-up issue).
+  verify stage runs it for the affected stories and records the report; a diff stops at the human
+  gate, and no agent updates baselines.
   Update this section and the stage skills as the ADR-0008 decision 8 prerequisites land.
 
 ## Architecture decisions
