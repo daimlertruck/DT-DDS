@@ -129,18 +129,23 @@ export function useFloatingPosition<T extends HTMLElement = HTMLElement>(
       ro.observe(menuElement);
     }
 
+    const onScroll = ({ target }: Event) => {
+      if (target instanceof Node && !target.contains(anchorElement)) return;
+      updatePosition();
+    };
+
     // Scroll does not bubble: capture on window sees every scrolling ancestor.
     const scrollOpts: AddEventListenerOptions = {
       passive: true,
       capture: true,
     };
     const resizeOpts: AddEventListenerOptions = { passive: true };
-    window.addEventListener('scroll', updatePosition, scrollOpts);
+    window.addEventListener('scroll', onScroll, scrollOpts);
     window.addEventListener('resize', updatePosition, resizeOpts);
 
     return () => {
       ro.disconnect();
-      window.removeEventListener('scroll', updatePosition, scrollOpts);
+      window.removeEventListener('scroll', onScroll, scrollOpts);
       window.removeEventListener('resize', updatePosition, resizeOpts);
     };
   }, [
