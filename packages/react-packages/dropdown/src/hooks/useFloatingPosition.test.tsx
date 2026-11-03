@@ -447,6 +447,22 @@ describe('useFloatingPosition', () => {
       expect(menu).toHaveStyle({ top: '194px', left: '30px' });
     });
 
+    test('should ignore a scroll from an element that does not contain the anchor', () => {
+      const { menu } = renderOpenThenMoveAnchor();
+
+      const unrelatedScrollable = document.createElement('div');
+      document.body.appendChild(unrelatedScrollable);
+
+      act(() => {
+        fireEvent.scroll(unrelatedScrollable);
+      });
+
+      // Anchor moved, but the scroll came from an element that can't contain it.
+      expect(menu).toHaveStyle({ top: '54px', left: '10px' });
+
+      document.body.removeChild(unrelatedScrollable);
+    });
+
     test('should stop repositioning after close', () => {
       const { rerender } = render(<Menu anchorRect={anchorRect} open />);
       const menu = screen.getByTestId(menuTestId);
