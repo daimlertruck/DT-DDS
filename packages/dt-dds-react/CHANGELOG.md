@@ -1,5 +1,20 @@
 # @dt-ui/react
 
+## 1.0.0-beta.361
+
+### Patch Changes
+
+- fix(dropdown): skip scrolls that can't move the anchor
+- fix(dropdown): reposition on ancestor scroll
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-dropdown@1.0.0-beta.116
+  - @dt-dds/react-date-picker@1.0.0-beta.121
+  - @dt-dds/react-select@1.0.0-beta.113
+  - @dt-dds/react-pagination@1.0.0-beta.64
+  - @dt-dds/react-app-header@1.0.0-beta.105
+
 ## 1.0.0-beta.360
 
 ### Patch Changes

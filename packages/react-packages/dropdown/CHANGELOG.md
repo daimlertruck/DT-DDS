@@ -1,5 +1,12 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.116
+
+### Patch Changes
+
+- fix(dropdown): skip scrolls that can't move the anchor
+- fix(dropdown): reposition on ancestor scroll
+
 ## 1.0.0-beta.115
 
 ### Patch Changes

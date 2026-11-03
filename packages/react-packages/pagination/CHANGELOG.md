@@ -1,5 +1,15 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- fix(dropdown): skip scrolls that can't move the anchor
+- fix(dropdown): reposition on ancestor scroll
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.113
+
 ## 1.0.0-beta.63
 
 ### Patch Changes
