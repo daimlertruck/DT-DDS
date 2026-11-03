@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import path from 'node:path';
 
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 interface IndexEntry {
   readonly id: string;
@@ -57,6 +57,42 @@ const toStaticFile = (url: string): string => {
 const isFile = (file: string): boolean =>
   file !== '' && existsSync(file) && statSync(file).isFile();
 
+const FAILURE_EVENTS = [
+  'storyErrored',
+  'storyThrewException',
+  'playFunctionThrewException',
+  'storyMissing',
+] as const;
+
+interface StoryChannel {
+  on(event: string, listener: () => void): void;
+}
+
+interface OutcomeWindow {
+  __vrtOutcome?: Promise<string>;
+}
+
+// Storybook emits storyRendered once play has finished; the first
+// event that ends the story settles __vrtOutcome.
+const watchStoryOutcome = (page: Page): Promise<void> =>
+  page.addInitScript((failureEvents: readonly string[]) => {
+    const target = window as Window & OutcomeWindow;
+    let channel: StoryChannel | undefined;
+    target.__vrtOutcome = new Promise<string>((resolve) => {
+      Object.defineProperty(window, '__STORYBOOK_ADDONS_CHANNEL__', {
+        configurable: true,
+        get: () => channel,
+        set: (value: StoryChannel) => {
+          channel = value;
+          value.on('storyRendered', () => resolve('storyRendered'));
+          failureEvents.forEach((event) => {
+            value.on(event, () => resolve(event));
+          });
+        },
+      });
+    });
+  }, FAILURE_EVENTS);
+
 const brand = readBrand();
 
 test.beforeEach(async ({ page }) => {
@@ -68,6 +104,7 @@ test.beforeEach(async ({ page }) => {
     }
     await route.fulfill({ status: 404 });
   });
+  await watchStoryOutcome(page);
 });
 
 for (const { id, importPath } of readStories()) {
@@ -76,6 +113,12 @@ for (const { id, importPath } of readStories()) {
 
     await page.goto(
       `${ORIGIN}/iframe.html?id=${id}&viewMode=story&globals=theme:${brand}`
+    );
+    const outcome = await page.evaluate(
+      () => (window as Window & OutcomeWindow).__vrtOutcome
+    );
+    expect(outcome, 'Storybook event that ended the story').toBe(
+      'storyRendered'
     );
     const body = page.locator('body');
     await page.waitForSelector('body.sb-show-main, body.sb-show-errordisplay');
