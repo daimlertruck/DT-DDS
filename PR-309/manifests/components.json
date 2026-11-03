@@ -28630,6 +28630,11 @@
           "snippet": "const Default = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
         },
         {
+          "id": "data-display-toast--open",
+          "name": "Open",
+          "snippet": "const Open = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
+        },
+        {
           "id": "data-display-toast--with-actions",
           "name": "With Actions",
           "snippet": "const WithActions = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
@@ -29523,6 +29528,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 3740
+    "durationMs": 4582
   }
 }

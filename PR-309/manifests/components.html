@@ -620,13 +620,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">84 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/84 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">85 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/85 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note ok" style="margin-bottom: 16px;">
-              Using <code>react-docgen-typescript</code>. Generation took <strong>3.7s</strong>.
+              Using <code>react-docgen-typescript</code>. Generation took <strong>4.6s</strong>.
             </div>
     <h2 class="section-title">Components</h2>
     <div class="grid" role="list">
@@ -5713,7 +5713,7 @@ import { Tooltip } from '@dt-dds/react-tooltip';</code></pre>
       <div class="badges">
         <label for="c-34-data-display-toast-props" class="badge ok as-toggle">8 prop types</label>
         <label for="c-34-data-display-toast-info" class="badge info as-toggle">1 info</label>
-        <label for="c-34-data-display-toast-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-34-data-display-toast-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -5792,6 +5792,30 @@ import { ToastType } from './constants';</code></pre>
               
               
               <pre><code>const Default = ({ children, type, title, message, dismissible, ...props }) =&gt; (
+  &lt;&gt;
+    &lt;button
+      onClick={() =&gt;
+        emitToast({ type, title, message, dismissible, children })
+      }
+      type=&#39;button&#39;
+    &gt;
+      Click me
+    &lt;/button&gt;
+    &lt;Portal isOpen&gt;
+      &lt;Toaster {...(props as ToasterProps)} /&gt;
+    &lt;/Portal&gt;
+  &lt;/&gt;
+);</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">Open</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const Open = ({ children, type, title, message, dismissible, ...props }) =&gt; (
   &lt;&gt;
     &lt;button
       onClick={() =&gt;
