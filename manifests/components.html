@@ -620,13 +620,13 @@
 <header>
   <div class="wrap">
     <h1>Manifest Debugger</h1>
-    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">78 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/78 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
+    <div class="summary"><a class="filter-pill all" data-k="all" href="#filter-all">All</a><span class="filter-pill ok" aria-disabled="true">38 components ok</span><a class="filter-pill info" data-k="infos" href="#filter-infos">38/38 infos</a><span class="filter-pill ok" aria-disabled="true">79 stories ok</span><a class="filter-pill info" data-k="story-warnings" href="#filter-story-warnings">4/79 incomplete snippets</a><a class="filter-pill ok" data-k="docs" href="#filter-docs">3 docs ok</a></div>
   </div>
 </header>
 <main>
   <div class="wrap">
     <div class="note ok" style="margin-bottom: 16px;">
-              Using <code>react-docgen-typescript</code>. Generation took <strong>4.9s</strong>.
+              Using <code>react-docgen-typescript</code>. Generation took <strong>5.1s</strong>.
             </div>
     <h2 class="section-title">Components</h2>
     <div class="grid" role="list">
@@ -2297,7 +2297,7 @@ import { Portal } from '@dt-dds/react-core';</code></pre>
       <div class="badges">
         <label for="c-12-data-display-dropdown-props" class="badge ok as-toggle">12 prop types</label>
         <label for="c-12-data-display-dropdown-info" class="badge info as-toggle">1 info</label>
-        <label for="c-12-data-display-dropdown-stories" class="badge ok as-toggle">2 stories</label>
+        <label for="c-12-data-display-dropdown-stories" class="badge ok as-toggle">3 stories</label>
         
         
       </div>
@@ -2432,6 +2432,23 @@ import { createRef } from 'react';</code></pre>
     anchorRef={createRef&lt;HTMLButtonElement&gt;()}
     as=&quot;ul&quot;
     matchWidth={false}
+    offsetY={4}
+    placement=&quot;bottom&quot;
+    isFocusable={false} /&gt;;</code></pre>
+              
+            </div>
+            <div class="note ok">
+              <div class="row">
+                <span class="ex-name">In Scrollable Container</span>
+                <span class="badge ok">story ok</span>
+              </div>
+              
+              
+              <pre><code>const InScrollableContainer = () =&gt; &lt;InScrollableContainerDemo
+    anchorRef={createRef&lt;HTMLButtonElement&gt;()}
+    as=&quot;ul&quot;
+    matchWidth={false}
+    offsetX={0}
     offsetY={4}
     placement=&quot;bottom&quot;
     isFocusable={false} /&gt;;</code></pre>
