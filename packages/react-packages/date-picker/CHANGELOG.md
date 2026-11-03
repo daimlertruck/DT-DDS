@@ -1,5 +1,13 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.120
+
+### Patch Changes
+
+- fix: update dropdown's readme
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.115
+
 ## 1.0.0-beta.119
 
 ### Patch Changes

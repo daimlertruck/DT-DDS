@@ -1,5 +1,11 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.115
+
+### Patch Changes
+
+- fix: update dropdown's readme
+
 ## 1.0.0-beta.114
 
 ### Patch Changes

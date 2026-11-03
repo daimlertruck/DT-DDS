@@ -1,5 +1,13 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.63
+
+### Patch Changes
+
+- fix: update dropdown's readme
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.112
+
 ## 1.0.0-beta.62
 
 ### Patch Changes

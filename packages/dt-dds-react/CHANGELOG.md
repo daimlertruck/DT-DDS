@@ -1,5 +1,18 @@
 # @dt-ui/react
 
+## 1.0.0-beta.360
+
+### Patch Changes
+
+- fix: update dropdown's readme
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-app-header@1.0.0-beta.104
+  - @dt-dds/react-dropdown@1.0.0-beta.115
+  - @dt-dds/react-date-picker@1.0.0-beta.120
+  - @dt-dds/react-select@1.0.0-beta.112
+  - @dt-dds/react-pagination@1.0.0-beta.63
+
 ## 1.0.0-beta.359
 
 ### Patch Changes
