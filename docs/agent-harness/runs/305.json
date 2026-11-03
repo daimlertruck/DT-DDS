@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "issue": 305,
+  "lane": {
+    "lane": "2",
+    "name": "Full",
+    "decidedBy": "rules",
+    "confidence": 0.8
+  },
+  "base": "b18f5a72b70c6c2dd6bc23dd438ae1f5321f9f23",
+  "harness": {
+    "commit": "0ed1cffa263680a4e018b368d27856285c744d3d",
+    "dirty": false,
+    "claudeCode": [
+      "2.1.317"
+    ]
+  },
+  "started": "2026-11-03T12:24:45Z",
+  "handedOff": "2026-11-03T14:12:44Z",
+  "totals": {
+    "listUsd": 9.948916,
+    "reportedUsd": 9.948916,
+    "requests": 441,
+    "uncachedIn": 520,
+    "cacheWrite": 815853,
+    "cacheRead": 16481270,
+    "output": 203563,
+    "stageSeconds": 2410,
+    "toolCalls": 489
+  },
+  "stages": [
+    {
+      "stage": "gather-context",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.418337,
+      "reportedUsd": 0.418337,
+      "seconds": 191,
+      "requests": 53,
+      "uncachedIn": 44,
+      "cacheWrite": 67559,
+      "cacheRead": 865811,
+      "output": 16277
+    },
+    {
+      "stage": "check-architecture",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.437145,
+      "reportedUsd": 0.437145,
+      "seconds": 101,
+      "requests": 24,
+      "uncachedIn": 26,
+      "cacheWrite": 42218,
+      "cacheRead": 368856,
+      "output": 7609
+    },
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 4.320237,
+      "reportedUsd": 4.320237,
+      "seconds": 1016,
+      "requests": 90,
+      "uncachedIn": 124,
+      "cacheWrite": 254331,
+      "cacheRead": 4643727,
+      "output": 105967
+    },
+    {
+      "stage": "implement",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 2.902563,
+      "reportedUsd": 2.902563,
+      "seconds": 523,
+      "requests": 140,
+      "uncachedIn": 176,
+      "cacheWrite": 152278,
+      "cacheRead": 7831044,
+      "output": 28713
+    },
+    {
+      "stage": "verify",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.741284,
+      "reportedUsd": 0.741284,
+      "seconds": 358,
+      "requests": 84,
+      "uncachedIn": 86,
+      "cacheWrite": 142593,
+      "cacheRead": 1695902,
+      "output": 21504
+    },
+    {
+      "stage": "review",
+      "models": [
+        "claude-opus-5-5",
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.897284,
+      "reportedUsd": 0.897284,
+      "seconds": 156,
+      "requests": 28,
+      "uncachedIn": 44,
+      "cacheWrite": 103834,
+      "cacheRead": 886775,
+      "output": 15442
+    },
+    {
+      "stage": "pr-draft",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.232066,
+      "reportedUsd": 0.232066,
+      "seconds": 65,
+      "requests": 22,
+      "uncachedIn": 20,
+      "cacheWrite": 53040,
+      "cacheRead": 189155,
+      "output": 8051
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 194
+    },
+    {
+      "gate": "G2",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 209
+    },
+    {
+      "gate": "G3",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 385
+    },
+    {
+      "gate": "G3",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 94
+    },
+    {
+      "gate": "G4",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 198
+    },
+    {
+      "gate": "G5",
+      "iteration": 1,
+      "decision": "stop",
+      "waitSeconds": 141
+    },
+    {
+      "gate": "G5",
+      "iteration": 2,
+      "decision": "revise",
+      "waitSeconds": 81
+    },
+    {
+      "gate": "G5",
+      "iteration": 3,
+      "decision": "approve",
+      "waitSeconds": 71
+    },
+    {
+      "gate": "G6",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 1151
+    },
+    {
+      "gate": "G7",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 84
+    },
+    {
+      "gate": "G7",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 59
+    }
+  ],
+  "humanActions": 3
+}
