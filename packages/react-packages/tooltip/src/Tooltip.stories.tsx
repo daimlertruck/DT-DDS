@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import styled from '@emotion/styled';
 
@@ -77,5 +78,17 @@ export const Default: StoryObj<TooltipProps> = {
     direction: OTooltipDirection.Top,
     background: OTooltipBackground.Full,
     message: 'Delete',
+  },
+};
+
+export const Open: StoryObj<TooltipProps> = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.hover(canvas.getByTestId('tooltip-container'));
+    const tooltip = await page.findByRole('tooltip');
+    await expect(tooltip).toBeVisible();
+    await expect(tooltip).toHaveTextContent('Delete');
   },
 };

@@ -1,6 +1,7 @@
 import { ReactNode, useState } from 'react';
 
-import { Meta, StoryFn } from '@storybook/react-vite';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Code, codes } from '@dt-dds/icons';
 import { Portal } from '@dt-dds/react-core';
@@ -15,6 +16,8 @@ interface DrawerStoryProps extends DrawerProps {
   title: string;
   icon?: Code;
 }
+
+type Story = StoryObj<DrawerStoryProps>;
 
 const Template: StoryFn<DrawerStoryProps> = ({
   body,
@@ -56,6 +59,23 @@ export const Default = {
     position: 'right',
   },
 };
+
+export const Open: Story = {
+  args: {
+    body: 'This is the body of the drawer.',
+    title: 'Drawer title',
+    position: 'right',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(canvas.getByRole('button', { name: 'Open Drawer' }));
+    await expect(
+      await page.findByText('This is the body of the drawer.')
+    ).toBeVisible();
+  },
+};
+
 const meta: Meta<DrawerStoryProps> = {
   title: 'Data Display/Drawer',
   component: Drawer,

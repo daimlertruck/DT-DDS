@@ -1,4 +1,5 @@
 import { ToasterProps } from 'react-hot-toast';
+import { expect, userEvent, waitFor, within } from 'storybook/test';
 
 import { Button } from '@dt-dds/react-button';
 import { Portal } from '@dt-dds/react-core';
@@ -48,6 +49,20 @@ export const Default: Story = {
     dismissible: true,
     message: 'This is a success message showed in the Toast.',
     onClose: () => console.log('clicked'),
+  },
+};
+
+export const Open: Story = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(canvas.getByRole('button', { name: 'Click me' }));
+    await waitFor(() =>
+      expect(
+        page.getByText('This is a success message showed in the Toast.')
+      ).toBeVisible()
+    );
   },
 };
 

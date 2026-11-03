@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
-import { Meta, StoryFn } from '@storybook/react-vite';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Portal } from '@dt-dds/react-core';
 
 import { Backdrop, BackdropProps } from './Backdrop';
 import { BackdropType } from './constants';
+
+type Story = StoryObj<BackdropProps>;
 
 const Template: StoryFn<typeof Backdrop> = ({ ...props }: BackdropProps) => {
   const [isBackdropOpen, setIsBackdropOpen] = useState(false);
@@ -34,6 +37,20 @@ export const Default = {
     isOpen: false,
     type: BackdropType.Dark,
     children: <div>Example content.</div>,
+  },
+};
+
+export const Open: Story = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(
+      canvas.getByRole('button', { name: 'Open Backdrop' })
+    );
+    await expect(
+      await page.findByRole('button', { name: 'Close Backdrop' })
+    ).toBeVisible();
   },
 };
 
