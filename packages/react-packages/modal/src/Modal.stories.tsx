@@ -1,4 +1,5 @@
-import { Meta, StoryFn } from '@storybook/react-vite';
+import { Meta, StoryFn, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { Button } from '@dt-dds/react-button';
 
@@ -16,6 +17,8 @@ type ModalStoryProps = {
 } & ModalProps &
   ModalHeaderProps &
   ModalContentProps;
+
+type Story = StoryObj<ModalStoryProps>;
 
 const Template: StoryFn<ModalStoryProps> = ({
   actionTitle,
@@ -120,6 +123,16 @@ export const Default = {
     hasFooterBorder: false,
     hasFooterBackgroundColor: false,
     isLoading: false,
+  },
+};
+
+export const Open: Story = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(canvas.getByRole('button', { name: 'Click me' }));
+    await expect(await page.findByText('Some content here')).toBeVisible();
   },
 };
 

@@ -1,5 +1,7 @@
 import { createRef, useState, useRef } from 'react';
 
+import { expect, userEvent, within } from 'storybook/test';
+
 import { useTheme } from '@emotion/react';
 
 import { Icon } from '@dt-dds/react-icon';
@@ -87,6 +89,18 @@ export const Default: Story = {
     offsetY: 4,
     placement: 'bottom',
     isFocusable: false,
+  },
+};
+
+export const Open: Story = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(
+      canvas.getByRole('button', { name: 'Open dropdown' })
+    );
+    await expect(await page.findByRole('menu')).toBeVisible();
   },
 };
 

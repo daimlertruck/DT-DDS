@@ -1,6 +1,7 @@
 import { ComponentProps, useState } from 'react';
 
 import { useArgs } from 'storybook/preview-api';
+import { expect, userEvent, within } from 'storybook/test';
 
 import { SelectFill, SelectVariant } from './types';
 
@@ -84,6 +85,16 @@ export const Default: Story = {
     isFloatingLabel: true,
     scale: 'standard',
     placeholder: 'Insert an option',
+  },
+};
+
+export const Open: Story = {
+  ...Default,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const page = within(canvasElement.ownerDocument.body);
+    await userEvent.click(canvas.getByRole('combobox'));
+    await expect(await page.findByRole('listbox')).toBeVisible();
   },
 };
 
