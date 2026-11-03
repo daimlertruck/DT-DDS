@@ -10,20 +10,33 @@ The Dropdown Menu provides the users with a box that can receive any content. It
 ## Dropdown Usage
 
 ```jsx
+import { useRef, useState } from 'react';
 import { Dropdown } from '@dt-dds/react';
 
-const OPTIONS = [
+const options = [
   { text: 'Option 1', value: '1' },
   { text: 'Option 2', value: '2' },
 ];
 
 export const App = () => {
+  const anchorRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <Dropdown>
-      {options.map((option) => (
-        <Dropdown.Option key={option.value}>{option.text}</Dropdown.Option>
-      ))}
-    </Dropdown>
+    <>
+      <button ref={anchorRef} onClick={() => setIsOpen(!isOpen)}>
+        Menu
+      </button>
+      <Dropdown
+        anchorRef={anchorRef}
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+      >
+        {options.map((option) => (
+          <Dropdown.Option key={option.value}>{option.text}</Dropdown.Option>
+        ))}
+      </Dropdown>
+    </>
   );
 };
 ```
@@ -40,8 +53,9 @@ export const App = () => {
 | `isOpen`     | `boolean`                        | `false`    | Controls visibility. When `false`, the element is hidden via `aria-hidden`. |
 | `anchorRef`  | `RefObject<HTMLElement \| null>` | -          | Reference to the anchor element used for positioning.                       |
 | `matchWidth` | `boolean`                        | `true`     | If `true`, the dropdown width matches the anchor width.                     |
-| `offsetX`    | `number`                         | `4`        | Horizontal offset (px) for `left`/`right` placements.                       |
-| `offsetY`    | `number`                         | `4`        | Vertical offset (px) for `top`/`bottom` placements.                         |
+| `offsetX`    | `number`                         | `0`        | Horizontal offset (px) applied to all placements.                           |
+| `offsetY`    | `number`                         | `4`        | Vertical offset (px) applied to all placements.                             |
+| `isFocusable`| `boolean`                        | `true`     | If `true`, wraps the dropdown in a `FocusTrap` for keyboard navigation.     |
 | `onClose`    | `() => void`                     | —          | Called when a click is detected outside the dropdown/anchor.                |
 | `as`         | `keyof JSX.IntrinsicElements`    | `"div"`    | Underlying HTML element (e.g., `"ul"` for list semantics).                  |
 | `placement`  | `DropdownPlacement`              | `bottom`   | Dropdown position.                                                          |
