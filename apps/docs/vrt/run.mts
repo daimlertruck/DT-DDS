@@ -4,6 +4,8 @@ import { createRequire } from 'node:module';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { findSnapshotUpdateFlag } from './snapshot-flags.mts';
+
 const docsDir = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   '..'
@@ -12,6 +14,14 @@ const repoRoot = path.resolve(docsDir, '..', '..');
 const args = process.argv.slice(2);
 const update = args.includes('--update');
 const rest = args.filter((arg) => arg !== '--update');
+const updateFlag = findSnapshotUpdateFlag(rest);
+
+if (updateFlag) {
+  console.error(
+    `vrt refuses ${updateFlag}: baselines change only through vrt:update, run by a human in a terminal (ADR-0009).`
+  );
+  process.exit(1);
+}
 
 if (update && !process.stdin.isTTY) {
   console.error(
