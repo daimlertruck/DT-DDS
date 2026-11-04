@@ -3040,6 +3040,11 @@
           "id": "data-display-dropdown--with-icon-and-ellipsis",
           "name": "With Icon And Ellipsis",
           "snippet": "const WithIconAndEllipsis = () => <WithIconAndEllipsisDemo\n    anchorRef={createRef<HTMLButtonElement>()}\n    as=\"ul\"\n    matchWidth={false}\n    offsetY={4}\n    placement=\"bottom\"\n    isFocusable={false} />;"
+        },
+        {
+          "id": "data-display-dropdown--in-scrollable-container",
+          "name": "In Scrollable Container",
+          "snippet": "const InScrollableContainer = () => <InScrollableContainerDemo\n    anchorRef={createRef<HTMLButtonElement>()}\n    as=\"ul\"\n    matchWidth={false}\n    offsetX={0}\n    offsetY={4}\n    placement=\"bottom\"\n    isFocusable={false} />;"
         }
       ],
       "import": "import { Dropdown } from '@dt-dds/react-dropdown';\nimport { Icon } from '@dt-dds/react-icon';\nimport { Typography } from '@dt-dds/react-typography';\nimport { createRef } from 'react';"
@@ -29528,6 +29533,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 4582
+    "durationMs": 4561
   }
 }
