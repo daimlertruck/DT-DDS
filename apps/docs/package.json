@@ -11,6 +11,7 @@
     "test-storybook": "vitest run --project=storybook",
     "test-storybook:ci": "yarn test-storybook --reporter=default --reporter=json --outputFile=test-results/storybook.json",
     "preview-storybook": "vite storybook-static",
+    "test": "node --test \"vrt/*.test.mts\"",
     "vrt": "node vrt/run.mts",
     "vrt:update": "node vrt/run.mts --update"
   },
