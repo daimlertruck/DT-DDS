@@ -754,6 +754,11 @@
           "id": "data-display-backdrop--default",
           "name": "Default",
           "snippet": "const Default = ({ ...props }: BackdropProps) => {\n  const [isBackdropOpen, setIsBackdropOpen] = useState(false);\n\n  const toggleBackdrop = () => setIsBackdropOpen(!isBackdropOpen);\n\n  return (\n    <>\n      <button onClick={toggleBackdrop} type='button'>\n        Open Backdrop\n      </button>\n      <Portal isOpen={isBackdropOpen}>\n        <Backdrop {...props} isOpen={isBackdropOpen}>\n          <>{props.children}</>\n          <button onClick={toggleBackdrop} type='button'>\n            Close Backdrop\n          </button>\n        </Backdrop>\n      </Portal>\n    </>\n  );\n};"
+        },
+        {
+          "id": "data-display-backdrop--open",
+          "name": "Open",
+          "snippet": "const Open = ({ ...props }: BackdropProps) => {\n  const [isBackdropOpen, setIsBackdropOpen] = useState(false);\n\n  const toggleBackdrop = () => setIsBackdropOpen(!isBackdropOpen);\n\n  return (\n    <>\n      <button onClick={toggleBackdrop} type='button'>\n        Open Backdrop\n      </button>\n      <Portal isOpen={isBackdropOpen}>\n        <Backdrop {...props} isOpen={isBackdropOpen}>\n          <>{props.children}</>\n          <button onClick={toggleBackdrop} type='button'>\n            Close Backdrop\n          </button>\n        </Backdrop>\n      </Portal>\n    </>\n  );\n};"
         }
       ],
       "import": "import { Backdrop } from '@dt-dds/react-backdrop';\nimport { Portal } from '@dt-dds/react-core';\nimport { BackdropType } from './constants';"
@@ -2216,6 +2221,11 @@
           "id": "data-display-drawer--default",
           "name": "Default",
           "snippet": "const Default = ({\n  body,\n  title,\n  icon,\n  ...props\n}: DrawerStoryProps) => {\n  const [isDrawerVisible, setIsDrawerVisible] = useState(false);\n  const toggleDrawer = () => {\n    setIsDrawerVisible((prevState) => !prevState);\n  };\n  return (\n    <>\n      <button onClick={toggleDrawer} type='button'>\n        Open Drawer\n      </button>\n      <Portal isOpen={isDrawerVisible}>\n        <Drawer\n          {...props}\n          isVisible={isDrawerVisible}\n          setIsVisible={setIsDrawerVisible}\n        >\n          <Drawer.Header>\n            <Drawer.Title icon={icon} title={title} />\n          </Drawer.Header>\n          <Drawer.Body>\n            <div>{body}</div>\n          </Drawer.Body>\n        </Drawer>\n      </Portal>\n    </>\n  );\n};"
+        },
+        {
+          "id": "data-display-drawer--open",
+          "name": "Open",
+          "snippet": "const Open = ({\n  body,\n  title,\n  icon,\n  ...props\n}: DrawerStoryProps) => {\n  const [isDrawerVisible, setIsDrawerVisible] = useState(false);\n  const toggleDrawer = () => {\n    setIsDrawerVisible((prevState) => !prevState);\n  };\n  return (\n    <>\n      <button onClick={toggleDrawer} type='button'>\n        Open Drawer\n      </button>\n      <Portal isOpen={isDrawerVisible}>\n        <Drawer\n          {...props}\n          isVisible={isDrawerVisible}\n          setIsVisible={setIsDrawerVisible}\n        >\n          <Drawer.Header>\n            <Drawer.Title icon={icon} title={title} />\n          </Drawer.Header>\n          <Drawer.Body>\n            <div>{body}</div>\n          </Drawer.Body>\n        </Drawer>\n      </Portal>\n    </>\n  );\n};"
         }
       ],
       "import": "import { Drawer } from '@dt-dds/react-drawer';\nimport { Portal } from '@dt-dds/react-core';"
@@ -3020,6 +3030,11 @@
           "id": "data-display-dropdown--default",
           "name": "Default",
           "snippet": "const Default = () => {\n    const [isOpen, setIsOpen] = useState(false);\n    const ref = useRef<HTMLButtonElement | null>(null);\n\n    return (\n        <div style={{ height: 200, padding: 16 }}>\n            <button\n                onClick={() => setIsOpen(!isOpen)}\n                ref={ref}\n                style={{ marginBottom: 12 }}\n                type='button'>\n                {isOpen ? 'Close' : 'Open'}dropdown\n                        </button>\n            <Dropdown\n                as=\"ul\"\n                matchWidth={false}\n                offsetX={0}\n                offsetY={4}\n                placement=\"bottom\"\n                isFocusable={false}\n                anchorRef={ref}\n                isOpen={isOpen}\n                onClose={() => setIsOpen(false)}>\n                {OPTIONS.map((option) => (\n                  <Dropdown.Option\n                    isDisabled={option.disabled}\n                    key={option.value}\n                    onClick={() => console.log(`${option.text} clicked`)}\n                  >\n                    {option.text}\n                  </Dropdown.Option>\n                ))}\n            </Dropdown>\n        </div>\n    );\n};"
+        },
+        {
+          "id": "data-display-dropdown--open",
+          "name": "Open",
+          "snippet": "const Open = () => {\n    const [isOpen, setIsOpen] = useState(false);\n    const ref = useRef<HTMLButtonElement | null>(null);\n\n    return (\n        <div style={{ height: 200, padding: 16 }}>\n            <button\n                onClick={() => setIsOpen(!isOpen)}\n                ref={ref}\n                style={{ marginBottom: 12 }}\n                type='button'>\n                {isOpen ? 'Close' : 'Open'}dropdown\n                        </button>\n            <Dropdown\n                as=\"ul\"\n                matchWidth={false}\n                offsetX={0}\n                offsetY={4}\n                placement=\"bottom\"\n                isFocusable={false}\n                anchorRef={ref}\n                isOpen={isOpen}\n                onClose={() => setIsOpen(false)}>\n                {OPTIONS.map((option) => (\n                  <Dropdown.Option\n                    isDisabled={option.disabled}\n                    key={option.value}\n                    onClick={() => console.log(`${option.text} clicked`)}\n                  >\n                    {option.text}\n                  </Dropdown.Option>\n                ))}\n            </Dropdown>\n        </div>\n    );\n};"
         },
         {
           "id": "data-display-dropdown--with-icon-and-ellipsis",
@@ -25315,6 +25330,11 @@
           "id": "data-display-modal--default",
           "name": "Default",
           "snippet": "const Default = ({\n  actionTitle,\n  content,\n  title,\n  subTitle,\n  hasHeaderBorder,\n  hasFooterBorder,\n  hasFooterBackgroundColor,\n  isLoading,\n}: ModalStoryProps) => {\n  const { isModalOpen, toggleModal } = useModal();\n\n  return (\n    <>\n      <button onClick={toggleModal} type='button'>\n        Click me\n      </button>\n      <Overlay isOpen={isModalOpen}>\n        <Modal onClickOutside={toggleModal}>\n          <Modal.Header\n            hasBorder={hasHeaderBorder}\n            onClose={toggleModal}\n            subTitle={subTitle}\n            title={title}\n          />\n          {content ? (\n            <Modal.Content isLoading={isLoading}>\n              <p>{content}</p>\n            </Modal.Content>\n          ) : null}\n          <Modal.Footer\n            hasBackgroundColor={hasFooterBackgroundColor}\n            hasBorder={hasFooterBorder}\n          >\n            <Button\n              color='secondary'\n              dataTestId='cancel'\n              onClick={toggleModal}\n              variant='outlined'\n            >\n              Cancel\n            </Button>\n            <Button\n              dataTestId='action'\n              isDisabled={isLoading}\n              onClick={() => null}\n            >\n              {actionTitle}\n            </Button>\n          </Modal.Footer>\n        </Modal>\n      </Overlay>\n    </>\n  );\n};"
+        },
+        {
+          "id": "data-display-modal--open",
+          "name": "Open",
+          "snippet": "const Open = ({\n  actionTitle,\n  content,\n  title,\n  subTitle,\n  hasHeaderBorder,\n  hasFooterBorder,\n  hasFooterBackgroundColor,\n  isLoading,\n}: ModalStoryProps) => {\n  const { isModalOpen, toggleModal } = useModal();\n\n  return (\n    <>\n      <button onClick={toggleModal} type='button'>\n        Click me\n      </button>\n      <Overlay isOpen={isModalOpen}>\n        <Modal onClickOutside={toggleModal}>\n          <Modal.Header\n            hasBorder={hasHeaderBorder}\n            onClose={toggleModal}\n            subTitle={subTitle}\n            title={title}\n          />\n          {content ? (\n            <Modal.Content isLoading={isLoading}>\n              <p>{content}</p>\n            </Modal.Content>\n          ) : null}\n          <Modal.Footer\n            hasBackgroundColor={hasFooterBackgroundColor}\n            hasBorder={hasFooterBorder}\n          >\n            <Button\n              color='secondary'\n              dataTestId='cancel'\n              onClick={toggleModal}\n              variant='outlined'\n            >\n              Cancel\n            </Button>\n            <Button\n              dataTestId='action'\n              isDisabled={isLoading}\n              onClick={() => null}\n            >\n              {actionTitle}\n            </Button>\n          </Modal.Footer>\n        </Modal>\n      </Overlay>\n    </>\n  );\n};"
         }
       ],
       "import": "import { Button } from '@dt-dds/react-button';\nimport { Modal, Overlay } from '@dt-dds/react-modal';"
@@ -26497,6 +26517,11 @@
           "id": "data-display-select--default",
           "name": "Default",
           "snippet": "const Default = ({ options, ...props }) => {\n  // eslint-disable-next-line react-hooks/rules-of-hooks\n  const [{ value }, updateArgs] = useArgs();\n  const handleChange = (v: string) => updateArgs({ value: v });\n\n  return (\n    <Select {...props} isMulti={false} onChange={handleChange} value={value}>\n      {options.map((item, index) => (\n        <Select.Option\n          index={index}\n          isDisabled={item.isDisabled}\n          key={item.value}\n          value={item.value}\n          valueLabel={item.label}\n        >\n          {item.label} {index === 0 ? '- This is the first option!' : ''}\n        </Select.Option>\n      ))}\n    </Select>\n  );\n};"
+        },
+        {
+          "id": "data-display-select--open",
+          "name": "Open",
+          "snippet": "const Open = ({ options, ...props }) => {\n  // eslint-disable-next-line react-hooks/rules-of-hooks\n  const [{ value }, updateArgs] = useArgs();\n  const handleChange = (v: string) => updateArgs({ value: v });\n\n  return (\n    <Select {...props} isMulti={false} onChange={handleChange} value={value}>\n      {options.map((item, index) => (\n        <Select.Option\n          index={index}\n          isDisabled={item.isDisabled}\n          key={item.value}\n          value={item.value}\n          valueLabel={item.label}\n        >\n          {item.label} {index === 0 ? '- This is the first option!' : ''}\n        </Select.Option>\n      ))}\n    </Select>\n  );\n};"
         },
         {
           "id": "data-display-select--multi",
@@ -28610,6 +28635,11 @@
           "snippet": "const Default = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
         },
         {
+          "id": "data-display-toast--open",
+          "name": "Open",
+          "snippet": "const Open = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
+        },
+        {
           "id": "data-display-toast--with-actions",
           "name": "With Actions",
           "snippet": "const WithActions = ({ children, type, title, message, dismissible, ...props }) => (\n  <>\n    <button\n      onClick={() =>\n        emitToast({ type, title, message, dismissible, children })\n      }\n      type='button'\n    >\n      Click me\n    </button>\n    <Portal isOpen>\n      <Toaster {...(props as ToasterProps)} />\n    </Portal>\n  </>\n);"
@@ -28874,6 +28904,11 @@
           "id": "data-display-tooltip--default",
           "name": "Default",
           "snippet": "const Default = ({ children, hideDelay, background, direction, message }) => {\n  return (\n    <StyledContainer>\n      <Tooltip hideDelay={hideDelay}>\n        {children}\n        <Tooltip.Content background={background} direction={direction}>\n          {message}\n        </Tooltip.Content>\n      </Tooltip>\n    </StyledContainer>\n  );\n};"
+        },
+        {
+          "id": "data-display-tooltip--open",
+          "name": "Open",
+          "snippet": "const Open = ({ children, hideDelay, background, direction, message }) => {\n  return (\n    <StyledContainer>\n      <Tooltip hideDelay={hideDelay}>\n        {children}\n        <Tooltip.Content background={background} direction={direction}>\n          {message}\n        </Tooltip.Content>\n      </Tooltip>\n    </StyledContainer>\n  );\n};"
         }
       ],
       "import": "import { Tooltip } from '@dt-dds/react-tooltip';\nimport { OTooltipDirection, OTooltipBackground } from './constants';"
@@ -29498,6 +29533,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 5118
+    "durationMs": 3431
   }
 }
