@@ -1,6 +1,6 @@
 # Decide how should be DT UI's release process
 
-- Status: Accepted
+- Status: Superseded by ADR-0011
 - Author: N/A
 - Deciders: N/A
 - Date: 22 August 2023
