@@ -1,5 +1,32 @@
 # @dt-ui/react
 
+## 1.0.0-beta.362
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-backdrop@1.0.0-beta.72
+  - @dt-dds/react-drawer@1.0.0-beta.81
+  - @dt-dds/react-dropdown@1.0.0-beta.117
+  - @dt-dds/react-modal@1.0.0-beta.121
+  - @dt-dds/react-select@1.0.0-beta.114
+  - @dt-dds/react-toast@1.0.0-beta.137
+  - @dt-dds/react-tooltip@1.0.0-beta.81
+  - @dt-dds/react-date-picker@1.0.0-beta.122
+  - @dt-dds/react-pagination@1.0.0-beta.65
+  - @dt-dds/react-avatar@1.0.0-beta.85
+  - @dt-dds/react-breadcrumb@1.0.0-beta.85
+  - @dt-dds/react-form@1.0.0-beta.67
+  - @dt-dds/react-segmented-control@1.0.0-beta.63
+  - @dt-dds/react-sidebar@1.0.0-beta.19
+  - @dt-dds/react-stepper@1.0.0-beta.68
+  - @dt-dds/react-tag@1.0.0-beta.77
+  - @dt-dds/react-text-area@1.0.0-beta.104
+  - @dt-dds/react-text-field@1.0.0-beta.133
+  - @dt-dds/react-app-header@1.0.0-beta.106
+
 ## 1.0.0-beta.361
 
 ### Patch Changes

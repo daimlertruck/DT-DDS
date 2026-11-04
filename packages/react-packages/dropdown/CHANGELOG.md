@@ -1,5 +1,11 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.117
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+
 ## 1.0.0-beta.116
 
 ### Patch Changes

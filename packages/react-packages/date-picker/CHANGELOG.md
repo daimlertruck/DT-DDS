@@ -1,5 +1,14 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.122
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.117
+  - @dt-dds/react-text-field@1.0.0-beta.133
+
 ## 1.0.0-beta.121
 
 ### Patch Changes

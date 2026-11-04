@@ -1,5 +1,14 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.114
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-dropdown@1.0.0-beta.117
+  - @dt-dds/react-tooltip@1.0.0-beta.81
+
 ## 1.0.0-beta.113
 
 ### Patch Changes

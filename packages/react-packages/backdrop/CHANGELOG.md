@@ -1,5 +1,11 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

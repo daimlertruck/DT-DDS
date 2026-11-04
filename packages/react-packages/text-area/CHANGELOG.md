@@ -1,5 +1,13 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.104
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.81
+
 ## 1.0.0-beta.103
 
 ### Patch Changes

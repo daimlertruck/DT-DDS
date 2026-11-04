@@ -1,5 +1,14 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.65
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-select@1.0.0-beta.114
+  - @dt-dds/react-tooltip@1.0.0-beta.81
+
 ## 1.0.0-beta.64
 
 ### Patch Changes

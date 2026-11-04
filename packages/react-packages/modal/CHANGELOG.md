@@ -1,5 +1,13 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.121
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-backdrop@1.0.0-beta.72
+
 ## 1.0.0-beta.120
 
 ### Patch Changes

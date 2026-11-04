@@ -1,5 +1,13 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.77
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.81
+
 ## 1.0.0-beta.76
 
 ### Patch Changes

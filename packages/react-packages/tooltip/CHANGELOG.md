@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- docs: add open state stories for overlays
+
 ## 1.0.0-beta.80
 
 ### Patch Changes
