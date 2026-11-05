@@ -14,6 +14,7 @@ import { filterDtPackages, runWithErrorHandling, sh } from '../utils/index.js';
 const gzip = promisify(zlib.gzip);
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const baselinePath = path.join(scriptDir, 'baseline.json');
+const reportsPath = path.join(scriptDir, 'results');
 
 const getPackagePackStats = async (packageInfo) => {
   const { stdout } = await sh(
@@ -68,6 +69,21 @@ const updateBaseline = (packagesSizeStats) => {
   fs.writeFileSync(baselinePath, `${json}\n`, 'utf8');
 };
 
+const saveReportFiles = (comparisons, formattedReport) => {
+  const comparisonsJson = JSON.stringify(comparisons, null, 2);
+
+  if (!fs.existsSync(reportsPath)) {
+    fs.mkdirSync(reportsPath);
+  }
+
+  fs.writeFileSync(reportsPath + '/report.md', `${formattedReport}\n`, 'utf8');
+  fs.writeFileSync(
+    reportsPath + '/report.json',
+    `${comparisonsJson}\n`,
+    'utf8'
+  );
+};
+
 async function main() {
   const root = process.cwd();
   const { packages } = getPackagesSync(root);
@@ -94,8 +110,10 @@ async function main() {
 
   const baselineByName = await readBaseline();
   const comparisons = compareToBaseline(packagesSizeStats, baselineByName);
+  const formattedReport = formatReport(comparisons);
 
-  console.log(formatReport(comparisons) + '\n');
+  saveReportFiles(comparisons, formattedReport);
+  console.log(formattedReport + '\n');
 
   if (comparisons.some((comparison) => comparison.failed)) {
     console.error(
