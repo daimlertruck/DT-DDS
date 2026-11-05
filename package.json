@@ -21,8 +21,11 @@
     "release": "turbo run build --filter=docs^... && changeset publish",
     "test": "turbo run test",
     "test:update": "turbo run test -- -u",
+    "test:scripts": "node --test \"scripts/**/*.test.*\"",
     "prepare": "husky",
-    "check-pkg-deps": "node scripts/check-pkg-deps/index.cjs"
+    "check-pkg-deps": "node scripts/check-pkg-deps/index.cjs",
+    "check-pkg-size": "node scripts/check-pkg-size",
+    "check-pkg-size:update": "node scripts/check-pkg-size --update"
   },
   "devDependencies": {
     "@changesets/cli": "^2.25.2",
