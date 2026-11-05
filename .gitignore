@@ -56,3 +56,6 @@ CLAUDE.local.md
 **/.claude/agent-memory-local
 **/.claude/first-run
 **/.claude/assistant-daemon-state.json
+
+# Check packages size - results
+/scripts/check-pkg-size/results

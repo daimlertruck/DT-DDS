@@ -44,6 +44,8 @@
     - [Prop Forwarding in Styled Components](#prop-forwarding-in-styled-components)
     - [Developer Documentation](#developer-documentation)
       - [How to add component stories?](#how-to-add-component-stories)
+      - [Visual regression tests](#visual-regression-tests)
+      - [Packages size](#packages-size)
   - [Versioning \& Publishing Packages](#versioning--publishing-packages)
       - [Workflow](#workflow)
       - [Releasing](#releasing)
@@ -512,6 +514,21 @@ yarn workspace @dt-dds/docs vrt
 Add `--grep <story id or file path>` to run only some stories. The report is in `apps/docs/test-results/vrt-report/`.
 
 If a visual change is intended, run `yarn workspace @dt-dds/docs vrt:update` in a terminal and commit the new baselines in their own commit. If you removed a story, `git rm` its baseline in that commit.
+
+#### Packages size
+
+Every published `@dt-dds/*` package's tarball and own-code size is compared with the baseline committed at `scripts/check-pkg-size/baseline.json`. The "Packages Size" CI job does this on PRs and attaches the report. It doesn't block the merge.
+
+To run it locally:
+
+```bash
+yarn turbo run build --filter='./packages/*'
+yarn check-pkg-size
+```
+
+The report table has one row per package with its status (`new`, `unchanged`, `changed` or `failed`) and, for each metric, the baseline value, the current value and the difference. Only the packed tarball size and the gzip size of `dist/index.mjs` can fail a package, when either grows by more than 5% **and** more than 1 kB over the baseline; unpacked size and file count are informational. New packages and packages that got smaller are reported but never fail. The report is saved to `scripts/check-pkg-size/results/report.md` and `report.json`.
+
+If a size growth is intended, run `yarn check-pkg-size:update` yourself in a terminal (it's human-only — the command refuses to run outside a terminal) and commit the updated `scripts/check-pkg-size/baseline.json` in its own commit.
 
 ## Versioning & Publishing Packages
 

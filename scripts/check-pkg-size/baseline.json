@@ -1,0 +1,303 @@
+{
+  "@dt-dds/react": {
+    "name": "@dt-dds/react",
+    "packedTarballSize": 3313,
+    "unpackedSize": 16440,
+    "fileCount": 7,
+    "gzipSize": 325
+  },
+  "@dt-dds/fonts": {
+    "name": "@dt-dds/fonts",
+    "packedTarballSize": 374850,
+    "unpackedSize": 377992,
+    "fileCount": 12,
+    "gzipSize": 210
+  },
+  "@dt-dds/icons": {
+    "name": "@dt-dds/icons",
+    "packedTarballSize": 14165273,
+    "unpackedSize": 23206105,
+    "fileCount": 9,
+    "gzipSize": 0
+  },
+  "@dt-dds/react-accordion": {
+    "name": "@dt-dds/react-accordion",
+    "packedTarballSize": 7170,
+    "unpackedSize": 27796,
+    "fileCount": 7,
+    "gzipSize": 1562
+  },
+  "@dt-dds/react-app-header": {
+    "name": "@dt-dds/react-app-header",
+    "packedTarballSize": 10401,
+    "unpackedSize": 55855,
+    "fileCount": 7,
+    "gzipSize": 4810
+  },
+  "@dt-dds/react-avatar": {
+    "name": "@dt-dds/react-avatar",
+    "packedTarballSize": 6114,
+    "unpackedSize": 22920,
+    "fileCount": 7,
+    "gzipSize": 1267
+  },
+  "@dt-dds/react-backdrop": {
+    "name": "@dt-dds/react-backdrop",
+    "packedTarballSize": 4144,
+    "unpackedSize": 10753,
+    "fileCount": 7,
+    "gzipSize": 601
+  },
+  "@dt-dds/react-box": {
+    "name": "@dt-dds/react-box",
+    "packedTarballSize": 4038,
+    "unpackedSize": 11254,
+    "fileCount": 7,
+    "gzipSize": 726
+  },
+  "@dt-dds/react-breadcrumb": {
+    "name": "@dt-dds/react-breadcrumb",
+    "packedTarballSize": 5994,
+    "unpackedSize": 23074,
+    "fileCount": 7,
+    "gzipSize": 2053
+  },
+  "@dt-dds/react-button": {
+    "name": "@dt-dds/react-button",
+    "packedTarballSize": 6193,
+    "unpackedSize": 31165,
+    "fileCount": 7,
+    "gzipSize": 2002
+  },
+  "@dt-dds/react-card": {
+    "name": "@dt-dds/react-card",
+    "packedTarballSize": 4049,
+    "unpackedSize": 11661,
+    "fileCount": 7,
+    "gzipSize": 718
+  },
+  "@dt-dds/react-checkbox": {
+    "name": "@dt-dds/react-checkbox",
+    "packedTarballSize": 6838,
+    "unpackedSize": 28466,
+    "fileCount": 7,
+    "gzipSize": 2557
+  },
+  "@dt-dds/react-core": {
+    "name": "@dt-dds/react-core",
+    "packedTarballSize": 8208,
+    "unpackedSize": 37905,
+    "fileCount": 7,
+    "gzipSize": 4182
+  },
+  "@dt-dds/react-date-picker": {
+    "name": "@dt-dds/react-date-picker",
+    "packedTarballSize": 78861,
+    "unpackedSize": 500711,
+    "fileCount": 7,
+    "gzipSize": 37849
+  },
+  "@dt-dds/react-divider": {
+    "name": "@dt-dds/react-divider",
+    "packedTarballSize": 3413,
+    "unpackedSize": 7882,
+    "fileCount": 7,
+    "gzipSize": 277
+  },
+  "@dt-dds/react-drawer": {
+    "name": "@dt-dds/react-drawer",
+    "packedTarballSize": 6478,
+    "unpackedSize": 25760,
+    "fileCount": 7,
+    "gzipSize": 2101
+  },
+  "@dt-dds/react-dropdown": {
+    "name": "@dt-dds/react-dropdown",
+    "packedTarballSize": 7953,
+    "unpackedSize": 35505,
+    "fileCount": 7,
+    "gzipSize": 3071
+  },
+  "@dt-dds/react-empty-state": {
+    "name": "@dt-dds/react-empty-state",
+    "packedTarballSize": 4535,
+    "unpackedSize": 13839,
+    "fileCount": 7,
+    "gzipSize": 735
+  },
+  "@dt-dds/react-form": {
+    "name": "@dt-dds/react-form",
+    "packedTarballSize": 4197,
+    "unpackedSize": 13748,
+    "fileCount": 7,
+    "gzipSize": 903
+  },
+  "@dt-dds/react-icon": {
+    "name": "@dt-dds/react-icon",
+    "packedTarballSize": 4391,
+    "unpackedSize": 11908,
+    "fileCount": 7,
+    "gzipSize": 743
+  },
+  "@dt-dds/react-icon-button": {
+    "name": "@dt-dds/react-icon-button",
+    "packedTarballSize": 5597,
+    "unpackedSize": 20031,
+    "fileCount": 7,
+    "gzipSize": 1411
+  },
+  "@dt-dds/react-label-field": {
+    "name": "@dt-dds/react-label-field",
+    "packedTarballSize": 5235,
+    "unpackedSize": 19445,
+    "fileCount": 7,
+    "gzipSize": 1468
+  },
+  "@dt-dds/react-link": {
+    "name": "@dt-dds/react-link",
+    "packedTarballSize": 5496,
+    "unpackedSize": 19710,
+    "fileCount": 7,
+    "gzipSize": 1503
+  },
+  "@dt-dds/react-message": {
+    "name": "@dt-dds/react-message",
+    "packedTarballSize": 7435,
+    "unpackedSize": 36129,
+    "fileCount": 7,
+    "gzipSize": 3425
+  },
+  "@dt-dds/react-modal": {
+    "name": "@dt-dds/react-modal",
+    "packedTarballSize": 7854,
+    "unpackedSize": 37866,
+    "fileCount": 7,
+    "gzipSize": 3337
+  },
+  "@dt-dds/react-pagination": {
+    "name": "@dt-dds/react-pagination",
+    "packedTarballSize": 7442,
+    "unpackedSize": 38893,
+    "fileCount": 7,
+    "gzipSize": 3006
+  },
+  "@dt-dds/react-progress-bar": {
+    "name": "@dt-dds/react-progress-bar",
+    "packedTarballSize": 5174,
+    "unpackedSize": 18479,
+    "fileCount": 7,
+    "gzipSize": 1367
+  },
+  "@dt-dds/react-radio": {
+    "name": "@dt-dds/react-radio",
+    "packedTarballSize": 5779,
+    "unpackedSize": 23474,
+    "fileCount": 7,
+    "gzipSize": 1690
+  },
+  "@dt-dds/react-segmented-control": {
+    "name": "@dt-dds/react-segmented-control",
+    "packedTarballSize": 5659,
+    "unpackedSize": 21980,
+    "fileCount": 7,
+    "gzipSize": 1746
+  },
+  "@dt-dds/react-select": {
+    "name": "@dt-dds/react-select",
+    "packedTarballSize": 9766,
+    "unpackedSize": 49922,
+    "fileCount": 7,
+    "gzipSize": 4457
+  },
+  "@dt-dds/react-sidebar": {
+    "name": "@dt-dds/react-sidebar",
+    "packedTarballSize": 22639,
+    "unpackedSize": 110523,
+    "fileCount": 7,
+    "gzipSize": 9379
+  },
+  "@dt-dds/react-spinner": {
+    "name": "@dt-dds/react-spinner",
+    "packedTarballSize": 4786,
+    "unpackedSize": 15579,
+    "fileCount": 7,
+    "gzipSize": 1148
+  },
+  "@dt-dds/react-stepper": {
+    "name": "@dt-dds/react-stepper",
+    "packedTarballSize": 9068,
+    "unpackedSize": 46278,
+    "fileCount": 7,
+    "gzipSize": 3685
+  },
+  "@dt-dds/react-table": {
+    "name": "@dt-dds/react-table",
+    "packedTarballSize": 8450,
+    "unpackedSize": 47012,
+    "fileCount": 7,
+    "gzipSize": 3524
+  },
+  "@dt-dds/react-tabs": {
+    "name": "@dt-dds/react-tabs",
+    "packedTarballSize": 6184,
+    "unpackedSize": 24641,
+    "fileCount": 7,
+    "gzipSize": 2119
+  },
+  "@dt-dds/react-tag": {
+    "name": "@dt-dds/react-tag",
+    "packedTarballSize": 6136,
+    "unpackedSize": 26577,
+    "fileCount": 7,
+    "gzipSize": 2180
+  },
+  "@dt-dds/react-text-area": {
+    "name": "@dt-dds/react-text-area",
+    "packedTarballSize": 6633,
+    "unpackedSize": 28097,
+    "fileCount": 7,
+    "gzipSize": 2417
+  },
+  "@dt-dds/react-text-field": {
+    "name": "@dt-dds/react-text-field",
+    "packedTarballSize": 8679,
+    "unpackedSize": 50084,
+    "fileCount": 7,
+    "gzipSize": 3553
+  },
+  "@dt-dds/react-toast": {
+    "name": "@dt-dds/react-toast",
+    "packedTarballSize": 9338,
+    "unpackedSize": 46330,
+    "fileCount": 7,
+    "gzipSize": 3878
+  },
+  "@dt-dds/react-toggle": {
+    "name": "@dt-dds/react-toggle",
+    "packedTarballSize": 4713,
+    "unpackedSize": 14699,
+    "fileCount": 7,
+    "gzipSize": 1057
+  },
+  "@dt-dds/react-tooltip": {
+    "name": "@dt-dds/react-tooltip",
+    "packedTarballSize": 6775,
+    "unpackedSize": 32150,
+    "fileCount": 7,
+    "gzipSize": 2736
+  },
+  "@dt-dds/react-typography": {
+    "name": "@dt-dds/react-typography",
+    "packedTarballSize": 4875,
+    "unpackedSize": 15869,
+    "fileCount": 7,
+    "gzipSize": 979
+  },
+  "@dt-dds/themes": {
+    "name": "@dt-dds/themes",
+    "packedTarballSize": 57686,
+    "unpackedSize": 407113,
+    "fileCount": 30,
+    "gzipSize": 8093
+  }
+}
