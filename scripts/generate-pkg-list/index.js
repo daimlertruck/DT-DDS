@@ -5,13 +5,7 @@ import path from 'path';
 
 import { getPackagesSync } from '@manypkg/get-packages';
 
-// Pure function to filter DT packages
-const filterDtPackages = (packages) =>
-  packages.filter(
-    (pkg) =>
-      pkg.packageJson.name.startsWith('@dt-dds/') &&
-      pkg.dir.includes('/packages/')
-  );
+import { filterDtPackages, runWithErrorHandling } from '../utils/index.js';
 
 // Pure function to create package info object
 const createPackageInfo = (pkg) => ({
@@ -105,16 +99,6 @@ async function main() {
   // Write updated content
   writeFileContent(readmePath, newReadme);
 }
-
-// Error handling wrapper
-const runWithErrorHandling = async (fn) => {
-  try {
-    await fn();
-  } catch (err) {
-    console.error(err);
-    process.exit(1);
-  }
-};
 
 // Execute main function with error handling
 runWithErrorHandling(main);
