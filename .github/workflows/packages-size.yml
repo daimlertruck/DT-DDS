@@ -1,0 +1,55 @@
+name: Packages Size
+
+# Measures packed/unpacked size, file count and gzip size of every @dt-dds/* package against the
+# committed baseline (ADR-0010). Not a required check: a red run reports a regression without
+# blocking the merge. The baseline changes only through `check-pkg-size:update`, run by a human.
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/**'
+      - 'scripts/check-pkg-size/**'
+      - 'scripts/utils/**'
+      - 'yarn.lock'
+      - '.github/workflows/packages-size.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  packages-size:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+
+      - name: Build packages
+        run: yarn turbo run build --filter='./packages/*'
+
+      - name: Check packages size
+        run: yarn check-pkg-size
+
+      - name: Publish packages size summary
+        if: ${{ !cancelled() }}
+        run: |
+          echo "## Packages size (non-blocking)" >> "$GITHUB_STEP_SUMMARY"
+          cat scripts/check-pkg-size/results/report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload packages size report
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: packages-size-report
+          path: scripts/check-pkg-size/results/report.json
+          if-no-files-found: warn
+          retention-days: 14
