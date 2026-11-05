@@ -67,6 +67,10 @@ process; this file encodes it for agents and records where CONTRIBUTING is stale
   file path>]`. Playwright in its Docker image (Docker required), Chromium, Default brand; report
   `apps/docs/test-results/vrt-report/` and `vrt.json`; CI workflow "Visual Regression" (not
   required). Agents read the report; only humans run `vrt:update`.
+- **Package size** (ADR-0010): `yarn turbo run build --filter='./packages/*'`, then
+  `yarn check-pkg-size`; report `scripts/check-pkg-size/results/report.md` and `report.json`; CI
+  workflow "Packages Size" (not required). Agents read the report; only humans run
+  `check-pkg-size:update`.
 - The Bash tool runs zsh: quote every glob and bracket (`'--include=*.tsx'`,
   `--filter='...[origin/main]'`); unquoted, zsh aborts with `no matches found` and runs nothing.
 - Storybook, tokens and snapshot commands: see the directory guides below.
@@ -202,7 +206,9 @@ Never hand-edit (owner in brackets): `packages/themes/src/themes/**` [build:them
 `packages/themes/src/tokens/**` [Figma export; only in token-import tasks], `.changeset/**`
 [release CI — never add any file there: every `.md` except README.md is read as a changeset], `**/CHANGELOG.md` [changesets], `**/__snapshots__/**` [test:update:snapshot;
 VRT baselines in `apps/docs/vrt/__snapshots__/`: `vrt:update`, humans only],
-`packages/icons/src/codes.ts`, `yarn.lock` [yarn], README `PACKAGES_TABLE_*` region [CI].
+`scripts/check-pkg-size/baseline.json` [package size baseline (ADR-0010): `check-pkg-size:update`,
+humans only], `packages/icons/src/codes.ts`, `yarn.lock` [yarn], README `PACKAGES_TABLE_*` region
+[CI].
 Ask first: `.github/**`, `.husky/**`, `turbo/generators/**`, `scripts/**`,
 `packages/changeset-conventional-commits/**`. Never run `yarn changesets:*`, `changeset
 version|publish`, `npm publish`, `yarn release`, or `git tag`.
