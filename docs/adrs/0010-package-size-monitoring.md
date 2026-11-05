@@ -1,6 +1,6 @@
 # Monitor package size with a committed baseline and a non-blocking PR check
 
-- Status: In Review
+- Status: Approved
 - Author: afreire-laptop
 - Deciders: DT-DDS maintainers (MAINTAINERS.md)
 - Date: 29 October 2026
