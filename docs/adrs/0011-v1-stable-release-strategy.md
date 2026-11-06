@@ -202,8 +202,8 @@ Semver tells adopters what a release does to them. The other #224 milestones hel
 - #232, GitHub bot: upgrade PRs and release notifications in consumer applications, so adopters
   take releases on their own schedule, with their own CI as the check.
 
-The CI guardrails (#222: a11y, VRT, package size) and the component audit (#223) make regressions
-visible in each PR before it merges.
+The CI guardrails (#222: a11y, VRT, package size) and the accessibility audit of the components
+(#223) make regressions visible in each PR before it merges.
 
 The same guardrails protect the semver promise against breaking changes committed without `!`.
 Reviews check component changes against their spec contract (RFC chain and spec README), VRT
@@ -263,7 +263,7 @@ Entry criteria for 1.0.0, tracked in #320:
 - [ ] #300 and #301: the packaging fixes that would be breaking after 1.0.0
 - [ ] #315: every package's API is audited, and each breaking candidate has either landed in beta
       or been accepted as the 1.0.0 API
-- [ ] #223: the component audit and fixes are complete
+- [ ] #223: the accessibility audit of the components and its fixes are complete
 - [ ] #316: React peers are `^18 || ^19`, and the tests run on both
 - [ ] #229 and #230: the release notes and migration guide templates, and the beta-to-1.0.0
       upgrade guide, are published
