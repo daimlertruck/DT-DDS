@@ -177,7 +177,8 @@ fix:
 3. A PR cherry-picks the fix into the branch, so CI and review run against that major's code.
 4. On merge, the release job publishes the patch under a dist-tag other than `latest`, such as
    `v1`.
-5. The branch is deleted; the new tags keep its commits, and the next fix starts from them.
+5. The branch is deleted. The new tags keep its commits, so the next fix branches from them: it
+   holds the earlier patches and none of the commits merged to `main` since.
 
 The patches' changelogs live on their tagged commits, not on `main`, so the release notes (#229)
 list them.
