@@ -1,6 +1,6 @@
 # Leave pre-release mode at 1.0.0 and release continuously under semver
 
-- Status: In Review
+- Status: Accepted
 - Author: Antonio Freire
 - Deciders: DT-DDS maintainers (MAINTAINERS.md)
 - Date: 4 November 2026
@@ -285,7 +285,7 @@ Alongside:
       confirms the gap
 - [ ] #319: the experimental status in the spec README template and in Storybook
 - [ ] #232: the upgrade bot
-- [ ] On acceptance, set ADR-0005's status to "Superseded by ADR-0011"
+- [x] On acceptance, set ADR-0005's status to "Superseded by ADR-0011"
 
 ## References
 
