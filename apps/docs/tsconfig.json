@@ -8,6 +8,7 @@
     "paths": {
       "@dt-dds/react": ["../../packages/dt-dds-react/index.ts"],
       "@dt-dds/themes": ["../../packages/themes/src/index.ts"],
+      "@dt-dds/icons": ["../../packages/icons/index.ts"],
       "@dt-dds/react-*": ["../../packages/react-packages/*/index.ts"]
     }
   },
