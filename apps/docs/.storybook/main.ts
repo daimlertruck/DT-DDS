@@ -110,6 +110,15 @@ const config: StorybookConfig = {
           configDirectory,
           '../../../packages/themes/src/index.ts'
         ),
+        // Before '@dt-dds/icons': string aliases also match subpaths.
+        '@dt-dds/icons/index.css': path.resolve(
+          configDirectory,
+          '../../../packages/icons/src/index.css'
+        ),
+        '@dt-dds/icons': path.resolve(
+          configDirectory,
+          '../../../packages/icons/index.ts'
+        ),
         ...resolveComponentsPath(components),
       },
     };

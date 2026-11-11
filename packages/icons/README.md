@@ -60,14 +60,30 @@ In DT-DDS, we are currently supporting two font-family keys:
 - **DTUI-icons-outlined**
 - **DTUI-icons-sharp**
 
+## Icon codes
+
+The package also exports the icon names and their glyph codes:
+
+```ts
+import { codes, type Code } from '@dt-dds/icons';
+```
+
+- **codes**: object that maps each icon name to its glyph code (e.g. `codes['10k'] === 'e951'`).
+- **Code**: union type of all icon names (`keyof typeof codes`).
+
+The JS entry has no side effects, so bundlers drop `codes` when only the `Code` type is used.
+
 ## Stack
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
+- [tsup](https://tsup.egoist.dev/) for bundling the package
 - [ESLint](https://eslint.org/) for code linting
 - [Yarn](https://yarnpkg.com/) from managing packages
 
 ## Commands
 
+- `yarn build` - Build the package to `dist/`
+- `yarn dev` - Build the package in watch mode
 - `yarn lint` - Lint all files within this package
 
 ## Versioning
