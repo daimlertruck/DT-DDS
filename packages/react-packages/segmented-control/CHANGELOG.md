@@ -1,5 +1,13 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.64
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+
 ## 1.0.0-beta.63
 
 ### Patch Changes

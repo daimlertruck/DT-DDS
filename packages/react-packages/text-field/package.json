@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-text-field",
-  "version": "1.0.0-beta.133",
+  "version": "1.0.0-beta.134",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -22,10 +22,10 @@
   "dependencies": {
     "@dt-dds/react-core": "1.0.0-beta.67",
     "@dt-dds/react-spinner": "1.0.0-beta.123",
-    "@dt-dds/react-label-field": "1.0.0-beta.71",
+    "@dt-dds/react-label-field": "1.0.0-beta.72",
     "@dt-dds/react-typography": "1.0.0-beta.60",
     "@dt-dds/react-icon-button": "1.0.0-beta.39",
-    "@dt-dds/react-icon": "1.0.0-beta.73",
+    "@dt-dds/react-icon": "1.0.0-beta.74",
     "@dt-dds/react-tooltip": "1.0.0-beta.81",
     "@dt-dds/themes": "1.0.0-beta.20"
   },

@@ -1,5 +1,15 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.66
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.10
+  - @dt-dds/react-icon@1.0.0-beta.74
+  - @dt-dds/react-select@1.0.0-beta.115
+
 ## 1.0.0-beta.65
 
 ### Patch Changes

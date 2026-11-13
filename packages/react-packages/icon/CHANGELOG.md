@@ -1,5 +1,13 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.74
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.10
+
 ## 1.0.0-beta.73
 
 ### Patch Changes

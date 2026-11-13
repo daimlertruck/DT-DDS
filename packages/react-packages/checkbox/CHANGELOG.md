@@ -1,5 +1,13 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.76
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+
 ## 1.0.0-beta.75
 
 ### Patch Changes

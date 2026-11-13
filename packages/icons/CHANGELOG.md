@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.10
+
+### Patch Changes
+
+- fix: add entry file for icons package
+
 ## 1.0.0-beta.9
 
 ### Patch Changes

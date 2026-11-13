@@ -1,5 +1,14 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.134
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+  - @dt-dds/react-label-field@1.0.0-beta.72
+
 ## 1.0.0-beta.133
 
 ### Patch Changes

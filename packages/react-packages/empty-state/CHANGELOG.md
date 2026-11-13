@@ -1,5 +1,13 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.144
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.99
+
 ## 1.0.0-beta.143
 
 ### Patch Changes

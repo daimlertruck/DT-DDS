@@ -1,5 +1,13 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+
 ## 1.0.0-beta.85
 
 ### Patch Changes

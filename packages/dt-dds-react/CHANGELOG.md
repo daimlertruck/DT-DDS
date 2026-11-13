@@ -1,5 +1,39 @@
 # @dt-ui/react
 
+## 1.0.0-beta.367
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-app-header@1.0.0-beta.111
+  - @dt-dds/react-drawer@1.0.0-beta.82
+  - @dt-dds/react-icon@1.0.0-beta.74
+  - @dt-dds/react-accordion@1.0.0-beta.74
+  - @dt-dds/react-avatar@1.0.0-beta.86
+  - @dt-dds/react-breadcrumb@1.0.0-beta.86
+  - @dt-dds/react-checkbox@1.0.0-beta.76
+  - @dt-dds/react-select@1.0.0-beta.115
+  - @dt-dds/react-pagination@1.0.0-beta.66
+  - @dt-dds/react-date-picker@1.0.0-beta.123
+  - @dt-dds/react-dropdown@1.0.0-beta.118
+  - @dt-dds/react-form@1.0.0-beta.68
+  - @dt-dds/react-label-field@1.0.0-beta.72
+  - @dt-dds/react-text-area@1.0.0-beta.105
+  - @dt-dds/react-text-field@1.0.0-beta.134
+  - @dt-dds/react-link@1.0.0-beta.99
+  - @dt-dds/react-empty-state@1.0.0-beta.144
+  - @dt-dds/react-message@1.0.0-beta.137
+  - @dt-dds/react-modal@1.0.0-beta.122
+  - @dt-dds/react-progress-bar@1.0.0-beta.67
+  - @dt-dds/react-segmented-control@1.0.0-beta.64
+  - @dt-dds/react-sidebar@1.0.0-beta.20
+  - @dt-dds/react-stepper@1.0.0-beta.69
+  - @dt-dds/react-tabs@1.0.0-beta.120
+  - @dt-dds/react-tag@1.0.0-beta.78
+  - @dt-dds/react-toast@1.0.0-beta.138
+
 ## 1.0.0-beta.366
 
 ### Patch Changes

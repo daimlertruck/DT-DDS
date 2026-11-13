@@ -1,5 +1,15 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.123
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+  - @dt-dds/react-dropdown@1.0.0-beta.118
+  - @dt-dds/react-text-field@1.0.0-beta.134
+
 ## 1.0.0-beta.122
 
 ### Patch Changes

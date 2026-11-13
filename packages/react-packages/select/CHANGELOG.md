@@ -1,5 +1,16 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.115
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.74
+  - @dt-dds/react-checkbox@1.0.0-beta.76
+  - @dt-dds/react-dropdown@1.0.0-beta.118
+  - @dt-dds/react-label-field@1.0.0-beta.72
+
 ## 1.0.0-beta.114
 
 ### Patch Changes

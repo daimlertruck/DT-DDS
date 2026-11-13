@@ -1,5 +1,14 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.99
+
+### Patch Changes
+
+- fix: add entry file for icons package
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.10
+  - @dt-dds/react-icon@1.0.0-beta.74
+
 ## 1.0.0-beta.98
 
 ### Patch Changes
