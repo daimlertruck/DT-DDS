@@ -263,7 +263,8 @@ Denied to agents:
    `Co-Authored-By` trailer and no "Generated with" line (`.claude/settings.json` turns off Claude
    Code's). Only humans sign off, through the husky hook.
 6. **Tooling and policy.**
-   - The core stays agent-agnostic, with Claude Code adapters for now.
+   - The core stays agent-agnostic, with Claude Code adapters for now. ADR-0012 lists what another
+     coding agent must provide before it may run the pipeline.
    - A second AI model for reviews, so the code isn't only reviewed by the same kind of model that
      wrote it. The idea is two layers: Codex reviews the PR, and an optional step runs a Codex
      adversarial review before the PR. Optional, because not every task needs it and not every
