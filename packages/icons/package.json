@@ -36,6 +36,6 @@
     "eslint-plugin-storybook": "10.6.2",
     "tsconfig": "*",
     "tsup": "^8.5.0",
-    "typescript": "^4.5.3"
+    "typescript": "^5.9.3"
   }
 }
