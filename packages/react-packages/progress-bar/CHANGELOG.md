@@ -1,5 +1,14 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.68
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.75
+  - @dt-dds/react-typography@1.0.0-beta.61
+
 ## 1.0.0-beta.67
 
 ### Patch Changes

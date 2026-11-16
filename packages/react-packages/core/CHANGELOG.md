@@ -1,5 +1,11 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.68
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+
 ## 1.0.0-beta.67
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.135
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.68
+  - @dt-dds/react-icon@1.0.0-beta.75
+  - @dt-dds/react-icon-button@1.0.0-beta.40
+  - @dt-dds/react-label-field@1.0.0-beta.73
+  - @dt-dds/react-spinner@1.0.0-beta.124
+  - @dt-dds/react-tooltip@1.0.0-beta.82
+  - @dt-dds/react-typography@1.0.0-beta.61
+
 ## 1.0.0-beta.134
 
 ### Patch Changes

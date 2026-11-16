@@ -1,5 +1,14 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.75
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.11
+  - @dt-dds/react-core@1.0.0-beta.68
+
 ## 1.0.0-beta.74
 
 ### Patch Changes

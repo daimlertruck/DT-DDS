@@ -1,5 +1,13 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.73
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.68
+
 ## 1.0.0-beta.72
 
 ### Patch Changes

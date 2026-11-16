@@ -1,5 +1,17 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.82
+  - @dt-dds/react-core@1.0.0-beta.68
+  - @dt-dds/react-icon@1.0.0-beta.75
+  - @dt-dds/react-icon-button@1.0.0-beta.40
+  - @dt-dds/react-typography@1.0.0-beta.61
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.119
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.68
+  - @dt-dds/react-spinner@1.0.0-beta.124
+
 ## 1.0.0-beta.118
 
 ### Patch Changes

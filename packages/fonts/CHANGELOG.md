@@ -1,5 +1,11 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.15
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+
 ## 1.0.0-beta.14
 
 ### Patch Changes

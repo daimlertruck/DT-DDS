@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.82
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+
 ## 1.0.0-beta.81
 
 ### Patch Changes

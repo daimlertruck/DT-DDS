@@ -1,5 +1,15 @@
 # @dt-ui/react-breadcrumb
 
+## 1.0.0-beta.87
+
+### Patch Changes
+
+- chore(deps): bump typescript to ^5.9.3
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.68
+  - @dt-dds/react-icon@1.0.0-beta.75
+  - @dt-dds/react-tooltip@1.0.0-beta.82
+
 ## 1.0.0-beta.86
 
 ### Patch Changes
