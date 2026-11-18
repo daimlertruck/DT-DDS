@@ -13,8 +13,7 @@
     },
     "Themes": {
       "modes": {
-        "Daimler Truck": ["Themes.Daimler Truck.tokens.json"],
-        "[Brand Name]": ["Themes.[Brand Name].tokens.json"]
+        "Daimler Truck": ["Themes.Daimler Truck.tokens.json"]
       }
     },
     "Responsiveness": {
@@ -23,12 +22,6 @@
         "Lg Desktop": ["Responsiveness.Lg Desktop.tokens.json"],
         "Md Tablet": ["Responsiveness.Md Tablet.tokens.json"],
         "Sm Mobile": ["Responsiveness.Sm Mobile.tokens.json"]
-      }
-    },
-    "Semantic [Brand Name]": {
-      "modes": {
-        "Light mode": ["Semantic [Brand Name].Light mode.tokens.json"],
-        "Dark mode": ["Semantic [Brand Name].Dark mode.tokens.json"]
       }
     }
   },
