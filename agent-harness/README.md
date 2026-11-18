@@ -29,7 +29,7 @@ to `.local/agent-harness/` (gitignored).
 
 ## Commands
 
-The harness needs Node `^22.18.0 || >=24`, and `check.mts` needs `yarn --frozen-lockfile` first.
+The harness needs Node `>=24`, and `check.mts` needs `yarn --frozen-lockfile` first.
 Run from the repo root:
 
 | Command                                              | Does                                                            |
@@ -43,7 +43,7 @@ Run from the repo root:
 ## Changing the harness
 
 - The harness is TypeScript that Node runs by type stripping (the root `engines` floor,
-  `^22.18.0 || >=24`): files are `.mts`, imports name the `.mts` file, and only erasable syntax is
+  `>=24`): files are `.mts`, imports name the `.mts` file, and only erasable syntax is
   allowed (no `enum`, `namespace` or parameter properties). Generic helpers and helpers that return
   `never` are `function` declarations (Prettier 2 rewrites `<T,>`; TypeScript narrows after a
   `never` call only then).
