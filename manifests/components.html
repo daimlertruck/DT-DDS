@@ -626,7 +626,7 @@
 <main>
   <div class="wrap">
     <div class="note ok" style="margin-bottom: 16px;">
-              Using <code>react-docgen-typescript</code>. Generation took <strong>2.9s</strong>.
+              Using <code>react-docgen-typescript</code>. Generation took <strong>5.0s</strong>.
             </div>
     <h2 class="section-title">Components</h2>
     <div class="grid" role="list">
@@ -6324,7 +6324,7 @@ export const colors = Object.entries(theme.colors).reduce(
       </div>
     </div>
     <div class="meta" title="./src/foundations/palette.mdx">foundations-palette--specs · ./src/foundations/palette.mdx</div>
-    <div>export const themes = [ , , , ]; export const getColors = (theme) =&gt; Object.entries(theme....</div>
+    <div>export const themes = [ , ]; export const getColors = (theme) =&gt; Object.entries(theme.pale...</div>
   </div>
 
   <!-- Hidden toggles must be siblings BEFORE .panels -->
@@ -6342,14 +6342,10 @@ import { ThemeProvider } from &#39;storybook/theming&#39;;
 
 import { theme as defaultTheme } from &#39;@dt-dds/react&#39;;
 
-import { greenlaneTheme, truckAPITheme } from &#39;../../.storybook/themes&#39;;
-
 &lt;Meta title=&#39;Foundations/Palette&#39; /&gt;
 
 export const themes = [
-  { name: &#39;Daimler (default)&#39;, theme: defaultTheme },
-  { name: &#39;Greenlane&#39;, theme: greenlaneTheme },
-  { name: &#39;TruckAPI&#39;, theme: truckAPITheme },
+  { name: &#39;Daimler Truck&#39;, theme: defaultTheme },
 ];
 
 export const getColors = (theme) =&gt;
