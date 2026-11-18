@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.21
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
 ## 1.0.0-beta.20
 
 ### Patch Changes

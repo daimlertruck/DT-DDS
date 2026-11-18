@@ -1,5 +1,18 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.120
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-spinner@1.0.0-beta.125
+
 ## 1.0.0-beta.119
 
 ### Patch Changes

@@ -1,5 +1,20 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.125
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-dropdown@1.0.0-beta.120
+  - @dt-dds/react-icon@1.0.0-beta.76
+  - @dt-dds/react-text-field@1.0.0-beta.136
+
 ## 1.0.0-beta.124
 
 ### Patch Changes

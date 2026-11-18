@@ -1,5 +1,22 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.115
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-typography@1.0.0-beta.62
+
 ## 1.0.0-beta.114
 
 ### Major Changes

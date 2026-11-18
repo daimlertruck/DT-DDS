@@ -1,5 +1,17 @@
 # @dt-ui/react-backdrop
 
+## 1.0.0-beta.74
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+
 ## 1.0.0-beta.73
 
 ### Patch Changes

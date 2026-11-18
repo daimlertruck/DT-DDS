@@ -1,5 +1,18 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.125
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-typography@1.0.0-beta.62
+
 ## 1.0.0-beta.124
 
 ### Patch Changes

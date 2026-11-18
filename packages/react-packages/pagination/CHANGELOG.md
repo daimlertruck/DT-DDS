@@ -1,5 +1,21 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.68
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-select@1.0.0-beta.117
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-icon@1.0.0-beta.76
+  - @dt-dds/react-tooltip@1.0.0-beta.83
+  - @dt-dds/react-typography@1.0.0-beta.62
+
 ## 1.0.0-beta.67
 
 ### Patch Changes

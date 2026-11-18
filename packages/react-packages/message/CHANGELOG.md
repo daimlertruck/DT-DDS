@@ -1,5 +1,20 @@
 # @dt-ui/react-message
 
+## 1.0.0-beta.139
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-button@1.0.0-beta.120
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-icon@1.0.0-beta.76
+  - @dt-dds/react-typography@1.0.0-beta.62
+
 ## 1.0.0-beta.138
 
 ### Patch Changes

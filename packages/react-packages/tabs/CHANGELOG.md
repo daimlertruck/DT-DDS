@@ -1,5 +1,19 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.122
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-icon@1.0.0-beta.76
+  - @dt-dds/react-icon-button@1.0.0-beta.41
+
 ## 1.0.0-beta.121
 
 ### Patch Changes

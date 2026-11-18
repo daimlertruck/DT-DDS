@@ -1,5 +1,20 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.120
+
+### Minor Changes
+
+- feat: remove legacy brand tokens
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.21
+  - @dt-dds/react-core@1.0.0-beta.69
+  - @dt-dds/react-icon@1.0.0-beta.76
+  - @dt-dds/react-icon-button@1.0.0-beta.41
+  - @dt-dds/react-typography@1.0.0-beta.62
+
 ## 1.0.0-beta.119
 
 ### Patch Changes
