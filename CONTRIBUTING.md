@@ -52,7 +52,7 @@
 
 # Prerequisites
 
-- Node.js ^22.18 or >= v24
+- Node.js >= v24
 - Yarn v1
 
 # 📓 Installation

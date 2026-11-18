@@ -11,8 +11,7 @@ and how the harness works is in [architecture.md](architecture.md).
 1. Install Claude Code 2.1.295 or later and log in. The stages run as Claude Code sessions, and the
    guards that stop agents from pushing or releasing are Claude Code hooks: other agents (Codex, pi)
    get the skills and `AGENTS.md`, not the guards.
-2. Use Node 22.18 or later on the 22 line, or 24 or later (the root `engines`:
-   `^22.18.0 || >=24`): the harness scripts and guards are TypeScript that Node runs directly. On an
+2. Use Node 24 or later (the root `engines`: `>=24`): the harness scripts and guards are TypeScript that Node runs directly. On an
    older Node the guards cannot start, and Claude Code denies every call they guard.
 3. Log in to GitHub (`gh auth login`): the stages read issues and PRs.
 4. Install dependencies: `yarn --frozen-lockfile`.
