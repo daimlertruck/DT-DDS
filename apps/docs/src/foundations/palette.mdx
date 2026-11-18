@@ -4,14 +4,10 @@ import { ThemeProvider } from 'storybook/theming';
 
 import { theme as defaultTheme } from '@dt-dds/react';
 
-import { greenlaneTheme, truckAPITheme } from '../../.storybook/themes';
-
 <Meta title='Foundations/Palette' />
 
 export const themes = [
-  { name: 'Daimler (default)', theme: defaultTheme },
-  { name: 'Greenlane', theme: greenlaneTheme },
-  { name: 'TruckAPI', theme: truckAPITheme },
+  { name: 'Daimler Truck', theme: defaultTheme },
 ];
 
 export const getColors = (theme) =>

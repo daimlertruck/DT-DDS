@@ -8,7 +8,6 @@ import { Global } from '@emotion/react';
 import '@dt-dds/icons/index.css';
 import { theme as defaultTheme, Provider } from '@dt-dds/react';
 
-import { greenlaneTheme, truckAPITheme } from './themes';
 import { webFonts } from './webFonts';
 
 import type { Preview } from '@storybook/react-vite';
@@ -18,11 +17,9 @@ const GlobalStyles = () => <Global styles={[...webFonts]} />;
 export const decorators = [
   withThemeFromJSXProvider({
     themes: {
-      Default: defaultTheme,
-      Greenlane: greenlaneTheme,
-      TruckAPI: truckAPITheme,
+      'Daimler Truck': defaultTheme,
     },
-    defaultTheme: 'Default',
+    defaultTheme: 'Daimler Truck',
     Provider,
     GlobalStyles,
   }),
