@@ -3,6 +3,8 @@ import { expect, userEvent, within } from 'storybook/test';
 
 import styled from '@emotion/styled';
 
+import { Button } from '@dt-dds/react-button';
+
 import { TooltipContainerProps } from './components/container';
 import { TooltipContentProps } from './components/content';
 import { OTooltipBackground, OTooltipDirection } from './constants';
@@ -53,31 +55,10 @@ export default meta;
 export const Default: StoryObj<TooltipProps> = {
   args: {
     hideDelay: 0,
-    children: (
-      <svg
-        fill='none'
-        height='24'
-        viewBox='0 0 24 24'
-        width='24'
-        xmlns='http://www.w3.org/2000/svg'
-      >
-        <g clipPath='url(#clip0_287_3834)'>
-          <path d='M8 9H16V19H8V9Z' fill='currentColor' opacity='0.3' />
-          <path
-            d='M15.5 4L14.5 3H9.5L8.5 4H5V6H19V4H15.5ZM6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM8 9H16V19H8V9Z'
-            fill='currentColor'
-          />
-        </g>
-        <defs>
-          <clipPath id='clip0_287_3834'>
-            <rect fill='white' height='24' width='24' />
-          </clipPath>
-        </defs>
-      </svg>
-    ),
+    children: <Button>Hover or focus me</Button>,
     direction: OTooltipDirection.Top,
     background: OTooltipBackground.Full,
-    message: 'Delete',
+    message: 'This is a tooltip message.',
   },
 };
 
@@ -89,6 +70,6 @@ export const Open: StoryObj<TooltipProps> = {
     await userEvent.hover(canvas.getByTestId('tooltip-container'));
     const tooltip = await page.findByRole('tooltip');
     await expect(tooltip).toBeVisible();
-    await expect(tooltip).toHaveTextContent('Delete');
+    await expect(tooltip).toHaveTextContent('This is a tooltip message.');
   },
 };
