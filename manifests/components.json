@@ -28911,7 +28911,7 @@
           "snippet": "const Open = ({ children, hideDelay, background, direction, message }) => {\n  return (\n    <StyledContainer>\n      <Tooltip hideDelay={hideDelay}>\n        {children}\n        <Tooltip.Content background={background} direction={direction}>\n          {message}\n        </Tooltip.Content>\n      </Tooltip>\n    </StyledContainer>\n  );\n};"
         }
       ],
-      "import": "import { Tooltip } from '@dt-dds/react-tooltip';\nimport { OTooltipDirection, OTooltipBackground } from './constants';"
+      "import": "import { Button } from '@dt-dds/react-button';\nimport { Tooltip } from '@dt-dds/react-tooltip';\nimport { OTooltipDirection, OTooltipBackground } from './constants';"
     },
     "data-display-typography": {
       "id": "data-display-typography",
@@ -29533,6 +29533,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 5044
+    "durationMs": 2071
   }
 }
