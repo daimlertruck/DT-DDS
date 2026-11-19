@@ -1,5 +1,16 @@
 # @dt-ui/react-select
 
+## 1.0.0-beta.118
+
+### Minor Changes
+
+- feat: add tooltip focus management
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.84
+
 ## 1.0.0-beta.117
 
 ### Minor Changes

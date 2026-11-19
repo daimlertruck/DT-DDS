@@ -1,5 +1,16 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.126
+
+### Minor Changes
+
+- feat: add tooltip focus management
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-text-field@1.0.0-beta.137
+
 ## 1.0.0-beta.125
 
 ### Minor Changes

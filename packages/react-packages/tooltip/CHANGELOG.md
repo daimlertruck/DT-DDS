@@ -1,5 +1,11 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.84
+
+### Minor Changes
+
+- feat: add tooltip focus management
+
 ## 1.0.0-beta.83
 
 ### Minor Changes

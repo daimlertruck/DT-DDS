@@ -1,5 +1,30 @@
 # @dt-ui/react
 
+## 1.0.0-beta.373
+
+### Minor Changes
+
+- feat: add tooltip focus management
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-tooltip@1.0.0-beta.84
+  - @dt-dds/react-avatar@1.0.0-beta.89
+  - @dt-dds/react-breadcrumb@1.0.0-beta.89
+  - @dt-dds/react-form@1.0.0-beta.71
+  - @dt-dds/react-pagination@1.0.0-beta.69
+  - @dt-dds/react-segmented-control@1.0.0-beta.67
+  - @dt-dds/react-select@1.0.0-beta.118
+  - @dt-dds/react-sidebar@1.0.0-beta.23
+  - @dt-dds/react-stepper@1.0.0-beta.72
+  - @dt-dds/react-tag@1.0.0-beta.81
+  - @dt-dds/react-text-area@1.0.0-beta.108
+  - @dt-dds/react-text-field@1.0.0-beta.137
+  - @dt-dds/react-date-picker@1.0.0-beta.126
+  - @dt-dds/react-app-header@1.0.0-beta.117
+
 ## 1.0.0-beta.372
 
 ### Patch Changes

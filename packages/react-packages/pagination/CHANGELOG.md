@@ -1,5 +1,17 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.69
+
+### Minor Changes
+
+- feat: add tooltip focus management
+
+### Patch Changes
+
+- Updated dependencies
+  - @dt-dds/react-tooltip@1.0.0-beta.84
+  - @dt-dds/react-select@1.0.0-beta.118
+
 ## 1.0.0-beta.68
 
 ### Minor Changes
