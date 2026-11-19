@@ -1,22 +1,22 @@
 {
   "@dt-dds/react": {
     "name": "@dt-dds/react",
-    "packedTarballSize": 3319,
-    "unpackedSize": 16440,
+    "packedTarballSize": 3317,
+    "unpackedSize": 16441,
     "fileCount": 7,
     "gzipSize": 325
   },
   "@dt-dds/fonts": {
     "name": "@dt-dds/fonts",
-    "packedTarballSize": 374861,
+    "packedTarballSize": 374858,
     "unpackedSize": 377992,
     "fileCount": 12,
     "gzipSize": 210
   },
   "@dt-dds/icons": {
     "name": "@dt-dds/icons",
-    "packedTarballSize": 14231446,
-    "unpackedSize": 23474448,
+    "packedTarballSize": 14231443,
+    "unpackedSize": 23474449,
     "fileCount": 12,
     "gzipSize": 26033
   },
@@ -29,14 +29,14 @@
   },
   "@dt-dds/react-app-header": {
     "name": "@dt-dds/react-app-header",
-    "packedTarballSize": 10400,
+    "packedTarballSize": 10406,
     "unpackedSize": 55855,
     "fileCount": 7,
     "gzipSize": 4810
   },
   "@dt-dds/react-avatar": {
     "name": "@dt-dds/react-avatar",
-    "packedTarballSize": 6117,
+    "packedTarballSize": 6123,
     "unpackedSize": 22920,
     "fileCount": 7,
     "gzipSize": 1267
@@ -50,21 +50,21 @@
   },
   "@dt-dds/react-box": {
     "name": "@dt-dds/react-box",
-    "packedTarballSize": 4043,
+    "packedTarballSize": 4044,
     "unpackedSize": 11254,
     "fileCount": 7,
     "gzipSize": 726
   },
   "@dt-dds/react-breadcrumb": {
     "name": "@dt-dds/react-breadcrumb",
-    "packedTarballSize": 5998,
+    "packedTarballSize": 5997,
     "unpackedSize": 23074,
     "fileCount": 7,
     "gzipSize": 2053
   },
   "@dt-dds/react-button": {
     "name": "@dt-dds/react-button",
-    "packedTarballSize": 6199,
+    "packedTarballSize": 6197,
     "unpackedSize": 31165,
     "fileCount": 7,
     "gzipSize": 2002
@@ -78,21 +78,21 @@
   },
   "@dt-dds/react-checkbox": {
     "name": "@dt-dds/react-checkbox",
-    "packedTarballSize": 6845,
+    "packedTarballSize": 6844,
     "unpackedSize": 28466,
     "fileCount": 7,
     "gzipSize": 2557
   },
   "@dt-dds/react-core": {
     "name": "@dt-dds/react-core",
-    "packedTarballSize": 8220,
+    "packedTarballSize": 8222,
     "unpackedSize": 37905,
     "fileCount": 7,
     "gzipSize": 4182
   },
   "@dt-dds/react-date-picker": {
     "name": "@dt-dds/react-date-picker",
-    "packedTarballSize": 78866,
+    "packedTarballSize": 78865,
     "unpackedSize": 500711,
     "fileCount": 7,
     "gzipSize": 37849
@@ -106,36 +106,36 @@
   },
   "@dt-dds/react-drawer": {
     "name": "@dt-dds/react-drawer",
-    "packedTarballSize": 6479,
-    "unpackedSize": 25760,
+    "packedTarballSize": 6488,
+    "unpackedSize": 25761,
     "fileCount": 7,
     "gzipSize": 2101
   },
   "@dt-dds/react-dropdown": {
     "name": "@dt-dds/react-dropdown",
-    "packedTarballSize": 7956,
+    "packedTarballSize": 7960,
     "unpackedSize": 35505,
     "fileCount": 7,
     "gzipSize": 3071
   },
   "@dt-dds/react-empty-state": {
     "name": "@dt-dds/react-empty-state",
-    "packedTarballSize": 4543,
-    "unpackedSize": 13839,
+    "packedTarballSize": 4542,
+    "unpackedSize": 13840,
     "fileCount": 7,
     "gzipSize": 735
   },
   "@dt-dds/react-form": {
     "name": "@dt-dds/react-form",
-    "packedTarballSize": 4199,
+    "packedTarballSize": 4202,
     "unpackedSize": 13748,
     "fileCount": 7,
     "gzipSize": 903
   },
   "@dt-dds/react-icon": {
     "name": "@dt-dds/react-icon",
-    "packedTarballSize": 4400,
-    "unpackedSize": 11908,
+    "packedTarballSize": 4401,
+    "unpackedSize": 11909,
     "fileCount": 7,
     "gzipSize": 743
   },
@@ -148,15 +148,15 @@
   },
   "@dt-dds/react-label-field": {
     "name": "@dt-dds/react-label-field",
-    "packedTarballSize": 5241,
+    "packedTarballSize": 5242,
     "unpackedSize": 19445,
     "fileCount": 7,
     "gzipSize": 1468
   },
   "@dt-dds/react-link": {
     "name": "@dt-dds/react-link",
-    "packedTarballSize": 5501,
-    "unpackedSize": 19710,
+    "packedTarballSize": 5503,
+    "unpackedSize": 19712,
     "fileCount": 7,
     "gzipSize": 1503
   },
@@ -169,7 +169,7 @@
   },
   "@dt-dds/react-modal": {
     "name": "@dt-dds/react-modal",
-    "packedTarballSize": 7862,
+    "packedTarballSize": 7863,
     "unpackedSize": 37866,
     "fileCount": 7,
     "gzipSize": 3337
@@ -177,20 +177,20 @@
   "@dt-dds/react-pagination": {
     "name": "@dt-dds/react-pagination",
     "packedTarballSize": 7446,
-    "unpackedSize": 38893,
+    "unpackedSize": 38894,
     "fileCount": 7,
     "gzipSize": 3006
   },
   "@dt-dds/react-progress-bar": {
     "name": "@dt-dds/react-progress-bar",
-    "packedTarballSize": 5180,
+    "packedTarballSize": 5181,
     "unpackedSize": 18479,
     "fileCount": 7,
     "gzipSize": 1367
   },
   "@dt-dds/react-radio": {
     "name": "@dt-dds/react-radio",
-    "packedTarballSize": 5783,
+    "packedTarballSize": 5782,
     "unpackedSize": 23474,
     "fileCount": 7,
     "gzipSize": 1690
@@ -204,21 +204,21 @@
   },
   "@dt-dds/react-select": {
     "name": "@dt-dds/react-select",
-    "packedTarballSize": 9764,
+    "packedTarballSize": 9774,
     "unpackedSize": 49922,
     "fileCount": 7,
     "gzipSize": 4457
   },
   "@dt-dds/react-sidebar": {
     "name": "@dt-dds/react-sidebar",
-    "packedTarballSize": 22641,
+    "packedTarballSize": 22647,
     "unpackedSize": 110523,
     "fileCount": 7,
     "gzipSize": 9379
   },
   "@dt-dds/react-spinner": {
     "name": "@dt-dds/react-spinner",
-    "packedTarballSize": 4792,
+    "packedTarballSize": 4791,
     "unpackedSize": 15579,
     "fileCount": 7,
     "gzipSize": 1148
@@ -239,50 +239,50 @@
   },
   "@dt-dds/react-tabs": {
     "name": "@dt-dds/react-tabs",
-    "packedTarballSize": 6191,
+    "packedTarballSize": 6192,
     "unpackedSize": 24641,
     "fileCount": 7,
     "gzipSize": 2119
   },
   "@dt-dds/react-tag": {
     "name": "@dt-dds/react-tag",
-    "packedTarballSize": 6136,
+    "packedTarballSize": 6140,
     "unpackedSize": 26577,
     "fileCount": 7,
     "gzipSize": 2180
   },
   "@dt-dds/react-text-area": {
     "name": "@dt-dds/react-text-area",
-    "packedTarballSize": 6635,
+    "packedTarballSize": 6643,
     "unpackedSize": 28097,
     "fileCount": 7,
     "gzipSize": 2417
   },
   "@dt-dds/react-text-field": {
     "name": "@dt-dds/react-text-field",
-    "packedTarballSize": 8685,
+    "packedTarballSize": 8689,
     "unpackedSize": 50084,
     "fileCount": 7,
     "gzipSize": 3553
   },
   "@dt-dds/react-toast": {
     "name": "@dt-dds/react-toast",
-    "packedTarballSize": 9338,
+    "packedTarballSize": 9341,
     "unpackedSize": 46330,
     "fileCount": 7,
     "gzipSize": 3878
   },
   "@dt-dds/react-toggle": {
     "name": "@dt-dds/react-toggle",
-    "packedTarballSize": 4724,
+    "packedTarballSize": 4723,
     "unpackedSize": 14699,
     "fileCount": 7,
     "gzipSize": 1057
   },
   "@dt-dds/react-tooltip": {
     "name": "@dt-dds/react-tooltip",
-    "packedTarballSize": 6779,
-    "unpackedSize": 32150,
+    "packedTarballSize": 6789,
+    "unpackedSize": 32196,
     "fileCount": 7,
     "gzipSize": 2736
   },
@@ -295,7 +295,7 @@
   },
   "@dt-dds/themes": {
     "name": "@dt-dds/themes",
-    "packedTarballSize": 57686,
+    "packedTarballSize": 57685,
     "unpackedSize": 407113,
     "fileCount": 30,
     "gzipSize": 8093

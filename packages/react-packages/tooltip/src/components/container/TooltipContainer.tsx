@@ -1,4 +1,10 @@
-import { MouseEvent } from 'react';
+import {
+  FocusEvent,
+  KeyboardEvent,
+  SyntheticEvent,
+  useEffect,
+  useRef,
+} from 'react';
 
 import { BaseProps } from '@dt-dds/react-core';
 
@@ -8,6 +14,7 @@ import { useTooltipContext } from '../../context';
 export interface TooltipContainerProps extends BaseProps {
   hideDelay?: number;
 }
+
 export const TooltipContainer = ({
   children,
   style,
@@ -15,11 +22,12 @@ export const TooltipContainer = ({
   hideDelay = 0,
 }: TooltipContainerProps) => {
   const { setIsVisible, setContainerRectProperties } = useTooltipContext();
+  const hideTimeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
-  let hideTooltipTimeout: ReturnType<typeof setTimeout>;
+  useEffect(() => () => clearTimeout(hideTimeoutRef.current), []);
 
-  const showTooltip = (e: MouseEvent<HTMLDivElement>) => {
-    clearTimeout(hideTooltipTimeout);
+  const showTooltip = (e: SyntheticEvent<HTMLDivElement>) => {
+    clearTimeout(hideTimeoutRef.current);
     const { top, left, height, width } =
       e.currentTarget.getBoundingClientRect();
 
@@ -28,10 +36,23 @@ export const TooltipContainer = ({
   };
 
   const hideTooltip = () => {
-    // eslint-disable-next-line react-hooks/immutability
-    hideTooltipTimeout = setTimeout(() => {
+    clearTimeout(hideTimeoutRef.current);
+    hideTimeoutRef.current = setTimeout(() => setIsVisible(false), hideDelay);
+  };
+
+  const handleFocus = (e: FocusEvent<HTMLDivElement>) => {
+    if (e.target.matches(':focus-visible')) showTooltip(e);
+  };
+
+  const handleBlur = (e: FocusEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) hideTooltip();
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      clearTimeout(hideTimeoutRef.current);
       setIsVisible(false);
-    }, hideDelay);
+    }
   };
 
   return (
@@ -39,6 +60,9 @@ export const TooltipContainer = ({
       data-testid={dataTestId ?? 'tooltip-container'}
       onMouseEnter={showTooltip}
       onMouseLeave={hideTooltip}
+      onFocus={handleFocus}
+      onBlur={handleBlur}
+      onKeyDown={handleKeyDown}
       style={style}
     >
       {children}

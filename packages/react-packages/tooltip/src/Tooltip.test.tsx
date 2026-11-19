@@ -1,8 +1,9 @@
 import {
-  render,
   fireEvent,
+  render,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { withProviders } from '@dt-dds/react-core';
 
@@ -12,6 +13,11 @@ import { withTooltipProvider } from './utils';
 
 describe('<Tooltip /> component', () => {
   const ProvidedTooltip = withProviders(withTooltipProvider(Tooltip));
+
+  afterEach(() => {
+    jest.useRealTimers();
+  });
+
   it.each`
     direction   | background
     ${'right'}  | ${'opacity'}
@@ -55,5 +61,55 @@ describe('<Tooltip /> component', () => {
     await waitForElementToBeRemoved(() => getByTestId('tooltip-content'));
 
     expect(queryByTestId('tooltip-content')).not.toBeInTheDocument();
+  });
+
+  describe('Keyboard navigation', () => {
+    it('should show the tooltip when a child receives keyboard focus', async () => {
+      const { findByTestId } = render(
+        <ProvidedTooltip>
+          <button>Trigger</button>
+          <Tooltip.Content>Some content</Tooltip.Content>
+        </ProvidedTooltip>
+      );
+
+      await userEvent.tab();
+
+      expect(await findByTestId('tooltip-content')).toBeInTheDocument();
+    });
+
+    it('should hide the tooltip when focus leaves the container', async () => {
+      const { getByTestId } = render(
+        <>
+          <ProvidedTooltip>
+            <button>Trigger</button>
+            <Tooltip.Content>Some content</Tooltip.Content>
+          </ProvidedTooltip>
+          <button>Outside</button>
+        </>
+      );
+
+      await userEvent.tab();
+      expect(getByTestId('tooltip-content')).toBeInTheDocument();
+
+      await userEvent.tab();
+
+      await waitForElementToBeRemoved(() => getByTestId('tooltip-content'));
+    });
+
+    it('should hide the tooltip when Escape is pressed', async () => {
+      const { getByTestId, queryByTestId } = render(
+        <ProvidedTooltip>
+          <button>Trigger</button>
+          <Tooltip.Content>Some content</Tooltip.Content>
+        </ProvidedTooltip>
+      );
+
+      await userEvent.tab();
+      expect(getByTestId('tooltip-content')).toBeInTheDocument();
+
+      await userEvent.keyboard('{Escape}');
+
+      expect(queryByTestId('tooltip-content')).not.toBeInTheDocument();
+    });
   });
 });
