@@ -23,6 +23,7 @@ It contains UI components, brand themes, examples and documentation.</div>
 #### **Documentation via:**
 
 - [Storybook/Developer documentation](https://daimlertruck.github.io/DT-DDS/)
+- [Upgrade guide](https://daimlertruck.github.io/DT-DDS/?path=/docs/upgrading-playbook--specs)
 - [Figma (private design files)](https://www.figma.com/file/RdxGI4OUcKDRfBRPmBJXbW/DT_UI-Design-System)
 
 ## 📦 Installation
