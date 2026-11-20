@@ -1,6 +1,8 @@
 # Upgrading DT-DDS
 
-How to take a DT-DDS release, from 1.0.0 on. The rules on this page come from
+How to take a DT-DDS release, from 1.0.0 on. To move from the beta to 1.0.0, start with
+[Upgrading from the beta to 1.0.0](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/1.0.0.md).
+The rules on this page come from
 [ADR-0011](https://github.com/daimlertruck/DT-DDS/blob/main/docs/adrs/0011-v1-stable-release-strategy.md).
 
 ## What a release means
@@ -63,7 +65,9 @@ replacement during that window, and the major brings no surprise.
 
 ## Majors
 
-A major ships all its removals at once, and each one has a migration guide entry.
+A major ships all its removals at once, and each one has a migration guide entry. The first
+migration page is
+[Upgrading from the beta to 1.0.0](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/1.0.0.md).
 
 ### Codemods
 
