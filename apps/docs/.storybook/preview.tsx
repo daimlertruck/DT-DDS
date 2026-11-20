@@ -54,7 +54,13 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['Contribution Guidelines', 'Foundations', '*'],
+        order: [
+          'Contribution Guidelines',
+          'Upgrading',
+          ['Playbook', 'Beta to 1.0.0'],
+          'Foundations',
+          '*',
+        ],
       },
     },
     docs: {
