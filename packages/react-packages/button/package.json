@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-button",
   "version": "1.0.0-beta.120",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/button"
+  },
   "exports": {
     ".": "./dist/index.js"
   },

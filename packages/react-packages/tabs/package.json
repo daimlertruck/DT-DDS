@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-tabs",
   "version": "1.0.0-beta.122",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/tabs"
+  },
   "exports": {
     ".": "./dist/index.js"
   },

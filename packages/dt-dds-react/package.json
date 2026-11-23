@@ -2,6 +2,11 @@
   "name": "@dt-dds/react",
   "version": "1.0.0-beta.375",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/dt-dds-react"
+  },
   "exports": {
     ".": "./dist/index.js",
     "./index.css": "./dist/index.css"
