@@ -8,6 +8,20 @@
       "title": "Contribution Guidelines",
       "content": "import { Meta, Markdown } from '@storybook/addon-docs/blocks';\n\nimport Contributing from '../../../../CONTRIBUTING.md?raw';\n\n<Meta title='Contribution Guidelines' />\n\n<Markdown>{Contributing}</Markdown>\n"
     },
+    "upgrading-playbook--specs": {
+      "id": "upgrading-playbook--specs",
+      "name": "Specs",
+      "path": "./src/upgrading/playbook.mdx",
+      "title": "Upgrading/Playbook",
+      "content": "import { Meta, Markdown } from '@storybook/addon-docs/blocks';\n\nimport Playbook from '../../../../docs/upgrading/README.md?raw';\n\n<Meta title='Upgrading/Playbook' />\n\n<Markdown>{Playbook}</Markdown>\n"
+    },
+    "upgrading-beta-to-1-0-0--specs": {
+      "id": "upgrading-beta-to-1-0-0--specs",
+      "name": "Specs",
+      "path": "./src/upgrading/beta-to-1.0.0.mdx",
+      "title": "Upgrading/Beta to 1.0.0",
+      "content": "import { Meta, Markdown } from '@storybook/addon-docs/blocks';\n\nimport UpgradeTo1 from '../../../../docs/upgrading/1.0.0.md?raw';\n\n<Meta title='Upgrading/Beta to 1.0.0' />\n\n<Markdown>{UpgradeTo1}</Markdown>\n"
+    },
     "foundations-colors--specs": {
       "id": "foundations-colors--specs",
       "name": "Specs",

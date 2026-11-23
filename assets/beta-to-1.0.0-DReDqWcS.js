@@ -1,0 +1,66 @@
+var d=Object.defineProperty;var n=(e,a)=>d(e,"name",{value:a,configurable:!0});import{n as o}from"./rolldown-runtime-CzYk_CEw.js";import{c as h,l as u,s as p}from"./blocks-BRyGBkbc.js";import{t as m}from"./jsx-runtime-Br4tQxt1.js";import{i as g,r as l}from"./react-2NLqoBuL.js";var s;function i(){return(i=o((()=>{s=`# Upgrading from the beta to 1.0.0
+
+How to move an app from a \`1.0.0-beta.N\` version of DT-DDS to 1.0.0. After that, the
+[upgrade playbook](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/README.md)
+covers every later release.
+
+## Before you start
+
+If your app uses a beta older than \`1.0.0-beta.362\`, update to \`@dt-dds/react@1.0.0-beta.362\`
+first. The breaking changes up to that beta are in the
+[\`@dt-dds/react\` changelog](https://github.com/daimlertruck/DT-DDS/blob/main/packages/dt-dds-react/CHANGELOG.md)
+and the changelogs of the packages it lists.
+
+## Version ranges
+
+At 1.0.0, every \`1.0.0-beta.N\` version becomes \`1.0.0\`:
+
+- a caret range such as \`^1.0.0-beta.362\` reaches 1.0.0 with no change;
+- an exact pin such as \`1.0.0-beta.362\` does not: change it to \`^1.0.0\`.
+
+\`\`\`jsonc
+// before
+"@dt-dds/react": "1.0.0-beta.362"
+
+// after
+"@dt-dds/react": "^1.0.0"
+\`\`\`
+
+If you install \`@dt-dds/*\` packages one by one, change all of them in the same upgrade. DT-DDS
+packages pin each other to exact versions, so mixed versions can install duplicate copies of shared
+packages.
+
+## React 17
+
+1.0.0 supports React 18 and 19 only
+([issue 316](https://github.com/daimlertruck/DT-DDS/issues/316)). If your app runs React 17, stay
+on the last beta that supports React 17 until you upgrade React. The change that drops React 17
+names that beta here.
+
+## Breaking changes since beta.362
+
+None so far. Checked up to \`@dt-dds/react@1.0.0-beta.373\`.
+
+Each change that breaks an app before 1.0.0 adds its entry here, in this format:
+
+\`\`\`markdown
+### <Short name of the change>
+
+- Package: \`@dt-dds/react-<name>\`
+- Shipped in: \`1.0.0-beta.N\` (link to the commit)
+- What changed: <the old API and the new one>
+- Migration:
+
+  <before and after code>
+\`\`\`
+
+This format can change when the migration guide template
+([issue 229](https://github.com/daimlertruck/DT-DDS/issues/229)) is published.
+
+## Next
+
+Read the
+[upgrade playbook](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/README.md) to
+learn what each release after 1.0.0 means for your app.
+`})))()}n(i,"init__1_0_0");function r(e){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(h,{title:"Upgrading/Beta to 1.0.0"}),`
+`,(0,t.jsx)(p,{children:s})]})}n(r,"_createMdxContent");function y(e={}){const{wrapper:a}={...g(),...e.components};return a?(0,t.jsx)(a,{...e,children:(0,t.jsx)(r,{...e})}):r(e)}n(y,"MDXContent");var t;function c(){return(c=o((()=>{t=m(),l(),u(),i()})))()}n(c,"init_beta_to_1_0_0");c();export{y as default};
