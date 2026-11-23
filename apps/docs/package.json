@@ -32,8 +32,8 @@
     "@storybook/addon-vitest": "10.6.2",
     "@storybook/react-vite": "10.6.2",
     "@vitejs/plugin-react-swc": "^4.3.3",
-    "@vitest/browser-playwright": "^5.0.4",
-    "@vitest/coverage-v8": "^5.0.4",
+    "@vitest/browser-playwright": "^5.0.5",
+    "@vitest/coverage-v8": "^5.0.5",
     "eslint-config-custom": "*",
     "eslint-plugin-storybook": "10.6.2",
     "playwright": "1.64.0",
@@ -43,6 +43,6 @@
     "vite": "^8.2.4",
     "vite-plugin-node-polyfills": "^0.28.0",
     "vite-tsconfig-paths": "^4.3.1",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   }
 }
