@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-date-picker",
   "version": "1.0.0-beta.126",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/date-picker"
+  },
   "exports": {
     ".": "./dist/index.js"
   },

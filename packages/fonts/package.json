@@ -3,6 +3,11 @@
   "version": "1.0.0-beta.16",
   "description": "DT-DDS Design System Fonts",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/fonts"
+  },
   "exports": {
     ".": "./dist/index.js",
     "./index.css": "./dist/index.css",

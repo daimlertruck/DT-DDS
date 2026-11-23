@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-spinner",
   "version": "1.0.0-beta.125",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/spinner"
+  },
   "exports": {
     ".": "./dist/index.js"
   },

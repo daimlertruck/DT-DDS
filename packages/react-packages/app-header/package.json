@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-app-header",
   "version": "1.0.0-beta.119",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/app-header"
+  },
   "exports": {
     ".": "./dist/index.js"
   },

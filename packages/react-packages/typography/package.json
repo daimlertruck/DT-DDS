@@ -2,6 +2,11 @@
   "name": "@dt-dds/react-typography",
   "version": "1.0.0-beta.62",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimlertruck/DT-DDS.git",
+    "directory": "packages/react-packages/typography"
+  },
   "exports": {
     ".": "./dist/index.js"
   },
