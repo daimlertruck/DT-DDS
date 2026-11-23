@@ -1,5 +1,0 @@
-var m=Object.defineProperty;var s=(t,r)=>m(t,"name",{value:r,configurable:!0});import{n as p}from"./rolldown-runtime-CzYk_CEw.js";import{n as c}from"./src-Dy65K5lf.js";import{t as d}from"./jsx-runtime-Br4tQxt1.js";import{t as l}from"./icon-DzgDoBJz.js";import{Ht as o,Ut as u}from"./iframe-CLuZkPNB.js";var a,n,_,e,h;function i(){return(i=p((()=>{l(),u(),a=d(),n=[{name:"Name 1",showIcon:!0},{name:"Second page has a long text to describe its path"},{name:"Name 3"},{name:"Last page has a long text to describe its path"}],_={title:"Data Display/Breadcrumb",component:o,render:s(({separator:t})=>(0,a.jsx)(o,{separator:t,children:n.map(r=>(0,a.jsxs)(o.Item,{children:[r.showIcon?(0,a.jsx)(c,{code:"view_agenda",color:"primary"}):null,(0,a.jsx)("a",{href:"/",children:r.name})]},r.name))}),"render"),argTypes:{separator:{options:["slash","arrow"],control:{type:"radio"}}}},e={args:{separator:"slash"}},h=["Default"],e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
-  args: {
-    separator: 'slash'
-  }
-}`,...e.parameters?.docs?.source}}}})))()}s(i,"init_Breadcrumb_stories");i();export{e as Default,h as __namedExportsOrder,_ as default};
