@@ -108,7 +108,9 @@ answers `loop:`).
      non-conventional or `fixup!`/`amend!` subjects, header > 50 chars, exactly one `Signed-off-by` (the human
      committer's, last trailer) and no agent sign-off. Each breaking-change candidate in
      `review-api.md` needs a recorded maintainer decision (AGENTS.md → Architecture decisions:
-     breaking change → STOP, maintainer decides); without one it is blocking.
+     breaking change → STOP, maintainer decides); without one it is blocking. A `feat: deprecate …`
+     or `!` subject whose branch adds no entry for it to `docs/upgrading/` is blocking (AGENTS.md →
+     Definition of Done #8).
    - **Off-limits**: no hand edits under AGENTS.md → Off-limits paths.
 
 5. **Blast radius (outside the diff).** For every exported symbol whose signature, contract or

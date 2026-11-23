@@ -181,6 +181,8 @@ Blocking rules (ds-code-review may cite them):
 5. Every `@dt-dds/*` import declared with the exact workspace version; public types exported.
 6. No `!`/BREAKING subject without maintainer approval; no edits to off-limits paths.
 7. Verify gate green with fresh evidence.
+8. A `feat: deprecate …` or approved `!` commit adds its migration guide entry to the major's page
+   in `docs/upgrading/`, in the format of `docs/upgrading/1.0.0.md` → Entry format.
 
 ## Work intake & routing
 

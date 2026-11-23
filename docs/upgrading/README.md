@@ -74,6 +74,9 @@ replacement during that window, and the major brings no surprise.
 A major ships all its removals at once, and each one has a migration guide entry. The first
 migration page is
 [Upgrading from the beta to 1.0.0](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/1.0.0.md).
+Each major has its own migration page in `docs/upgrading/`, in the entry format that
+[Upgrading from the beta to 1.0.0](https://github.com/daimlertruck/DT-DDS/blob/main/docs/upgrading/1.0.0.md#entry-format)
+defines.
 
 ### Codemods
 

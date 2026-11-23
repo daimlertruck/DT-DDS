@@ -213,6 +213,7 @@ _All things that need to be done before a Task is moved to done_
 - Supports Localisation (if applicable) & A11y
 - Storybook updated, with all flow cases (states), behaviour documentation, code snippet and specifications of the component
 - Component spec created/updated (see [Component spec template](./turbo/generators/new-component-package/templates/README.md.hbs)) together with the code, based on the corresponding RFC
+- Migration guide entry added for every deprecation and every `!` change (see the [entry format](./docs/upgrading/1.0.0.md#entry-format))
 - Quality gates passed successfully (SonarQube & BlackDuck)
 - PR approved by 2 or more developers
   - At least, one of them is a maintainer
@@ -274,6 +275,8 @@ The message should be structured as follows:
 The commit title has a limit of 50 characters. **Description** should be written in the present tense (**change**, not **changed** or **changes**), to be consistent with generated messages from commands like git merge.
 
 Even though the **body** is optional, the developer should always consider adding one so that the project has a more clear and detailed commit history for anyone to follow. Each line of **body** should be wrapped at 72 characters.
+
+An API deprecation uses a `feat:` subject whose description starts with `deprecate`, for example `feat: deprecate <prop> in <component>`. The replacement ships next to the old API (see [ADR-0011](./docs/adrs/0011-v1-stable-release-strategy.md), Breaking changes). A `!` subject (a breaking change) needs maintainer approval. A PR with a deprecation or a `!` change adds its migration guide entry, in the [entry format](./docs/upgrading/1.0.0.md#entry-format).
 
 ### Strategy
 
