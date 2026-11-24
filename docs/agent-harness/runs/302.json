@@ -1,0 +1,182 @@
+{
+  "schema": 1,
+  "issue": 302,
+  "lane": {
+    "lane": "1",
+    "name": "Standard",
+    "decidedBy": "sonnet",
+    "confidence": 0.6
+  },
+  "base": "640d695833236f4ad30103987f38db28d5c93382",
+  "harness": {
+    "commit": "6b028ec309d3b08877e141379c9b95b10b7b8b59",
+    "dirty": false,
+    "claudeCode": [
+      "2.1.331"
+    ]
+  },
+  "started": "2026-11-24T13:57:51Z",
+  "handedOff": "2026-11-24T14:50:17Z",
+  "totals": {
+    "listUsd": 2.335041,
+    "reportedUsd": 2.335041,
+    "requests": 157,
+    "uncachedIn": 18760,
+    "cacheWrite": 293382,
+    "cacheRead": 2214614,
+    "output": 50977,
+    "stageSeconds": 669,
+    "toolCalls": 147
+  },
+  "stages": [
+    {
+      "stage": "lane-classifier",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.02898,
+      "reportedUsd": 0.02898,
+      "seconds": 6,
+      "requests": 1,
+      "uncachedIn": 1654,
+      "cacheWrite": 8477,
+      "cacheRead": 0,
+      "output": 448
+    },
+    {
+      "stage": "gather-context",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.183367,
+      "reportedUsd": 0.183367,
+      "seconds": 57,
+      "requests": 20,
+      "uncachedIn": 3631,
+      "cacheWrite": 45232,
+      "cacheRead": 141952,
+      "output": 4883
+    },
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.790227,
+      "reportedUsd": 0.790227,
+      "seconds": 165,
+      "requests": 34,
+      "uncachedIn": 2205,
+      "cacheWrite": 67552,
+      "cacheRead": 615436,
+      "output": 16028
+    },
+    {
+      "stage": "implement",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.875445,
+      "reportedUsd": 0.875445,
+      "seconds": 219,
+      "requests": 47,
+      "uncachedIn": 4390,
+      "cacheWrite": 71647,
+      "cacheRead": 972051,
+      "output": 15262
+    },
+    {
+      "stage": "verify",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.182946,
+      "reportedUsd": 0.182946,
+      "seconds": 145,
+      "requests": 28,
+      "uncachedIn": 2139,
+      "cacheWrite": 34176,
+      "cacheRead": 289681,
+      "output": 6426
+    },
+    {
+      "stage": "review",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.167725,
+      "reportedUsd": 0.167725,
+      "seconds": 49,
+      "requests": 15,
+      "uncachedIn": 2972,
+      "cacheWrite": 39556,
+      "cacheRead": 142415,
+      "output": 4865
+    },
+    {
+      "stage": "pr-draft",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.106351,
+      "reportedUsd": 0.106351,
+      "seconds": 28,
+      "requests": 12,
+      "uncachedIn": 1769,
+      "cacheWrite": 26742,
+      "cacheRead": 53079,
+      "output": 3065
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 374
+    },
+    {
+      "gate": "G1",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 13
+    },
+    {
+      "gate": "G3",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 950
+    },
+    {
+      "gate": "G4",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 355
+    },
+    {
+      "gate": "G4",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 230
+    },
+    {
+      "gate": "G5",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 347
+    },
+    {
+      "gate": "G6",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 116
+    },
+    {
+      "gate": "G7",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 75
+    }
+  ],
+  "humanActions": 1
+}
