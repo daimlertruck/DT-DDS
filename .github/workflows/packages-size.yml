@@ -3,6 +3,8 @@ name: Packages Size
 # Measures packed/unpacked size, file count and gzip size of every @dt-dds/* package against the
 # committed baseline (ADR-0010). Not a required check: a red run reports a regression without
 # blocking the merge. The baseline changes only through `check-pkg-size:update`, run by a human.
+# A second job posts the same report as one PR comment, updated on every run; it has
+# `pull-requests: write`, skips fork PRs and never changes the check's result.
 
 on:
   pull_request:
@@ -50,6 +52,57 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: packages-size-report
-          path: scripts/check-pkg-size/results/report.json
+          path: |
+            scripts/check-pkg-size/results/report.json
+            scripts/check-pkg-size/results/report.md
           if-no-files-found: warn
           retention-days: 14
+
+  packages-size-comment:
+    needs: packages-size
+    # Fork PRs get a read-only token: their report stays in the run summary and artifact.
+    if: ${{ !cancelled() && github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Download packages size report
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: packages-size-report
+          path: packages-size-report
+
+      - name: Post packages size comment
+        continue-on-error: true
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const path = require('node:path');
+
+            const marker = '<!-- packages-size-report -->';
+            const reportPath = path.join(process.env.GITHUB_WORKSPACE, 'packages-size-report', 'report.md');
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const report = fs.existsSync(reportPath)
+              ? fs.readFileSync(reportPath, 'utf8')
+              : `No report was produced for ${context.payload.pull_request.head.sha} ([workflow run](${runUrl})).\n`;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find(
+              (comment) => comment.user?.type === 'Bot' && comment.body?.startsWith(marker)
+            );
+
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
