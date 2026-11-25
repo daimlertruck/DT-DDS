@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.121
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-spinner@1.0.0-beta.126
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.120
 
 ### Minor Changes

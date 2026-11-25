@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.17
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.16
 
 ### Minor Changes

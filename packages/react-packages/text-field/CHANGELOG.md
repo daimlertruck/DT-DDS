@@ -1,5 +1,20 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.138
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/react-icon-button@1.0.0-beta.42
+  - @dt-dds/react-label-field@1.0.0-beta.75
+  - @dt-dds/react-spinner@1.0.0-beta.126
+  - @dt-dds/react-tooltip@1.0.0-beta.85
+  - @dt-dds/react-typography@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.137
 
 ### Minor Changes

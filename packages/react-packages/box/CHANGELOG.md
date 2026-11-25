@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.83
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+
 ## 1.0.0-beta.82
 
 ### Patch Changes

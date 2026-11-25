@@ -1,5 +1,16 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.109
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.83
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-typography@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.108
 
 ### Minor Changes

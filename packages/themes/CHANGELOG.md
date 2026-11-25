@@ -1,5 +1,11 @@
 # @dt-dds/themes
 
+## 1.0.0-beta.22
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+
 ## 1.0.0-beta.21
 
 ### Minor Changes

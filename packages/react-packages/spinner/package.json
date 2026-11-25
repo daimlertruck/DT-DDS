@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-spinner",
-  "version": "1.0.0-beta.125",
+  "version": "1.0.0-beta.126",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,10 +25,10 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.69",
-    "@dt-dds/react-box": "1.0.0-beta.82",
-    "@dt-dds/react-typography": "1.0.0-beta.62",
-    "@dt-dds/themes": "1.0.0-beta.21"
+    "@dt-dds/react-core": "1.0.0-beta.70",
+    "@dt-dds/react-box": "1.0.0-beta.83",
+    "@dt-dds/react-typography": "1.0.0-beta.63",
+    "@dt-dds/themes": "1.0.0-beta.22"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

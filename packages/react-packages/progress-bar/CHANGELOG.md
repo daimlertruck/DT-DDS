@@ -1,5 +1,15 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/react-typography@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.69
 
 ### Minor Changes

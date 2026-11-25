@@ -1,5 +1,14 @@
 # @dt-ui/react-icon-button
 
+## 1.0.0-beta.42
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.41
 
 ### Minor Changes

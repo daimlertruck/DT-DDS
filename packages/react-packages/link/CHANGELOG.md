@@ -1,5 +1,17 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.102
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.12
+  - @dt-dds/react-button@1.0.0-beta.121
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.101
 
 ### Minor Changes

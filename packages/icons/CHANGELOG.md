@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.12
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+
 ## 1.0.0-beta.11
 
 ### Patch Changes

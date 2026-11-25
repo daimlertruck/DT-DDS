@@ -1,5 +1,53 @@
 # @dt-ui/react
 
+## 1.0.0-beta.376
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies [90a92a2]
+- Updated dependencies
+  - @dt-dds/react-app-header@1.0.0-beta.120
+  - @dt-dds/react-accordion@1.0.0-beta.77
+  - @dt-dds/react-avatar@1.0.0-beta.90
+  - @dt-dds/react-backdrop@1.0.0-beta.75
+  - @dt-dds/react-box@1.0.0-beta.83
+  - @dt-dds/react-breadcrumb@1.0.0-beta.90
+  - @dt-dds/react-button@1.0.0-beta.121
+  - @dt-dds/react-card@1.0.0-beta.55
+  - @dt-dds/react-checkbox@1.0.0-beta.79
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-date-picker@1.0.0-beta.127
+  - @dt-dds/react-divider@1.0.0-beta.71
+  - @dt-dds/react-drawer@1.0.0-beta.85
+  - @dt-dds/react-dropdown@1.0.0-beta.121
+  - @dt-dds/react-empty-state@1.0.0-beta.147
+  - @dt-dds/react-form@1.0.0-beta.72
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/react-icon-button@1.0.0-beta.42
+  - @dt-dds/react-label-field@1.0.0-beta.75
+  - @dt-dds/react-link@1.0.0-beta.102
+  - @dt-dds/react-message@1.0.0-beta.140
+  - @dt-dds/react-modal@1.0.0-beta.125
+  - @dt-dds/react-pagination@1.0.0-beta.70
+  - @dt-dds/react-progress-bar@1.0.0-beta.70
+  - @dt-dds/react-radio@1.0.0-beta.109
+  - @dt-dds/react-segmented-control@1.0.0-beta.68
+  - @dt-dds/react-select@1.0.0-beta.119
+  - @dt-dds/react-sidebar@1.0.0-beta.24
+  - @dt-dds/react-spinner@1.0.0-beta.126
+  - @dt-dds/react-stepper@1.0.0-beta.73
+  - @dt-dds/react-table@1.0.0-beta.69
+  - @dt-dds/react-tabs@1.0.0-beta.123
+  - @dt-dds/react-tag@1.0.0-beta.82
+  - @dt-dds/react-text-area@1.0.0-beta.109
+  - @dt-dds/react-text-field@1.0.0-beta.138
+  - @dt-dds/react-toast@1.0.0-beta.141
+  - @dt-dds/react-toggle@1.0.0-beta.52
+  - @dt-dds/react-tooltip@1.0.0-beta.85
+  - @dt-dds/react-typography@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.375
 
 ### Patch Changes

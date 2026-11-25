@@ -1,5 +1,16 @@
 # @dt-ui/react-tag
 
+## 1.0.0-beta.82
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/react-tooltip@1.0.0-beta.85
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.81
 
 ### Minor Changes

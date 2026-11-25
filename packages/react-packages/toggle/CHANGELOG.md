@@ -1,5 +1,15 @@
 # @dt-ui/react-toggle
 
+## 1.0.0-beta.52
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-typography@1.0.0-beta.63
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.51
 
 ### Minor Changes

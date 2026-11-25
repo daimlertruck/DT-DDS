@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.127
+
+### Patch Changes
+
+- fix: add repository field to package manifests
+- Updated dependencies
+  - @dt-dds/react-core@1.0.0-beta.70
+  - @dt-dds/react-dropdown@1.0.0-beta.121
+  - @dt-dds/react-icon@1.0.0-beta.77
+  - @dt-dds/react-text-field@1.0.0-beta.138
+  - @dt-dds/themes@1.0.0-beta.22
+
 ## 1.0.0-beta.126
 
 ### Minor Changes
