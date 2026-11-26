@@ -1,0 +1,1 @@
+var m=Object.defineProperty;var n=(r,o)=>m(r,"name",{value:o,configurable:!0});import{n as i}from"./rolldown-runtime-CzYk_CEw.js";import{n as s}from"./Box-DmpK8zL-.js";function t(){return(t=i((()=>{s()})))()}n(t,"init_src");function _(){return(_=i((()=>{t()})))()}n(_,"init_box");export{_ as t};
