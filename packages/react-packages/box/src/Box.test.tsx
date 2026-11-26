@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import { Box } from '.';
+import { Box } from './Box';
 
 describe('<Box /> component', () => {
   it('should render with default div element and children', () => {
