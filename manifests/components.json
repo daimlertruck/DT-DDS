@@ -770,7 +770,7 @@
       "jsDocTags": {},
       "reactDocgenTypescript": {
         "tags": {},
-        "filePath": "/home/runner/work/DT-DDS/DT-DDS/packages/react-packages/box/src/index.tsx",
+        "filePath": "/home/runner/work/DT-DDS/DT-DDS/packages/react-packages/box/src/Box.tsx",
         "description": "",
         "displayName": "Box",
         "methods": [],
@@ -782,12 +782,12 @@
             "description": "",
             "name": "element",
             "parent": {
-              "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+              "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
               "name": "BoxProps"
             },
             "declarations": [
               {
-                "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+                "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
                 "name": "BoxProps"
               }
             ],
@@ -801,12 +801,12 @@
             "description": "",
             "name": "dataTestId",
             "parent": {
-              "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+              "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
               "name": "BoxProps"
             },
             "declarations": [
               {
-                "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+                "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
                 "name": "BoxProps"
               }
             ],
@@ -820,12 +820,12 @@
             "description": "",
             "name": "style",
             "parent": {
-              "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+              "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
               "name": "BoxProps"
             },
             "declarations": [
               {
-                "fileName": "DT-DDS/packages/react-packages/box/src/index.tsx",
+                "fileName": "DT-DDS/packages/react-packages/box/src/Box.tsx",
                 "name": "BoxProps"
               }
             ],
@@ -29533,6 +29533,6 @@
   },
   "meta": {
     "docgen": "react-docgen-typescript",
-    "durationMs": 2005
+    "durationMs": 2490
   }
 }
