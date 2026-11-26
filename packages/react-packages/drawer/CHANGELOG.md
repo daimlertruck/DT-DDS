@@ -1,5 +1,17 @@
 # @dt-ui/react-drawer
 
+## 1.0.0-beta.87
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.13
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.86
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.81
+
+### Patch Changes
+
+- docs: fix README fence language
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+
 ## 1.0.0-beta.80
 
 ### Patch Changes

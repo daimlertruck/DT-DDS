@@ -1,5 +1,13 @@
 # @dt-ui/react-progress-bar
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- docs: fix README fence language
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

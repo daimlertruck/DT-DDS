@@ -1,5 +1,17 @@
 # @dt-dds/react-app-header
 
+## 1.0.0-beta.124
+
+### Major Changes
+
+- 90a92a2: Versioning 1.0.0-beta.16 (correct version)
+
+### Patch Changes
+
+- refactor: uniformise component structure
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.123
 
 ### Major Changes

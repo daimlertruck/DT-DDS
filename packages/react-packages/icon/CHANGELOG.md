@@ -1,5 +1,13 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.79
+
+### Patch Changes
+
+- docs: fix README fence language
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.13
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

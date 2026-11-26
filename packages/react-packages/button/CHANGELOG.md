@@ -1,5 +1,13 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.123
+
+### Patch Changes
+
+- refactor: uniformise component structure
+- Updated dependencies
+  - @dt-dds/react-spinner@1.0.0-beta.128
+
 ## 1.0.0-beta.122
 
 ### Patch Changes

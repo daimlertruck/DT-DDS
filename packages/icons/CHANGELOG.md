@@ -1,5 +1,11 @@
 # @dt-ui/icons
 
+## 1.0.0-beta.13
+
+### Patch Changes
+
+- docs: fix README fence language
+
 ## 1.0.0-beta.12
 
 ### Patch Changes

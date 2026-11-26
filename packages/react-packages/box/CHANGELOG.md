@@ -1,5 +1,11 @@
 # @dt-ui/react-box
 
+## 1.0.0-beta.84
+
+### Patch Changes
+
+- refactor: uniformise component structure
+
 ## 1.0.0-beta.83
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-dropdown
 
+## 1.0.0-beta.123
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.122
 
 ### Patch Changes

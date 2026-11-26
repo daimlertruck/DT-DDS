@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.125
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.124
 
 ### Patch Changes

@@ -1,5 +1,46 @@
 # @dt-ui/react
 
+## 1.0.0-beta.380
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies [90a92a2]
+  - @dt-dds/react-drawer@1.0.0-beta.87
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-accordion@1.0.0-beta.79
+  - @dt-dds/react-avatar@1.0.0-beta.92
+  - @dt-dds/react-breadcrumb@1.0.0-beta.92
+  - @dt-dds/react-checkbox@1.0.0-beta.81
+  - @dt-dds/react-select@1.0.0-beta.121
+  - @dt-dds/react-pagination@1.0.0-beta.72
+  - @dt-dds/react-date-picker@1.0.0-beta.129
+  - @dt-dds/react-dropdown@1.0.0-beta.123
+  - @dt-dds/react-form@1.0.0-beta.74
+  - @dt-dds/react-label-field@1.0.0-beta.77
+  - @dt-dds/react-text-area@1.0.0-beta.111
+  - @dt-dds/react-text-field@1.0.0-beta.140
+  - @dt-dds/react-link@1.0.0-beta.104
+  - @dt-dds/react-empty-state@1.0.0-beta.149
+  - @dt-dds/react-message@1.0.0-beta.142
+  - @dt-dds/react-modal@1.0.0-beta.127
+  - @dt-dds/react-progress-bar@1.0.0-beta.72
+  - @dt-dds/react-segmented-control@1.0.0-beta.70
+  - @dt-dds/react-sidebar@1.0.0-beta.26
+  - @dt-dds/react-stepper@1.0.0-beta.75
+  - @dt-dds/react-tabs@1.0.0-beta.125
+  - @dt-dds/react-tag@1.0.0-beta.84
+  - @dt-dds/react-toast@1.0.0-beta.143
+  - @dt-dds/react-box@1.0.0-beta.84
+  - @dt-dds/react-app-header@1.0.0-beta.124
+  - @dt-dds/react-radio@1.0.0-beta.111
+  - @dt-dds/react-spinner@1.0.0-beta.128
+  - @dt-dds/react-button@1.0.0-beta.123
+  - @dt-dds/react-tooltip@1.0.0-beta.87
+
 ## 1.0.0-beta.379
 
 ### Patch Changes

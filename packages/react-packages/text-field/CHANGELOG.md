@@ -1,5 +1,18 @@
 # @dt-ui/react-text-field
 
+## 1.0.0-beta.140
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-label-field@1.0.0-beta.77
+  - @dt-dds/react-spinner@1.0.0-beta.128
+  - @dt-dds/react-tooltip@1.0.0-beta.87
+
 ## 1.0.0-beta.139
 
 ### Patch Changes

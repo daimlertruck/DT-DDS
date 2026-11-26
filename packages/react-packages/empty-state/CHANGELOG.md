@@ -1,5 +1,16 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.149
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-link@1.0.0-beta.104
+  - @dt-dds/react-button@1.0.0-beta.123
+
 ## 1.0.0-beta.148
 
 ### Patch Changes

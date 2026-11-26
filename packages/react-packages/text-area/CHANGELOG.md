@@ -1,5 +1,18 @@
 # @dt-ui/react-text-area
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-label-field@1.0.0-beta.77
+  - @dt-dds/react-box@1.0.0-beta.84
+  - @dt-dds/react-tooltip@1.0.0-beta.87
+
 ## 1.0.0-beta.110
 
 ### Patch Changes

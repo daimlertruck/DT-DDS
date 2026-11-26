@@ -1,5 +1,13 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.79
+
+### Patch Changes
+
+- docs: fix README fence language
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+
 ## 1.0.0-beta.78
 
 ### Patch Changes

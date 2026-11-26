@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.129
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-dropdown@1.0.0-beta.123
+  - @dt-dds/react-text-field@1.0.0-beta.140
+
 ## 1.0.0-beta.128
 
 ### Patch Changes

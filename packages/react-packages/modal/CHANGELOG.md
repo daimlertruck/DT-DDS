@@ -1,5 +1,16 @@
 # @dt-ui/react-modal
 
+## 1.0.0-beta.127
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-spinner@1.0.0-beta.128
+
 ## 1.0.0-beta.126
 
 ### Patch Changes

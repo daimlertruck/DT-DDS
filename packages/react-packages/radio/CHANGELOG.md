@@ -1,5 +1,13 @@
 # @dt-ui/react-radio
 
+## 1.0.0-beta.111
+
+### Patch Changes
+
+- refactor: uniformise component structure
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.110
 
 ### Patch Changes

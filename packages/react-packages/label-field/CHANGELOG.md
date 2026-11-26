@@ -1,5 +1,13 @@
 # @dt-ui/react-label-field
 
+## 1.0.0-beta.77
+
+### Patch Changes
+
+- docs: fix README fence language
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+
 ## 1.0.0-beta.76
 
 ### Patch Changes

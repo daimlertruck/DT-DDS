@@ -1,5 +1,13 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.87
+
+### Patch Changes
+
+- refactor: uniformise component structure
+- Updated dependencies
+  - @dt-dds/react-button@1.0.0-beta.123
+
 ## 1.0.0-beta.86
 
 ### Patch Changes

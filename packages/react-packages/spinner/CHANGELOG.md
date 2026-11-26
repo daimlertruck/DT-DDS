@@ -1,5 +1,13 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.128
+
+### Patch Changes
+
+- refactor: uniformise component structure
+- Updated dependencies
+  - @dt-dds/react-box@1.0.0-beta.84
+
 ## 1.0.0-beta.127
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # @dt-ui/react-pagination
 
+## 1.0.0-beta.72
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.13
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-select@1.0.0-beta.121
+  - @dt-dds/react-tooltip@1.0.0-beta.87
+
 ## 1.0.0-beta.71
 
 ### Patch Changes

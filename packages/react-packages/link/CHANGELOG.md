@@ -1,5 +1,17 @@
 # @dt-ui/react-link
 
+## 1.0.0-beta.104
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/icons@1.0.0-beta.13
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-button@1.0.0-beta.123
+
 ## 1.0.0-beta.103
 
 ### Patch Changes

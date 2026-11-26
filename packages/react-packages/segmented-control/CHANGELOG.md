@@ -1,5 +1,16 @@
 # @dt-ui/react-segmented-control
 
+## 1.0.0-beta.70
+
+### Patch Changes
+
+- docs: fix README fence language
+- refactor: uniformise component structure
+- Updated dependencies
+- Updated dependencies
+  - @dt-dds/react-icon@1.0.0-beta.79
+  - @dt-dds/react-tooltip@1.0.0-beta.87
+
 ## 1.0.0-beta.69
 
 ### Patch Changes
