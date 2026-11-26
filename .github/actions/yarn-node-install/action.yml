@@ -7,9 +7,6 @@ inputs:
     description: The node version to be installed
     required: false
     default: '24'
-  NPM_TOKEN:
-    description: NPM token for publishing to npmjs.org
-    required: false
   TURBO_CACHE:
     description: Persist the local turbo cache (.turbo/cache) between runs of the same job
     required: false
@@ -23,16 +20,6 @@ runs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ inputs.NODE_VERSION }}
-        registry-url: 'https://registry.npmjs.org'
-      env:
-        NODE_AUTH_TOKEN: ${{ inputs.NPM_TOKEN }}
-
-    # Setup npm authentication if token is provided
-    - name: Setup npm authentication
-      if: inputs.NPM_TOKEN != ''
-      shell: bash
-      run: |
-        echo "//registry.npmjs.org/:_authToken=${{ inputs.NPM_TOKEN }}" > .npmrc
 
     # As we're using self-hosted runners we need to install yarn
     - name: Install yarn
