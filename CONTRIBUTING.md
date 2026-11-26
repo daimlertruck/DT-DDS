@@ -47,8 +47,8 @@
       - [Visual regression tests](#visual-regression-tests)
       - [Packages size](#packages-size)
   - [Versioning \& Publishing Packages](#versioning--publishing-packages)
-      - [Workflow](#workflow)
-      - [Releasing](#releasing)
+    - [Workflow](#workflow)
+    - [Releasing](#releasing)
 
 # Prerequisites
 
@@ -585,5 +585,7 @@ Finally after versioning and tagging, the pack and publish is done in the `Publi
 - `yarn publish`
 
 The `Publish` workflow only runs if the `Version and Tag` workflow has been run successfully (there was a release commit).
+
+`Publish` authenticates to npm with [trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC), so the repository stores no npm token. Each `@dt-dds/*` package must list `publish.yml` in `daimlertruck/DT-DDS` as its trusted publisher on npmjs.com and have a `repository.url` matching this repository. Do not rename `publish.yml` without updating every package's trusted publisher.
 
 ⚠️ All flagged 🛠 information on this file represents the current state but not the final, it needs to be improved.
