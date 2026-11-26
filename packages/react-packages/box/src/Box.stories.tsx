@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 
-import { Box } from '.';
+import { Box } from './Box';
 
 const meta: Meta<typeof Box> = {
   title: 'Data Display/Box',
