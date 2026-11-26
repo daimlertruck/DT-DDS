@@ -1,5 +1,16 @@
 # @dt-ui/react-accordion
 
+## 1.0.0-beta.78
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-divider@1.0.0-beta.72
+  - @dt-dds/react-icon@1.0.0-beta.78
+
 ## 1.0.0-beta.77
 
 ### Patch Changes

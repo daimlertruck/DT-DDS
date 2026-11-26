@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-button",
-  "version": "1.0.0-beta.121",
+  "version": "1.0.0-beta.122",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,9 +25,9 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.70",
-    "@dt-dds/react-spinner": "1.0.0-beta.126",
-    "@dt-dds/themes": "1.0.0-beta.22"
+    "@dt-dds/react-core": "1.0.0-beta.71",
+    "@dt-dds/react-spinner": "1.0.0-beta.127",
+    "@dt-dds/themes": "1.0.0-beta.23"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

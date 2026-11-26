@@ -1,5 +1,17 @@
 # @dt-ui/react-date-picker
 
+## 1.0.0-beta.128
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-text-field@1.0.0-beta.139
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-dropdown@1.0.0-beta.122
+  - @dt-dds/react-icon@1.0.0-beta.78
+
 ## 1.0.0-beta.127
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @dt-ui/react-tabs
 
+## 1.0.0-beta.124
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-icon@1.0.0-beta.78
+  - @dt-dds/react-icon-button@1.0.0-beta.43
+
 ## 1.0.0-beta.123
 
 ### Patch Changes

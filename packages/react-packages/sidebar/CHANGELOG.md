@@ -1,5 +1,18 @@
 # @dt-dds/react-sidebar
 
+## 1.0.0-beta.25
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-tooltip@1.0.0-beta.86
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-icon@1.0.0-beta.78
+  - @dt-dds/react-icon-button@1.0.0-beta.43
+  - @dt-dds/react-typography@1.0.0-beta.64
+
 ## 1.0.0-beta.24
 
 ### Patch Changes

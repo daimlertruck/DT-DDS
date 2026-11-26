@@ -1,5 +1,13 @@
 # @dt-ui/react-core
 
+## 1.0.0-beta.71
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+
 ## 1.0.0-beta.70
 
 ### Patch Changes

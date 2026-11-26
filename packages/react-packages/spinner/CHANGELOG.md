@@ -1,5 +1,15 @@
 # @dt-ui/react-spinner
 
+## 1.0.0-beta.127
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-typography@1.0.0-beta.64
+
 ## 1.0.0-beta.126
 
 ### Patch Changes

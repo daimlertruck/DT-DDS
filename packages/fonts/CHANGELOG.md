@@ -1,5 +1,13 @@
 # @dt-dds/fonts
 
+## 1.0.0-beta.18
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+
 ## 1.0.0-beta.17
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @dt-ui/react-checkbox
 
+## 1.0.0-beta.80
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-icon@1.0.0-beta.78
+
 ## 1.0.0-beta.79
 
 ### Patch Changes

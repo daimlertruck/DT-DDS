@@ -1,6 +1,6 @@
 {
   "name": "@dt-dds/react-toggle",
-  "version": "1.0.0-beta.52",
+  "version": "1.0.0-beta.53",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -25,9 +25,9 @@
     "test:update:snapshot": "jest -u"
   },
   "dependencies": {
-    "@dt-dds/react-core": "1.0.0-beta.70",
-    "@dt-dds/react-typography": "1.0.0-beta.63",
-    "@dt-dds/themes": "1.0.0-beta.22"
+    "@dt-dds/react-core": "1.0.0-beta.71",
+    "@dt-dds/react-typography": "1.0.0-beta.64",
+    "@dt-dds/themes": "1.0.0-beta.23"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",

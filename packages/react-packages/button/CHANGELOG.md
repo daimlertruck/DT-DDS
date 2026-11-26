@@ -1,5 +1,15 @@
 # @dt-ui/react-button
 
+## 1.0.0-beta.122
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-spinner@1.0.0-beta.127
+
 ## 1.0.0-beta.121
 
 ### Patch Changes

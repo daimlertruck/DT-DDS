@@ -1,5 +1,15 @@
 # @dt-ui/react-tooltip
 
+## 1.0.0-beta.86
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-button@1.0.0-beta.122
+  - @dt-dds/react-core@1.0.0-beta.71
+
 ## 1.0.0-beta.85
 
 ### Patch Changes

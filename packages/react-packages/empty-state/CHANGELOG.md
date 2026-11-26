@@ -1,5 +1,17 @@
 # @dt-ui/react-empty-state
 
+## 1.0.0-beta.148
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-button@1.0.0-beta.122
+  - @dt-dds/react-link@1.0.0-beta.103
+  - @dt-dds/react-core@1.0.0-beta.71
+  - @dt-dds/react-typography@1.0.0-beta.64
+
 ## 1.0.0-beta.147
 
 ### Patch Changes

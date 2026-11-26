@@ -1,5 +1,14 @@
 # @dt-ui/react-icon
 
+## 1.0.0-beta.78
+
+### Patch Changes
+
+- chore: uniformize typescript version
+- Updated dependencies
+  - @dt-dds/themes@1.0.0-beta.23
+  - @dt-dds/react-core@1.0.0-beta.71
+
 ## 1.0.0-beta.77
 
 ### Patch Changes
