@@ -1,1 +1,0 @@
-var g=Object.defineProperty;var n=(r,a)=>g(r,"name",{value:a,configurable:!0});import{n as i}from"./rolldown-runtime-CzYk_CEw.js";var m;function b(){return(b=i((()=>{m=n((r,a=1)=>{const[t,e,o]=(r.match(/\w\w/g)||[]).map(s=>parseInt(s,16));return`rgba(${t},${e},${o},${a})`},"hexToRgba")})))()}n(b,"init_hexToRgba");export{b as n,m as t};

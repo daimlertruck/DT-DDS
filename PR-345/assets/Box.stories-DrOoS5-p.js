@@ -1,3 +1,0 @@
-var i=Object.defineProperty;var o=(t,n)=>i(t,"name",{value:n,configurable:!0});import{n as m}from"./rolldown-runtime-CzYk_CEw.js";import{t as p}from"./jsx-runtime-Br4tQxt1.js";import{n as c,t as s}from"./Box-DmpK8zL-.js";var e,x,r,l;function a(){return(a=m((()=>{c(),e=p(),x={title:"Data Display/Box",component:s,argTypes:{element:{control:"text"}},render:o(({...t})=>(0,e.jsxs)(s,{...t,children:[(0,e.jsx)("p",{children:"Content 1"}),(0,e.jsx)("p",{children:"Content 2"})]}),"render")},r={args:{}},l=["Default"],r.parameters={...r.parameters,docs:{...r.parameters?.docs,source:{originalSource:`{
-  args: {}
-}`,...r.parameters?.docs?.source}}}})))()}o(a,"init_Box_stories");a();export{r as Default,l as __namedExportsOrder,x as default};
