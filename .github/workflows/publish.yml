@@ -207,3 +207,28 @@ jobs:
           git add README.md
           git diff --staged --quiet || git commit -m "docs: update pkgs list in README [skip ci]"
           git push origin ${{ github.ref }}
+
+  github-release:
+    runs-on: ubuntu-latest
+    needs: [publish]
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup node and yarn
+        uses: './.github/actions/yarn-node-install'
+
+      - name: Build release notes
+        run: yarn run turbo build --filter=release-notes
+
+      - name: Create the GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node packages/release-notes/dist/cli.js
