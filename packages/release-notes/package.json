@@ -1,0 +1,22 @@
+{
+  "name": "release-notes",
+  "version": "0.0.0",
+  "description": "Release notes for @dt-dds/react GitHub Releases and the Changesets changelog",
+  "private": true,
+  "main": "dist/changelog.js",
+  "files": [
+    "/dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --cache .",
+    "test": "jest",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@changesets/types": "^6.1.0",
+    "@types/node": "^20.4.10",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
+  }
+}

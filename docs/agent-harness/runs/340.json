@@ -1,0 +1,285 @@
+{
+  "schema": 1,
+  "issue": 340,
+  "lane": {
+    "lane": "2",
+    "name": "Full",
+    "decidedBy": "human (--lane)",
+    "confidence": 0.9
+  },
+  "base": "c95dd20cbc9751632996cdf5226e3ef055cd991f",
+  "harness": {
+    "commit": "24b82431d199d46e58ce54ed167b95fef44937f5",
+    "dirty": false,
+    "claudeCode": [
+      "2.1.332"
+    ]
+  },
+  "started": "2026-11-27T09:18:33Z",
+  "handedOff": "2026-11-27T14:07:29Z",
+  "totals": {
+    "listUsd": 20.7009,
+    "reportedUsd": 20.7009,
+    "requests": 1137,
+    "uncachedIn": 958,
+    "cacheWrite": 2149847,
+    "cacheRead": 27046172,
+    "output": 512744,
+    "stageSeconds": 4227,
+    "toolCalls": 1170
+  },
+  "stages": [
+    {
+      "stage": "gather-context",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 1.232211,
+      "reportedUsd": 1.232211,
+      "seconds": 372,
+      "requests": 140,
+      "uncachedIn": 54,
+      "cacheWrite": 228228,
+      "cacheRead": 1454737,
+      "output": 51606
+    },
+    {
+      "stage": "check-architecture",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 0.688565,
+      "reportedUsd": 0.688565,
+      "seconds": 132,
+      "requests": 29,
+      "uncachedIn": 30,
+      "cacheWrite": 60499,
+      "cacheRead": 543248,
+      "output": 13865
+    },
+    {
+      "stage": "plan",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 4.405162,
+      "reportedUsd": 4.405162,
+      "seconds": 1030,
+      "requests": 86,
+      "uncachedIn": 98,
+      "cacheWrite": 270555,
+      "cacheRead": 4010879,
+      "output": 112491
+    },
+    {
+      "stage": "implement",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "listUsd": 6.03732,
+      "reportedUsd": 6.03732,
+      "seconds": 944,
+      "requests": 325,
+      "uncachedIn": 350,
+      "cacheWrite": 398415,
+      "cacheRead": 10112023,
+      "output": 101072
+    },
+    {
+      "stage": "verify",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 3.31164,
+      "reportedUsd": 3.31164,
+      "seconds": 949,
+      "requests": 314,
+      "uncachedIn": 184,
+      "cacheWrite": 562256,
+      "cacheRead": 5469217,
+      "output": 135871
+    },
+    {
+      "stage": "review",
+      "models": [
+        "claude-opus-5-5",
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 4.089754,
+      "reportedUsd": 4.089754,
+      "seconds": 597,
+      "requests": 148,
+      "uncachedIn": 190,
+      "cacheWrite": 408879,
+      "cacheRead": 4633202,
+      "output": 67707
+    },
+    {
+      "stage": "pr-draft",
+      "models": [
+        "claude-sonnet-5-5"
+      ],
+      "listUsd": 0.936248,
+      "reportedUsd": 0.936248,
+      "seconds": 203,
+      "requests": 95,
+      "uncachedIn": 52,
+      "cacheWrite": 221015,
+      "cacheRead": 822866,
+      "output": 30132
+    }
+  ],
+  "gates": [
+    {
+      "gate": "G1",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 703
+    },
+    {
+      "gate": "G1",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 151
+    },
+    {
+      "gate": "G2",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 465
+    },
+    {
+      "gate": "G3",
+      "iteration": 1,
+      "decision": "revise",
+      "waitSeconds": 421
+    },
+    {
+      "gate": "G3",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 78
+    },
+    {
+      "gate": "G4",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 353
+    },
+    {
+      "gate": "G5",
+      "iteration": 1,
+      "decision": "approve",
+      "waitSeconds": 1620
+    },
+    {
+      "gate": "G6",
+      "iteration": 1,
+      "decision": "loop",
+      "waitSeconds": 1066
+    },
+    {
+      "gate": "G4",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 830
+    },
+    {
+      "gate": "G5",
+      "iteration": 2,
+      "decision": "loop",
+      "waitSeconds": 1555
+    },
+    {
+      "gate": "G4",
+      "iteration": 3,
+      "decision": "revise",
+      "waitSeconds": 326
+    },
+    {
+      "gate": "G4",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 374
+    },
+    {
+      "gate": "G5",
+      "iteration": 3,
+      "decision": "approve",
+      "waitSeconds": 69
+    },
+    {
+      "gate": "G6",
+      "iteration": 2,
+      "decision": "approve",
+      "waitSeconds": 1504
+    },
+    {
+      "gate": "G7",
+      "iteration": 1,
+      "decision": "loop",
+      "waitSeconds": 207
+    },
+    {
+      "gate": "G4",
+      "iteration": 5,
+      "decision": "approve",
+      "waitSeconds": 472
+    },
+    {
+      "gate": "G5",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 247
+    },
+    {
+      "gate": "G6",
+      "iteration": 3,
+      "decision": "approve",
+      "waitSeconds": 108
+    },
+    {
+      "gate": "G7",
+      "iteration": 2,
+      "decision": "loop",
+      "waitSeconds": 1387
+    },
+    {
+      "gate": "G4",
+      "iteration": 6,
+      "decision": "approve",
+      "waitSeconds": 100
+    },
+    {
+      "gate": "G5",
+      "iteration": 5,
+      "decision": "revise",
+      "waitSeconds": 806
+    },
+    {
+      "gate": "G5",
+      "iteration": 6,
+      "decision": "approve",
+      "waitSeconds": 80
+    },
+    {
+      "gate": "G6",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 42
+    },
+    {
+      "gate": "G7",
+      "iteration": 3,
+      "decision": "revise",
+      "waitSeconds": 78
+    },
+    {
+      "gate": "G7",
+      "iteration": 4,
+      "decision": "approve",
+      "waitSeconds": 37
+    }
+  ],
+  "humanActions": 10
+}

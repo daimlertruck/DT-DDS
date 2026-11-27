@@ -22,6 +22,7 @@ jobs:
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
     permissions:
       contents: write
+      pull-requests: read
     steps:
       - name: Generate CI_BOT Token
         id: ci-bot-token
@@ -46,9 +47,11 @@ jobs:
           git config --global user.name ${{ env.GIT_FAKE_USER }}
 
       - name: Run build for changeset plugin
-        run: yarn run turbo build --filter=changeset-conventional-commits
+        run: yarn run turbo build --filter=changeset-conventional-commits --filter=release-notes
 
       - name: Bump affected packages version and tag
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           yarn changesets:ci
           git push origin ${{ github.ref }}
